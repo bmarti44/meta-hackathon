@@ -1,0 +1,6 @@
+{
+  "name": "itsthemedium-measure-validation",
+  "private": true,
+  "type": "module",
+  "dependencies": { "@meta-sam/parser": "0.1.0" }
+}

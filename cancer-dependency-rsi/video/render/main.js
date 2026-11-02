@@ -35,6 +35,8 @@ const SAME = has('same') ? S('same') : S('notshape');                  // organo
 const BRK = has('break') ? S('break') : SEC1(8) + 0.9;                 // end of the put-it-back test
 const LOOK = has('lookup') ? S('lookup') : S('paste');                 // demo: end of the hero shot
 const LOOP = has('loop') ? S('loop') : SEC1(9) + 2.0;                  // demo: end of the Muse answer
+const MUSE0 = has('muse') ? S('muse') : S('ask');                      // demo: Muse typing starts
+const PASTE_END = has('sam') ? S('sam') : MUSE0;                       // demo: end of the hit-list shot
 const RAN_MUSE = LI.get('ran').show.includes('Muse');
 const TOTAL = TL.total;
 const BYG = new Map(GENES.map(g => [g.g, g]));
@@ -630,24 +632,37 @@ async function sceneDemo(t) {
     await screens[1].show('detail', { w: 6.4, x: -1.4, y: lerp(-1.3, -0.75, dk), z: -0.6, rx: -0.10, ry: 0.20, op: a * dk * win(t, S('lookup') - 0.2, S('paste') - 0.2, 0.5, 0.4), rad: 8, cropBottom: 260 });
     headline(over, t, 'Any gene. A simple answer.', S('lookup'), S('lookup') + 1.6, { size: 46, y: 500, x: 1500, maxW: 640, w: 500, out: S('paste') - 0.6 });
     text(over, 'Does it follow the food, or not?', 1480, 575, { fam: SERIF, size: 32, w: 500, italic: true, color: C.dim, a: a * ramp(t, S('lookup') + 2.2, S('lookup') + 2.8) * (1 - ramp(t, S('paste') - 0.8, S('paste') - 0.3)) });
-  } else if (t < S('muse') - 0.3) {
-    const k = ramp(t, S('paste') - 0.2, S('muse') - 0.3);
+  } else if (t < PASTE_END - 0.3) {
+    const k = ramp(t, S('paste') - 0.2, PASTE_END - 0.3);
     const name = t < S('paste') + 1.0 ? 'list_input' : t < S('paste') + 4.2 ? seqFrame('list_seq_', 45, t, S('paste') + 1.0, S('paste') + 4.2) : 'list_done';
     const tall = name !== 'list_input';
-    await screens[0].show(name, tall ? { w: 5.6, x: -2.0, y: lerp(-0.6, 1.0, ease(k)), z: -0.4, rx: -0.10, ry: 0.24, op: a * win(t, S('paste') - 0.2, S('muse') - 0.3, 0.4, 0.4), rad: 8 }
-      : { w: 6.2, x: -1.8, y: 0.2, z: -0.4, rx: -0.1, ry: 0.22, op: a * win(t, S('paste') - 0.2, S('muse') - 0.3, 0.4, 0.4), rad: 8 });
-    headline(over, t, 'Paste your own gene list.', S('paste'), S('paste') + 2.0, { size: 48, y: 470, x: 1480, maxW: 560, w: 500, out: S('muse') - 0.8 });
-    text(over, 'See which look like diet effects.', 1480, 545, { fam: SERIF, size: 32, w: 500, italic: true, color: C.dim, a: a * ramp(t, S('paste') + 2.4, S('paste') + 3.0) * (1 - ramp(t, S('muse') - 0.8, S('muse') - 0.3)) });
+    await screens[0].show(name, tall ? { w: 5.6, x: -2.0, y: lerp(-0.6, 1.0, ease(k)), z: -0.4, rx: -0.10, ry: 0.24, op: a * win(t, S('paste') - 0.2, PASTE_END - 0.3, 0.4, 0.4), rad: 8 }
+      : { w: 6.2, x: -1.8, y: 0.2, z: -0.4, rx: -0.1, ry: 0.22, op: a * win(t, S('paste') - 0.2, PASTE_END - 0.3, 0.4, 0.4), rad: 8 });
+    headline(over, t, 'Paste your own gene list.', S('paste'), S('paste') + 2.0, { size: 48, y: 470, x: 1480, maxW: 560, w: 500, out: PASTE_END - 0.8 });
+    text(over, 'See which look like diet effects.', 1480, 545, { fam: SERIF, size: 32, w: 500, italic: true, color: C.dim, a: a * ramp(t, S('paste') + 2.4, S('paste') + 3.0) * (1 - ramp(t, PASTE_END - 0.8, PASTE_END - 0.3)) });
+  } else if (has('sam') && t < MUSE0 - 0.3) {
+    /* SAM 3.1 outlines organoids in two microscope images, then the measured comparison */
+    const s0 = S('sam'), s1 = MUSE0 - 0.3, seqEnd = s0 + 4.8, cardAt = s0 + 5.4;
+    /* frame 00 was captured before the second image loaded, so the sequence starts at 01 */
+    const idx = 1 + Math.floor(clamp((t - s0 - 0.2) / (seqEnd - s0 - 0.2)) * 14);
+    const name = t < seqEnd ? `meas_seq_${String(idx).padStart(2, '0')}` : 'meas_done';
+    const k = ease(ramp(t, s0 - 0.3, s1)), up = ease(ramp(t, cardAt - 0.4, cardAt + 0.8));
+    const fade = a * win(t, s0 - 0.3, s1, 0.4, 0.4);
+    await screens[0].show(name, { w: lerp(8.4, 7.6, up), x: lerp(0.1, -0.1, k), y: lerp(-0.1, 1.05, up), z: lerp(-0.8, -0.6, k), rx: -0.08, ry: lerp(-0.14, -0.08, k), op: fade * (1 - 0.5 * up), pad: 44, cropBottom: 54, rad: 8 });
+    const ca = ease(ramp(t, cardAt, cardAt + 0.8));
+    if (ca > 0) await screens[1].show('meas_out', { w: 6.6, x: 0.15, y: lerp(-2.4, -0.85, ca), z: 0.3, rx: -0.06, ry: -0.06, op: fade * ca, pad: 40, rad: 10 });
+    chip(over, 'SAM 3.1  ·  Meta’s vision model', W / 2, 118, { a: fade * win(t, s0, cardAt - 0.1, 0.5, 0.4), color: C.amber, size: 22 });
+    label(over, 'outlines every organoid it can find · statistics on our server · Muse explains', W / 2, 934, { a: fade * win(t, s0 + 0.6, cardAt - 0.2, 0.5, 0.4), color: C.dim, size: 18 });
   } else if (t < LOOP - 0.3) {
-    const t0 = S('muse') + 0.3, typeEnd = S('muse') + 2.6, seqEnd = S('ask') + 4.6;
+    const t0 = MUSE0 + 0.3, typeEnd = MUSE0 + 2.6, seqEnd = S('ask') + 4.6;
     let name;
     if (t < typeEnd) name = ASK_TYPE[Math.min(20, Math.floor(ramp(t, t0, typeEnd) * 21))];
     else if (t < seqEnd) name = seqFrame('ask_seq_', 55, t, typeEnd + 0.2, seqEnd);
     else name = 'ask_done';
-    const k = ease(ramp(t, S('muse') - 0.3, LOOP));
-    if (t < typeEnd) await screens[0].show(name, { w: 7.6, x: 0.0, y: 0.9, z: -0.3, rx: -0.10, ry: -0.18, op: a * ramp(t, S('muse') - 0.3, S('muse') + 0.3), rad: 8 });
+    const k = ease(ramp(t, MUSE0 - 0.3, LOOP));
+    if (t < typeEnd) await screens[0].show(name, { w: 7.6, x: 0.0, y: 0.9, z: -0.3, rx: -0.10, ry: -0.18, op: a * ramp(t, MUSE0 - 0.3, MUSE0 + 0.3), rad: 8 });
     else await screens[0].show(name, { w: 8.4, x: lerp(0.0, -0.2, k), y: lerp(0.5, 0.1, k), z: lerp(-0.6, 0.2, k), rx: -0.08, ry: lerp(-0.2, -0.12, k), op: a * (1 - ramp(t, LOOP - 0.6, LOOP - 0.3)), rad: 10 });
-    chip(over, 'Muse  ·  Meta’s AI model', W / 2, 150, { a: a * win(t, S('muse'), Math.min(LOOP, a1) - 0.4, 0.5, 0.4), color: C.amber, size: 22 });
+    chip(over, 'Muse  ·  Meta’s AI model', W / 2, 150, { a: a * win(t, MUSE0, Math.min(LOOP, a1) - 0.4, 0.5, 0.4), color: C.amber, size: 22 });
     label(over, 'searches all 17,525 genes with its own tools · shows every step', W / 2, 920, { a: a * win(t, S('ask') + 0.4, Math.min(LOOP, a1) - 0.4, 0.5, 0.4), color: C.dim, size: 18 });
   } else {
     const k = ease(ramp(t, S('loop') - 0.3, a1));

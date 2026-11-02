@@ -34,13 +34,13 @@ All statistics run locally in Python. No model invents a number.
 
 ### 2. Muse is the research assistant on the live site
 
-The site calls **Muse Spark** (`muse-spark-1.3`) through the Meta Model API Responses endpoint, from an AWS Lambda ([`cancer-dependency-rsi/deploy/lambda/index.mjs`](cancer-dependency-rsi/deploy/lambda/index.mjs)). Three features use it:
+The site calls **Muse Spark** (`muse-spark-1.3`) through the Meta Model API Responses endpoint, from an AWS Lambda ([`cancer-dependency-rsi/deploy/lambda/index.mjs`](cancer-dependency-rsi/deploy/lambda/index.mjs)). Three features use it, plus a fourth that pairs it with SAM 3.1 (below):
 
 | Feature | What Muse does |
 |---|---|
 | **Gene summaries** | Turns one gene's numbers into a short, everyday-language verdict with a section for researchers |
 | **Ask the data** | Works as an agent. It picks from three function tools, runs several rounds of searches over the full 17,525-gene table, then answers. Every tool step is shown live, and every gene it names links back to the data. |
-| **Check a hit list** | A researcher pastes their own gene list (aliases like HER2 are resolved). The list is checked against the table, and Muse explains which genes look like diet effects and which are worth chasing. |
+| **Check a hit list** | In the same box as the gene search, a researcher pastes their own gene list (aliases like HER2 are resolved). The list is checked against the table, and Muse explains which genes look like diet effects and which are worth chasing. |
 
 Tools Muse can call:
 
@@ -49,6 +49,25 @@ Tools Muse can call:
 - `check_hit_list`: the full verdict breakdown for a pasted list
 
 Muse only sees the audit through these tools, which keeps its answers tied to the real table. It is told never to give medical advice, and it declines personal treatment questions.
+
+### 3. SAM 3.1 measures organoids for the follow-up test
+
+The audit ends with a cheap experiment: add cholesterol back to the organoid medium and see whether the blocked organoids recover. The **Measure your organoids** section on the site gives a lab the read-out for that test:
+
+1. The lab uploads one microscope image per condition (for example, no cholesterol added vs cholesterol added back).
+2. The browser cuts each image into overlapping tiles and enlarges them. Each tile goes to **SAM 3.1** (`sam-3.1`, Meta's segmentation model) through our server with the prompt "bubble". The server parses the masks with Meta's [`@meta-sam/parser`](https://www.npmjs.com/package/@meta-sam/parser) and returns outlines. Images are sent with `store: false` and never written anywhere.
+3. The browser merges the tiles, draws every outline, and keeps organoids at least 20 pixels wide for the comparison.
+4. The server computes the statistics: median size per condition, the size ratio with a bootstrap 95% range, and a Mann-Whitney test. **Muse Spark** then explains what the result means for the add-back test, with its limits.
+
+**How well it works.** SAM 3.1 was never trained on organoids (it returns nothing for the word "organoid"; "bubble" works). We tested it against hand-drawn outlines in the public OrganoIDNet dataset ([Kulkarni et al., Scientific Data 2024](https://doi.org/10.1038/s41597-024-03631-3), CC BY 4.0) and compared it with Cellpose and StarDist models trained on that same dataset:
+
+| | SAM 3.1 (no training) | Cellpose (trained on this data) |
+|---|---|---|
+| Dense image, 1,884 organoids | F1 0.57, precision 0.79 to 0.86 | F1 0.59, precision 0.88 |
+| Sparse images, 5 time points | F1 0.61 to 0.78 | F1 0.76 to 0.85 |
+| Size accuracy (correlation with hand-measured area) | 0.92 to 0.97 | 0.96 |
+
+It misses many organoids under about 20 pixels across, which shrinks differences between conditions, so the site compares only organoids above that size in both conditions. With that rule, the example images give a mouse-to-human size ratio of about 0.72 to 0.75, against 0.81 from hand-drawn outlines, and the same well at 4 and 20 hours gives 1.02 (hand-drawn: about 1.05). The validation scripts and full results are in [`cancer-dependency-rsi/measure_validation/`](cancer-dependency-rsi/measure_validation/).
 
 The API key lives only in AWS SSM Parameter Store (SecureString) and is read by the Lambda at runtime. It never reaches the browser or this repo. The Lambda URL only accepts requests through CloudFront, and each route is rate-limited.
 
