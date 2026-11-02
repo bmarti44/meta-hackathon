@@ -15,6 +15,3 @@ cancer-dependency-rsi/release_v1.zip
 # deploy scratch (CloudFront config dumps)
 cancer-dependency-rsi/deploy/dist*.json
 cancer-dependency-rsi/deploy/cf_ids.txt
-# deploy scratch (CloudFront config dumps)
-cancer-dependency-rsi/deploy/dist*.json
-cancer-dependency-rsi/deploy/cf_ids.txt
