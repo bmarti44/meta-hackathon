@@ -1,7 +1,7 @@
 // itsthemedium.com AI endpoint (Muse Code via api.meta.ai Responses API).
 // The API key lives in SSM Parameter Store (SecureString) and is only read here, server-side.
 // Routes (served by CloudFront under /api/*):
-//   GET /api/brief?gene=SQLE   plain-English + researcher brief for one gene
+//   GET /api/brief?gene=SQLE   simple-language + researcher brief for one gene
 //   GET /api/ask?q=...         question answered by a tool-using Muse agent over all 17,525 genes
 //   GET /api/list?genes=A,B,C  explain a researcher's own hit list (agent, same tools)
 import { readFileSync } from "node:fs";
@@ -72,7 +72,7 @@ const STYLE = `Writing rules (strict):
 - Hyphenate compound words and modifiers: follow-up, lab-grown, organoid-type medium, food-driven, genome-wide, lipid-poor, add-back, shape-specific, fat-like. Only em dashes and en dashes are banned.
 - Say "consistency labels, not proof" when you note the limits.
 - Effects are about degree: "needed more" or "needed less". Never say cells survive, die or "can live" without a gene.
-- Write for a curious adult with no biology background, then give researchers the precise detail.
+- Write for a curious adult with no biology background, then give researchers the precise detail. Never use the phrase "plain English".
 - Short sentences. Plain words. Explain any term you must use.
 - Never use em dashes or en dashes. Use commas, periods, or parentheses. Write negative numbers with a plain hyphen, like -0.43. Normal hyphens in compound words are fine and expected (nutrient-rich, follow-up, lipid-poor).
 - Never write the data codes MED, UNR, FMT or S18. Say "follows the food", "unresolved", "shape candidate" and "Sanger headline-18" instead.
@@ -94,7 +94,7 @@ Output exactly these three sections in Markdown, total under 190 words:
 **What this gene does**
 One or two sentences on its normal job in the cell, in everyday language (use an analogy if it helps). If you are not confident about this gene's function, say it is less well studied.
 **What we found**
-Two or three sentences translating the numbers into plain English: does the organoid effect show up when only the food changes? What does the verdict mean for someone hoping this is a cancer drug target?
+Two or three sentences translating the numbers into simple, everyday words: does the organoid effect show up when only the food changes? What does the verdict mean for someone hoping this is a cancer drug target?
 **For researchers**
 2 or 3 terse bullet points: key values (D, A, A/D with CI, F, bootstrap stability, list membership) and the single most useful next experiment.`,
     input: geneFacts(g),
@@ -154,7 +154,7 @@ const TOOLS = [
     parameters: { type: "object", properties: { symbols: { type: "array", items: { type: "string" }, description: "Gene symbols, up to 300" } }, required: ["symbols"], additionalProperties: false } },
 ];
 
-/* each tool returns {data} for the model and {step} as a plain-English progress line for the reader */
+/* each tool returns {data} for the model and {step} as a simple progress line for the reader */
 function runTool(name, args) {
   if (name === "lookup_genes") {
     const syms = cleanSymbols(args.symbols, 25);
@@ -207,7 +207,7 @@ function askPrompt(q) {
   return {
     instructions: `You answer questions about a cancer research audit. You have tools that query the full computed table of 17,525 genes.\n\n${STUDY}\n\n${STYLE}\n\n${WORK}
 If the question is unrelated to this study, cancer biology or how to read the site, do not call any tool; reply in one sentence that you can only answer questions about this audit.
-Final answer: under 170 words of Markdown. Lead with a direct one-sentence answer in plain English, then supporting detail. Mention genes by symbol so readers can look them up.`,
+Final answer: under 170 words of Markdown. Lead with a direct one-sentence answer in simple, everyday words, then supporting detail. Mention genes by symbol so readers can look them up.`,
     input: `Question: ${q}`,
     max: 480, tools: true,
   };

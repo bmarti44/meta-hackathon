@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>It's the Medium: video renderer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=block">
+<style>
+  html,body{margin:0;background:#0c0a08;overflow:hidden}
+  #stage{position:relative;width:1920px;height:1080px;background:#0c0a08}
+  canvas{position:absolute;inset:0;width:1920px;height:1080px}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="under" width="1920" height="1080"></canvas>
+  <canvas id="gl" width="1920" height="1080"></canvas>
+  <canvas id="over" width="1920" height="1080"></canvas>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

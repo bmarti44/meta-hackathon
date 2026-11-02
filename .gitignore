@@ -15,3 +15,11 @@ cancer-dependency-rsi/release_v1.zip
 # deploy scratch (CloudFront config dumps)
 cancer-dependency-rsi/deploy/dist*.json
 cancer-dependency-rsi/deploy/cf_ids.txt
+# video build outputs (regenerable): masters, checks, logs, intermediate mix
+cancer-dependency-rsi/video/out/seg*.mov
+cancer-dependency-rsi/video/out/patch_*.mov
+cancer-dependency-rsi/video/out/check*/
+cancer-dependency-rsi/video/out/*.log
+cancer-dependency-rsi/video/out/segments*.txt
+cancer-dependency-rsi/video/out/mix.wav
+cancer-dependency-rsi/video/music/hdr.txt

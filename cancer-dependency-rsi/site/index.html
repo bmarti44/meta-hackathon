@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>It's the Medium: are "organoid-specific" cancer targets really about the food?</title>
-<meta name="description" content="Labs grow mini tumours called organoids to find cancer drug targets. We rechecked two 2026 Nature studies with public data: 85% of the organoid-specific gene effects also appear when ordinary cells just eat organoid food. Search all 17,525 genes, or ask the data in plain English.">
+<meta name="description" content="Labs grow mini tumours called organoids to find cancer drug targets. We rechecked two 2026 Nature studies with public data: 85% of the organoid-specific gene effects also appear when ordinary cells just eat organoid food. Search all 17,525 genes, or ask the data a question in your own words.">
 <meta name="theme-color" content="#0c0a08">
 <link rel="canonical" href="https://www.itsthemedium.com/">
 <meta property="og:type" content="website">
@@ -650,7 +650,7 @@ footer nav a:hover{border-color:var(--phenol)}
 
 <section id="explore">
   <div class="sec-head reveal"><span class="sec-no"></span><h2>Look up <em>any gene</em></h2></div>
-  <p class="sec-sub reveal">Type a gene name to see whether its organoid effect follows the food, the 3D shape, or neither. Each result opens with a plain-English verdict, then the full numbers and a link to its source record. Below the search, browse all 456 genes that changed.</p>
+  <p class="sec-sub reveal">Type a gene name to see whether its organoid effect follows the food, the 3D shape, or neither. Each result opens with a short, simple verdict, then the full numbers and a link to its source record. Below the search, browse all 456 genes that changed.</p>
 
 
   <div class="searchbox reveal">
@@ -718,7 +718,7 @@ footer nav a:hover{border-color:var(--phenol)}
 
 <section id="ask">
   <div class="sec-head reveal"><span class="sec-no"></span><h2>Ask the data <em>a question</em></h2></div>
-  <p class="sec-sub reveal">Type a question in your own words. Muse, Meta&rsquo;s AI model, works like a research assistant: it decides what to look up in the full table of 17,525 genes, runs those searches itself, and answers in plain English. You can see each step it took, and every gene name links back to the table.</p>
+  <p class="sec-sub reveal">Type a question in your own words. Muse, Meta&rsquo;s AI model, works like a research assistant: it decides what to look up in the full table of 17,525 genes, runs those searches itself, and answers in simple, everyday words. You can see each step it took, and every gene name links back to the table.</p>
   <form class="askbox reveal" id="askForm" autocomplete="off">
     <label class="sr-only" for="askQ">Your question</label>
     <input id="askQ" maxlength="300" placeholder="e.g. Which genes are still worth chasing as drug targets?" enterkeyhint="send">
@@ -742,7 +742,7 @@ footer nav a:hover{border-color:var(--phenol)}
     <div class="num">1</div>
     <div>
       <h3>Most of the list follows the food, in both directions</h3>
-      <div class="plain"><b class="k">In plain English</b>When ordinary cancer cells are switched to the organoid diet, they start needing the same genes organoids need. No 3D growth required.</div>
+      <div class="plain"><b class="k">What this means</b>When ordinary cancer cells are switched to the organoid diet, they start needing the same genes organoids need. No 3D growth required.</div>
       <p>Of 456 genes whose importance differs between organoids and classic cultures, <b>86% of gains and 84% of losses are medium-consistent</b>: flat-grown cells fed organoid medium show a same-direction effect at least half as large (75 to 82% under conservative robust statistics). The strongest group is cholesterol manufacture (SQLE, MSMO1), followed by fat and heme production. These are exactly the pathways a serum-free, low-fat diet would stress. Gene-expression data show the matching response (cholesterol genes switched <i>on</i> in organoid medium, the classic sign of starvation), and in separate screens using blood-like medium, SQLE moves the <i>opposite</i> way.</p>
       <figure class="figwrap reveal"><img src="assets/fig1.png" alt="Two scatter plots. Left: flat-grown effect in organoid medium against organoid effect, with points along the diagonal. Right: 3D dome versus flat in the same medium, a shapeless cloud near zero." loading="lazy" width="1600" height="700">
       <figcaption><b>Figure 1.</b> Left: flat cells on organoid food against the organoid effect. Points hug the diagonal. Right: 3D dome against flat, both on organoid food. A shapeless cloud near zero, meaning shape adds little. (In this static figure, unresolved genes are grey.)</figcaption></figure>
@@ -753,7 +753,7 @@ footer nav a:hover{border-color:var(--phenol)}
     <div class="num">2</div>
     <div>
       <h3>Checking the published target lists</h3>
-      <div class="plain"><b class="k">In plain English</b>About half of each lab&rsquo;s highlighted genes look like diet effects. Three of Sanger&rsquo;s top picks hold up better and deserve a closer look.</div>
+      <div class="plain"><b class="k">What this means</b>About half of each lab&rsquo;s highlighted genes look like diet effects. Three of Sanger&rsquo;s top picks hold up better and deserve a closer look.</div>
       <p>Of the Broad catalogue&rsquo;s published gains present in our audit, 47% (135 of 285) are medium-consistent; 50% (266 of 537) counting gains and losses together; and 87% of the gains that replicate under lineage adjustment. Of Sanger&rsquo;s &ldquo;organoid-specific core fitness&rdquo; headline-18, 8 of 16 replicate here. Five are medium-consistent, four of them on the cholesterol-sensing SREBP pathway (MVD, IDI1, MBTPS1, MBTPS2). Three remain unresolved (<b>SCAP, DDX3X, ITGB1</b>), which makes them the more credible follow-ups. Sanger&rsquo;s calls are robust in their own assay (median depletion in 70 to 80% of organoids). The open question is the cause, not the quality of the measurement.</p>
       <figure class="figwrap reveal"><img src="assets/fig3.png" alt="Stacked bars showing how each published hit list breaks down into follows-the-food, unresolved, shape candidate and does-not-reproduce." loading="lazy" width="1600" height="700">
       <figcaption><b>Figure 2.</b> How each published list breaks down under our labels. Grey means the gene does not reproduce as a hit under lineage adjustment, so its cause can&rsquo;t be assigned (this is not evidence that it is real biology).</figcaption></figure>
@@ -764,7 +764,7 @@ footer nav a:hover{border-color:var(--phenol)}
     <div class="num">3</div>
     <div>
       <h3>Some genes matter less in organoids, probably because they grow slower</h3>
-      <div class="plain"><b class="k">In plain English</b>Organoids grow slowly, so the cell&rsquo;s long-lasting protein machines wear out less. That likely makes some &ldquo;essential&rdquo; genes look less essential. It&rsquo;s a good guess, not a proven fact.</div>
+      <div class="plain"><b class="k">What this means</b>Organoids grow slowly, so the cell&rsquo;s long-lasting protein machines wear out less. That likely makes some &ldquo;essential&rdquo; genes look less essential. It&rsquo;s a good guess, not a proven fact.</div>
       <p>Ribosome and spliceosome genes look <i>less</i> essential in organoids. With curated gene sets, only the ribosome set shows a clear whole-complex shift (+0.17 vs +0.03 baseline), present in both labs&rsquo; assays after global corrections. Sanger&rsquo;s organoid screens are globally shallower (essential depth 0.63×). Slower growth means fewer cell divisions, so long-lived protein machines don&rsquo;t have time to run down. This is the leading explanation, but it is a hypothesis: cumulative doublings are recorded for only 1 of 1,241 Broad screens, so this data release can&rsquo;t settle it.</p>
       <figure class="figwrap reveal"><img src="assets/fig2.png" alt="Bar charts of median gene-set shifts by comparison, and Sanger essential depth with ribosome and spliceosome ratios." loading="lazy" width="1600" height="700">
       <figcaption><b>Figure 3.</b> Left: median shift of curated gene sets by comparison (Broad). Right: Sanger essential depth and depth-scaled ribosome and spliceosome ratios. The spliceosome effect vanishes after scaling; the ribosome effect remains.</figcaption></figure>
@@ -775,7 +775,7 @@ footer nav a:hover{border-color:var(--phenol)}
     <div class="num">4</div>
     <div>
       <h3>One cheap experiment would settle it</h3>
-      <div class="plain"><b class="k">In plain English</b>Give the organoids their cholesterol back. If the &ldquo;organoid-only&rdquo; weak spots disappear, they were caused by the diet.</div>
+      <div class="plain"><b class="k">What this means</b>Give the organoids their cholesterol back. If the &ldquo;organoid-only&rdquo; weak spots disappear, they were caused by the diet.</div>
       <p>Add LDL cholesterol back to organoid medium. If the sterol dependencies are starvation, sensitivity to SQLE inhibitors and statins should collapse (at least a 5× potency shift) while genuine candidates like ITGB1 stay put. We agreed in advance what counts as failure: if sensitivity survives LDL repletion in 3 or more of 4 models, our interpretation is wrong. The full protocol is in the <a href="#downloads" data-scroll="#downloads">wet-lab proposal</a>. It takes about two weeks and needs no new CRISPR screen.</p>
     </div>
   </div>
@@ -820,7 +820,7 @@ footer nav a:hover{border-color:var(--phenol)}
 
 <section id="methods">
   <div class="sec-head reveal"><span class="sec-no"></span><h2>Methods</h2></div>
-  <h3>In plain language</h3>
+  <h3>In simple terms</h3>
   <p>For every gene we ask four questions of the public data. (1) Does its importance change in organoids compared with classic cultures? (2) Does the same change happen in flat-grown cells fed organoid medium? (3) Is anything left over when comparing 3D domes with flat cultures on the same food? (4) Does an unrelated serum-free diet do something similar? If (2) reproduces most of (1) and (3) is small, the gene <b>follows the food</b> (technically, <i>medium-consistent</i>). The mirror-image pattern makes it a <b>shape candidate</b> (<i>format candidate</i>). Everything else is <b>unresolved</b>. These labels come from observational data and are not proof of cause. Proof needs the add-back experiment.</p>
   <details><summary>Technical details</summary>
   <p>DepMap 26Q3 Chronos gene effects (PassesQC screens, Avana + Humagne-CD), development patients only for all calibration, filtering and imputation. Per-gene library offset from 22 development FBS models screened with both libraries (all Avana screens are FBS). Per-gene OLS on model-mean Chronos with lineage dummies; Benjamini-Hochberg q per contrast; HC3 robust SEs shipped and used for sensitivity. Hits: D q&lt;0.01 and |Δ|≥0.25 (dynamic-range-normalized scale primary; raw concordant). Medium-consistent: same-sign adherent ratio ≥0.5, nominal p&lt;0.05, 90% delta-method CI excluding 0, format not dominant under mirror criteria; strict-FDR variant released as <code>flag_fdr</code>. Joint bootstrap (B=150) shares one model resample between calibration and analysis; the identity replicate reproduces point flags exactly. Held-out evaluation is fully disjoint (25 reserved-patient domes vs 78 reserved-patient FBS controls). Common-support sensitivity restricts to the six lineages with adherent comparators (38 domes): slope 0.89. Humagne-only sensitivity filters at screen level (7 FBS controls, r=0.78). Sanger: supplementary tables 4/5/6 and cell-line EssMatrix; within-model percentiles are primary across differently processed matrices. Expression: Omics TPM logp1 mapped by ModelConditionID. HPLM: Rossiter et al. Table S1 scaled gene scores. Full code is in the release bundle under Downloads.</p></details>
@@ -985,7 +985,7 @@ function select(gene, scroll=true, setHash=true, from=null){
        ${g.bf!=null?`<div style="margin-top:16px"><div style="font-size:13px;color:var(--ink-mut)">Confidence: called &ldquo;follows the food&rdquo; in <b style="color:var(--ink)">${pct(g.bf)}</b> of 150 resampled reanalyses</div><div class="meter"><i style="width:${Math.round(g.bf*100)}%"></i></div></div>`:""}
      </div>
      ${AI.on()?`<div class="ai-card" id="briefCard">
-       <div class="ai-head"><span class="dotp"></span>Plain-English summary<span class="src">AI · Muse</span></div>
+       <div class="ai-head"><span class="dotp"></span>What this means<span class="src">AI · Muse</span></div>
        <div class="ai-body" id="briefBody"><div class="ai-skel"><i style="width:92%"></i><i style="width:78%"></i><i style="width:86%"></i><i style="width:60%"></i></div></div>
        <div class="ai-foot" id="briefFoot"></div>
      </div>`:""}

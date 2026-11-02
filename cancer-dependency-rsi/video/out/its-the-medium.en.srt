@@ -1,0 +1,392 @@
+1
+00:00:00,750 --> 00:00:04,800
+Most cancer drugs fail before they reach a patient.
+
+2
+00:00:05,500 --> 00:00:07,720
+Part of the problem is the testing.
+
+3
+00:00:07,970 --> 00:00:11,522
+For decades, cancer cells have been grown flat, in a
+
+4
+00:00:11,322 --> 00:00:12,360
+plastic dish.
+
+5
+00:00:12,660 --> 00:00:14,680
+Real tumours aren't flat.
+
+6
+00:00:15,380 --> 00:00:19,505
+So labs now grow something closer to the real thing:
+
+7
+00:00:19,305 --> 00:00:22,825
+tiny 3D copies of a patient's tumour, called
+
+8
+00:00:22,625 --> 00:00:23,580
+organoids.
+
+9
+00:00:24,780 --> 00:00:28,417
+This year, two leading cancer centres used organoids
+
+10
+00:00:28,217 --> 00:00:31,919
+to switch off every gene, one at a time, and find the
+
+11
+00:00:31,719 --> 00:00:34,100
+ones a cancer can't live without.
+
+12
+00:00:34,700 --> 00:00:38,165
+Hundreds of genes mattered more in organoids than in
+
+13
+00:00:37,965 --> 00:00:41,304
+flat cells, and those are now being put forward as
+
+14
+00:00:41,104 --> 00:00:42,120
+drug targets.
+
+15
+00:00:43,420 --> 00:00:44,710
+Here's the catch.
+
+16
+00:00:45,010 --> 00:00:47,740
+Organoids change two things at once.
+
+17
+00:00:48,340 --> 00:00:52,040
+One is the shape. 3D instead of flat.
+
+18
+00:00:52,640 --> 00:00:54,950
+The other is the food.
+
+19
+00:00:55,250 --> 00:00:58,910
+Cells in a dish live in a liquid called the medium.
+
+20
+00:00:59,210 --> 00:01:02,922
+Flat cells usually get serum, the nutrient-rich part
+
+21
+00:01:02,722 --> 00:01:03,530
+of blood.
+
+22
+00:01:03,830 --> 00:01:07,667
+Organoids get a clean, lab-made medium with almost no
+
+23
+00:01:07,467 --> 00:01:08,490
+cholesterol.
+
+24
+00:01:09,190 --> 00:01:12,968
+So when a gene matters more in an organoid, which
+
+25
+00:01:12,768 --> 00:01:14,210
+change caused it?
+
+26
+00:01:14,560 --> 00:01:16,920
+The shape, which is the whole point?
+
+27
+00:01:17,170 --> 00:01:19,100
+Or just the diet?
+
+28
+00:01:20,400 --> 00:01:23,460
+The data to tell them apart already existed.
+
+29
+00:01:23,760 --> 00:01:27,134
+A big public database had flat cells grown on the
+
+30
+00:01:26,934 --> 00:01:28,170
+organoid medium.
+
+31
+00:01:28,470 --> 00:01:31,140
+Same diet, no 3D shape.
+
+32
+00:01:31,840 --> 00:01:35,477
+If a gene matters more there too, the shape can't
+
+33
+00:01:35,277 --> 00:01:37,230
+explain it. The food can.
+
+34
+00:01:39,430 --> 00:01:44,500
+We ran that check on all 17,525 genes.
+
+35
+00:01:45,100 --> 00:01:49,080
+456 clearly behave differently in organoids.
+
+36
+00:01:49,480 --> 00:01:53,775
+So how many of those 456 also change when the only
+
+37
+00:01:53,575 --> 00:01:56,150
+thing you change is the food?
+
+38
+00:01:56,750 --> 00:02:00,055
+If organoids were finding something new, that number
+
+39
+00:01:59,855 --> 00:02:01,010
+should be small.
+
+40
+00:02:03,110 --> 00:02:04,910
+387.
+
+41
+00:02:05,410 --> 00:02:07,150
+Eighty-five percent.
+
+42
+00:02:09,150 --> 00:02:10,890
+Here's why that matters.
+
+43
+00:02:11,290 --> 00:02:14,793
+These are exactly the kind of genes being put forward
+
+44
+00:02:14,593 --> 00:02:16,040
+as new drug targets.
+
+45
+00:02:16,440 --> 00:02:19,594
+But for most of them, ordinary flat cells show the
+
+46
+00:02:19,394 --> 00:02:22,370
+same change, as soon as they get the same food.
+
+47
+00:02:22,970 --> 00:02:26,942
+So the effect may not come from the tumour's 3D shape
+
+48
+00:02:26,742 --> 00:02:29,860
+at all. It may come from what we feed it.
+
+49
+00:02:30,760 --> 00:02:34,333
+And in a patient, a tumour is fed by blood, which is
+
+50
+00:02:34,133 --> 00:02:35,630
+full of cholesterol.
+
+51
+00:02:35,980 --> 00:02:39,626
+So a weakness that only shows up on a diet with almost
+
+52
+00:02:39,426 --> 00:02:42,880
+no cholesterol may not exist in the patient at all.
+
+53
+00:02:44,280 --> 00:02:47,760
+On this chart, each dot is one of those genes.
+
+54
+00:02:48,010 --> 00:02:51,215
+If a dot sits on the dashed line, flat cells on
+
+55
+00:02:51,015 --> 00:02:54,604
+organoid food changed it just as much as the organoid
+
+56
+00:02:54,404 --> 00:02:54,860
+did.
+
+57
+00:02:55,210 --> 00:02:57,480
+Most of them sit right on that line.
+
+58
+00:02:58,280 --> 00:03:00,530
+The clearest case is cholesterol.
+
+59
+00:03:00,830 --> 00:03:05,073
+Organoid food has almost none, so the cells have to
+
+60
+00:03:04,873 --> 00:03:09,116
+make their own. That makes the genes that build it,
+
+61
+00:03:08,916 --> 00:03:11,890
+like SQLE, suddenly look essential.
+
+62
+00:03:12,790 --> 00:03:16,381
+That leaves 69 genes that don't clearly follow the
+
+63
+00:03:16,181 --> 00:03:16,720
+food.
+
+64
+00:03:17,020 --> 00:03:20,530
+For 68 of them, the data can't say either way.
+
+65
+00:03:20,830 --> 00:03:24,270
+Just one leans toward the shape, and not strongly.
+
+66
+00:03:24,870 --> 00:03:30,930
+Three of them, SCAP, DDX3X and ITGB1, were among
+
+67
+00:03:30,730 --> 00:03:33,250
+Sanger's top picks.
+
+68
+00:03:33,500 --> 00:03:36,758
+They're the more credible leads: the ones still worth
+
+69
+00:03:36,558 --> 00:03:37,220
+chasing.
+
+70
+00:03:38,520 --> 00:03:42,300
+This is a pattern in existing data, not proof.
+
+71
+00:03:42,700 --> 00:03:44,760
+But there's a simple way to check.
+
+72
+00:03:45,060 --> 00:03:48,050
+Put the cholesterol back into the organoid's food.
+
+73
+00:03:48,450 --> 00:03:51,939
+If these genes stop mattering, it was the food. If
+
+74
+00:03:51,739 --> 00:03:55,030
+they still matter, they're stronger candidates.
+
+75
+00:03:55,530 --> 00:03:58,920
+It takes about two weeks, and no new screen.
+
+76
+00:04:00,020 --> 00:04:02,920
+We also tried hard to prove ourselves wrong.
+
+77
+00:04:03,270 --> 00:04:06,510
+We checked the result on patient samples the analysis
+
+78
+00:04:06,310 --> 00:04:07,370
+had never seen.
+
+79
+00:04:07,620 --> 00:04:12,000
+We reran it 150 times on reshuffled data.
+
+80
+00:04:12,250 --> 00:04:15,698
+Five rounds of independent review checked the code and
+
+81
+00:04:15,498 --> 00:04:16,360
+the claims.
+
+82
+00:04:16,710 --> 00:04:20,383
+And when one early finding didn't hold up, we dropped
+
+83
+00:04:20,183 --> 00:04:20,580
+it.
+
+84
+00:04:21,880 --> 00:04:25,440
+All of this is free at itsthemedium.com.
+
+85
+00:04:25,940 --> 00:04:29,489
+Look up any gene and get a simple answer: does it
+
+86
+00:04:29,289 --> 00:04:31,130
+follow the food, or not?
+
+87
+00:04:31,530 --> 00:04:34,969
+Researchers can paste their own list of genes and see
+
+88
+00:04:34,769 --> 00:04:37,720
+in seconds which ones look like diet effects.
+
+89
+00:04:38,420 --> 00:04:42,280
+Muse, Meta's AI model, is the research assistant.
+
+90
+00:04:42,580 --> 00:04:46,256
+Ask it a question and it searches the full table with
+
+91
+00:04:46,056 --> 00:04:49,733
+its own tools, shows every step, and links every gene
+
+92
+00:04:49,533 --> 00:04:50,520
+to the data.
+
+93
+00:04:51,020 --> 00:04:54,233
+And Muse ran the research loop behind this whole
+
+94
+00:04:54,033 --> 00:04:54,610
+audit.
+
+95
+00:04:55,910 --> 00:04:58,720
+Organoids are still a big step forward.
+
+96
+00:04:58,970 --> 00:05:02,240
+We just need to check what we're feeding them.
+
+97
+00:05:03,040 --> 00:05:04,290
+It's the Medium.
+
+98
+00:05:04,790 --> 00:05:06,710
+itsthemedium.com
+
