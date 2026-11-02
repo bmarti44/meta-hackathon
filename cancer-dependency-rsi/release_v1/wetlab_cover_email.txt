@@ -1,0 +1,46 @@
+Subject: Are your organoid sterol dependencies a medium artifact? A 2-week test + genome-wide data
+
+Hi [Name],
+
+We re-analyzed the 2026 Broad (Neiswender et al.) and Sanger (Herranz-Ors et
+al.) organoid dependency catalogues genome-wide (DepMap 26Q3, library- and
+lineage-adjusted, disjoint held-out-patient confirmed). Headline: 84-86% of
+organoid-vs-2D differential dependencies are consistent with medium effects
+(reproduced in adherent organoid-medium culture), with a single format
+candidate and none at 5% FDR. The strongest
+class is sterol/mevalonate synthesis (SQLE delta-Chronos -0.83, ~100%
+reproduced without domes), and several sterol/SREBP genes sit on
+Herranz-Ors' "organoid-specific core fitness" list (MVD, IDI1, MBTPS1/2,
+SCAP). Expression shows the matching sterol-starvation signature, and in
+plasma-like medium (Rossiter 2021 screens) SQLE dependency is relieved -
+the opposite direction.
+
+If these dependencies reflect LDL starvation in defined medium, LDL rescue
+would support LDL limitation as a contributor in these cultured models
+(transfer to tumors would remain untested). The cultured-model test takes
+~2 weeks without a new screen:
+
+1) LDL add-back in 3-4 of your OPAC/organoid-medium models: SQLE-inhibitor
+   and statin dose-response +/- LDL cholesterol (and mevalonate bypass
+   control). Our prediction: >=5x IC50 rescue with LDL.
+2) Same drugs in matched adherent organoid-medium vs FBS medium.
+
+We pre-agree the falsification criterion: if LDL-replete models keep
+SQLE-inhibitor IC50 within 2x in >=3/4 models, our medium-artifact claim
+fails and we say so. Either outcome is publishable and directly relevant
+to targets now being nominated from these catalogues.
+
+Attached: one-page proposal with design details, the preprint draft, and
+the per-gene attribution table (17,525 genes: medium-consistent / format / unresolved
+with CIs) so you can check any target you are pursuing. We can rank your
+models by predicted effect size if you share ACH/HCM IDs, and we would
+analyze any resulting data. Co-authorship on the technical note for the
+collaborating lab.
+
+Happy to discuss on a short call.
+
+Best,
+[Your name]
+[Affiliation]
+
+Attachments: wetlab_proposal_v1.md, manuscript_v2.pdf, medium_attribution_v2_norm.csv (or the full release_v1.zip bundle)

@@ -1,0 +1,76 @@
+{
+ "n_adherent_models": 9,
+ "models": [
+  "ACH-002836",
+  "ACH-002877",
+  "ACH-003339",
+  "ACH-003358",
+  "ACH-003364",
+  "ACH-003711",
+  "ACH-003713",
+  "ACH-003723",
+  "ACH-003724"
+ ],
+ "loo": {
+  "ACH-002836": {
+   "slope_Aloo_on_D_hits": 0.9146067033616965,
+   "median_ratio_hits": 0.925379757049942,
+   "frac_medium_flags_retained": 0.9715762273901809,
+   "n_medium_of_all_hits": 388
+  },
+  "ACH-002877": {
+   "slope_Aloo_on_D_hits": 0.8958767685077869,
+   "median_ratio_hits": 0.8975926363783855,
+   "frac_medium_flags_retained": 0.9457364341085271,
+   "n_medium_of_all_hits": 374
+  },
+  "ACH-003339": {
+   "slope_Aloo_on_D_hits": 0.9091618973115723,
+   "median_ratio_hits": 0.903027210338688,
+   "frac_medium_flags_retained": 0.9638242894056848,
+   "n_medium_of_all_hits": 384
+  },
+  "ACH-003358": {
+   "slope_Aloo_on_D_hits": 0.8780447030511164,
+   "median_ratio_hits": 0.8669645564936296,
+   "frac_medium_flags_retained": 0.9483204134366925,
+   "n_medium_of_all_hits": 375
+  },
+  "ACH-003364": {
+   "slope_Aloo_on_D_hits": 0.899974798587983,
+   "median_ratio_hits": 0.9267333974473615,
+   "frac_medium_flags_retained": 0.9483204134366925,
+   "n_medium_of_all_hits": 381
+  },
+  "ACH-003711": {
+   "slope_Aloo_on_D_hits": 0.9204103832121301,
+   "median_ratio_hits": 0.9072058922989175,
+   "frac_medium_flags_retained": 0.9509043927648578,
+   "n_medium_of_all_hits": 379
+  },
+  "ACH-003713": {
+   "slope_Aloo_on_D_hits": 0.8967803792905222,
+   "median_ratio_hits": 0.909060540909896,
+   "frac_medium_flags_retained": 0.9741602067183462,
+   "n_medium_of_all_hits": 379
+  },
+  "ACH-003723": {
+   "slope_Aloo_on_D_hits": 0.8818955614682072,
+   "median_ratio_hits": 0.8838078683956281,
+   "frac_medium_flags_retained": 0.9354005167958657,
+   "n_medium_of_all_hits": 367
+  },
+  "ACH-003724": {
+   "slope_Aloo_on_D_hits": 0.9228334134373849,
+   "median_ratio_hits": 0.918747128272724,
+   "frac_medium_flags_retained": 0.9457364341085271,
+   "n_medium_of_all_hits": 375
+  }
+ },
+ "summary": {
+  "slope_min": 0.8780447030511164,
+  "slope_max": 0.9228334134373849,
+  "flag_retention_min": 0.9354005167958657,
+  "flag_retention_median": 0.9483204134366925
+ }
+}

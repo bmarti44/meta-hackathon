@@ -1,0 +1,47 @@
+TASK: Deep web research to FALSIFY a novelty claim — RETRY with strict
+budget discipline. A previous run did 146 searches and timed out before
+synthesizing. CONSTRAINTS: at most 25 NEW web searches total. Verify the
+candidate sources below FIRST (they were surfaced last run), then run at
+most ~10 additional falsification searches of your choice, then STOP
+searching and write the report. Target report length: concise evidence
+table + verdict (aim < 350 lines). Use live web search; date in-world:
+2026-10-30. Give DOI/URL for every source; never invent sources.
+
+CLAIM to test (from cancer-dependency-rsi/manuscript/manuscript_draft_v2.md):
+Beyond Neiswender et al. 2026 (doi:10.1038/s41586-026-10843-7; 1,000-gene
+minipool showing SQLE/MSMO1 medium-driven), "the genome-wide, per-gene
+decomposition [of the published 2026 organoid dependency catalogues —
+Neiswender/Broad and Herranz-Ors/Sanger doi:10.1038/s41586-026-10830-y —
+into medium vs format components] has not been reported."
+
+CANDIDATE SOURCES FROM PRIOR RUN — verify and classify each (A = same
+genome-wide quantified medium-attribution of these catalogues [claim
+false], B = substantial partial overlap [claim overstated], C = adjacent
+but distinct):
+1. https://www.nature.com/articles/s41422-026-01311-y (Cell Research 2026, "culture")
+2. "Expanding DepMap: is the juice worth the squeeze" (commentary?)
+3. https://www.nature.com/articles/s42003-026-11202-y
+4. https://link.springer.com/article/10.1186/s12864-026-12658-2
+5. bioRxiv 10.1101/2025.04.24.650434
+6. bioRxiv 10.1101/2024.04.29.591759
+7. "A combined enteric neuron-gastric tumor organoid reveals metabolic vulnerabilities" (2026?)
+8. "Functional Genomics In Vivo Reveal Metabolic Dependencies of Pancreatic Cancer Cells" (heme)
+9. https://www.nature.com/articles/s41586-026-10806-y (possibly News & Views on the 2026 papers)
+10. CEN-tools culture-medium essentiality work; zannixlabs DepMap pancreatic reanalysis
+11. https://pmc.ncbi.nlm.nih.gov/articles/PMC13664187/ (transferability to organoids 2026)
+12. Forum/depmap discussions of medium-associated dependencies (forum.depmap.org)
+
+Then up to ~10 fresh falsification searches (synonyms: media formulation,
+serum-free, nutrient/environmental dependency, conditional essentiality,
+Matters Arising / comment on either 2026 DOI; citation chasing on both DOIs).
+
+Also judge the manuscript's EXACT novelty sentences (Abstract + Introduction
+of manuscript/manuscript_draft_v2.md) and propose minimal corrected wording
+if needed.
+
+OUTPUT (Markdown, concise):
+- VERDICT: TRUE / PARTIALLY TRUE / FALSE + one-paragraph basis.
+- Evidence table: source | year | scale (genes/models) | quantified what | class A/B/C | DOI/URL.
+- Sentence-level verdicts + corrected wording if needed.
+- Search log incl. notable empty results + coverage confidence.
+Unverified sources: mark and exclude from verdict basis.

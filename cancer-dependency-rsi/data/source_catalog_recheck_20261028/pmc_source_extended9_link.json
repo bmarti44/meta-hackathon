@@ -1,0 +1,13 @@
+{
+  "status": "metadata_retrieved",
+  "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13581591/",
+  "bytes": 486556,
+  "sha256": "c24fb07baab57abbd2cd00b39ea139f3eec3db603550e19ab60cc53ac2438b97",
+  "actual_manifest_links": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13581591/#MOESM20",
+    "https://pmc.ncbi.nlm.nih.gov/articles/instance/13581591/bin/41586_2026_10843_MOESM20_ESM.xlsx"
+  ],
+  "outcome_values_parsed": false,
+  "wall_s": 0.3168570001143962,
+  "actual_cost_usd": 0
+}

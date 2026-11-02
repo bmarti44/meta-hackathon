@@ -1,0 +1,36 @@
+{
+ "timestamp": "2026-10-29T22:28:05.703749+00:00",
+ "organoid_models_dev": 82,
+ "twod_models_dev": 686,
+ "atlas_format_models": 6,
+ "atlas_genes": 250,
+ "organoid_models_in_GE": 82,
+ "twod_models_in_GE": 686,
+ "A1_genes": 249,
+ "A1_L_vs_disp_rho": -0.022588418188884574,
+ "A1_signed_vs_disp_rho": 0.07518150019432569,
+ "A1_L_vs_disp_partial_base": -0.07206296152351341,
+ "A1_medlab_vs_disp_rho": -0.008317139525845316,
+ "A1_disp_splithalf_rho": 0.887329965021376,
+ "A1_rho_patient_boot95": [
+  -0.059751535172949864,
+  0.01764436455499416
+ ],
+ "A1_null_rho_95": [
+  -0.1046052662261951,
+  0.12567223085891957
+ ],
+ "A2_models": 134,
+ "A2_splithalf_L_rho": 0.8304235489033668,
+ "A2_splithalf_signed_rho": 0.16626243363738924,
+ "A2_formatL_vs_mediumL_rho": 0.3604454938453792,
+ "A2_shared_genes": 240,
+ "A2_mediumL_vs_disp_rho": 0.06816264171252973,
+ "A3_expr_models": [
+  82,
+  680
+ ],
+ "A3_exprshift_vs_disp_rho": -0.11959113874854257,
+ "A3_L_vs_disp_partial_expr": -0.028411970462495138,
+ "A3_L_vs_absexprshift_rho": 0.017754372328021767
+}

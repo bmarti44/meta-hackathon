@@ -1,0 +1,3 @@
+Narrow re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 94, one MEDIUM: workbook completeness derived from filesystem glob.
+Verify only: both src/sgen007_provenance.py (EXPECTED_WORKBOOKS pinned list, register v13) and src/sgen007_battery.py (pinned REQUIRED workbooks, battery v10) now require the five exact paths independent of discovery; absence of any workbook must fail provenance (missing row exists=false) and battery REQUIRED check. Then render final C2 field-level verdict for the whole sgen007 package.
+End exactly: SGEN007_FIX8_SCORE: <0-100>; C2:<...>

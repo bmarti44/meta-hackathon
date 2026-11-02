@@ -1,0 +1,64 @@
+TASK: Deep web research to FALSIFY a novelty claim. Use live web search
+WITHOUT any cap on number of searches, sources, or depth — research until
+you reach saturation (new searches stop turning up relevant new sources).
+Take as long as you need. Date in-world: 2026-10-30. Prefer primary
+sources; give DOI/URL for every item; never invent sources.
+
+THE CLAIM (from cancer-dependency-rsi/manuscript/manuscript_draft_v2.md):
+Neiswender et al. (Nature 2026, doi:10.1038/s41586-026-10843-7) showed in a
+1,000-gene minipool that some organoid dependencies are medium-driven; the
+genome-wide, per-gene decomposition of the published 2026 organoid
+dependency catalogues (Neiswender/Broad NextGen 2026; Herranz-Ors/Sanger
+2026, doi:10.1038/s41586-026-10830-y) into medium vs format components —
+with quantified fractions and named affected targets — has not been reported.
+
+HUNT for anything making this FALSE or OVERSTATED:
+1. Any genome-wide (not minipool/single-pathway) medium-vs-format
+   decomposition or medium-attribution quantification of organoid/3D CRISPR
+   dependencies — any group/venue incl. bioRxiv/medRxiv 2024-2026, Matters
+   Arising, comments, reanalyses of the two 2026 Nature catalogues or of
+   DepMap 26Qx organoid screens.
+2. Any reported FRACTION of organoid-specific hits attributable to
+   medium/serum/nutrients, or per-gene medium-attribution tables/flags.
+3. Genome-wide serum vs serum-free / defined-medium CRISPR comparisons in
+   cancer models at catalogue scale (beyond Rossiter 2021 HPLM, already cited).
+4. Organoid-medium artifact literature: sterol (SQLE/MSMO1), heme, fatty-acid
+   synthesis, Wnt formulation dependence, LDL/lipid add-back, essentiality
+   weakening in slow/3D screens attributed to doublings/depletion dynamics.
+5. The two 2026 papers' supplements, associated News & Views/editorials/
+   commentaries quantifying medium shares; citation-chase both DOIs
+   (who cites them already, incl. critical citations).
+6. Database/resource work flagging or correcting medium-associated
+   dependencies genome-wide (DepMap/Chronos/CEN-tools etc.).
+
+CANDIDATES surfaced by an earlier (timed-out) run — verify/classify these
+plus everything else you find:
+- nature.com/articles/s41422-026-01311-y (Cell Research 2026)
+- "Expanding DepMap: is the juice worth the squeeze"
+- nature.com/articles/s42003-026-11202-y
+- link.springer.com/article/10.1186/s12864-026-12658-2
+- bioRxiv 10.1101/2025.04.24.650434 ; 10.1101/2024.04.29.591759
+- "A combined enteric neuron-gastric tumor organoid reveals metabolic vulnerabilities"
+- "Functional Genomics In Vivo Reveal Metabolic Dependencies of Pancreatic Cancer Cells" (heme)
+- nature.com/articles/s41586-026-10806-y
+- CEN-tools culture-medium essentiality; forum.depmap.org medium discussions
+- PMC13664187 (transferability to organoids, 2026)
+
+Classify each source: A = same genome-wide quantified medium attribution of
+these catalogues (claim false); B = substantial partial overlap (claim
+overstated — specify how); C = adjacent/distinct (context).
+
+Also judge the manuscript's EXACT novelty sentences (read Abstract +
+Introduction of manuscript/manuscript_draft_v2.md from disk) and propose
+minimal corrected wording if any sentence overstates.
+
+Try synonyms and author/lab names (Broad DepMap, Sanger, Garnett, Behan,
+Tsherniak, Vazquez, Cantor); log notable EMPTY searches as absence evidence
+with honest confidence labels. Mark unverifiable sources and exclude them
+from the verdict basis.
+
+OUTPUT (Markdown):
+- VERDICT: TRUE / PARTIALLY TRUE / FALSE + one-paragraph basis.
+- Evidence table: source | year | scale | quantified what | class A/B/C | DOI/URL.
+- Sentence-level verdicts + corrected wording if needed.
+- Search log (queries, empty results, saturation point) + coverage limits + confidence.

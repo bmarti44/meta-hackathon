@@ -1,0 +1,58 @@
+{
+  "status": "PRELOCK_DRAFT_STABILITY_ONLY",
+  "models": {
+    "ACH-000108": "Pancreas",
+    "ACH-000178": "Pancreas",
+    "ACH-001418": "Ovary/Fallopian Tube",
+    "ACH-002958": "Esophagus/Stomach",
+    "ACH-003040": "Pancreas",
+    "ACH-003052": "UNRESOLVED"
+  },
+  "verified_Broad_donor_IDs": null,
+  "interpretation": "Composition stress tests,not population inference or verified donorclusters. Primary externaldecision conditions on measuredBroadcovariates.",
+  "groupings": {
+    "split_assumption": {
+      "ACH-000108": "ACH-000108",
+      "ACH-000178": "ACH-000178",
+      "ACH-001418": "ACH-001418",
+      "ACH-002958": "ACH-002958",
+      "ACH-003040": "ACH-003040",
+      "ACH-003052": "ACH-003052"
+    },
+    "all_possibly_shared": {
+      "ACH-000108": "shared",
+      "ACH-000178": "shared",
+      "ACH-001418": "shared",
+      "ACH-002958": "shared",
+      "ACH-003040": "shared",
+      "ACH-003052": "shared"
+    }
+  },
+  "unknown_lineage_scenarios": {
+    "Pancreas": {
+      "ACH-000108": "Pancreas",
+      "ACH-000178": "Pancreas",
+      "ACH-001418": "Ovary/Fallopian Tube",
+      "ACH-002958": "Esophagus/Stomach",
+      "ACH-003040": "Pancreas",
+      "ACH-003052": "Pancreas"
+    },
+    "Ovary/Fallopian Tube": {
+      "ACH-000108": "Pancreas",
+      "ACH-000178": "Pancreas",
+      "ACH-001418": "Ovary/Fallopian Tube",
+      "ACH-002958": "Esophagus/Stomach",
+      "ACH-003040": "Pancreas",
+      "ACH-003052": "Ovary/Fallopian Tube"
+    },
+    "Esophagus/Stomach": {
+      "ACH-000108": "Pancreas",
+      "ACH-000178": "Pancreas",
+      "ACH-001418": "Ovary/Fallopian Tube",
+      "ACH-002958": "Esophagus/Stomach",
+      "ACH-003040": "Pancreas",
+      "ACH-003052": "Esophagus/Stomach"
+    }
+  },
+  "single_cluster_disposition": "not enough clusters for populationinference; compositionresampling maydegenerate and must notbe read as equivalence"
+}

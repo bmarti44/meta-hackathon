@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only, narrow: src/sgen009_trace.py parser + generations/sgen009/traceability_v15.json + reproducibility citations (previous 87).
+Probe beyond fixtures: any corruption of rho/interval/secondary/count assertions (prefix/suffix/comma/exponent/malformed delimiter/approx) must reject via main(); counts use digit-leading complete tokens in labeled contexts; rho/secondaries use complete \S+ tokens fullmatched vs NUM.
+End exactly: SGEN009_FIX4_SCORE: <0-100>

@@ -1,0 +1,85 @@
+2026-10-29T23:22:43.459121Z ERROR codex_login::auth::manager: Failed to refresh token status=401 Unauthorized
+2026-10-29T23:22:43.459197Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.639548Z ERROR codex_login::auth::manager: Failed to refresh token status=401 Unauthorized
+2026-10-29T23:22:43.639580Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.639738Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.649408Z ERROR codex_login::auth::manager: Failed to refresh token status=401 Unauthorized
+2026-10-29T23:22:43.649436Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.649808Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.649878Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.656873Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:43.657291Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.276475Z ERROR codex_models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.165.0, cf-ray: a525ec898f1ab4be-ATL, request id: req_62f0f56bf32c475bb846cd823350b3d3, auth error: 401, auth error code: token_expired
+2026-10-29T23:22:44.286550Z ERROR codex_models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.165.0, cf-ray: a525ec898be49a1b-ATL, request id: req_e2792752fcfd45dba65f3fb3c12ee253, auth error: 401, auth error code: token_expired
+2026-10-29T23:22:44.286839Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.356989Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.364147Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.364279Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.364317Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.364353Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.364938Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.365357Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.365731Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.510237Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when UnexpectedServerResponse("HTTP 401: {\n  \"error\": {\n    \"message\": \"Provided authentication token is expired. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"code\": \"token_expired\",\n    \"param\": null\n  },\n  \"status\": 401,\n  \"detail\": {\n    \"code\": \"token_expired\",\n    \"message\": \"Provided authentication token is expired. Please try signing in again.\"\n  }\n}")
+2026-10-29T23:22:44.544089Z ERROR codex_models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.165.0, cf-ray: a525ec8bfed7a0a3-ATL, request id: req_557544e1386047ea851447633b435314, auth error: 401, auth error code: token_expired
+2026-10-29T23:22:44.548901Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.611968Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when UnexpectedServerResponse("HTTP 401: {\n  \"error\": {\n    \"message\": \"Provided authentication token is expired. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"code\": \"token_expired\",\n    \"param\": null\n  },\n  \"status\": 401,\n  \"detail\": {\n    \"code\": \"token_expired\",\n    \"message\": \"Provided authentication token is expired. Please try signing in again.\"\n  }\n}")
+2026-10-29T23:22:44.699642Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:44.899410Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.065442Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.215330Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.398890Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.398942Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.398979Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.972844Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.972906Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:45.972947Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:46.816286Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:46.819961Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:46.823720Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:47.922261Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:47.922328Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:47.922379Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:49.915750Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:49.915823Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:49.915865Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:53.687391Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:53.688012Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:53.691795Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.070367Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.079416Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.079468Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.646079Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.646140Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:54.646182Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:55.448929Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:55.451717Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:55.456218Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:56.607344Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:56.607412Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:56.607451Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:58.626162Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:58.626218Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:22:58.626258Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:23:02.127029Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:23:02.130146Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:23:02.133837Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+2026-10-29T23:23:02.581207Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token has expired. Please log out and sign in again.
+       19.92 real         0.35 user         0.19 sys
+           215007232  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27158  page reclaims
+                  29  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                 600  messages sent
+                1267  messages received
+                  23  signals received
+                 942  voluntary context switches
+                7252  involuntary context switches
+          4802125698  instructions retired
+          1618851777  cycles elapsed
+           165086360  peak memory footprint

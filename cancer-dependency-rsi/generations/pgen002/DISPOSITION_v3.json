@@ -1,0 +1,8 @@
+{
+  "supersedes_labels_in": "generations/pgen002/screen_verdict_v1.json (preserved)",
+  "per": "sol-xhigh ENDPOINT:NO (reviews/pgen004_design_xhigh_v1.md) + sol-high v3_sgen001 review issue 3 (87/100), verified by lead",
+  "criterion_1_token_accounting": "PASS label REMOVED. Arithmetic reproduces (14,566,608 charged = 10,456,357 measured + 4,110,251 imputed) but max-completed-call imputation is not a conservative failure bound and same model/effort does not establish matched host expenditure (unknown != zero). Missing witnesses: measured host expenditure OR authoritative strict-matching contract incl. learning/failures/retries/routing/caching; enforced whole-invocation usage bound; learned-upper/fixed-lower cost treatment. CPU seconds are NOT currently recorded by run_bounded results (wall+RSS only) - implementation + witness required before any CPU-measured assertion.",
+  "criterion_2_raw_route": "PASS label REMOVED: SPEC required size AND MD5; retained receipts carry a multipart ETag (not an MD5 checksum) and filtered headers. Size/member listing remain witnessed; MD5 witness missing.",
+  "criterion_3": "PENDING label superseded by pgen003 (Witness A completed 148/148 in Passports space; generation FAILS-SCREEN on Witness B).",
+  "overall": "pgen002 = PENDING/INCOMPLETE with removed PASS labels; ENDPOINT:NO accepted; no endpoint approved; any redesigned endpoint requires a new ledger-first SPEC + sol-high >=90."
+}

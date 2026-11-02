@@ -1,0 +1,37 @@
+{
+  "tierA_direct_outliers_excluded": [
+    "ABI2",
+    "ACTG1",
+    "ARHGAP29",
+    "CDK4",
+    "CDK6",
+    "CTNNB1",
+    "FECH",
+    "FERMT2",
+    "FZD5",
+    "GPX4",
+    "ITGAV",
+    "ITGB1",
+    "ITGB5",
+    "KDSR",
+    "MAP3K7",
+    "MSMO1",
+    "NCKAP1",
+    "PIP5K1A",
+    "PRKRA",
+    "SEPHS2",
+    "SLC3A2",
+    "SPTLC2",
+    "SQLE",
+    "TCF7L2",
+    "VCL",
+    "WLS"
+  ],
+  "eligible_n": 224,
+  "joined_to_transfer_table_n": 223,
+  "attrition_missing_from_transfer_table": [
+    "TMOD"
+  ],
+  "definition_A": "top 100 each tail MeanDifference among DropEssential=False (S1 Fig.5), intersected with panel; independently reproduced (26, matches sol-xhigh)",
+  "caveat": "Pathway/class-level selection remains; claims conditional on fixed selected panel only."
+}

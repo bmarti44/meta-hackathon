@@ -1,0 +1,20 @@
+{
+ "timestamp": "2026-10-29T21:55:35.649792+00:00",
+ "model_conditions": 3385,
+ "models": 2476,
+ "chain_depth_distribution": {
+  "1": 3379,
+  "2": 6
+ },
+ "patterns": {},
+ "qualified_models": 0,
+ "qualified_detail_capped": {},
+ "dangling_parent_nodes": [
+  "MC-002109-k258",
+  "MC-002475-YGSw"
+ ],
+ "unqualified_conditions": 1228,
+ "verdict": "INVENTORY_COMPLETE",
+ "history_resource": "ABSENT",
+ "nonclaims": "Feasibility only for the RECORDED parent-chain resource: parent semantics unverified (all 8 parent-bearing rows carry AnchorDrug, suggesting treatment derivation); lineage recording may be incomplete; 2 dangling parents; unqualified conditions counted; no dated condition transitions or inter-node elapsed time (screen Days exist but do not date transitions); branch randomization unknown; hysteresis is an established concept."
+}

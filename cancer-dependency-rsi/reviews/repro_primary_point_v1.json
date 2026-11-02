@@ -1,0 +1,9 @@
+{
+ "component": "primary point estimate from retained per-gene coordinates (no C re-decoding; donor interval NOT reproduced - requires donor-level artifacts)",
+ "locked_estimate": -0.14583205005879532,
+ "recomputed": -0.1458320500587953,
+ "abs_diff": 2.7755575615628914e-17,
+ "n_genes": 207,
+ "tolerance": 1e-09,
+ "pass": true
+}

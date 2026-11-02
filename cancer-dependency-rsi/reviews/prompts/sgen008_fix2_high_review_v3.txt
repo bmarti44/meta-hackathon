@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 86.
+Verify: exact magnitude equality after markdown normalization + substring negative fixture; unique sample IDs + exact membership vs installed split_manifest C_external.sample_ids in eligibility_from_originals; fresh evidence v3 (per-component commands + report hashes, failed attempts preserved in generation dir, install timing limitation stated honestly).
+End exactly: SGEN008_FIX2_SCORE: <0-100>

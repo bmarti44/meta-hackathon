@@ -1,0 +1,17 @@
+The HIGH normalization issue and stage-specific frozen-code issue are resolved. No HIGH or CRITICAL findings remain.
+
+Read-only verification reproduced the envelope bound **1.841784754198813**, with proof disabled and verdict `ENVELOPE_TOO_WIDE`. Expected/actual code hashes match, including v1’s frozen estimator. Running stage builders with outputs captured in memory reproduced all **12 CSVs byte-for-byte** under both interpreters. All **8 ZIP tests passed** in both environments. Independent eligibility reconstruction confirmed **250 patients / 251 lines / 810 files**.
+
+1. **MEDIUM — C10 check still accepts incorrect fields.** [src/sgen005_upstream.py:114](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/sgen005_upstream.py:114) checks unordered substrings on any line containing “primary.” Swapping the primary estimate and lower CI endpoint still passes; an incorrect primary row also passes when expected numbers appear in a “Primary” footer. **Fix:** select the unique intended table row, parse its columns, and compare estimate and ordered interval endpoints separately.
+
+2. **MEDIUM — Eligibility exclusions remain cached inputs.** [src/sgen005_upstream.py:119](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/sgen005_upstream.py:119) recomputes totals from detail but trusts stored exposure and overlap lists. Adding a Broad-exposed ID to another line’s detail leaves `elig_ok=True`. Current totals are correct independently. **Fix:** derive Broad exposure from each line’s `broad_id`, reconstruct C-patient overlap from retained identity inputs, then recompute eligibility.
+
+3. **MEDIUM — Inflation-limit regression still bypasses decompression.** [tests/test_zipfetch.py:118](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_zipfetch.py:118) alters only directory-side metadata and accepts any `RuntimeError`. Instrumentation confirms **zero decompressor calls**. The new trailing-junk test reaches decompression; the declaration-cap test correctly rejects before inflation. **Fix:** patch both headers consistently for the undersized declaration, assert decompression occurs, and check the specific rejection.
+
+4. **LOW — Synthetic audit remains unchecked and contains broken references.** [src/sgen005_upstream.py:128](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/sgen005_upstream.py:128) reports only its pathname. [synthetic_use_audit.json:5](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/sgen005/synthetic_use_audit.json:5) still references nonexistent `lock_s/prelock_validation_v1.json` and absent `status.json:synthetic_calibration`; its envelope reference remains v2. **Fix:** reference retained calibration evidence and envelope v3, validate references, and include audit validity in overall success.
+
+5. **LOW — Fresh-install provenance remains incomplete.** [fresh_env_report_v2.json:2](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/sgen005/fresh_env_report_v2.json:2) summarizes installation without a structured installation receipt. The retained interpreter works and its lockfile matches, but that does not establish installation execution. **Fix:** retain command, exit status, elapsed time, interpreter/lockfile identity, and the v5 runner receipt.
+
+C11 remains PARTIAL because donor/patient interval and policy-comparison reproduction remain unavailable.
+
+SGEN45_FIX2_SCORE: 94; C11:PARTIAL

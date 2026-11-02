@@ -1,0 +1,10 @@
+{
+  "record": "cl_rd_raw_accounting_discriminator_v2",
+  "supersedes": "cl_rd_raw_accounting_discriminator_v1 (preserved; determination unchanged, reopening condition broadened per sci-package LOW)",
+  "determination": "FAIL at present: no measured host-expenditure endpoint; strict matching of realized host-model consumption across arms (incl. learning overhead) not demonstrated. CL-RD-RAW acquisition remains stopped until a reopening condition is witnessed.",
+  "reopening_conditions_any_of": [
+    "User supplies a measured per-call host expenditure source for the codex/gpt-6.1-sol route (billing export or metered API with recorded cost and a numeric spend cap); then re-run this discriminator.",
+    "OR a justified alternative primary resource endpoint (spec section 11) is proposed in a hashed SPEC and sol-high reviewed >=90, demonstrating prospectively that every other material resource - including realized host-model tokens (input/cached/output/reasoning), retries, routing/caching differences, and all learning-overhead calls - is measured per arm or demonstrably strictly matched, with fixed baselines receiving corresponding useful search opportunities. Equal call counts/efforts/prompt budgets alone do not establish matching; token list-price valuation is not measured expenditure."
+  ],
+  "note": "Reopening permits a new feasibility assessment only; it does not certify C9 or authorize outcome acquisition before partition/processing witnesses (CL-RD-RAW-FEASIBILITY-01 steps 1-4) and G2 review >=90."
+}

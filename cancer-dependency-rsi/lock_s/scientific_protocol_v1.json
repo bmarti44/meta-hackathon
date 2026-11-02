@@ -1,0 +1,92 @@
+{
+  "protocol_id": "lock-s-scientific-only-v1",
+  "status": "DRAFT_FOR_SOL_HIGH_REVIEW (becomes binding only via lock_s/LOCK2_COMMIT.json after review >=90 with zero unresolved high/critical)",
+  "authorization": {
+    "user_text": "2. approved",
+    "local_time": "2026-10-28T17:08:36-04:00",
+    "scope": "Scientific-only track explicitly approved by the user after Sol-xhigh terminal determination BLOCKED (reviews/terminal_determination_xhigh_v1.md) listed it as a reopening condition. Consumes C irreversibly.",
+    "what_it_cannot_do": "Cannot satisfy C4 policy freeze, C8, C9, C13 or the joint goal; G2 (policy task gate) remains FAIL. Best attainable terminal state is SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE, and only if a qualifying result is obtained and the scientific gates are documented; otherwise INCONCLUSIVE."
+  },
+  "question": "Across the fixed 207-gene confirmatory panel, is observed format-bundle score lability (6 measured Broad models) associated with donor-averaged normalized displacement from the fixed Broad 2D consensus dependency ordering in the donor-disjoint Sanger organoid cohort (148 models / 144 donors), beyond ranked absolute baseline dependency strength?",
+  "estimand": {
+    "parameter": "partial Spearman rho = Pearson correlation of rank residuals of D_g and L_g after OLS on ranks of base_strength_g (with intercept); src/estimators.py partial_spearman / src/donor_kernel.py rank_correlations",
+    "population_conditioning": "Conditional on the 207 fixed genes, the 6 measured Broad format-contrast models (fixed measured covariates; Broad donors unresolved) and the processed Sanger Table 6 measurements; inference targets the Sanger donor population represented by 144 donors.",
+    "L_g": "mean_abs_delta: equal-weight mean over 6 models (ACH-000108, ACH-000178, ACH-001418, ACH-002958, ACH-003040, ACH-003052) of within-model mean |Chronos_Dome - Chronos_Plastic| over that model's matched medium pairs (Layer A, figshare 29472362 v1)",
+    "reference_ordering": "signed AdherentMean (Broad adherent 2D mean Chronos, organoids_vs_2d_gene_dependency_tests_full.csv) ranked within the 207 genes, average ties",
+    "base_strength_g": "|AdherentMean|, ranked",
+    "D_g": "for each model: within-207 average ranks of Sanger Table 6 LFC (selected library); |rank - reference rank|/(G-1); models averaged within donor first (integer-exact), donors equally weighted",
+    "measurement_systems": "Chronos and Sanger LFC compared only through within-assay ranks; never subtracted",
+    "frozen_input_files": [
+      "lock_s/covariates.csv",
+      "lock_s/cohort.csv",
+      "lock_s/presence.json"
+    ]
+  },
+  "cohort": {
+    "models": 148,
+    "donors": 144,
+    "source": "data/split_manifest.json (split-manifest-prelock-v2) C_external",
+    "library_rule": "minLib if available else v1_1 (133 minLib incl. 13 dual, 15 v1_1-only)",
+    "presence_audit": "ID-only registry (lock_s/presence.json): all 148 samples present; 0 missing of 207 genes in primary library; 0 missing in alternate library for 13 dual models; 0 duplicates; TMOD1 present in all 148 primary libraries",
+    "nonfinite_rule": "A model with any nonfinite/missing selected-library cell among the analysis genes is excluded from that analysis (listed); if exclusions exceed 5% of 148 models (i.e. >7) the analysis is INCONCLUSIVE. Donors with remaining models are retained.",
+    "exclusion_reporting": "Every analysis (primary, S1-S4) reports n_models_analyzed, n_donors_analyzed and the full model_exclusions list."
+  },
+  "primary_decision": {
+    "interval": "donor-cluster percentile bootstrap, 5000 replicates, seed 20261028, numpy default_rng integers draws over unique donors; all nested models carried together; L_g and reference treated as fixed",
+    "invalid_rules": "point degenerate/nonfinite -> INCONCLUSIVE; >250/5000 failed replicates, nonfinite endpoints or width<=0 -> INCONCLUSIVE; no substitute interval after failure",
+    "delta": 0.2,
+    "rule": "lo > 0.20 -> SIGNAL; hi < -0.20 -> NEGATIVE; -0.20 < lo and hi < 0.20 -> BOUND; otherwise INCONCLUSIVE (src/confirmatory_estimand.py decision)",
+    "single_execution": "Only via src/run_external_eval.py (run_bounded, phase6_7, job external_eval_lock2_v1, cpu_heavy, 2 GiB, 600 s); src/cli.py evaluate-external dispatches to it; external_eval.main refuses without exactly one outstanding bounded reservation for this job. Atomic O_EXCL fsynced start record precedes the exposure record and decoding; results committed with fsync + no-overwrite hard links. Result present -> refuse; start record without result -> refuse pending documented adjudication (no silent rerun). No alternative primary after seeing results.",
+    "failure_behavior": "Degenerate/invalid extraction or kernel results are recorded as structured INCONCLUSIVE outcomes (never crash); stability failures are recorded per item and never block persistence."
+  },
+  "secondary_family": {
+    "control": "Holm FWER 0.05 over exactly 4 hypotheses H0: rho = 0. Two-sided bootstrap p over ALL B=5000 replicates from the same frozen donor draws: p = min(1, 2*min((#{v<=0}+F+1)/(B+1), (#{v>=0}+F+1)/(B+1))), F = failed (nonfinite) replicates counted against rejection in both tails. An analysis with invalid point or interval keeps its family slot with p=None (treated as 1 in Holm), holm_adjusted_p=None and never rejects.",
+    "members": {
+      "S1_null_calibrated": "D'_g = D_g - E_null|R-R0|/(G-1) (exact tie-aware formula)",
+      "S2_tmod1_alias208": "208 genes: 207 + Broad TMOD mapped to Sanger/reference TMOD1 (alias unadjudicated; sensitivity)",
+      "S3_v1_1_dual_library": "13 dual-library models use v1_1 instead of minLib",
+      "S4_unadjusted": "no baseline adjustment (intercept-only projection = Spearman)"
+    },
+    "role": "Secondary results never override or rescue the primary decision; reported with 95% donor intervals and Holm-adjusted p."
+  },
+  "stability_not_decision": {
+    "items": [
+      "Broad model-cluster bootstrap (6 models, 2000 reps, D fixed at point)",
+      "leave-one-Broad-model-out (6)",
+      "lineage-cluster bootstrap over data/broad_stability_groupings.json groupings and all unresolved-lineage scenarios for ACH-003052 (2000 reps each)",
+      "pathway-block bootstrap over genes: each gene assigned to its first true core class in minipool_library_composition.csv column order, else Other; classes resampled with replacement (2000 reps)"
+    ],
+    "seed": 20261028,
+    "role": "Describe sensitivity to Broad model/gene composition; never govern SIGNAL/BOUND/NEGATIVE"
+  },
+  "not_performed_with_reason": {
+    "development_only_Sanger_refit_from_guide_counts": "Not feasible in this route: per-guide count matrices for the organoid screens are not among the pinned cached inputs; disclosed as limitation (normalization uncertainty not propagated)."
+  },
+  "preregistered_predictions": {
+    "conjecture": "Positive association (more format-labile genes are more displaced in organoids beyond baseline strength).",
+    "lead_expectation": "Small positive point estimate; most likely decision BOUND or INCONCLUSIVE. Development analog using Broad aggregate T_g gave partial 0.055 (model-bootstrap stability [-0.086, 0.162]); that analog uses a different outcome and does not predict D_g quantitatively.",
+    "no_hypothesis_revisions_after_access": true
+  },
+  "decision_claim_map": {
+    "SIGNAL": "Within the fixed 207-gene panel and conditional on 6 measured Broad models, observed format lability is positively associated with donor-averaged displacement in the Sanger organoid cohort beyond baseline strength, with |partial rho| > 0.20 supported by the donor 95% interval. Association only; no causal or per-gene vulnerability claim; novelty requires the final C1 refresh.",
+    "NEGATIVE": "Evidence against the positive conjecture: a substantial negative conditional association (partial rho < -0.20). Association only.",
+    "BOUND": "Informative bound: the conditional panel-wide association magnitude is below 0.20 (donor 95% interval within (-0.20, 0.20)); observed format lability does not materially track organoid displacement beyond baseline strength in this panel. Not equivalence for other genes, populations or latent biological sensitivity.",
+    "INCONCLUSIVE": "No supported claim; interval includes material association or analysis invalid. Not evidence of absence."
+  },
+  "gate_mapping": {
+    "C6_candidate": "SIGNAL, NEGATIVE or BOUND may be evaluated as a candidate explanatory finding/refutation/bound; INCONCLUSIVE cannot.",
+    "unchanged_unmet": [
+      "C4 (policy freeze)",
+      "C8",
+      "C9",
+      "C13"
+    ],
+    "status_fields": {
+      "scientific_discovery": "updated only from the primary decision after independent review",
+      "prediction_improvement": "not_evaluated_no_prediction_claim",
+      "policy_improvement": "not_started"
+    }
+  },
+  "access_guard": "Only src/external_eval.py converts LFC values; it verifies every LOCK2_COMMIT hash (code, frozen inputs, Layer-A raw files, manifests, contract, provenance, configs, dependency locks), requires the bounded reservation, writes the start record, appends an exposure record before decoding, and writes immutable outputs. Pre-Lock2 access: transient text parsing of Table-6 lines for ID columns only, with no numeric conversion (exposure log clarification).",
+  "resources": "Local CPU only via run_bounded: one CPU-heavy job, 2 GiB reserved, 600 s timeout, phase6_7 allocation; $0 spend."
+}

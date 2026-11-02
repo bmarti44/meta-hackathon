@@ -1,0 +1,47 @@
+{
+ "fresh_env": "uv sync --locked (numpy 2.5.4, pandas 3.1.0), isolated copy /tmp/cdrsi_fresh",
+ "upstream_runner": {
+  "all_stages_pass": true,
+  "stages": {
+   "v1": {
+    "byte_identical": {
+     "genes.csv": true,
+     "exclusions.csv": true,
+     "paired_observations.csv": true
+    },
+    "pass": true
+   },
+   "v2": {
+    "byte_identical": {
+     "genes.csv": true,
+     "exclusions.csv": true,
+     "paired_observations.csv": true
+    },
+    "pass": true
+   },
+   "v3": {
+    "byte_identical": {
+     "genes.csv": true,
+     "exclusions.csv": true,
+     "paired_observations.csv": true
+    },
+    "pass": true
+   },
+   "v4": {
+    "byte_identical": {
+     "genes.csv": true,
+     "exclusions.csv": true,
+     "paired_observations.csv": true
+    },
+    "pass": true
+   }
+  },
+  "components": {
+   "c10_primary_values_in_table": true,
+   "eligibility_retained_recompute": true,
+   "synthetic_use_audit": "generations/sgen005/synthetic_use_audit.json"
+  },
+  "wall_s": 1.9
+ },
+ "scope": "same host/OS; data copied from retained project, not re-downloaded; donor interval + policy absent by construction"
+}

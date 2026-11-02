@@ -1,0 +1,5 @@
+# Novelty audit v7 — closest-code disposition (delta to v6)
+
+Retained receipt metadata report two 206 range responses and are internally consistent with central-directory-only acquisition. Response bodies and the fetcher were not retained, so fail-closed enforcement, parsing and absence of payload overfetch remain independently unverified (generations/sgen002/s3_zenodo_listing.json: 460 members).
+All 23 Python filenames indicate 2D model development / blinded prediction / Sanger evaluation / synthesis / projection / audit purposes (filename-level). Zero members match minipool|format|medium|labil|dome|plastic|serum|culture;
+"environment" hits are conda environment files only. No member names indicate measured-environmental-lability analysis; content-level inspection remains pending (code file contents were not read). Closest-code check: COMPLETE at member level only; acquisition implementation (inline fetcher, response bodies not retained) is internally-consistency-verified only — implementation-level fail-closed verification OUTSTANDING. Still outstanding: S1 supplement PDF line inspection; exhaustive broad-set screening.

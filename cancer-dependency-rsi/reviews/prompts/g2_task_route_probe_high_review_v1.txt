@@ -1,0 +1,23 @@
+Required independent Sol-high review (gpt-6.1-sol, high) of the bounded METADATA-ONLY G2 task-route probe. Read-only. Do not download anything, do not open Sanger/C outcome files or any dependency matrix, do not edit files.
+
+Project root: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+Context: G2 FAIL because no meaningful admissible scientific policy task / quality endpoint exists (reviews/readiness_high_review_v2.md: code/evidence integrity 95, G2 FAIL). Sol-xhigh (reviews/task_feasibility_unstick_xhigh_v1.md) prescribed exactly one bounded metadata probe of the official DepMap 26Q3 release, with the "NextGen Model Manuscript 2026" file set as single fallback, verdict CANDIDATE_FOUND / INELIGIBLE / UNRESOLVED, and a stop criterion.
+
+Review these files:
+1. reviews/prompts/g2_task_route_probe_v1.json  (SPEC, written and hashed before execution; sha256 1fc891be7d357a75bb2379846bfc75029bb835155c232e9a14f2298c80183bc0)
+2. src/g2_task_route_probe.py (probe), src/run_g2_task_route_probe.py (run_bounded dispatch), src/adjudicate_g2_task_route_probe.py (applies frozen verdict rules, retains raw output copy)
+3. reviews/g2_task_route_probe_v1.json (final adjudicated result) and data/route_probe_26q3_v1/probe_raw_output.json (pre-adjudication bytes) and data/route_probe_26q3_v1/forum_topic_4671.json (retrieved forum topic JSON; read posts 6-8)
+4. ledger/resources.jsonl (last reserve/reconcile pair, job g2_task_route_probe_v1) and ledger/experiments.jsonl (last record)
+5. Cached offline metadata used: data/raw/broad_figshare/model_metadata.csv, screen_metadata.csv, data/split_manifest.json, data/crosswalk_sanger_screened.csv
+
+Executed facts to verify: 3 of 6 requests used (forum topic JSON 200 application/json; portal manifest api/download/files 200 but text/html 4,842 B -> guard stop; publication-declared data_page 200 text/html), 38,093 bytes, ~1.1 s probe wall, peak RSS ~38.6 MB, no outcome parsing. The staff/admin post 7 states the temporary "NextGen Model Manuscript 2026" dataset was removed and the organoid lines were processed with all other CRISPR screens in 26Q3 ("CRISPR (DepMap Public 26Q3+Score, Chronos)"). Lead verdict: UNRESOLVED (INELIGIBLE needs the complete 26Q3 inventory per frozen rules), stop criterion met, with adverse indications (reprocessed manuscript screens already exposed via Layer-A aggregate organoid-vs-2D table; Score jointly processed).
+
+Tasks:
+A. Check SPEC-before-execution integrity, envelope compliance (requests incl. redirects, timeouts, bytes, wall, CPU/memory reservation, no bypass, no browser spoofing, signed-URL hygiene), outcome quarantine, and ledgering.
+B. Check the eligibility logic (E1-E8) and the S0 exposure reasoning for errors, including whether treating all manuscript NextGen-screened donors as exposed is correct and whether anything in the retrieved evidence would instead justify CANDIDATE_FOUND or INELIGIBLE under the frozen rules.
+C. Decide whether the verdict UNRESOLVED and "stop criterion met" are correct and whether the unused 3 requests should have been spent (they were withheld to keep the frozen SPEC; e.g. the 26Q3 announcement post was not a declared step).
+D. State whether the G2 high blocker remains unresolved and whether, under PLAN.md section 0.6 (max 3 unstick rounds per blocker already used: g2_unstick_xhigh_1, uncertainty_followup_xhigh_v1, task_feasibility_unstick_xhigh_v1; this probe = smallest legal evidence-gathering action), the next step is the joint Sol-xhigh + lead no-progress/negative-EV assessment.
+
+Output (<=900 words): enumerate issues as critical/high/medium/low with file:line where applicable, say which are verified, then end with exactly one line:
+PROBE_REVIEW_SCORE:<0-100>; VERDICT_UPHELD:<YES|NO>; G2:<PASS|FAIL>

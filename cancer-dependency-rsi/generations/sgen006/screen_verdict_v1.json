@@ -1,0 +1,13 @@
+{
+  "generation": "sgen006", "spec_sha256": "d45de1a9b86267f844b90283fbcf6078be3714333745d9f39e704a38401000c6",
+  "verdict": "NO_QUALIFYING_RESOURCE_IN_SCREEN (bounded metadata search; not a claim none exists)",
+  "requests_note": "Europe PMC/NCBI metadata+abstract fetches only (approx 10 requests, within 40); no outcome values downloaded or parsed. First EXT_ID:PMC query syntax returned empty and was redone by PMID/title - retained in metadata file.",
+  "candidates": [
+    {"resource": "Khalili et al. 2025, Commun Biol, PMID 40082551", "disposition": "FAIL independent-units bar: single colon cancer organoid avatar (one patient background) genome-wide dropout + driver-interaction derivatives; replicates/derivatives are not independent patients. Abstract-verified."},
+    {"resource": "Lo et al. 2025, Nat Commun, PMID 40813572", "disposition": "FAIL endpoint+units: primary human gastric organoids, CRISPR KO/i/a screens for cisplatin gene-drug interactions (drug-sensitivity endpoint, not baseline dependency transfer); donor count not established from abstract; single-cell perturbation design incompatible with fixed 207 displacement endpoint without a new contract. Abstract-verified."},
+    {"resource": "Droplet-based organoid screens (Cell Rep/Cell 2026-era, title-verified)", "disposition": "FAIL screen bar at metadata level: drug (5000 compounds) + pooled CRISPR across multiple tumor models; abstract establishes platform + single-gene UXS1 finding, not an identified multi-patient genome-wide dependency cohort with accessible per-donor matrices. Re-screen only on a witnessed donor/matrix manifest."},
+    {"resource": "Han et al. 2020, Nature, PMID 32238925", "disposition": "FAIL for organoid inference (lung cell-line spheroids, retest library selected from hits). Retained as candidate for a FUTURE separately-scoped environmental-portability generation; cannot repair archived interval."},
+    {"resource": "Europe PMC concept search (5021 hits, relevance top-25 screened)", "disposition": "Top relevant primary resources remain S1/S2/S3; remainder reviews/drug-response. Recall limit explicit."}
+  ],
+  "consequence": "C3/C6/C10/C11 remain PARTIAL. Patient-level inference for the locked claim requires a resource this screen did not find; loop continues with other generations."
+}

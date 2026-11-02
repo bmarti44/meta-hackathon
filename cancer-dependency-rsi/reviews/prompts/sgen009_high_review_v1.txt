@@ -1,0 +1,3 @@
+Independent review (gpt-6.1-sol, high), read-only. Scope sgen009 manuscript package: generations/sgen009/SPEC.md, src/sgen009_trace.py, generations/sgen009/traceability_v3.json, manuscript/manuscript_draft_v1.md, manuscript/limitations_statement.md, manuscript/reviewer_packet.md, reproducibility_report.md.
+Check: every numeric/substantive manuscript assertion traced or labeled; no stale numbers; limitations not buried; availability/license notes vs sgen007 register (S1 ND); packet accuracy. No label upgrades sought (C6/C10/C11/C12 stay PARTIAL).
+Issues severity+file:line+fix. End exactly: SGEN009_SCORE: <0-100>

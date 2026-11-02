@@ -1,0 +1,31 @@
+{
+ "environment": {
+  "uv_lock_sha256": "705394cdc990b401e414374f47485bde605745f5957fd72f63454f25ed44ae0e",
+  "interpreter_sha256": "3104082b75b7a6dc6ae6db236fe64e850ca909139e84d1cd9f699bd6fa5132ff",
+  "install": "uv sync --locked exit 0 (first sync this session; timing not separately retained - limitation stated)"
+ },
+ "components": {
+  "upstream": {
+   "command": ".venv/bin/python src/sgen005_upstream.py --report generations/sgen005/fresh_upstream_v2.json",
+   "report_sha256": "e7e8bd61b941f65ba7691bc30d32ad24db0b87df72845ca59325628fc33e98f8"
+  },
+  "sgen002": {
+   "command": ".venv/bin/python src/sgen002_reproduce.py",
+   "report_sha256": "f1aad5e6b098c77da40f80477c601b00b3f3f0e7001cdd2e0d4107564aa2c4dd"
+  },
+  "sgen008_checks": {
+   "command": ".venv/bin/python src/sgen008_checks.py --report generations/sgen008/fresh_evidence_report4.json",
+   "report_sha256": "74b7d112bb99f58d965119907fa3ef7f5e32bd0bf5e634be28c4967f9665881a"
+  }
+ },
+ "attempts_preserved": [
+  "generations/sgen008/fresh_run.log (attempt 1 FAIL, stale copy)",
+  "generations/sgen008/fresh_sgen002.log (exclusive-create failure)",
+  "generations/sgen008/fresh_upstream_attempt1.log (AssertionError v1 estimators - missing artifacts/ in fresh copy)"
+ ],
+ "ols": {
+  "command": ".venv/bin/python -m pytest tests/test_baseline_ols.py -q",
+  "result": "1 passed (fresh env)"
+ },
+ "scope": "fresh locked env same host/OS; interval+policy absent"
+}

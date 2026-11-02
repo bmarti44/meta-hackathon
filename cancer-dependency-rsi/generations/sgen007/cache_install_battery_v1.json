@@ -1,0 +1,7 @@
+{
+ "installed_files_hash_verified": 63,
+ "panel_test_genes": 250,
+ "sanger_covariate_rows": 256,
+ "pass": true,
+ "note": "Installation = byte copies of register-listed retained inputs only; S2 MOESM3 zip itself not in cache (extracted tables installed); outcome archives treated as opaque bytes (copied+hashed, not decoded)"
+}

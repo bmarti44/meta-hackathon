@@ -1,0 +1,26 @@
+{
+ "premise": "per-model normalized displacement in [0,1] (confirmatory_estimand._profiles: |rank-rank0|/(207-1)) - VERIFIED",
+ "weights": {
+  "archived_groups": 144,
+  "patients": 142,
+  "models": 148,
+  "total_variation_half_L1": 0.013693270735524295,
+  "max_abs_D_shift_bound": 0.013693270735524295
+ },
+ "rank_movement": {
+  "max_positions": 82,
+  "median_positions": 50,
+  "genes_with_any_crossable_neighbor": 207
+ },
+ "spearman_envelope_screen": {
+  "method": "Cauchy-Schwarz bound with RESIDUAL norm denominator (projection non-expansive); pointwise TV box relaxation - screen only, proof branch disabled",
+  "max_abs_rho_shift_bound": 1.841784754198813,
+  "archived_rho": -0.14583205005879532,
+  "worst_case_rho_interval": [
+   -1.9876168042576083,
+   1.6959527041400178
+  ]
+ },
+ "verdict": "ENVELOPE_TOO_WIDE",
+ "meaning": "Point-estimate sign/magnitude screen only. Even on PASS this cannot certify a patient-level interval, CI, or BOUND decision; scalar donor-kernel widening is not used. C6 remains PARTIAL until patient-level inference exists on a new independent resource."
+}

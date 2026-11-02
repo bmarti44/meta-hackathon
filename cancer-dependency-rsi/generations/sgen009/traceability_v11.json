@@ -1,0 +1,203 @@
+{
+ "claims": {
+  "rho-primary": {
+   "occurrences": [
+    "-0.146",
+    "-0.146"
+   ],
+   "expected": "-0.146",
+   "matches": true,
+   "manuscript_lines": [
+    7,
+    22
+   ],
+   "artifact": "lock_s/results/external_v1.json:primary.estimate"
+  },
+  "primary-interval": {
+   "occurrences": [
+    [
+     "-0.175",
+     "-0.114"
+    ],
+    [
+     "-0.175",
+     "-0.114"
+    ]
+   ],
+   "expected": [
+    "-0.175",
+    "-0.114"
+   ],
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:primary.ci95_donor_percentile"
+  },
+  "null-calibrated": {
+   "occurrences": [
+    "-0.209"
+   ],
+   "expected": "-0.209",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:secondary_holm_family.S1_null_calibrated.estimate",
+   "manuscript_lines": [
+    22
+   ]
+  },
+  "TMOD-alias": {
+   "occurrences": [
+    "-0.145"
+   ],
+   "expected": "-0.145",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:secondary_holm_family.S2_tmod1_alias208.estimate",
+   "manuscript_lines": [
+    22
+   ]
+  },
+  "alternate-library": {
+   "occurrences": [
+    "-0.151"
+   ],
+   "expected": "-0.151",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:secondary_holm_family.S3_v1_1_dual_library.estimate",
+   "manuscript_lines": [
+    22
+   ]
+  },
+  "unadjusted": {
+   "occurrences": [
+    "-0.217"
+   ],
+   "expected": "-0.217",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:secondary_holm_family.S4_unadjusted.estimate",
+   "manuscript_lines": [
+    22
+   ]
+  },
+  "lomo-range": {
+   "occurrences": [
+    "-0.166"
+   ],
+   "expected": "-0.166",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:stability_not_decision.leave_one_model_out (min/max)"
+  },
+  "lomo-range-hi": {
+   "occurrences": [
+    "-0.082"
+   ],
+   "expected": "-0.082",
+   "matches": true
+  },
+  "genes-207": {
+   "occurrences": [
+    "207",
+    "207"
+   ],
+   "expected": "207",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:primary.n_fixed_genes"
+  },
+  "genes-207-coords": {
+   "occurrences": [
+    "207"
+   ],
+   "expected": "207",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:primary.n_fixed_genes"
+  },
+  "models-148": {
+   "occurrences": [
+    "148",
+    "148",
+    "148"
+   ],
+   "expected": "148",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:primary.n_models_analyzed"
+  },
+  "patients-142": {
+   "occurrences": [
+    "142",
+    "142",
+    "142",
+    "142"
+   ],
+   "expected": "142",
+   "matches": true,
+   "artifact": "generations/pgen003/eligibility_recompute_v1.json:c_patients_full"
+  },
+  "panel-250": {
+   "occurrences": [
+    "250",
+    "250",
+    "250",
+    "250"
+   ],
+   "expected": "250",
+   "matches": true,
+   "artifact": "atlas/v4/manifest.json:panel_genes"
+  },
+  "archived-144": {
+   "occurrences": [
+    "144",
+    "144"
+   ],
+   "expected": "144",
+   "matches": true,
+   "artifact": "lock_s/results/external_v1.json:primary.n_donors_analyzed"
+  },
+  "atlas-fdr-format-7": {
+   "occurrences": [
+    "7"
+   ],
+   "expected": "7",
+   "matches": true
+  },
+  "atlas-fdr-serum-8": {
+   "occurrences": [
+    "8"
+   ],
+   "expected": "8",
+   "matches": true
+  }
+ },
+ "negative_fixtures_rejected": {
+  "wrong_abstract_estimate": true,
+  "swapped_secondary_labels": true,
+  "reversed_interval": true,
+  "token_2070": true,
+  "abstract_count_999": true,
+  "rho_integer_syntax": true
+ },
+ "artifact_hashes": {
+  "lock_s/results/external_v1.json": "ea7713752490bdc8100099b02115175c4c2cbeaa1a5d8a61f284074a3396b26f",
+  "generations/pgen003/eligibility_recompute_v1.json": "69f2ef16bb7d792a39b74a4aaf44271db21f22fe97baeb40922c6047ede257bf",
+  "atlas/v4/manifest.json": "e4206db12133a6904b162f66c4f88a170525caf9fd0d83b5fd9872c536676dcf"
+ },
+ "inventory": {
+  "manuscript/figures/figure1_primary.svg": {
+   "sha256": "22be91c0b2e60acc0114bfc90d598d04167818ceb9d5ca06a2e3b535a88c94e0",
+   "runner_or_provenance": "src/make_figure1.py"
+  },
+  "atlas/v4/genes.csv": {
+   "sha256": "72c01a4b98ec0385367441025b1c6b75780a7bed262e5271e593780d3ec38b80",
+   "runner_or_provenance": "src/build_atlas_v4.py + atlas/v4/manifest.json"
+  },
+  "atlas/v4/exclusions.csv": {
+   "sha256": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e",
+   "runner_or_provenance": "src/build_atlas_v4.py + atlas/v4/manifest.json"
+  },
+  "atlas/v4/paired_observations.csv": {
+   "sha256": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801",
+   "runner_or_provenance": "src/build_atlas_v4.py + atlas/v4/manifest.json"
+  },
+  "reviews/c10_robustness_table_v1.md": {
+   "sha256": "ce2833e215c3213171a9f3a1d63b79f5c1c71d831cc9f0eea7a17a3afc932a06",
+   "runner_or_provenance": "manual from lock_s/results/external_v1.json; verified src/sgen008_checks.py"
+  }
+ },
+ "reproduction_report_of_record": "generations/sgen002/reproduction_report_v3.json",
+ "pass": true
+}

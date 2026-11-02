@@ -1,0 +1,1779 @@
+{
+ "matched_lines": 252,
+ "matched_patients": 251,
+ "c_patients_full": 142,
+ "c_overlap_patients": [],
+ "c_overlap_lines": [],
+ "broad_exposed_lines": [
+  "KP3"
+ ],
+ "eligible_patients": 250,
+ "eligible_lines": 251,
+ "eligible_line_files": 810,
+ "matched_detail": {
+  "22RV1": {
+   "patient_id": "SIDP00842",
+   "broad_id": [
+    "ACH-000956"
+   ],
+   "files": 3
+  },
+  "42MGBA": {
+   "patient_id": "SIDP00381",
+   "broad_id": [
+    "ACH-000323"
+   ],
+   "files": 1
+  },
+  "769P": {
+   "patient_id": "SIDP00047",
+   "broad_id": [
+    "ACH-000411"
+   ],
+   "files": 3
+  },
+  "8MGBA": {
+   "patient_id": "SIDP00384",
+   "broad_id": [
+    "ACH-000137"
+   ],
+   "files": 2
+  },
+  "A172": {
+   "patient_id": "SIDP00050",
+   "broad_id": [
+    "ACH-000558"
+   ],
+   "files": 2
+  },
+  "A2058": {
+   "patient_id": "SIDP00052",
+   "broad_id": [
+    "ACH-000788"
+   ],
+   "files": 3
+  },
+  "A253": {
+   "patient_id": "SIDP00053",
+   "broad_id": [
+    "ACH-000740"
+   ],
+   "files": 3
+  },
+  "A2780": {
+   "patient_id": "SIDP00522",
+   "broad_id": [
+    "ACH-000657"
+   ],
+   "files": 2
+  },
+  "A375": {
+   "patient_id": "SIDP00054",
+   "broad_id": [
+    "ACH-000219"
+   ],
+   "files": 6
+  },
+  "A549": {
+   "patient_id": "SIDP00060",
+   "broad_id": [
+    "ACH-000681"
+   ],
+   "files": 2
+  },
+  "AGS": {
+   "patient_id": "SIDP00059",
+   "broad_id": [
+    "ACH-000880"
+   ],
+   "files": 2
+  },
+  "AM38": {
+   "patient_id": "SIDP00849",
+   "broad_id": [
+    "ACH-000269"
+   ],
+   "files": 2
+  },
+  "ARH77": {
+   "patient_id": "SIDP00062",
+   "broad_id": [
+    "ACH-002210"
+   ],
+   "files": 3
+  },
+  "ASPC1": {
+   "patient_id": "SIDP00063",
+   "broad_id": [
+    "ACH-000222"
+   ],
+   "files": 3
+  },
+  "AU565": {
+   "patient_id": "SIDP00064",
+   "broad_id": [
+    "ACH-000248"
+   ],
+   "files": 3
+  },
+  "BE2M17": {
+   "patient_id": "SIDP00067",
+   "broad_id": [
+    "ACH-002217"
+   ],
+   "files": 3
+  },
+  "BECKER": {
+   "patient_id": "SIDP00851",
+   "broad_id": [
+    "ACH-001016"
+   ],
+   "files": 2
+  },
+  "BHY": {
+   "patient_id": "SIDP00396",
+   "broad_id": [
+    "ACH-000548"
+   ],
+   "files": 3
+  },
+  "BICR10": {
+   "patient_id": "SIDP00716",
+   "broad_id": [
+    "ACH-001331"
+   ],
+   "files": 3
+  },
+  "BICR22": {
+   "patient_id": "SIDP00839",
+   "broad_id": [
+    "ACH-000794"
+   ],
+   "files": 3
+  },
+  "BICR78": {
+   "patient_id": "SIDP00840",
+   "broad_id": [
+    "ACH-001332"
+   ],
+   "files": 3
+  },
+  "BXPC3": {
+   "patient_id": "SIDP00718",
+   "broad_id": [
+    "ACH-000535"
+   ],
+   "files": 2
+  },
+  "C2BBE1": {
+   "patient_id": "SIDP00070",
+   "broad_id": [
+    "ACH-000009"
+   ],
+   "files": 3
+  },
+  "CA922": {
+   "patient_id": "SIDP00852",
+   "broad_id": [
+    "ACH-002043"
+   ],
+   "files": 2
+  },
+  "CAL27": {
+   "patient_id": "SIDP00407",
+   "broad_id": [
+    "ACH-000832"
+   ],
+   "files": 3
+  },
+  "CAL33": {
+   "patient_id": "SIDP00409",
+   "broad_id": [
+    "ACH-000518"
+   ],
+   "files": 3
+  },
+  "CAL51": {
+   "patient_id": "SIDP00411",
+   "broad_id": [
+    "ACH-000856"
+   ],
+   "files": 2
+  },
+  "CAL72": {
+   "patient_id": "SIDP00414",
+   "broad_id": [
+    "ACH-001715"
+   ],
+   "files": 3
+  },
+  "CAOV4": {
+   "patient_id": "SIDP00081",
+   "broad_id": [
+    "ACH-000103"
+   ],
+   "files": 3
+  },
+  "CAPAN1": {
+   "patient_id": "SIDP00417",
+   "broad_id": [
+    "ACH-000354"
+   ],
+   "files": 3
+  },
+  "CAS1": {
+   "patient_id": "SIDP00524",
+   "broad_id": [
+    "ACH-000464"
+   ],
+   "files": 2
+  },
+  "CHP212": {
+   "patient_id": "SIDP00085",
+   "broad_id": [
+    "ACH-000120"
+   ],
+   "files": 2
+  },
+  "CL11": {
+   "patient_id": "SIDP00419",
+   "broad_id": [
+    "ACH-000249"
+   ],
+   "files": 3
+  },
+  "CL40": {
+   "patient_id": "SIDP00421",
+   "broad_id": [
+    "ACH-000798"
+   ],
+   "files": 3
+  },
+  "CO205": {
+   "patient_id": "SIDP00002",
+   "broad_id": [
+    "ACH-001039"
+   ],
+   "files": 3
+  },
+  "CW2": {
+   "patient_id": "SIDP00586",
+   "broad_id": [
+    "ACH-000998"
+   ],
+   "files": 3
+  },
+  "D247MG": {
+   "patient_id": "SIDP00504",
+   "broad_id": [
+    "ACH-002224"
+   ],
+   "files": 2
+  },
+  "D423MG": {
+   "patient_id": "SIDP00508",
+   "broad_id": [
+    "ACH-002228"
+   ],
+   "files": 1
+  },
+  "D502MG": {
+   "patient_id": "SIDP00509",
+   "broad_id": [
+    "ACH-002229"
+   ],
+   "files": 2
+  },
+  "D542MG": {
+   "patient_id": "SIDP00510",
+   "broad_id": [
+    "ACH-002230"
+   ],
+   "files": 2
+  },
+  "DANG": {
+   "patient_id": "SIDP00431",
+   "broad_id": [
+    "ACH-000243"
+   ],
+   "files": 3
+  },
+  "DIFI": {
+   "patient_id": "SIDP00658",
+   "broad_id": [
+    "ACH-002233"
+   ],
+   "files": 8
+  },
+  "DKMG": {
+   "patient_id": "SIDP00434",
+   "broad_id": [
+    "ACH-000244"
+   ],
+   "files": 2
+  },
+  "DOK": {
+   "patient_id": "SIDP00805",
+   "broad_id": [
+    "ACH-002234"
+   ],
+   "files": 3
+  },
+  "DOV13": {
+   "patient_id": "SIDP00375",
+   "broad_id": [
+    "nan"
+   ],
+   "files": 3
+  },
+  "DU145": {
+   "patient_id": "SIDP00730",
+   "broad_id": [
+    "ACH-000979"
+   ],
+   "files": 3
+  },
+  "EBC1": {
+   "patient_id": "SIDP00855",
+   "broad_id": [
+    "ACH-000563"
+   ],
+   "files": 3
+  },
+  "ECGI10": {
+   "patient_id": "SIDP00590",
+   "broad_id": [
+    "ACH-000305"
+   ],
+   "files": 3
+  },
+  "EFO21": {
+   "patient_id": "SIDP00440",
+   "broad_id": [
+    "ACH-000308"
+   ],
+   "files": 3
+  },
+  "EFO27": {
+   "patient_id": "SIDP00441",
+   "broad_id": [
+    "ACH-000936"
+   ],
+   "files": 3
+  },
+  "EGI1": {
+   "patient_id": "SIDP00442",
+   "broad_id": [
+    "ACH-001494"
+   ],
+   "files": 3
+  },
+  "ES2": {
+   "patient_id": "SIDP00094",
+   "broad_id": [
+    "ACH-000906"
+   ],
+   "files": 3
+  },
+  "ES4": {
+   "patient_id": "SIDP00637",
+   "broad_id": [
+    "ACH-002105"
+   ],
+   "files": 3
+  },
+  "ES5": {
+   "patient_id": "SIDP00638",
+   "broad_id": [
+    "ACH-002106"
+   ],
+   "files": 3
+  },
+  "ES6": {
+   "patient_id": "SIDP00639",
+   "broad_id": [
+    "ACH-002107"
+   ],
+   "files": 3
+  },
+  "ES8": {
+   "patient_id": "SIDP00641",
+   "broad_id": [
+    "ACH-002109"
+   ],
+   "files": 3
+  },
+  "ESO26": {
+   "patient_id": "SIDP00806",
+   "broad_id": [
+    "ACH-001496"
+   ],
+   "files": 3
+  },
+  "ESO51": {
+   "patient_id": "SIDP00807",
+   "broad_id": [
+    "ACH-001497"
+   ],
+   "files": 3
+  },
+  "ESS1": {
+   "patient_id": "SIDP00448",
+   "broad_id": [
+    "ACH-000913"
+   ],
+   "files": 2
+  },
+  "EVSAT": {
+   "patient_id": "SIDP00449",
+   "broad_id": [
+    "ACH-001065"
+   ],
+   "files": 3
+  },
+  "EW1": {
+   "patient_id": "SIDP00512",
+   "broad_id": [
+    "ACH-002110"
+   ],
+   "files": 3
+  },
+  "EW11": {
+   "patient_id": "SIDP00513",
+   "broad_id": [
+    "ACH-002111"
+   ],
+   "files": 3
+  },
+  "EW16": {
+   "patient_id": "SIDP00518",
+   "broad_id": [
+    "ACH-002114"
+   ],
+   "files": 3
+  },
+  "EW22": {
+   "patient_id": "SIDP00520",
+   "broad_id": [
+    "ACH-002116"
+   ],
+   "files": 3
+  },
+  "EW7": {
+   "patient_id": "SIDP00515",
+   "broad_id": [
+    "ACH-002119"
+   ],
+   "files": 3
+  },
+  "FADU": {
+   "patient_id": "SIDP00095",
+   "broad_id": [
+    "ACH-000846"
+   ],
+   "files": 3
+  },
+  "FLO1": {
+   "patient_id": "SIDP00450",
+   "broad_id": [
+    "ACH-001500"
+   ],
+   "files": 3
+  },
+  "GAMG": {
+   "patient_id": "SIDP00452",
+   "broad_id": [
+    "ACH-000098"
+   ],
+   "files": 2
+  },
+  "GB1": {
+   "patient_id": "SIDP00858",
+   "broad_id": [
+    "ACH-000738"
+   ],
+   "files": 2
+  },
+  "GCIY": {
+   "patient_id": "SIDP00593",
+   "broad_id": [
+    "ACH-000047"
+   ],
+   "files": 1
+  },
+  "GI1": {
+   "patient_id": "SIDP00594",
+   "broad_id": [
+    "ACH-000756"
+   ],
+   "files": 2
+  },
+  "GIMEN": {
+   "patient_id": "SIDP00526",
+   "broad_id": [
+    "ACH-001344"
+   ],
+   "files": 3
+  },
+  "GMS10": {
+   "patient_id": "SIDP00454",
+   "broad_id": [
+    "ACH-000102"
+   ],
+   "files": 2
+  },
+  "GOTO": {
+   "patient_id": "SIDP00859",
+   "broad_id": [
+    "ACH-001716"
+   ],
+   "files": 2
+  },
+  "GP5D": {
+   "patient_id": "SIDP00808",
+   "broad_id": [
+    "ACH-001345"
+   ],
+   "files": 3
+  },
+  "HARA": {
+   "patient_id": "SIDP00860",
+   "broad_id": [
+    "ACH-000843"
+   ],
+   "files": 3
+  },
+  "HCC15": {
+   "patient_id": "SIDP00457",
+   "broad_id": [
+    "ACH-000878"
+   ],
+   "files": 3
+  },
+  "HCC38": {
+   "patient_id": "SIDP00119",
+   "broad_id": [
+    "ACH-000276"
+   ],
+   "files": 3
+  },
+  "HCC70": {
+   "patient_id": "SIDP00120",
+   "broad_id": [
+    "ACH-000668"
+   ],
+   "files": 2
+  },
+  "HCC78": {
+   "patient_id": "SIDP00461",
+   "broad_id": [
+    "ACH-000562"
+   ],
+   "files": 4
+  },
+  "HCE4": {
+   "patient_id": "SIDP00655",
+   "broad_id": [
+    "ACH-002243"
+   ],
+   "files": 3
+  },
+  "HCT116": {
+   "patient_id": "SIDP00033",
+   "broad_id": [
+    "ACH-000971"
+   ],
+   "files": 5
+  },
+  "HCT15": {
+   "patient_id": "SIDP00030",
+   "broad_id": [
+    "ACH-000997"
+   ],
+   "files": 6
+  },
+  "HEC1": {
+   "patient_id": "SIDP00862",
+   "broad_id": [
+    "ACH-001517"
+   ],
+   "files": 3
+  },
+  "HEY": {
+   "patient_id": "SIDP00376",
+   "broad_id": [
+    "ACH-002140"
+   ],
+   "files": 3
+  },
+  "HGC27": {
+   "patient_id": "SIDP00597",
+   "broad_id": [
+    "ACH-000847"
+   ],
+   "files": 3
+  },
+  "HO1U1": {
+   "patient_id": "SIDP00865",
+   "broad_id": [
+    "ACH-002045"
+   ],
+   "files": 3
+  },
+  "HOP62": {
+   "patient_id": "SIDP00733",
+   "broad_id": [
+    "ACH-000861"
+   ],
+   "files": 3
+  },
+  "HPAFII": {
+   "patient_id": "SIDP00124",
+   "broad_id": [
+    "ACH-000094"
+   ],
+   "files": 2
+  },
+  "HS578T": {
+   "patient_id": "SIDP00735",
+   "broad_id": [
+    "ACH-000148"
+   ],
+   "files": 3
+  },
+  "HS683": {
+   "patient_id": "SIDP00127",
+   "broad_id": [
+    "ACH-000067"
+   ],
+   "files": 2
+  },
+  "HS746T": {
+   "patient_id": "SIDP00128",
+   "broad_id": [
+    "ACH-000616"
+   ],
+   "files": 2
+  },
+  "HSC3": {
+   "patient_id": "SIDP00867",
+   "broad_id": [
+    "ACH-000778"
+   ],
+   "files": 3
+  },
+  "HSC39": {
+   "patient_id": "SIDP00662",
+   "broad_id": [
+    "ACH-002141"
+   ],
+   "files": 3
+  },
+  "HSC4": {
+   "patient_id": "SIDP00868",
+   "broad_id": [
+    "ACH-000546"
+   ],
+   "files": 3
+  },
+  "HT29": {
+   "patient_id": "SIDP00736",
+   "broad_id": [
+    "ACH-000552"
+   ],
+   "files": 67
+  },
+  "HT55": {
+   "patient_id": "SIDP00811",
+   "broad_id": [
+    "ACH-000926"
+   ],
+   "files": 3
+  },
+  "HUPT3": {
+   "patient_id": "SIDP00812",
+   "broad_id": [
+    "ACH-000118"
+   ],
+   "files": 3
+  },
+  "HUPT4": {
+   "patient_id": "SIDP00813",
+   "broad_id": [
+    "ACH-000213"
+   ],
+   "files": 3
+  },
+  "IGROV1": {
+   "patient_id": "SIDP00737",
+   "broad_id": [
+    "ACH-000966"
+   ],
+   "files": 3
+  },
+  "IM9": {
+   "patient_id": "SIDP00158",
+   "broad_id": [
+    "ACH-002247"
+   ],
+   "files": 2
+  },
+  "IM95": {
+   "patient_id": "SIDP00875",
+   "broad_id": [
+    "ACH-000919"
+   ],
+   "files": 1
+  },
+  "ISTMEL1": {
+   "patient_id": "SIDP00528",
+   "broad_id": [
+    "ACH-002143"
+   ],
+   "files": 3
+  },
+  "JHOS2": {
+   "patient_id": "SIDP00601",
+   "broad_id": [
+    "ACH-000132"
+   ],
+   "files": 3
+  },
+  "JHOS4": {
+   "patient_id": "SIDP00603",
+   "broad_id": [
+    "ACH-000584"
+   ],
+   "files": 3
+  },
+  "JHU011": {
+   "patient_id": "SIDP00722",
+   "broad_id": [
+    "ACH-002249"
+   ],
+   "files": 3
+  },
+  "JHU022": {
+   "patient_id": "SIDP00723",
+   "broad_id": [
+    "ACH-002250"
+   ],
+   "files": 3
+  },
+  "JHU029": {
+   "patient_id": "SIDP00140",
+   "broad_id": [
+    "ACH-002251"
+   ],
+   "files": 2
+  },
+  "JIMT1": {
+   "patient_id": "SIDP00472",
+   "broad_id": [
+    "ACH-000711"
+   ],
+   "files": 3
+  },
+  "KELLY": {
+   "patient_id": "SIDP00487",
+   "broad_id": [
+    "ACH-000259"
+   ],
+   "files": 3
+  },
+  "KINGS1": {
+   "patient_id": "SIDP00882",
+   "broad_id": [
+    "ACH-002257"
+   ],
+   "files": 2
+  },
+  "KLE": {
+   "patient_id": "SIDP00144",
+   "broad_id": [
+    "ACH-000293"
+   ],
+   "files": 3
+  },
+  "KM12": {
+   "patient_id": "SIDP00738",
+   "broad_id": [
+    "ACH-000969"
+   ],
+   "files": 15
+  },
+  "KMS11": {
+   "patient_id": "SIDP00886",
+   "broad_id": [
+    "ACH-000714"
+   ],
+   "files": 3
+  },
+  "KNS42": {
+   "patient_id": "SIDP00887",
+   "broad_id": [
+    "ACH-000622"
+   ],
+   "files": 2
+  },
+  "KNS62": {
+   "patient_id": "SIDP00888",
+   "broad_id": [
+    "ACH-000858"
+   ],
+   "files": 3
+  },
+  "KON": {
+   "patient_id": "SIDP00890",
+   "broad_id": [
+    "ACH-001542"
+   ],
+   "files": 3
+  },
+  "KP1N": {
+   "patient_id": "SIDP00892",
+   "broad_id": [
+    "ACH-001107"
+   ],
+   "files": 3
+  },
+  "KP2": {
+   "patient_id": "SIDP00893",
+   "broad_id": [
+    "ACH-000281"
+   ],
+   "files": 3
+  },
+  "KP3": {
+   "patient_id": "SIDP00894",
+   "broad_id": [
+    "ACH-000108"
+   ],
+   "files": 3
+  },
+  "KP4": {
+   "patient_id": "SIDP00605",
+   "broad_id": [
+    "ACH-000265"
+   ],
+   "files": 3
+  },
+  "KPNYN": {
+   "patient_id": "SIDP00896",
+   "broad_id": [
+    "ACH-000227"
+   ],
+   "files": 3
+  },
+  "KPNYS": {
+   "patient_id": "SIDP00557",
+   "broad_id": [
+    "ACH-002261"
+   ],
+   "files": 3
+  },
+  "KS1": {
+   "patient_id": "SIDP00897",
+   "broad_id": [
+    "ACH-000631"
+   ],
+   "files": 2
+  },
+  "KYAE1": {
+   "patient_id": "SIDP00814",
+   "broad_id": [
+    "ACH-001544"
+   ],
+   "files": 3
+  },
+  "KYSE70": {
+   "patient_id": "SIDP00501",
+   "broad_id": [
+    "ACH-000784"
+   ],
+   "files": 3
+  },
+  "L363": {
+   "patient_id": "SIDP00980",
+   "broad_id": [
+    "ACH-000183"
+   ],
+   "files": 3
+  },
+  "LC1SQ": {
+   "patient_id": "SIDP00607",
+   "broad_id": [
+    "ACH-002156"
+   ],
+   "files": 3
+  },
+  "LK2": {
+   "patient_id": "SIDP00904",
+   "broad_id": [
+    "ACH-000769"
+   ],
+   "files": 3
+  },
+  "LN229": {
+   "patient_id": "SIDP00146",
+   "broad_id": [
+    "ACH-000595"
+   ],
+   "files": 2
+  },
+  "LOVO": {
+   "patient_id": "SIDP00020",
+   "broad_id": [
+    "ACH-000950"
+   ],
+   "files": 3
+  },
+  "LP1": {
+   "patient_id": "SIDP00990",
+   "broad_id": [
+    "ACH-000204"
+   ],
+   "files": 3
+  },
+  "LS1034": {
+   "patient_id": "SIDP00149",
+   "broad_id": [
+    "ACH-000252"
+   ],
+   "files": 3
+  },
+  "LS123": {
+   "patient_id": "SIDP00039",
+   "broad_id": [
+    "ACH-000501"
+   ],
+   "files": 3
+  },
+  "LS180": {
+   "patient_id": "SIDP00150",
+   "broad_id": [
+    "ACH-000957"
+   ],
+   "files": 3
+  },
+  "LS411N": {
+   "patient_id": "SIDP00151",
+   "broad_id": [
+    "ACH-000985"
+   ],
+   "files": 3
+  },
+  "LS513": {
+   "patient_id": "SIDP00152",
+   "broad_id": [
+    "ACH-000007"
+   ],
+   "files": 3
+  },
+  "LU65": {
+   "patient_id": "SIDP00905",
+   "broad_id": [
+    "ACH-000438"
+   ],
+   "files": 3
+  },
+  "LU99A": {
+   "patient_id": "SIDP00906",
+   "broad_id": [
+    "nan"
+   ],
+   "files": 3
+  },
+  "LXF289": {
+   "patient_id": "SIDP00991",
+   "broad_id": [
+    "ACH-000787"
+   ],
+   "files": 3
+  },
+  "M059J": {
+   "patient_id": "SIDP00153",
+   "broad_id": [
+    "ACH-001118"
+   ],
+   "files": 2
+  },
+  "M14": {
+   "patient_id": "SIDP00698",
+   "broad_id": [
+    "ACH-002159"
+   ],
+   "files": 3
+  },
+  "MCAS": {
+   "patient_id": "SIDP00694",
+   "broad_id": [
+    "ACH-000796"
+   ],
+   "files": 3
+  },
+  "MCF7": {
+   "patient_id": "SIDP00740",
+   "broad_id": [
+    "ACH-000019"
+   ],
+   "files": 3
+  },
+  "MCIXC": {
+   "patient_id": "SIDP00156",
+   "broad_id": [
+    "ACH-002160"
+   ],
+   "files": 3
+  },
+  "MDST8": {
+   "patient_id": "SIDP00817",
+   "broad_id": [
+    "ACH-000935"
+   ],
+   "files": 1
+  },
+  "MFE280": {
+   "patient_id": "SIDP00995",
+   "broad_id": [
+    "ACH-000192"
+   ],
+   "files": 3
+  },
+  "MFE296": {
+   "patient_id": "SIDP00996",
+   "broad_id": [
+    "ACH-000879"
+   ],
+   "files": 3
+  },
+  "MFM223": {
+   "patient_id": "SIDP00998",
+   "broad_id": [
+    "ACH-001819"
+   ],
+   "files": 3
+  },
+  "MHHES1": {
+   "patient_id": "SIDP01001",
+   "broad_id": [
+    "ACH-000391"
+   ],
+   "files": 3
+  },
+  "MKN1": {
+   "patient_id": "SIDP00615",
+   "broad_id": [
+    "ACH-000351"
+   ],
+   "files": 3
+  },
+  "MKN28": {
+   "patient_id": "SIDP00616",
+   "broad_id": [
+    "ACH-002161"
+   ],
+   "files": 3
+  },
+  "MM1S": {
+   "patient_id": "SIDP00165",
+   "broad_id": [
+    "ACH-000763"
+   ],
+   "files": 2
+  },
+  "NB10": {
+   "patient_id": "SIDP00642",
+   "broad_id": [
+    "ACH-002278"
+   ],
+   "files": 2
+  },
+  "NB13": {
+   "patient_id": "SIDP00644",
+   "broad_id": [
+    "ACH-002280"
+   ],
+   "files": 3
+  },
+  "NB17": {
+   "patient_id": "SIDP00646",
+   "broad_id": [
+    "ACH-002282"
+   ],
+   "files": 3
+  },
+  "NB5": {
+   "patient_id": "SIDP00647",
+   "broad_id": [
+    "ACH-002283"
+   ],
+   "files": 2
+  },
+  "NB6": {
+   "patient_id": "SIDP00648",
+   "broad_id": [
+    "ACH-002284"
+   ],
+   "files": 3
+  },
+  "NB69": {
+   "patient_id": "SIDP00620",
+   "broad_id": [
+    "ACH-002083"
+   ],
+   "files": 3
+  },
+  "NB7": {
+   "patient_id": "SIDP00649",
+   "broad_id": [
+    "ACH-002285"
+   ],
+   "files": 3
+  },
+  "NH12": {
+   "patient_id": "SIDP00914",
+   "broad_id": [
+    "ACH-001603"
+   ],
+   "files": 3
+  },
+  "NMCG1": {
+   "patient_id": "SIDP00916",
+   "broad_id": [
+    "ACH-000200"
+   ],
+   "files": 2
+  },
+  "NO10": {
+   "patient_id": "SIDP00917",
+   "broad_id": [
+    "ACH-001605"
+   ],
+   "files": 2
+  },
+  "NO11": {
+   "patient_id": "SIDP00918",
+   "broad_id": [
+    "ACH-001606"
+   ],
+   "files": 2
+  },
+  "NUGC3": {
+   "patient_id": "SIDP00920",
+   "broad_id": [
+    "ACH-000911"
+   ],
+   "files": 3
+  },
+  "OACM51": {
+   "patient_id": "SIDP01015",
+   "broad_id": [
+    "ACH-001368"
+   ],
+   "files": 3
+  },
+  "OAW42": {
+   "patient_id": "SIDP00825",
+   "broad_id": [
+    "ACH-000704"
+   ],
+   "files": 3
+  },
+  "OC314": {
+   "patient_id": "SIDP00533",
+   "broad_id": [
+    "ACH-000962"
+   ],
+   "files": 3
+  },
+  "OCUBM": {
+   "patient_id": "SIDP00623",
+   "broad_id": [
+    "ACH-002179"
+   ],
+   "files": 3
+  },
+  "OE21": {
+   "patient_id": "SIDP00827",
+   "broad_id": [
+    "ACH-000544"
+   ],
+   "files": 3
+  },
+  "OE33": {
+   "patient_id": "SIDP00828",
+   "broad_id": [
+    "ACH-000383"
+   ],
+   "files": 3
+  },
+  "OPM2": {
+   "patient_id": "SIDP01023",
+   "broad_id": [
+    "ACH-000024"
+   ],
+   "files": 3
+  },
+  "OSC19": {
+   "patient_id": "SIDP00925",
+   "broad_id": [
+    "ACH-001625"
+   ],
+   "files": 2
+  },
+  "OSC20": {
+   "patient_id": "SIDP00926",
+   "broad_id": [
+    "ACH-001626"
+   ],
+   "files": 3
+  },
+  "OV56": {
+   "patient_id": "SIDP00830",
+   "broad_id": [
+    "ACH-000091"
+   ],
+   "files": 2
+  },
+  "OV90": {
+   "patient_id": "SIDP00278",
+   "broad_id": [
+    "ACH-000291"
+   ],
+   "files": 3
+  },
+  "OVISE": {
+   "patient_id": "SIDP00927",
+   "broad_id": [
+    "ACH-000527"
+   ],
+   "files": 2
+  },
+  "OVK18": {
+   "patient_id": "SIDP00626",
+   "broad_id": [
+    "ACH-000947"
+   ],
+   "files": 3
+  },
+  "OVMIU": {
+   "patient_id": "SIDP00929",
+   "broad_id": [
+    "ACH-002183"
+   ],
+   "files": 3
+  },
+  "PC14": {
+   "patient_id": "SIDP00627",
+   "broad_id": [
+    "ACH-000030"
+   ],
+   "files": 3
+  },
+  "PCI15A": {
+   "patient_id": "SIDP00650",
+   "broad_id": [
+    "ACH-002294"
+   ],
+   "files": 3
+  },
+  "PCI30": {
+   "patient_id": "SIDP00663",
+   "broad_id": [
+    "ACH-002295"
+   ],
+   "files": 3
+  },
+  "PCI38": {
+   "patient_id": "SIDP00651",
+   "broad_id": [
+    "ACH-002296"
+   ],
+   "files": 3
+  },
+  "PCI4B": {
+   "patient_id": "SIDP00664",
+   "broad_id": [
+    "ACH-002297"
+   ],
+   "files": 3
+  },
+  "PCI6A": {
+   "patient_id": "SIDP00652",
+   "broad_id": [
+    "ACH-002298"
+   ],
+   "files": 3
+  },
+  "PEO1": {
+   "patient_id": "SIDP00833",
+   "broad_id": [
+    "ACH-001630"
+   ],
+   "files": 3
+  },
+  "PEO4": {
+   "patient_id": "SIDP00833",
+   "broad_id": [
+    "ACH-001632"
+   ],
+   "files": 3
+  },
+  "PL18": {
+   "patient_id": "SIDP00653",
+   "broad_id": [
+    "ACH-002185"
+   ],
+   "files": 3
+  },
+  "PL4": {
+   "patient_id": "SIDP00665",
+   "broad_id": [
+    "ACH-002186"
+   ],
+   "files": 2
+  },
+  "PSN1": {
+   "patient_id": "SIDP00834",
+   "broad_id": [
+    "ACH-000320"
+   ],
+   "files": 3
+  },
+  "RCCFG2": {
+   "patient_id": "SIDP00005",
+   "broad_id": [
+    "ACH-002189"
+   ],
+   "files": 3
+  },
+  "RCM1": {
+   "patient_id": "SIDP00936",
+   "broad_id": [
+    "ACH-000565"
+   ],
+   "files": 3
+  },
+  "RKN": {
+   "patient_id": "SIDP00942",
+   "broad_id": [
+    "ACH-000505"
+   ],
+   "files": 3
+  },
+  "RKO": {
+   "patient_id": "SIDP00289",
+   "broad_id": [
+    "ACH-000943"
+   ],
+   "files": 6
+  },
+  "RL952": {
+   "patient_id": "SIDP00291",
+   "broad_id": [
+    "ACH-000965"
+   ],
+   "files": 3
+  },
+  "RMGI": {
+   "patient_id": "SIDP00943",
+   "broad_id": [
+    "ACH-000719"
+   ],
+   "files": 3
+  },
+  "ROS50": {
+   "patient_id": "SIDP01035",
+   "broad_id": [
+    "ACH-001639"
+   ],
+   "files": 6
+  },
+  "SAS": {
+   "patient_id": "SIDP00944",
+   "broad_id": [
+    "ACH-002029"
+   ],
+   "files": 3
+  },
+  "SCC4": {
+   "patient_id": "SIDP00298",
+   "broad_id": [
+    "ACH-000238"
+   ],
+   "files": 3
+  },
+  "SCC9": {
+   "patient_id": "SIDP00299",
+   "broad_id": [
+    "ACH-000181"
+   ],
+   "files": 3
+  },
+  "SCC90": {
+   "patient_id": "SIDP01040",
+   "broad_id": [
+    "ACH-002315"
+   ],
+   "files": 3
+  },
+  "SCH": {
+   "patient_id": "SIDP00950",
+   "broad_id": [
+    "ACH-002198"
+   ],
+   "files": 2
+  },
+  "SF126": {
+   "patient_id": "SIDP00951",
+   "broad_id": [
+    "ACH-000609"
+   ],
+   "files": 3
+  },
+  "SF268": {
+   "patient_id": "SIDP00759",
+   "broad_id": [
+    "ACH-000655"
+   ],
+   "files": 2
+  },
+  "SF295": {
+   "patient_id": "SIDP00760",
+   "broad_id": [
+    "ACH-000376"
+   ],
+   "files": 2
+  },
+  "SF539": {
+   "patient_id": "SIDP00761",
+   "broad_id": [
+    "ACH-000273"
+   ],
+   "files": 2
+  },
+  "SJSA1": {
+   "patient_id": "SIDP00304",
+   "broad_id": [
+    "ACH-000748"
+   ],
+   "files": 3
+  },
+  "SKGT4": {
+   "patient_id": "SIDP00837",
+   "broad_id": [
+    "ACH-001654"
+   ],
+   "files": 3
+  },
+  "SKMES1": {
+   "patient_id": "SIDP00314",
+   "broad_id": [
+    "ACH-000665"
+   ],
+   "files": 3
+  },
+  "SKN3": {
+   "patient_id": "SIDP00956",
+   "broad_id": [
+    "ACH-002305"
+   ],
+   "files": 3
+  },
+  "SKNAS": {
+   "patient_id": "SIDP00315",
+   "broad_id": [
+    "ACH-000260"
+   ],
+   "files": 3
+  },
+  "SKNDZ": {
+   "patient_id": "SIDP00316",
+   "broad_id": [
+    "ACH-000366"
+   ],
+   "files": 3
+  },
+  "SKNFI": {
+   "patient_id": "SIDP00317",
+   "broad_id": [
+    "ACH-000341"
+   ],
+   "files": 3
+  },
+  "SKNSH": {
+   "patient_id": "SIDP00318",
+   "broad_id": [
+    "ACH-000149"
+   ],
+   "files": 3
+  },
+  "SKPNDW": {
+   "patient_id": "SIDP00319",
+   "broad_id": [
+    "ACH-001193"
+   ],
+   "files": 2
+  },
+  "SNB75": {
+   "patient_id": "SIDP00767",
+   "broad_id": [
+    "ACH-000504"
+   ],
+   "files": 2
+  },
+  "SNGM": {
+   "patient_id": "SIDP00958",
+   "broad_id": [
+    "ACH-000974"
+   ],
+   "files": 3
+  },
+  "SNU1": {
+   "patient_id": "SIDP00273",
+   "broad_id": [
+    "ACH-000932"
+   ],
+   "files": 3
+  },
+  "SNU16": {
+   "patient_id": "SIDP00274",
+   "broad_id": [
+    "ACH-000581"
+   ],
+   "files": 3
+  },
+  "SNU61": {
+   "patient_id": "SIDP00539",
+   "broad_id": [
+    "ACH-000532"
+   ],
+   "files": 3
+  },
+  "SNU81": {
+   "patient_id": "SIDP00540",
+   "broad_id": [
+    "ACH-000991"
+   ],
+   "files": 3
+  },
+  "SNUC1": {
+   "patient_id": "SIDP00327",
+   "broad_id": [
+    "ACH-000722"
+   ],
+   "files": 3
+  },
+  "SNUC2B": {
+   "patient_id": "SIDP00035",
+   "broad_id": [
+    "ACH-001199"
+   ],
+   "files": 3
+  },
+  "SNUC5": {
+   "patient_id": "SIDP00843",
+   "broad_id": [
+    "ACH-000970"
+   ],
+   "files": 3
+  },
+  "SU8686": {
+   "patient_id": "SIDP00329",
+   "broad_id": [
+    "ACH-000114"
+   ],
+   "files": 3
+  },
+  "SUIT2": {
+   "patient_id": "SIDP00959",
+   "broad_id": [
+    "ACH-000652"
+   ],
+   "files": 6
+  },
+  "SW1088": {
+   "patient_id": "SIDP00333",
+   "broad_id": [
+    "ACH-000437"
+   ],
+   "files": 2
+  },
+  "SW1463": {
+   "patient_id": "SIDP00024",
+   "broad_id": [
+    "ACH-000470"
+   ],
+   "files": 12
+  },
+  "SW1573": {
+   "patient_id": "SIDP00336",
+   "broad_id": [
+    "ACH-000677"
+   ],
+   "files": 3
+  },
+  "SW1990": {
+   "patient_id": "SIDP00338",
+   "broad_id": [
+    "ACH-000155"
+   ],
+   "files": 2
+  },
+  "SW48": {
+   "patient_id": "SIDP00021",
+   "broad_id": [
+    "ACH-000958"
+   ],
+   "files": 3
+  },
+  "SW620": {
+   "patient_id": "SIDP00019",
+   "broad_id": [
+    "ACH-000651"
+   ],
+   "files": 16
+  },
+  "SW626": {
+   "patient_id": "SIDP00340",
+   "broad_id": [
+    "ACH-001399"
+   ],
+   "files": 3
+  },
+  "SW837": {
+   "patient_id": "SIDP00025",
+   "broad_id": [
+    "ACH-000421"
+   ],
+   "files": 3
+  },
+  "SW948": {
+   "patient_id": "SIDP00026",
+   "broad_id": [
+    "ACH-000680"
+   ],
+   "files": 2
+  },
+  "T47D": {
+   "patient_id": "SIDP00769",
+   "broad_id": [
+    "ACH-000147"
+   ],
+   "files": 3
+  },
+  "T84": {
+   "patient_id": "SIDP00034",
+   "broad_id": [
+    "ACH-000381"
+   ],
+   "files": 4
+  },
+  "T98G": {
+   "patient_id": "SIDP00350",
+   "broad_id": [
+    "ACH-000571"
+   ],
+   "files": 2
+  },
+  "TC71": {
+   "patient_id": "SIDP01058",
+   "broad_id": [
+    "ACH-000424"
+   ],
+   "files": 3
+  },
+  "TE10": {
+   "patient_id": "SIDP00962",
+   "broad_id": [
+    "ACH-000318"
+   ],
+   "files": 3
+  },
+  "TE15": {
+   "patient_id": "SIDP00630",
+   "broad_id": [
+    "ACH-000353"
+   ],
+   "files": 3
+  },
+  "TE4": {
+   "patient_id": "SIDP00631",
+   "broad_id": [
+    "ACH-000917"
+   ],
+   "files": 3
+  },
+  "TE5": {
+   "patient_id": "SIDP00964",
+   "broad_id": [
+    "ACH-000408"
+   ],
+   "files": 3
+  },
+  "TE8": {
+   "patient_id": "SIDP00966",
+   "broad_id": [
+    "ACH-000452"
+   ],
+   "files": 3
+  },
+  "TE9": {
+   "patient_id": "SIDP00967",
+   "broad_id": [
+    "ACH-000694"
+   ],
+   "files": 3
+  },
+  "TGW": {
+   "patient_id": "SIDP00968",
+   "broad_id": [
+    "ACH-001674"
+   ],
+   "files": 3
+  },
+  "TMK1": {
+   "patient_id": "SIDP00667",
+   "broad_id": [
+    "ACH-002202"
+   ],
+   "files": 3
+  },
+  "TOV21G": {
+   "patient_id": "SIDP00355",
+   "broad_id": [
+    "ACH-000885"
+   ],
+   "files": 3
+  },
+  "TYKNU": {
+   "patient_id": "SIDP00971",
+   "broad_id": [
+    "ACH-000430"
+   ],
+   "files": 3
+  },
+  "U251": {
+   "patient_id": "SIDP00772",
+   "broad_id": [
+    "ACH-000232"
+   ],
+   "files": 3
+  },
+  "U87MG": {
+   "patient_id": "SIDP00359",
+   "broad_id": [
+    "ACH-000075"
+   ],
+   "files": 2
+  },
+  "YH13": {
+   "patient_id": "SIDP00976",
+   "broad_id": [
+    "ACH-000469"
+   ],
+   "files": 2
+  }
+ }
+}

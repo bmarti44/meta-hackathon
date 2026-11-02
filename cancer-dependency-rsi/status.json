@@ -1,0 +1,234 @@
+{
+ "updated_utc": "2026-10-29T17:41:24.681853+00:00",
+ "phase": "CAMPAIGN TERMINALLY ADJUDICATED: INCONCLUSIVE/GOAL_COMPLETE NO (determination v3)",
+ "goal_status": "not_achieved_terminal_inconclusive",
+ "gate_G2": {
+  "status": "FAIL",
+  "latest_independent_review_score": 95,
+  "review_round": "readiness_v2",
+  "required_score": 90,
+  "note": "integrity score does not grant G2; high task/endpoint blocker unresolved"
+ },
+ "lock1_frozen": false,
+ "incumbent_policy": null,
+ "scientific_discovery": "conditional_bound_candidate_pending_novelty_adjudication",
+ "prediction_improvement": "not_evaluated_no_prediction_claim",
+ "policy_improvement": "not_started",
+ "pilot_executed": false,
+ "policy_cycles_completed": 0,
+ "external_evaluation_executed": true,
+ "terminal_state": "INCONCLUSIVE (final determination v3, slot 3/3 spent 2026-10-29; GOAL_COMPLETE: NO; score 98)",
+ "current_blockers": [
+  "C8/C13: no policy comparison has run; pgen005 task instantiation blocked (no qualifying science design after sgen011/012/013). Rollout witnesses open (task/Q*/support). Amended allocations phase5=100 calls (was 20 at Lock-1).",
+  "C9: UNMET empirically (no comparison); cost-evidence rule amended 2026-10-29 (estimated-cost basis, estimator v7 $34.18/66 calls; $0 metered) - measured-expenditure witness NO LONGER required under amended GOAL.",
+  "C3/C4/C6/C10 (PARTIAL): patient-level inference unquantified (142 patients; no donor-level arrays); no qualifying fresh design on current metadata (sgen012 A_STILL_UNRESOLVED, sgen013 FAIL). Novelty: completion screen done (sgen014); residuals = non-Europe-PMC sources, main-article extended-data pixels.",
+  "C11 (PARTIAL): donor-interval irreproducible from retained artifacts; no policy comparison to reproduce.",
+  "External unblock: independently measured paired-format L/B on >=367 matched independent components for one qualified endpoint."
+ ],
+ "gate_evidence": {
+  "C1": "MET (sgen003 adjudication)",
+  "C2": "MET (sol-high 98)",
+  "C3": "PARTIAL (142-patient weighting unquantified)",
+  "C4": "PARTIAL (scientific lock only)",
+  "C5": "MET",
+  "C6": "PARTIAL",
+  "C7": "MET",
+  "C8": "UNMET",
+  "C9": "UNMET (ENDPOINT:NO)",
+  "C10": "PARTIAL",
+  "C11": "PARTIAL",
+  "C12": "PARTIAL (claims ledger now populated)",
+  "C13": "UNMET"
+ },
+ "unmet_or_not_finally_adjudicated_gates": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C6",
+  "C7",
+  "C8",
+  "C9",
+  "C10",
+  "C11",
+  "C12",
+  "C13"
+ ],
+ "verification": {
+  "pytest_passed": 88,
+  "pytest_failed": 0,
+  "latest_pytest_elapsed_s": 8.23,
+  "readiness_diagnostic_evaluations": 12,
+  "retired_evaluator_valid": 6,
+  "safety_draft_invalid": 5,
+  "all_safety_draft_results_inadmissible_for_policy": true,
+  "legacy_diagnostic_null_coverages": [
+   0.72,
+   0.64,
+   0.96,
+   0.68,
+   0.8,
+   0.68
+  ],
+  "diagnostic_wall_s": 38.8366362079978,
+  "diagnostic_cpu_s": 39.280313,
+  "diagnostic_peak_rss_bytes": 179830784,
+  "cached_data_integrity_audit": "PASS",
+  "cached_files_checked": 36,
+  "metadata_cohort_models": 148,
+  "metadata_cohort_donors": 144,
+  "provisional_atlas_genes": 250,
+  "provisional_atlas_pair_rows": 3000,
+  "atlas_component_reproduction": "PASS_byte_identical_CSVs",
+  "full_clean_room_reproduction": "not_run",
+  "donor_algorithmic_calibration": "PASS_v2_same_frozen_arrays_after_constant_guard_fix",
+  "null_fixture_coverage": "95/100",
+  "nonzero_fixture_coverage": "97/100",
+  "diagnostic_interpretation": "synthetic_code_only_not_biology_or_nominalcoverage_certification",
+  "current_development_q": null,
+  "current_policy_admissible": false,
+  "research_memory_enforcement": "sampled_process_group_RSS_watchdog_50ms_75percent_of_reserved_budget_not_hardOSbarrier"
+ },
+ "resources_since_resumption": {
+  "model_dispatch_attempts": 8,
+  "completed_model_responses": 4,
+  "recorded_wall_s": 1869.483584083775,
+  "outstanding_reservations": [],
+  "additional_api_spend_usd": 0.0,
+  "host_model_cost_usd": "unknown",
+  "historical_resources_before_resumption": "unknown_not_backfilled",
+  "new_download_bytes": null,
+  "conservatively_charged_evaluation_nodes": 812,
+  "known_new_metadata_download_bytes": 487582,
+  "download_accounting_note": "Known successful metadata payloads measured; failed-response chunks not fully retained. All individualrequest bytecaps and totalrequested upperbounds remain farbelow20GiB. No newdependency matrix imported.",
+  "remaining_balance_per_terminal_review": "119h11m43s / 388 nodes / 389 model calls (2 terminal slots protected); $0 spend"
+ },
+ "next_action": "USER DECISION: accept bounded small-association result and stop, or redirect (new data/design); no endpoint shopping",
+ "next_model_command": null,
+ "resume_command": "cd /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi && .venv/bin/python src/cli.py resume",
+ "dispositions": "reviews/g2_r2_dispositions_v1.md",
+ "goal_turn_audit": {
+  "current_goal_turn": "progress_then_terminal_BLOCKED",
+  "goal_may_be_marked_complete": false
+ },
+ "blocked_audit": "reviews/blocked_audit_v1.json",
+ "runtime_state": {
+  "state": "no_agent_started_jobs_running",
+  "active_jobs": [],
+  "last_verified_utc": "2026-10-28T21:06:14Z",
+  "outstanding_reservations": []
+ },
+ "readiness_review": {
+  "source": "reviews/readiness_high_review_v2.md",
+  "code_integrity_score": 95,
+  "G2": "FAIL",
+  "remaining_implementation_finding": "stale status.json,now corrected by thischeckpoint",
+  "high_gate_blocker": "No meaningful admissible scientificpolicytask/qualityendpoint; notwaived"
+ },
+ "handoff_requested_by_user": false,
+ "terminal_determination": {
+  "source": "reviews/terminal_determination_xhigh_v1.md",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "terminal_reserve_slot_used": 1,
+  "terminal_reserve_remaining": 2,
+  "score": 95,
+  "goal_complete": false,
+  "unmet": [
+   "C1",
+   "C2",
+   "C4",
+   "C6",
+   "C7",
+   "C8",
+   "C9",
+   "C10",
+   "C11",
+   "C12",
+   "C13"
+  ],
+  "met": [
+   "C3",
+   "C5"
+  ],
+  "blocking_condition": "No meaningful admissible development task, useful fixed quality endpoint and independent reserved biological panels can be established without consuming C; official 26Q3 inventory not retrievable unattended (verification page, no bypass).",
+  "reopening_conditions": [
+   "User supplies official 26Q3 Model.csv + CRISPRScreenMap.csv (with release provenance) for a new versioned metadata SPEC that repairs the 3 recorded dormant probe defects; file provision authorizes no outcome access.",
+   "Explicit user authorization of a scientific-only track (separately reviewed scientific locks before consuming C); cannot satisfy the joint goal."
+  ]
+ },
+ "route_probe": {
+  "spec": "reviews/prompts/g2_task_route_probe_v1.json",
+  "result": "reviews/g2_task_route_probe_v1.json",
+  "verdict": "UNRESOLVED",
+  "high_review": "reviews/g2_task_route_probe_high_review_v1.md",
+  "high_review_score": 92,
+  "dispositions": "reviews/g2_task_route_probe_v1_dispositions.json",
+  "requests_used": 3,
+  "bytes": 38093
+ },
+ "joint_no_progress": {
+  "sol_xhigh": "reviews/joint_no_progress_xhigh_v1.md",
+  "lead": "reviews/lead_concurrence_joint_no_progress_v1.json",
+  "state": "BLOCKED"
+ },
+ "C_outcomes_accessed": true,
+ "scientific_track": {
+  "lock2_commit": "lock2-scientific-only-v1-ce2b56c295fe",
+  "commit_sha256": "e04d04b87a752ff410bd7310491f53eab2e50faebfec7b38a68c155bba334b34",
+  "lock_reviews": [
+   "reviews/lock_s_high_review_v1.md (78)",
+   "reviews/lock_s_high_review_v2_retry1.md (88)",
+   "reviews/lock_s_high_review_v3.md (89)",
+   "reviews/lock_s_high_review_v4.md (94 READY)"
+  ],
+  "result": "lock_s/results/external_v1.json",
+  "report": "lock_s/results/report_v1.md",
+  "decision": "BOUND",
+  "estimate": -0.14583205005879532,
+  "ci95_donor": [
+   -0.17526797046592052,
+   -0.11365511914822886
+  ],
+  "result_review": "reviews/external_result_high_review_v1.md (93; execution valid; C6 PARTIAL)"
+ },
+ "policy_route": {
+  "26Q3": "UNRESOLVED (CAPTCHA; reviews/g2_task_route_probe_v1.json, v2_manifest)",
+  "cell_line_cached_matrix": "INELIGIBLE (cross-line ComBat+PC1; reviews/cl_rd_feasibility_stage1_v1.json)",
+  "consult": "reviews/policy_route_xhigh_v1.md"
+ },
+ "generations": {
+  "pgen001": "FAILS-SCREEN exploratory (protocol-deviating, disposition v2)",
+  "pgen002": "PENDING/INCOMPLETE; token-accounting and raw-route PASS labels withdrawn by DISPOSITION_v3 (ENDPOINT:NO accepted)",
+  "pgen003": "FAILS-SCREEN frozen bar (A PASS 148/148; B 252/360); eligible resolved universe 251 lines/250 patients/810 files"
+ },
+ "terminal_determination_v2": {
+  "source": "reviews/terminal_determination_xhigh_v2.md",
+  "state": "ACTIVE_NOT_TERMINAL",
+  "goal_complete": false,
+  "score": 95,
+  "met": [
+   "C5",
+   "C7"
+  ],
+  "partial": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C6",
+   "C10",
+   "C11",
+   "C12"
+  ],
+  "unmet": [
+   "C8",
+   "C9",
+   "C13"
+  ],
+  "terminal_reserve_slot_used": 2,
+  "terminal_reserve_remaining": 1,
+  "resources_remaining_approx": "118h / 388 node charges / 373 model calls (phase2: 7; phase6_7: 26 incl final terminal slot) per determination"
+ },
+ "current_generation": "direct phase complete: harmonized replication dev+heldout (small real association, below materiality)"
+}

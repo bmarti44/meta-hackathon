@@ -1,0 +1,28 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 2.
+Round 1 (yours) scored 76/100: reviews/site_sol_review_r1.md.
+Dispositions + claimed fixes: reviews/site_sol_review_r1_dispositions.md.
+Site: site/index.html, site/data/, site/assets/ (now incl. release_v1.zip),
+site/apex_redirect.js (republished), src/build_site_data.py (L3 filter),
+tests/test_site_data.py (new regression tests).
+
+Your job this round:
+1. Verify each round-1 disposition is genuinely fixed everywhere it was
+   flagged (check the actual rendered strings/logic, not the disposition
+   prose) - including any leftover instances of the same claim class
+   (causal wording, preprint implications, flag-zero wording, denominator).
+2. Check the fixes for regressions/new bugs they may have introduced
+   (glink/thbtn wiring, aria-sort updates on re-render, select() scroll
+   logic, signed rA comparator + header label logic, clipboard prompt
+   fallback, CPU-mirror drift sync math vs shader, early-return in paper
+   mode, WebGL fallback path, multiValue redirect serialization).
+3. Re-score against the original requirements: polished/striking design,
+   story of creation, searchable data with fast source/citation, www
+   canonical, scoped observational claims only, honest unpublished-draft
+   status. Same anchors (90+ = ship it).
+4. Flag any NEW low/medium/high/critical issues you can verify from source.
+   No over-engineering demands; smallest fix per issue. If nothing further
+   at low-or-above severity, say so plainly.
+
+Output: SCORE: n/100; VERDICT paragraph; per-issue disposition check
+(FIXED / PARTIAL / NOT FIXED + evidence); NEW ISSUES grouped by severity
+with file:line, verified evidence, smallest fix; CHECKS RUN.

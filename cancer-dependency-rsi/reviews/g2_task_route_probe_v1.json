@@ -1,0 +1,182 @@
+{
+ "spec": "reviews/prompts/g2_task_route_probe_v1.json",
+ "spec_sha256": "1fc891be7d357a75bb2379846bfc75029bb835155c232e9a14f2298c80183bc0",
+ "q": null,
+ "admissible_for_policy": false,
+ "G2": "FAIL",
+ "C_outcomes_accessed": false,
+ "dependency_matrix_accessed": false,
+ "requirements": {
+  "primary_route_authoritative_staff_post": true,
+  "release_manifest_obtained": false
+ },
+ "notes": [],
+ "S0_offline": {
+  "manuscript_nextgen_screens": 149,
+  "manuscript_nextgen_organoid_screens_2DO_3DO": 109,
+  "manuscript_nextgen_screened_models": 149,
+  "manuscript_nextgen_organoid_screened_models": 109,
+  "screen_type_counts": {
+   "2DN": 26,
+   "2DO": 14,
+   "3DN": 14,
+   "3DO": 95
+  },
+  "model_metadata_has_donor_column": false,
+  "model_metadata_columns": [
+   "ModelID",
+   "DepmapModelType",
+   "OncotreeLineage",
+   "OncotreePrimaryDisease",
+   "OncotreeSubtype",
+   "OncotreeCode",
+   "GrowthPattern",
+   "PlateCoating",
+   "HasExprData",
+   "HasWGS",
+   "HasCNData",
+   "HasCRISPRData",
+   "CRISPRScreenType",
+   "IsNextGen",
+   "IsTraditional2D",
+   "IsAdherent2D"
+  ],
+  "C_models": 148,
+  "C_donors_plus_excluded_overlap": 157,
+  "sanger_crosswalk_rows": 178,
+  "exposure_basis": "manuscript NextGen screens feed released aggregate organoid-vs-2D tables already inspected/used in Layer A (fixed 2D ordering source table, T_g, Tier-A selection, estimators)"
+ },
+ "R1_saved": {
+  "file": "data/route_probe_26q3_v1/forum_topic_4671.json",
+  "bytes": 28405,
+  "sha256": "5cf869a7c3c4aa11fe0b8e2e27519cea0e433966603d3c90a408a166efae938d"
+ },
+ "R1_post7": {
+  "username": "pmontgom",
+  "name": "Pmontgom",
+  "staff": true,
+  "admin": true,
+  "moderator": true,
+  "primary_group_name": "resources-members",
+  "user_title": null,
+  "created_at": "2026-10-14T18:59:06.208Z",
+  "updated_at": "2026-10-14T18:59:06.208Z",
+  "cooked_sha256": "3c593b4a532e239523d05f2eb404a7e9b408abdc49d676feeede300d896ba810",
+  "links": [
+   "https://depmap.org/portal/data_page/"
+  ],
+  "text": " Just to explain the discrepancy between what\u2019s in the earlier messages and where you can find the data today: When the paper was released, we temporarily created a dataset in Data Explorer called \u201c NextGen Model Manuscript 2026 \u201d containing these new screens. \n However, since then we\u2019ve released the 26Q3 data, where the organoid lines have been processed with all other CRISPR screens. Since you can now find the new models in the harmonized CRISPR dataset, we\u2019ve removed the temporary dataset. See Yejie\u2019s message for how to find organoid data within CRISPRGeneEffect.csv (which is the name you can find under \u201cDownloads\u201d. This same data is labeled \u201cCRISPR (DepMap Public 26Q3+Score, Chronos)\u201d in Data Explorer) \n Thanks, \n Phil "
+ },
+ "R2_html_head_sha256": "e5801ebf775185fe1fcb76633e05a52ee97ead3b66b8f6e43cf4c6ffc2ab9d3f",
+ "R5_fallback_route": {
+  "served_html": true,
+  "note": "SPA/HTML page cannot itself provide a machine-readable file-set manifest; contents not parsed beyond HTML detection"
+ },
+ "requests": [
+  {
+   "n": 1,
+   "purpose": "R1 staff post topic JSON",
+   "url_public": "https://forum.depmap.org/t/organoid-dependency-data/4671.json",
+   "url_sha256": "b5579a2c137c3c36fb31a2b47894dbe529253fdd1caa6bd89e7250456fd5e093",
+   "status": 200,
+   "bytes": 28405,
+   "sha256": "5cf869a7c3c4aa11fe0b8e2e27519cea0e433966603d3c90a408a166efae938d",
+   "content_type": "application/json; charset=utf-8",
+   "wall_s": 0.388,
+   "error": null
+  },
+  {
+   "n": 2,
+   "purpose": "R2 official portal release-file manifest",
+   "url_public": "https://depmap.org/portal/api/download/files",
+   "url_sha256": "b5c70ebaacc4c8c06cdffb0c8bf4b08b1ec3ad302d9613d9dd9271db19aafb0b",
+   "status": 200,
+   "bytes": 4842,
+   "sha256": "fb820ff832e54f7a2c6abd7f8a5ea72daa93b8cd61e9d0d7a8d25786ef8ad182",
+   "content_type": "text/html; charset=utf-8",
+   "wall_s": 0.357,
+   "error": null,
+   "guard": "HTML received where CSV expected (verification/challenge?); stopped, no bypass"
+  },
+  {
+   "n": 3,
+   "purpose": "R5 publication-declared fallback route",
+   "url_public": "https://depmap.org/portal/data_page/",
+   "url_sha256": "f2d20f12ed9657476b454abe6025cd54521b7adc44a75005399baa09e1eb95c9",
+   "status": 200,
+   "bytes": 4846,
+   "sha256": "4eef890a04ecca2a8e8a90bd1459cdcaefbb2dd26c27c23fd710cf097276039c",
+   "content_type": "text/html; charset=utf-8",
+   "wall_s": 0.361,
+   "error": null
+  }
+ ],
+ "resources": {
+  "requests_used": 3,
+  "bytes_transferred": 38093,
+  "wall_s": 1.12
+ },
+ "probe_raw_output": {
+  "file": "data/route_probe_26q3_v1/probe_raw_output.json",
+  "sha256": "b121d8776137195fc3e7389e6df993cc38499913112644e8e8ad2d718feb668e"
+ },
+ "requirements_table": {
+  "primary_route_staff_post": {
+   "status": "SUPPORTED",
+   "evidence": "post 7 by pmontgom: staff=true, admin=true, moderator=true, 2026-10-14 (R1, sha256 in R1_saved)"
+  },
+  "release_manifest_26Q3": {
+   "status": "UNRESOLVED",
+   "evidence": "R2 official portal manifest https://depmap.org/portal/api/download/files returned HTTP 200 text/html (4,842 B) instead of CSV; guard stopped, no bypass, no identical retry"
+  },
+  "fallback_NextGen_Model_Manuscript_2026": {
+   "status": "INELIGIBLE_AS_INDEPENDENT_ROUTE",
+   "evidence": "staff post 7 states the temporary dataset was removed and its screens were reprocessed into 26Q3; its screens are the manuscript screens (S0: 109 organoid screened models, 2DO 14 + 3DO 95) whose aggregate organoid outcomes are already used in Layer A (E5). R5 publication-declared data_page also served HTML."
+  },
+  "E1_organoid_models_with_26Q3_crispr": {
+   "status": "UNRESOLVED",
+   "evidence": "Model.csv/screen map not retrievable; staff post 6 documents GrowthPattern==Dome as the organoid filter in Model.csv"
+  },
+  "E2_documented_donor_ids": {
+   "status": "UNRESOLVED",
+   "evidence": "cached manuscript model_metadata.csv has no donor/patient column (S0); 26Q3 Model.csv not retrieved"
+  },
+  "E3_E4_overlap_audit_vs_Broad_inputs_and_C": {
+   "status": "UNRESOLVED",
+   "evidence": "requires 26Q3 donor/HCMI/Sanger identifiers; not retrieved"
+  },
+  "E5_unexposed_donors": {
+   "status": "UNRESOLVED_WITH_ADVERSE_AUTHORITATIVE_INDICATION",
+   "evidence": "staff post 7: 26Q3 organoid data are the paper's new screens \"processed with all other CRISPR screens\". Reprocessing is not new biological evidence; all 109 manuscript organoid screened models are exposed. Unexposed donors exist only if 26Q3 contains organoid screens beyond the manuscript set, which no retrieved authoritative source documents."
+  },
+  "E6_gene_universe": {
+   "status": "UNRESOLVED",
+   "evidence": "gene-column availability not verifiable without dependency-matrix access (prohibited)"
+  },
+  "E7_processing_independence_from_C": {
+   "status": "UNRESOLVED_WITH_ADVERSE_INDICATION",
+   "evidence": "staff post 7 names the dataset \"CRISPR (DepMap Public 26Q3+Score, Chronos)\": Sanger Project Score screens are jointly processed; whether Sanger organoid (C-cohort) screens enter that fit is undocumented here"
+  },
+  "E8_count_floor_80_donors": {
+   "status": "UNRESOLVED",
+   "evidence": "no eligible-donor inventory obtained"
+  }
+ },
+ "verdict": "UNRESOLVED",
+ "verdict_basis": "Frozen rule: INELIGIBLE requires an authoritative, sufficiently complete 26Q3 inventory (Model.csv AND screen map); the official manifest served HTML, so access/coverage/independence remain unknown. Not CANDIDATE_FOUND: no requirement E1-E8 has documented support. A verification page does not establish dataset nonexistence.",
+ "stop_criterion_met": true,
+ "stop_criterion_detail": "Primary route unresolved within envelope (manifest HTML); single fallback authoritatively removed and consisting of already-exposed manuscript screens. Acquisition branch stops; 3 of 6 requests unused and NOT spent on unplanned routes (e.g. 26Q3 announcement post) to preserve the frozen SPEC.",
+ "adverse_indications_for_any_future_contract": [
+  "26Q3 organoid screens are documented as reprocessed manuscript screens -> no new biological donors unless additional organoid screens are separately documented.",
+  "26Q3 Chronos fit includes Sanger Score screens -> processing independence from C must be audited before any use.",
+  "Panel genes (Tier-A selection) and the fixed 2D ordering source table derive from the manuscript organoid/2D comparison -> the same donors cannot serve as untouched reserved panels."
+ ],
+ "effects": {
+  "G2": "FAIL (unchanged)",
+  "lock1_frozen": false,
+  "outcome_access_authorized": false,
+  "q": null,
+  "admissible_for_policy": false
+ },
+ "adjudicated_by": "lead executor under frozen SPEC rules; pending independent Sol-high review"
+}

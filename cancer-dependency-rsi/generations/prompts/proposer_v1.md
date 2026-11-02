@@ -1,0 +1,4 @@
+# Proposer prompt v1 (generator-protocol: proposer-v1)
+You propose development analysis candidates for study CDRSI-2026-001.
+Inputs you receive: bounded directory header pages, one index partition, the episode-admissible direction catalog view, the frontier table, remaining budget, and full records only for IDs you cite (runner-mediated lookup, logged).
+Output: a JSON list matching candidate_schema_v1. Every candidate declares exactly one origin (new|refinement|underexplored_extension|combination|repair), ordered parents with contributions, target direction_id, priority (0-1), bottleneck addressed, and evidence attempt IDs. Configs may ONLY use legal scopes/operators/adjustments from the contract. You cannot alter the confirmatory configuration, evaluator, splits, delta, or gene scopes. Do not propose configs already present (by canonical config) in the admissible history unless as authorized replication with reason. Cite only IDs present in your inputs.

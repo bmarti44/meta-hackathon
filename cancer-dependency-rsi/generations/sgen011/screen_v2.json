@@ -1,0 +1,105 @@
+{
+  "generation": "sgen011-C",
+  "version": 2,
+  "inputs": {
+    "Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7"
+    },
+    "CRISPRScreenMap.csv": {
+      "sha256": "43cc528614053d4c5a96729c2d782375227231a0cfea23de6c519b8989fa1252"
+    }
+  },
+  "population": {
+    "established_models": 1106,
+    "confirmed_SIDP_v7": 1069,
+    "linked_patient_components_v7": 1068
+  },
+  "provenance_A": {
+    "CRISPRScreenMap_fields": [
+      "ScreenID",
+      "ModelID"
+    ],
+    "screen_level_environment_field_present": false,
+    "note": "Screen map carries identifiers only; no per-screen format/medium. Model.csv environment-adjacent fields are onboarding annotations (OnboardedMedia/GrowthPattern/FormulationID), which per locked SPEC and xhigh ruling do not establish the screened-in environment.",
+    "field_population": {
+      "GrowthPattern": {
+        "populated_established": 1106,
+        "rate": 1.0,
+        "distinct": 5
+      },
+      "OnboardedMedia": {
+        "populated_established": 1032,
+        "rate": 0.9331,
+        "distinct": 128
+      },
+      "FormulationID": {
+        "populated_established": 1032,
+        "rate": 0.9331,
+        "distinct": 128
+      },
+      "SerumFreeMedia": {
+        "populated_established": 1032,
+        "rate": 0.9331,
+        "distinct": 2
+      },
+      "PlateCoating": {
+        "populated_established": 1106,
+        "rate": 1.0,
+        "distinct": 1
+      },
+      "ModelDerivationMaterial": {
+        "populated_established": 1,
+        "rate": 0.0009,
+        "distinct": 1
+      }
+    },
+    "verdict": "FAIL"
+  },
+  "precision_A": {
+    "population": "established CELL LINES only (amendment v2)",
+    "models": 1095,
+    "linked_patient_components": 1057,
+    "pooled_min_detectable_rho": 0.0861,
+    "interpretation": "optimistic Fisher-z bound only; NOT feasibility (SPEC amendment v2)",
+    "largest5_lineages": {
+      "Lung": {
+        "linked_patient_components": 119,
+        "min_detectable_rho_alpha05": 0.2544,
+        "min_detectable_rho_FWER5": 0.3071
+      },
+      "Lymphoid": {
+        "linked_patient_components": 90,
+        "min_detectable_rho_alpha05": 0.2916,
+        "min_detectable_rho_FWER5": 0.3508
+      },
+      "CNS/Brain": {
+        "linked_patient_components": 84,
+        "min_detectable_rho_alpha05": 0.3016,
+        "min_detectable_rho_FWER5": 0.3625
+      },
+      "Head and Neck": {
+        "linked_patient_components": 69,
+        "min_detectable_rho_alpha05": 0.3318,
+        "min_detectable_rho_FWER5": 0.3975
+      },
+      "Esophagus/Stomach": {
+        "linked_patient_components": 64,
+        "min_detectable_rho_alpha05": 0.3441,
+        "min_detectable_rho_FWER5": 0.4116
+      }
+    },
+    "pass": true
+  },
+  "precision_B": {
+    "established_organoid_models": 11,
+    "patients": 11,
+    "min_detectable_rho": 0.7576,
+    "pass": false,
+    "n_required_for_rho_0.146": 366
+  },
+  "A_pass": false,
+  "B_pass": false,
+  "verdict": "NEITHER_PASSES",
+  "decision_rule": "SPEC: A needs provenance+precision; B needs precision; both->B; neither->reject outcome generation",
+  "consequence": "Outcome generation rejected on current metadata. Next capital: (i) authoritative identity crosswalk for the 97 unresolved screened organoids (B needs ~366 organoid patients for rho=0.146 at 80% power); (ii) screening-environment provenance source for A."
+}

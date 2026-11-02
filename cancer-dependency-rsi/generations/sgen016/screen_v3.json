@@ -1,0 +1,211 @@
+{
+ "generation": "sgen016",
+ "version": 3,
+ "verdict": "FAIL_TO_ESTABLISH",
+ "timestamp": "2026-10-29T21:38:04.596270+00:00",
+ "scope_clarification": "Two distinct feasibility questions: (A) processed-vector reconstruction of the frozen Lock-S statistic (protocol uses selected-library model-level LFC vectors; guide refit explicitly outside that route) - NOT the question this SPEC asked; (B) raw-count refit/normalization sensitivity - the SPEC's R3 question. Verdict answers (B) only. (A) remains unprobed at manifest level.",
+ "probed_endpoints": [
+  "api.figshare.com/v2/articles/29472362 (200, full inventory)",
+  "ndownloader README.txt (documentation)",
+  "cog.sanger.ac.uk/cmp/download/ (403)",
+  "depmap.org/portal/data_page/?tab=allData (JS shell)",
+  "depmap.org/portal/download/api/downloads (verification HTML)",
+  "depmap.org/portal/download/api/releases (verification HTML)",
+  "depmap.org/portal/api/download/releases (verification HTML)",
+  "depmap.org/portal/api/downloads (verification HTML)",
+  "depmap.org/portal/api/no-captcha/download/files (verification HTML at probe time)"
+ ],
+ "access_claim": "Bounded probe: no scriptable DepMap inventory obtained from this client; alternatives NOT exhausted; no bypass attempted.",
+ "field_rows": [
+  {
+   "field": "resource_id",
+   "figshare_29472362": "PRESENT (29472362)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "release",
+   "figshare_29472362": "PRESENT (version 1; versions endpoint returns only v1)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "PRESENT (snapshot 20260921)"
+  },
+  {
+   "field": "manifest_version",
+   "figshare_29472362": "PRESENT (figshare version 1, single version listed)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "source_study_id",
+   "figshare_29472362": "PRESENT (DOI 10.1038/s41586-026-10843-7)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "PARTIAL (doi/pmed columns; semantics unverified)"
+  },
+  {
+   "field": "pseudonymous_patient_id",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "PRESENT column individual_ID (records not audited here)",
+   "local_passports": "PRESENT column patient_id (records not audited here)"
+  },
+  {
+   "field": "specimen_id",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "PARTIAL column sample_id (semantics unverified)"
+  },
+  {
+   "field": "derived_model_id",
+   "figshare_29472362": "PRESENT (DepMap ID in listed metadata files)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "PRESENT columns sample_ID/sanger_ID",
+   "local_passports": "PRESENT column model_id"
+  },
+  {
+   "field": "parent_specimen_id",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "UNVERIFIED_SEMANTICS column parent_id (meaning/population not verified)"
+  },
+  {
+   "field": "derivation_type",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "UNVERIFIED_SEMANTICS (model_type/growth_properties columns; derivation semantics not verified)"
+  },
+  {
+   "field": "donor_deduplication_key",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "UNVALIDATED (individual_ID candidate; dedup properties not verified)",
+   "local_passports": "UNVALIDATED (patient_id candidate; dedup properties not verified)"
+  },
+  {
+   "field": "file_id",
+   "figshare_29472362": "PRESENT (36 files with ids)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "URI",
+   "figshare_29472362": "PRESENT (download_url per file)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "format",
+   "figshare_29472362": "PRESENT (mimetype per file)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "byte_size",
+   "figshare_29472362": "PRESENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "checksum",
+   "figshare_29472362": "PRESENT (computed_md5)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "processing_level_raw_guide_counts",
+   "figshare_29472362": "ABSENT (0/36 declared raw; metadata+processed only)",
+   "depmap_portal": "NOT_ESTABLISHED (README asserts raw profiling data in portal file set; no manifest obtained)",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT (CRISPR_available flag only)",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "sample_column_map",
+   "figshare_29472362": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "feature_identifier_namespace",
+   "figshare_29472362": "PARTIAL (guide metadata file listed; unopened)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "library_identity",
+   "figshare_29472362": "PARTIAL (minipool library files listed)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "PRESENT column library",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "normalization_scoring_recipe_raw_to_LFC",
+   "figshare_29472362": "ABSENT in manifests",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "access_tier",
+   "figshare_29472362": "PRESENT public",
+   "depmap_portal": "NOT_ESTABLISHED scriptably (verification wall; no bypass)",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "local file",
+   "local_passports": "local file"
+  },
+  {
+   "field": "download_charge",
+   "figshare_29472362": "PRESENT none",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp_index": "NOT_ESTABLISHED (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  }
+ ],
+ "decision_basis": "Frozen rule requires >=1 complete patient->specimen->model->declared RAW object chain with sample map + recipe + access. No probed manifest declares raw guide-count objects or a sample_column_map. Verdict FAIL_TO_ESTABLISH for question (B). This does NOT establish infeasibility of (A) or of any future resource.",
+ "consequences": "(B) not established from probed manifests. A successor manifest probe for question (A) (processed per-screen LFC vectors + screen/patient linkage manifests) is the identified next step before any outcome access; under this route and previously exposed evidence it would remain exploratory sensitivity, not independent confirmation. No gate changes.",
+ "counts_accessed": 0,
+ "demonstrated_qualifying_chains": 0,
+ "coverage_note": "Zero demonstrated qualifying chains among probed manifests; candidate coverage in unprobed/blocked sources is unknown, not zero.",
+ "provenance": {
+  "figshare_meta_sha256": "e37758968f3d6d6e66dea401eaa20ea7db28ddf4b5b251682b49d58904135990",
+  "readme_file_id": 64494405,
+  "readme_sha256": "cdf44320ba3ef22e487547613f2a0470a87fcf107d685de009ea65a913f4c91a",
+  "figshare_versions_listed": [
+   1
+  ],
+  "protocol_binding": "lock_s/scientific_protocol_v1.json sha256 109776273d56... matches LOCK2_COMMIT.json entry (verified)"
+ }
+}

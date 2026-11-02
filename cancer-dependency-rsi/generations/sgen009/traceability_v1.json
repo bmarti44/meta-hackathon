@@ -1,0 +1,142 @@
+{
+ "registry": {
+  "-0.146": {
+   "artifact": "lock_s/results/external_v1.json primary.estimate",
+   "in_manuscript": true
+  },
+  "-0.175": {
+   "artifact": "lock_s/results/external_v1.json primary.ci95[0]",
+   "in_manuscript": true
+  },
+  "-0.114": {
+   "artifact": "lock_s/results/external_v1.json primary.ci95[1]",
+   "in_manuscript": true
+  },
+  "207": {
+   "artifact": "external_v1.json estimand.n_genes_panel",
+   "in_manuscript": true
+  },
+  "148": {
+   "artifact": "external_v1.json estimand.models_used",
+   "in_manuscript": true
+  },
+  "144": {
+   "artifact": "external_v1.json estimand.donors_used (archived covariate-ID groups)",
+   "in_manuscript": true
+  },
+  "142": {
+   "artifact": "generations/sgen001/identity_reconciliation_v1.json (Passports patients)",
+   "in_manuscript": true
+  },
+  "250": {
+   "artifact": "atlas/v4/manifest.json panel_genes",
+   "in_manuscript": true
+  },
+  "0.20": {
+   "artifact": "lock_s/scientific_protocol_v1.json delta (predeclared)",
+   "in_manuscript": true
+  },
+  "3e-17": {
+   "artifact": "generations/sgen002/reproduction_report_v3.json primary point diff (2.8e-17)",
+   "in_manuscript": true
+  },
+  "1.73e-8": {
+   "artifact": "data/baseline_reproduction_ols.json OLS anchor max diff",
+   "in_manuscript": true
+  },
+  "43": {
+   "artifact": "atlas/v4 exclusions (250-207)",
+   "in_manuscript": true
+  },
+  "3,000": {
+   "artifact": "atlas paired_observations rows",
+   "in_manuscript": true
+  },
+  "88": {
+   "artifact": "test suite count at sgen008 close (status.json)",
+   "in_manuscript": true
+  },
+  "72": {
+   "artifact": "earlier test count - MUST NOT appear (stale if present)",
+   "in_manuscript": true
+  }
+ },
+ "untraced_numeric_tokens_for_review": [
+  "-0.082",
+  "-0.145",
+  "-0.151",
+  "-0.166",
+  "-0.20",
+  "-0.209",
+  "-0.217",
+  "-003",
+  "-026",
+  "-1083",
+  "-1084",
+  "-17",
+  "0.05",
+  "0.4",
+  "000",
+  "001",
+  "002",
+  "1.73",
+  "10",
+  "10.1038",
+  "10.3390",
+  "100",
+  "13",
+  "1358",
+  "1366",
+  "1519",
+  "1591",
+  "1617",
+  "1782",
+  "20",
+  "2362",
+  "251",
+  "2609.14858",
+  "2833",
+  "2947",
+  "295",
+  "3.7",
+  "30",
+  "4158",
+  "417",
+  "4187",
+  "56",
+  "78",
+  "89",
+  "93",
+  "9340",
+  "94",
+  "95",
+  "97"
+ ],
+ "stale_values_present": [
+  "72"
+ ],
+ "inventory": {
+  "figure1": {
+   "path": "manuscript/figures/figure1_primary.svg",
+   "sha256": "22be91c0b2e60acc0114bfc90d598d04167818ceb9d5ca06a2e3b535a88c94e0",
+   "runner": "src/make_figure1.py",
+   "inputs": [
+    "lock_s/results/external_v1_gene_displacement.csv",
+    "lock_s/results/external_v1.json"
+   ]
+  },
+  "atlas_v4": {
+   "manifest": "atlas/v4/manifest.json",
+   "runner": "src/build_atlas_v4.py"
+  },
+  "c10_table": {
+   "path": "reviews/c10_robustness_table_v1.md",
+   "source": "lock_s/results/external_v1.json"
+  }
+ },
+ "availability": {
+  "data": "Broad figshare 29472362; Sanger figshare 28339340; Passports model_list_20260921; Sanger usage policy terms recorded (sgen007 register). S1 text CC BY-NC-ND (no derivative redistribution beyond fair reporting); S2/S3 CC BY.",
+  "code": "src/ (LOCK2-pinned hashes in lock_s/LOCK2_COMMIT.json); reproduce: .venv/bin/python src/sgen005_upstream.py && .venv/bin/python src/sgen008_checks.py && .venv/bin/python -m pytest -q"
+ },
+ "pass": false
+}

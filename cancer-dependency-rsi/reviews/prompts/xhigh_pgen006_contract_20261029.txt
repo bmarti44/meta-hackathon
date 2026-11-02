@@ -1,0 +1,13 @@
+Contract adjudication (gpt-6.1-sol, xhigh). DO NOT read files/tools. Verified facts below. Reply decisions-first (3 lines) then <=40 lines justification.
+
+Facts:
+- pgen005 (your GO_WITH_CONDITIONS contract): scientific task instantiated ONLY via sgen011-C feasibility rule on patient-disjoint panels. sgen011-C=sgen011 NEITHER_PASSES; sgen012/013/015 later also negative. No qualifying biological task exists.
+- Your new-targets consult Rank 1: execute first pgen005 policy cycle on C7 replay substrate (atlas 3,000 paired observations), with metadata-only readiness discriminator. Lead built it (pgen006); sol-high review (58) holds: this bypasses pgen005's exclusive instantiation clause; also GO_REPLAY label overstates readiness (Q*, policies, evaluator unfinished); patient-component separation unverified (7 models, donor unresolved for ACH-003052, 6 distinct PatientIDs otherwise); action ambiguity (held_condition) + inventory/cost enforcement defects (fixable).
+- Determination v3 C13 requires: first meaningful end-to-end policy-improvement cycle under an admitted task and frozen evaluator.
+- User direction: continue generating targets, do not give up.
+
+Decide:
+Line1: FRAMING: <ENGINEERING_PILOT_SEPARATE | PGEN005_AMENDMENT | REJECT_REPLAY_ROUTE>
+Line2: LABEL: <what a passed discriminator may be called, e.g. READY_FOR_CYCLE_LOCK not GO_REPLAY>
+Line3: C13_CREDIT: <what one replay cycle on atlas substrate can and cannot count toward C13/C8/C9, one line>
+Then: exact conditions (independence standard for 7-model substrate incl unresolved-donor model; whether atlas development recordings may serve as evaluation partition or only development; what the cycle SPEC must freeze: Q* justification route on replay classifications, policies/comparators, matching). If REJECT, state what Rank-1 becomes instead.

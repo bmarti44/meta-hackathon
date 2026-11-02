@@ -1,0 +1,10 @@
+{
+  "context": "after_outer_permission_change",
+  "requested_bytes": 8589934592,
+  "initial": [
+    9223372036854775807,
+    9223372036854775807
+  ],
+  "status": "unavailable",
+  "error": "current limit exceeds maximum limit"
+}

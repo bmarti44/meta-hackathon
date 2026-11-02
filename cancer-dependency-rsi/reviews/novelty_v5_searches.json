@@ -1,0 +1,347 @@
+{
+ "S2_exact_doi": {
+  "query": "EXT_ID:\"10.1038/s41586-026-10830-y\"",
+  "status": 200,
+  "hitCount": 0,
+  "top": [],
+  "error": null
+ },
+ "S2_title": {
+  "query": "TITLE:\"tumour-derived organoid biobank\"",
+  "status": 200,
+  "hitCount": 1,
+  "top": [
+   {
+    "id": "42557320",
+    "pmid": "42557320",
+    "doi": "10.1038/s41586-026-10830-y",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies.",
+    "year": "2026"
+   }
+  ],
+  "error": null
+ },
+ "concept_broad": {
+  "query": "(organoid AND (CRISPR) AND (dependenc* OR essential*) AND (\"culture condition\" OR \"growth format\" OR medium OR matrix OR \"2D\" OR \"3D\") AND (transfer* OR concordan* OR rank*)) AND FIRST_PDATE:[2024-01-01 TO 2026-12-31]",
+  "status": 200,
+  "hitCount": 3634,
+  "top": [
+   {
+    "id": "42557315",
+    "pmid": "42557315",
+    "doi": "10.1038/s41586-026-10843-7",
+    "title": "A dependency map enhanced with next-generation 3D cancer models.",
+    "year": "2026"
+   },
+   {
+    "id": "PMC13664187",
+    "pmid": null,
+    "doi": null,
+    "title": "Transferability of Transcriptome-Based Gene-Dependency Models from Two-Dimensional Cancer Models to Patient-Derived Organoids: Blinded External Validation",
+    "year": "2026"
+   },
+   {
+    "id": "42827781",
+    "pmid": "42827781",
+    "doi": "10.3389/fonc.2026.1939330",
+    "title": "Patient-derived prostate cancer organoids: model development, therapeutic applications, and challenges for precision oncology.",
+    "year": "2026"
+   },
+   {
+    "id": "42895119",
+    "pmid": "42895119",
+    "doi": "10.1002/cbf.70321",
+    "title": "Patient-Derived Organoids in Functional Precision Oncology: Tumor Modeling, Drug-Response Prediction, and Clinical Translation.",
+    "year": "2026"
+   },
+   {
+    "id": "42820021",
+    "pmid": "42820021",
+    "doi": "10.1002/mco2.70965",
+    "title": "Organoids: Current Applications and Future Directions.",
+    "year": "2026"
+   },
+   {
+    "id": "PMC13701447",
+    "pmid": null,
+    "doi": null,
+    "title": "Advancing the Translational Pipeline: From In Vivo and In Vitro 2D Models to Next-Generation Cell Culture Models for Amyotrophic Lateral Sclerosis Modelling and Drug Discovery",
+    "year": "2026"
+   },
+   {
+    "id": "42411162",
+    "pmid": "42411162",
+    "doi": "10.5230/jgc.2026.26.e25",
+    "title": "Gastric Cancer Organoids: Mechanistic Insights, Drug Discovery, and Translational Advances in Precision Medicine.",
+    "year": "2026"
+   },
+   {
+    "id": "42557320",
+    "pmid": "42557320",
+    "doi": "10.1038/s41586-026-10830-y",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies.",
+    "year": "2026"
+   },
+   {
+    "id": "42868714",
+    "pmid": "42868714",
+    "doi": "10.1016/j.tranon.2026.103065",
+    "title": "Patient-derived gastric cancer organoids for functional precision oncology: disease-specific bottlenecks and clinical readiness.",
+    "year": "2026"
+   },
+   {
+    "id": "PMC13640303",
+    "pmid": null,
+    "doi": null,
+    "title": "Tumor organoids for testing metabolic flexibility in precision oncology",
+    "year": null
+   },
+   {
+    "id": "42553490",
+    "pmid": "42553490",
+    "doi": "10.34133/research.1346",
+    "title": "Engineering Organoid Platforms for Pathogenesis Research.",
+    "year": "2026"
+   },
+   {
+    "id": "42376297",
+    "pmid": "42376297",
+    "doi": "10.3389/fbioe.2026.1859058",
+    "title": "Lung organoids for respiratory diseases: overcoming translational hurdles in drug discovery and safety assessment.",
+    "year": "2026"
+   },
+   {
+    "id": "42811341",
+    "pmid": "42811341",
+    "doi": "10.1186/s13024-026-00986-6",
+    "title": "The YTHDF proteins modulate Alzheimer's disease-associated brain gene signatures.",
+    "year": "2026"
+   },
+   {
+    "id": "42707654",
+    "pmid": "42707654",
+    "doi": "10.3389/fcell.2026.1890385",
+    "title": "Advances in organoids for personalized medicine: from technological development to clinical application.",
+    "year": "2026"
+   },
+   {
+    "id": "42218467",
+    "pmid": "42218467",
+    "doi": "10.1186/s13041-026-01317-y",
+    "title": "Organoids as next-generation models for investigating intracranial tumours.",
+    "year": "2026"
+   },
+   {
+    "id": "42482485",
+    "pmid": "42482485",
+    "doi": "10.4014/jmb.2603.03016",
+    "title": "Intestinal Organoids as Models to Study Viruses: Current Application and Future Perspective.",
+    "year": "2026"
+   },
+   {
+    "id": "42621171",
+    "pmid": "42621171",
+    "doi": "10.1016/j.isci.2026.116756",
+    "title": "The application and progress of AI-based image analysis in tumor organoid research.",
+    "year": "2026"
+   },
+   {
+    "id": "42792974",
+    "pmid": "42792974",
+    "doi": "10.3390/genes17091080",
+    "title": "Integrating Next-Generation Reproductive Organoids with Genomics, Multi-Omics and Bioengineering to Understand Human Infertility.",
+    "year": "2026"
+   },
+   {
+    "id": "41731528",
+    "pmid": "41731528",
+    "doi": "10.1186/s12943-025-02558-6",
+    "title": "The application of experimental models for the drug discovery for digestive tumors.",
+    "year": "2026"
+   },
+   {
+    "id": "42785308",
+    "pmid": "42785308",
+    "doi": "10.1016/j.stemcr.2026.103087",
+    "title": "HOPX regulates the development and lineage progression of human stem cell-derived outer radial glia-like cells.",
+    "year": "2026"
+   },
+   {
+    "id": "42249357",
+    "pmid": "42249357",
+    "doi": "10.1186/s12943-026-02704-8",
+    "title": "Deconstructing cancer in 3D: models, mechanisms, and personalized solutions.",
+    "year": "2026"
+   },
+   {
+    "id": "42589709",
+    "pmid": "42589709",
+    "doi": "10.3390/ijms27157060",
+    "title": "Emerging Regenerative Medicine for Spinal Cord Injury: Spinal Cord Organoids-on-a-Chip.",
+    "year": "2026"
+   },
+   {
+    "id": "42897542",
+    "pmid": "42897542",
+    "doi": "10.1186/s12943-026-02747-x",
+    "title": "Patient-derived organoids for precision oncology in colorectal cancer: from tumor modeling to clinical translation.",
+    "year": "2026"
+   },
+   {
+    "id": "42746190",
+    "pmid": "42746190",
+    "doi": "10.3389/fphar.2026.1927806",
+    "title": "Human organoids and organ-on-chip systems for AI-guided therapeutic discovery against emerging and re-emerging infections.",
+    "year": "2026"
+   },
+   {
+    "id": "42707683",
+    "pmid": "42707683",
+    "doi": "10.3389/fimmu.2026.1898257",
+    "title": "The 3D landscape of infection: spatial organization and &lt;i&gt;in vitro&lt;/i&gt; models.",
+    "year": "2026"
+   }
+  ],
+  "error": null
+ },
+ "preprint_concept": {
+  "query": "(organoid AND CRISPR AND (dependenc*) AND (\"growth format\" OR \"culture medium\" OR minipool)) AND SRC:PPR",
+  "status": 200,
+  "hitCount": 15,
+  "top": [
+   {
+    "id": "PPR1293837",
+    "pmid": null,
+    "doi": "10.21203/rs.3.rs-10541704/v1",
+    "title": "Targeting the LIPH-CD36 axis potentiates CDK4/6 inhibition in ER+ breast cancer",
+    "year": "2026"
+   },
+   {
+    "id": "PPR1212226",
+    "pmid": null,
+    "doi": "10.64898/2026.01.31.702998",
+    "title": "Molidustat Targets a Synthetic Lethal Vulnerability in APC-Mutant Colorectal Cancer through GSTP1 and PHD2 Co-Inhibition",
+    "year": "2026"
+   },
+   {
+    "id": "PPR1120266",
+    "pmid": null,
+    "doi": "10.1101/2025.11.16.688689",
+    "title": "ProMPt: A modular preclinical platform for functional modelling of prostate cancer heterogeneity and therapeutic vulnerabilities",
+    "year": "2025"
+   },
+   {
+    "id": "PPR1096782",
+    "pmid": null,
+    "doi": "10.1101/2025.10.08.681128",
+    "title": "WNK kinase regulates plasma membrane levels of the WNT inhibitor RNF43",
+    "year": "2025"
+   },
+   {
+    "id": "PPR949153",
+    "pmid": null,
+    "doi": "10.1101/2024.11.28.625941",
+    "title": "Hepatocellular carcinoma-associated  <i>AXIN1</i>  mutations drive low levels of Wnt/\u03b2-catenin pathway activity that allow for niche-independent growth and YAP/TAZ signaling",
+    "year": "2024"
+   },
+   {
+    "id": "PPR909101",
+    "pmid": null,
+    "doi": "10.1101/2024.09.10.612343",
+    "title": "Hypoxia and loss of  <i>GCM1</i>  expression prevents differentiation and contact inhibition in human trophoblast stem cells",
+    "year": "2024"
+   },
+   {
+    "id": "PPR888125",
+    "pmid": null,
+    "doi": "10.21203/rs.3.rs-4679708/v1",
+    "title": "Genome-wide functional CRISPR screen reveals CDK7 as a targetable therapeutic vulnerability for head and neck cancer",
+    "year": "2024"
+   },
+   {
+    "id": "PPR588446",
+    "pmid": null,
+    "doi": "10.1101/2022.12.22.521159",
+    "title": "Mutation-induced phenotypic plasticity drives formation of a pro-metastatic tumour-intrinsic niche",
+    "year": "2022"
+   },
+   {
+    "id": "PPR608463",
+    "pmid": null,
+    "doi": "10.1101/2023.01.24.525374",
+    "title": "A multidimensional atlas of human glioblastoma organoids reveals highly coordinated molecular networks and effective drugs",
+    "year": "2023"
+   },
+   {
+    "id": "PPR728382",
+    "pmid": null,
+    "doi": "10.1101/2023.09.18.558285",
+    "title": "Neuroectoderm phenotypes in a human stem cell model of O-GlcNAc transferase intellectual disability",
+    "year": "2023"
+   },
+   {
+    "id": "PPR944035",
+    "pmid": null,
+    "doi": "10.1101/2024.11.19.624272",
+    "title": "Sensitivity to V\u03b39V\u03b42TCR T cells is imprinted after single mutations during early oncogenesis",
+    "year": "2024"
+   },
+   {
+    "id": "PPR1073011",
+    "pmid": null,
+    "doi": "10.1101/2025.08.20.671256",
+    "title": "Proteome profiling reveals HES1-driven mitotic catastrophe in ovarian serous carcinoma",
+    "year": "2025"
+   },
+   {
+    "id": "PPR1080038",
+    "pmid": null,
+    "doi": "10.1101/2025.09.04.674271",
+    "title": "QKI ensures splicing fidelity during cardiogenesis by engaging the U6 tri-snRNP to activate splicing at weak 5\u02b9 splice sites",
+    "year": "2025"
+   },
+   {
+    "id": "PPR778539",
+    "pmid": null,
+    "doi": "10.1101/2023.12.23.573207",
+    "title": "Oncogenic  <i>PIK3CA</i>  corrupts growth factor signaling specificity",
+    "year": "2023"
+   },
+   {
+    "id": "PPR497630",
+    "pmid": null,
+    "doi": "10.1101/2022.05.25.493370",
+    "title": "Robust and Versatile Arrayed Libraries for Human Genome-Wide CRISPR Activation, Deletion and Silencing",
+    "year": "2022"
+   }
+  ],
+  "error": null
+ },
+ "S1_citations": {
+  "pmid": "42557315",
+  "status": 200,
+  "hitCount": 3,
+  "top": [
+   {
+    "id": "42557316",
+    "title": "A compendium of next-generation patient-derived models for diverse cancers."
+   },
+   {
+    "id": "42557315",
+    "title": "A dependency map enhanced with next-generation 3D cancer models."
+   },
+   {
+    "id": "PPR1236067",
+    "title": "Volumetric Cyclic Immunofluorescence for 3D Spatial Profiling of Tumour, Stroma, and Immune Structures in Human FFPE Tissue"
+   }
+  ],
+  "error": null
+ },
+ "S3_citations": {
+  "pmid": "42883455",
+  "status": 200,
+  "hitCount": 0,
+  "top": [],
+  "error": null
+ }
+}

@@ -1,0 +1,355 @@
+{
+  "study": "CDRSI-2026-001",
+  "phase": "preLock1,G2 failed54 then74",
+  "full_goal_retained": true,
+  "completed_policy_generations": 0,
+  "completed_scientific_generations": 0,
+  "history_index": [
+    {
+      "kind": "diagnostic_spec_lock",
+      "optimization": false,
+      "record_id": "a55869c3fd5a4cd7a8b80fbb2f0a7fb8",
+      "sha256": "0cb3e8fea5ac7fe91cd8d443039af2ecaaeea77236f8635ad93eb138a2145f74",
+      "spec": "reviews/prompts/g2_safety_probe_spec_v1.json",
+      "ts_utc": "2026-10-28T19:09:00Z"
+    },
+    {
+      "artifact": "reviews/g2_safety_probe_results_v1.json",
+      "artifact_sha256": "433eda37be57111754aea0768399a8eddf9e84e0e11c9d2631923a62a904dfad",
+      "cpu_s": 39.280313,
+      "evaluations": 12,
+      "kind": "readiness_diagnostic",
+      "peak_rss_bytes": 179830784,
+      "policy_optimization": false,
+      "record_id": "ff28b88d4daa4a0f95f6c9bca4befe6a",
+      "spec_sha256": "0cb3e8fea5ac7fe91cd8d443039af2ecaaeea77236f8635ad93eb138a2145f74",
+      "status": "completed",
+      "ts_utc": "2026-10-28T19:09:39Z",
+      "wall_s": 38.8366362079978
+    },
+    {
+      "artifact": "reviews/g2_resume_checkpoint_v1.json",
+      "external_outcomes_accessed": false,
+      "gate_G2": "FAIL",
+      "kind": "checkpoint",
+      "policy_cycles": 0,
+      "record_id": "e21c73121f974e09834a86ed5a90293a",
+      "sha256": "61d70124a740ad522fca4bb751bf1b7bd16cd78a52deea40e881cc7fd2d8f929",
+      "ts_utc": "2026-10-28T19:13:57Z"
+    },
+    {
+      "artifact": "atlas/provisional_v1",
+      "cpu_s": 0.725571,
+      "external_outcome_values_accessed": false,
+      "kind": "provisional_atlas_inventory",
+      "manifest_sha256": "bc0f9243660a1db4a56d0fd2380d754a1560f4693975cbd7e9f0890394d7b146",
+      "optimization": false,
+      "peak_rss_bytes": 179912704,
+      "record_id": "9d9627db8266442da0d1cec0c3ae3f96",
+      "ts_utc": "2026-10-28T19:16:40Z",
+      "wall_s": 0.2555440829601139
+    },
+    {
+      "artifact": "reviews/data_integrity_audit_v1.json",
+      "kind": "data_integrity_audit",
+      "outcome_values_parsed": false,
+      "record_id": "b54fef7c9f4f4f678212bafb485180c7",
+      "sha256": "5c8ebb6170b840174ab6a76acd9b1acaa2da770397278b33bec224cf6f9e6772",
+      "status": "FAIL",
+      "ts_utc": "2026-10-28T19:17:55Z",
+      "wall_s": 0.10649845912121236
+    },
+    {
+      "biological_membership_changed": false,
+      "kind": "metadata_schema_correction",
+      "models_after": 148,
+      "models_before": 148,
+      "new_split_sha256": "614eb5998dc4bfdd3dffe3657a238665f073cffcc5d0042a47d73880f62e9c8e",
+      "original_split_sha256": "bb05e6d43861df1f0831fcf24efb676c47db33f5fab8e6aa8cca3b4871a0984c",
+      "outcome_values_accessed": false,
+      "reason": "Make nested donor identity explicit; do not resample the old 148-entry per-model donor list as 148 independent donors.",
+      "record_id": "d7eafe80b2f24f2e9101073016388969",
+      "ts_utc": "2026-10-28T19:18:48Z",
+      "unique_donors_after": 144,
+      "unique_donors_before": 144
+    },
+    {
+      "artifact": "reviews/data_integrity_audit_v2.json",
+      "kind": "data_integrity_audit",
+      "outcome_values_parsed": false,
+      "record_id": "903f6645412d4bef91bd5c71bb13c339",
+      "sha256": "3225bfe2bc5a9c49161d90e27f98de74448473453735fa18758b26aceb514cbb",
+      "status": "PASS",
+      "ts_utc": "2026-10-28T19:18:48Z",
+      "wall_s": 0.09688958409242332
+    },
+    {
+      "artifact": "reviews/atlas_component_reproduction_v1.json",
+      "kind": "component_reproduction",
+      "record_id": "4a71348bee5140cebca7327b8e9c315d",
+      "scope": "provisional_atlas_component_only_not_C11_full_campaign",
+      "sha256": "00afe5365cd77f64c03697fc44e78e6287645d125823d43dde5c36ccaeddad95",
+      "status": "PASS",
+      "stochastic_model_calls": 0,
+      "ts_utc": "2026-10-28T19:20:28Z",
+      "wall_s": 0.9827552090864629
+    },
+    {
+      "artifact": "reviews/atlas_component_reproduction_v2.json",
+      "kind": "component_reproduction",
+      "record_id": "b2cd91588a534bbeba979763ce4c84f2",
+      "scope": "provisional_atlas_component_only_not_C11_full_campaign",
+      "sha256": "dfe8b919b76c91aa5700767ddcd830700892bcbb98f2b3b774da0525f99619de",
+      "status": "PASS",
+      "stochastic_model_calls": 0,
+      "ts_utc": "2026-10-28T19:22:17Z",
+      "wall_s": 1.2537733749486506
+    },
+    {
+      "biological_question_changed": false,
+      "comparison_epoch_started": false,
+      "generation_calls_executed": 0,
+      "kind": "prelock_generator_interface_repair",
+      "new_protocol_sha256": "fea95becb9dc34b477a2ae51a126b4da0316e14c116a6f65f4f8ec93f736ca80",
+      "old_protocol_sha256": "19b902f0a1ad640b0901da2cf2135586fcff29d835cd5bd378bfeaa680b9ccfc",
+      "record_id": "53e305af7dc04896832993780b9b99a9",
+      "ts_utc": "2026-10-28T19:50:04Z"
+    }
+  ],
+  "episode_frontier": null,
+  "last_three_generations": [],
+  "reason_no_generations": "No optimization permitted before G2; only baseline,readiness diagnostics,cache/metadata audit and atlas inventory exist.",
+  "question": "Across the fixed 207-gene confirmatory panel, is observed format-bundle score lability (6 Broad models) associated with donor-averaged displacement from the fixed 2D consensus dependency ordering in the donor-disjoint Sanger cohort (148 organoids/144 donors), beyond baseline dependency strength (exact partial-rank-residual operation)?",
+  "confirmatory_config": {
+    "status": "FROZEN SEPARATELY; development search winners can NEVER alter it",
+    "scope": "confirmatory207",
+    "operator": "mean_abs_delta (equal-weight mean over 6 models of within-model mean |Dome-Plastic|)",
+    "adjust": "ranked |AdherentMean| only (base_strength)",
+    "endpoint": "D_g donor-averaged normalized |rank displacement| vs AdherentMean consensus ordering (average ranks for ties; donor-equal weights; minLib-else-v1_1)",
+    "parameter": "partial Spearman = Pearson corr of rank residuals (src/estimators.py partial_spearman)",
+    "decision_interval": "PRIMARY: donor-cluster percentile bootstrap over 144 Sanger donors (5000 reps, seed 20261028), L_g and consensus ranks treated as fixed measured covariates; estimand conditional on the 207 fixed genes and 6 measured Broad models. Failed replicate (degenerate) counted; >5% failures => INCONCLUSIVE by invalid interval.",
+    "stability_sensitivities_not_decision": [
+      "Broad model-cluster bootstrap (6 models, 2000 reps) - stability only",
+      "lineage-cluster grouping of Broad models (conservative donor-uncertainty sensitivity) + independent-model split sensitivity",
+      "leave-one-Broad-model-out",
+      "pathway-block bootstrap over genes"
+    ]
+  },
+  "evaluator_current": {
+    "version": "evaluator_v2",
+    "module": "src/evaluator_v2.py",
+    "q": "valid only: 0.4*coverage_calibration(Freedman-Lane nulls) + 0.35*precision + 0.25*stability; degenerate/constant/nonfinite/zero-width => invalid",
+    "legal_spaces": {
+      "scopes": [
+        "primary216",
+        "confirmatory207",
+        "panel242_reference_filtered",
+        "tmod1_alias208"
+      ],
+      "operators": [
+        "mean_abs_delta",
+        "abs_mean_delta",
+        "max_abs_delta"
+      ],
+      "adjust": [
+        "none",
+        "base_strength",
+        "base_plus_organoid_mean (SIMULTANEOUS rank adjustment)"
+      ]
+    },
+    "ols_status": "OLS FE coefficients are the C5 reproduction ANCHOR only (src/baseline_ols.py); NOT a scored operator",
+    "canonical_config": "only {scope,operator,adjust} keys; unknown keys rejected; config_id over canonical fields only"
+  },
+  "legacy_six_root_diagnostics": [
+    {
+      "branch_id": "E0-B1",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.055252514705032764,
+        "null_coverage": 0.72,
+        "q": 0.3506843519462998,
+        "ci_width": 0.23897126229304574,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.055252514705032764,
+        "null_coverage": 0.72,
+        "q": null,
+        "ci_width": 0.23897126229304574,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B2",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "none"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.14887769561437977,
+        "null_coverage": 0.64,
+        "q": 0.31645102247784174,
+        "ci_width": 0.23835170102049316,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.14887769561437977,
+        "null_coverage": 0.64,
+        "q": null,
+        "ci_width": 0.23835170102049316,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B3",
+      "config": {
+        "scope": "primary216",
+        "operator": "abs_mean_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": -0.0213534445935684,
+        "null_coverage": 0.96,
+        "q": 0.6967856533254251,
+        "ci_width": 0.26361677198893085,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": true,
+        "estimate": -0.0213534445935684,
+        "null_coverage": 0.96,
+        "q": 0.6967856533254251,
+        "ci_width": 0.26361677198893085,
+        "invalid_reasons": [],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B4",
+      "config": {
+        "scope": "primary216",
+        "operator": "max_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.04868221150146851,
+        "null_coverage": 0.68,
+        "q": 0.3224299464393928,
+        "ci_width": 0.2339581372291829,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.04868221150146851,
+        "null_coverage": 0.68,
+        "q": null,
+        "ci_width": 0.2339581372291829,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B5",
+      "config": {
+        "scope": "confirmatory207",
+        "operator": "mean_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.057935988360514196,
+        "null_coverage": 0.8,
+        "q": 0.4725262508623451,
+        "ci_width": 0.24257961996668276,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.057935988360514196,
+        "null_coverage": 0.8,
+        "q": null,
+        "ci_width": 0.24257961996668276,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B6",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "base_plus_organoid_mean"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.02988540586063071,
+        "null_coverage": 0.68,
+        "q": 0.3500156860672464,
+        "ci_width": 0.21462398157484805,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.02988540586063071,
+        "null_coverage": 0.68,
+        "q": null,
+        "ci_width": 0.21462398157484805,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    }
+  ],
+  "prior_xhigh_partial_messages": [
+    "I\u2019ll read the specified artifacts, keep the analysis local, and identify the smallest honest evaluator redesign. I\u2019ll leave files unchanged and won\u2019t access outcome data.\n",
+    "The fixed-gene development statistic and model resampling answer different questions. Resampling six models can describe sensitivity to model composition; it cannot establish uncertainty for the conditional statistic. I\u2019m checking how to separate those outputs and make calibration failure disqualifying before any reward is assigned.\n",
+    "A synthetic calibration pass would establish performance only under its stated noise model. The proposed design therefore needs separate validity fields for algorithmic calibration, real-data inference, and stability. A real-development pilot also needs a fixed target and useful choices of work to perform; that feasibility check should come before a policy run.\n"
+  ],
+  "blocker": "Model-only bootstrap is composition stability,not uncertainty for fixed-gene conditional statistic. It severely undercovers unjustified across-gene permutation diagnostic; sharpness rewarded anyway.",
+  "new_draft": "evaluator_v3 safety draft counts nonfinite failures,rejects coverage<0.90,all results inadmissible_for_policy; not a justified replacement.",
+  "scientific_units": "207 fixed genes;6 measured Broad models with unresolved donors,7 formatpairs; external cohort metadata148models/144donors with explicit mapping; values quarantined.",
+  "constraints": "No Sanger outcome access beforeLock2; no effect-size/pvalue/discovery-count reward; syntheticdata tests algorithms only; no new successcriteria afterfreeze; unchanged confirmatory target; all computation local; no extra APIspend; source artifacts retained.",
+  "C9": "Unknown material host costs + no independent reserved biological taskpanels remain unresolved. Never certifyC9/all-in savings; engineering evaluation can only be honestly descriptive.",
+  "remaining_G2_repairs": "Need valid uncertainty/calibration design; known-null/nonzero grouped diagnostic tests; exact Broad grouping; coherent nineengineeringpanels/baselines/seeds/bootstrap/precision calculation; remaining deferred gates; Sol-high>=90.",
+  "implemented_other_fixes": "37tests passed including realRSSkill/thread+process budgetconcurrency; rawfinite/membershipguards; failurestatusrecovery; explicit144unique donors; strictschema-to-DAG batchrepair; provisional250geneatlas andcomponentreproduction.",
+  "model_call_attempts": "Prior permissionfailure3; afterpermissionsrepair actual600s xhigh consultation timedout after tools/partialmessages. No final recommendation, no uncertainty redesign adopted.",
+  "retrieval": "This packet contains the exhaustive current experiment-index and full sixrootdiagnosticrecords. No researchgeneration/trajectoryrecord exists. Source paths and hashes listed below; do not reopen tools for this focused response.",
+  "source_hashes": {
+    "contract.json": "17ed6403e34eebc7e6c9d7a579928744f53da6cdde4617e941b02dae9e5d9be6",
+    "config/allocations.json": "796482ea5e368e2de47039e80b7e5c461ed7bad84efa3a3e5d4bbe8c38405d9b",
+    "reviews/g2_r2_dispositions_v1.md": "091c949799b28a0485659ec8b25e670bb2b8f1a96ba3f971e77d1663d2673d16",
+    "src/evaluator_v2.py": "dda3e2ffcc5dd386ebfe7486a35e073756601bf3a947b7ad30c8215d32506360",
+    "src/evaluator_v3.py": "9d426e6db7ac5a52cdb425551743ff31f64d99f019de2bf05c7cb178cfce50fb",
+    "src/estimators.py": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c",
+    "data/split_manifest.json": "614eb5998dc4bfdd3dffe3657a238665f073cffcc5d0042a47d73880f62e9c8e",
+    "reviews/g2_safety_probe_results_v1.json": "433eda37be57111754aea0768399a8eddf9e84e0e11c9d2631923a62a904dfad"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "generation": "pgen006",
+  "version": 1,
+  "inventory": {
+    "rows": 3000,
+    "models": 7,
+    "genes": 250,
+    "unresolved_rows": [
+      {
+        "gene": "ABI2",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ACTB",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ACTG1",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ACTR2",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ACTR3",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "AGAP2",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ANKRD28",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "APC",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARF1",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGAP11A",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGAP29",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGAP32",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGAP5",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGEF12",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGEF28",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARHGEF7",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARPC2",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARPC3",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ARPC4",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      },
+      {
+        "gene": "ASH1L",
+        "model": "ACH-003052",
+        "problems": [
+          "model_not_in_Model.csv"
+        ]
+      }
+    ],
+    "unresolved_count": 250,
+    "duplicate_keys": {}
+  },
+  "partition": {
+    "DEV": [
+      "ACH-000108",
+      "ACH-000178",
+      "ACH-003040"
+    ],
+    "EVAL": [
+      "ACH-000048",
+      "ACH-001418",
+      "ACH-002958",
+      "ACH-003052"
+    ],
+    "shared_screens_cross_partition": [],
+    "coverage_by_partition_axis": {
+      "DEV/format": 1000,
+      "DEV/medium": 1000,
+      "EVAL/format": 750,
+      "EVAL/medium": 250
+    }
+  },
+  "catalogue": {
+    "recorded_actions": 2500,
+    "full_grid_actions": 3500,
+    "grid_coverage_fraction": 0.7143,
+    "restriction": "catalogue frozen = recorded actions only; unrecorded grid cells are NOT reachable actions"
+  },
+  "checks": {
+    "identity_resolution_100pct": false,
+    "zero_ambiguous_conflicting_records": true,
+    "zero_cross_partition_screen_overlap": true,
+    "eval_minimum": true,
+    "dev_minimum": true,
+    "cost_table_definable": true
+  },
+  "verdict": "FAIL_SUBSTRATE",
+  "authorization": "GO_REPLAY authorizes ONLY a cycle SPEC lock (Q* numeric lock, policies, seeds); no execution here",
+  "substrate_limits": [
+    "7 models only; donor_id unresolved in atlas (model = independence unit, disclosed)",
+    "medium axis: EVAL coverage is a single model (ACH-000048) - axis-restricted episodes required",
+    "replay outcomes are development-screen recordings; no biological claim from replay performance"
+  ]
+}

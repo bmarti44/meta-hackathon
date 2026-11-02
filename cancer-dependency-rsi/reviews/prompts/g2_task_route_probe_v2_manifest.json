@@ -1,0 +1,14 @@
+{
+  "spec_id": "g2-task-route-probe-v2-manifest-only",
+  "frozen_before_execution": true,
+  "written_utc": "2026-10-28T21:10:30Z",
+  "trigger": "User instruction 2026-10-28T17:08 local: '1. you download it'. The official file download path is CAPTCHA-protected; solving/bypassing it is prohibited. DepMap documents /portal/api/no-captcha/download/files for programmatic clients, returning the release file list WITHOUT download URLs.",
+  "purpose": "Retrieve only the official release-file manifest to record 26Q3 release identity and the md5/size of Model.csv and CRISPRScreenMap.csv (and any other allowlisted metadata files), so that user-downloaded copies can be verified. No data file is downloaded.",
+  "status_invariants": {"q": null, "admissible_for_policy": false, "G2": "FAIL", "C_outcomes": "untouched by this probe", "verdict_of_v1": "UNRESOLVED (unchanged)"},
+  "envelope": {"requests_max": 2, "redirects_counted_not_auto_followed": true, "per_request_timeout_s": 30, "socket_level_timeout": true, "bytes_max": 8388608, "read_chunk": "min(65536, remaining)", "wall_s": 120, "cpu_heavy": false, "memory_bytes": 0, "phase": "phase2_lock1"},
+  "request": "GET https://depmap.org/portal/api/no-captcha/download/files ; HTML response => stop, no bypass",
+  "persist": "data/route_probe_26q3_v2/no_captcha_files.csv (any URL-like column sanitized to scheme+host+path before persistence)",
+  "outputs": "reviews/g2_task_route_probe_v2_manifest.json",
+  "repairs_from_v1_review": ["sanitize before persisting", "socket-level timeout and byte-cap-aware reads"],
+  "not_in_scope": "E1-E8 eligibility (requires Model.csv + screen map contents)."
+}

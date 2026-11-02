@@ -1,0 +1,42 @@
+{
+  "status": "PROVISIONAL_PRELOCK1",
+  "panel_genes": 250,
+  "development_primary_genes": 216,
+  "confirmatory_genes": 207,
+  "confirmatory_excluded_genes": 43,
+  "observation_rows": 3000,
+  "contrasts_by_axis": {
+    "format": {
+      "models": 6,
+      "pairs": 7
+    },
+    "medium": {
+      "models": 4,
+      "pairs": 5
+    }
+  },
+  "external_outcome_values_accessed": false,
+  "valid_inferential_claims": 0,
+  "uncertainty": "not_identified_by_this_inventory",
+  "wall_s": 0.2555440829601139,
+  "cpu_s": 0.725571,
+  "peak_rss_bytes": 179912704,
+  "input_hashes": {
+    "data/raw/broad_figshare/minipool_screen_metadata.csv": "14def246b4f560c6448a814628ec127d6359bc3c82d1758de3029bee1a0a3303",
+    "data/raw/broad_figshare/minipool_chronos_gene_effects.csv": "c5c7918f80cf020ada112bb853fc5140fac63cef1b17415866108843f3443503",
+    "data/raw/broad_figshare/minipool_library_composition.csv": "66f57d99cd24228a476f9f742deeaf93d7d112d0a26d668ba4e9f32d80b67f5b",
+    "data/raw/broad_figshare/organoids_vs_2d_gene_dependency_tests_full.csv": "e20ef98705e0f2e590ba5011c9683c883a3e585b6052adc1b3488502101dc40f",
+    "data/gene_scopes.json": "2b4958407bf741ac1c371e4b18c433288d5754f9b3134094986dc5c0f7eb0881",
+    "data/selection_exclusions.json": "f5d9615c80134464fe85d1776836e8a77d3ea8ec2e7333f3a753339c3d645dfc",
+    "data/sanger_table6_schema.json": "8a12635838d2cb905f8ffcbebaab0f19bec915849c6c2fa04d53c4667eeefef7"
+  },
+  "code_hashes": {
+    "src/build_atlas.py": "b83e8f6902f934722d2beb84b52e9b6db5e070ecbe45646c394b5c2fae2c3896",
+    "src/estimators.py": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c"
+  },
+  "output_hashes": {
+    "exclusions.csv": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e",
+    "genes.csv": "2ae2dc37b93526d7bfe5d639df487e30012920e6b2d2ec66f64b1162c5993c21",
+    "paired_observations.csv": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801"
+  }
+}

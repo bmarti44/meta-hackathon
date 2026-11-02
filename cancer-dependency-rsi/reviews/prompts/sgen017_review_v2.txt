@@ -1,0 +1,3 @@
+Re-review v2 (gpt-6.1-sol, high), read-only, metadata only. Files: generations/sgen017/census_v2.json, census_v1.json, reviews/sgen017_review.md (your findings), src/sgen017_census.py (v1 code; v2 was computed by a disclosed inline correction script - assess whether that provenance is acceptable or requires a versioned src file).
+Verify: pDNA exclusion, strict explicit-false counts (3,042 expected by your calc), unknown-format handling, candidate ACH-000614 description accuracy, NEAR_ABSENT_UNVERIFIED wording, unqualified screen-unit reporting, no remaining overclaim. Score 0-100.
+End exactly: SGEN017_V2: <CLOSED|OPEN> and SGEN017_V2_SCORE: <0-100>

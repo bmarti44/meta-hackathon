@@ -1,0 +1,32 @@
+{
+  "object": "qnorm_corrected_logFCs",
+  "n_rows_genes": 17647,
+  "n_cols": 930,
+  "col_id_examples": [
+    "ACH-001421",
+    "ACH-001412",
+    "ACH-000888",
+    "ACH-001184",
+    "ACH-000317",
+    "ACH-000264"
+  ],
+  "row_id_examples": [
+    "SHOC2",
+    "NDUFA12",
+    "SDAD1",
+    "FAM98A"
+  ],
+  "col_id_pattern": "ACH-*",
+  "panel216_coverage_check": "deferred: gene-row membership is schema; computed without values below",
+  "panel250_rows_present": 244,
+  "panel250_missing_examples": [
+    "CYFIP2",
+    "DOCK1",
+    "OR14K1",
+    "PARVA",
+    "PPP2R2D",
+    "TMOD"
+  ],
+  "covariate_sample_ids_n": 256,
+  "cols_match_covariate_ids": 0
+}

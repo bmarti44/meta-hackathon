@@ -1,0 +1,1712 @@
+{
+  "generation": "sgen012",
+  "version": 3,
+  "inputs": {
+    "data/Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7"
+    },
+    "data/CRISPRScreenMap.csv": {
+      "sha256": "43cc528614053d4c5a96729c2d782375227231a0cfea23de6c519b8989fa1252"
+    },
+    "data/ModelCondition.csv": {
+      "sha256": "a1edda78cd60718e5c99690ce8ab80315b65ddc9346643338d2c1c774fc51326"
+    },
+    "data/ScreenSequenceMap.csv": {
+      "sha256": "acaedf0549afda50e5f3df28645c5c2193acbdb9779f9f8099861b763d1be296"
+    },
+    "generations/sgen010/established_pool_v4.json": {
+      "sha256": "0c1080f8a4330e9be93b1fa0e0821fdf557a7985403b0ffa9d0129a0614bb26b"
+    },
+    "generations/sgen010/screen_v7.json": {
+      "sha256": "d6e6eb69a9f239ea61671397a16031a8c78be9330f049f17437ce3698832766e"
+    },
+    "data/DepMap26Q3_README.txt": {
+      "sha256": "5672d9e04f18320e9ca1d25747427275dcabb44bffe45eba34d196f1b44dd3ec"
+    }
+  },
+  "provenance_audit_basis": "DepMap26Q3_README: ModelCondition = 'condition(s) under which the model was assayed'; ScreenSequenceMap = Achilles (CRISPR) pipeline Pre-Chronos map linking SequenceID->ScreenID+ModelConditionID. Taken as screening-time basis, explicitly disputable at review.",
+  "field_semantics_note": "In ModelCondition.csv, GrowthMedia carries MF- codes and FormulationID carries descriptive media text (name-swapped vs SPEC assumption); SPEC implemented literally on FormulationID text.",
+  "gene_csv_excluded": "Gene.csv never read (outcome-derived essentiality/selectivity columns).",
+  "denominator": {
+    "cell_line_models": 1095,
+    "components": 1057,
+    "components_reconstruction_asserted_vs_v7": true
+  },
+  "establishable": {
+    "models": 729,
+    "components": 724,
+    "models_before_multienv_component_exclusion": 747,
+    "multi_environment_components_excluded": 9
+  },
+  "exclusion_reasons_sequences": {
+    "unresolved_formulation": 688,
+    "missing_cellformat": 230,
+    "unknown_flag_encoding": 52,
+    "explicitly_disqualified": 30
+  },
+  "harmonization_map_unique_entries": 270,
+  "ranked_strata_all": [
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs"
+      ],
+      "components": 190
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs"
+      ],
+      "components": 86
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs"
+      ],
+      "components": 61
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 10% fbs"
+      ],
+      "components": 26
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 20% fbs"
+      ],
+      "components": 20
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 10% fbs"
+      ],
+      "components": 19
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 10% fbs"
+      ],
+      "components": 15
+    },
+    {
+      "env": [
+        "adherent",
+        "mccoy's 5a + 10% fbs"
+      ],
+      "components": 13
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate"
+      ],
+      "components": 12
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs + 2mm glutamine + 100um neaa"
+      ],
+      "components": 10
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2mm glutamine"
+      ],
+      "components": 10
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs"
+      ],
+      "components": 9
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 15% fbs + 2mm glutamine"
+      ],
+      "components": 9
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 10% fbs + 2mm glutamine + 100um neaa"
+      ],
+      "components": 8
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 2mm glutamine"
+      ],
+      "components": 7
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 15% fbs"
+      ],
+      "components": 7
+    },
+    {
+      "env": [
+        "adherent",
+        "imdm + 10% fbs + 2mm glutamine"
+      ],
+      "components": 7
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2mm glutamine + 25mm hepes"
+      ],
+      "components": 7
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 5% fbs"
+      ],
+      "components": 7
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:ksfm (2:1) + 20% fbs"
+      ],
+      "components": 6
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 20% fbs"
+      ],
+      "components": 6
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 20% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 5% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 10% fbs + 2mm glutamine"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 10% fbs + 2mm glutamine + 500ng/ml sodium hydrocortisone succinate"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 15% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "l-15 + 10% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "william's e medium + 10% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 15% fbs"
+      ],
+      "components": 5
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 20% fbs + 1mm sodium pyruvate"
+      ],
+      "components": 4
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 5% fbs + 5ug/ml insulin + 10mm hepes + 1ug/ml hydrocortisone"
+      ],
+      "components": 4
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 15% fbs"
+      ],
+      "components": 4
+    },
+    {
+      "env": [
+        "mixed",
+        "dmem + 10% fbs"
+      ],
+      "components": 4
+    },
+    {
+      "env": [
+        "mixed",
+        "imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium"
+      ],
+      "components": 4
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 10% fbs"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 10ug/ml transferrin + 30nm selenium + 10nm hydrocortisone + 10nm beta-estradiol"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 20% fbs + 2mm glutamine + 100um neaa"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 15% fbs + 2mm glutamine"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 20% fbs + 3mm glutamine"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "stemline keratinocyte medium ii + 2% fbs + 2mm glutamine + stemline keratinocyte growth supplement"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 10% fbs + 2mm glutamine"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "suspension",
+        "imdm + 10% fbs"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "suspension",
+        "imdm + 20% fbs"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 2mm glutamine"
+      ],
+      "components": 3
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 10% fbs + 100um neaa"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 10% fbs + 1x insulin-transferrin-selenium"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 20% fbs"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:rpmi (1:1) + 10% fbs"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 100um neaa"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2mm glutamine + 2mm sodium pyruvate"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "suspension",
+        "alphamem + 20% fbs + 10ng/ml gm-csf"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "suspension",
+        "imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 20% fbs + 10ng/ml gm-csf"
+      ],
+      "components": 2
+    },
+    {
+      "env": [
+        "adherent",
+        "alphamem + 10% fbs + 1x pen-strep"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "alphamem + 5% fbs + 1x insulin-transferrin-selenium"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 100um neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 1ug/ml insulin"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 2mm glutamine + 0.4ug/ml hydrocortisone"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 2mm glutamine + 100um neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 2mm glutamine + 500um pyruvate"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs + 2mm glutamine + sodium pyruvate + 1x insulin-transferrin-selenium"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 15% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 20% horse serum"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 5% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 5% fbs + 2.5 mm glutamine + 0.2 g/l sodium bicarbonate + 15 mm hepes + 0.5 mm sodium pyruvate + 400 ng/ml hydrocortisone"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:f12 + 5% fbs + 2mm glutamine + 10ug/ml insulin + 0.5ug/ml hydrocortisone"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem:rpmi (1:3) + 10% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs + 0.015 mg/ml 5-bromo-2'-deoxyuridine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs + 100um neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs + 200um neaa + 1 mm sodium pyruvate + 100ug/l cyanocobalamin (vitamin b12)"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 5% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "emem:f12 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 10% fbs + 1mm glutamine + 44mm glucose + 12mm sodium bicarbonate"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 1x its + 10mm hepes + 1ug/ml hydrocortisone + 1g/l bsa + 10ng/ml egf + 5mm ethanolamine + 10nm triiodo-l-thyronine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 5% fbs + 5ug/ml insulin + 10mm hepes + 10ng/ml egf"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "imdm + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "imdm + 20% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "imdm:rpmi (4:1) + 20% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "k-sfm"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "l-15 + 10% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mccoy's 5a + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mebm + 2% fbs + 2mm glutamine + megm singlequot + 10ng/ml egf"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 10% fbs + 1mm sodium pyruvate + 1mm neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 10% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 20% fbs + 1mm sodium pyruvate + 100um neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 1% glutamax + 0.5% gentamicin + hepes"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 100um neaa + 20mm hepes"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2ug/ml insulin"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 15% fbs + 2mm glutamine + 1mm sodium pyruvate + 60ug/ml insulin + 10mm hepes + 18mm sodium bicarbonate + 25mm glucose"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 20% fbs + 20ng/ml testosterone + 5ug/ml transferrin + 5ng/ml sodium selenite + 5ug/ml insulin"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 20% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 5% fbs + 2mm glutamine + 25mm hepes"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi:emem (1:1) + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi:emem (3:2) + 20% fbs + 2 mm l-glutamine + 100um neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi:f12 (1:1) + 20% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "smgm"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "adherent",
+        "waymouth's mb 752_1 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "alphamem + 5% fbs + 1x insulin-transferrin-selenium"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "dmem + 10% fbs + 2mm glutamine + 1mm sodium pyruvate + 1mm neaa"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "dmem:f12 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "dmem:f12 + 5% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 10ug/ml transferrin + 30nm selenium + 10nm hydrocortisone + 10nm beta-estradiol"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "emem + 20% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "emem:f12 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "imdm + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "imdm + 10% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "mccoy's 5a + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "mccoy's 5a + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "mem + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 15% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 20% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 5% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "alphamem + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "dmem + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "dmem + 20% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "dmem:f12 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 0.01mg/ml transferrin + 30nm selenium + 10mm hepes + 10nm hydrocortisone + 10nm beta-estradiol"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "f12 + 10% fbs"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "imdm + 5% fbs + 10ug/ml insulin + 5ug/ml transferrin + 2ng/ml gm-csf"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "imdm:rpmi (4:1) + 20% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 10ng/ml of human recombinant gm-csf"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 2 mm glutamine + 1x neaa + 1 mm sodium pyruvate"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 2ng/ml g-csf"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs + 50um 2-mercaptoethanol"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 20% fbs + 10ng/ml il-6"
+      ],
+      "components": 1
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 20% fbs + 2mm glutamine"
+      ],
+      "components": 1
+    }
+  ],
+  "selected_coverage": {
+    "models_frac": 0.2539,
+    "components_frac": 0.2611
+  },
+  "selected_contrast": {
+    "armA": {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs"
+      ],
+      "components": 190
+    },
+    "armB": {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs"
+      ],
+      "components": 86
+    },
+    "mdr_two_arm": 0.3536,
+    "positivity_lineages": [],
+    "lineage_counts_A": {
+      "Lung": 39,
+      "Skin": 19,
+      "Biliary Tract": 19,
+      "Kidney": 10,
+      "Liver": 10,
+      "Bowel": 10,
+      "Esophagus/Stomach": 10,
+      "Soft Tissue": 9,
+      "Pancreas": 8,
+      "CNS/Brain": 8,
+      "Breast": 7,
+      "Peripheral Nervous System": 7,
+      "Ovary/Fallopian Tube": 6,
+      "Uterus": 6,
+      "Pleura": 5,
+      "Head and Neck": 5,
+      "Lymphoid": 3,
+      "Myeloid": 2,
+      "Cervix": 2,
+      "Bone": 2,
+      "Thyroid": 1,
+      "Bladder/Urinary Tract": 1,
+      "Ampulla of Vater": 1
+    },
+    "lineage_counts_B": {
+      "CNS/Brain": 22,
+      "Skin": 9,
+      "Soft Tissue": 7,
+      "Kidney": 7,
+      "Bladder/Urinary Tract": 6,
+      "Head and Neck": 5,
+      "Liver": 4,
+      "Ovary/Fallopian Tube": 3,
+      "Pancreas": 3,
+      "Peripheral Nervous System": 3,
+      "Breast": 2,
+      "Bone": 2,
+      "Bowel": 2,
+      "Cervix": 2,
+      "Lung": 2,
+      "Biliary Tract": 2,
+      "Prostate": 1,
+      "Thyroid": 1,
+      "Pleura": 1,
+      "Esophagus/Stomach": 1,
+      "Testis": 1
+    }
+  },
+  "gates": {
+    "coverage_models_ge986": false,
+    "coverage_components_ge952": false,
+    "contrast_exists": true,
+    "arm_size_ge100_each": false,
+    "positivity_ge3_lineages_k20": false,
+    "precision_mdr_le_0.146": false,
+    "precision_structurally_attainable_in_population": false
+  },
+  "confounding": {
+    "env_by_lineage_all": {
+      "('adherent', \"emem + 10% fbs + 0.015 mg/ml 5-bromo-2'-deoxyuridine\")": {
+        "Bone": 1
+      },
+      "('adherent', \"mccoy's 5a + 10% fbs\")": {
+        "Kidney": 4,
+        "Bone": 2,
+        "Bladder/Urinary Tract": 2,
+        "Skin": 1,
+        "Lung": 1,
+        "Ovary/Fallopian Tube": 1,
+        "Soft Tissue": 1,
+        "Cervix": 1
+      },
+      "('adherent', \"mccoy's 5a + 15% fbs\")": {
+        "Bone": 1
+      },
+      "('adherent', \"waymouth's mb 752_1 + 10% fbs\")": {
+        "Cervix": 1
+      },
+      "('adherent', \"william's e medium + 10% fbs\")": {
+        "Liver": 4,
+        "Biliary Tract": 1
+      },
+      "('adherent', 'alphamem + 10% fbs + 1x pen-strep')": {
+        "Kidney": 1
+      },
+      "('adherent', 'alphamem + 5% fbs + 1x insulin-transferrin-selenium')": {
+        "Skin": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 100um neaa')": {
+        "Soft Tissue": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 1ug/ml insulin')": {
+        "Esophagus/Stomach": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 2mm glutamine + 0.4ug/ml hydrocortisone')": {
+        "Head and Neck": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 2mm glutamine + 100um neaa')": {
+        "Pleura": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 2mm glutamine + 500um pyruvate')": {
+        "Biliary Tract": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 2mm glutamine + sodium pyruvate + 1x insulin-transferrin-selenium')": {
+        "Ovary/Fallopian Tube": 1
+      },
+      "('adherent', 'dmem + 10% fbs + 2mm glutamine')": {
+        "Ovary/Fallopian Tube": 4,
+        "Pancreas": 1,
+        "Bone": 1,
+        "Pleura": 1
+      },
+      "('adherent', 'dmem + 10% fbs')": {
+        "CNS/Brain": 22,
+        "Skin": 9,
+        "Soft Tissue": 7,
+        "Kidney": 7,
+        "Bladder/Urinary Tract": 6,
+        "Head and Neck": 5,
+        "Liver": 4,
+        "Ovary/Fallopian Tube": 3,
+        "Pancreas": 3,
+        "Peripheral Nervous System": 3,
+        "Breast": 2,
+        "Bone": 2,
+        "Bowel": 2,
+        "Cervix": 2,
+        "Lung": 2,
+        "Biliary Tract": 2,
+        "Prostate": 1,
+        "Thyroid": 1,
+        "Pleura": 1,
+        "Esophagus/Stomach": 1,
+        "Testis": 1
+      },
+      "('adherent', 'dmem + 15% fbs + 2mm glutamine')": {
+        "Bladder/Urinary Tract": 1
+      },
+      "('adherent', 'dmem + 15% fbs')": {
+        "Skin": 1
+      },
+      "('adherent', 'dmem + 20% fbs + 1mm sodium pyruvate')": {
+        "Soft Tissue": 4
+      },
+      "('adherent', 'dmem + 20% fbs')": {
+        "Skin": 2,
+        "Thyroid": 1,
+        "Pleura": 1,
+        "Soft Tissue": 1
+      },
+      "('adherent', 'dmem + 5% fbs')": {
+        "CNS/Brain": 3,
+        "Fibroblast": 1,
+        "Ampulla of Vater": 1
+      },
+      "('adherent', 'dmem:f12 + 10% fbs + 100um neaa')": {
+        "Ovary/Fallopian Tube": 1,
+        "Uterus": 1
+      },
+      "('adherent', 'dmem:f12 + 10% fbs + 1x insulin-transferrin-selenium')": {
+        "Lung": 2
+      },
+      "('adherent', 'dmem:f12 + 10% fbs + 2mm glutamine + 500ng/ml sodium hydrocortisone succinate')": {
+        "Head and Neck": 5
+      },
+      "('adherent', 'dmem:f12 + 10% fbs + 2mm glutamine')": {
+        "CNS/Brain": 2,
+        "Soft Tissue": 2,
+        "Thyroid": 1
+      },
+      "('adherent', 'dmem:f12 + 10% fbs')": {
+        "CNS/Brain": 1,
+        "Soft Tissue": 1,
+        "Pancreas": 1
+      },
+      "('adherent', 'dmem:f12 + 15% fbs')": {
+        "Uterus": 1
+      },
+      "('adherent', 'dmem:f12 + 20% fbs')": {
+        "Bowel": 1,
+        "Ovary/Fallopian Tube": 1
+      },
+      "('adherent', 'dmem:f12 + 20% horse serum')": {
+        "Pancreas": 1
+      },
+      "('adherent', 'dmem:f12 + 5% fbs + 2.5 mm glutamine + 0.2 g/l sodium bicarbonate + 15 mm hepes + 0.5 mm sodium pyruvate + 400 ng/ml hydrocortisone')": {
+        "Head and Neck": 1
+      },
+      "('adherent', 'dmem:f12 + 5% fbs + 2mm glutamine + 10ug/ml insulin + 0.5ug/ml hydrocortisone')": {
+        "Ovary/Fallopian Tube": 1
+      },
+      "('adherent', 'dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 10ug/ml transferrin + 30nm selenium + 10nm hydrocortisone + 10nm beta-estradiol')": {
+        "Lung": 3
+      },
+      "('adherent', 'dmem:f12 + 5% fbs')": {
+        "Breast": 1
+      },
+      "('adherent', 'dmem:ksfm (2:1) + 20% fbs')": {
+        "Pancreas": 5,
+        "Biliary Tract": 1
+      },
+      "('adherent', 'dmem:rpmi (1:1) + 10% fbs')": {
+        "Thyroid": 2
+      },
+      "('adherent', 'dmem:rpmi (1:3) + 10% fbs + 2mm glutamine')": {
+        "Bladder/Urinary Tract": 1
+      },
+      "('adherent', 'emem + 10% fbs + 100um neaa')": {
+        "Skin": 1
+      },
+      "('adherent', 'emem + 10% fbs + 200um neaa + 1 mm sodium pyruvate + 100ug/l cyanocobalamin (vitamin b12)')": {
+        "Bone": 1
+      },
+      "('adherent', 'emem + 10% fbs + 2mm glutamine + 100um neaa')": {
+        "Bladder/Urinary Tract": 7,
+        "Kidney": 2,
+        "Thyroid": 1
+      },
+      "('adherent', 'emem + 10% fbs')": {
+        "Cervix": 4,
+        "Soft Tissue": 1,
+        "Bone": 1,
+        "Ovary/Fallopian Tube": 1,
+        "Head and Neck": 1,
+        "Uterus": 1
+      },
+      "('adherent', 'emem + 15% fbs')": {
+        "Uterus": 6,
+        "Cervix": 1
+      },
+      "('adherent', 'emem + 5% fbs + 2mm glutamine')": {
+        "Bowel": 1
+      },
+      "('adherent', 'emem:f12 + 10% fbs')": {
+        "Peripheral Nervous System": 1
+      },
+      "('adherent', 'f12 + 10% fbs + 1mm glutamine + 44mm glucose + 12mm sodium bicarbonate')": {
+        "Breast": 1
+      },
+      "('adherent', 'f12 + 10% fbs')": {
+        "Cervix": 4,
+        "Uterus": 2,
+        "Pancreas": 1,
+        "Prostate": 1,
+        "Esophagus/Stomach": 1,
+        "Skin": 1,
+        "Lung": 1,
+        "Ovary/Fallopian Tube": 1,
+        "Kidney": 1,
+        "Vulva/Vagina": 1,
+        "Head and Neck": 1
+      },
+      "('adherent', 'f12 + 15% fbs + 2mm glutamine')": {
+        "Pleura": 7,
+        "Soft Tissue": 2
+      },
+      "('adherent', 'f12 + 15% fbs')": {
+        "Uterus": 3,
+        "Cervix": 1,
+        "Thyroid": 1
+      },
+      "('adherent', 'f12 + 1x its + 10mm hepes + 1ug/ml hydrocortisone + 1g/l bsa + 10ng/ml egf + 5mm ethanolamine + 10nm triiodo-l-thyronine')": {
+        "Breast": 1
+      },
+      "('adherent', 'f12 + 5% fbs + 5ug/ml insulin + 10mm hepes + 10ng/ml egf')": {
+        "Breast": 1
+      },
+      "('adherent', 'f12 + 5% fbs + 5ug/ml insulin + 10mm hepes + 1ug/ml hydrocortisone')": {
+        "Breast": 4
+      },
+      "('adherent', 'imdm + 10% fbs + 2mm glutamine')": {
+        "Bowel": 4,
+        "Head and Neck": 3
+      },
+      "('adherent', 'imdm + 10% fbs')": {
+        "Skin": 1
+      },
+      "('adherent', 'imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium')": {
+        "Bone": 1,
+        "CNS/Brain": 1,
+        "Peripheral Nervous System": 1
+      },
+      "('adherent', 'imdm + 20% fbs')": {
+        "Pancreas": 1
+      },
+      "('adherent', 'imdm:rpmi (4:1) + 20% fbs + 2mm glutamine')": {
+        "Bone": 1
+      },
+      "('adherent', 'k-sfm')": {
+        "Prostate": 1
+      },
+      "('adherent', 'l-15 + 10% fbs + 2mm glutamine')": {
+        "Kidney": 1
+      },
+      "('adherent', 'l-15 + 10% fbs')": {
+        "Bowel": 1,
+        "Soft Tissue": 1,
+        "Vulva/Vagina": 1,
+        "Adrenal Gland": 1,
+        "Cervix": 1
+      },
+      "('adherent', 'mebm + 2% fbs + 2mm glutamine + megm singlequot + 10ng/ml egf')": {
+        "Breast": 1
+      },
+      "('adherent', 'mem + 10% fbs + 1mm sodium pyruvate + 1mm neaa')": {
+        "Bladder/Urinary Tract": 1
+      },
+      "('adherent', 'mem + 10% fbs + 2mm glutamine + 100um neaa')": {
+        "Head and Neck": 5,
+        "Bladder/Urinary Tract": 2,
+        "CNS/Brain": 1
+      },
+      "('adherent', 'mem + 10% fbs + 2mm glutamine')": {
+        "Head and Neck": 1
+      },
+      "('adherent', 'mem + 10% fbs')": {
+        "Liver": 5,
+        "Bladder/Urinary Tract": 4,
+        "Lung": 3,
+        "Uterus": 3,
+        "CNS/Brain": 2,
+        "Skin": 2,
+        "Bone": 1,
+        "Soft Tissue": 1,
+        "Ovary/Fallopian Tube": 1,
+        "Peripheral Nervous System": 1,
+        "Kidney": 1,
+        "Breast": 1,
+        "Bowel": 1
+      },
+      "('adherent', 'mem + 15% fbs')": {
+        "Esophagus/Stomach": 1
+      },
+      "('adherent', 'mem + 20% fbs + 1mm sodium pyruvate + 100um neaa')": {
+        "Bone": 1
+      },
+      "('adherent', 'mem + 20% fbs + 2mm glutamine + 100um neaa')": {
+        "Head and Neck": 3
+      },
+      "('adherent', 'rpmi + 10% fbs + 1% glutamax + 0.5% gentamicin + hepes')": {
+        "Peripheral Nervous System": 1
+      },
+      "('adherent', 'rpmi + 10% fbs + 100um neaa + 20mm hepes')": {
+        "Soft Tissue": 1
+      },
+      "('adherent', 'rpmi + 10% fbs + 100um neaa')": {
+        "Kidney": 2
+      },
+      "('adherent', 'rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate')": {
+        "Biliary Tract": 4,
+        "Head and Neck": 3,
+        "Esophagus/Stomach": 2,
+        "Bowel": 2,
+        "Ampulla of Vater": 1
+      },
+      "('adherent', 'rpmi + 10% fbs + 2mm glutamine + 25mm hepes')": {
+        "Skin": 7
+      },
+      "('adherent', 'rpmi + 10% fbs + 2mm glutamine + 2mm sodium pyruvate')": {
+        "Ovary/Fallopian Tube": 2
+      },
+      "('adherent', 'rpmi + 10% fbs + 2mm glutamine')": {
+        "Bone": 3,
+        "Pancreas": 1,
+        "Bladder/Urinary Tract": 1,
+        "Lung": 1,
+        "Ovary/Fallopian Tube": 1,
+        "Peripheral Nervous System": 1,
+        "Eye": 1,
+        "Esophagus/Stomach": 1
+      },
+      "('adherent', 'rpmi + 10% fbs + 2ug/ml insulin')": {
+        "Breast": 1
+      },
+      "('adherent', 'rpmi + 10% fbs')": {
+        "Lung": 39,
+        "Skin": 19,
+        "Biliary Tract": 19,
+        "Kidney": 10,
+        "Liver": 10,
+        "Bowel": 10,
+        "Esophagus/Stomach": 10,
+        "Soft Tissue": 9,
+        "Pancreas": 8,
+        "CNS/Brain": 8,
+        "Breast": 7,
+        "Peripheral Nervous System": 7,
+        "Ovary/Fallopian Tube": 6,
+        "Uterus": 6,
+        "Pleura": 5,
+        "Head and Neck": 5,
+        "Lymphoid": 3,
+        "Myeloid": 2,
+        "Cervix": 2,
+        "Bone": 2,
+        "Thyroid": 1,
+        "Bladder/Urinary Tract": 1,
+        "Ampulla of Vater": 1
+      },
+      "('adherent', 'rpmi + 15% fbs + 2mm glutamine + 1mm sodium pyruvate + 60ug/ml insulin + 10mm hepes + 18mm sodium bicarbonate + 25mm glucose')": {
+        "Pancreas": 1
+      },
+      "('adherent', 'rpmi + 15% fbs + 2mm glutamine')": {
+        "Lung": 1,
+        "Bone": 1,
+        "Soft Tissue": 1
+      },
+      "('adherent', 'rpmi + 15% fbs')": {
+        "Skin": 3,
+        "Thyroid": 1
+      },
+      "('adherent', 'rpmi + 20% fbs + 20ng/ml testosterone + 5ug/ml transferrin + 5ng/ml sodium selenite + 5ug/ml insulin')": {
+        "Prostate": 1
+      },
+      "('adherent', 'rpmi + 20% fbs + 2mm glutamine')": {
+        "Thyroid": 1
+      },
+      "('adherent', 'rpmi + 20% fbs + 3mm glutamine')": {
+        "Eye": 3
+      },
+      "('adherent', 'rpmi + 20% fbs')": {
+        "Esophagus/Stomach": 1,
+        "Bone": 1,
+        "Thyroid": 1,
+        "Lung": 1,
+        "Testis": 1,
+        "Eye": 1
+      },
+      "('adherent', 'rpmi + 5% fbs + 2mm glutamine + 25mm hepes')": {
+        "Pleura": 1
+      },
+      "('adherent', 'rpmi + 5% fbs')": {
+        "CNS/Brain": 2,
+        "Lung": 2,
+        "Pleura": 2,
+        "Ovary/Fallopian Tube": 1
+      },
+      "('adherent', 'rpmi:emem (1:1) + 10% fbs')": {
+        "Uterus": 1
+      },
+      "('adherent', 'rpmi:emem (3:2) + 20% fbs + 2 mm l-glutamine + 100um neaa')": {
+        "Peripheral Nervous System": 1
+      },
+      "('adherent', 'rpmi:f12 (1:1) + 20% fbs')": {
+        "Esophagus/Stomach": 1
+      },
+      "('adherent', 'smgm')": {
+        "Soft Tissue": 1
+      },
+      "('adherent', 'stemline keratinocyte medium ii + 2% fbs + 2mm glutamine + stemline keratinocyte growth supplement')": {
+        "Prostate": 3
+      },
+      "('mixed', \"mccoy's 5a + 10% fbs\")": {
+        "Breast": 1
+      },
+      "('mixed', \"mccoy's 5a + 15% fbs\")": {
+        "Bone": 1
+      },
+      "('mixed', 'alphamem + 5% fbs + 1x insulin-transferrin-selenium')": {
+        "Ovary/Fallopian Tube": 1
+      },
+      "('mixed', 'dmem + 10% fbs + 2mm glutamine + 1mm sodium pyruvate + 1mm neaa')": {
+        "Pancreas": 1
+      },
+      "('mixed', 'dmem + 10% fbs')": {
+        "CNS/Brain": 1,
+        "Pancreas": 1,
+        "Esophagus/Stomach": 1,
+        "Skin": 1
+      },
+      "('mixed', 'dmem:f12 + 10% fbs')": {
+        "Lung": 1
+      },
+      "('mixed', 'dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 10ug/ml transferrin + 30nm selenium + 10nm hydrocortisone + 10nm beta-estradiol')": {
+        "Lung": 1
+      },
+      "('mixed', 'dmem:f12 + 5% fbs')": {
+        "Lung": 1
+      },
+      "('mixed', 'emem + 20% fbs')": {
+        "CNS/Brain": 1
+      },
+      "('mixed', 'emem:f12 + 10% fbs')": {
+        "Peripheral Nervous System": 1
+      },
+      "('mixed', 'imdm + 10% fbs + 2mm glutamine')": {
+        "Bowel": 1
+      },
+      "('mixed', 'imdm + 10% fbs')": {
+        "Lymphoid": 1
+      },
+      "('mixed', 'imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium')": {
+        "Peripheral Nervous System": 2,
+        "CNS/Brain": 1,
+        "Bone": 1
+      },
+      "('mixed', 'mem + 10% fbs')": {
+        "CNS/Brain": 1
+      },
+      "('mixed', 'rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate')": {
+        "Ampulla of Vater": 1
+      },
+      "('mixed', 'rpmi + 10% fbs + 2mm glutamine')": {
+        "Lung": 1,
+        "Esophagus/Stomach": 1,
+        "Bone": 1
+      },
+      "('mixed', 'rpmi + 10% fbs')": {
+        "Lymphoid": 5,
+        "Lung": 5,
+        "Bowel": 3,
+        "Peripheral Nervous System": 2,
+        "Esophagus/Stomach": 2,
+        "Bone": 1,
+        "Bladder/Urinary Tract": 1
+      },
+      "('mixed', 'rpmi + 15% fbs')": {
+        "Bone": 1
+      },
+      "('mixed', 'rpmi + 20% fbs')": {
+        "Lymphoid": 1
+      },
+      "('mixed', 'rpmi + 5% fbs')": {
+        "Lung": 1
+      },
+      "('suspension', 'alphamem + 10% fbs')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'alphamem + 20% fbs + 10ng/ml gm-csf')": {
+        "Myeloid": 2
+      },
+      "('suspension', 'dmem + 10% fbs')": {
+        "Lung": 1
+      },
+      "('suspension', 'dmem + 20% fbs + 2mm glutamine')": {
+        "Bone": 1
+      },
+      "('suspension', 'dmem:f12 + 10% fbs')": {
+        "Kidney": 1
+      },
+      "('suspension', 'dmem:f12 + 5% fbs + 2mm glutamine + 5ug/ml insulin + 0.01mg/ml transferrin + 30nm selenium + 10mm hepes + 10nm hydrocortisone + 10nm beta-estradiol')": {
+        "Lung": 1
+      },
+      "('suspension', 'f12 + 10% fbs')": {
+        "Lung": 1
+      },
+      "('suspension', 'imdm + 10% fbs')": {
+        "Lymphoid": 3
+      },
+      "('suspension', 'imdm + 20% fbs + 4mm glutamine + 1x insulin-transferrin-selenium')": {
+        "CNS/Brain": 2
+      },
+      "('suspension', 'imdm + 20% fbs')": {
+        "Myeloid": 2,
+        "Esophagus/Stomach": 1
+      },
+      "('suspension', 'imdm + 5% fbs + 10ug/ml insulin + 5ug/ml transferrin + 2ng/ml gm-csf')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'imdm:rpmi (4:1) + 20% fbs + 2mm glutamine')": {
+        "Lymphoid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 10ng/ml of human recombinant gm-csf')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 2 mm glutamine + 1x neaa + 1 mm sodium pyruvate')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate')": {
+        "Esophagus/Stomach": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 2mm glutamine')": {
+        "Lung": 2,
+        "Lymphoid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 2ng/ml g-csf')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs + 50um 2-mercaptoethanol')": {
+        "Myeloid": 1
+      },
+      "('suspension', 'rpmi + 10% fbs')": {
+        "Lymphoid": 40,
+        "Myeloid": 13,
+        "Lung": 5,
+        "Breast": 1,
+        "Esophagus/Stomach": 1,
+        "Eye": 1
+      },
+      "('suspension', 'rpmi + 15% fbs')": {
+        "Lymphoid": 5
+      },
+      "('suspension', 'rpmi + 20% fbs + 10ng/ml gm-csf')": {
+        "Myeloid": 2
+      },
+      "('suspension', 'rpmi + 20% fbs + 10ng/ml il-6')": {
+        "Lymphoid": 1
+      },
+      "('suspension', 'rpmi + 20% fbs + 2mm glutamine')": {
+        "Lymphoid": 1
+      },
+      "('suspension', 'rpmi + 20% fbs')": {
+        "Lymphoid": 12,
+        "Myeloid": 3,
+        "Lung": 3,
+        "Eye": 1,
+        "Skin": 1
+      }
+    },
+    "env_by_lineage_selected": {
+      "A": {
+        "Lung": 39,
+        "Skin": 19,
+        "Biliary Tract": 19,
+        "Kidney": 10,
+        "Liver": 10,
+        "Bowel": 10,
+        "Esophagus/Stomach": 10,
+        "Soft Tissue": 9,
+        "Pancreas": 8,
+        "CNS/Brain": 8,
+        "Breast": 7,
+        "Peripheral Nervous System": 7,
+        "Ovary/Fallopian Tube": 6,
+        "Uterus": 6,
+        "Pleura": 5,
+        "Head and Neck": 5,
+        "Lymphoid": 3,
+        "Myeloid": 2,
+        "Cervix": 2,
+        "Bone": 2,
+        "Thyroid": 1,
+        "Bladder/Urinary Tract": 1,
+        "Ampulla of Vater": 1
+      },
+      "B": {
+        "CNS/Brain": 22,
+        "Skin": 9,
+        "Soft Tissue": 7,
+        "Kidney": 7,
+        "Bladder/Urinary Tract": 6,
+        "Head and Neck": 5,
+        "Liver": 4,
+        "Ovary/Fallopian Tube": 3,
+        "Pancreas": 3,
+        "Peripheral Nervous System": 3,
+        "Breast": 2,
+        "Bone": 2,
+        "Bowel": 2,
+        "Cervix": 2,
+        "Lung": 2,
+        "Biliary Tract": 2,
+        "Prostate": 1,
+        "Thyroid": 1,
+        "Pleura": 1,
+        "Esophagus/Stomach": 1,
+        "Testis": 1
+      }
+    },
+    "cramersV_env_x_lineage_all": 0.5682,
+    "cramersV_selected_contrast": 0.5117,
+    "arm_distributions": {
+      "A": {
+        "ScreenType_sequences": {
+          "2DS": 405
+        },
+        "DataSource_sequences": {
+          "BROAD": 405
+        }
+      },
+      "B": {
+        "ScreenType_sequences": {
+          "2DS": 174
+        },
+        "DataSource_sequences": {
+          "BROAD": 174
+        }
+      }
+    }
+  },
+  "audit_gaps": [
+    "blank drug-name fields: README does not document blank==none",
+    "no frozen model-to-component mapping artifact (deterministic reconstruction used, asserted vs pinned counts)"
+  ],
+  "evaluable": false,
+  "precision_ceiling": {
+    "best_possible_two_arm_mdr_n1057": 0.1711,
+    "components_required_for_0.146": 1458
+  },
+  "library_datasource_crosswalk_frozen": {
+    "Avana": [
+      "BROAD"
+    ],
+    "Brunello": [
+      "BROAD",
+      "OTHER"
+    ],
+    "Humagne-CD": [
+      "BROAD"
+    ],
+    "KY": [
+      "SANGER"
+    ],
+    "TKOv3": [
+      "BROAD",
+      "OTHER"
+    ]
+  },
+  "library_datasource_crosswalk_basis": "DepMap26Q3_README line 15 + Achilles-Brunello-2D/Achilles-TKOv3-2D entries (independent of checked records)",
+  "screentype_derivation": "README: 2D batch {2DS,2DD,2DN,3DN,2DND,3DND}, 3D batch {2DO,3DO}; all documented codes treated as assay context",
+  "spec_fidelity_deviations": [
+    "component reconstruction (no frozen mapping artifact exists; asserted vs pinned counts)",
+    "FormulationID text used literally per SPEC despite name-swapped field semantics (1:1 with MF codes in snapshot; verdict-invariant)"
+  ],
+  "verdict": "A_STILL_UNRESOLVED",
+  "authorization": "Pass authorizes only preparation+locking of a separate outcome design; no outcome access (SPEC)."
+}

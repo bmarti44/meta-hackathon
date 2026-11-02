@@ -1,0 +1,6 @@
+{
+  "method": "uv sync --locked in isolated copy (/tmp/cdrsi_fresh: pyproject.toml + uv.lock + src/tests/data/atlas/lock_s copies); fresh .venv (numpy 2.5.4, pandas 3.1.0)",
+  "results": {"sgen002_reproduce_implemented_components_pass": true, "focused_tests": "6 passed (test_zipfetch, test_atlas_v4, test_baseline_ols)"},
+  "scope": "Fresh locked environment on same host/OS; data copied from retained project (not re-downloaded). Donor-interval and policy components remain absent by construction.",
+  "verdict": "FRESH_ENV_REPRODUCTION_PASS for attainable components"
+}

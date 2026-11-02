@@ -1,0 +1,30 @@
+{
+ "B": 150,
+ "seed": 11,
+ "n_dual_calibration_models": 22,
+ "identity_check": {
+  "matches": true,
+  "n_mismatch": 0
+ },
+ "ess_non_frozen_from_point_estimate": [
+  978,
+  5027
+ ],
+ "n_hits_fixed_from_point_estimate": 456,
+ "slope_A_on_D": {
+  "median": 0.8981435460834282,
+  "ci95": [
+   0.8164129003155716,
+   0.9881849248558856
+  ]
+ },
+ "frac_medium_of_hits": {
+  "median": 0.6381578947368421,
+  "ci95": [
+   0.4862390350877193,
+   0.759375
+  ]
+ },
+ "frac_hits_boot_freq_ge_0.9": 0.18640350877192982,
+ "frac_hits_boot_freq_ge_0.5": 0.7214912280701754
+}

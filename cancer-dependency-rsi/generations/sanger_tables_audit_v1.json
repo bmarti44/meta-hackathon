@@ -1,0 +1,202 @@
+{
+ "table5_n_models": 162,
+ "exclusive97": {
+  "n": 97,
+  "freq_median": 0.8024691343307495,
+  "frac_lt_0.25": 0.0,
+  "frac_lt_0.5": 0.030927835051546393,
+  "frac_ge_0.9": 0.17525773195876287,
+  "per_gene": {
+   "ZCRB1": 0.4569999873638153,
+   "PGD": 0.47200000286102295,
+   "IGF1R": 0.4909999966621399,
+   "USP8": 0.5120000243186951,
+   "CBWD3": 0.5149999856948853,
+   "LCE2C": 0.5220000147819519,
+   "MED1": 0.5830000042915344,
+   "HGS": 0.6019999980926514,
+   "BDP1": 0.6079999804496765,
+   "CPSF6": 0.6169999837875366,
+   "SUPT4H1": 0.6169999837875366,
+   "GNA13": 0.6200000047683716
+  }
+ },
+ "headline18": {
+  "n": 18,
+  "freq_median": 0.6975308656692505,
+  "frac_lt_0.25": 0.0,
+  "frac_lt_0.5": 0.1111111111111111,
+  "frac_ge_0.9": 0.1111111111111111,
+  "per_gene": {
+   "ATP1A1": 0.781000018119812,
+   "BAP1": 0.722000002861023,
+   "DDX3X": 0.753000020980835,
+   "GNA13": 0.6200000047683716,
+   "IDI1": 0.7620000243186951,
+   "IGF1R": 0.4909999966621399,
+   "ITGB1": 0.781000018119812,
+   "LCE2C": 0.5220000147819519,
+   "LIG1": 0.9229999780654907,
+   "MBTPS1": 0.722000002861023,
+   "MBTPS2": 0.6729999780654907,
+   "MED1": 0.5830000042915344,
+   "MVD": 0.6539999842643738,
+   "PGD": 0.47200000286102295,
+   "PNKP": 0.6700000166893005,
+   "POLR2A": 1.0,
+   "SCAP": 0.8429999947547913,
+   "SUPT4H1": 0.6169999837875366
+  }
+ },
+ "all751": {
+  "n": 751,
+  "freq_median": 0.8796296119689941,
+  "frac_lt_0.25": 0.0,
+  "frac_lt_0.5": 0.005326231691078562,
+  "frac_ge_0.9": 0.4141145139813582,
+  "per_gene": {
+   "KNL1": 0.4480000138282776,
+   "ZCRB1": 0.4569999873638153,
+   "PGD": 0.47200000286102295,
+   "IGF1R": 0.4909999966621399,
+   "NUP62": 0.5090000033378601,
+   "USP8": 0.5120000243186951,
+   "CBWD3": 0.5149999856948853,
+   "LCE2C": 0.5220000147819519,
+   "NAA15": 0.5490000247955322,
+   "KIF18A": 0.5559999942779541,
+   "SLC7A6OS": 0.5649999976158142,
+   "SNAPC5": 0.5740000009536743
+  }
+ },
+ "table7_keys": [
+  [
+   "Keys",
+   "Definitions"
+  ],
+  [
+   "gene",
+   "Gene identifier."
+  ],
+  [
+   "ENSEMBL_ID",
+   "ENSEMBL identifier of the gene."
+  ],
+  [
+   "MEAN_LFC",
+   "Mean log fold-change value across all organoids."
+  ],
+  [
+   "MEDIAN_LFC",
+   "Median log fold-change value across all organoids."
+  ],
+  [
+   "MEAN_LFC_not_depleted_group",
+   "Mean log fold-change value across organoids classified as not depleted based on the binary CRISPR matrix obtained from BAGEL2."
+  ],
+  [
+   "MEAN_LFC_depleted_group",
+   "Mean log fold-change value across organoids classified as depleted based on the binary CRISPR matrix obtained from BAGEL2."
+  ],
+  [
+   "MEDIAN_LFC_not_depleted_group",
+   "Median log fold-change value across organoids classified as not depleted based on the binary CRISPR matrix obtained from BAGEL2."
+  ],
+  [
+   "MEDIAN_LFC_depleted_group",
+   "Median log fold-change value across organoids classified as depleted based on the binary CRISPR matrix obtained from BAGEL2."
+  ],
+  [
+   "delta_MEAN",
+   "Difference in mean log fold-change values between the two organoid groups."
+  ],
+  [
+   "delta_MEDIAN",
+   "Difference in median log fold-change values between the two organoid groups."
+  ],
+  [
+   "N_not_depleted",
+   "Number of organoids in which the gene is classified as not depleted."
+  ],
+  [
+   "N_depleted",
+   "Number of organoids in which the gene is classified as depleted."
+  ],
+  [
+   "p.value",
+   "p-value from the Wilcoxon test."
+  ],
+  [
+   "p.value.adj",
+   "p-value adjusted for multiple testing using the false discovery rate."
+  ]
+ ],
+ "table7": {
+  "diff_dep_analysis_gastrointesti": {
+   "shape": [
+    7086,
+    14
+   ],
+   "columns": [
+    "gene",
+    "ENSEMBL_ID",
+    "MEAN_LFC",
+    "MEDIAN_LFC",
+    "MEAN_LFC_not_depleted_group",
+    "MEAN_LFC_depleted_group",
+    "MEDIAN_LFC_not_depleted_group",
+    "MEDIAN_LFC_depleted_group",
+    "delta_MEAN",
+    "delta_MEDIAN",
+    "N_not_depleted",
+    "N_depleted",
+    "p.value",
+    "p.value.adj"
+   ]
+  },
+  "diff_dep_analysis_colorectal": {
+   "shape": [
+    5103,
+    14
+   ],
+   "columns": [
+    "gene",
+    "ENSEMBL_ID",
+    "MEAN_LFC",
+    "MEDIAN_LFC",
+    "MEAN_LFC_not_depleted_group",
+    "MEAN_LFC_depleted_group",
+    "MEDIAN_LFC_not_depleted_group",
+    "MEDIAN_LFC_depleted_group",
+    "delta_MEAN",
+    "delta_MEDIAN",
+    "N_not_depleted",
+    "N_depleted",
+    "p.value",
+    "p.value.adj"
+   ]
+  },
+  "diff_dep_analysis_oesophageal": {
+   "shape": [
+    4082,
+    14
+   ],
+   "columns": [
+    "gene",
+    "ENSEMBL_ID",
+    "MEAN_LFC",
+    "MEDIAN_LFC",
+    "MEAN_LFC_not_depleted_group",
+    "MEAN_LFC_depleted_group",
+    "MEDIAN_LFC_not_depleted_group",
+    "MEDIAN_LFC_depleted_group",
+    "delta_MEAN",
+    "delta_MEDIAN",
+    "N_not_depleted",
+    "N_depleted",
+    "p.value",
+    "p.value.adj"
+   ]
+  }
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "lfc_objects": [
+  "qnorm_corrected_logFCs"
+ ],
+ "lfc_shape_genes_x_models": [
+  17647,
+  930
+ ],
+ "control_file_columns": [
+  "gene",
+  "essentiality"
+ ],
+ "control_file_head": "[{'gene': 'ACTL6A', 'essentiality': 'curated_BAGEL_essential'}, {'gene': 'ACTR6', 'essentiality': 'curated_BAGEL_essential'}, {'gene': 'ALYREF', 'essentiality': 'curated_BAGEL_essential'}]",
+ "panel_percentiles": {
+  "mevalonate": {
+   "n_genes": 20,
+   "median_pct_across_models": 0.39420298067660225,
+   "iqr": [
+    0.3201606505355018,
+    0.4673953079843599
+   ]
+  },
+  "heme": {
+   "n_genes": 8,
+   "median_pct_across_models": 0.3361194537315124,
+   "iqr": [
+    0.23516036720122402,
+    0.4575281917606392
+   ]
+  },
+  "splice_panel": {
+   "n_genes": 8,
+   "median_pct_across_models": 0.014025046750155833,
+   "iqr": [
+    0.01075253584178614,
+    0.017984643282144275
+   ]
+  },
+  "ribo_panel": {
+   "n_genes": 12,
+   "median_pct_across_models": 0.008981696605655353,
+   "iqr": [
+    0.0065450218167393895,
+    0.012289624298747661
+   ]
+  }
+ },
+ "binary_objects": [
+  "bDepletionsB2"
+ ],
+ "binary_shape": [
+  17647,
+  930
+ ],
+ "binary_value_counts": "{0.0: 14100678, 1.0: 2311032}",
+ "exclusive97": {
+  "n": 97,
+  "n_in_binary": 91,
+  "essential_freq_median": 0.7333333333333333,
+  "frac_freq_lt_0.5": 0.08791208791208792,
+  "frac_freq_lt_0.25": 0.02197802197802198,
+  "lowest_freq_genes": {
+   "KMT5A": 0.196,
+   "GNA13": 0.239,
+   "IDI1": 0.299,
+   "ITGB1": 0.317,
+   "LIG1": 0.326,
+   "IGF1R": 0.366,
+   "FTSJ3": 0.466,
+   "H2AC15": 0.488,
+   "NXF1": 0.5,
+   "CDK12": 0.511
+  }
+ },
+ "headline18": {
+  "n": 18,
+  "n_in_binary": 16,
+  "essential_freq_median": 0.6446236559139784,
+  "frac_freq_lt_0.5": 0.3125,
+  "frac_freq_lt_0.25": 0.0625,
+  "lowest_freq_genes": {
+   "GNA13": 0.239,
+   "IDI1": 0.299,
+   "ITGB1": 0.317,
+   "LIG1": 0.326,
+   "IGF1R": 0.366,
+   "SCAP": 0.548,
+   "MED1": 0.572,
+   "BAP1": 0.629,
+   "DDX3X": 0.66,
+   "MBTPS1": 0.667
+  }
+ },
+ "all751": {
+  "n": 751,
+  "n_in_binary": 744,
+  "essential_freq_median": 0.9827956989247312,
+  "frac_freq_lt_0.5": 0.010752688172043012,
+  "frac_freq_lt_0.25": 0.002688172043010753,
+  "lowest_freq_genes": {
+   "KMT5A": 0.196,
+   "GNA13": 0.239,
+   "IDI1": 0.299,
+   "ITGB1": 0.317,
+   "LIG1": 0.326,
+   "IGF1R": 0.366,
+   "FTSJ3": 0.466,
+   "H2AC15": 0.488,
+   "NXF1": 0.5,
+   "CDK12": 0.511
+  }
+ },
+ "mevalonate_freq": {
+  "median": 0.08118279569892473,
+  "genes": {
+   "HMGCS1": 0.971,
+   "HMGCR": 0.899,
+   "MVK": 0.838,
+   "PMVK": 0.332,
+   "MVD": 0.741,
+   "IDI1": 0.299,
+   "IDI2": 0.015,
+   "FDPS": 0.586,
+   "FDFT1": 0.154,
+   "SQLE": 0.058,
+   "LSS": 0.044,
+   "CYP51A1": 0.041,
+   "MSMO1": 0.055,
+   "NSDHL": 0.013,
+   "HSD17B7": 0.127,
+   "EBP": 0.005,
+   "SC5D": 0.104,
+   "DHCR7": 0.012,
+   "DHCR24": 0.02,
+   "ACAT2": 0.013
+  }
+ }
+}

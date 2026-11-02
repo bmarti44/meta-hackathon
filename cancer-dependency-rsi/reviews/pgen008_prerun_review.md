@@ -1,0 +1,4 @@
+Execution defect — **items 64–65 and the repair’s item-66 reference:** the repair declares host-call attribution unchanged but makes all host calls shared, including sunk pgen007 generation/review calls. Inherited item 64 requires v8 attribution verbatim; `readiness_v8.json` assigns policy-generation and policy-specific review calls to the causing arm. Neither supplied SPEC contains item 66 to support the claimed shared attribution. The repair therefore introduces an allocation change beyond the declared rate-reference repair, leaving attribution unresolved under item 65 (`COST_UNRESOLVED`).
+
+PRERUN_VERDICT: SPEC_INVALID
+PGEN008_PRERUN_SCORE: 95

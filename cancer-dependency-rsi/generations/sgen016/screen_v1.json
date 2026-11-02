@@ -1,0 +1,35 @@
+{
+ "generation": "sgen016",
+ "verdict": "FAIL_TO_ESTABLISH",
+ "timestamp": "2026-10-29T21:32:25.117993+00:00",
+ "field_matrix": {
+  "R1_resource_provenance": {
+   "figshare_29472362": "PRESENT (article id, version 1, DOI 10.1038/s41586-026-10843-7 ref; 36-file inventory with sizes/md5)",
+   "depmap_portal": "ABSENT scriptable (all listing endpoints return bot-verification HTML)",
+   "cmp_index": "ABSENT (403)"
+  },
+  "R2_patient_linkage": {
+   "local_crosswalk": "PARTIAL (individual_ID, sanger_ID, library; no specimen/parent derivation chain, no file linkage)",
+   "local_passports": "PARTIAL+ (patient_id, sample_id, parent_id derivation; no raw-file linkage)",
+   "figshare": "ABSENT (model-level only)"
+  },
+  "R3_raw_objects": {
+   "figshare_29472362": "ABSENT (0 of 36 files are raw/guide-level count objects; all metadata or processed statistics)",
+   "depmap_portal": "NOT_ESTABLISHABLE (README asserts a NextGen Model Manuscript 2026 file set with raw profiling data incl CRISPR dependency scores; no scriptable manifest lists file_id/URI/checksum/sample_column_map)",
+   "protocol_record": "lock_s/scientific_protocol_v1.json itself records per-guide count matrices not among pinned inputs"
+  },
+  "R4_recipe": {
+   "library": "PRESENT (library_rule minLib else v1; crosswalk library column)",
+   "scoring": "PARTIAL (frozen statistic defined over Chronos/LFC processed vectors; raw->LFC normalization recipe not in any probed manifest)"
+  },
+  "R5_access": {
+   "figshare": "PRESENT public",
+   "depmap_portal": "NOT_ESTABLISHABLE scriptably (verification wall; no bypass attempted)",
+   "charge": "none observed"
+  }
+ },
+ "decision_basis": "Pre-committed rule: PASS requires >=1 complete unambiguous patient->specimen->model->declared raw object chain with sample map + recipe + access. R3 fails in every scriptable manifest; portal existence claim cannot be upgraded to a manifest chain without interactive portal access.",
+ "patient_chain_complete_count": 0,
+ "consequences": "Patient-level Lock-S reconstruction remains infeasible from public scriptable manifests. Reopening requires user-side portal download of the NextGen file set (processed LFC/Chronos vectors + screen metadata), then a NEW ledger-locked exploratory-sensitivity SPEC (never independent confirmation). No gate changes.",
+ "counts_accessed": 0
+}

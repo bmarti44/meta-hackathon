@@ -1,0 +1,7 @@
+{
+  "test": "set soft address-space limit while preserving inherited hard limit",
+  "requested_bytes": 8589934592,
+  "status": "unavailable",
+  "error": "current limit exceeds maximum limit",
+  "exception": "ValueError"
+}

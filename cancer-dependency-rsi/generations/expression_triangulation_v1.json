@@ -1,0 +1,85 @@
+{
+ "omics_profiles_columns": [
+  "ProfileID",
+  "DataType",
+  "ModelConditionID",
+  "IsDefaultEntryForMC",
+  "SourceModelCondition",
+  "CellFormat",
+  "ModelID",
+  "IsDefaultEntryForModel",
+  "StrippedCellLineName",
+  "DepMapCode",
+  "GrowthMedia",
+  "GrowthPattern",
+  "Lineage",
+  "SequencingDate",
+  "SharedToDbGaP",
+  "Stranded",
+  "SequencingID",
+  "SequencingPlatform"
+ ],
+ "expression_index_example": "0",
+ "expression_col_example": "SequencingID",
+ "mapping": "embedded_condition_columns",
+ "n_expression_units": "{('FBS', 'adherent'): 205, ('FBS', 'mixed'): 16, ('FBS', 'suspension'): 8, ('FBS', 'unknown'): 1, ('org', 'adherent'): 10, ('org', 'dome'): 69, ('org', 'mixed'): 1, ('org', 'suspension'): 1}",
+ "E_dome_n": [
+  69,
+  205
+ ],
+ "E_adh_n": [
+  10,
+  205
+ ],
+ "results": {
+  "corr_all": 0.0006553490359143904,
+  "medium_attributable": {
+   "n": 387,
+   "corr_D_E": -0.16832085034540223,
+   "median_E_gains": -0.38493352430968575,
+   "median_E_losses": -0.5090743854809701
+  },
+  "unresolved": {
+   "n": 68,
+   "corr_D_E": 0.03978802384789696,
+   "median_E_gains": -0.6066953074034203,
+   "median_E_losses": -0.5217611935244904
+  },
+  "mevalonate": {
+   "n": 20,
+   "median_E": 0.3584027548490967,
+   "median_D": -0.3841955
+  },
+  "heme": {
+   "n": 8,
+   "median_E": -0.47368771143880184,
+   "median_D": -0.331407
+  },
+  "fa_synthesis": {
+   "n": 6,
+   "median_E": -0.35718995933660524,
+   "median_D": -0.2754375
+  },
+  "LDLR": {
+   "E": 0.6077244100251137,
+   "D": 0.0390893
+  },
+  "SREBF2": {
+   "E": 0.28810741306228754,
+   "D": -0.249916
+  },
+  "SQLE": {
+   "E": 0.7540706724004843,
+   "D": -0.830363
+  },
+  "HMGCR": {
+   "E": 0.3101044664137331,
+   "D": -0.0421843
+  },
+  "INSIG1": {
+   "E": 0.9107805393164576,
+   "D": 0.038598
+  },
+  "mev_expr_score_by_condition": "{('FBS', 'adherent'): -0.013000000268220901, ('FBS', 'mixed'): -0.26899999380111694, ('FBS', 'suspension'): 0.04699999839067459, ('FBS', 'unknown'): 0.8759999871253967, ('org', 'adherent'): 0.1809999942779541, ('org', 'dome'): 0.43700000643730164, ('org', 'mixed'): 0.6840000152587891, ('org', 'suspension'): -0.6660000085830688}"
+ }
+}

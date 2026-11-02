@@ -1,0 +1,5627 @@
+[
+ {
+  "name": "Project_score_raw_counts/",
+  "compressed": 0,
+  "uncompressed": 0
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/",
+  "compressed": 0,
+  "uncompressed": 0
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/",
+  "compressed": 0,
+  "uncompressed": 0
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R5.read_count.tsv.gz",
+  "compressed": 2576738,
+  "uncompressed": 2576343
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MEL2_C908R1.read_count.tsv.gz",
+  "compressed": 2567864,
+  "uncompressed": 2567469
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R3_F1D14.read_count.tsv.gz",
+  "compressed": 2446144,
+  "uncompressed": 2445769
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EGI1_c903R1.read_count.tsv.gz",
+  "compressed": 2448164,
+  "uncompressed": 2447789
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR4_c905R2.read_count.tsv.gz",
+  "compressed": 2584609,
+  "uncompressed": 2584214
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO320H_c903R1.read_count.tsv.gz",
+  "compressed": 2435689,
+  "uncompressed": 2435314
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LC1sq_c906R3.read_count.tsv.gz",
+  "compressed": 2587304,
+  "uncompressed": 2586909
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE15_c907R1.read_count.tsv.gz",
+  "compressed": 2578690,
+  "uncompressed": 2578295
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HEC1_c907R3.read_count.tsv.gz",
+  "compressed": 2574550,
+  "uncompressed": 2574155
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML3_c905R2D21.read_count.tsv.gz",
+  "compressed": 2590673,
+  "uncompressed": 2590278
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT3_c904R1.read_count.tsv.gz",
+  "compressed": 2438494,
+  "uncompressed": 2438119
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU029_c907R3.read_count.tsv.gz",
+  "compressed": 2594242,
+  "uncompressed": 2593847
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SAS_c907R2.read_count.tsv.gz",
+  "compressed": 2598953,
+  "uncompressed": 2598553
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB1047_C908r3.read_count.tsv.gz",
+  "compressed": 2572020,
+  "uncompressed": 2571625
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BB30HN_c908R3.read_count.tsv.gz",
+  "compressed": 2589384,
+  "uncompressed": 2588989
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKN_c905R6.read_count.tsv.gz",
+  "compressed": 2580640,
+  "uncompressed": 2580245
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PECAPJ_c908R3.read_count.tsv.gz",
+  "compressed": 2581386,
+  "uncompressed": 2580991
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OACM51_c907R1.read_count.tsv.gz",
+  "compressed": 2569665,
+  "uncompressed": 2569270
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3118_c908R2.read_count.tsv.gz",
+  "compressed": 2577035,
+  "uncompressed": 2576640
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U893_c903R2.read_count.tsv.gz",
+  "compressed": 2438096,
+  "uncompressed": 2437721
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML3_c905R2.read_count.tsv.gz",
+  "compressed": 2592608,
+  "uncompressed": 2592213
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/M14_c902R2.read_count.tsv.gz",
+  "compressed": 2434308,
+  "uncompressed": 2433933
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI15A_c908R3.read_count.tsv.gz",
+  "compressed": 2584579,
+  "uncompressed": 2584184
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE21_C907R3.read_count.tsv.gz",
+  "compressed": 2575438,
+  "uncompressed": 2575043
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR8_c905R3.read_count.tsv.gz",
+  "compressed": 2579599,
+  "uncompressed": 2579204
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC1_c903R5.read_count.tsv.gz",
+  "compressed": 2449306,
+  "uncompressed": 2448931
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LNCaPC_c908R3.read_count.tsv.gz",
+  "compressed": 2593698,
+  "uncompressed": 2593303
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PECAPJ_c908R1.read_count.tsv.gz",
+  "compressed": 2573209,
+  "uncompressed": 2572814
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2405_c906R1.read_count.tsv.gz",
+  "compressed": 2566007,
+  "uncompressed": 2565612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU022_c907R3.read_count.tsv.gz",
+  "compressed": 2576155,
+  "uncompressed": 2575760
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYAE1_c907R1.read_count.tsv.gz",
+  "compressed": 2579959,
+  "uncompressed": 2579564
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW48_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2470475,
+  "uncompressed": 2470095
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c903R2.read_count.tsv.gz",
+  "compressed": 2450701,
+  "uncompressed": 2450326
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_c902R5.read_count.tsv.gz",
+  "compressed": 2450788,
+  "uncompressed": 2450413
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OSC19_c908R6.read_count.tsv.gz",
+  "compressed": 2584202,
+  "uncompressed": 2583807
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCF7_c903R1.read_count.tsv.gz",
+  "compressed": 2454668,
+  "uncompressed": 2454293
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2023_c906R1.read_count.tsv.gz",
+  "compressed": 2575441,
+  "uncompressed": 2575046
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB17_c906R3.read_count.tsv.gz",
+  "compressed": 2583254,
+  "uncompressed": 2582859
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KLE_c908R2.read_count.tsv.gz",
+  "compressed": 2592898,
+  "uncompressed": 2592503
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R6D21.read_count.tsv.gz",
+  "compressed": 2581086,
+  "uncompressed": 2580691
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW11_c907R3.read_count.tsv.gz",
+  "compressed": 2582841,
+  "uncompressed": 2582446
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R8226_c907R2.read_count.tsv.gz",
+  "compressed": 2582589,
+  "uncompressed": 2582194
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV420_c905R2.read_count.tsv.gz",
+  "compressed": 2583166,
+  "uncompressed": 2582771
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAPAN1_c904R2.read_count.tsv.gz",
+  "compressed": 2438621,
+  "uncompressed": 2438246
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW7_c907R2.read_count.tsv.gz",
+  "compressed": 2581483,
+  "uncompressed": 2581088
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVMIU_c905R3.read_count.tsv.gz",
+  "compressed": 2581947,
+  "uncompressed": 2581552
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOK_c908R1.read_count.tsv.gz",
+  "compressed": 2577172,
+  "uncompressed": 2576777
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO1_c905R3.read_count.tsv.gz",
+  "compressed": 2581000,
+  "uncompressed": 2580605
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE296_c908R2.read_count.tsv.gz",
+  "compressed": 2577050,
+  "uncompressed": 2576655
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO1_c905R1.read_count.tsv.gz",
+  "compressed": 2581123,
+  "uncompressed": 2580728
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU022_c907R2.read_count.tsv.gz",
+  "compressed": 2580841,
+  "uncompressed": 2580446
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R9_50.read_count.tsv.gz",
+  "compressed": 2587722,
+  "uncompressed": 2587327
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT116_C902R2_P1D22.read_count.tsv.gz",
+  "compressed": 2437702,
+  "uncompressed": 2437327
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H630_c902R4.read_count.tsv.gz",
+  "compressed": 2449090,
+  "uncompressed": 2448715
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Ca922_c907R3.read_count.tsv.gz",
+  "compressed": 2580201,
+  "uncompressed": 2579806
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LY19_c907R2.read_count.tsv.gz",
+  "compressed": 2583428,
+  "uncompressed": 2583033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1755_c906R2.read_count.tsv.gz",
+  "compressed": 2585283,
+  "uncompressed": 2584888
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MIAPac_c904R2.read_count.tsv.gz",
+  "compressed": 2442650,
+  "uncompressed": 2442275
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c904R3.read_count.tsv.gz",
+  "compressed": 2443199,
+  "uncompressed": 2442824
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R3_F1D24.read_count.tsv.gz",
+  "compressed": 2450860,
+  "uncompressed": 2450485
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC5_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2437004,
+  "uncompressed": 2436629
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LNZTA3_c907R1.read_count.tsv.gz",
+  "compressed": 2582526,
+  "uncompressed": 2582131
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW22_c907R3.read_count.tsv.gz",
+  "compressed": 2576989,
+  "uncompressed": 2576594
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE5_c908R3.read_count.tsv.gz",
+  "compressed": 2590887,
+  "uncompressed": 2590492
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BB30HN_c908R1.read_count.tsv.gz",
+  "compressed": 2568121,
+  "uncompressed": 2567726
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LK2_c906R2.read_count.tsv.gz",
+  "compressed": 2583949,
+  "uncompressed": 2583554
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PL18_c904R2.read_count.tsv.gz",
+  "compressed": 2447072,
+  "uncompressed": 2446697
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU99A_c906R5.read_count.tsv.gz",
+  "compressed": 2580659,
+  "uncompressed": 2580264
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1915_c906R3.read_count.tsv.gz",
+  "compressed": 2592199,
+  "uncompressed": 2591804
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DKMG_c907R2.read_count.tsv.gz",
+  "compressed": 2591084,
+  "uncompressed": 2590689
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c906R3.read_count.tsv.gz",
+  "compressed": 2587544,
+  "uncompressed": 2587149
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H226_c90R1.read_count.tsv.gz",
+  "compressed": 2592194,
+  "uncompressed": 2591799
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL33_c907R1.read_count.tsv.gz",
+  "compressed": 2579365,
+  "uncompressed": 2578970
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW1_c907R2.read_count.tsv.gz",
+  "compressed": 2581977,
+  "uncompressed": 2581582
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU011_c907R2.read_count.tsv.gz",
+  "compressed": 2582089,
+  "uncompressed": 2581694
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL51_c903R2.read_count.tsv.gz",
+  "compressed": 2462524,
+  "uncompressed": 2462149
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TGBC11_c908R2.read_count.tsv.gz",
+  "compressed": 2591399,
+  "uncompressed": 2591004
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL27_c907R3.read_count.tsv.gz",
+  "compressed": 2567179,
+  "uncompressed": 2566784
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R2_100.read_count.tsv.gz",
+  "compressed": 2580485,
+  "uncompressed": 2580090
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU1_c908R2.read_count.tsv.gz",
+  "compressed": 2593688,
+  "uncompressed": 2593293
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1869_c906R3.read_count.tsv.gz",
+  "compressed": 2579674,
+  "uncompressed": 2579279
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OAW42_c905R3.read_count.tsv.gz",
+  "compressed": 2577623,
+  "uncompressed": 2577228
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/42MGBA_c907R1.read_count.tsv.gz",
+  "compressed": 2598352,
+  "uncompressed": 2597952
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_P1D22.read_count.tsv.gz",
+  "compressed": 2450249,
+  "uncompressed": 2449874
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOV13_c905R2.read_count.tsv.gz",
+  "compressed": 2584941,
+  "uncompressed": 2584546
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES6_c907R1.read_count.tsv.gz",
+  "compressed": 2579991,
+  "uncompressed": 2579596
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MDST8_c903R3.read_count.tsv.gz",
+  "compressed": 2438751,
+  "uncompressed": 2438376
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MDAMB2_c903R3.read_count.tsv.gz",
+  "compressed": 2452685,
+  "uncompressed": 2452310
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCCFG2_C908R2.read_count.tsv.gz",
+  "compressed": 2582563,
+  "uncompressed": 2582168
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AGS_c908R1.read_count.tsv.gz",
+  "compressed": 2594119,
+  "uncompressed": 2593724
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE14_c907R3.read_count.tsv.gz",
+  "compressed": 2571860,
+  "uncompressed": 2571465
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Detroi_c907R2.read_count.tsv.gz",
+  "compressed": 2569298,
+  "uncompressed": 2568903
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IM9_c907R2.read_count.tsv.gz",
+  "compressed": 2584278,
+  "uncompressed": 2583883
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OACM51_c907R3.read_count.tsv.gz",
+  "compressed": 2562794,
+  "uncompressed": 2562399
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL72_c908R3.read_count.tsv.gz",
+  "compressed": 2579712,
+  "uncompressed": 2579317
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC3_c908R3.read_count.tsv.gz",
+  "compressed": 2583236,
+  "uncompressed": 2582841
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCD_c906R2.read_count.tsv.gz",
+  "compressed": 2584358,
+  "uncompressed": 2583963
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C90L15.read_count.tsv.gz",
+  "compressed": 2414403,
+  "uncompressed": 2414033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R2_F1D21.read_count.tsv.gz",
+  "compressed": 2441534,
+  "uncompressed": 2441159
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC142_c904R5.read_count.tsv.gz",
+  "compressed": 2437469,
+  "uncompressed": 2437094
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HEC1_c907R1.read_count.tsv.gz",
+  "compressed": 2584163,
+  "uncompressed": 2583768
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE5_c908R1.read_count.tsv.gz",
+  "compressed": 2582168,
+  "uncompressed": 2581773
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OPM2_c907R5.read_count.tsv.gz",
+  "compressed": 2586106,
+  "uncompressed": 2585711
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_c902R3D14.read_count.tsv.gz",
+  "compressed": 2450161,
+  "uncompressed": 2449786
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RPE1_c905R1.read_count.tsv.gz",
+  "compressed": 2605898,
+  "uncompressed": 2605498
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC2B_c903R1.read_count.tsv.gz",
+  "compressed": 2443403,
+  "uncompressed": 2443028
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RL952_c908R3.read_count.tsv.gz",
+  "compressed": 2581189,
+  "uncompressed": 2580794
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U251_c907R2.read_count.tsv.gz",
+  "compressed": 2589422,
+  "uncompressed": 2589027
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR3_c905R2.read_count.tsv.gz",
+  "compressed": 2580574,
+  "uncompressed": 2580179
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H520_c906R2.read_count.tsv.gz",
+  "compressed": 2589500,
+  "uncompressed": 2589105
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/C2BBe1_c903R3.read_count.tsv.gz",
+  "compressed": 2446909,
+  "uncompressed": 2446534
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCSq1_c906R2.read_count.tsv.gz",
+  "compressed": 2583601,
+  "uncompressed": 2583206
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC114_c904R1.read_count.tsv.gz",
+  "compressed": 2432722,
+  "uncompressed": 2432347
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB7_c906R3.read_count.tsv.gz",
+  "compressed": 2581831,
+  "uncompressed": 2581436
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVMIU_c905R2.read_count.tsv.gz",
+  "compressed": 2578337,
+  "uncompressed": 2577942
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES5_c907R2.read_count.tsv.gz",
+  "compressed": 2586156,
+  "uncompressed": 2585761
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D502MG_c907R2.read_count.tsv.gz",
+  "compressed": 2588882,
+  "uncompressed": 2588487
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H630_c902R6.read_count.tsv.gz",
+  "compressed": 2446845,
+  "uncompressed": 2446470
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R5.read_count.tsv.gz",
+  "compressed": 2588087,
+  "uncompressed": 2587692
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE33_C907R3.read_count.tsv.gz",
+  "compressed": 2585370,
+  "uncompressed": 2584975
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R5.read_count.tsv.gz",
+  "compressed": 2604924,
+  "uncompressed": 2604524
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCD_c906R1.read_count.tsv.gz",
+  "compressed": 2577728,
+  "uncompressed": 2577333
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO51_c907R1.read_count.tsv.gz",
+  "compressed": 2573251,
+  "uncompressed": 2572856
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2437088,
+  "uncompressed": 2436713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO4_c905R1.read_count.tsv.gz",
+  "compressed": 2577485,
+  "uncompressed": 2577090
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKGT4_c907R1.read_count.tsv.gz",
+  "compressed": 2562939,
+  "uncompressed": 2562544
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C90L30.read_count.tsv.gz",
+  "compressed": 2416354,
+  "uncompressed": 2415984
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1568_c906R1.read_count.tsv.gz",
+  "compressed": 2611113,
+  "uncompressed": 2610713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R3_F1D21.read_count.tsv.gz",
+  "compressed": 2420442,
+  "uncompressed": 2420072
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES5_c907R1.read_count.tsv.gz",
+  "compressed": 2583130,
+  "uncompressed": 2582735
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU99A_c906R4.read_count.tsv.gz",
+  "compressed": 2579010,
+  "uncompressed": 2578615
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES8_c903R1.read_count.tsv.gz",
+  "compressed": 2450779,
+  "uncompressed": 2450404
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC114_c904R3.read_count.tsv.gz",
+  "compressed": 2434268,
+  "uncompressed": 2433893
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R9.read_count.tsv.gz",
+  "compressed": 2581442,
+  "uncompressed": 2581047
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC78_c906R3.read_count.tsv.gz",
+  "compressed": 2585196,
+  "uncompressed": 2584801
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RL952_c908R1.read_count.tsv.gz",
+  "compressed": 2578792,
+  "uncompressed": 2578397
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI30_c908R2.read_count.tsv.gz",
+  "compressed": 2570067,
+  "uncompressed": 2569672
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NH12_c906R1.read_count.tsv.gz",
+  "compressed": 2581111,
+  "uncompressed": 2580716
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVISE_c905R2.read_count.tsv.gz",
+  "compressed": 2586114,
+  "uncompressed": 2585719
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAS1_c907R1.read_count.tsv.gz",
+  "compressed": 2589869,
+  "uncompressed": 2589474
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF126_c907R1.read_count.tsv.gz",
+  "compressed": 2591845,
+  "uncompressed": 2591450
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE9_c907R3.read_count.tsv.gz",
+  "compressed": 2595178,
+  "uncompressed": 2594783
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI30_c908R3.read_count.tsv.gz",
+  "compressed": 2567469,
+  "uncompressed": 2567074
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DBTRG0_c907R1.read_count.tsv.gz",
+  "compressed": 2580347,
+  "uncompressed": 2579952
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hey_c905R3.read_count.tsv.gz",
+  "compressed": 2580169,
+  "uncompressed": 2579774
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC114_c904R2.read_count.tsv.gz",
+  "compressed": 2431577,
+  "uncompressed": 2431202
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES4_c907R2.read_count.tsv.gz",
+  "compressed": 2589688,
+  "uncompressed": 2589293
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IGROV1_c905R3.read_count.tsv.gz",
+  "compressed": 2588908,
+  "uncompressed": 2588513
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS1034_c903R2.read_count.tsv.gz",
+  "compressed": 2448458,
+  "uncompressed": 2448083
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCE4_c908R1.read_count.tsv.gz",
+  "compressed": 2606770,
+  "uncompressed": 2606370
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESS1_C908R2.read_count.tsv.gz",
+  "compressed": 2591465,
+  "uncompressed": 2591070
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN28_c907R3.read_count.tsv.gz",
+  "compressed": 2582248,
+  "uncompressed": 2581853
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TGBC11_c908R3.read_count.tsv.gz",
+  "compressed": 2594704,
+  "uncompressed": 2594309
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO26_c907R2.read_count.tsv.gz",
+  "compressed": 2591564,
+  "uncompressed": 2591169
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MEL2_C908R2.read_count.tsv.gz",
+  "compressed": 2590941,
+  "uncompressed": 2590546
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES6_c907R3.read_count.tsv.gz",
+  "compressed": 2581067,
+  "uncompressed": 2580672
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL11_c903R2.read_count.tsv.gz",
+  "compressed": 2455848,
+  "uncompressed": 2455473
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP4_c904R3.read_count.tsv.gz",
+  "compressed": 2435652,
+  "uncompressed": 2435277
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_c902R4.read_count.tsv.gz",
+  "compressed": 2451752,
+  "uncompressed": 2451377
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO680N_c907R1.read_count.tsv.gz",
+  "compressed": 2576144,
+  "uncompressed": 2575749
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A549_c906R3.read_count.tsv.gz",
+  "compressed": 2579804,
+  "uncompressed": 2579409
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR78_c907R2.read_count.tsv.gz",
+  "compressed": 2597457,
+  "uncompressed": 2597057
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO824_c903R1.read_count.tsv.gz",
+  "compressed": 2440826,
+  "uncompressed": 2440451
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H650_c906R2.read_count.tsv.gz",
+  "compressed": 2582290,
+  "uncompressed": 2581895
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP3_c904R2.read_count.tsv.gz",
+  "compressed": 2447280,
+  "uncompressed": 2446905
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R5.read_count.tsv.gz",
+  "compressed": 2449598,
+  "uncompressed": 2449223
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JIMT1_c903R3.read_count.tsv.gz",
+  "compressed": 2462769,
+  "uncompressed": 2462394
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OAW42_c905R2.read_count.tsv.gz",
+  "compressed": 2576467,
+  "uncompressed": 2576072
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R4.read_count.tsv.gz",
+  "compressed": 2462288,
+  "uncompressed": 2461913
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GC1B_C908R3.read_count.tsv.gz",
+  "compressed": 2596188,
+  "uncompressed": 2595788
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KNS42_c907R2.read_count.tsv.gz",
+  "compressed": 2587585,
+  "uncompressed": 2587190
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO824_c903R2.read_count.tsv.gz",
+  "compressed": 2441962,
+  "uncompressed": 2441587
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR5_c905R1.read_count.tsv.gz",
+  "compressed": 2579341,
+  "uncompressed": 2578946
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB69_c906R2.read_count.tsv.gz",
+  "compressed": 2588458,
+  "uncompressed": 2588063
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R1_F1D24.read_count.tsv.gz",
+  "compressed": 2456010,
+  "uncompressed": 2455635
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU8_c907R2.read_count.tsv.gz",
+  "compressed": 2586585,
+  "uncompressed": 2586190
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS2_c905R3.read_count.tsv.gz",
+  "compressed": 2587604,
+  "uncompressed": 2587209
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYAE1_c907R2.read_count.tsv.gz",
+  "compressed": 2570971,
+  "uncompressed": 2570576
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL40_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2442134,
+  "uncompressed": 2441759
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR4_c905R3.read_count.tsv.gz",
+  "compressed": 2582792,
+  "uncompressed": 2582397
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R1.read_count.tsv.gz",
+  "compressed": 2435041,
+  "uncompressed": 2434666
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT116_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2432523,
+  "uncompressed": 2432148
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB1047_C908r1.read_count.tsv.gz",
+  "compressed": 2584689,
+  "uncompressed": 2584294
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF126_c907R2.read_count.tsv.gz",
+  "compressed": 2592694,
+  "uncompressed": 2592299
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW626_c905R1.read_count.tsv.gz",
+  "compressed": 2579233,
+  "uncompressed": 2578838
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FLO1_c907R3.read_count.tsv.gz",
+  "compressed": 2581459,
+  "uncompressed": 2581064
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF295_c907R2.read_count.tsv.gz",
+  "compressed": 2588758,
+  "uncompressed": 2588363
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN1_c908R5.read_count.tsv.gz",
+  "compressed": 2593412,
+  "uncompressed": 2593017
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP2_c904R3.read_count.tsv.gz",
+  "compressed": 2429208,
+  "uncompressed": 2428838
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IM95_c908R3.read_count.tsv.gz",
+  "compressed": 2569083,
+  "uncompressed": 2568688
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FADU_c908R3.read_count.tsv.gz",
+  "compressed": 2575052,
+  "uncompressed": 2574657
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1944_c906R2.read_count.tsv.gz",
+  "compressed": 2588303,
+  "uncompressed": 2587908
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2023_c906R3.read_count.tsv.gz",
+  "compressed": 2579186,
+  "uncompressed": 2578791
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO27_c905R3.read_count.tsv.gz",
+  "compressed": 2576559,
+  "uncompressed": 2576164
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF295_c907R1.read_count.tsv.gz",
+  "compressed": 2585839,
+  "uncompressed": 2585444
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DU145_c908R1.read_count.tsv.gz",
+  "compressed": 2591043,
+  "uncompressed": 2590648
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC193_c903R2.read_count.tsv.gz",
+  "compressed": 2433356,
+  "uncompressed": 2432981
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE52_c908R2.read_count.tsv.gz",
+  "compressed": 2582977,
+  "uncompressed": 2582582
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCIXC_c906R1.read_count.tsv.gz",
+  "compressed": 2586559,
+  "uncompressed": 2586164
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R7_50.read_count.tsv.gz",
+  "compressed": 2581403,
+  "uncompressed": 2581008
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/231328_c908R3.read_count.tsv.gz",
+  "compressed": 2592906,
+  "uncompressed": 2592511
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TMK1_c908R1.read_count.tsv.gz",
+  "compressed": 2568898,
+  "uncompressed": 2568503
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FLO1_c907R1.read_count.tsv.gz",
+  "compressed": 2579812,
+  "uncompressed": 2579417
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MOGGUV_c907R2.read_count.tsv.gz",
+  "compressed": 2584056,
+  "uncompressed": 2583661
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R11.read_count.tsv.gz",
+  "compressed": 2595566,
+  "uncompressed": 2595171
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB17_c906R1.read_count.tsv.gz",
+  "compressed": 2588236,
+  "uncompressed": 2587841
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO205_c903R2.read_count.tsv.gz",
+  "compressed": 2450721,
+  "uncompressed": 2450346
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/769P_c908R2.read_count.tsv.gz",
+  "compressed": 2584964,
+  "uncompressed": 2584569
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P1005_c904R3.read_count.tsv.gz",
+  "compressed": 2435403,
+  "uncompressed": 2435028
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE22_c908R1.read_count.tsv.gz",
+  "compressed": 2574855,
+  "uncompressed": 2574460
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO678_c903R6.read_count.tsv.gz",
+  "compressed": 2450544,
+  "uncompressed": 2450169
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/no11_c907R1.read_count.tsv.gz",
+  "compressed": 2592269,
+  "uncompressed": 2591874
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR8_c905R2.read_count.tsv.gz",
+  "compressed": 2580902,
+  "uncompressed": 2580507
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS1034_c903R3.read_count.tsv.gz",
+  "compressed": 2447668,
+  "uncompressed": 2447293
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW948_c903R1.read_count.tsv.gz",
+  "compressed": 2436090,
+  "uncompressed": 2435715
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB453_c903R3.read_count.tsv.gz",
+  "compressed": 2413387,
+  "uncompressed": 2413017
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BB49HN_c908R3.read_count.tsv.gz",
+  "compressed": 2593755,
+  "uncompressed": 2593360
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU011_c907R3.read_count.tsv.gz",
+  "compressed": 2580077,
+  "uncompressed": 2579682
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2058_c903R1.read_count.tsv.gz",
+  "compressed": 2447434,
+  "uncompressed": 2447059
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF268_c907R2.read_count.tsv.gz",
+  "compressed": 2581025,
+  "uncompressed": 2580630
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R2_F1D24.read_count.tsv.gz",
+  "compressed": 2444141,
+  "uncompressed": 2443766
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Becker_c907R2.read_count.tsv.gz",
+  "compressed": 2576892,
+  "uncompressed": 2576497
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_c902R4.read_count.tsv.gz",
+  "compressed": 2452207,
+  "uncompressed": 2451832
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LOUNH9_c906R3.read_count.tsv.gz",
+  "compressed": 2575640,
+  "uncompressed": 2575245
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL11_c903R3.read_count.tsv.gz",
+  "compressed": 2442993,
+  "uncompressed": 2442618
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB17_c906R2.read_count.tsv.gz",
+  "compressed": 2586619,
+  "uncompressed": 2586224
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO320H_c903R3.read_count.tsv.gz",
+  "compressed": 2447421,
+  "uncompressed": 2447046
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R3.read_count.tsv.gz",
+  "compressed": 2464134,
+  "uncompressed": 2463759
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EVSAT_c903R2.read_count.tsv.gz",
+  "compressed": 2454060,
+  "uncompressed": 2453685
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE14_c907R2.read_count.tsv.gz",
+  "compressed": 2585151,
+  "uncompressed": 2584756
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KLE_c908R1.read_count.tsv.gz",
+  "compressed": 2594884,
+  "uncompressed": 2594489
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCD_c906R3.read_count.tsv.gz",
+  "compressed": 2614566,
+  "uncompressed": 2614166
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC9_c908R1.read_count.tsv.gz",
+  "compressed": 2585776,
+  "uncompressed": 2585381
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO205_c903R1.read_count.tsv.gz",
+  "compressed": 2450414,
+  "uncompressed": 2450039
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H358_c906R3.read_count.tsv.gz",
+  "compressed": 2587087,
+  "uncompressed": 2586692
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_F1D18.read_count.tsv.gz",
+  "compressed": 2432837,
+  "uncompressed": 2432462
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs746T_c908R2.read_count.tsv.gz",
+  "compressed": 2591841,
+  "uncompressed": 2591446
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R2.read_count.tsv.gz",
+  "compressed": 2441527,
+  "uncompressed": 2441152
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC78_c906R4.read_count.tsv.gz",
+  "compressed": 2585143,
+  "uncompressed": 2584748
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI15A_c908R2.read_count.tsv.gz",
+  "compressed": 2576933,
+  "uncompressed": 2576538
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1990_c904R1.read_count.tsv.gz",
+  "compressed": 2435767,
+  "uncompressed": 2435392
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI38_c908R3.read_count.tsv.gz",
+  "compressed": 2589544,
+  "uncompressed": 2589149
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GIMEN_c906R2.read_count.tsv.gz",
+  "compressed": 2580589,
+  "uncompressed": 2580194
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF539_c907R1.read_count.tsv.gz",
+  "compressed": 2599063,
+  "uncompressed": 2598663
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC39_c908R3.read_count.tsv.gz",
+  "compressed": 2569381,
+  "uncompressed": 2568986
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EVSAT_c903R3.read_count.tsv.gz",
+  "compressed": 2433412,
+  "uncompressed": 2433037
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN28_c907R2.read_count.tsv.gz",
+  "compressed": 2604461,
+  "uncompressed": 2604061
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GMS10_c907R2.read_count.tsv.gz",
+  "compressed": 2560395,
+  "uncompressed": 2560005
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE21_C907R1.read_count.tsv.gz",
+  "compressed": 2572371,
+  "uncompressed": 2571976
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO1_c905R2.read_count.tsv.gz",
+  "compressed": 2585467,
+  "uncompressed": 2585072
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV90_c905R3.read_count.tsv.gz",
+  "compressed": 2588358,
+  "uncompressed": 2587963
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS4_c905R1.read_count.tsv.gz",
+  "compressed": 2583702,
+  "uncompressed": 2583307
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KURAMO_c905R1.read_count.tsv.gz",
+  "compressed": 2589956,
+  "uncompressed": 2589561
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2440521,
+  "uncompressed": 2440146
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R2_F1D14.read_count.tsv.gz",
+  "compressed": 2443804,
+  "uncompressed": 2443429
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ANC3A_c908R1.read_count.tsv.gz",
+  "compressed": 2580135,
+  "uncompressed": 2579740
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R2D21.read_count.tsv.gz",
+  "compressed": 2577427,
+  "uncompressed": 2577032
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KATOII_c908R3.read_count.tsv.gz",
+  "compressed": 2591009,
+  "uncompressed": 2590614
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3118_c908R3.read_count.tsv.gz",
+  "compressed": 2574181,
+  "uncompressed": 2573786
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2087_c906R3.read_count.tsv.gz",
+  "compressed": 2576128,
+  "uncompressed": 2575733
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL40_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2435708,
+  "uncompressed": 2435333
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS180_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2442481,
+  "uncompressed": 2442106
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2405_c906R2.read_count.tsv.gz",
+  "compressed": 2534579,
+  "uncompressed": 2534189
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU8686_c904R3.read_count.tsv.gz",
+  "compressed": 2434732,
+  "uncompressed": 2434357
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB415_c903R3.read_count.tsv.gz",
+  "compressed": 2433636,
+  "uncompressed": 2433261
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LXF289_c906R3.read_count.tsv.gz",
+  "compressed": 2592626,
+  "uncompressed": 2592231
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R2.read_count.tsv.gz",
+  "compressed": 2452943,
+  "uncompressed": 2452568
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP2_c904R1.read_count.tsv.gz",
+  "compressed": 2442311,
+  "uncompressed": 2441936
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2439378,
+  "uncompressed": 2439003
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DBTRG0_c907R2.read_count.tsv.gz",
+  "compressed": 2594124,
+  "uncompressed": 2593729
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C0L30B3.read_count.tsv.gz",
+  "compressed": 2443880,
+  "uncompressed": 2443505
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H23_c906R2.read_count.tsv.gz",
+  "compressed": 2582336,
+  "uncompressed": 2581941
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB5_c906R2.read_count.tsv.gz",
+  "compressed": 2585659,
+  "uncompressed": 2585264
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OCUBM_c903R3.read_count.tsv.gz",
+  "compressed": 2438293,
+  "uncompressed": 2437918
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1568_c906R3.read_count.tsv.gz",
+  "compressed": 2576318,
+  "uncompressed": 2575923
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNFI_c906R3.read_count.tsv.gz",
+  "compressed": 2605133,
+  "uncompressed": 2604733
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1755_c906R3.read_count.tsv.gz",
+  "compressed": 2580212,
+  "uncompressed": 2579817
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF126_c907R3.read_count.tsv.gz",
+  "compressed": 2590680,
+  "uncompressed": 2590285
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2439652,
+  "uncompressed": 2439277
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS4_c905R2.read_count.tsv.gz",
+  "compressed": 2592685,
+  "uncompressed": 2592290
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R2.read_count.tsv.gz",
+  "compressed": 2579510,
+  "uncompressed": 2579115
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1975_c906R4.read_count.tsv.gz",
+  "compressed": 2583353,
+  "uncompressed": 2582958
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP2_c904R2.read_count.tsv.gz",
+  "compressed": 2430982,
+  "uncompressed": 2430612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R12.read_count.tsv.gz",
+  "compressed": 2593883,
+  "uncompressed": 2593488
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNFI_c906R1.read_count.tsv.gz",
+  "compressed": 2576734,
+  "uncompressed": 2576339
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R10.read_count.tsv.gz",
+  "compressed": 2590028,
+  "uncompressed": 2589633
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RL952_c908R2.read_count.tsv.gz",
+  "compressed": 2583473,
+  "uncompressed": 2583078
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R2_P1D22.read_count.tsv.gz",
+  "compressed": 2441543,
+  "uncompressed": 2441168
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F5UG.read_count.tsv.gz",
+  "compressed": 2281609,
+  "uncompressed": 2281259
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAPAN1_c904R3.read_count.tsv.gz",
+  "compressed": 2438627,
+  "uncompressed": 2438252
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE51_c907R1.read_count.tsv.gz",
+  "compressed": 2579403,
+  "uncompressed": 2579008
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LY19_c907R1.read_count.tsv.gz",
+  "compressed": 2583676,
+  "uncompressed": 2583281
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FADU_c908R1.read_count.tsv.gz",
+  "compressed": 2575616,
+  "uncompressed": 2575221
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO26_c907R3.read_count.tsv.gz",
+  "compressed": 2608212,
+  "uncompressed": 2607812
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IGROV1_c905R2.read_count.tsv.gz",
+  "compressed": 2592379,
+  "uncompressed": 2591984
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/N87_c908R1.read_count.tsv.gz",
+  "compressed": 2583409,
+  "uncompressed": 2583014
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ISTMEL1_c904R3.read_count.tsv.gz",
+  "compressed": 2440619,
+  "uncompressed": 2440244
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R1D21.read_count.tsv.gz",
+  "compressed": 2581119,
+  "uncompressed": 2580724
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LNCaPC_c908R1.read_count.tsv.gz",
+  "compressed": 2592957,
+  "uncompressed": 2592562
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TMK1_c908R2.read_count.tsv.gz",
+  "compressed": 2567177,
+  "uncompressed": 2566782
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB436_c903R3.read_count.tsv.gz",
+  "compressed": 2449716,
+  "uncompressed": 2449341
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKMG_c907R2.read_count.tsv.gz",
+  "compressed": 2586552,
+  "uncompressed": 2586157
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC38_c903R2.read_count.tsv.gz",
+  "compressed": 2447948,
+  "uncompressed": 2447573
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR22_c908R3.read_count.tsv.gz",
+  "compressed": 2575106,
+  "uncompressed": 2574711
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2442769,
+  "uncompressed": 2442394
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R3.read_count.tsv.gz",
+  "compressed": 2579159,
+  "uncompressed": 2578764
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2449458,
+  "uncompressed": 2449083
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP3_c904R1.read_count.tsv.gz",
+  "compressed": 2444363,
+  "uncompressed": 2443988
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO51_c907R3.read_count.tsv.gz",
+  "compressed": 2594070,
+  "uncompressed": 2593675
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCSq1_c906R1.read_count.tsv.gz",
+  "compressed": 2592379,
+  "uncompressed": 2591984
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU8686_c904R1.read_count.tsv.gz",
+  "compressed": 2435073,
+  "uncompressed": 2434698
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H358_c906R2.read_count.tsv.gz",
+  "compressed": 2591069,
+  "uncompressed": 2590674
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MOGGUV_c907R1.read_count.tsv.gz",
+  "compressed": 2586649,
+  "uncompressed": 2586254
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R3.read_count.tsv.gz",
+  "compressed": 2591622,
+  "uncompressed": 2591227
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U251_c907R3.read_count.tsv.gz",
+  "compressed": 2585872,
+  "uncompressed": 2585477
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R4.read_count.tsv.gz",
+  "compressed": 2575653,
+  "uncompressed": 2575258
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1650_c906R1.read_count.tsv.gz",
+  "compressed": 2586130,
+  "uncompressed": 2585735
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/no10_c907R2.read_count.tsv.gz",
+  "compressed": 2589763,
+  "uncompressed": 2589368
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H520_c906R3.read_count.tsv.gz",
+  "compressed": 2588532,
+  "uncompressed": 2588137
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GAMG_c907R2.read_count.tsv.gz",
+  "compressed": 2582513,
+  "uncompressed": 2582118
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D247MG_c907R2.read_count.tsv.gz",
+  "compressed": 2592785,
+  "uncompressed": 2592390
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB1047_C908r2.read_count.tsv.gz",
+  "compressed": 2577652,
+  "uncompressed": 2577257
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KMS11_c907R2.read_count.tsv.gz",
+  "compressed": 2578072,
+  "uncompressed": 2577677
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PL18_c904R1.read_count.tsv.gz",
+  "compressed": 2439527,
+  "uncompressed": 2439152
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_c902R6.read_count.tsv.gz",
+  "compressed": 2457950,
+  "uncompressed": 2457575
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW837_c903R3.read_count.tsv.gz",
+  "compressed": 2468596,
+  "uncompressed": 2468216
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW626_c905R2.read_count.tsv.gz",
+  "compressed": 2581151,
+  "uncompressed": 2580756
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE70_c907R3.read_count.tsv.gz",
+  "compressed": 2581222,
+  "uncompressed": 2580827
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKMG_c907R1.read_count.tsv.gz",
+  "compressed": 2585836,
+  "uncompressed": 2585441
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW7_c907R1.read_count.tsv.gz",
+  "compressed": 2581144,
+  "uncompressed": 2580749
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/C2BBe1_c903R1.read_count.tsv.gz",
+  "compressed": 2447628,
+  "uncompressed": 2447253
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR5_c905R3.read_count.tsv.gz",
+  "compressed": 2581553,
+  "uncompressed": 2581158
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KATOII_c908R1.read_count.tsv.gz",
+  "compressed": 2590364,
+  "uncompressed": 2589969
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE10_c908R1.read_count.tsv.gz",
+  "compressed": 2580461,
+  "uncompressed": 2580066
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2417624,
+  "uncompressed": 2417254
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H322M_c906R2.read_count.tsv.gz",
+  "compressed": 2577716,
+  "uncompressed": 2577321
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AM38_c907R1.read_count.tsv.gz",
+  "compressed": 2589143,
+  "uncompressed": 2588748
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F4UG.read_count.tsv.gz",
+  "compressed": 2441536,
+  "uncompressed": 2441161
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB69_c906R1.read_count.tsv.gz",
+  "compressed": 2591456,
+  "uncompressed": 2591061
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MHHES1_c907R1.read_count.tsv.gz",
+  "compressed": 2587687,
+  "uncompressed": 2587292
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KS1_c907R2.read_count.tsv.gz",
+  "compressed": 2585913,
+  "uncompressed": 2585518
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BB30HN_c908R2.read_count.tsv.gz",
+  "compressed": 2581986,
+  "uncompressed": 2581591
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NBTU_c906R4.read_count.tsv.gz",
+  "compressed": 2575419,
+  "uncompressed": 2575024
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI38_c908R1.read_count.tsv.gz",
+  "compressed": 2582612,
+  "uncompressed": 2582217
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KELLY_c906R2.read_count.tsv.gz",
+  "compressed": 2584977,
+  "uncompressed": 2584582
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2442000,
+  "uncompressed": 2441625
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R2650_c908R2.read_count.tsv.gz",
+  "compressed": 2587428,
+  "uncompressed": 2587033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R8226_c907R3.read_count.tsv.gz",
+  "compressed": 2585657,
+  "uncompressed": 2585262
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU5_c907R3.read_count.tsv.gz",
+  "compressed": 2590257,
+  "uncompressed": 2589862
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F3UG.read_count.tsv.gz",
+  "compressed": 2444474,
+  "uncompressed": 2444099
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKN3_c908R1.read_count.tsv.gz",
+  "compressed": 2583630,
+  "uncompressed": 2583235
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU011_c907R1.read_count.tsv.gz",
+  "compressed": 2590555,
+  "uncompressed": 2590160
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SAS_c907R1.read_count.tsv.gz",
+  "compressed": 2578240,
+  "uncompressed": 2577845
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TGW_c906R2.read_count.tsv.gz",
+  "compressed": 2612734,
+  "uncompressed": 2612334
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS513_c903R1.read_count.tsv.gz",
+  "compressed": 2452602,
+  "uncompressed": 2452227
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs578T_c904R1.read_count.tsv.gz",
+  "compressed": 2441964,
+  "uncompressed": 2441589
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EPLC27_c906R1.read_count.tsv.gz",
+  "compressed": 2586667,
+  "uncompressed": 2586272
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R2.read_count.tsv.gz",
+  "compressed": 2456983,
+  "uncompressed": 2456608
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT116_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2430126,
+  "uncompressed": 2429756
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R3_100.read_count.tsv.gz",
+  "compressed": 2588702,
+  "uncompressed": 2588307
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/no11_c907R2.read_count.tsv.gz",
+  "compressed": 2572458,
+  "uncompressed": 2572063
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D502MG_c907R1.read_count.tsv.gz",
+  "compressed": 2582475,
+  "uncompressed": 2582080
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR78_c907R1.read_count.tsv.gz",
+  "compressed": 2575872,
+  "uncompressed": 2575477
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OC314_c905R1.read_count.tsv.gz",
+  "compressed": 2569916,
+  "uncompressed": 2569521
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R3_F1D18.read_count.tsv.gz",
+  "compressed": 2444826,
+  "uncompressed": 2444451
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU61_c903R2.read_count.tsv.gz",
+  "compressed": 2450238,
+  "uncompressed": 2449863
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R6.read_count.tsv.gz",
+  "compressed": 2437242,
+  "uncompressed": 2436867
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HPAFII_c904R1.read_count.tsv.gz",
+  "compressed": 2442494,
+  "uncompressed": 2442119
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BxPC3_c904R2.read_count.tsv.gz",
+  "compressed": 2442233,
+  "uncompressed": 2441858
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8988T_c904R2.read_count.tsv.gz",
+  "compressed": 2438473,
+  "uncompressed": 2438098
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNDZ_c906R1.read_count.tsv.gz",
+  "compressed": 2584619,
+  "uncompressed": 2584224
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R1_F1D18.read_count.tsv.gz",
+  "compressed": 2433067,
+  "uncompressed": 2432692
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2431871,
+  "uncompressed": 2431496
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs683_c907R2.read_count.tsv.gz",
+  "compressed": 2584219,
+  "uncompressed": 2583824
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R4D21.read_count.tsv.gz",
+  "compressed": 2583147,
+  "uncompressed": 2582752
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKMES1_c906R3.read_count.tsv.gz",
+  "compressed": 2587213,
+  "uncompressed": 2586818
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNB75_c907R1.read_count.tsv.gz",
+  "compressed": 2596616,
+  "uncompressed": 2596216
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0813_c904R3.read_count.tsv.gz",
+  "compressed": 2433093,
+  "uncompressed": 2432718
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KON_c908R3.read_count.tsv.gz",
+  "compressed": 2574459,
+  "uncompressed": 2574064
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU10_c907R3.read_count.tsv.gz",
+  "compressed": 2583396,
+  "uncompressed": 2583001
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKGT4_c907R2.read_count.tsv.gz",
+  "compressed": 2576246,
+  "uncompressed": 2575851
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hey_c905R1.read_count.tsv.gz",
+  "compressed": 2580402,
+  "uncompressed": 2580007
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB415_c903R1.read_count.tsv.gz",
+  "compressed": 2432697,
+  "uncompressed": 2432322
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NBTU_c906R6.read_count.tsv.gz",
+  "compressed": 2583748,
+  "uncompressed": 2583353
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS411N_c903R1.read_count.tsv.gz",
+  "compressed": 2448084,
+  "uncompressed": 2447709
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R4.read_count.tsv.gz",
+  "compressed": 2580468,
+  "uncompressed": 2580073
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PL4_c904R2.read_count.tsv.gz",
+  "compressed": 2438383,
+  "uncompressed": 2438008
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H716_c903R2.read_count.tsv.gz",
+  "compressed": 2439838,
+  "uncompressed": 2439463
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2440663,
+  "uncompressed": 2440288
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R3_P1D22.read_count.tsv.gz",
+  "compressed": 2429861,
+  "uncompressed": 2429491
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC4_c908R3.read_count.tsv.gz",
+  "compressed": 2575210,
+  "uncompressed": 2574815
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC180_c904R2.read_count.tsv.gz",
+  "compressed": 2437439,
+  "uncompressed": 2437064
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF539_c907R2.read_count.tsv.gz",
+  "compressed": 2588428,
+  "uncompressed": 2588033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DANG_c904R2.read_count.tsv.gz",
+  "compressed": 2437051,
+  "uncompressed": 2436676
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HO1u1_c908R1.read_count.tsv.gz",
+  "compressed": 2573720,
+  "uncompressed": 2573325
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2170_c906R3.read_count.tsv.gz",
+  "compressed": 2589653,
+  "uncompressed": 2589258
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1155_c906R3.read_count.tsv.gz",
+  "compressed": 2590086,
+  "uncompressed": 2589691
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A549_c906R2.read_count.tsv.gz",
+  "compressed": 2580603,
+  "uncompressed": 2580208
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCCFG2_C908R3.read_count.tsv.gz",
+  "compressed": 2578858,
+  "uncompressed": 2578463
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Caov4_c905R3.read_count.tsv.gz",
+  "compressed": 2582911,
+  "uncompressed": 2582516
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCIXC_c906R2.read_count.tsv.gz",
+  "compressed": 2583093,
+  "uncompressed": 2582698
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780A_c905R2.read_count.tsv.gz",
+  "compressed": 2595754,
+  "uncompressed": 2595359
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU10_c907R1.read_count.tsv.gz",
+  "compressed": 2587995,
+  "uncompressed": 2587600
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GAMG_c907R1.read_count.tsv.gz",
+  "compressed": 2575549,
+  "uncompressed": 2575154
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNDZ_c906R3.read_count.tsv.gz",
+  "compressed": 2569313,
+  "uncompressed": 2568918
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE51_c907R3.read_count.tsv.gz",
+  "compressed": 2587041,
+  "uncompressed": 2586646
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_F2C90L60.read_count.tsv.gz",
+  "compressed": 2446043,
+  "uncompressed": 2445668
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCF7_c903R3.read_count.tsv.gz",
+  "compressed": 2440068,
+  "uncompressed": 2439693
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LK2_c906R1.read_count.tsv.gz",
+  "compressed": 2586655,
+  "uncompressed": 2586260
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR3_c905R1.read_count.tsv.gz",
+  "compressed": 2580370,
+  "uncompressed": 2579975
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KNS42_c907R1.read_count.tsv.gz",
+  "compressed": 2569260,
+  "uncompressed": 2568865
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R4.read_count.tsv.gz",
+  "compressed": 2436493,
+  "uncompressed": 2436118
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_F2C0L30B3.read_count.tsv.gz",
+  "compressed": 2444872,
+  "uncompressed": 2444497
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV56_c905R2.read_count.tsv.gz",
+  "compressed": 2583663,
+  "uncompressed": 2583268
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC90_c907R1.read_count.tsv.gz",
+  "compressed": 2584878,
+  "uncompressed": 2584483
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R8226_c907R1.read_count.tsv.gz",
+  "compressed": 2584584,
+  "uncompressed": 2584189
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R2_F1D16.read_count.tsv.gz",
+  "compressed": 2445491,
+  "uncompressed": 2445116
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c902R5.read_count.tsv.gz",
+  "compressed": 2445466,
+  "uncompressed": 2445091
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/UWB12_c905R1.read_count.tsv.gz",
+  "compressed": 2580752,
+  "uncompressed": 2580357
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OAW42_c905R1.read_count.tsv.gz",
+  "compressed": 2578595,
+  "uncompressed": 2578200
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS180_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2440363,
+  "uncompressed": 2439988
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV420_c905R3.read_count.tsv.gz",
+  "compressed": 2585450,
+  "uncompressed": 2585055
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D542MG_c907R1.read_count.tsv.gz",
+  "compressed": 2580641,
+  "uncompressed": 2580246
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EBC1_c906R3.read_count.tsv.gz",
+  "compressed": 2592211,
+  "uncompressed": 2591816
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SJSA1_c908R3.read_count.tsv.gz",
+  "compressed": 2585392,
+  "uncompressed": 2584997
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LXF289_c906R2.read_count.tsv.gz",
+  "compressed": 2586308,
+  "uncompressed": 2585913
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F2C0L30B2.read_count.tsv.gz",
+  "compressed": 2436810,
+  "uncompressed": 2436435
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU8_c907R1.read_count.tsv.gz",
+  "compressed": 2571966,
+  "uncompressed": 2571571
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS4_c905R3.read_count.tsv.gz",
+  "compressed": 2585488,
+  "uncompressed": 2585093
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB453_c903R1.read_count.tsv.gz",
+  "compressed": 2423079,
+  "uncompressed": 2422709
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H650_c906R1.read_count.tsv.gz",
+  "compressed": 2582519,
+  "uncompressed": 2582124
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCLC97_c906R1.read_count.tsv.gz",
+  "compressed": 2582532,
+  "uncompressed": 2582137
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GIMEN_c906R3.read_count.tsv.gz",
+  "compressed": 2579269,
+  "uncompressed": 2578874
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL51_c903R1.read_count.tsv.gz",
+  "compressed": 2428839,
+  "uncompressed": 2428469
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U87MG_c907R1.read_count.tsv.gz",
+  "compressed": 2581632,
+  "uncompressed": 2581237
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AsPC1_c904R1.read_count.tsv.gz",
+  "compressed": 2437085,
+  "uncompressed": 2436710
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/8MGBA_c907R2.read_count.tsv.gz",
+  "compressed": 2577645,
+  "uncompressed": 2577250
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1573_c906R3.read_count.tsv.gz",
+  "compressed": 2588112,
+  "uncompressed": 2587717
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MEL2_C908R3.read_count.tsv.gz",
+  "compressed": 2573655,
+  "uncompressed": 2573260
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T84_c903R2.read_count.tsv.gz",
+  "compressed": 2450622,
+  "uncompressed": 2450247
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKPNDW_c907R3.read_count.tsv.gz",
+  "compressed": 2590114,
+  "uncompressed": 2589719
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE10_c908R2.read_count.tsv.gz",
+  "compressed": 2579234,
+  "uncompressed": 2578839
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU022_c907R1.read_count.tsv.gz",
+  "compressed": 2578716,
+  "uncompressed": 2578321
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC4_c907R1.read_count.tsv.gz",
+  "compressed": 2584678,
+  "uncompressed": 2584283
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P1005_c904R2.read_count.tsv.gz",
+  "compressed": 2439164,
+  "uncompressed": 2438789
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CHP212_c906R3.read_count.tsv.gz",
+  "compressed": 2579750,
+  "uncompressed": 2579355
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV21G_c905R1.read_count.tsv.gz",
+  "compressed": 2580343,
+  "uncompressed": 2579948
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R1.read_count.tsv.gz",
+  "compressed": 2452658,
+  "uncompressed": 2452283
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R3.read_count.tsv.gz",
+  "compressed": 2438624,
+  "uncompressed": 2438249
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NMCG1_c907R2.read_count.tsv.gz",
+  "compressed": 2584605,
+  "uncompressed": 2584210
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R2650_c908R3.read_count.tsv.gz",
+  "compressed": 2571447,
+  "uncompressed": 2571052
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB771H_c908R3.read_count.tsv.gz",
+  "compressed": 2588251,
+  "uncompressed": 2587856
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PL18_c904R3.read_count.tsv.gz",
+  "compressed": 2438468,
+  "uncompressed": 2438093
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCAS_c905R2.read_count.tsv.gz",
+  "compressed": 2588446,
+  "uncompressed": 2588051
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO320H_c903R2.read_count.tsv.gz",
+  "compressed": 2453595,
+  "uncompressed": 2453220
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW22_c907R1.read_count.tsv.gz",
+  "compressed": 2576894,
+  "uncompressed": 2576499
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN1_c908R6.read_count.tsv.gz",
+  "compressed": 2592909,
+  "uncompressed": 2592514
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PSN1_c904R1.read_count.tsv.gz",
+  "compressed": 2438684,
+  "uncompressed": 2438309
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780c_c905R1.read_count.tsv.gz",
+  "compressed": 2578476,
+  "uncompressed": 2578081
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT3_c904R3.read_count.tsv.gz",
+  "compressed": 2437088,
+  "uncompressed": 2436713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R3.read_count.tsv.gz",
+  "compressed": 2454420,
+  "uncompressed": 2454045
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB7_c906R1.read_count.tsv.gz",
+  "compressed": 2580335,
+  "uncompressed": 2579940
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GI1_c907R1.read_count.tsv.gz",
+  "compressed": 2584830,
+  "uncompressed": 2584435
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO205_c903R3.read_count.tsv.gz",
+  "compressed": 2447831,
+  "uncompressed": 2447456
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KON_c908R2.read_count.tsv.gz",
+  "compressed": 2577197,
+  "uncompressed": 2576802
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U251_c907R1.read_count.tsv.gz",
+  "compressed": 2588348,
+  "uncompressed": 2587953
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L363_c907R6.read_count.tsv.gz",
+  "compressed": 2565651,
+  "uncompressed": 2565256
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0327_c904R1.read_count.tsv.gz",
+  "compressed": 2437260,
+  "uncompressed": 2436885
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NUGC3_c907R1.read_count.tsv.gz",
+  "compressed": 2588509,
+  "uncompressed": 2588114
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1299_c906R2.read_count.tsv.gz",
+  "compressed": 2581863,
+  "uncompressed": 2581468
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H520_c906R1.read_count.tsv.gz",
+  "compressed": 2590891,
+  "uncompressed": 2590496
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R8.read_count.tsv.gz",
+  "compressed": 2581109,
+  "uncompressed": 2580714
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV112_c905R2.read_count.tsv.gz",
+  "compressed": 2585089,
+  "uncompressed": 2584694
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1944_c906R3.read_count.tsv.gz",
+  "compressed": 2588951,
+  "uncompressed": 2588556
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NH12_c906R3.read_count.tsv.gz",
+  "compressed": 2579926,
+  "uncompressed": 2579531
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV21G_c905R2.read_count.tsv.gz",
+  "compressed": 2581020,
+  "uncompressed": 2580625
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c908R6.read_count.tsv.gz",
+  "compressed": 2576585,
+  "uncompressed": 2576190
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE296_c908R1.read_count.tsv.gz",
+  "compressed": 2575833,
+  "uncompressed": 2575438
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F3UG.read_count.tsv.gz",
+  "compressed": 2443813,
+  "uncompressed": 2443438
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0327_c904R2.read_count.tsv.gz",
+  "compressed": 2441211,
+  "uncompressed": 2440836
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780c_c905R3.read_count.tsv.gz",
+  "compressed": 2578508,
+  "uncompressed": 2578113
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HARA_c906R2.read_count.tsv.gz",
+  "compressed": 2585516,
+  "uncompressed": 2585121
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFM223_c903R2.read_count.tsv.gz",
+  "compressed": 2430871,
+  "uncompressed": 2430501
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO27_c905R1.read_count.tsv.gz",
+  "compressed": 2584624,
+  "uncompressed": 2584229
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKN3_c908R3.read_count.tsv.gz",
+  "compressed": 2574388,
+  "uncompressed": 2573993
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L363_c907R5.read_count.tsv.gz",
+  "compressed": 2574818,
+  "uncompressed": 2574423
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NH12_c906R2.read_count.tsv.gz",
+  "compressed": 2579735,
+  "uncompressed": 2579340
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IGROV1_c905R1.read_count.tsv.gz",
+  "compressed": 2581354,
+  "uncompressed": 2580959
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL72_c908R2.read_count.tsv.gz",
+  "compressed": 2570597,
+  "uncompressed": 2570202
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T47d_c903R2.read_count.tsv.gz",
+  "compressed": 2428037,
+  "uncompressed": 2427667
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB361_c904R3.read_count.tsv.gz",
+  "compressed": 2432538,
+  "uncompressed": 2432163
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c902R4.read_count.tsv.gz",
+  "compressed": 2444898,
+  "uncompressed": 2444523
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE15_c907R2.read_count.tsv.gz",
+  "compressed": 2585515,
+  "uncompressed": 2585120
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c903R1.read_count.tsv.gz",
+  "compressed": 2445183,
+  "uncompressed": 2444808
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1915_c906R1.read_count.tsv.gz",
+  "compressed": 2580706,
+  "uncompressed": 2580311
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs578T_c904R2.read_count.tsv.gz",
+  "compressed": 2441750,
+  "uncompressed": 2441375
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C50L30.read_count.tsv.gz",
+  "compressed": 2441964,
+  "uncompressed": 2441589
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c902R1D22.read_count.tsv.gz",
+  "compressed": 2448179,
+  "uncompressed": 2447804
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOK_c908R3.read_count.tsv.gz",
+  "compressed": 2577241,
+  "uncompressed": 2576846
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNGM_c907R3.read_count.tsv.gz",
+  "compressed": 2576180,
+  "uncompressed": 2575785
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Lovo_c903R5.read_count.tsv.gz",
+  "compressed": 2454521,
+  "uncompressed": 2454146
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS513_c903R2.read_count.tsv.gz",
+  "compressed": 2451812,
+  "uncompressed": 2451437
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R1_F1D21.read_count.tsv.gz",
+  "compressed": 2445647,
+  "uncompressed": 2445272
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R1.read_count.tsv.gz",
+  "compressed": 2582499,
+  "uncompressed": 2582104
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW16_c907R1.read_count.tsv.gz",
+  "compressed": 2586077,
+  "uncompressed": 2585682
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CW2_c903R1.read_count.tsv.gz",
+  "compressed": 2450406,
+  "uncompressed": 2450031
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES2_c905R1.read_count.tsv.gz",
+  "compressed": 2584683,
+  "uncompressed": 2584288
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LN229_c907R2.read_count.tsv.gz",
+  "compressed": 2591109,
+  "uncompressed": 2590714
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE15_c907R1.read_count.tsv.gz",
+  "compressed": 2566451,
+  "uncompressed": 2566056
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHU029_c907R1.read_count.tsv.gz",
+  "compressed": 2569848,
+  "uncompressed": 2569453
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE4_c907R3.read_count.tsv.gz",
+  "compressed": 2563224,
+  "uncompressed": 2562829
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GMS10_c907R1.read_count.tsv.gz",
+  "compressed": 2589404,
+  "uncompressed": 2589009
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE33_C907R2.read_count.tsv.gz",
+  "compressed": 2574396,
+  "uncompressed": 2574001
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1088_c907R1.read_count.tsv.gz",
+  "compressed": 2576452,
+  "uncompressed": 2576057
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TMK1_c908R3.read_count.tsv.gz",
+  "compressed": 2568107,
+  "uncompressed": 2567712
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H630_c902R5.read_count.tsv.gz",
+  "compressed": 2445459,
+  "uncompressed": 2445084
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KINGS1_c907R2.read_count.tsv.gz",
+  "compressed": 2582936,
+  "uncompressed": 2582541
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Detroi_c907R1.read_count.tsv.gz",
+  "compressed": 2571103,
+  "uncompressed": 2570708
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU61_c903R1.read_count.tsv.gz",
+  "compressed": 2451168,
+  "uncompressed": 2450793
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780c_c905R2.read_count.tsv.gz",
+  "compressed": 2577093,
+  "uncompressed": 2576698
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYS_c906R3.read_count.tsv.gz",
+  "compressed": 2584109,
+  "uncompressed": 2583714
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RMGI_c905R2.read_count.tsv.gz",
+  "compressed": 2575656,
+  "uncompressed": 2575261
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR22_c908R2.read_count.tsv.gz",
+  "compressed": 2579433,
+  "uncompressed": 2579038
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c907R7.read_count.tsv.gz",
+  "compressed": 2582583,
+  "uncompressed": 2582188
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SJSA1_c908R2.read_count.tsv.gz",
+  "compressed": 2580483,
+  "uncompressed": 2580088
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW7_c907R3.read_count.tsv.gz",
+  "compressed": 2581602,
+  "uncompressed": 2581207
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KON_c908R1.read_count.tsv.gz",
+  "compressed": 2593924,
+  "uncompressed": 2593529
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE8_c908R2.read_count.tsv.gz",
+  "compressed": 2582183,
+  "uncompressed": 2581788
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC139_c903R2.read_count.tsv.gz",
+  "compressed": 2441862,
+  "uncompressed": 2441487
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC118_c903R2.read_count.tsv.gz",
+  "compressed": 2439024,
+  "uncompressed": 2438649
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOV13_c905R1.read_count.tsv.gz",
+  "compressed": 2592054,
+  "uncompressed": 2591659
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2441638,
+  "uncompressed": 2441263
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GP5d_c903R2.read_count.tsv.gz",
+  "compressed": 2449743,
+  "uncompressed": 2449368
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R6.read_count.tsv.gz",
+  "compressed": 2585336,
+  "uncompressed": 2584941
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1755_c906R1.read_count.tsv.gz",
+  "compressed": 2580396,
+  "uncompressed": 2580001
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB468_c903R1.read_count.tsv.gz",
+  "compressed": 2437467,
+  "uncompressed": 2437092
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU16_c908R3.read_count.tsv.gz",
+  "compressed": 2595173,
+  "uncompressed": 2594778
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI6A_c908R5.read_count.tsv.gz",
+  "compressed": 2573500,
+  "uncompressed": 2573105
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1975_c906R6.read_count.tsv.gz",
+  "compressed": 2578607,
+  "uncompressed": 2578212
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKMES1_c906R1.read_count.tsv.gz",
+  "compressed": 2587065,
+  "uncompressed": 2586670
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KNS62_c906R6.read_count.tsv.gz",
+  "compressed": 2581073,
+  "uncompressed": 2580678
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES4_c907R3.read_count.tsv.gz",
+  "compressed": 2592677,
+  "uncompressed": 2592282
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2087_c906R2.read_count.tsv.gz",
+  "compressed": 2576336,
+  "uncompressed": 2575941
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AsPC1_c904R2.read_count.tsv.gz",
+  "compressed": 2436878,
+  "uncompressed": 2436503
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS123_c903R1.read_count.tsv.gz",
+  "compressed": 2443267,
+  "uncompressed": 2442892
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HGC27_c908R1.read_count.tsv.gz",
+  "compressed": 2590626,
+  "uncompressed": 2590231
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HGC27_c908R3.read_count.tsv.gz",
+  "compressed": 2595797,
+  "uncompressed": 2595397
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0403_c904R3.read_count.tsv.gz",
+  "compressed": 2434938,
+  "uncompressed": 2434563
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AsPC1_c904R3.read_count.tsv.gz",
+  "compressed": 2438620,
+  "uncompressed": 2438245
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A172_c907R1.read_count.tsv.gz",
+  "compressed": 2581897,
+  "uncompressed": 2581502
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2405_c906R3.read_count.tsv.gz",
+  "compressed": 2575426,
+  "uncompressed": 2575031
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW11_c907R1.read_count.tsv.gz",
+  "compressed": 2576271,
+  "uncompressed": 2575876
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB361_c904R2.read_count.tsv.gz",
+  "compressed": 2432990,
+  "uncompressed": 2432615
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R1.read_count.tsv.gz",
+  "compressed": 2438402,
+  "uncompressed": 2438027
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PL4_c904R3.read_count.tsv.gz",
+  "compressed": 2443413,
+  "uncompressed": 2443038
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU16_c908R2.read_count.tsv.gz",
+  "compressed": 2596275,
+  "uncompressed": 2595875
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE4_c907R2.read_count.tsv.gz",
+  "compressed": 2570182,
+  "uncompressed": 2569787
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE41_C908R3.read_count.tsv.gz",
+  "compressed": 2576652,
+  "uncompressed": 2576257
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MHHES1_c907R2.read_count.tsv.gz",
+  "compressed": 2586170,
+  "uncompressed": 2585775
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HOP62_c906R2.read_count.tsv.gz",
+  "compressed": 2578923,
+  "uncompressed": 2578528
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN28_c907R1.read_count.tsv.gz",
+  "compressed": 2582592,
+  "uncompressed": 2582197
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1993_c906R2.read_count.tsv.gz",
+  "compressed": 2587637,
+  "uncompressed": 2587242
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC70_c903R1.read_count.tsv.gz",
+  "compressed": 2441345,
+  "uncompressed": 2440970
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_F1D24.read_count.tsv.gz",
+  "compressed": 2427602,
+  "uncompressed": 2427232
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC4_c908R2.read_count.tsv.gz",
+  "compressed": 2575030,
+  "uncompressed": 2574635
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C0L30B2.read_count.tsv.gz",
+  "compressed": 2439991,
+  "uncompressed": 2439616
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE15_c907R2.read_count.tsv.gz",
+  "compressed": 2580043,
+  "uncompressed": 2579648
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL33_c907R2.read_count.tsv.gz",
+  "compressed": 2606913,
+  "uncompressed": 2606513
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYN_c906R1.read_count.tsv.gz",
+  "compressed": 2582941,
+  "uncompressed": 2582546
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U87MG_c907R2.read_count.tsv.gz",
+  "compressed": 2567144,
+  "uncompressed": 2566749
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EGI1_c903R3.read_count.tsv.gz",
+  "compressed": 2435864,
+  "uncompressed": 2435489
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKPNDW_c907R2.read_count.tsv.gz",
+  "compressed": 2579938,
+  "uncompressed": 2579543
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C90L60.read_count.tsv.gz",
+  "compressed": 2443074,
+  "uncompressed": 2442699
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFM223_c903R3.read_count.tsv.gz",
+  "compressed": 2434284,
+  "uncompressed": 2433909
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNSH_c906R1.read_count.tsv.gz",
+  "compressed": 2563174,
+  "uncompressed": 2562779
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R1_P1D22.read_count.tsv.gz",
+  "compressed": 2437550,
+  "uncompressed": 2437175
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI4B_c908R1.read_count.tsv.gz",
+  "compressed": 2585554,
+  "uncompressed": 2585159
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R6.read_count.tsv.gz",
+  "compressed": 2452951,
+  "uncompressed": 2452576
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_F1D21.read_count.tsv.gz",
+  "compressed": 2424440,
+  "uncompressed": 2424070
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL72_c908R1.read_count.tsv.gz",
+  "compressed": 2581698,
+  "uncompressed": 2581303
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO824_c903R3.read_count.tsv.gz",
+  "compressed": 2442652,
+  "uncompressed": 2442277
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYS_c906R1.read_count.tsv.gz",
+  "compressed": 2583603,
+  "uncompressed": 2583208
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS123_c903R3.read_count.tsv.gz",
+  "compressed": 2440887,
+  "uncompressed": 2440512
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SJSA1_c908R1.read_count.tsv.gz",
+  "compressed": 2567519,
+  "uncompressed": 2567124
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1944_c906R1.read_count.tsv.gz",
+  "compressed": 2583339,
+  "uncompressed": 2582944
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU81_c903R3.read_count.tsv.gz",
+  "compressed": 2447491,
+  "uncompressed": 2447116
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE22_c908R3.read_count.tsv.gz",
+  "compressed": 2577514,
+  "uncompressed": 2577119
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC195_c903R2.read_count.tsv.gz",
+  "compressed": 2429508,
+  "uncompressed": 2429138
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P1005_c904R1.read_count.tsv.gz",
+  "compressed": 2441522,
+  "uncompressed": 2441147
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC4_c908R1.read_count.tsv.gz",
+  "compressed": 2578143,
+  "uncompressed": 2577748
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1993_c906R1.read_count.tsv.gz",
+  "compressed": 2585665,
+  "uncompressed": 2585270
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVK18_c905R3.read_count.tsv.gz",
+  "compressed": 2588697,
+  "uncompressed": 2588302
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/IM9_c907R3.read_count.tsv.gz",
+  "compressed": 2576305,
+  "uncompressed": 2575910
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EBC1_c906R2.read_count.tsv.gz",
+  "compressed": 2593936,
+  "uncompressed": 2593541
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW948_c903R2.read_count.tsv.gz",
+  "compressed": 2444088,
+  "uncompressed": 2443713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Becker_c907R1.read_count.tsv.gz",
+  "compressed": 2577192,
+  "uncompressed": 2576797
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A253_c908R1.read_count.tsv.gz",
+  "compressed": 2593332,
+  "uncompressed": 2592937
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC4_c907R3.read_count.tsv.gz",
+  "compressed": 2596996,
+  "uncompressed": 2596596
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PC14_c906R1.read_count.tsv.gz",
+  "compressed": 2578038,
+  "uncompressed": 2577643
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_c902R6.read_count.tsv.gz",
+  "compressed": 2456763,
+  "uncompressed": 2456388
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MM1S_c907R1.read_count.tsv.gz",
+  "compressed": 2574091,
+  "uncompressed": 2573696
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS2_c905R1.read_count.tsv.gz",
+  "compressed": 2577514,
+  "uncompressed": 2577119
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PC14_c906R2.read_count.tsv.gz",
+  "compressed": 2578720,
+  "uncompressed": 2578325
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC195_c903R3.read_count.tsv.gz",
+  "compressed": 2454825,
+  "uncompressed": 2454450
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R1_100.read_count.tsv.gz",
+  "compressed": 2577098,
+  "uncompressed": 2576703
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1993_c906R3.read_count.tsv.gz",
+  "compressed": 2584320,
+  "uncompressed": 2583925
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HOP62_c906R3.read_count.tsv.gz",
+  "compressed": 2582001,
+  "uncompressed": 2581606
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE45_c908R1.read_count.tsv.gz",
+  "compressed": 2573007,
+  "uncompressed": 2572612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D247MG_c907R1.read_count.tsv.gz",
+  "compressed": 2575927,
+  "uncompressed": 2575532
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AM38_c907R2.read_count.tsv.gz",
+  "compressed": 2589995,
+  "uncompressed": 2589600
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV90_c905R2.read_count.tsv.gz",
+  "compressed": 2579390,
+  "uncompressed": 2578995
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TT1_c908R1.read_count.tsv.gz",
+  "compressed": 2607379,
+  "uncompressed": 2606979
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE280_C908R2.read_count.tsv.gz",
+  "compressed": 2594844,
+  "uncompressed": 2594449
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE41_C908R2.read_count.tsv.gz",
+  "compressed": 2574953,
+  "uncompressed": 2574558
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW22_c907R2.read_count.tsv.gz",
+  "compressed": 2572949,
+  "uncompressed": 2572554
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R5D21.read_count.tsv.gz",
+  "compressed": 2578238,
+  "uncompressed": 2577843
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ECGI10_c907R3.read_count.tsv.gz",
+  "compressed": 2561548,
+  "uncompressed": 2561158
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO4_c905R2.read_count.tsv.gz",
+  "compressed": 2592780,
+  "uncompressed": 2592385
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R1_P1D22.read_count.tsv.gz",
+  "compressed": 2439923,
+  "uncompressed": 2439548
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PSN1_c904R3.read_count.tsv.gz",
+  "compressed": 2437862,
+  "uncompressed": 2437487
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR78_c907R3.read_count.tsv.gz",
+  "compressed": 2573173,
+  "uncompressed": 2572778
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/no10_c907R1.read_count.tsv.gz",
+  "compressed": 2581779,
+  "uncompressed": 2581384
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H226_c90R2.read_count.tsv.gz",
+  "compressed": 2588438,
+  "uncompressed": 2588043
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ISTMEL1_c904R2.read_count.tsv.gz",
+  "compressed": 2438088,
+  "uncompressed": 2437713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R7.read_count.tsv.gz",
+  "compressed": 2579428,
+  "uncompressed": 2579033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNSH_c906R3.read_count.tsv.gz",
+  "compressed": 2578198,
+  "uncompressed": 2577803
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KMS11_c907R1.read_count.tsv.gz",
+  "compressed": 2582814,
+  "uncompressed": 2582419
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1650_c906R3.read_count.tsv.gz",
+  "compressed": 2579889,
+  "uncompressed": 2579494
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAPAN1_c904R1.read_count.tsv.gz",
+  "compressed": 2440808,
+  "uncompressed": 2440433
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV420_c905R1.read_count.tsv.gz",
+  "compressed": 2585208,
+  "uncompressed": 2584813
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT55_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2440950,
+  "uncompressed": 2440575
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE8_c908R1.read_count.tsv.gz",
+  "compressed": 2583097,
+  "uncompressed": 2582702
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCM1_c903R1.read_count.tsv.gz",
+  "compressed": 2434661,
+  "uncompressed": 2434286
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP4_c904R1.read_count.tsv.gz",
+  "compressed": 2434678,
+  "uncompressed": 2434303
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU5_c907R1.read_count.tsv.gz",
+  "compressed": 2575530,
+  "uncompressed": 2575135
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KELLY_c906R3.read_count.tsv.gz",
+  "compressed": 2580517,
+  "uncompressed": 2580122
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/YH13_c907R2.read_count.tsv.gz",
+  "compressed": 2603566,
+  "uncompressed": 2603166
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR22_c908R1.read_count.tsv.gz",
+  "compressed": 2579779,
+  "uncompressed": 2579384
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L23_c906R3.read_count.tsv.gz",
+  "compressed": 2578659,
+  "uncompressed": 2578264
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T84_c903R1.read_count.tsv.gz",
+  "compressed": 2451675,
+  "uncompressed": 2451300
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LOUNH9_c906R2.read_count.tsv.gz",
+  "compressed": 2576164,
+  "uncompressed": 2575769
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCF7_c903R2.read_count.tsv.gz",
+  "compressed": 2417822,
+  "uncompressed": 2417452
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVMIU_c905R1.read_count.tsv.gz",
+  "compressed": 2579548,
+  "uncompressed": 2579153
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0203_c904R3.read_count.tsv.gz",
+  "compressed": 2440746,
+  "uncompressed": 2440371
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OC314_c905R2.read_count.tsv.gz",
+  "compressed": 2581880,
+  "uncompressed": 2581485
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R3_F1D18.read_count.tsv.gz",
+  "compressed": 2430259,
+  "uncompressed": 2429889
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE280_C908R1.read_count.tsv.gz",
+  "compressed": 2590669,
+  "uncompressed": 2590274
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC2B_c903R3.read_count.tsv.gz",
+  "compressed": 2463913,
+  "uncompressed": 2463538
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AU565_c903R3.read_count.tsv.gz",
+  "compressed": 2443557,
+  "uncompressed": 2443182
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MDAMB2_c903R1.read_count.tsv.gz",
+  "compressed": 2430314,
+  "uncompressed": 2429944
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES5_c907R3.read_count.tsv.gz",
+  "compressed": 2581747,
+  "uncompressed": 2581352
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GB1_c907R2.read_count.tsv.gz",
+  "compressed": 2588622,
+  "uncompressed": 2588227
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP1N_c904R2.read_count.tsv.gz",
+  "compressed": 2441567,
+  "uncompressed": 2441192
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c907R8.read_count.tsv.gz",
+  "compressed": 2581998,
+  "uncompressed": 2581603
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HARA_c906R3.read_count.tsv.gz",
+  "compressed": 2586180,
+  "uncompressed": 2585785
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c902R3D22.read_count.tsv.gz",
+  "compressed": 2450025,
+  "uncompressed": 2449650
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE52_c908R3.read_count.tsv.gz",
+  "compressed": 2602454,
+  "uncompressed": 2602054
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H630_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2449581,
+  "uncompressed": 2449206
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT55_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2444918,
+  "uncompressed": 2444543
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYAE1_c907R3.read_count.tsv.gz",
+  "compressed": 2574490,
+  "uncompressed": 2574095
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PECAPJ_c908R2.read_count.tsv.gz",
+  "compressed": 2575484,
+  "uncompressed": 2575089
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESS1_C908R3.read_count.tsv.gz",
+  "compressed": 2594832,
+  "uncompressed": 2594437
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCE4_c908R3.read_count.tsv.gz",
+  "compressed": 2576646,
+  "uncompressed": 2576251
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EBC1_c906R1.read_count.tsv.gz",
+  "compressed": 2597187,
+  "uncompressed": 2596787
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OPM2_c907R4.read_count.tsv.gz",
+  "compressed": 2583089,
+  "uncompressed": 2582694
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LOUNH9_c906R1.read_count.tsv.gz",
+  "compressed": 2580911,
+  "uncompressed": 2580516
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R7.read_count.tsv.gz",
+  "compressed": 2583380,
+  "uncompressed": 2582985
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BHY_c908R3.read_count.tsv.gz",
+  "compressed": 2585544,
+  "uncompressed": 2585149
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE296_c908R3.read_count.tsv.gz",
+  "compressed": 2577625,
+  "uncompressed": 2577230
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL27_c907R2.read_count.tsv.gz",
+  "compressed": 2593096,
+  "uncompressed": 2592701
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO51_c907R2.read_count.tsv.gz",
+  "compressed": 2575317,
+  "uncompressed": 2574922
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H23_c906R1.read_count.tsv.gz",
+  "compressed": 2580052,
+  "uncompressed": 2579657
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOV13_c905R3.read_count.tsv.gz",
+  "compressed": 2587529,
+  "uncompressed": 2587134
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC39_c908R2.read_count.tsv.gz",
+  "compressed": 2568445,
+  "uncompressed": 2568050
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP1N_c904R1.read_count.tsv.gz",
+  "compressed": 2437485,
+  "uncompressed": 2437110
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PEO4_c905R3.read_count.tsv.gz",
+  "compressed": 2578092,
+  "uncompressed": 2577697
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNAS_c906R1.read_count.tsv.gz",
+  "compressed": 2580564,
+  "uncompressed": 2580169
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC90_c907R3.read_count.tsv.gz",
+  "compressed": 2582489,
+  "uncompressed": 2582094
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BHY_c908R2.read_count.tsv.gz",
+  "compressed": 2593010,
+  "uncompressed": 2592615
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO680N_c907R3.read_count.tsv.gz",
+  "compressed": 2593836,
+  "uncompressed": 2593441
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RMGI_c905R1.read_count.tsv.gz",
+  "compressed": 2581002,
+  "uncompressed": 2580607
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1573_c906R1.read_count.tsv.gz",
+  "compressed": 2587294,
+  "uncompressed": 2586899
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI38_c908R2.read_count.tsv.gz",
+  "compressed": 2584029,
+  "uncompressed": 2583634
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OCUBM_c903R1.read_count.tsv.gz",
+  "compressed": 2438352,
+  "uncompressed": 2437977
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB7_c906R2.read_count.tsv.gz",
+  "compressed": 2581227,
+  "uncompressed": 2580832
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D542MG_c907R2.read_count.tsv.gz",
+  "compressed": 2578443,
+  "uncompressed": 2578048
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNGM_c907R1.read_count.tsv.gz",
+  "compressed": 2578061,
+  "uncompressed": 2577666
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OSC20_c908R3.read_count.tsv.gz",
+  "compressed": 2574621,
+  "uncompressed": 2574226
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC1_c903R4.read_count.tsv.gz",
+  "compressed": 2444688,
+  "uncompressed": 2444313
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT4_c904R2.read_count.tsv.gz",
+  "compressed": 2436801,
+  "uncompressed": 2436426
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R4.read_count.tsv.gz",
+  "compressed": 2424677,
+  "uncompressed": 2424307
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GCIY_c908R2.read_count.tsv.gz",
+  "compressed": 2567510,
+  "uncompressed": 2567115
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RPE1_c905R2.read_count.tsv.gz",
+  "compressed": 2583659,
+  "uncompressed": 2583264
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/231328_c908R1.read_count.tsv.gz",
+  "compressed": 2593809,
+  "uncompressed": 2593414
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE15_c907R3.read_count.tsv.gz",
+  "compressed": 2580759,
+  "uncompressed": 2580364
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE15_c907R3.read_count.tsv.gz",
+  "compressed": 2568549,
+  "uncompressed": 2568154
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GC1B_C908R2.read_count.tsv.gz",
+  "compressed": 2598230,
+  "uncompressed": 2597830
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AGS_c908R2.read_count.tsv.gz",
+  "compressed": 2594496,
+  "uncompressed": 2594101
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EPLC27_c906R2.read_count.tsv.gz",
+  "compressed": 2586833,
+  "uncompressed": 2586438
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC15_c906R3.read_count.tsv.gz",
+  "compressed": 2605687,
+  "uncompressed": 2605287
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1990_c904R2.read_count.tsv.gz",
+  "compressed": 2436006,
+  "uncompressed": 2435631
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OSC20_c908R1.read_count.tsv.gz",
+  "compressed": 2574272,
+  "uncompressed": 2573877
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F2C90L60.read_count.tsv.gz",
+  "compressed": 2428441,
+  "uncompressed": 2428071
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ECGI10_c907R1.read_count.tsv.gz",
+  "compressed": 2563706,
+  "uncompressed": 2563311
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs746T_c908R1.read_count.tsv.gz",
+  "compressed": 2591099,
+  "uncompressed": 2590704
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/C2BBe1_c903R2.read_count.tsv.gz",
+  "compressed": 2450464,
+  "uncompressed": 2450089
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0403_c904R1.read_count.tsv.gz",
+  "compressed": 2433828,
+  "uncompressed": 2433453
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNGM_c907R2.read_count.tsv.gz",
+  "compressed": 2579399,
+  "uncompressed": 2579004
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780A_c905R1.read_count.tsv.gz",
+  "compressed": 2603432,
+  "uncompressed": 2603032
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO684_C908R2.read_count.tsv.gz",
+  "compressed": 2594929,
+  "uncompressed": 2594534
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R1.read_count.tsv.gz",
+  "compressed": 2589865,
+  "uncompressed": 2589470
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB436_c903R2.read_count.tsv.gz",
+  "compressed": 2449471,
+  "uncompressed": 2449096
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS1034_c903R1.read_count.tsv.gz",
+  "compressed": 2443861,
+  "uncompressed": 2443486
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KURAMO_c905R3.read_count.tsv.gz",
+  "compressed": 2584665,
+  "uncompressed": 2584270
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR5_c905R2.read_count.tsv.gz",
+  "compressed": 2582355,
+  "uncompressed": 2581960
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1869_c906R2.read_count.tsv.gz",
+  "compressed": 2582326,
+  "uncompressed": 2581931
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR10_c908R1.read_count.tsv.gz",
+  "compressed": 2574973,
+  "uncompressed": 2574578
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LP1_c907R1.read_count.tsv.gz",
+  "compressed": 2592817,
+  "uncompressed": 2592422
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC2B_c903R2.read_count.tsv.gz",
+  "compressed": 2462976,
+  "uncompressed": 2462601
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB13_c906R3.read_count.tsv.gz",
+  "compressed": 2579702,
+  "uncompressed": 2579307
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1869_c906R1.read_count.tsv.gz",
+  "compressed": 2579858,
+  "uncompressed": 2579463
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV112_c905R1.read_count.tsv.gz",
+  "compressed": 2586652,
+  "uncompressed": 2586257
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Lovo_c903R6.read_count.tsv.gz",
+  "compressed": 2448043,
+  "uncompressed": 2447668
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs683_c907R1.read_count.tsv.gz",
+  "compressed": 2587789,
+  "uncompressed": 2587394
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU65_c906R4.read_count.tsv.gz",
+  "compressed": 2590147,
+  "uncompressed": 2589752
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/M14_c902R3.read_count.tsv.gz",
+  "compressed": 2433563,
+  "uncompressed": 2433188
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8988T_c904R3.read_count.tsv.gz",
+  "compressed": 2440668,
+  "uncompressed": 2440293
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2170_c906R1.read_count.tsv.gz",
+  "compressed": 2590117,
+  "uncompressed": 2589722
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE45_c908R3.read_count.tsv.gz",
+  "compressed": 2579889,
+  "uncompressed": 2579494
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TC71_c907R1.read_count.tsv.gz",
+  "compressed": 2583163,
+  "uncompressed": 2582768
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H322M_c906R1.read_count.tsv.gz",
+  "compressed": 2579032,
+  "uncompressed": 2578637
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE27_c908R3.read_count.tsv.gz",
+  "compressed": 2583426,
+  "uncompressed": 2583031
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCH_c908R2.read_count.tsv.gz",
+  "compressed": 2574193,
+  "uncompressed": 2573798
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T47d_c903R1.read_count.tsv.gz",
+  "compressed": 2442139,
+  "uncompressed": 2441764
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A253_c908R2.read_count.tsv.gz",
+  "compressed": 2561360,
+  "uncompressed": 2560970
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A375_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2443843,
+  "uncompressed": 2443468
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC299_c903R3.read_count.tsv.gz",
+  "compressed": 2446150,
+  "uncompressed": 2445775
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T47d_c903R3.read_count.tsv.gz",
+  "compressed": 2436797,
+  "uncompressed": 2436422
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC4_c907R2.read_count.tsv.gz",
+  "compressed": 2559856,
+  "uncompressed": 2559466
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_F2C90L15.read_count.tsv.gz",
+  "compressed": 2424261,
+  "uncompressed": 2423891
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT4_c904R3.read_count.tsv.gz",
+  "compressed": 2437221,
+  "uncompressed": 2436846
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/UWB12_c905R2.read_count.tsv.gz",
+  "compressed": 2582295,
+  "uncompressed": 2581900
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GI1_c907R2.read_count.tsv.gz",
+  "compressed": 2584043,
+  "uncompressed": 2583648
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVISE_c905R3.read_count.tsv.gz",
+  "compressed": 2580236,
+  "uncompressed": 2579841
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A172_c907R2.read_count.tsv.gz",
+  "compressed": 2575186,
+  "uncompressed": 2574791
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GOTO_c906R3.read_count.tsv.gz",
+  "compressed": 2582466,
+  "uncompressed": 2582071
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB415_c903R2.read_count.tsv.gz",
+  "compressed": 2427019,
+  "uncompressed": 2426649
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R1_F1D24.read_count.tsv.gz",
+  "compressed": 2444556,
+  "uncompressed": 2444181
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HEC1_c907R2.read_count.tsv.gz",
+  "compressed": 2585929,
+  "uncompressed": 2585534
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC299_c903R2.read_count.tsv.gz",
+  "compressed": 2449345,
+  "uncompressed": 2448970
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EVSAT_c903R1.read_count.tsv.gz",
+  "compressed": 2432536,
+  "uncompressed": 2432161
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC70_c903R3.read_count.tsv.gz",
+  "compressed": 2434421,
+  "uncompressed": 2434046
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC139_c903R1.read_count.tsv.gz",
+  "compressed": 2441264,
+  "uncompressed": 2440889
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCSq1_c906R3.read_count.tsv.gz",
+  "compressed": 2590737,
+  "uncompressed": 2590342
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU1_c908R3.read_count.tsv.gz",
+  "compressed": 2593943,
+  "uncompressed": 2593548
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TC71_c907R2.read_count.tsv.gz",
+  "compressed": 2582829,
+  "uncompressed": 2582434
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KURAMO_c905R2.read_count.tsv.gz",
+  "compressed": 2575494,
+  "uncompressed": 2575099
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCAS_c905R1.read_count.tsv.gz",
+  "compressed": 2603957,
+  "uncompressed": 2603557
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE10_c908R3.read_count.tsv.gz",
+  "compressed": 2577240,
+  "uncompressed": 2576845
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO27_c905R2.read_count.tsv.gz",
+  "compressed": 2576429,
+  "uncompressed": 2576034
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GC1B_C908R1.read_count.tsv.gz",
+  "compressed": 2599742,
+  "uncompressed": 2599342
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE27_c908R2.read_count.tsv.gz",
+  "compressed": 2568318,
+  "uncompressed": 2567923
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKMES1_c906R2.read_count.tsv.gz",
+  "compressed": 2583483,
+  "uncompressed": 2583088
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI15A_c908R1.read_count.tsv.gz",
+  "compressed": 2585314,
+  "uncompressed": 2584919
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC90_c907R2.read_count.tsv.gz",
+  "compressed": 2592998,
+  "uncompressed": 2592603
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES8_c903R3.read_count.tsv.gz",
+  "compressed": 2444519,
+  "uncompressed": 2444144
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TYKnu_c905R1.read_count.tsv.gz",
+  "compressed": 2577816,
+  "uncompressed": 2577421
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TGW_c906R1.read_count.tsv.gz",
+  "compressed": 2584332,
+  "uncompressed": 2583937
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR8_c905R1.read_count.tsv.gz",
+  "compressed": 2577390,
+  "uncompressed": 2576995
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LXF289_c906R1.read_count.tsv.gz",
+  "compressed": 2585853,
+  "uncompressed": 2585458
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SUIT2_c904R5.read_count.tsv.gz",
+  "compressed": 2438083,
+  "uncompressed": 2437708
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2421662,
+  "uncompressed": 2421292
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R9.read_count.tsv.gz",
+  "compressed": 2591955,
+  "uncompressed": 2591560
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GIMEN_c906R1.read_count.tsv.gz",
+  "compressed": 2577536,
+  "uncompressed": 2577141
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BxPC3_c904R1.read_count.tsv.gz",
+  "compressed": 2423232,
+  "uncompressed": 2422862
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c903R3.read_count.tsv.gz",
+  "compressed": 2449888,
+  "uncompressed": 2449513
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC118_c903R3.read_count.tsv.gz",
+  "compressed": 2435715,
+  "uncompressed": 2435340
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AU565_c903R2.read_count.tsv.gz",
+  "compressed": 2446981,
+  "uncompressed": 2446606
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW16_c907R2.read_count.tsv.gz",
+  "compressed": 2587338,
+  "uncompressed": 2586943
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU10_c907R2.read_count.tsv.gz",
+  "compressed": 2586766,
+  "uncompressed": 2586371
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS513_c903R3.read_count.tsv.gz",
+  "compressed": 2448680,
+  "uncompressed": 2448305
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2436027,
+  "uncompressed": 2435652
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVK18_c905R1.read_count.tsv.gz",
+  "compressed": 2586079,
+  "uncompressed": 2585684
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MM1S_c907R2.read_count.tsv.gz",
+  "compressed": 2584029,
+  "uncompressed": 2583634
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCAS_c905R3.read_count.tsv.gz",
+  "compressed": 2582597,
+  "uncompressed": 2582202
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L23_c906R1.read_count.tsv.gz",
+  "compressed": 2583845,
+  "uncompressed": 2583450
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R8.read_count.tsv.gz",
+  "compressed": 2591882,
+  "uncompressed": 2591487
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ARH77_c907R01.read_count.tsv.gz",
+  "compressed": 2586160,
+  "uncompressed": 2585765
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW626_c905R3.read_count.tsv.gz",
+  "compressed": 2582489,
+  "uncompressed": 2582094
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/769P_c908R1.read_count.tsv.gz",
+  "compressed": 2586855,
+  "uncompressed": 2586460
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO684_C908R3.read_count.tsv.gz",
+  "compressed": 2594887,
+  "uncompressed": 2594492
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKN_c905R4.read_count.tsv.gz",
+  "compressed": 2576711,
+  "uncompressed": 2576316
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC193_c903R1.read_count.tsv.gz",
+  "compressed": 2460900,
+  "uncompressed": 2460525
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW16_c907R3.read_count.tsv.gz",
+  "compressed": 2589408,
+  "uncompressed": 2589013
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LN229_c907R1.read_count.tsv.gz",
+  "compressed": 2578049,
+  "uncompressed": 2577654
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Detroi_c907R3.read_count.tsv.gz",
+  "compressed": 2575427,
+  "uncompressed": 2575032
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GOTO_c906R1.read_count.tsv.gz",
+  "compressed": 2585337,
+  "uncompressed": 2584942
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1299_c906R3.read_count.tsv.gz",
+  "compressed": 2588931,
+  "uncompressed": 2588536
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB771H_c908R1.read_count.tsv.gz",
+  "compressed": 2588861,
+  "uncompressed": 2588466
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC118_c903R1.read_count.tsv.gz",
+  "compressed": 2437210,
+  "uncompressed": 2436835
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCH_c908R1.read_count.tsv.gz",
+  "compressed": 2576140,
+  "uncompressed": 2575745
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c904R1.read_count.tsv.gz",
+  "compressed": 2438919,
+  "uncompressed": 2438544
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KELLY_c906R1.read_count.tsv.gz",
+  "compressed": 2584259,
+  "uncompressed": 2583864
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TT1_c908R3.read_count.tsv.gz",
+  "compressed": 2590187,
+  "uncompressed": 2589792
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R3.read_count.tsv.gz",
+  "compressed": 2586807,
+  "uncompressed": 2586412
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAS1_c907R2.read_count.tsv.gz",
+  "compressed": 2585007,
+  "uncompressed": 2584612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB6_c906R2.read_count.tsv.gz",
+  "compressed": 2594415,
+  "uncompressed": 2594020
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AU565_c903R1.read_count.tsv.gz",
+  "compressed": 2428462,
+  "uncompressed": 2428092
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE70_c907R2.read_count.tsv.gz",
+  "compressed": 2573933,
+  "uncompressed": 2573538
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L363_c907R4.read_count.tsv.gz",
+  "compressed": 2574168,
+  "uncompressed": 2573773
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC15_c906R1.read_count.tsv.gz",
+  "compressed": 2584264,
+  "uncompressed": 2583869
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKGT4_c907R3.read_count.tsv.gz",
+  "compressed": 2571182,
+  "uncompressed": 2570787
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2441245,
+  "uncompressed": 2440870
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1155_c906R2.read_count.tsv.gz",
+  "compressed": 2616724,
+  "uncompressed": 2616324
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MCIXC_c906R3.read_count.tsv.gz",
+  "compressed": 2581696,
+  "uncompressed": 2581301
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP4_c904R2.read_count.tsv.gz",
+  "compressed": 2435301,
+  "uncompressed": 2434926
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE51_c907R2.read_count.tsv.gz",
+  "compressed": 2588448,
+  "uncompressed": 2588053
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8902_c904R1.read_count.tsv.gz",
+  "compressed": 2440139,
+  "uncompressed": 2439764
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW1_c907R3.read_count.tsv.gz",
+  "compressed": 2582341,
+  "uncompressed": 2581946
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1650_c906R2.read_count.tsv.gz",
+  "compressed": 2584546,
+  "uncompressed": 2584151
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ARH77_c907R02.read_count.tsv.gz",
+  "compressed": 2588066,
+  "uncompressed": 2587671
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC3_c908R2.read_count.tsv.gz",
+  "compressed": 2581134,
+  "uncompressed": 2580739
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU65_c906R5.read_count.tsv.gz",
+  "compressed": 2588909,
+  "uncompressed": 2588514
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYN_c906R3.read_count.tsv.gz",
+  "compressed": 2579692,
+  "uncompressed": 2579297
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HGC27_c908R2.read_count.tsv.gz",
+  "compressed": 2593741,
+  "uncompressed": 2593346
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE8_c908R3.read_count.tsv.gz",
+  "compressed": 2578247,
+  "uncompressed": 2577852
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT116_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2435419,
+  "uncompressed": 2435044
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU99A_c906R6.read_count.tsv.gz",
+  "compressed": 2580114,
+  "uncompressed": 2579719
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC180_c904R1.read_count.tsv.gz",
+  "compressed": 2429598,
+  "uncompressed": 2429228
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES2_c905R2.read_count.tsv.gz",
+  "compressed": 2591845,
+  "uncompressed": 2591450
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE9_c907R1.read_count.tsv.gz",
+  "compressed": 2590315,
+  "uncompressed": 2589920
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYS_c906R2.read_count.tsv.gz",
+  "compressed": 2584902,
+  "uncompressed": 2584507
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB13_c906R1.read_count.tsv.gz",
+  "compressed": 2580657,
+  "uncompressed": 2580262
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC78_c906R5.read_count.tsv.gz",
+  "compressed": 2580856,
+  "uncompressed": 2580461
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c920R5.read_count.tsv.gz",
+  "compressed": 2459433,
+  "uncompressed": 2459058
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LC1sq_c906R1.read_count.tsv.gz",
+  "compressed": 2583717,
+  "uncompressed": 2583322
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8988T_c904R1.read_count.tsv.gz",
+  "compressed": 2439031,
+  "uncompressed": 2438656
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FADU_c908R2.read_count.tsv.gz",
+  "compressed": 2574296,
+  "uncompressed": 2573901
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LNZTA3_c907R2.read_count.tsv.gz",
+  "compressed": 2582599,
+  "uncompressed": 2582204
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c903R6.read_count.tsv.gz",
+  "compressed": 2433648,
+  "uncompressed": 2433273
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNAS_c906R3.read_count.tsv.gz",
+  "compressed": 2582219,
+  "uncompressed": 2581824
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CHP212_c906R2.read_count.tsv.gz",
+  "compressed": 2578722,
+  "uncompressed": 2578327
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LP1_c907R3.read_count.tsv.gz",
+  "compressed": 2591464,
+  "uncompressed": 2591069
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3118_c908R1.read_count.tsv.gz",
+  "compressed": 2576845,
+  "uncompressed": 2576450
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R6.read_count.tsv.gz",
+  "compressed": 2591181,
+  "uncompressed": 2590786
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC38_c903R3.read_count.tsv.gz",
+  "compressed": 2457654,
+  "uncompressed": 2457279
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hey_c905R2.read_count.tsv.gz",
+  "compressed": 2588721,
+  "uncompressed": 2588326
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU81_c903R1.read_count.tsv.gz",
+  "compressed": 2444446,
+  "uncompressed": 2444071
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LB771H_c908R2.read_count.tsv.gz",
+  "compressed": 2590237,
+  "uncompressed": 2589842
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE27_c908R1.read_count.tsv.gz",
+  "compressed": 2576745,
+  "uncompressed": 2576350
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R12_25.read_count.tsv.gz",
+  "compressed": 2596697,
+  "uncompressed": 2596297
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0813_c904R1.read_count.tsv.gz",
+  "compressed": 2434248,
+  "uncompressed": 2433873
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KNS62_c906R5.read_count.tsv.gz",
+  "compressed": 2579918,
+  "uncompressed": 2579523
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW1_c907R1.read_count.tsv.gz",
+  "compressed": 2566361,
+  "uncompressed": 2565966
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ESO26_c907R1.read_count.tsv.gz",
+  "compressed": 2597334,
+  "uncompressed": 2596934
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BE2M17_c906R1.read_count.tsv.gz",
+  "compressed": 2582650,
+  "uncompressed": 2582255
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/N87_c908R3.read_count.tsv.gz",
+  "compressed": 2586738,
+  "uncompressed": 2586343
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/R2650_c908R1.read_count.tsv.gz",
+  "compressed": 2590260,
+  "uncompressed": 2589865
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO21_c905R2.read_count.tsv.gz",
+  "compressed": 2578827,
+  "uncompressed": 2578432
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Lovo_c903R4.read_count.tsv.gz",
+  "compressed": 2448676,
+  "uncompressed": 2448301
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R2_F1D18.read_count.tsv.gz",
+  "compressed": 2442958,
+  "uncompressed": 2442583
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU8686_c904R2.read_count.tsv.gz",
+  "compressed": 2437545,
+  "uncompressed": 2437170
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT55_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2438562,
+  "uncompressed": 2438187
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2435908,
+  "uncompressed": 2435533
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO678_c903R5.read_count.tsv.gz",
+  "compressed": 2452086,
+  "uncompressed": 2451711
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GP5d_c903R1.read_count.tsv.gz",
+  "compressed": 2451826,
+  "uncompressed": 2451451
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI6A_c908R6.read_count.tsv.gz",
+  "compressed": 2574622,
+  "uncompressed": 2574227
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES6_c907R2.read_count.tsv.gz",
+  "compressed": 2581773,
+  "uncompressed": 2581378
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKO_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2444388,
+  "uncompressed": 2444013
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OACM51_c907R2.read_count.tsv.gz",
+  "compressed": 2584973,
+  "uncompressed": 2584578
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SU5_c907R2.read_count.tsv.gz",
+  "compressed": 2587551,
+  "uncompressed": 2587156
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2023_c906R2.read_count.tsv.gz",
+  "compressed": 2578895,
+  "uncompressed": 2578500
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCLC97_c906R2.read_count.tsv.gz",
+  "compressed": 2582962,
+  "uncompressed": 2582567
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC3_c908R1.read_count.tsv.gz",
+  "compressed": 2577146,
+  "uncompressed": 2576751
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R2_F1D21.read_count.tsv.gz",
+  "compressed": 2446933,
+  "uncompressed": 2446558
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS411N_c903R3.read_count.tsv.gz",
+  "compressed": 2446340,
+  "uncompressed": 2445965
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_F2C75L30.read_count.tsv.gz",
+  "compressed": 2442474,
+  "uncompressed": 2442099
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB69_c906R3.read_count.tsv.gz",
+  "compressed": 2594268,
+  "uncompressed": 2593873
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML3_c905R3.read_count.tsv.gz",
+  "compressed": 2588238,
+  "uncompressed": 2587843
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DOK_c908R2.read_count.tsv.gz",
+  "compressed": 2574780,
+  "uncompressed": 2574385
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780_c905R1.read_count.tsv.gz",
+  "compressed": 2578019,
+  "uncompressed": 2577624
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0813_c904R2.read_count.tsv.gz",
+  "compressed": 2439796,
+  "uncompressed": 2439421
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8902_c904R2.read_count.tsv.gz",
+  "compressed": 2440807,
+  "uncompressed": 2440432
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EGI1_c903R2.read_count.tsv.gz",
+  "compressed": 2437950,
+  "uncompressed": 2437575
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R1_F1D14.read_count.tsv.gz",
+  "compressed": 2443964,
+  "uncompressed": 2443589
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB10_c906R3.read_count.tsv.gz",
+  "compressed": 2578741,
+  "uncompressed": 2578346
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c902R6.read_count.tsv.gz",
+  "compressed": 2449220,
+  "uncompressed": 2448845
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2058_c903R3.read_count.tsv.gz",
+  "compressed": 2450997,
+  "uncompressed": 2450622
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1568_c906R2.read_count.tsv.gz",
+  "compressed": 2579315,
+  "uncompressed": 2578920
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H716_c903R3.read_count.tsv.gz",
+  "compressed": 2444015,
+  "uncompressed": 2443640
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KMS11_c907R3.read_count.tsv.gz",
+  "compressed": 2588183,
+  "uncompressed": 2587788
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB6_c906R3.read_count.tsv.gz",
+  "compressed": 2617210,
+  "uncompressed": 2616810
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OCUBM_c903R2.read_count.tsv.gz",
+  "compressed": 2440548,
+  "uncompressed": 2440173
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC1_c903R6.read_count.tsv.gz",
+  "compressed": 2452512,
+  "uncompressed": 2452137
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE4_c907R1.read_count.tsv.gz",
+  "compressed": 2579609,
+  "uncompressed": 2579214
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/8MGBA_c907R1.read_count.tsv.gz",
+  "compressed": 2579284,
+  "uncompressed": 2578889
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNSH_c906R2.read_count.tsv.gz",
+  "compressed": 2578133,
+  "uncompressed": 2577738
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU16_c908R1.read_count.tsv.gz",
+  "compressed": 2592818,
+  "uncompressed": 2592423
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1088_c907R2.read_count.tsv.gz",
+  "compressed": 2581116,
+  "uncompressed": 2580721
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TGW_c906R3.read_count.tsv.gz",
+  "compressed": 2561118,
+  "uncompressed": 2560728
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1299_c906R1.read_count.tsv.gz",
+  "compressed": 2580215,
+  "uncompressed": 2579820
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC195_c903R1.read_count.tsv.gz",
+  "compressed": 2433272,
+  "uncompressed": 2432897
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R6_75.read_count.tsv.gz",
+  "compressed": 2594653,
+  "uncompressed": 2594258
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c907R9.read_count.tsv.gz",
+  "compressed": 2570322,
+  "uncompressed": 2569927
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TYKnu_c905R3.read_count.tsv.gz",
+  "compressed": 2587693,
+  "uncompressed": 2587298
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TYKnu_c905R2.read_count.tsv.gz",
+  "compressed": 2580089,
+  "uncompressed": 2579694
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW48_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2436784,
+  "uncompressed": 2436409
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB436_c903R1.read_count.tsv.gz",
+  "compressed": 2447790,
+  "uncompressed": 2447415
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EPLC27_c906R3.read_count.tsv.gz",
+  "compressed": 2600036,
+  "uncompressed": 2599636
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BHY_c908R1.read_count.tsv.gz",
+  "compressed": 2576532,
+  "uncompressed": 2576137
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES4_c907R1.read_count.tsv.gz",
+  "compressed": 2589348,
+  "uncompressed": 2588953
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP3_c904R3.read_count.tsv.gz",
+  "compressed": 2432275,
+  "uncompressed": 2431900
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KPNYN_c906R2.read_count.tsv.gz",
+  "compressed": 2584523,
+  "uncompressed": 2584128
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HO1u1_c908R3.read_count.tsv.gz",
+  "compressed": 2595590,
+  "uncompressed": 2595195
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE52_c908R1.read_count.tsv.gz",
+  "compressed": 2595992,
+  "uncompressed": 2595592
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MDAMB2_c903R2.read_count.tsv.gz",
+  "compressed": 2425372,
+  "uncompressed": 2425002
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GB1_c907R1.read_count.tsv.gz",
+  "compressed": 2584348,
+  "uncompressed": 2583953
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/D423MG_c907R2.read_count.tsv.gz",
+  "compressed": 2581404,
+  "uncompressed": 2581009
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ROS50_c905R4.read_count.tsv.gz",
+  "compressed": 2588172,
+  "uncompressed": 2587777
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CW2_c903R2.read_count.tsv.gz",
+  "compressed": 2448121,
+  "uncompressed": 2447746
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ARH77_c907R03.read_count.tsv.gz",
+  "compressed": 2591233,
+  "uncompressed": 2590838
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KNS62_c906R4.read_count.tsv.gz",
+  "compressed": 2577826,
+  "uncompressed": 2577431
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HARA_c906R1.read_count.tsv.gz",
+  "compressed": 2584197,
+  "uncompressed": 2583802
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1355_c906R1.read_count.tsv.gz",
+  "compressed": 2581514,
+  "uncompressed": 2581119
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R1.read_count.tsv.gz",
+  "compressed": 2583270,
+  "uncompressed": 2582875
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MIAPac_c904R1.read_count.tsv.gz",
+  "compressed": 2439319,
+  "uncompressed": 2438944
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H630_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2443055,
+  "uncompressed": 2442680
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HPAFII_c904R2.read_count.tsv.gz",
+  "compressed": 2440949,
+  "uncompressed": 2440574
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TT1_c908R2.read_count.tsv.gz",
+  "compressed": 2584096,
+  "uncompressed": 2583701
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KS1_c907R1.read_count.tsv.gz",
+  "compressed": 2583094,
+  "uncompressed": 2582699
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES8_c903R2.read_count.tsv.gz",
+  "compressed": 2446912,
+  "uncompressed": 2446537
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Caov4_c905R1.read_count.tsv.gz",
+  "compressed": 2579181,
+  "uncompressed": 2578786
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_F2C75L30.read_count.tsv.gz",
+  "compressed": 2440987,
+  "uncompressed": 2440612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RPE1_c905R3.read_count.tsv.gz",
+  "compressed": 2580058,
+  "uncompressed": 2579663
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT3_c904R2.read_count.tsv.gz",
+  "compressed": 2436406,
+  "uncompressed": 2436031
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_P1D22.read_count.tsv.gz",
+  "compressed": 2433300,
+  "uncompressed": 2432925
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNAS_c906R2.read_count.tsv.gz",
+  "compressed": 2579309,
+  "uncompressed": 2578914
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1463_C902R3_F1D21.read_count.tsv.gz",
+  "compressed": 2445106,
+  "uncompressed": 2444731
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PSN1_c904R2.read_count.tsv.gz",
+  "compressed": 2439808,
+  "uncompressed": 2439433
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JHOS2_c905R2.read_count.tsv.gz",
+  "compressed": 2578297,
+  "uncompressed": 2577902
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCCFG2_C908R1.read_count.tsv.gz",
+  "compressed": 2565850,
+  "uncompressed": 2565455
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNB75_c907R2.read_count.tsv.gz",
+  "compressed": 2577291,
+  "uncompressed": 2576896
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2436617,
+  "uncompressed": 2436242
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/UWB12_c905R3.read_count.tsv.gz",
+  "compressed": 2579609,
+  "uncompressed": 2579214
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI4B_c908R3.read_count.tsv.gz",
+  "compressed": 2614701,
+  "uncompressed": 2614301
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO21_c905R1.read_count.tsv.gz",
+  "compressed": 2577566,
+  "uncompressed": 2577171
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P8902_c904R3.read_count.tsv.gz",
+  "compressed": 2441806,
+  "uncompressed": 2441431
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U893_c903R1.read_count.tsv.gz",
+  "compressed": 2441895,
+  "uncompressed": 2441520
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0403_c904R2.read_count.tsv.gz",
+  "compressed": 2434088,
+  "uncompressed": 2433713
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NUGC3_c907R3.read_count.tsv.gz",
+  "compressed": 2576120,
+  "uncompressed": 2575725
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE9_c907R2.read_count.tsv.gz",
+  "compressed": 2589467,
+  "uncompressed": 2589072
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE41_C908R1.read_count.tsv.gz",
+  "compressed": 2574591,
+  "uncompressed": 2574196
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R8_50.read_count.tsv.gz",
+  "compressed": 2576392,
+  "uncompressed": 2575997
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EW11_c907R2.read_count.tsv.gz",
+  "compressed": 2581036,
+  "uncompressed": 2580641
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JIMT1_c903R2.read_count.tsv.gz",
+  "compressed": 2451506,
+  "uncompressed": 2451131
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/GP5d_c903R3.read_count.tsv.gz",
+  "compressed": 2438015,
+  "uncompressed": 2437640
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MHHES1_c907R3.read_count.tsv.gz",
+  "compressed": 2587165,
+  "uncompressed": 2586770
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO680N_c907R2.read_count.tsv.gz",
+  "compressed": 2582097,
+  "uncompressed": 2581702
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC142_c904R4.read_count.tsv.gz",
+  "compressed": 2438242,
+  "uncompressed": 2437867
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OPM2_c907R6.read_count.tsv.gz",
+  "compressed": 2581959,
+  "uncompressed": 2581564
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KLE_c908R3.read_count.tsv.gz",
+  "compressed": 2593979,
+  "uncompressed": 2593584
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0327_c904R3.read_count.tsv.gz",
+  "compressed": 2436003,
+  "uncompressed": 2435628
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/22RV1_c908R2.read_count.tsv.gz",
+  "compressed": 2565780,
+  "uncompressed": 2565385
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI4B_c908R2.read_count.tsv.gz",
+  "compressed": 2601767,
+  "uncompressed": 2601367
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CW2_c903R3.read_count.tsv.gz",
+  "compressed": 2452086,
+  "uncompressed": 2451711
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LNCaPC_c908R2.read_count.tsv.gz",
+  "compressed": 2593922,
+  "uncompressed": 2593527
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL27_c907R1.read_count.tsv.gz",
+  "compressed": 2568748,
+  "uncompressed": 2568353
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LY19_c907R3.read_count.tsv.gz",
+  "compressed": 2586927,
+  "uncompressed": 2586532
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c906R1.read_count.tsv.gz",
+  "compressed": 2574500,
+  "uncompressed": 2574105
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE45_c908R2.read_count.tsv.gz",
+  "compressed": 2581675,
+  "uncompressed": 2581280
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/FLO1_c907R2.read_count.tsv.gz",
+  "compressed": 2584718,
+  "uncompressed": 2584323
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R2_F1D24.read_count.tsv.gz",
+  "compressed": 2435565,
+  "uncompressed": 2435190
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV112_c905R3.read_count.tsv.gz",
+  "compressed": 2582239,
+  "uncompressed": 2581844
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL40_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2441224,
+  "uncompressed": 2440849
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Ca922_c907R1.read_count.tsv.gz",
+  "compressed": 2577091,
+  "uncompressed": 2576696
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1915_c906R2.read_count.tsv.gz",
+  "compressed": 2577147,
+  "uncompressed": 2576752
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LP1_c907R2.read_count.tsv.gz",
+  "compressed": 2588882,
+  "uncompressed": 2588487
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR10_c908R2.read_count.tsv.gz",
+  "compressed": 2573447,
+  "uncompressed": 2573052
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R3_P1D22.read_count.tsv.gz",
+  "compressed": 2416058,
+  "uncompressed": 2415688
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R1_F2C50L30.read_count.tsv.gz",
+  "compressed": 2443636,
+  "uncompressed": 2443261
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NUGC3_c907R2.read_count.tsv.gz",
+  "compressed": 2596479,
+  "uncompressed": 2596079
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/P0203_c904R2.read_count.tsv.gz",
+  "compressed": 2441297,
+  "uncompressed": 2440922
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML2_c905R3D21.read_count.tsv.gz",
+  "compressed": 2579510,
+  "uncompressed": 2579115
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC5_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2437899,
+  "uncompressed": 2437524
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCM1_c903R3.read_count.tsv.gz",
+  "compressed": 2435311,
+  "uncompressed": 2434936
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BICR10_c908R3.read_count.tsv.gz",
+  "compressed": 2574538,
+  "uncompressed": 2574143
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/AML3_c905R1.read_count.tsv.gz",
+  "compressed": 2589868,
+  "uncompressed": 2589473
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC38_c903R1.read_count.tsv.gz",
+  "compressed": 2435916,
+  "uncompressed": 2435541
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BE2M17_c906R3.read_count.tsv.gz",
+  "compressed": 2582441,
+  "uncompressed": 2582046
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI30_c908R1.read_count.tsv.gz",
+  "compressed": 2581490,
+  "uncompressed": 2581095
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SAS_c907R3.read_count.tsv.gz",
+  "compressed": 2586173,
+  "uncompressed": 2585778
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE14_c907R1.read_count.tsv.gz",
+  "compressed": 2582636,
+  "uncompressed": 2582241
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/231328_c908R2.read_count.tsv.gz",
+  "compressed": 2590781,
+  "uncompressed": 2590386
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU1_c908R1.read_count.tsv.gz",
+  "compressed": 2594379,
+  "uncompressed": 2593984
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DU145_c908R2.read_count.tsv.gz",
+  "compressed": 2588473,
+  "uncompressed": 2588078
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2170_c906R2.read_count.tsv.gz",
+  "compressed": 2588820,
+  "uncompressed": 2588425
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/M14_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2445367,
+  "uncompressed": 2444992
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H358_c906R1.read_count.tsv.gz",
+  "compressed": 2587207,
+  "uncompressed": 2586812
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/M059J_c907R1.read_count.tsv.gz",
+  "compressed": 2579313,
+  "uncompressed": 2578918
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW837_c903R1.read_count.tsv.gz",
+  "compressed": 2450301,
+  "uncompressed": 2449926
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC180_c904R3.read_count.tsv.gz",
+  "compressed": 2433951,
+  "uncompressed": 2433576
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB453_c903R2.read_count.tsv.gz",
+  "compressed": 2439926,
+  "uncompressed": 2439551
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW1573_c906R2.read_count.tsv.gz",
+  "compressed": 2584188,
+  "uncompressed": 2583793
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE21_C907R2.read_count.tsv.gz",
+  "compressed": 2582958,
+  "uncompressed": 2582563
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_20D.read_count.tsv.gz",
+  "compressed": 2568924,
+  "uncompressed": 2568529
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H716_c903R1.read_count.tsv.gz",
+  "compressed": 2441920,
+  "uncompressed": 2441545
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/L23_c906R2.read_count.tsv.gz",
+  "compressed": 2578900,
+  "uncompressed": 2578505
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS411N_c903R2.read_count.tsv.gz",
+  "compressed": 2446467,
+  "uncompressed": 2446092
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F2C90L30.read_count.tsv.gz",
+  "compressed": 2435774,
+  "uncompressed": 2435399
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/M059J_c907R2.read_count.tsv.gz",
+  "compressed": 2597176,
+  "uncompressed": 2596776
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_P1D22.read_count.tsv.gz",
+  "compressed": 2439251,
+  "uncompressed": 2438876
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OE33_C907R1.read_count.tsv.gz",
+  "compressed": 2568612,
+  "uncompressed": 2568217
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ECGI10_c907R2.read_count.tsv.gz",
+  "compressed": 2566027,
+  "uncompressed": 2565632
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OSC20_c908R2.read_count.tsv.gz",
+  "compressed": 2575019,
+  "uncompressed": 2574624
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/U893_c903R3.read_count.tsv.gz",
+  "compressed": 2437734,
+  "uncompressed": 2437359
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c906R2.read_count.tsv.gz",
+  "compressed": 2586479,
+  "uncompressed": 2586084
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CAL33_c907R3.read_count.tsv.gz",
+  "compressed": 2578373,
+  "uncompressed": 2577978
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DU145_c908R3.read_count.tsv.gz",
+  "compressed": 2579908,
+  "uncompressed": 2579513
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R4_75.read_count.tsv.gz",
+  "compressed": 2575457,
+  "uncompressed": 2575062
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T98G_c907R2.read_count.tsv.gz",
+  "compressed": 2594457,
+  "uncompressed": 2594062
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC9_c908R3.read_count.tsv.gz",
+  "compressed": 2571251,
+  "uncompressed": 2570856
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFE280_C908R3.read_count.tsv.gz",
+  "compressed": 2593751,
+  "uncompressed": 2593356
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/22RV1_c908R3.read_count.tsv.gz",
+  "compressed": 2582456,
+  "uncompressed": 2582061
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R2_F2C75L30.read_count.tsv.gz",
+  "compressed": 2450412,
+  "uncompressed": 2450037
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T98G_c907R1.read_count.tsv.gz",
+  "compressed": 2584388,
+  "uncompressed": 2583993
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TC71_c907R3.read_count.tsv.gz",
+  "compressed": 2567601,
+  "uncompressed": 2567206
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LU65_c906R6.read_count.tsv.gz",
+  "compressed": 2584142,
+  "uncompressed": 2583747
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_15W.read_count.tsv.gz",
+  "compressed": 2531729,
+  "uncompressed": 2531339
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW48_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2446743,
+  "uncompressed": 2446368
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780_c905R2.read_count.tsv.gz",
+  "compressed": 2605703,
+  "uncompressed": 2605303
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/769P_c908R3.read_count.tsv.gz",
+  "compressed": 2573975,
+  "uncompressed": 2573580
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MIAPac_c904R3.read_count.tsv.gz",
+  "compressed": 2436042,
+  "uncompressed": 2435667
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TOV21G_c905R3.read_count.tsv.gz",
+  "compressed": 2577783,
+  "uncompressed": 2577388
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT116_C902R1_P1D22.read_count.tsv.gz",
+  "compressed": 2432943,
+  "uncompressed": 2432568
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/JIMT1_c903R1.read_count.tsv.gz",
+  "compressed": 2436790,
+  "uncompressed": 2436415
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCE4_c908R2.read_count.tsv.gz",
+  "compressed": 2581139,
+  "uncompressed": 2580744
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T84_c903R4.read_count.tsv.gz",
+  "compressed": 2437413,
+  "uncompressed": 2437038
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ES2_c905R3.read_count.tsv.gz",
+  "compressed": 2584895,
+  "uncompressed": 2584500
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NMCG1_c907R1.read_count.tsv.gz",
+  "compressed": 2588429,
+  "uncompressed": 2588034
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_C902R3_P1D14.read_count.tsv.gz",
+  "compressed": 2436673,
+  "uncompressed": 2436298
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c905R2.read_count.tsv.gz",
+  "compressed": 2582549,
+  "uncompressed": 2582154
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB10_c906R2.read_count.tsv.gz",
+  "compressed": 2578679,
+  "uncompressed": 2578284
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Hs578T_c904R3.read_count.tsv.gz",
+  "compressed": 2440759,
+  "uncompressed": 2440384
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS123_c903R2.read_count.tsv.gz",
+  "compressed": 2424794,
+  "uncompressed": 2424424
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE22_c908R2.read_count.tsv.gz",
+  "compressed": 2595902,
+  "uncompressed": 2595502
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_C902R3_P1D22.read_count.tsv.gz",
+  "compressed": 2435600,
+  "uncompressed": 2435225
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC299_c903R1.read_count.tsv.gz",
+  "compressed": 2453031,
+  "uncompressed": 2452656
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KINGS1_c907R1.read_count.tsv.gz",
+  "compressed": 2584428,
+  "uncompressed": 2584033
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R10_25.read_count.tsv.gz",
+  "compressed": 2583541,
+  "uncompressed": 2583146
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKN3_c908R2.read_count.tsv.gz",
+  "compressed": 2569199,
+  "uncompressed": 2568804
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MB361_c904R1.read_count.tsv.gz",
+  "compressed": 2436495,
+  "uncompressed": 2436120
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB5_c906R3.read_count.tsv.gz",
+  "compressed": 2583259,
+  "uncompressed": 2582864
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNFI_c906R2.read_count.tsv.gz",
+  "compressed": 2578469,
+  "uncompressed": 2578074
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PCI6A_c908R4.read_count.tsv.gz",
+  "compressed": 2571865,
+  "uncompressed": 2571470
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNUC5_C902R2_P1D14.read_count.tsv.gz",
+  "compressed": 2455151,
+  "uncompressed": 2454776
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCT15_c902R5.read_count.tsv.gz",
+  "compressed": 2447119,
+  "uncompressed": 2446744
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1975_c906R5.read_count.tsv.gz",
+  "compressed": 2587148,
+  "uncompressed": 2586753
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV56_c905R1.read_count.tsv.gz",
+  "compressed": 2588346,
+  "uncompressed": 2587951
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H3122_c906R2.read_count.tsv.gz",
+  "compressed": 2585684,
+  "uncompressed": 2585289
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW837_c903R2.read_count.tsv.gz",
+  "compressed": 2446174,
+  "uncompressed": 2445799
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/YH13_c907R1.read_count.tsv.gz",
+  "compressed": 2586418,
+  "uncompressed": 2586023
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KATOII_c908R2.read_count.tsv.gz",
+  "compressed": 2592146,
+  "uncompressed": 2591751
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/N87_c908R2.read_count.tsv.gz",
+  "compressed": 2584716,
+  "uncompressed": 2584321
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OSC19_c908R5.read_count.tsv.gz",
+  "compressed": 2567539,
+  "uncompressed": 2567144
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/BE2M17_c906R2.read_count.tsv.gz",
+  "compressed": 2578312,
+  "uncompressed": 2577917
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R11_25.read_count.tsv.gz",
+  "compressed": 2577720,
+  "uncompressed": 2577325
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVK18_c905R2.read_count.tsv.gz",
+  "compressed": 2587889,
+  "uncompressed": 2587494
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/22RV1_c908R1.read_count.tsv.gz",
+  "compressed": 2572260,
+  "uncompressed": 2571865
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LCLC97_c906R3.read_count.tsv.gz",
+  "compressed": 2586497,
+  "uncompressed": 2586102
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SKNDZ_c906R2.read_count.tsv.gz",
+  "compressed": 2599439,
+  "uncompressed": 2599039
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H1155_c906R1.read_count.tsv.gz",
+  "compressed": 2593378,
+  "uncompressed": 2592983
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/T84_c903R5.read_count.tsv.gz",
+  "compressed": 2436761,
+  "uncompressed": 2436386
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KP1N_c904R3.read_count.tsv.gz",
+  "compressed": 2437845,
+  "uncompressed": 2437470
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC15_c906R2.read_count.tsv.gz",
+  "compressed": 2587440,
+  "uncompressed": 2587045
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/ISTMEL1_c904R1.read_count.tsv.gz",
+  "compressed": 2443128,
+  "uncompressed": 2442753
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HT29_c904R2.read_count.tsv.gz",
+  "compressed": 2438857,
+  "uncompressed": 2438482
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H226_c90R3.read_count.tsv.gz",
+  "compressed": 2592568,
+  "uncompressed": 2592173
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/TE5_c908R2.read_count.tsv.gz",
+  "compressed": 2583409,
+  "uncompressed": 2583014
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H322M_c906R3.read_count.tsv.gz",
+  "compressed": 2577668,
+  "uncompressed": 2577273
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R3_F1D15.read_count.tsv.gz",
+  "compressed": 2448258,
+  "uncompressed": 2447883
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/Caov4_c905R2.read_count.tsv.gz",
+  "compressed": 2583497,
+  "uncompressed": 2583102
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CL11_c903R1.read_count.tsv.gz",
+  "compressed": 2448888,
+  "uncompressed": 2448513
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LK2_c906R3.read_count.tsv.gz",
+  "compressed": 2586007,
+  "uncompressed": 2585612
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MKN1_c908R4.read_count.tsv.gz",
+  "compressed": 2594336,
+  "uncompressed": 2593941
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LS180_C902R1_P1D14.read_count.tsv.gz",
+  "compressed": 2439649,
+  "uncompressed": 2439274
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SF268_c907R1.read_count.tsv.gz",
+  "compressed": 2578771,
+  "uncompressed": 2578376
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HuPT4_c904R1.read_count.tsv.gz",
+  "compressed": 2437695,
+  "uncompressed": 2437320
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RKN_c905R5.read_count.tsv.gz",
+  "compressed": 2579760,
+  "uncompressed": 2579365
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HOP62_c906R1.read_count.tsv.gz",
+  "compressed": 2590023,
+  "uncompressed": 2589628
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/MFM223_c903R1.read_count.tsv.gz",
+  "compressed": 2430082,
+  "uncompressed": 2429712
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/PC14_c906R3.read_count.tsv.gz",
+  "compressed": 2579374,
+  "uncompressed": 2578979
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HSC39_c908R1.read_count.tsv.gz",
+  "compressed": 2567917,
+  "uncompressed": 2567522
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OVR4_c905R1.read_count.tsv.gz",
+  "compressed": 2598225,
+  "uncompressed": 2597825
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/CO678_c903R4.read_count.tsv.gz",
+  "compressed": 2455433,
+  "uncompressed": 2455058
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OV90_c905R1.read_count.tsv.gz",
+  "compressed": 2583566,
+  "uncompressed": 2583171
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU81_c903R2.read_count.tsv.gz",
+  "compressed": 2447371,
+  "uncompressed": 2446996
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A253_c908R3.read_count.tsv.gz",
+  "compressed": 2596749,
+  "uncompressed": 2596349
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC78_c906R6.read_count.tsv.gz",
+  "compressed": 2584772,
+  "uncompressed": 2584377
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DANG_c904R1.read_count.tsv.gz",
+  "compressed": 2440890,
+  "uncompressed": 2440515
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DIFI_C902R1_F1D21.read_count.tsv.gz",
+  "compressed": 2449194,
+  "uncompressed": 2448819
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC193_c903R3.read_count.tsv.gz",
+  "compressed": 2443711,
+  "uncompressed": 2443336
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RMGI_c905R3.read_count.tsv.gz",
+  "compressed": 2529286,
+  "uncompressed": 2528901
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KYSE70_c907R1.read_count.tsv.gz",
+  "compressed": 2579496,
+  "uncompressed": 2579101
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R2_F1D15.read_count.tsv.gz",
+  "compressed": 2441458,
+  "uncompressed": 2441083
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/RCM1_c903R2.read_count.tsv.gz",
+  "compressed": 2424502,
+  "uncompressed": 2424132
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/OC314_c905R3.read_count.tsv.gz",
+  "compressed": 2588978,
+  "uncompressed": 2588583
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HCC142_c904R6.read_count.tsv.gz",
+  "compressed": 2450529,
+  "uncompressed": 2450154
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2780A_c905R3.read_count.tsv.gz",
+  "compressed": 2579220,
+  "uncompressed": 2578825
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DKMG_c907R1.read_count.tsv.gz",
+  "compressed": 2586444,
+  "uncompressed": 2586049
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/A2058_c903R2.read_count.tsv.gz",
+  "compressed": 2451785,
+  "uncompressed": 2451410
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SNU61_c903R3.read_count.tsv.gz",
+  "compressed": 2446197,
+  "uncompressed": 2445822
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/EFO21_c905R3.read_count.tsv.gz",
+  "compressed": 2580023,
+  "uncompressed": 2579628
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB6_c906R1.read_count.tsv.gz",
+  "compressed": 2590678,
+  "uncompressed": 2590283
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/HO1u1_c908R2.read_count.tsv.gz",
+  "compressed": 2583863,
+  "uncompressed": 2583468
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/KM12_c908R5_75.read_count.tsv.gz",
+  "compressed": 2583805,
+  "uncompressed": 2583410
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SW620_C902R1_F1D24.read_count.tsv.gz",
+  "compressed": 2419302,
+  "uncompressed": 2418932
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H2087_c906R1.read_count.tsv.gz",
+  "compressed": 2575755,
+  "uncompressed": 2575360
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/H23_c906R3.read_count.tsv.gz",
+  "compressed": 2583309,
+  "uncompressed": 2582914
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/DANG_c904R3.read_count.tsv.gz",
+  "compressed": 2438753,
+  "uncompressed": 2438378
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/LC1sq_c906R2.read_count.tsv.gz",
+  "compressed": 2587433,
+  "uncompressed": 2587038
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/SCC9_c908R2.read_count.tsv.gz",
+  "compressed": 2598624,
+  "uncompressed": 2598224
+ },
+ {
+  "name": "Project_score_raw_counts/Release1/raw_sgrna_counts/NB13_c906R2.read_count.tsv.gz",
+  "compressed": 2581793,
+  "uncompressed": 2581398
+ }
+]

@@ -1,0 +1,11 @@
+TERMINAL DETERMINATION (gpt-6.1-sol, xhigh, protected terminal slot 2 of 3). Read-only.
+Judge GOAL /Users/bmarti44/github/bufferright/research/GOAL.md gate-by-gate C1-C13 vs cancer_rsi_handoff.txt section 12, over the complete current evidence package in cancer-dependency-rsi/: status.json, STATUS.md (updates a-p), lock_s/, atlas/v4, manuscript/manuscript_draft_v1.md + limitations_statement.md + reproducibility_report.md, GENERATIONS.md, generations/{pgen001,pgen002,pgen003,sgen001,sgen002}, reviews (latest: v3_fix 91, sgen002 86->fix 91, endpoint ruling ENDPOINT:NO/PGEN004:NO_GO, identity CONFIRMED 142 patients with unquantified patient-weighting effects), ledger/.
+Rules: COMPLETE_* requires EVERY relevant gate incl C8/C9 documented, your score >=90 and zero unresolved high/critical objections; you supplement evidence, never waive gates. If not complete, certify the honest terminal state for THIS checkpoint and list exact unmet gates + the ranked mandate list (cheapest discriminating steps first) for continued generations - the user mandates continuing generation after generation until you determine COMPLETE_*, so mandates must be executable and legal within ceilings (no C re-use, no endpoint switching, $0 metered spend unless user sets a cap).
+End exactly:
+TERMINAL_STATE: <one of GOAL terminal states or ACTIVE_NOT_TERMINAL>
+GOAL_COMPLETE: YES|NO
+SCORE: <0-100, support for this determination>
+MET: <gates>
+PARTIAL: <gates>
+UNMET: <gates>
+NEXT_MANDATES: <ranked, semicolon-separated>

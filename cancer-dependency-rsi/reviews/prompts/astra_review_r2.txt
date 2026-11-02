@@ -1,0 +1,48 @@
+You are a skeptical reviewer (xhigh), ROUND 2. In round 1 you scored this
+analysis 68/100 (verdict: reviews/astra_review_r1.md) with 3 high, 6 medium,
+2 low issues (one further low counted in release items). The authors claim
+all are fixed; dispositions with pointers: reviews/astra_review_r1_dispositions.md.
+
+Your job: verify the FIXES are real and correct, hunt for regressions or new
+errors introduced by the fixes, and re-score. Do not re-litigate settled
+points you confirmed in round 1 (estimator arithmetic, BH, slopes) unless
+the regeneration changed them — the tables WERE regenerated (v2r2:
+dev-only 22-model calibration, symmetric format rule + flag_fdr, HC3,
+screen-level Humagne, %.6g export), so numeric claims need fresh spot checks
+against the new artifacts.
+
+Specifically verify:
+1. Dev-only calibration/preprocessing actually happens before offset/filter/
+   imputation in medium_attribution_v2.py, _heldout.py, _loo.py, _boot.py;
+   held-out baseline is disjoint (78 reserved FBS) — recompute its headline
+   stats from the saved heldout tables.
+2. Symmetric format rule + ratio_F CI implementation; LSM7 as sole format
+   candidate (norm); flag_fdr has 0; tests/test_medium_attribution.py new
+   tests are honest (would fail on the old code).
+3. HC3 implementation vs statsmodels on a real contrast (not just synthetic);
+   HC3 sensitivity numbers in JSON (81.5%/75.4%).
+4. Bootstrap (medium_attribution_v2_boot.py): resampling correctness
+   (offset re-estimated per rep, model resampling, flag frequency math);
+   whether CI [0.81, 0.98] and per-rep fraction median 0.64 are computed
+   as described; any index misalignment in the resampled design.
+5. Common-support block: subset definitions and numbers (38 domes, slope 0.89).
+6. Screen-level Humagne sensitivity: truly Humagne-only screens now (7 FBS
+   models, corr 0.78).
+7. Export round-trip: reapplying the hit rule to the exported CSVs yields
+   the stored hit counts (ATG14 class of bug) on BOTH scales.
+8. Sanger t5 collapse-within-model; HPLM direction-separated enrichments
+   (gains-only OR 4.38 / prevalence 4.21 / p=0.007 for RPMI-side).
+9. Manuscript v2r2: every numeric claim vs new artifacts; causal language
+   now scoped (medium-consistent, formulation family, depletion kinetics as
+   hypothesis, title denominator); panel direction counts (ribosomal 13
+   losses/2 gains of 38; spliceosome 5/2 of 35); SCAP criterion (p=0.057);
+   Neiswender format-gene acknowledgement accuracy.
+10. Anything the fixes broke: figures vs new tables, survivor CSV, release
+    README run order/inputs, VALIDATION.json honesty (does validate_release.py
+    actually recompute or just echo constants?).
+
+Output (Markdown): SCORE integer 0-100 (same anchors as round 1: 90+ = ship
+it; a headline-flipping issue caps below 75), VERDICT, per-issue disposition
+check (fixed / partially / not fixed, with evidence), NEW issues by severity
+with file:line evidence and smallest fix, CHECKS RUN with your recomputed
+values. No padding; empty tiers stated.

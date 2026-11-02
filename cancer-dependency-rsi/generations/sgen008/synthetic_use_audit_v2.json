@@ -1,0 +1,12 @@
+{
+  "audit": "synthetic/simulated data uses (v2, supersedes sgen005 audit refs which named two nonexistent paths - corrected here)",
+  "substantive_simulation_uses": [],
+  "mechanical_code_diagnostics": [
+    {"use": "donor-kernel synthetic calibration fixtures (95/100 null, 97/100 nonzero coverage, v2)", "role": "algorithmic code diagnostic only; not biology or nominal-coverage certification", "artifacts": ["diagnostics/donor_calibration_v2/fixture_manifest.json", "src/donor_kernel.py"]},
+    {"use": "unit-test fixtures (synthetic DataFrames/zips/processes in tests/)", "role": "software regression tests only", "artifacts": ["tests/test_zipfetch.py", "tests/test_tree_cpu.py"]},
+    {"use": "sgen004 worst-case envelope arithmetic on retained locked outputs", "role": "deterministic sensitivity bound; no simulated outcomes", "artifacts": ["generations/sgen004/envelope_v3.json"]}
+  ],
+  "assertions": ["No simulated outcomes were used for claim/policy selection at any gate.",
+                 "No synthetic donor uncertainty was propagated into the locked interval.",
+                 "Replay (when built) may contain only recorded real artifacts."]
+}

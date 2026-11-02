@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>It's the Medium: are "organoid-specific" cancer targets really about the food?</title>
+<meta name="description" content="Labs grow mini tumours called organoids to find cancer drug targets. We rechecked two 2026 Nature studies with public data: 85% of the organoid-specific gene effects also appear when ordinary cells just eat organoid food. Search all 17,525 genes, or ask the data in plain English.">
+<meta name="theme-color" content="#0c0a08">
+<link rel="canonical" href="https://www.itsthemedium.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.itsthemedium.com/">
+<meta property="og:title" content="It's the Medium: is it the cancer, or is it the menu?">
+<meta property="og:description" content="85% of the genes that looked special in 2026's organoid cancer maps follow the food, not the 3D shape. Search any of 17,525 genes.">
+<meta property="og:image" content="https://www.itsthemedium.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.itsthemedium.com/assets/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23ff4b2e' stroke-width='2.5'/%3E%3Ccircle cx='12' cy='13' r='2.2' fill='%23ff4b2e'/%3E%3Ccircle cx='19' cy='18' r='1.6' fill='%23eda93c'/%3E%3Ccircle cx='15' cy='20' r='1.2' fill='%23f3ecdd'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="data/genes.json" as="fetch" crossorigin>
+<style>
+:root{
+  --bg:#0c0a08; --bg2:#14100c; --bone:#f3ecdd; --bone-dim:#c4b9a2; --faint:#6f6455;
+  --phenol:#ff4b2e; --phenol-dk:#b02e12; --amber:#eda93c; --ochre:#e8c15a; --sky:#7fd4ff; --ok:#3fae7a;
+  --paper:#f3ecdd; --paper2:#ece2cb; --ink:#1a1510; --ink-mut:#5a5040; --rule:#d8ccb0; --panel:#ede4cf;
+  --serif:"Fraunces","Iowan Old Style",Georgia,serif;
+  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --head-h:64px;
+  --gutter:clamp(20px,6vw,96px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--bone);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:#b02e12;color:#fff}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:300;background:var(--bone);color:var(--ink);padding:10px 14px;border-radius:6px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- fixed layers ---------- */
+#gl{position:fixed;inset:0;z-index:0;background:
+  radial-gradient(120% 90% at 72% 18%, #2a160d 0%, rgba(42,22,13,0) 55%),
+  radial-gradient(90% 70% at 15% 85%, #191008 0%, rgba(25,16,8,0) 60%), var(--bg)}
+#gl canvas{display:block}
+.vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(115% 100% at 50% 42%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%)}
+.grain{position:fixed;inset:-50%;z-index:2;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-4%)}60%{transform:translate(-3%,-2%)}80%{transform:translate(4%,3%)}}
+#loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .7s ease, visibility .7s;padding:24px;text-align:center}
+#loader.done{opacity:0;visibility:hidden}
+#loader .count{font-family:var(--serif);font-weight:900;font-size:clamp(54px,10vw,110px);line-height:1;font-variation-settings:"opsz" 144;font-variant-numeric:tabular-nums}
+#loader .sub{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--bone-dim);text-transform:uppercase}
+#loader .trackline{width:min(420px,70vw);height:2px;background:#2b2318;overflow:hidden}
+#loader .trackline i{display:block;height:100%;width:0;background:var(--phenol)}
+
+/* ---------- header ---------- */
+header.bar{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--head-h);transition:background .4s ease, border-color .4s ease;border-bottom:1px solid transparent;
+  background:linear-gradient(rgba(12,10,8,.92),rgba(12,10,8,.55) 70%,rgba(12,10,8,0))}
+.bar-in{max-width:1440px;margin:0 auto;height:100%;padding:0 clamp(16px,2.4vw,32px);display:flex;align-items:center;gap:18px}
+.wordmark{font-family:var(--serif);font-weight:900;font-size:21px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap;flex:none}
+.wordmark em{font-style:italic;color:var(--phenol)}
+.live-chip{font-family:var(--mono);font-size:11.5px;color:var(--bone-dim);border:1px solid #38301f;padding:6px 11px;border-radius:99px;white-space:nowrap;background:rgba(12,10,8,.45);flex:none}
+.live-chip b{color:var(--amber);font-weight:600}
+.live-chip .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:7px;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+nav.desk{display:flex;gap:clamp(12px,1.6vw,24px);margin-left:auto;align-items:center}
+nav.desk a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--bone-dim);text-transform:uppercase;padding:6px 2px;position:relative;white-space:nowrap}
+nav.desk a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--phenol);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+nav.desk a:hover,nav.desk a.cur{color:var(--bone)}
+nav.desk a:hover::after,nav.desk a.cur::after{transform:scaleX(1);transform-origin:left}
+nav.desk a.ai{color:var(--amber)}
+.ai-spark{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin-right:5px}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid rgba(243,236,221,.35);color:var(--bone);border-radius:99px;padding:8px 14px 8px 12px;font:600 13px var(--sans);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;align-items:center;gap:9px;min-height:40px}
+.menu-btn .bars3{width:16px;height:10px;position:relative;display:inline-block}
+.menu-btn .bars3::before,.menu-btn .bars3::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;border-radius:2px;transition:transform .3s}
+.menu-btn .bars3::before{top:0}.menu-btn .bars3::after{bottom:0}
+.menu-open .menu-btn .bars3::before{transform:translateY(4px) rotate(45deg)}
+.menu-open .menu-btn .bars3::after{transform:translateY(-4px) rotate(-45deg)}
+body.on-paper header.bar{background:rgba(243,236,221,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom-color:var(--rule)}
+body.on-paper .wordmark{color:var(--ink)} body.on-paper .wordmark em{color:var(--phenol-dk)}
+body.on-paper nav.desk a{color:var(--ink-mut)} body.on-paper nav.desk a:hover, body.on-paper nav.desk a.cur{color:var(--ink)}
+body.on-paper nav.desk a.ai{color:var(--phenol-dk)}
+body.on-paper .live-chip{background:transparent;border-color:var(--rule);color:var(--ink-mut)}
+body.on-paper .live-chip b{color:var(--ink-mut)}
+body.on-paper .menu-btn{color:var(--ink);border-color:rgba(26,21,16,.3)}
+#menu{position:fixed;inset:0;z-index:99;background:rgba(12,10,8,.97);padding:calc(var(--head-h) + 18px) 24px 28px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .3s, visibility .3s;overflow-y:auto}
+.menu-open #menu{opacity:1;visibility:visible}
+.menu-open header.bar{background:rgba(12,10,8,.97)!important;border-bottom-color:#2b2318!important}
+.menu-open .wordmark{color:var(--bone)!important}.menu-open .wordmark em{color:var(--phenol)!important}
+.menu-open .menu-btn{color:var(--bone)!important;border-color:rgba(243,236,221,.35)!important}
+#menu a{font-family:var(--serif);font-weight:800;font-size:clamp(28px,7vw,40px);color:var(--bone);text-decoration:none;padding:10px 0;border-bottom:1px solid #2b2318;display:flex;justify-content:space-between;align-items:baseline}
+#menu a small{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--bone-dim);letter-spacing:.1em;text-transform:uppercase}
+#menu a.ai{color:var(--amber)}
+#menu .menu-foot{margin-top:auto;padding-top:22px;font-family:var(--mono);font-size:12px;color:var(--bone-dim)}
+@media (max-width:1439px){.live-chip{display:none}}
+@media (max-width:1279px){nav.desk a[href="#short"]{display:none}}
+@media (max-width:1023px){nav.desk{display:none}.menu-btn{display:inline-flex}}
+
+/* ---------- progress rail ---------- */
+#rail{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;transition:opacity .4s}
+#rail button{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px;color:var(--bone-dim);position:relative}
+#rail .pip{width:9px;height:9px;border-radius:50%;border:1.5px solid currentColor;transition:all .3s;flex:none}
+#rail .lab{position:absolute;left:28px;top:50%;transform:translate(-4px,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:0;transition:all .25s;white-space:nowrap;pointer-events:none;background:rgba(12,10,8,.85);padding:4px 8px;border-radius:4px;color:var(--bone)}
+#rail button:hover .lab,#rail button:focus-visible .lab{opacity:1;transform:translate(0,-50%)}
+#rail button.on{color:var(--phenol)} #rail button.on .pip{background:var(--phenol);box-shadow:0 0 12px rgba(255,75,46,.8)}
+body.on-paper #rail,body.near-paper #rail{opacity:0;pointer-events:none;visibility:hidden}
+@media (max-width:1023px){#rail{display:none}}
+
+/* ---------- story stage ---------- */
+#story{position:relative;z-index:3;height:560vh}
+.stage-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;pointer-events:none}
+.stage-pin .pe{pointer-events:auto}
+.chapter{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--head-h) + 20px) var(--gutter) 56px max(var(--gutter),64px);pointer-events:none;opacity:0;visibility:hidden}
+.chapter .pe{pointer-events:auto}
+.ch-kick{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;line-height:1.5}
+.ch-kick::before{content:"";display:inline-block;width:30px;height:1.5px;background:var(--phenol);vertical-align:middle;margin-right:12px}
+.display{font-family:var(--serif);font-weight:900;font-variation-settings:"opsz" 144;line-height:.94;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.display em{font-style:italic;color:var(--phenol);font-weight:600}
+.display .hollow{color:transparent;-webkit-text-stroke:1.5px var(--bone)}
+.hero-h{font-size:clamp(44px,min(10.5vw,14.5vh),156px)}
+.ch-h{font-size:clamp(38px,min(7vw,11vh),100px);max-width:11em}
+.ch-copy{max-width:540px;font-size:clamp(15.5px,min(1.25vw,2.3vh),18px);line-height:1.6;color:#e6dcc6;margin:20px 0 0;text-wrap:pretty}
+.ch-copy b{color:#fff}
+.ch-copy.small{font-size:13.5px;color:var(--bone-dim);margin-top:12px}
+.chapter.right{align-items:flex-end}
+.chapter.right > *{width:min(620px,46vw)}
+.chapter.right .ch-copy{max-width:none}
+.chapter.right .ch-h{max-width:none;font-size:clamp(36px,min(4.6vw,8.6vh),80px)}
+.line-mask{display:block;overflow:hidden;padding-bottom:.06em}
+.line-mask>span{display:block;transform:translateY(110%)}
+.scroll-cue{position:absolute;left:50%;transform:translateX(-50%);bottom:22px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--bone-dim);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px;white-space:nowrap}
+.scroll-cue i{display:block;width:1.5px;height:38px;background:linear-gradient(var(--phenol),transparent);animation:drip 1.9s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-x{pointer-events:auto;font:600 15px var(--sans);letter-spacing:.02em;padding:14px 22px;border-radius:99px;border:1.5px solid var(--bone);background:rgba(12,10,8,.35);color:var(--bone);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:background .3s,color .3s,border-color .3s,transform .3s;min-height:48px}
+.btn-x:hover{background:var(--bone);color:var(--ink)}
+.btn-x.hot{background:var(--phenol-dk);border-color:var(--phenol-dk);color:#fff}
+.btn-x.hot:hover{background:#c93318;border-color:#c93318;color:#fff;transform:translateY(-1px)}
+.btn-x .arr{transition:transform .3s}
+.btn-x:hover .arr{transform:translateY(3px)}
+.big-num{font-family:var(--serif);font-weight:900;font-size:clamp(84px,min(16vw,24vh),240px);line-height:.88;color:var(--bone);font-variation-settings:"opsz" 144;font-variant-numeric:tabular-nums}
+.big-num .pct{color:var(--phenol)}
+.axis-note{position:absolute;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--bone-dim);text-transform:uppercase;white-space:nowrap}
+.axis-note.ax{right:5vw;bottom:9vh}
+.axis-note.ay{right:calc(5vw + 4px);bottom:calc(9vh + 32px);writing-mode:vertical-rl;transform:rotate(180deg)}
+.surv-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.surv-grid button{pointer-events:auto;font:600 13px var(--mono);padding:9px 14px;border-radius:99px;border:1px solid #5a4a2e;background:rgba(20,16,12,.7);color:var(--ochre);cursor:pointer;transition:all .25s;min-height:40px}
+.surv-grid button:hover{border-color:var(--ochre);background:rgba(232,193,90,.14);transform:translateY(-2px)}
+.surv-grid button.fmt{color:var(--sky);border-color:#2f5b74}
+#gene-tip{position:fixed;z-index:120;pointer-events:none;background:#fff8ea;color:var(--ink);font:500 12px var(--mono);padding:7px 11px;border-radius:6px;display:none;box-shadow:0 8px 30px rgba(0,0,0,.5);white-space:nowrap}
+#gene-tip b{font-weight:600}
+#gene-tip .v1{color:var(--phenol-dk)} #gene-tip .v2{color:#8a5a13} #gene-tip .v3{color:#1668a0}
+.legend{position:absolute;right:var(--gutter);bottom:26px;display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:11px;color:var(--bone-dim);background:rgba(12,10,8,.55);border:1px solid #2b2318;border-radius:10px;padding:11px 14px;line-height:1.3}
+.legend .t{color:var(--bone);font-weight:600;letter-spacing:.06em;margin-bottom:2px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.no-gl .legend,.no-gl .mini-legend{display:none}
+.mini-legend{display:inline-flex;align-self:flex-start;gap:6px 16px;flex-wrap:wrap;margin-top:14px;background:rgba(12,10,8,.72);border:1px solid #2b2318;border-radius:99px;padding:7px 14px;font-family:var(--mono);font-size:11.5px;color:var(--bone-dim)}
+.mini-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.chapter.right .legend{right:auto;left:max(var(--gutter),64px)}
+
+/* ---------- ticker ---------- */
+.ticker{position:relative;z-index:4;background:var(--phenol-dk);color:#fff;overflow:hidden;padding:13px 0;border-top:1px solid #000;border-bottom:1px solid #000}
+.ticker .belt{display:flex;width:max-content;animation:belt 46s linear infinite}
+.ticker span{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;padding:0 18px;white-space:nowrap}
+.ticker span.dim{font-weight:400;opacity:.85}
+@keyframes belt{to{transform:translateX(-50%)}}
+
+/* ---------- paper world ---------- */
+.paper{position:relative;z-index:5;background:linear-gradient(var(--paper),var(--paper) 92%,var(--paper2));color:var(--ink);border-top:3px solid var(--ink)}
+.paper::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(rgba(26,21,16,.055) 1px,transparent 1.4px);background-size:26px 26px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 clamp(18px,4vw,28px);position:relative}
+.paper section{padding:76px 0 10px;scroll-margin-top:72px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-top:2.5px solid var(--ink);padding-top:20px;margin-bottom:10px}
+.paper .wrap{counter-reset:sec}
+.paper section{counter-increment:sec}
+.sec-no{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--phenol-dk);flex:none}
+.sec-no::before{content:counter(sec, decimal-leading-zero)}
+.paper h2{font-family:var(--serif);font-weight:900;font-size:clamp(30px,4.4vw,48px);margin:0;letter-spacing:-.015em;line-height:1.04;text-wrap:balance}
+.paper h2 em{font-style:italic;font-weight:600;color:var(--phenol-dk)}
+.sec-sub{color:var(--ink-mut);max-width:780px;margin:10px 0 0;font-size:17px;line-height:1.6;text-wrap:pretty}
+.paper h3{font-family:var(--serif);font-weight:700;font-size:clamp(21px,2.4vw,25px);margin:38px 0 8px;line-height:1.2;text-wrap:balance}
+.paper p{max-width:780px;line-height:1.65;text-wrap:pretty}
+.paper a{color:var(--phenol-dk);text-decoration:none;border-bottom:1px solid #e0a294}
+.paper a:hover{color:#b02e12;border-bottom-color:#b02e12}
+.paper a.btn{border-bottom:1.5px solid var(--ink)}
+small.note{color:var(--ink-mut);font-size:13px}
+.plain{background:#fffdf6;border-left:4px solid var(--phenol-dk);padding:14px 18px;margin:14px 0;max-width:780px;border-radius:0 6px 6px 0}
+.plain b.k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--phenol-dk);display:block;margin-bottom:4px}
+
+/* short version cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0 10px}
+.card{background:#fffdf6;border:2px solid var(--ink);border-radius:6px;padding:22px 22px 20px;box-shadow:6px 6px 0 rgba(26,21,16,.14);position:relative}
+.card .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font:700 15px var(--mono);margin-bottom:14px}
+.card:nth-child(2) .ic{background:var(--phenol-dk)}
+.card:nth-child(3) .ic{background:#2d6a4f}
+.card h3{margin:0 0 8px;font-size:22px}
+.card p{margin:0;font-size:15.5px;line-height:1.6;color:#2f281c}
+.card p b{color:var(--ink)}
+.researcher-line{margin:18px 0 0;font-size:14px;color:var(--ink-mut);max-width:none!important}
+.researcher-line b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:2.5px solid var(--ink);background:#fffdf6;margin:24px 0 6px;box-shadow:7px 7px 0 var(--ink)}
+.stat{padding:18px 20px 16px}
+.stat+.stat{border-left:1px solid var(--rule)}
+.stat .n{font-family:var(--serif);font-weight:900;font-size:clamp(30px,3.4vw,40px);line-height:1}
+.stat .n em{font-style:normal;color:var(--phenol-dk)}
+.stat .l{font-size:13px;color:var(--ink-mut);margin-top:8px;line-height:1.45}
+
+.searchbox{margin:26px 0 6px}
+.sfield{position:relative}
+.searchbox .sicon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--ink-mut);pointer-events:none}
+.searchbox input{width:100%;font-family:var(--mono);font-size:clamp(16px,1.8vw,20px);padding:19px 20px 19px 54px;border:2.5px solid var(--ink);border-radius:6px;background:#fffdf6;color:var(--ink);outline:none;box-shadow:5px 5px 0 rgba(26,21,16,.16);transition:box-shadow .25s,border-color .25s;-webkit-appearance:none;appearance:none}
+.searchbox input:focus{border-color:var(--phenol-dk);box-shadow:5px 5px 0 var(--phenol)}
+.searchbox input::placeholder{color:#857a66}
+.search-hint{font-size:13.5px;color:var(--ink-mut);margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.search-hint .pill{font-family:var(--mono);font-size:12.5px;font-weight:600;background:#fffdf6;border:1.5px solid var(--rule);border-radius:99px;color:var(--phenol-dk);cursor:pointer;padding:5px 11px;transition:all .2s;min-height:32px}
+.search-hint .pill:hover{border-color:var(--phenol-dk);background:#fdeee9}
+.search-hint .kbd{margin-left:auto;font-size:12.5px}
+.search-hint kbd{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;padding:1px 6px;background:#fffdf6}
+#askHint{display:none;margin-top:12px;font-size:14.5px;align-items:center;gap:10px;flex-wrap:wrap}
+#askHint.show{display:flex}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 14px}
+.chip{font:600 13px var(--sans);padding:8px 14px;border:1.5px solid var(--ink);border-radius:99px;background:#fffdf6;color:var(--ink);cursor:pointer;transition:all .2s;min-height:38px}
+.chip:hover{transform:translateY(-1px);box-shadow:2px 2px 0 var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chip .cnt{font-family:var(--mono);font-size:11px;margin-left:6px;opacity:.75}
+.chip-group-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mut);width:100%;margin-top:4px}
+.table-scroll{overflow-x:auto;border:2px solid var(--ink);background:#fffdf6;box-shadow:7px 7px 0 rgba(26,21,16,.14);border-radius:4px;-webkit-overflow-scrolling:touch}
+table.genes{width:100%;border-collapse:collapse;font-size:14px}
+table.genes th{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mut);text-align:right;padding:12px;border-bottom:2px solid var(--ink);user-select:none;white-space:nowrap;background:#fffdf6;vertical-align:bottom;position:sticky;top:0}
+table.genes th .sub{display:block;font-size:9.5px;letter-spacing:.04em;text-transform:none;font-weight:500;color:#8a7f6a;margin-top:2px}
+table.genes th:first-child,table.genes td:first-child{text-align:left}
+table.genes th:nth-child(2),table.genes td:nth-child(2){text-align:left}
+table.genes th .dir{color:var(--phenol-dk)}
+table.genes td{padding:9px 12px;border-bottom:1px solid #e7dcc2;font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.genes td:first-child{font-weight:600;font-size:14px}
+.glink{font:inherit;font-weight:600;background:none;border:none;padding:0;color:inherit;cursor:pointer;text-align:left}
+.glink:hover{color:var(--phenol-dk);text-decoration:underline}
+.thbtn{font:inherit;background:none;border:none;padding:0;color:inherit;cursor:pointer;letter-spacing:inherit;text-transform:inherit;text-align:inherit}
+.thbtn:hover{color:var(--ink)}
+table.genes tbody tr{cursor:pointer;transition:background .15s}
+table.genes tbody tr:hover{background:#f7ecd2}
+table.genes tbody tr.sel{background:#fdeee9;box-shadow:inset 3px 0 0 var(--phenol)}
+table.genes td.empty{text-align:left;font-family:var(--sans);white-space:normal;padding:22px 16px;color:var(--ink-mut);cursor:default}
+.badge{display:inline-block;font:700 10.5px var(--sans);letter-spacing:.05em;padding:3px 9px;border-radius:99px;color:#fff;white-space:nowrap;text-transform:uppercase}
+.badge .bs{display:none} th .hs{display:none}
+.b-med{background:var(--phenol-dk)} .b-unr{background:#8a5f10} .b-fmt{background:#1668a0} .b-no{background:#6e6249}
+.tag{display:inline-block;font:600 11px var(--sans);border:1px solid var(--ink-mut);color:var(--ink-mut);border-radius:4px;padding:2px 6px;white-space:nowrap}
+.how-read{font-size:13px;color:var(--ink-mut);margin:10px 0 0;max-width:none!important}
+
+#detail{border:2.5px solid var(--ink);border-radius:6px;background:#fffdf6;padding:clamp(18px,2.6vw,28px);margin:22px 0 6px;display:none;box-shadow:7px 7px 0 var(--phenol);scroll-margin-top:84px}
+#detail.open.muted-q{display:none}
+#detail.open{display:block;animation:pop .45s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.99)}to{opacity:1;transform:none}}
+.d-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.d-name{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.d-top h3{margin:0;font-family:var(--serif);font-weight:900;font-size:clamp(30px,3.6vw,40px);line-height:1}
+.d-tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.d-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.backlist{margin-top:12px;font:600 13px var(--sans);background:none;border:none;border-bottom:1.5px solid var(--phenol);color:var(--phenol-dk);padding:2px 0;cursor:pointer}
+.backlist:hover{color:var(--ink)}
+.d-head{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.3;margin:18px 0 4px;max-width:820px;text-wrap:balance}
+.d-head em{font-style:normal;color:var(--phenol-dk)}
+.d-cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;margin-top:18px;align-items:start}
+.bars{margin:4px 0 4px}
+.bar-row{display:grid;grid-template-columns:minmax(120px,170px) 1fr 52px;align-items:center;gap:12px;margin:9px 0;font-size:12.5px}
+.bar-row .lab{font-size:13px;color:var(--ink);line-height:1.25}
+.bar-row .lab small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-mut)}
+.track{position:relative;height:16px;background:var(--panel);border:1px solid var(--rule);border-radius:2px}
+.track .zero{position:absolute;top:-3px;bottom:-3px;width:1.6px;background:var(--ink)}
+.track .fill{position:absolute;top:2px;bottom:2px;transition:all .5s cubic-bezier(.6,0,.2,1);border-radius:1px}
+.bar-row .val{font-family:var(--mono);text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.bars-axis{display:grid;grid-template-columns:minmax(120px,170px) 1fr 52px;gap:12px;font-family:var(--mono);font-size:10.5px;color:var(--ink-mut)}
+.bars-axis span:nth-child(2){display:flex;justify-content:space-between;gap:8px}
+.meter{height:11px;background:var(--panel);border:1px solid var(--rule);position:relative;margin-top:6px;border-radius:2px}
+.meter i{position:absolute;inset:1px auto 1px 1px;background:var(--ok);transition:width .6s cubic-bezier(.6,0,.2,1)}
+.tech{margin-top:18px;border-top:1.5px solid var(--rule);padding-top:4px}
+.tech summary{font-family:var(--sans);font-size:14px;font-weight:600}
+.tech p{font-size:14.5px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px}
+.dl{font-size:13.5px}.dl b{font-family:var(--mono);font-size:12.5px}
+.btn{font:600 13.5px var(--sans);border:1.5px solid var(--ink);background:#fffdf6;color:var(--ink);padding:9px 15px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .2s;min-height:40px}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.primary{background:var(--phenol-dk);border-color:var(--phenol-dk);color:#fff}
+.btn.primary:hover{background:#c93318;border-color:#c93318;color:#fff}
+.paper a.btn.primary{border-bottom:1.5px solid var(--phenol-dk);color:#fff}
+.more{margin:16px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+
+/* ---------- AI (Muse) ---------- */
+.ai-card{background:linear-gradient(180deg,#1b1510,#120e0a);color:var(--bone);border-radius:8px;padding:18px 20px 16px;position:relative;overflow:hidden;border:1px solid #3a2e1e}
+.ai-card::before{content:"";position:absolute;inset:-1px;border-radius:8px;padding:1px;background:linear-gradient(120deg,rgba(255,75,46,.7),rgba(237,169,60,.5),rgba(127,212,255,.35),rgba(255,75,46,.7));background-size:300% 300%;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:aiglow 6s linear infinite;pointer-events:none}
+@keyframes aiglow{to{background-position:300% 0}}
+.ai-head{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.ai-head .dotp{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+.ai-head .src{margin-left:auto;color:#8f846f;letter-spacing:.08em;text-transform:none}
+.ai-body{font-size:15px;line-height:1.62;color:#ece3cf;min-height:3.2em}
+.ai-body p{margin:0 0 10px;max-width:none}
+.ai-body ul{margin:4px 0 10px;padding-left:18px}
+.ai-body li{margin:3px 0}
+.ai-body b{color:#fff}
+.ai-body h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:14px 0 4px;font-weight:600}
+.ai-body h4:first-child{margin-top:0}
+.ai-body .gref{font:600 13.5px var(--mono);background:rgba(255,75,46,.14);color:#ffb3a3;border:none;border-bottom:1px dashed rgba(255,179,163,.6);padding:0 3px;border-radius:3px;cursor:pointer}
+.ai-body .gref:hover{background:var(--phenol-dk);color:#fff}
+.ai-caret{display:inline-block;width:8px;height:1.05em;background:var(--amber);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.ai-skel{display:flex;flex-direction:column;gap:9px}
+.ai-skel i{display:block;height:11px;border-radius:6px;background:linear-gradient(90deg,#2a2118,#3b2f21,#2a2118);background-size:200% 100%;animation:shimmer 1.3s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.ai-foot{margin-top:10px;font-size:12px;color:#8f846f;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.ai-foot button{font:600 12px var(--sans);background:none;border:1px solid #4a3d28;color:var(--bone-dim);border-radius:99px;padding:5px 11px;cursor:pointer}
+.ai-foot button:hover{border-color:var(--amber);color:var(--bone)}
+.ai-err{color:#ffb3a3}
+#ask .askbox{display:flex;gap:10px;margin:26px 0 10px;flex-wrap:wrap}
+#ask input{flex:1 1 320px;min-width:0;font:500 clamp(16px,1.7vw,19px) var(--sans);padding:17px 18px;border:2.5px solid var(--ink);border-radius:6px;background:#fffdf6;color:var(--ink);outline:none;box-shadow:5px 5px 0 rgba(26,21,16,.16);-webkit-appearance:none;appearance:none}
+#ask input:focus{border-color:var(--phenol-dk);box-shadow:5px 5px 0 var(--phenol)}
+:is(#ask,#check) .askbtn{font:700 16px var(--sans);padding:0 26px;min-height:58px;border-radius:6px;border:2.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+:is(#ask,#check) .askbtn:hover{background:var(--phenol-dk);border-color:var(--phenol-dk)}
+:is(#ask,#check) .askbtn[disabled]{opacity:.6;cursor:wait}
+.suggest{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}
+.suggest button{font:500 14px var(--sans);text-align:left;padding:9px 14px;border-radius:99px;border:1.5px dashed #b9a982;background:transparent;color:var(--ink);cursor:pointer;transition:all .2s;min-height:40px}
+.suggest button:hover{border-style:solid;border-color:var(--ink);background:#fffdf6}
+#askOut{margin-top:6px;display:none}
+#askOut.show{display:block}
+#askOut .q{font-family:var(--serif);font-weight:700;font-size:19px;color:#fff;margin:0 0 10px}
+#detail .ai-card{margin-top:20px}
+.d-cols.solo{grid-template-columns:minmax(0,760px)}
+.ai-card.ai-min{padding:12px 16px}
+.ai-card.ai-min::before{display:none}
+.ai-card.ai-min .ai-body{min-height:0;font-size:13.5px;color:var(--bone-dim)}
+/* agent steps */
+.ai-steps{list-style:none;margin:0 0 12px;padding:0 0 10px;border-bottom:1px dashed #4a3d28;font:13px/1.5 var(--mono);color:#e4d9c2}
+.ai-steps li{display:flex;gap:9px;margin:3px 0;align-items:flex-start}
+.ai-steps .ok{color:#5fd39b;flex:none}
+.ai-steps .pend{color:var(--amber)}
+.ai-spin{width:11px;height:11px;border:1.6px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex:none;margin-top:4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* hit-list check */
+.listbox{margin:26px 0 6px}
+.listbox textarea{display:block;width:100%;min-height:118px;resize:vertical;font:500 16px/1.55 var(--mono);padding:16px 18px;border:2.5px solid var(--ink);border-radius:6px;background:#fffdf6;color:var(--ink);outline:none;box-shadow:5px 5px 0 rgba(26,21,16,.16);-webkit-appearance:none;appearance:none}
+.listbox textarea:focus{border-color:var(--phenol-dk);box-shadow:5px 5px 0 var(--phenol)}
+.listbox textarea::placeholder{color:#857a66;font-family:var(--sans)}
+.list-actions{display:flex;gap:12px 18px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.list-try{font-size:13.5px;color:var(--ink-mut);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.list-try .pill{font:600 12.5px var(--sans);background:#fffdf6;border:1.5px solid var(--rule);border-radius:99px;color:var(--phenol-dk);cursor:pointer;padding:6px 12px;transition:all .2s;min-height:34px}
+.list-try .pill:hover{border-color:var(--phenol-dk);background:#fdeee9}
+#listOut{display:none;margin-top:30px;scroll-margin-top:84px}
+#listOut.show{display:block;animation:pop .45s cubic-bezier(.2,1.4,.4,1)}
+.lr-title{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.25;margin:0 0 8px;max-width:920px;text-wrap:balance}
+.lr-title em{font-style:normal;color:var(--phenol-dk)}
+.lr-sub{color:var(--ink-mut);margin:0 0 16px;max-width:820px;font-size:16px}
+.lr-bar{display:flex;height:24px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;background:var(--panel);box-shadow:4px 4px 0 rgba(26,21,16,.14)}
+.lr-bar i{display:block;height:100%;min-width:3px}
+.lr-bar i+i{border-left:2px solid #fffdf6}
+.lr-legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 20px;font-size:13.5px}
+.lr-legend span{display:inline-flex;align-items:center;gap:7px}
+.lr-legend i{width:12px;height:12px;border-radius:2px;flex:none}
+.lr-legend b{font-family:var(--mono)}
+.lr-miss{font-size:14px;color:var(--ink-mut);margin:14px 0 0;max-width:820px}
+.lr-miss code{font-family:var(--mono);font-size:12.5px;color:var(--ink)}
+.lr-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+#listAI{margin:0 0 22px}
+.kbd-hint{font-size:12.5px;color:var(--ink-mut)} .kbd-hint kbd{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;padding:1px 6px;background:#fffdf6}
+.lr-jump{display:none}
+@media (max-width:1179px){ .lr-jump{display:inline-block;margin:0 0 12px;font:600 13px var(--sans);color:var(--phenol-dk);text-decoration:none;border-bottom:1.5px solid var(--phenol)} }
+@media (min-width:1180px){
+  .lr-grid:not(.solo){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:26px;align-items:start}
+  .lr-grid:not(.solo) #listAI{position:sticky;top:84px;margin:0;max-height:calc(100vh - 104px);overflow:auto;scrollbar-width:thin}
+  .lr-grid:not(.solo) #ltab .hide-sm{display:none}
+  .lr-grid:not(.solo) #ltab .badge .bl{display:none} .lr-grid:not(.solo) #ltab .badge .bs{display:inline}
+  .lr-grid:not(.solo) #ltab td,.lr-grid:not(.solo) #ltab th{padding-left:9px;padding-right:9px}
+  .lr-grid:not(.solo) #ltab th .hl{display:none} .lr-grid:not(.solo) #ltab th .hs{display:inline}
+}
+#ltab td.lists{font:500 12px/1.4 var(--sans);text-align:left;white-space:normal;min-width:150px;color:var(--ink-mut)}
+#ltab th:last-child{text-align:left}
+.c-med{background:var(--phenol-dk)} .c-unr{background:#8a5f10} .c-fmt{background:#1668a0} .c-no{background:#b9a982} .c-miss{background:repeating-linear-gradient(45deg,#e7dcc2 0 5px,#f3ecdd 5px 10px)}
+body.ai-off #ask,body.ai-off .ai-only,body.ai-off nav.desk a.ai,body.ai-off #menu a.ai,body.ai-off footer a.ai{display:none}
+
+/* charts, figures */
+.scatter-wrap{position:relative}
+canvas#scatter{width:100%;height:480px;border:2px solid var(--ink);background:#fffdf6;border-radius:6px;box-shadow:7px 7px 0 rgba(26,21,16,.14);display:block;touch-action:pan-y}
+.cap-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-mut);margin-top:12px;align-items:center}
+.cap-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.cap-legend i.dia{border-radius:0;transform:rotate(45deg);width:9px;height:9px}
+.cap-legend i.line{width:22px;height:0;border-top:2px dashed var(--ink);border-radius:0;vertical-align:3px}
+.figwrap{border:2px solid var(--ink);background:#fffdf6;padding:16px;border-radius:6px;margin:18px 0;box-shadow:7px 7px 0 rgba(26,21,16,.14)}
+.figwrap img{width:100%;height:auto;display:block}
+figcaption,.cap{font-size:13.5px;color:var(--ink-mut);margin-top:11px;line-height:1.55}
+.finding{display:grid;grid-template-columns:64px 1fr;gap:6px 18px;margin-top:40px}
+.finding .num{font-family:var(--serif);font-weight:900;font-size:52px;line-height:.9;color:var(--phenol-dk)}
+.finding h3{margin:4px 0 8px}
+.finding > div > p:first-of-type{margin-top:0}
+ol.tl{border-left:2.5px solid var(--ink);margin:30px 0 6px 8px;padding-left:0;list-style:none}
+.tl li{position:relative;padding:0 0 30px 32px}
+.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--phenol-dk)}
+.tl .when{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--phenol-dk);letter-spacing:.14em;text-transform:uppercase}
+.tl h4{font-family:var(--serif);font-weight:700;font-size:21px;margin:4px 0 5px;line-height:1.25}
+.tl p{margin:0;color:#37301f}
+.score-svg{max-width:680px;width:100%;margin:18px 0 6px}
+.src-list{display:grid;gap:0;margin:18px 0;border-top:2px solid var(--ink)}
+.src-item{display:grid;grid-template-columns:minmax(180px,1fr) 1.4fr 1.3fr;gap:14px;padding:14px 4px;border-bottom:1px solid var(--rule);font-size:14.5px;line-height:1.5}
+.src-item .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mut);display:none}
+pre.cite{background:var(--panel);border:1.5px solid var(--rule);border-radius:6px;padding:15px 17px;font-family:var(--mono);font-size:12.5px;white-space:pre-wrap;word-break:break-word;max-width:880px}
+details{border-top:1.5px solid var(--rule);padding:14px 0;max-width:880px}
+details summary{cursor:pointer;font-weight:600;font-family:var(--serif);font-size:18px;list-style:none;display:flex;align-items:center;gap:10px}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";font-family:var(--mono);font-weight:600;width:22px;height:22px;border:1.5px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:14px;flex:none;transition:transform .25s}
+details[open] summary::before{content:"−"}
+details summary:hover{color:var(--phenol-dk)}
+.dl-list{list-style:none;padding:0;margin:14px 0}
+.dl-list li{display:flex;justify-content:space-between;gap:20px;padding:14px 4px;border-bottom:1.5px solid var(--rule);max-width:900px;align-items:baseline}
+.dl-list .sz{font-family:var(--mono);font-size:12px;color:var(--ink-mut);white-space:nowrap}
+footer{position:relative;z-index:5;background:var(--bg);color:var(--bone-dim);padding:56px 0 calc(64px + env(safe-area-inset-bottom));border-top:3px solid var(--phenol)}
+footer .f-display{font-family:var(--serif);font-weight:900;font-size:clamp(34px,6vw,72px);color:var(--bone);line-height:1;margin:0 0 18px}
+footer .f-display em{font-style:italic;color:var(--phenol)}
+footer p{max-width:820px;font-size:14px;line-height:1.6}
+footer nav{display:flex;gap:8px 20px;flex-wrap:wrap;margin:22px 0 18px}
+footer nav a{color:var(--bone);text-decoration:none;font-size:14px;font-weight:600;border-bottom:1px solid #4a3d28}
+footer nav a:hover{border-color:var(--phenol)}
+.reveal{opacity:0;transform:translateY(26px)}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);font:500 12px var(--mono);padding:6px 10px;border-radius:4px;display:none;z-index:130;white-space:nowrap}
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:99px;font:600 14px var(--sans);z-index:150;opacity:0;transition:all .3s;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-height:700px) and (min-width:1024px){
+  .scroll-cue{display:none}
+  .ch-copy{margin-top:14px;line-height:1.5}
+  .hero-ctas{margin-top:18px}
+  .ch-kick{margin-bottom:10px}
+  .legend{display:none}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .chapter{padding:calc(var(--head-h) + 6px) 24px 12px!important;justify-content:flex-start}
+  .chapter::before{height:100%!important}
+  .hero-h{font-size:34px!important} .ch-h{font-size:28px!important} .big-num{font-size:60px!important}
+  .ch-kick{margin-bottom:6px;font-size:10px}
+  .ch-copy{font-size:13.5px!important;line-height:1.45!important;margin-top:8px!important;max-width:620px}
+  .ch-copy.small,.legend,.axis-note,.scroll-cue{display:none!important}
+  .hero-ctas{margin-top:10px!important}
+  .btn-x{padding:8px 14px;min-height:38px;font-size:13.5px}
+  .surv-grid{margin-top:10px} .surv-grid button{min-height:32px;padding:5px 10px;font-size:12px}
+  .surv-grid button:nth-child(n+7){display:none}
+  .chapter.right > *{width:auto}
+  .chapter > *,.chapter.right .ch-copy,.chapter.right .ch-h{max-width:50vw}
+}
+@media (max-width:1023px){
+  table.genes .hide-sm{display:none}
+  .chapter{padding:calc(var(--head-h) + 22px) 24px 32px;justify-content:flex-start}
+  .chapter::before{content:"";position:absolute;inset:0 0 auto 0;height:78%;background:linear-gradient(rgba(12,10,8,.82),rgba(12,10,8,.55) 65%,rgba(12,10,8,0));z-index:-1}
+  .chapter.right{align-items:flex-start}
+  .chapter.right > *{width:auto}
+  .legend{left:24px!important;right:auto!important;bottom:20px;flex-direction:row;flex-wrap:wrap;gap:6px 14px;max-width:calc(100% - 48px)}
+  .legend .t{width:100%}
+  .axis-note,.scroll-cue{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:none}
+  .stat:nth-child(n+3){border-top:1px solid var(--rule)}
+  .cards3{grid-template-columns:1fr}
+  .d-cols{grid-template-columns:1fr}
+  .src-item{grid-template-columns:1fr;gap:4px}
+}
+@media (max-width:400px){ table.genes td,table.genes th{padding:9px 6px!important} }
+@media (max-width:640px){
+  :root{--head-h:58px}
+  .wordmark{font-size:19px}
+  .hero-h{font-size:clamp(40px,12vw,58px)}
+  .ch-h{font-size:clamp(34px,10.5vw,48px)}
+  .big-num{font-size:clamp(84px,30vw,128px)}
+  .ch-copy{font-size:15.5px;line-height:1.55;margin-top:14px}
+  .ch-kick{font-size:10.5px;letter-spacing:.16em;margin-bottom:12px}
+  .hero-ctas{margin-top:20px}
+  .btn-x{padding:12px 18px;font-size:14.5px}
+  .legend{display:none}
+  .stat{padding:14px 14px 12px}
+  .stat .l{font-size:12px}
+  .detail-grid{grid-template-columns:1fr}
+  #detail.open{display:flex;flex-direction:column;align-items:stretch}
+  #detail.open.muted-q{display:none}
+  .d-top{display:contents}
+  .d-name{order:0} .d-tags{order:1;margin-top:10px} .backlist{order:2;align-self:flex-start} .d-head{order:3}
+  .d-actions{order:4;margin:14px 0 0;width:100%} .d-cols{order:5} .tech{order:6}
+  .d-actions{margin-left:0;width:100%}
+  .d-actions .btn{flex:1 1 auto;justify-content:center}
+  .bar-row,.bars-axis{grid-template-columns:110px 1fr 46px;gap:8px}
+  table.genes .hide-sm{display:none}
+  table.genes .badge .bl{display:none} table.genes .badge .bs{display:inline}
+  table.genes .hide-xs{display:none}
+  table.genes th .sub,table.genes th .hl{display:none} table.genes th .hs{display:inline}
+  table.genes{font-size:13px} table.genes td{font-size:12.5px}
+  .bars-axis span:nth-child(2){font-size:9.5px}
+  .bar-row .lab small{display:none}
+  .ai-head .src .src-x{display:none}
+  .ai-head{flex-wrap:wrap;row-gap:4px} .ai-head .src{margin-left:18px;flex-basis:100%}
+  table.genes td,table.genes th{padding:9px 8px}
+  canvas#scatter{height:360px}
+  .finding{grid-template-columns:1fr}
+  .finding .num{font-size:40px}
+  .search-hint .kbd{display:none}
+  .dl-list li{flex-direction:column;gap:4px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin-left:calc(-1 * clamp(18px,4vw,28px));margin-right:calc(-1 * clamp(18px,4vw,28px));padding:2px clamp(18px,4vw,28px) 8px;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 28px),transparent)}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .paper section{padding-top:60px}
+  :is(#ask,#check) .askbtn{width:100%;justify-content:center}
+}
+@media (hover:none){ .search-hint .kbd,.kbd-hint{display:none} }
+@media (prefers-reduced-motion:reduce){
+  .grain,.ticker .belt,.scroll-cue i,.live-chip .dot,.ai-card::before,.ai-caret,.ai-skel i,.ai-spin{animation:none!important}
+  #detail.open{animation:none}
+  .reveal{opacity:1;transform:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#explore">Skip to the gene search</a>
+<div id="loader" role="status" aria-label="Loading gene data">
+  <div class="sub">Loading the 2026 organoid gene maps</div>
+  <div class="count"><span id="load-n">0</span></div>
+  <div class="trackline"><i id="load-bar"></i></div>
+  <div class="sub" id="load-sub">counting genes</div>
+</div>
+
+<div id="gl" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div id="gene-tip" aria-hidden="true"></div>
+
+<header class="bar"><div class="bar-in">
+  <a class="wordmark" href="#top" data-scroll="#top" aria-label="It's the Medium, back to top">It&rsquo;s the <em>Medium</em>.</a>
+  <span class="live-chip"><span class="dot"></span><b id="chip-n">17,525</b>&nbsp;genes checked · DepMap 26Q3</span>
+  <nav class="desk" aria-label="Sections">
+    <a href="#short" data-scroll="#short">The short version</a>
+    <a href="#explore" data-scroll="#explore">Search genes</a>
+    <a href="#check" data-scroll="#check">Check a list</a>
+    <a href="#ask" data-scroll="#ask" class="ai"><svg class="ai-spark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>Ask AI</a>
+    <a href="#findings" data-scroll="#findings">Findings</a>
+    <a href="#story-made" data-scroll="#story-made">How it was made</a>
+    <a href="#methods" data-scroll="#methods">Methods &amp; data</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"><span class="bars3" aria-hidden="true"></span>Menu</button>
+</div></header>
+<nav id="menu" aria-label="Site menu">
+  <a href="#short" data-scroll="#short">The short version <small>1 min</small></a>
+  <a href="#explore" data-scroll="#explore">Search any gene <small>17,525</small></a>
+  <a href="#check" data-scroll="#check">Check your hit list <small>for labs</small></a>
+  <a href="#ask" data-scroll="#ask" class="ai">Ask the data <small>AI</small></a>
+  <a href="#findings" data-scroll="#findings">What we found</a>
+  <a href="#story-made" data-scroll="#story-made">How it was made</a>
+  <a href="#methods" data-scroll="#methods">Methods</a>
+  <a href="#sources" data-scroll="#sources">Sources &amp; citing</a>
+  <a href="#downloads" data-scroll="#downloads">Downloads</a>
+  <div class="menu-foot">17,525 genes · DepMap 26Q3 · public data</div>
+</nav>
+
+<div id="rail" aria-label="Story chapters">
+  <button data-ch="0" class="on" aria-label="Chapter: the question"><span class="pip"></span><span class="lab">The question</span></button>
+  <button data-ch="1" aria-label="Chapter: two differences"><span class="pip"></span><span class="lab">Two differences</span></button>
+  <button data-ch="2" aria-label="Chapter: the test"><span class="pip"></span><span class="lab">The test</span></button>
+  <button data-ch="3" aria-label="Chapter: what's left"><span class="pip"></span><span class="lab">What&rsquo;s left</span></button>
+</div>
+
+<main id="top">
+<div id="story">
+ <div class="stage-pin">
+
+  <section class="chapter" id="ch0" aria-label="Introduction">
+    <div class="ch-kick pe">An independent check of the 2026 organoid cancer studies</div>
+    <h1 class="display hero-h">
+      <span class="line-mask"><span>Is it the cancer,</span></span>
+      <span class="line-mask"><span>or is it <em>the menu?</em></span></span>
+    </h1>
+    <p class="ch-copy pe">Labs now grow patients&rsquo; tumours as tiny 3D balls called <b>organoids</b> to find the genes a cancer can&rsquo;t live without. Those genes become drug targets. But organoids are also fed a special diet with almost no cholesterol. We rechecked two major 2026 studies and found that <b>85% of the &ldquo;organoid-only&rdquo; gene effects also appear when ordinary cells eat the same food.</b></p>
+    <div class="hero-ctas pe">
+      <a class="btn-x hot" href="#explore" data-scroll="#explore">Search any gene <span class="arr" aria-hidden="true">↓</span></a>
+      <a class="btn-x" href="#short" data-scroll="#short">The 1-minute version</a>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><i></i>Scroll to watch 17,525 genes move</div>
+    <div class="legend" aria-hidden="true"><span class="t">Each dot is one real gene</span>
+      <span><i style="background:#ff4d26"></i>Follows the food</span>
+      <span><i style="background:#f5c95c"></i>Unresolved</span>
+      <span><i style="background:#80d4ff"></i>Shape candidate</span>
+      <span><i style="background:#6b5e4c"></i>No real difference</span></div>
+  </section>
+
+  <section class="chapter right" id="ch1" aria-label="The confound">
+    <div class="ch-kick">Part 1 · Two differences at once</div>
+    <h2 class="display ch-h"><span class="hollow">The shape changed.</span><br>So did the food.</h2>
+    <p class="ch-copy">An organoid differs from a classic flat culture in two ways: its <b>3D shape</b> and its <b>diet</b>. Flat cultures grow in serum, which is rich in cholesterol and fat. Organoids get a precise recipe with no serum. So when a gene suddenly matters in organoids, is that the shape, <b>or is the tumour just hungry?</b></p>
+    <p class="ch-copy">The public data hold a natural control: cancer cells grown flat but <b>fed the organoid recipe</b>. Same food, no 3D shape. That one comparison pulls the two apart.</p>
+    <p class="ch-copy small">Left: cells grown flat. Right: cells grown as a 3D ball.</p>
+  </section>
+
+  <section class="chapter" id="ch2" aria-label="The result">
+    <div class="ch-kick">Part 2 · The test</div>
+    <div class="big-num" aria-label="85 percent"><span class="count85">85</span><span class="pct">%</span></div>
+    <h2 class="display ch-h" style="font-size:clamp(32px,min(5vw,8vh),64px)">follow the <em>food.</em></h2>
+    <p class="ch-copy">Now each dot sits at its real position. Left to right: how differently organoids need the gene. Bottom to top: the same measure in flat cells eating organoid food. Dots on the dashed line behave the same either way, so the 3D shape added nothing. <b>387 of 456 genes</b> land near it, led by cholesterol-making genes like <b>SQLE</b>.</p>
+    <p class="ch-copy small">A consistency check on public data, not proof of cause.</p>
+    <div class="mini-legend" aria-hidden="true"><span><i style="background:#ff4d26"></i>Follows the food</span><span><i style="background:#f5c95c"></i>Unresolved</span><span><i style="background:#80d4ff"></i>Shape candidate</span></div>
+    <div class="axis-note ax">Organoid effect →</div>
+    <div class="axis-note ay">Same food, grown flat →</div>
+  </section>
+
+  <section class="chapter right" id="ch3" aria-label="The survivors">
+    <div class="ch-kick">Part 3 · What&rsquo;s left</div>
+    <h2 class="display ch-h">Almost nothing <em>points to the shape.</em></h2>
+    <p class="ch-copy">Hide every gene that follows the food and very little remains. One gene, <b>LSM7</b>, leans toward shape, and even that is not significant genome-wide. A small group stays <b>unresolved</b>. These are the best leads, including <b>SCAP, DDX3X and ITGB1</b> from Sanger&rsquo;s headline list. Tap one to see its numbers.</p>
+    <div class="surv-grid pe" id="surv-grid"></div>
+    <div class="hero-ctas pe">
+      <a class="btn-x hot" href="#explore" data-scroll="#explore">Search all 17,525 genes <span class="arr" aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+ </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="belt" id="ticker-belt"></div></div>
+
+<div class="paper" id="paper">
+<div class="wrap">
+
+<section id="short">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>The short version</h2></div>
+  <div class="cards3">
+    <div class="card reveal"><div class="ic">?</div><h3>The question</h3>
+      <p>Organoids are lab-grown mini tumours made from patients&rsquo; cells. Two big studies in <i>Nature</i> (2026) used them to list genes that cancers depend on, as leads for new drugs. But organoids are fed very differently from normal lab cells, and <b>nobody had checked, gene by gene across both lists, how much was just the diet</b>.</p></div>
+    <div class="card reveal"><div class="ic">85%</div><h3>What we found</h3>
+      <p>For <b>387 of the 456 genes</b> that behaved differently in organoids, ordinary flat-grown cells showed the same change once they ate organoid food. The diet, not the 3D growth, explains most of the list. <b>Cholesterol-making genes top it</b>, which fits a recipe with almost no cholesterol.</p></div>
+    <div class="card reveal"><div class="ic">→</div><h3>Why it matters</h3>
+      <p>A new cancer drug takes many years and huge sums to develop. A target that only exists because of the lab&rsquo;s recipe may vanish in a patient, whose blood is full of cholesterol. This audit shows <b>which targets to test first</b>, and a 2-week experiment that would settle it.</p></div>
+  </div>
+  <div class="stats reveal" id="statstrip">
+    <div class="stat"><div class="n" id="st-genes">17,525</div><div class="l">genes checked, each with a verdict and an uncertainty range</div></div>
+    <div class="stat"><div class="n"><em><span id="st-med">85</span>%</em></div><div class="l">of the 456 genes that change in organoids follow the food</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">gene (LSM7) leans toward 3D shape, and it is not significant genome-wide</div></div>
+    <div class="stat"><div class="n">0.90</div><div class="l">how closely food alone tracks the organoid effect (1.0 = perfectly; 95% CI 0.82 to 0.99)</div></div>
+  </div>
+  <p class="researcher-line reveal"><b>For researchers</b>Per-gene reanalysis of DepMap 26Q3 Chronos (Broad NextGen + Sanger catalogues). Medium-consistent = same-sign adherent-in-organoid-medium effect ≥0.5× the organoid-vs-2D delta. Bootstrap slope 0.90 [0.82 to 0.99]; held-out patients 0.96. Tables, code and review trail in <a href="#downloads" data-scroll="#downloads">Downloads</a>. Running your own organoid screen? <a href="#check" data-scroll="#check">Check your hit list</a>.</p>
+</section>
+
+<section id="explore">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Look up <em>any gene</em></h2></div>
+  <p class="sec-sub reveal">Type a gene name to see whether its organoid effect follows the food, the 3D shape, or neither. Each result opens with a plain-English verdict, then the full numbers and a link to its source record. Below the search, browse all 456 genes that changed.</p>
+
+
+  <div class="searchbox reveal">
+    <div class="sfield"><svg class="sicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+    <input id="q" type="search" placeholder="Search a gene, e.g. SQLE" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Search a gene by symbol" enterkeyhint="search"></div>
+    <div class="search-hint">Try:
+      <button class="pill" data-gene="SQLE">SQLE</button><button class="pill" data-gene="ITGB1">ITGB1</button>
+      <button class="pill" data-gene="SCAP">SCAP</button><button class="pill" data-gene="FASN">FASN</button>
+      <button class="pill" data-gene="LSM7">LSM7</button><button class="pill" data-gene="KRAS">KRAS</button>
+      <span class="kbd">Press <kbd>/</kbd> to search from anywhere</span></div>
+    <div id="askHint" class="search-hint"></div>
+  </div>
+  <div id="detail" role="region" aria-live="polite" aria-label="Gene details"></div>
+
+  <div class="chips reveal" id="chips" role="group" aria-label="Filter the gene table">
+    <button class="chip" data-filter="hits" aria-pressed="true">All 456 changed genes</button>
+    <button class="chip" data-filter="medium" aria-pressed="false">Follows the food</button>
+    <button class="chip" data-filter="unresolved" aria-pressed="false">Unresolved</button>
+    <button class="chip" data-filter="format" aria-pressed="false">Shape candidate</button>
+    <button class="chip" data-filter="sanger18" aria-pressed="false">Sanger headline-18</button>
+    <button class="chip" data-filter="sanger97" aria-pressed="false">Sanger exclusive-97</button>
+    <button class="chip" data-filter="broad_gain" aria-pressed="false">Broad published gains</button>
+    <button class="chip" data-filter="broad_loss" aria-pressed="false">Broad published losses</button>
+    <button class="chip" data-filter="all" aria-pressed="false">All genes</button>
+  </div>
+  <p class="how-read" style="margin-top:0">The list filters come from the two papers: <b>Sanger headline-18</b> is Sanger&rsquo;s highlighted list of organoid-specific essential genes, <b>Sanger exclusive-97</b> its longer organoid-only list, and <b>Broad published gains/losses</b> the genes Broad reported as more or less essential in organoids.</p>
+  <div class="table-scroll reveal"><table class="genes" id="gtab">
+    <caption class="sr-only">Genes with their organoid effect and verdict. Select a gene for details.</caption>
+    <thead><tr>
+      <th data-sort="g" scope="col">Gene</th>
+      <th data-sort="f" scope="col">Verdict</th>
+      <th data-sort="D" scope="col" title="D: organoid minus classic 2D culture, normalized Chronos. Negative = the organoid needs the gene more."><span class="hl">Organoid effect</span><span class="hs">Organoid</span><span class="sub">D, vs classic 2D</span></th>
+      <th data-sort="A" scope="col" class="hide-sm" title="A: flat cells fed organoid-type medium minus classic 2D.">Food only<span class="sub">A, flat + organoid food</span></th>
+      <th data-sort="F" scope="col" class="hide-sm" title="F: 3D dome minus flat, both in organoid-type medium.">Shape only<span class="sub">F, dome vs flat</span></th>
+      <th data-sort="rA" scope="col" title="A/D: share of the organoid effect reproduced by food alone."><span class="hl">Explained by food</span><span class="hs">Food %</span><span class="sub">A/D</span></th>
+      <th data-sort="bf" scope="col" class="hide-sm" title="Share of 150 bootstrap resamples that call this gene medium-consistent.">Confidence<span class="sub">bootstrap</span></th>
+    </tr></thead><tbody id="gbody"></tbody>
+  </table></div>
+  <div class="more"><button class="btn" id="moreBtn">Show more genes</button> <small class="note" id="rowcount"></small></div>
+  <p class="how-read reveal"><b>How to read the numbers:</b> scores are CRISPR gene effects (Chronos). Negative means cells need the gene more in organoids. &ldquo;Explained by food&rdquo; near 100% means flat cells on organoid food show the whole effect without any 3D growth; &ldquo;100%+&rdquo; means the food-only effect is even larger. &ldquo;Confidence&rdquo; is how often the verdict held when the analysis was rerun 150 times on resampled data.</p>
+
+  <h3 class="reveal">The whole result in one picture</h3>
+  <p class="sec-sub reveal" style="margin-top:0">Each dot is one of the 456 genes that changed. Left to right: how much more or less an organoid needs it. Bottom to top: the same measure in flat cells eating organoid food. Dots on the dashed line show the full effect without any 3D growth. Hover or tap a dot to open that gene.</p>
+  <div class="scatter-wrap reveal"><canvas id="scatter" width="1060" height="480" role="img" aria-label="Scatter plot: organoid effect versus flat-grown effect in organoid medium. Most points lie on the diagonal."></canvas></div>
+  <div class="cap-legend"><span><i style="background:#c93318"></i>Follows the food</span><span><i style="background:#e3b23c;box-shadow:0 0 0 1.2px #6b4a0c"></i>Unresolved</span><span><i class="dia" style="background:#1668a0"></i>Shape candidate (LSM7)</span><span><i class="line"></i>Same effect either way</span></div>
+</section>
+
+<section id="check">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Check <em>your own</em> hit list</h2></div>
+  <p class="sec-sub reveal">Running your own organoid screen, or holding a shortlist of drug targets? Paste the genes here. You&rsquo;ll see straight away which ones look like diet effects in the public data<span class="ai-only">, and Muse, Meta&rsquo;s AI model, explains what that means for your list</span>. The check itself runs in your browser.</p>
+  <form class="listbox reveal" id="listForm" autocomplete="off">
+    <label class="sr-only" for="listIn">Gene symbols</label>
+    <textarea id="listIn" rows="4" spellcheck="false" autocapitalize="characters" data-lenis-prevent placeholder="Paste gene symbols, separated by commas, spaces or new lines. For example: SQLE, ITGB1, KRAS, MVD"></textarea>
+    <div class="list-actions">
+      <button class="askbtn" type="submit" id="listBtn">Check my list</button>
+      <span class="kbd-hint" id="listKbd">or press <kbd>Ctrl</kbd> + <kbd>Enter</kbd></span>
+      <span class="list-try">Or try a published list:
+        <button type="button" class="pill" data-list="sanger18">Sanger headline-18</button>
+        <button type="button" class="pill" data-list="broad_strict">Broad strict gains</button>
+      </span>
+    </div>
+  </form>
+  <div id="listOut" aria-live="polite"></div>
+</section>
+
+<section id="ask">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Ask the data <em>a question</em></h2></div>
+  <p class="sec-sub reveal">Type a question in your own words. Muse, Meta&rsquo;s AI model, works like a research assistant: it decides what to look up in the full table of 17,525 genes, runs those searches itself, and answers in plain English. You can see each step it took, and every gene name links back to the table.</p>
+  <form class="askbox reveal" id="askForm" autocomplete="off">
+    <label class="sr-only" for="askQ">Your question</label>
+    <input id="askQ" maxlength="300" placeholder="e.g. Which genes are still worth chasing as drug targets?" enterkeyhint="send">
+    <button class="askbtn" type="submit" id="askBtn"><svg class="ai-spark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>Ask</button>
+  </form>
+  <div class="suggest reveal" id="suggest">
+    <button>Which cholesterol genes follow the food?</button>
+    <button>Explain this study to a 12-year-old</button>
+    <button>Which genes are still worth chasing as drug targets?</button>
+    <button>What should a drug company take from this?</button>
+    <button>Why is ITGB1 unresolved?</button>
+  </div>
+  <div id="askOut" class="ai-card" aria-live="polite"></div>
+  <p><small class="note">AI answers can contain mistakes. Muse only sees this audit&rsquo;s data through its search tools, and every number it quotes should match the table above. Answers are cached so repeat questions load instantly.</small></p>
+</section>
+
+<section id="findings">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>What we <em>found</em></h2></div>
+
+  <div class="finding">
+    <div class="num">1</div>
+    <div>
+      <h3>Most of the list follows the food, in both directions</h3>
+      <div class="plain"><b class="k">In plain English</b>When ordinary cancer cells are switched to the organoid diet, they start needing the same genes organoids need. No 3D growth required.</div>
+      <p>Of 456 genes whose importance differs between organoids and classic cultures, <b>86% of gains and 84% of losses are medium-consistent</b>: flat-grown cells fed organoid medium show a same-direction effect at least half as large (75 to 82% under conservative robust statistics). The strongest group is cholesterol manufacture (SQLE, MSMO1), followed by fat and heme production. These are exactly the pathways a serum-free, low-fat diet would stress. Gene-expression data show the matching response (cholesterol genes switched <i>on</i> in organoid medium, the classic sign of starvation), and in separate screens using blood-like medium, SQLE moves the <i>opposite</i> way.</p>
+      <figure class="figwrap reveal"><img src="assets/fig1.png" alt="Two scatter plots. Left: flat-grown effect in organoid medium against organoid effect, with points along the diagonal. Right: 3D dome versus flat in the same medium, a shapeless cloud near zero." loading="lazy" width="1600" height="700">
+      <figcaption><b>Figure 1.</b> Left: flat cells on organoid food against the organoid effect. Points hug the diagonal. Right: 3D dome against flat, both on organoid food. A shapeless cloud near zero, meaning shape adds little. (In this static figure, unresolved genes are grey.)</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="num">2</div>
+    <div>
+      <h3>Checking the published target lists</h3>
+      <div class="plain"><b class="k">In plain English</b>About half of each lab&rsquo;s highlighted genes look like diet effects. Three of Sanger&rsquo;s top picks hold up better and deserve a closer look.</div>
+      <p>Of the Broad catalogue&rsquo;s published gains present in our audit, 47% (135 of 285) are medium-consistent; 50% (266 of 537) counting gains and losses together; and 87% of the gains that replicate under lineage adjustment. Of Sanger&rsquo;s &ldquo;organoid-specific core fitness&rdquo; headline-18, 8 of 16 replicate here. Five are medium-consistent, four of them on the cholesterol-sensing SREBP pathway (MVD, IDI1, MBTPS1, MBTPS2). Three remain unresolved (<b>SCAP, DDX3X, ITGB1</b>), which makes them the more credible follow-ups. Sanger&rsquo;s calls are robust in their own assay (median depletion in 70 to 80% of organoids). The open question is the cause, not the quality of the measurement.</p>
+      <figure class="figwrap reveal"><img src="assets/fig3.png" alt="Stacked bars showing how each published hit list breaks down into follows-the-food, unresolved, shape candidate and does-not-reproduce." loading="lazy" width="1600" height="700">
+      <figcaption><b>Figure 2.</b> How each published list breaks down under our labels. Grey means the gene does not reproduce as a hit under lineage adjustment, so its cause can&rsquo;t be assigned (this is not evidence that it is real biology).</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="num">3</div>
+    <div>
+      <h3>Some genes matter less in organoids, probably because they grow slower</h3>
+      <div class="plain"><b class="k">In plain English</b>Organoids grow slowly, so the cell&rsquo;s long-lasting protein machines wear out less. That likely makes some &ldquo;essential&rdquo; genes look less essential. It&rsquo;s a good guess, not a proven fact.</div>
+      <p>Ribosome and spliceosome genes look <i>less</i> essential in organoids. With curated gene sets, only the ribosome set shows a clear whole-complex shift (+0.17 vs +0.03 baseline), present in both labs&rsquo; assays after global corrections. Sanger&rsquo;s organoid screens are globally shallower (essential depth 0.63×). Slower growth means fewer cell divisions, so long-lived protein machines don&rsquo;t have time to run down. This is the leading explanation, but it is a hypothesis: cumulative doublings are recorded for only 1 of 1,241 Broad screens, so this data release can&rsquo;t settle it.</p>
+      <figure class="figwrap reveal"><img src="assets/fig2.png" alt="Bar charts of median gene-set shifts by comparison, and Sanger essential depth with ribosome and spliceosome ratios." loading="lazy" width="1600" height="700">
+      <figcaption><b>Figure 3.</b> Left: median shift of curated gene sets by comparison (Broad). Right: Sanger essential depth and depth-scaled ribosome and spliceosome ratios. The spliceosome effect vanishes after scaling; the ribosome effect remains.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div class="num">4</div>
+    <div>
+      <h3>One cheap experiment would settle it</h3>
+      <div class="plain"><b class="k">In plain English</b>Give the organoids their cholesterol back. If the &ldquo;organoid-only&rdquo; weak spots disappear, they were caused by the diet.</div>
+      <p>Add LDL cholesterol back to organoid medium. If the sterol dependencies are starvation, sensitivity to SQLE inhibitors and statins should collapse (at least a 5× potency shift) while genuine candidates like ITGB1 stay put. We agreed in advance what counts as failure: if sensitivity survives LDL repletion in 3 or more of 4 models, our interpretation is wrong. The full protocol is in the <a href="#downloads" data-scroll="#downloads">wet-lab proposal</a>. It takes about two weeks and needs no new CRISPR screen.</p>
+    </div>
+  </div>
+</section>
+
+<section id="story-made">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>How this was <em>made</em></h2></div>
+  <p class="sec-sub reveal">A changelog, mistakes included. Muse, Meta&rsquo;s AI model, ran the research loop under human direction and did much of the analysis together with Codex. A separate AI reviewer checked the work in five rounds before release. Muse also wrote the first draft of this site, and Claude polished it.</p>
+  <ol class="tl">
+    <li><div class="when">2026 · The catalogues</div><h4>Two Nature papers map organoid weak spots</h4>
+    <p>Broad (Neiswender et al.) and Sanger (Herranz-Ors et al.) publish genome-wide CRISPR maps for patient-derived organoids and nominate organoid-specific drug targets. Broad&rsquo;s own 1,000-gene side experiment already showed that SQLE and MSMO1 respond to the medium and that 3D format mattered little under serum-free conditions. Nobody had extended that check to every gene in both catalogues.</p></li>
+    <li><div class="when">The design</div><h4>Separate the food signal from the shape signal</h4>
+    <p>The public data already contain the controls: organoid medium grown flat (food without shape), domes against flat cultures on the same food (shape without food), and an unrelated serum-free brain-cancer diet. We corrected for the two CRISPR toolkits used (measured from 22 models screened with both), the cancer-type mix, and screen strength, then held out whole patients to check the answer on unseen data.</p></li>
+    <li><div class="when">Round 1</div><h4>First pass: 85% food, 0% shape</h4>
+    <p>The headline result appeared on the first pass, along with a large apparent &ldquo;spliceosome collapse&rdquo; (+0.9). The second result did not survive checking.</p></li>
+    <li><div class="when">Self-correction</div><h4>The spliceosome effect that wasn&rsquo;t</h4>
+    <p>Swapping a small hand-picked gene panel for the full curated sets shrank the spliceosome effect from +0.90 to +0.02. The small panel had been built from genes already known to change, which exaggerated the effect. The ribosome effect survived. The spliceosome story was demoted everywhere, including the abstract.</p></li>
+    <li><div class="when">Triangulation</div><h4>Three separate lines of evidence agree</h4>
+    <p>Gene-expression data show the cholesterol-starvation mirror image (+0.36 vs −0.38). Sanger&rsquo;s separate assay shows the same cholesterol gain (percentile 0.099 vs 0.394). Blood-like medium screens from 2021 move SQLE the opposite way. Different labs and methods point the same way.</p></li>
+    <li><div class="when">Adversarial review</div><h4>Five rounds against a skeptical reviewer</h4>
+    <p>An independent AI reviewer audited the code and claims and recomputed results from source. It found real faults every round: contaminated calibration, an impossible statistical test for shape effects, a bootstrap that estimated the wrong quantity, and a bug corrupting one gene&rsquo;s stability score. Each was verified, fixed and re-reviewed until the reviewer scored the work 95/100. The scores below come from that reviewer, a different AI system from the one that ran the analysis, so treat them as a code audit, not peer review.</p>
+    <svg class="score-svg" id="score-svg" viewBox="0 0 680 190" role="img" aria-label="Review scores rose from 68 to 95 over five rounds">
+      <line x1="50" y1="160" x2="650" y2="160" stroke="#1a1510" stroke-width="2"/>
+      <polyline id="score-line" fill="none" stroke="#c93318" stroke-width="3" stroke-linejoin="round"
+        points="70,116 210,88 350,74 490,74 620,62"/>
+      <g font-family="IBM Plex Mono,monospace" font-size="13" fill="#1a1510" text-anchor="middle">
+        <circle cx="70" cy="116" r="6" fill="#f3ecdd" stroke="#c93318" stroke-width="3"/><text x="70" y="96" font-weight="600">68</text><text x="70" y="182" fill="#5d5342">R1</text>
+        <circle cx="210" cy="88" r="6" fill="#f3ecdd" stroke="#c93318" stroke-width="3"/><text x="210" y="68" font-weight="600">82</text><text x="210" y="182" fill="#5d5342">R2</text>
+        <circle cx="350" cy="74" r="6" fill="#f3ecdd" stroke="#c93318" stroke-width="3"/><text x="350" y="54" font-weight="600">89</text><text x="350" y="182" fill="#5d5342">R3</text>
+        <circle cx="490" cy="74" r="6" fill="#f3ecdd" stroke="#c93318" stroke-width="3"/><text x="490" y="54" font-weight="600">89</text><text x="490" y="182" fill="#5d5342">R4</text>
+        <circle cx="620" cy="62" r="7" fill="#3fae7a" stroke="#1a1510" stroke-width="2"/><text x="620" y="40" font-weight="600" fill="#237552">95</text><text x="620" y="182" fill="#5d5342">R5</text>
+      </g>
+    </svg></li>
+    <li><div class="when">Novelty audit</div><h4>&ldquo;Hasn&rsquo;t somebody done this?&rdquo; 230+ web searches later</h4>
+    <p>A separate deep-research run hunted for prior work. Verdict: <b>partly</b>. The general ideas have real precedents (2019 to 2026, cited below). One web report claiming similar scope turned out to carry a fabricated arXiv ID, and a commentary nine days earlier asked the same question without numbers. The catalogue-wide, per-gene audit itself appears to be new. We downgraded the title to match: an <i>audit</i>, not a proof of cause.</p></li>
+    <li class="ai-only"><div class="when">This site</div><h4>Muse as a research assistant you can question</h4>
+    <p>The gene summaries, the hit-list check and the &ldquo;Ask the data&rdquo; box all use Muse. For questions and lists it works as an agent: it chooses tools that search the full 17,525-gene table, reads the rows they return, and only then answers. You can see each step it took. It runs on our server, and every gene it names links back to the table.</p></li>
+    <li><div class="when">Next</div><h4>A lab experiment</h4>
+    <p>We have pushed the public data about as far as they go, and checked the results twice. What remains is a two-week experiment: add the cholesterol back. The proposal, with failure criteria agreed in advance, is in Downloads.</p></li>
+  </ol>
+</section>
+
+<section id="methods">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Methods</h2></div>
+  <h3>In plain language</h3>
+  <p>For every gene we ask four questions of the public data. (1) Does its importance change in organoids compared with classic cultures? (2) Does the same change happen in flat-grown cells fed organoid medium? (3) Is anything left over when comparing 3D domes with flat cultures on the same food? (4) Does an unrelated serum-free diet do something similar? If (2) reproduces most of (1) and (3) is small, the gene <b>follows the food</b> (technically, <i>medium-consistent</i>). The mirror-image pattern makes it a <b>shape candidate</b> (<i>format candidate</i>). Everything else is <b>unresolved</b>. These labels come from observational data and are not proof of cause. Proof needs the add-back experiment.</p>
+  <details><summary>Technical details</summary>
+  <p>DepMap 26Q3 Chronos gene effects (PassesQC screens, Avana + Humagne-CD), development patients only for all calibration, filtering and imputation. Per-gene library offset from 22 development FBS models screened with both libraries (all Avana screens are FBS). Per-gene OLS on model-mean Chronos with lineage dummies; Benjamini-Hochberg q per contrast; HC3 robust SEs shipped and used for sensitivity. Hits: D q&lt;0.01 and |Δ|≥0.25 (dynamic-range-normalized scale primary; raw concordant). Medium-consistent: same-sign adherent ratio ≥0.5, nominal p&lt;0.05, 90% delta-method CI excluding 0, format not dominant under mirror criteria; strict-FDR variant released as <code>flag_fdr</code>. Joint bootstrap (B=150) shares one model resample between calibration and analysis; the identity replicate reproduces point flags exactly. Held-out evaluation is fully disjoint (25 reserved-patient domes vs 78 reserved-patient FBS controls). Common-support sensitivity restricts to the six lineages with adherent comparators (38 domes): slope 0.89. Humagne-only sensitivity filters at screen level (7 FBS controls, r=0.78). Sanger: supplementary tables 4/5/6 and cell-line EssMatrix; within-model percentiles are primary across differently processed matrices. Expression: Omics TPM logp1 mapped by ModelConditionID. HPLM: Rossiter et al. Table S1 scaled gene scores. Full code is in the release bundle under Downloads.</p></details>
+  <details><summary>Limitations</summary>
+  <p>Only 9 flat comparator models, covering 6 of 9 cancer types, on mixed (not identical) recipes, so each gene&rsquo;s verdict carries real uncertainty. Use the confidence (bootstrap) values. Differences in how models were derived or selected are not ruled out by lineage adjustment. Library handling rests on 22 dual-screened models. Cumulative doublings are recorded for 1 of 1,241 Broad screens, so the slower-growth explanation is untested. We did not re-screen anything; all inference comes from the catalogues&rsquo; public data. This site claims an audit with measured consistency, nothing more.</p></details>
+</section>
+
+<section id="sources">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Sources &amp; <em>citing</em></h2></div>
+  <p class="sec-sub reveal">Every number on this page traces to a public dataset below. Each gene&rsquo;s detail panel links straight to its record in the DepMap Portal.</p>
+  <div class="src-list">
+    <div class="src-item"><div><b>DepMap 26Q3</b></div><div>Screen gene effects (Chronos), screen maps, model conditions, expression</div>
+      <div>DepMap Portal, 26Q3 release · <a href="https://depmap.org/portal/data_page/" target="_blank" rel="noopener">depmap.org/portal/data_page</a></div></div>
+    <div class="src-item"><div><b>Neiswender et al. (Broad NextGen)</b></div><div>Catalogue audited; published organoids-vs-2D test table</div>
+      <div>Nature 2026 · <a href="https://doi.org/10.1038/s41586-026-10843-7" target="_blank" rel="noopener">10.1038/s41586-026-10843-7</a> · data <a href="https://doi.org/10.6084/m9.figshare.29472362" target="_blank" rel="noopener">figshare 29472362</a></div></div>
+    <div class="src-item"><div><b>Herranz-Ors et al. (Sanger)</b></div><div>Catalogue audited; core-fitness lists, BAGEL calls, organoid LFCs</div>
+      <div>Nature 2026 · <a href="https://doi.org/10.1038/s41586-026-10830-y" target="_blank" rel="noopener">10.1038/s41586-026-10830-y</a> · data <a href="https://doi.org/10.6084/m9.figshare.28339340" target="_blank" rel="noopener">figshare 28339340</a></div></div>
+    <div class="src-item"><div><b>Rossiter et al. (HPLM)</b></div><div>Blood-like medium reverse test (Table S1 gene scores)</div>
+      <div>Cell Metab 2021 · <a href="https://doi.org/10.1016/j.cmet.2021.02.005" target="_blank" rel="noopener">10.1016/j.cmet.2021.02.005</a> (PMC8172426)</div></div>
+    <div class="src-item"><div><b>Earlier work we build on</b></div><div>Medium-associated dependencies and corrections that predate this audit</div>
+      <div>Lagziel 2019 <a href="https://doi.org/10.1186/s12915-019-0654-4" target="_blank" rel="noopener">doi</a> ·
+      Pacini 2021 <a href="https://doi.org/10.1038/s41467-021-21898-7" target="_blank" rel="noopener">doi</a> ·
+      Dempster 2019 <a href="https://doi.org/10.1038/s41467-019-13805-y" target="_blank" rel="noopener">doi</a> ·
+      Liang 2025 <a href="https://doi.org/10.1093/neuped/wuaf001.127" target="_blank" rel="noopener">doi</a> ·
+      Zaidi &amp; Sawyers 2026 <a href="https://doi.org/10.1038/s41422-026-01311-y" target="_blank" rel="noopener">doi</a></div></div>
+  </div>
+
+  <h3>Cite this audit</h3>
+  <pre class="cite" id="citeMain">It's the Medium: a genome-wide medium-consistency audit of the 2026 organoid
+dependency catalogues. Unpublished draft technical note, 2026 (not yet posted
+as a preprint). https://www.itsthemedium.com
+Data: medium_attribution_v2 tables (v2r2), release bundle v1.</pre>
+  <button class="btn" data-copy="#citeMain">Copy citation</button>
+  <h3>BibTeX</h3>
+  <pre class="cite" id="citeBib">@misc{itsthemedium2026,
+  title = {Most reproduced "organoid-specific" cancer dependencies are
+           consistent with culture-medium effects: a genome-wide
+           medium-consistency audit of the 2026 organoid dependency catalogues},
+  year = {2026},
+  note = {Unpublished draft technical note},
+  url = {https://www.itsthemedium.com}
+}</pre>
+  <button class="btn" data-copy="#citeBib">Copy BibTeX</button>
+  <p><small class="note">Citing one gene? Open it above and use &ldquo;Copy gene citation&rdquo;. It includes the exact table version and values so others can reproduce your number.</small></p>
+</section>
+
+<section id="downloads" style="padding-bottom:84px">
+  <div class="sec-head reveal"><span class="sec-no"></span><h2>Downloads</h2></div>
+  <ul class="dl-list">
+    <li><span><a href="assets/manuscript_v2.pdf"><b>Manuscript (draft PDF, 7 pages)</b></a>: the full technical note with figures. Unpublished draft, not yet posted as a preprint.</span><span class="sz">313 KB</span></li>
+    <li><span><a href="assets/release_v1.zip"><b>Release bundle v1 (ZIP)</b></a>: all analysis code (Python), the adversarial review trail, supplementary tables and manuscript source.</span><span class="sz">11.5 MB</span></li>
+    <li><span><a href="assets/medium_attribution_v2_norm.csv"><b>Gene table, normalized (primary)</b></a>: 17,525 genes, all comparisons, HC3 SEs, both flag rules.</span><span class="sz">6.0 MB</span></li>
+    <li><span><a href="assets/medium_attribution_v2_raw.csv"><b>Gene table, raw Chronos scale</b></a></span><span class="sz">6.0 MB</span></li>
+    <li><span><a href="assets/survivor_candidates_v1.csv"><b>Unresolved candidates</b></a>: the genes that don&rsquo;t follow the food, ranked least diet-like first.</span><span class="sz">6 KB</span></li>
+    <li><span><a href="assets/wetlab_proposal_v1.md"><b>Wet-lab proposal</b></a>: the cholesterol add-back experiment, with failure criteria.</span><span class="sz">4 KB</span></li>
+  </ul>
+  <p><small class="note">Tables are released for reuse. Please cite this site and the underlying DepMap 26Q3 and figshare datasets.</small></p>
+</section>
+
+</div>
+</div>
+
+<footer>
+ <div class="wrap">
+  <p class="f-display">It&rsquo;s the <em>Medium</em>.</p>
+  <nav aria-label="Footer">
+    <a href="#explore" data-scroll="#explore">Search genes</a><a href="#check" data-scroll="#check">Check a list</a><a href="#ask" data-scroll="#ask" class="ai">Ask AI</a><a href="#findings" data-scroll="#findings">Findings</a><a href="#methods" data-scroll="#methods">Methods</a><a href="#sources" data-scroll="#sources">Sources</a><a href="#downloads" data-scroll="#downloads">Downloads</a>
+  </nav>
+  <p>An independent audit of public data. These are consistency labels from observational data, not proof of cause and not medical advice. Data: DepMap 26Q3 and the cited public datasets. This site&rsquo;s tables are a reanalysis, not an official DepMap product.</p>
+  <p>Built with an AI-assisted research programme under human direction, reviewed over five adversarial rounds (68 → 95/100) plus a deep-web novelty audit.<span class="ai-only"> AI answers by Muse.</span> <span id="footmeta"></span></p>
+ </div>
+</footer>
+</main>
+<div id="tip" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+/* ================= data + explorer ================= */
+const FLAGS = {0:["No real difference","b-no","below hit threshold"],1:["Follows the food","b-med","medium-consistent"],2:["Unresolved","b-unr","unresolved"],3:["Shape candidate","b-fmt","format candidate"]};
+const TAGLABELS = {broad_gain:"Broad published gain",broad_loss:"Broad published loss",broad_strict:"Broad strict gain",sanger18:"Sanger headline-18",sanger97:"Sanger exclusive-97"};
+let GENES=[], BYG=new Map(), STATS=null;
+let state = {filter:"hits", q:"", sortKey:"D", sortDir:1, shown:60, selected:null};
+const $ = s => document.querySelector(s);
+const MINUS = "−";
+const fmt = (v,d=2)=> v==null ? "n/a" : (v>0?"+":v<0?MINUS:"") + Math.abs(Number(v)).toFixed(d);
+const pct = v => v==null ? "n/a" : Math.round(v*100)+"%";
+const fmtQ = q => q==null? "n/a" : q===0? "0" : q<0.001? "<0.001" : q.toFixed(3);
+const esc = s => String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isTouch = matchMedia("(hover: none)").matches;
+
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),1800); }
+function copyText(txt, btn, doneLabel){
+  const done = ()=>{ toast(doneLabel||"Copied to clipboard"); if(!btn) return; const o=btn.innerHTML; btn.textContent="Copied"; setTimeout(()=>btn.innerHTML=o,1500); };
+  if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(txt).then(done).catch(()=>fallback()); }
+  else fallback();
+  function fallback(){
+    const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    let ok=false; try{ ok = document.execCommand("copy"); }catch(e){}
+    document.body.removeChild(ta);
+    if(ok) done(); else window.prompt("Copy this text:", txt);
+  }
+}
+function headline(g){
+  const share = g.rA==null ? null : Math.round(g.rA*100);
+  if(g.f===0) return g.Dq<0.01
+    ? `${g.g} changes only slightly between organoids and classic cultures, too little to count as a real difference.`
+    : `${g.g} behaves the same in organoids and classic cultures. <em>Nothing here to explain.</em>`;
+  const lead = g.D<0 ? `Organoids need ${g.g} more than flat cultures do` : `Organoids rely on ${g.g} less than flat cultures do`;
+  const conf = (g.bf!=null && g.bf<0.7) ? ` The call is less certain: it held in ${pct(g.bf)} of reruns.` : "";
+  if(g.f===1) return `${lead}, and <em>food alone reproduces ${share>=100?"the whole":share+"% of that"} effect</em>, with no 3D growth.${conf}`;
+  if(g.f===3) return `${lead}. Food alone doesn&rsquo;t reproduce it, but <em>the 3D shape might</em>. It is the only shape candidate.`;
+  return `${lead}, but food alone explains ${share==null?"only part":share<=0?"none":"only "+share+"%"} of it. <em>Unresolved</em>, so it is a lead worth a second look.`;
+}
+function verdictText(g){
+  const dir = g.D<0 ? "more essential" : "less essential";
+  const base = `${g.g} is ${dir} in organoid models than in conventional 2D cultures (D = ${fmt(g.D)} Chronos, q = ${fmtQ(g.Dq)}).`;
+  if(g.f===0) return g.Dq<0.01
+    ? `${g.g} differs significantly between organoids and conventional 2D cultures (D = ${fmt(g.D)}, q = ${fmtQ(g.Dq)}), but the effect is below the |D| ≥ 0.25 differential-hit cutoff, so it is not classified further.`
+    : `${g.g} shows no significant organoid-vs-2D difference (D = ${fmt(g.D)}, q = ${fmtQ(g.Dq)}; hits require q < 0.01 and |D| ≥ 0.25).`;
+  if(g.f===1) return `${base} In flat-grown models fed organoid medium the effect is ${fmt(g.A)}, so ${g.rA==null?"":Math.round(g.rA*100)+"% is"} reproduced without any 3D dome. Verdict: medium-consistent. Before investing in this as a drug target, test it under nutrient or LDL repletion.`;
+  if(g.f===3) return `${base} The effect is largely absent in flat-grown organoid-medium models (A = ${fmt(g.A)}) but present in the dome-vs-flat contrast (F = ${fmt(g.F)}). Verdict: format candidate under symmetric nominal criteria (not significant at genome-wide FDR for the format contrast).`;
+  return `${base} Flat-grown reproduction is ${g.rA==null?"not estimable":Math.round(g.rA*100)+"%"} (A = ${fmt(g.A)}), which does not meet the medium-consistency criteria, and format evidence is insufficient. Verdict: unresolved.`;
+}
+function barHTML(label, sub, v, color){
+  const W=50, x = v==null? W : W + Math.max(-1.2,Math.min(1.2,v))/1.2*W;
+  const left = Math.min(W,x), width = Math.abs(x-W);
+  return `<div class="bar-row"><span class="lab">${label}<small>${sub}</small></span><span class="track"><span class="zero" style="left:${W}%"></span><span class="fill" style="left:${left}%;width:${width}%;background:${color}"></span></span><span class="val">${fmt(v)}</span></div>`;
+}
+function select(gene, scroll=true, setHash=true, from=null){
+  const g = BYG.get((gene||"").toUpperCase()); if(!g) return;
+  $("#detail").classList.remove("muted-q");
+  state.selected = g.g;
+  if(setHash){ try{ history.replaceState(null,"","#gene="+g.g); }catch(e){} }
+  const d = $("#detail");
+  const tags = (g.tags||[]).map(t=>`<span class="tag">${TAGLABELS[t]||t}</span>`).join("");
+  const dep = `https://depmap.org/portal/gene/${encodeURIComponent(g.g)}`;
+  d.innerHTML = `
+   <div class="d-top">
+     <span class="d-name"><h3>${g.g}</h3><span class="badge ${FLAGS[g.f][1]}" title="Technical label: ${FLAGS[g.f][2]}">${FLAGS[g.f][0]}</span></span>
+     <span class="d-tags">${tags}</span>
+     <span class="d-actions">
+       <button class="btn" id="copyLink">Copy link</button>
+       <button class="btn" id="copyGene">Copy citation</button>
+       <a class="btn primary" href="${dep}" target="_blank" rel="noopener">DepMap record ↗</a>
+     </span></div>
+   ${from?`<button type="button" class="backlist" id="backList">${from==="list"?"↓ Back to your list":"↓ Back to "+(from==="scatter"?"the chart":"the list")}</button>`:""}
+   <p class="d-head">${headline(g)}</p>
+   <div class="d-cols">
+     <div>
+       <div class="bars" role="img" aria-label="Effect sizes for ${g.g}: organoid ${fmt(g.D)}, food only ${fmt(g.A)}, shape only ${fmt(g.F)}, other serum-free diet ${fmt(g.S)}">
+         ${barHTML("In organoids", "D, vs classic 2D", g.D, "#1a1510")}
+         ${barHTML("Food only", "A, flat + organoid food", g.A, "#b02e12")}
+         ${barHTML("Shape only", "F, 3D dome vs flat", g.F, "#1668a0")}
+         ${barHTML("Other serum-free diet", "S, brain-cancer medium", g.S, "#8a7c5f")}
+         <div class="bars-axis" aria-hidden="true"><span></span><span><span>needed more</span><span>needed less</span></span><span></span></div>
+       </div>
+       ${g.bf!=null?`<div style="margin-top:16px"><div style="font-size:13px;color:var(--ink-mut)">Confidence: called &ldquo;follows the food&rdquo; in <b style="color:var(--ink)">${pct(g.bf)}</b> of 150 resampled reanalyses</div><div class="meter"><i style="width:${Math.round(g.bf*100)}%"></i></div></div>`:""}
+     </div>
+     ${AI.on()?`<div class="ai-card" id="briefCard">
+       <div class="ai-head"><span class="dotp"></span>Plain-English summary<span class="src">AI · Muse</span></div>
+       <div class="ai-body" id="briefBody"><div class="ai-skel"><i style="width:92%"></i><i style="width:78%"></i><i style="width:86%"></i><i style="width:60%"></i></div></div>
+       <div class="ai-foot" id="briefFoot"></div>
+     </div>`:""}
+   </div>
+   <details class="tech"><summary>Details for researchers</summary>
+     <p>${verdictText(g)}</p>
+     <div class="detail-grid">
+       <div class="dl">Reproduced flat (A/D): <b>${g.rA==null?"n/a":g.rA.toFixed(2)}</b> [90% CI ${g.rAlo==null?"n/a":g.rAlo.toFixed(2)} to ${g.rAhi==null?"n/a":g.rAhi.toFixed(2)}]</div>
+       <div class="dl">Shape ratio (F/D): <b>${g.rF==null?"n/a":g.rF.toFixed(2)}</b></div>
+       <div class="dl">Raw-scale D: <b>${fmt(g.Draw)}</b> · D q-value: <b>${fmtQ(g.Dq)}</b></div>
+       <div class="dl">Strict-FDR flag variant: <b>${FLAGS[g.ff][2]}</b></div>
+     </div>
+     <p><small class="note">Source: medium_attribution_v2 table (v2r2, normalized Chronos, DepMap 26Q3). Full row with SEs and HC3: <a href="assets/medium_attribution_v2_norm.csv">primary table (CSV)</a>. Catalogues: Neiswender et al. 2026, Herranz-Ors et al. 2026.</small></p>
+   </details>`;
+  d.classList.remove("open"); void d.offsetWidth; d.classList.add("open");
+  $("#copyGene").onclick = ev => copyText(
+    `${g.g}: ${FLAGS[g.f][2]} (D organoid ${fmt(g.D)}, A flat organoid-type medium ${fmt(g.A)}, reproduced ${g.rA==null?"n/a":Math.round(g.rA*100)+"%"}, bootstrap stability ${g.bf==null?"n/a":pct(g.bf)}). It's the Medium, medium-consistency audit of the 2026 organoid dependency catalogues, table v2r2. https://www.itsthemedium.com/#gene=${g.g} (data: DepMap 26Q3).`, ev.currentTarget, "Citation copied");
+  const bl = $("#backList"); if(bl) bl.onclick = ()=>{
+    if(from==="list"){ const lr = document.querySelector(`#ltab tr[data-g="${g.g}"]`) || $("#listOut");
+      if(window.MediumScrollTo) MediumScrollTo(lr, -(innerHeight/2 - 40)); else lr.scrollIntoView({block:"center"}); return; }
+    const tgt = from==="scatter" ? $("#scatter") : (document.querySelector(`#gbody tr[data-g="${g.g}"]`) || $("#gtab"));
+    if(window.MediumScrollTo) MediumScrollTo(tgt, -(innerHeight/2 - 40)); else tgt.scrollIntoView({block:"center"}); };
+  $("#copyLink").onclick = ev => copyText(`https://www.itsthemedium.com/#gene=${g.g}`, ev.currentTarget, "Link copied");
+  document.querySelectorAll("#gbody tr").forEach(tr=> tr.classList.toggle("sel", tr.dataset.g===g.g));
+  if(window.MediumStage) MediumStage.highlight(g.g);
+  $("#detail .d-cols").classList.toggle("solo", !AI.on());
+  AI.brief(g);
+  const r = d.getBoundingClientRect();
+  const inView = r.top >= 70 && r.top <= innerHeight*0.6;
+  if(scroll===true || (scroll===false && !inView)){
+    /* wait a frame so the new panel has its final height before measuring */
+    requestAnimationFrame(()=>{ if(window.MediumScrollTo) MediumScrollTo(d, -84);
+      else d.scrollIntoView({behavior: reducedMotion? "auto":"smooth", block:"start"}); });
+  }
+  drawScatter();
+}
+function passes(g){
+  const f = state.filter;
+  if(f==="hits" && g.f===0) return false;
+  if(f==="medium" && g.f!==1) return false;
+  if(f==="unresolved" && g.f!==2) return false;
+  if(f==="format" && g.f!==3) return false;
+  if(["sanger18","sanger97","broad_gain","broad_loss"].includes(f) && !(g.tags||[]).includes(f)) return false;
+  if(state.q && !g.g.toUpperCase().includes(state.q.toUpperCase())) return false;
+  return true;
+}
+function renderTable(){
+  const k = state.sortKey, dir = state.sortDir, Q = state.q.toUpperCase();
+  let rows = GENES.filter(passes);
+  /* when searching, the whole genome is in scope so a gene is never hidden by the active filter */
+  if(state.q){ rows = GENES.filter(g=> g.g.toUpperCase().includes(Q)); }
+  rows.sort((a,b)=>{
+    if(state.q){ const ae=a.g.toUpperCase()===Q, be=b.g.toUpperCase()===Q; if(ae!==be) return ae?-1:1;
+      const as=a.g.toUpperCase().startsWith(Q), bs=b.g.toUpperCase().startsWith(Q); if(as!==bs) return as?-1:1; }
+    if(k==="g") return dir*String(a.g).localeCompare(String(b.g));
+    if(k==="f") return dir*(a.f-b.f) || (Math.abs(b.D)-Math.abs(a.D));
+    const x=a[k], y=b[k];
+    if(x==null && y==null) return 0; if(x==null) return 1; if(y==null) return -1;
+    if(k==="rA"){ const cx=Math.min(x,1), cy=Math.min(y,1); return dir*((cy-cx) || ((b.bf||0)-(a.bf||0))); }
+    if(k==="bf") return dir*(y-x);
+    return dir*(Math.abs(y)-Math.abs(x));
+  });
+  const show = rows.slice(0, state.shown);
+  $("#gbody").innerHTML = show.length ? show.map(g=>`<tr data-g="${g.g}"${g.g===state.selected?' class="sel"':""}>
+    <td><button type="button" class="glink" data-g="${g.g}" aria-label="Open ${g.g} details">${g.g}</button></td><td><span class="badge ${FLAGS[g.f][1]}"><span class="bl">${FLAGS[g.f][0]}</span><span class="bs">${["No diff","Food","Unresolved","Shape"][g.f]}</span></span></td>
+    <td>${fmt(g.D)}</td><td class="hide-sm">${fmt(g.A)}</td><td class="hide-sm">${fmt(g.F)}</td>
+    <td>${g.rA==null||g.f===0?"·":g.rA>=1?'<span title="Food alone gives an effect at least as large as the organoid effect ('+Math.round(g.rA*100)+'%)">100%+</span>':Math.round(g.rA*100)+"%"}</td><td class="hide-sm">${pct(g.bf)}</td></tr>`).join("")
+    : `<tr><td class="empty" colspan="7">No gene symbol matches &ldquo;${esc(state.q)}&rdquo;.${AI.on() && state.q.length>=3 && !$("#askHint").classList.contains("show")?` <button class="btn" id="emptyAsk">Ask the AI about &ldquo;${esc(state.q)}&rdquo; →</button>`:""}</td></tr>`;
+  const eb = $("#emptyAsk"); if(eb) eb.onclick = ()=> AI.askFromSearch(state.q);
+  const label = state.q ? `matching “${state.q}” across all genes` : "";
+  $("#rowcount").textContent = rows.length ? `Showing ${show.length.toLocaleString()} of ${rows.length.toLocaleString()} genes ${label}`.trim() : "";
+  $("#moreBtn").style.display = rows.length>state.shown ? "" : "none";
+  document.querySelectorAll("#gbody tr[data-g]").forEach(tr=> tr.onclick = ev=>{ if(ev.target.closest("button")) return; select(tr.dataset.g, false, true, "table"); });
+  document.querySelectorAll("#gbody .glink").forEach(b=> b.onclick = ()=> select(b.dataset.g, false, true, "table"));
+  document.querySelectorAll("th[data-sort]").forEach(th=>{
+    if(!th.dataset.base){ th.dataset.base = th.innerHTML; }
+    const active = th.dataset.sort===k;
+    const hadFocus = th.contains(document.activeElement);
+    const ascending = (k==="g"||k==="f") ? dir===1 : dir===-1;
+    th.innerHTML = `<button type="button" class="thbtn">${th.dataset.base}${active?` <span class="dir" aria-hidden="true">${ascending?"▲":"▼"}</span>`:""}</button>`;
+    if(active) th.setAttribute("aria-sort", ascending? "ascending":"descending");
+    else th.removeAttribute("aria-sort");
+    if(hadFocus) th.querySelector(".thbtn").focus();
+  });
+}
+/* ================= 2D scatter ================= */
+let scatterPts = [];
+function drawScatter(){
+  const cv = $("#scatter"); if(!cv || !GENES.length) return;
+  const dpr = window.devicePixelRatio||1;
+  const W = cv.clientWidth||1060, H = cv.clientHeight||480;
+  cv.width = W*dpr; cv.height = H*dpr;
+  const ctx = cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
+  const small = W < 560;
+  const padL= small?40:58, padR=16, padT=18, padB=small?40:46, lim=1.25;
+  const X = v => padL + (v+lim)/(2*lim)*(W-padL-padR);
+  const Y = v => padT + (1-(v+lim)/(2*lim))*(H-padT-padB);
+  ctx.clearRect(0,0,W,H);
+  ctx.lineWidth=1; ctx.strokeStyle="#e8ddc2"; ctx.fillStyle="#5d5342"; ctx.font=`${small?10:11}px 'IBM Plex Mono',monospace`;
+  ctx.textAlign="center";
+  for(const t of [-1,-0.5,0,0.5,1]){
+    ctx.beginPath(); ctx.moveTo(X(t),padT); ctx.lineTo(X(t),H-padB); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL,Y(t)); ctx.lineTo(W-padR,Y(t)); ctx.stroke();
+    const lab = (t>0?"+":t<0?MINUS:"")+Math.abs(t).toFixed(1);
+    ctx.fillText(lab, X(t), H-padB+16);
+    ctx.textAlign="right"; ctx.fillText(lab, padL-7, Y(t)+4); ctx.textAlign="center";
+  }
+  ctx.strokeStyle="#1a1510"; ctx.setLineDash([6,5]); ctx.lineWidth=1.4;
+  ctx.beginPath(); ctx.moveTo(X(-lim),Y(-lim)); ctx.lineTo(X(lim),Y(lim)); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle="#1a1510"; ctx.font=`600 ${small?11:12}px Archivo,sans-serif`;
+  ctx.textAlign="center"; ctx.fillText("Organoid effect (D) →", padL+(W-padL-padR)/2, H-8);
+  if(!small){ ctx.save(); ctx.translate(12, padT+(H-padT-padB)/2); ctx.rotate(-Math.PI/2); ctx.fillText("Same food, grown flat (A) →",0,0); ctx.restore(); }
+  else { ctx.textAlign="left"; ctx.fillText("↑ Same food, grown flat (A)", padL+6, padT+12); }
+  ctx.textAlign="left";
+  if(!small){ ctx.font="500 11px 'IBM Plex Mono',monospace"; ctx.fillStyle="#8a7f6a";
+    ctx.fillText("needed more in organoids", padL+8, padT+14);
+    ctx.textAlign="right"; ctx.fillText("needed less in organoids", W-padR-8, H-padB-10); ctx.textAlign="left"; }
+  scatterPts = [];
+  const hits = GENES.filter(g=>g.f>0 && g.D!=null && g.A!=null).sort((a,b)=> (a.f===3)-(b.f===3));
+  let sel=null;
+  for(const g of hits){
+    const x=X(Math.max(-lim,Math.min(lim,g.D))), y=Y(Math.max(-lim,Math.min(lim,g.A)));
+    scatterPts.push({x,y,g});
+    if(g.g===state.selected){ sel={x,y,g}; continue; }
+    ctx.beginPath();
+    if(g.f===3){ ctx.fillStyle="#1668a0"; ctx.moveTo(x,y-6.5); ctx.lineTo(x+6.5,y); ctx.lineTo(x,y+6.5); ctx.lineTo(x-6.5,y); ctx.closePath(); }
+    else if(g.f===1){ ctx.fillStyle = "rgba(201,51,24,.72)"; ctx.arc(x,y,3.3,0,7); }
+    else { ctx.fillStyle = "#e3b23c"; ctx.arc(x,y,4.2,0,7); ctx.fill(); ctx.strokeStyle="#6b4a0c"; ctx.lineWidth=1.2; ctx.stroke(); continue; }
+    ctx.fill();
+  }
+  if(sel){ const {x,y,g}=sel;
+    ctx.beginPath(); ctx.fillStyle = g.f===3?"#1668a0": g.f===1?"#c93318":"#a9791c"; ctx.arc(x,y,5.5,0,7); ctx.fill();
+    ctx.strokeStyle="#1a1510"; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(x,y,10,0,7); ctx.stroke();
+    ctx.font="700 13px 'IBM Plex Mono',monospace"; const tw=ctx.measureText(g.g).width;
+    const lx = x+14+tw > W-padR ? x-14-tw : x+14;
+    ctx.fillStyle="rgba(255,253,246,.92)"; ctx.fillRect(lx-4,y-24,tw+8,18);
+    ctx.fillStyle="#1a1510"; ctx.fillText(g.g, lx, y-10); }
+}
+(function(){
+  const cv = $("#scatter"), tip = $("#tip");
+  function nearest(ev){
+    const r = cv.getBoundingClientRect();
+    const mx = ev.clientX-r.left, my = ev.clientY-r.top;
+    let best=null, bd=1e9;
+    for(const p of scatterPts){ const d=(p.x-mx)**2+(p.y-my)**2; if(d<bd){bd=d;best=p;} }
+    return bd<(isTouch?900:400) ? best : null;
+  }
+  cv.addEventListener("mousemove", ev=>{
+    const p = nearest(ev);
+    if(p){ tip.style.display="block";
+      const tx = Math.min(ev.clientX+13, innerWidth - tip.offsetWidth - 10);
+      tip.style.left=tx+"px"; tip.style.top=(ev.clientY+14)+"px";
+      tip.textContent = `${p.g.g} · organoid ${fmt(p.g.D)} · food only ${fmt(p.g.A)} · ${FLAGS[p.g.f][0]}`; cv.style.cursor="pointer"; }
+    else { tip.style.display="none"; cv.style.cursor="default"; }
+  });
+  cv.addEventListener("mouseleave", ()=> tip.style.display="none");
+  cv.addEventListener("click", ev=>{ const p=nearest(ev); if(p){ tip.style.display="none"; select(p.g.g, true, true, "scatter"); } });
+  let rto; window.addEventListener("resize", ()=>{ clearTimeout(rto); rto=setTimeout(drawScatter,150); });
+})();
+
+/* ================= AI (Muse, via /api) ================= */
+const AI = (function(){
+  const STOP = new Set(["SET","MAX","REST","CAT","ACE","IMPACT","SHE","MAL","BAD","BID","WAS","HR","TH","CLOCK","PIGS","ITCH","SPEN","CI","FDR","DNA","RNA","LDL","FBS","HPLM","CNS","OLS","AI","II","III","IV","USA","NOT","AND","THE","ALL","ONE","TWO","CAN","ARE","FOR","MED","UNR","FMT"]);
+  const cache = new Map();
+  let briefCtl = null, briefGene = null, askCtl = null, io = null, avail = null, pauseUntil = 0;
+  /* one cheap check decides whether AI UI is shown at all, so visitors never see a dead feature */
+  const ready = fetch("/api/health", {cache:"no-store"}).then(r=> r.ok ? r.text() : "").then(t=> t.trim()==="ok").catch(()=> false).then(ok=>{
+    avail = ok;
+    document.body.classList.toggle("ai-off", !ok);
+    $("#askQ").disabled = !ok; $("#askBtn").disabled = !ok;
+    if(ok && state.selected && GENES.length) select(state.selected, "never", false);
+    return ok;
+  });
+  function inline(s){
+    s = esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g, "$1<i>$2</i>").replace(/`([^`]+)`/g, "<code>$1</code>");
+    return s.replace(/\b([A-Z][A-Z0-9]{1,10}(?:-[A-Z0-9]+)?)\b/g, (m)=> (BYG.has(m) && !STOP.has(m)) ? `<button class="gref" data-g="${m}">${m}</button>` : m);
+  }
+  function render(md, streaming){
+    md = md.replace(/\[\[error\]\]/g, "");
+    const lines = md.split(/\n/); let html="", list=false, para=[];
+    const flush = ()=>{ if(para.length){ html += `<p>${inline(para.join(" "))}</p>`; para=[]; } };
+    for(const raw of lines){
+      const l = raw.trim();
+      const h = l.match(/^(?:#{1,4}\s*)?\*\*([^*]{2,60})\*\*:?$/) || l.match(/^#{1,4}\s+(.+)$/);
+      if(h){ flush(); if(list){html+="</ul>";list=false;} html += `<h4>${esc(h[1].replace(/:$/,""))}</h4>`; continue; }
+      const li = l.match(/^[-*•]\s+(.*)$/) || l.match(/^\d+[.)]\s+(.*)$/);
+      if(li){ flush(); if(!list){html+="<ul>";list=true;} html += `<li>${inline(li[1])}</li>`; continue; }
+      if(!l){ flush(); if(list){html+="</ul>";list=false;} continue; }
+      if(list){ html+="</ul>"; list=false; }
+      para.push(l);
+    }
+    flush(); if(list) html+="</ul>";
+    if(streaming) html = html.replace(/(<\/(p|li|h4)>)(<\/ul>)?$/, '<span class="ai-caret"></span>$1$3') || html;
+    if(streaming && !html) html = '<span class="ai-caret"></span>';
+    return html;
+  }
+  /* agent answers carry [[step:...]] lines: the tool calls Muse made, shown above the answer */
+  function splitSteps(txt){
+    const steps = [];
+    const md = txt.replace(/\[\[step:([^\]\n]*)\]\]\n?/g, (m, s)=>{ steps.push(s.trim()); return ""; }).replace(/\[\[step:[^\]]*$/, "");
+    return {steps, md};
+  }
+  function renderAgent(txt, streaming){
+    const {steps, md} = splitSteps(txt);
+    const has = md.replace(/\[\[error\]\]/g,"").trim().length > 0;
+    const pend = streaming && !has ? `<li class="pend"><span class="ai-spin" aria-hidden="true"></span>${steps.length ? "Reading the results and writing the answer" : "Deciding what to look up"}</li>` : "";
+    const list = (steps.length || pend) ? `<ol class="ai-steps" aria-label="Steps Muse took">${steps.map(s=>`<li><span class="ok" aria-hidden="true">✓</span><span>${esc(s)}</span></li>`).join("")}${pend}</ol>` : "";
+    return list + (has ? render(md, streaming) : "");
+  }
+  const wait = ms => new Promise(r=> setTimeout(r, ms));
+  async function replay(txt, body, ctl){
+    const {steps, md} = splitSteps(txt);
+    const stepTxt = k => steps.slice(0,k).map(s=>`[[step:${s}]]\n`).join("");
+    for(let k=0; k<=steps.length; k++){ if(ctl.signal.aborted) return; body.innerHTML = renderAgent(stepTxt(k), true); await wait(k===0 ? 450 : 650); }
+    const n = 36;
+    for(let i=1; i<=n; i++){ if(ctl.signal.aborted) return; body.innerHTML = renderAgent(stepTxt(steps.length) + md.slice(0, Math.round(md.length*i/n)), true); await wait(28); }
+  }
+  const plain = txt => splitSteps(txt).md.replace(/\[\[error\]\]/g,"").trim();
+  function wireRefs(el){
+    el.querySelectorAll(".gref").forEach(b=> b.onclick = ()=> select(b.dataset.g, true));
+  }
+  async function stream(url, body, foot, ctl, onDone, agent){
+    const R = agent ? renderAgent : render;
+    if(cache.has(url)){ body.innerHTML = R(cache.get(url), false); wireRefs(body); onDone&&onDone(true); return; }
+    if(agent) body.innerHTML = R("", true);
+    let txt = "", status = 0;
+    const t0 = performance.now();
+    try{
+      const res = await fetch(url, {signal: ctl.signal});
+      if(!res.ok || !res.body){ status = res.status; throw new Error(res.status===429 ? "Lots of questions right now. Please wait a couple of minutes and try again." : "The AI service is busy right now."); }
+      const rd = res.body.getReader(), dec = new TextDecoder();
+      let last = 0;
+      for(;;){
+        const {done, value} = await rd.read(); if(done) break;
+        txt += dec.decode(value, {stream:true});
+        const now = performance.now();
+        if(now-last > 40){ body.innerHTML = R(txt, true); last = now; }
+      }
+      if(txt.includes("[[error]]")) throw new Error("The answer was cut off.");
+      cache.set(url, txt);
+      /* an answer served from the edge cache arrives at once; replay it so the reader still sees the steps Muse took */
+      if(agent && !reducedMotion && performance.now()-t0 < 900) await replay(txt, body, ctl);
+      body.innerHTML = R(txt, false); wireRefs(body);
+      onDone && onDone(true);
+    }catch(e){
+      if(e.name==="AbortError") return;
+      body.innerHTML = (txt? R(txt,false):"") + `<p class="ai-err">${esc(e.message && !/fetch|network|load/i.test(e.message) ? e.message : "The AI summary isn't available right now.")}</p>`;
+      wireRefs(body);
+      onDone && onDone(false, status);
+    }
+  }
+  function brief(g){
+    briefGene = g;
+    if(!avail) return;
+    if(briefCtl) briefCtl.abort();
+    const card = $("#briefCard"); if(!card) return;
+    if(io) io.disconnect();
+    /* only spend an AI call once the summary is actually on screen */
+    io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); run(g); } }, {rootMargin:"0px 0px -10% 0px"});
+    io.observe(card);
+  }
+  function run(g){
+    if(briefGene!==g) return;
+    const body = $("#briefBody"), foot = $("#briefFoot");
+    if(Date.now() < pauseUntil){ $("#briefCard").classList.add("ai-min"); body.innerHTML = "<p>AI summaries are paused for a minute. The numbers on the left are complete.</p>"; return; }
+    briefCtl = new AbortController();
+    const url = `/api/brief?gene=${encodeURIComponent(g.g)}`;
+    foot.innerHTML = "";
+    stream(url, body, foot, briefCtl, (ok, status)=>{
+      if(!ok){ pauseUntil = Date.now() + (status===429 ? 120000 : 45000); $("#briefCard").classList.add("ai-min");
+        body.innerHTML = "<p>The AI summary isn&rsquo;t available right now. The numbers on the left are complete.</p>"; }
+      foot.innerHTML = ok ? `<span>Written by AI from the numbers on this page. Check them before you rely on it.</span>`
+        : `<button type="button" id="briefRetry">Try again</button>`;
+      const rb = $("#briefRetry"); if(rb) rb.onclick = ()=>{ cache.delete(url); $("#briefBody").innerHTML='<div class="ai-skel"><i style="width:90%"></i><i style="width:70%"></i><i style="width:80%"></i></div>'; run(g); };
+    });
+  }
+  function ask(q){
+    q = (q||"").replace(/\s+/g," ").trim().slice(0,300);
+    if(!avail){ toast("The AI assistant isn&rsquo;t available right now."); return; }
+    if(q.length<3){ toast("Type a question first"); $("#askQ").focus(); return; }
+    $("#askQ").value = q;
+    if(askCtl) askCtl.abort(); askCtl = new AbortController();
+    const out = $("#askOut");
+    out.classList.add("show");
+    out.innerHTML = `<div class="ai-head"><span class="dotp"></span>Answer<span class="src">Muse agent<span class="src-x"> · searches all 17,525 genes</span></span></div><p class="q">${esc(q)}</p><div class="ai-body" id="askBody"></div><div class="ai-foot" id="askFoot"></div>`;
+    const btn = $("#askBtn"); btn.disabled = true;
+    requestAnimationFrame(()=>{ const r = out.getBoundingClientRect(); if(r.top > innerHeight*0.62 && window.MediumScrollTo) MediumScrollTo(out, -84); });
+    const url = `/api/ask?v=2&q=${encodeURIComponent(q)}`;
+    stream(url, $("#askBody"), $("#askFoot"), askCtl, ok=>{
+      btn.disabled = false;
+      $("#askFoot").innerHTML = ok ? `<span>Click any gene name to check it in the table.</span><button type="button" id="askCopy">Copy answer</button>` : `<button type="button" id="askRetry">Try again</button>`;
+      const c=$("#askCopy"); if(c) c.onclick = ev=> copyText(`Q: ${q}\n\n${plain(cache.get(url)||"")}\n\n(AI answer from https://www.itsthemedium.com)`, ev.currentTarget, "Answer copied");
+      const r=$("#askRetry"); if(r) r.onclick = ()=> ask(q);
+    }, true);
+  }
+  function askFromSearch(q){
+    if(window.MediumScrollTo) MediumScrollTo("#ask", -80); else $("#ask").scrollIntoView();
+    setTimeout(()=> ask(q), reducedMotion? 0 : 500);
+  }
+  let listCtl = null;
+  function explainList(syms){
+    const body = $("#listAIBody"), foot = $("#listAIFoot"); if(!body) return;
+    if(listCtl) listCtl.abort(); listCtl = new AbortController();
+    const url = `/api/list?v=1&genes=${syms.slice().sort().map(encodeURIComponent).join(",")}`;
+    foot.innerHTML = "";
+    stream(url, body, foot, listCtl, ok=>{
+      foot.innerHTML = ok ? `<span>Written by Muse from the table rows it looked up. Check the numbers below.</span><button type="button" id="listCopy">Copy summary</button>` : `<button type="button" id="listRetry">Try again</button>`;
+      const c=$("#listCopy"); if(c) c.onclick = ev=> copyText(`${plain(cache.get(url)||"")}\n\n(Hit-list check from https://www.itsthemedium.com)`, ev.currentTarget, "Summary copied");
+      const r=$("#listRetry"); if(r) r.onclick = ()=>{ cache.delete(url); explainList(syms); };
+    }, true);
+  }
+  return {brief, ask, askFromSearch, explainList, ready, on: ()=> avail===true};
+})();
+
+/* ================= check your own hit list ================= */
+const HitList = (function(){
+  const ORDER = [1,2,3,0];
+  const COL = {1:"c-med",2:"c-unr",3:"c-fmt",0:"c-no"};
+  const LISTSHORT = {broad_gain:"Broad gain",broad_loss:"Broad loss",broad_strict:"Broad strict",sanger18:"Sanger 18",sanger97:"Sanger 97"};
+  let lastRows = [], lastMissing = [];
+  function parse(raw){
+    const out = [], seen = new Set();
+    for(let t of String(raw||"").replace(/\(\s*\d+\s*\)/g," ").toUpperCase().split(/[\s,;|\/"'`]+/)){
+      t = t.replace(/^[^A-Z0-9]+|[^A-Z0-9]+$/g, "");
+      if(!t || /^\d+$/.test(t) || !/^[A-Z0-9][A-Z0-9.\-]{0,14}$/.test(t) || seen.has(t)) continue;
+      seen.add(t); out.push(t);
+    }
+    return out;
+  }
+  const n = (k, w, ws)=> `${k} ${k===1 ? w : (ws||w+"s")}`;
+  /* common names people paste that are not the official symbol */
+  const ALIAS = {HER2:"ERBB2",NEU:"ERBB2",HER3:"ERBB3",HER4:"ERBB4","PD-L1":"CD274",PDL1:"CD274","PD-1":"PDCD1",PD1:"PDCD1",P53:"TP53",P16:"CDKN2A",P21:"CDKN1A",P27:"CDKN1B",CMYC:"MYC","C-MYC":"MYC",NMYC:"MYCN","BCL-XL":"BCL2L1",BCLXL:"BCL2L1",CD95:"FAS",VEGF:"VEGFA",FRAP1:"MTOR",ERK2:"MAPK1",ERK1:"MAPK3",MEK1:"MAP2K1",MEK2:"MAP2K2",BRG1:"SMARCA4",SNF5:"SMARCB1",WHSC1:"NSD2",MLL:"KMT2A",MLL2:"KMT2D",SQS:"FDFT1",SREBP2:"SREBF2",SREBP1:"SREBF1",S1P:"MBTPS1",S2P:"MBTPS2",CD29:"ITGB1",DDX3:"DDX3X"};
+  function run(raw, scroll=true){
+    let syms = parse(raw);
+    if(!syms.length){ toast("Paste at least one gene symbol"); $("#listIn").focus(); return; }
+    const mapped = [];
+    syms = [...new Set(syms.map(s=>{ const a = ALIAS[s]; if(a && !BYG.has(s) && BYG.has(a)){ mapped.push(`${s} as ${a}`); return a; } return s; }))];
+    const capped = syms.length > 300; syms = syms.slice(0, 300);
+    const rows = syms.filter(s=>BYG.has(s)).map(s=>BYG.get(s))
+      .sort((a,b)=> ORDER.indexOf(a.f)-ORDER.indexOf(b.f) || Math.abs(b.D)-Math.abs(a.D));
+    const missing = syms.filter(s=>!BYG.has(s));
+    lastRows = rows; lastMissing = missing;
+    const c = [0,0,0,0]; rows.forEach(g=>c[g.f]++);
+    const changed = c[1]+c[2]+c[3], total = syms.length;
+    let title, sub;
+    if(!rows.length){
+      title = `None of these symbols are in the table.`;
+      sub = `The table uses official gene symbols from DepMap 26Q3. Check for older names or typos.`;
+    } else if(!changed){
+      title = `None of your ${n(rows.length,"gene")} look like diet effects.`;
+      sub = `None of them differ between organoids and flat cultures in the public screens, so there is nothing here for the food to explain.`;
+    } else {
+      title = c[1] ? `<em>${c[1]} of your ${n(rows.length,"gene")}</em> look${c[1]===1?"s":""} like ${c[1]===1?"a diet effect":"diet effects"}.` : `None of your ${n(rows.length,"gene")} look like diet effects.`;
+      const parts = [];
+      if(c[1]) parts.push(`${c[1]} follow${c[1]===1?"s":""} the food: flat cells fed organoid medium show the same change, with no 3D growth`);
+      if(c[2]) parts.push(`${n(c[2],"is","are")} unresolved, so ${c[2]===1?"it is a lead":"they are leads"} worth a second look`);
+      if(c[3]) parts.push(`${c[3]} ${c[3]===1?"is a":"are"} shape candidate${c[3]===1?"":"s"}`);
+      sub = `${missing.length ? `We found ${rows.length} of the ${total} symbols you pasted. ` : ""}${n(changed,"gene")} changed between organoids and flat cultures in the public data. Of ${changed===1?"it":"those"}, ${parts.join("; ")}.${c[0]?` The other ${c[0]} show${c[0]===1?"s":""} no real difference.`:""}`;
+    }
+    const seg = ORDER.map(f=> c[f] ? `<i class="${COL[f]}" style="width:${c[f]/total*100}%" title="${FLAGS[f][0]}: ${c[f]}"></i>` : "").join("") + (missing.length ? `<i class="c-miss" style="width:${missing.length/total*100}%" title="Not in the table: ${missing.length}"></i>` : "");
+    const leg = ORDER.map(f=> c[f] ? `<span><i class="${COL[f]}"></i>${FLAGS[f][0]} <b>${c[f]}</b></span>` : "").join("") + (missing.length ? `<span><i class="c-miss"></i>Not in the table <b>${missing.length}</b></span>` : "");
+    const table = rows.length ? `<div class="table-scroll"><table class="genes" id="ltab">
+      <caption class="sr-only">Your genes with their verdicts. Select a gene for details.</caption>
+      <thead><tr><th scope="col">Gene</th><th scope="col">Verdict</th>
+      <th scope="col" title="D: organoid minus classic 2D culture. Negative = the organoid needs the gene more."><span class="hl">Organoid effect</span><span class="hs">Organoid</span><span class="sub">D, vs classic 2D</span></th>
+      <th scope="col" class="hide-sm" title="A: flat cells fed organoid-type medium minus classic 2D.">Food only<span class="sub">A, flat + organoid food</span></th>
+      <th scope="col" title="A/D: share of the organoid effect reproduced by food alone."><span class="hl">Explained by food</span><span class="hs">Food %</span><span class="sub">A/D</span></th>
+      <th scope="col" class="hide-xs">Published lists<span class="sub">Broad, Sanger</span></th></tr></thead>
+      <tbody>${rows.map(g=>`<tr data-g="${g.g}"><td><button type="button" class="glink" data-g="${g.g}" aria-label="Open ${g.g} details">${g.g}</button></td>
+      <td><span class="badge ${FLAGS[g.f][1]}"><span class="bl">${FLAGS[g.f][0]}</span><span class="bs">${["No diff","Food","Unresolved","Shape"][g.f]}</span></span></td>
+      <td>${fmt(g.D)}</td><td class="hide-sm">${fmt(g.A)}</td>
+      <td>${g.rA==null||g.f===0?"·":g.rA>=1?'<span title="Food alone gives an effect at least as large as the organoid effect ('+Math.round(g.rA*100)+'%)">100%+</span>':Math.round(g.rA*100)+"%"}</td>
+      <td class="hide-xs lists" title="${(g.tags||[]).map(t=>TAGLABELS[t]||t).join(", ")}">${(g.tags||[]).map(t=>LISTSHORT[t]||t).join(" · ")||"·"}</td></tr>`).join("")}</tbody></table></div>` : "";
+    const out = $("#listOut");
+    out.innerHTML = `<p class="lr-title">${title}</p><p class="lr-sub">${sub}</p>
+      <div class="lr-bar" role="img" aria-label="${ORDER.map(f=>c[f]?FLAGS[f][0]+" "+c[f]:"").filter(Boolean).join(", ")}${missing.length?", not in the table "+missing.length:""}">${seg}</div>
+      <div class="lr-legend">${leg}</div>
+      ${AI.on() && rows.length ? `<a class="lr-jump" href="#ltab">↓ Skip to the gene table</a>` : ""}
+      <div class="lr-grid${AI.on() && rows.length ? "" : " solo"}">
+      ${AI.on() && rows.length ? `<div class="ai-card" id="listAI" data-lenis-prevent><div class="ai-head"><span class="dotp"></span>What this means for your list<span class="src">Muse agent</span></div><div class="ai-body" id="listAIBody"></div><div class="ai-foot" id="listAIFoot"></div></div>` : ""}
+      <div class="lr-table">${table}
+      ${missing.length ? `<p class="lr-miss"><b>Not in the table:</b> ${missing.slice(0,40).map(m=>`<code>${esc(m)}</code>`).join(", ")}${missing.length>40?` and ${missing.length-40} more`:""}. The table uses official symbols from DepMap 26Q3, so older names (aliases) will not match.</p>` : ""}
+      ${mapped.length ? `<p class="lr-miss">Read ${mapped.map(esc).join(", ")} (the official symbol${mapped.length>1?"s":""}).</p>` : ""}
+      ${capped ? `<p class="lr-miss">Only the first 300 genes were checked.</p>` : ""}</div></div>
+      <div class="lr-actions">${rows.length?`<button class="btn" type="button" id="listCsv">Download as CSV</button>`:""}<button class="btn" type="button" id="listLink">Copy link to this list</button></div>`;
+    out.classList.remove("show"); void out.offsetWidth; out.classList.add("show");
+    out.querySelectorAll("#ltab tr[data-g]").forEach(tr=> tr.onclick = ()=> select(tr.dataset.g, true, false, "list"));
+    const link = `https://www.itsthemedium.com/#list=${syms.join(",")}`;
+    try{ history.replaceState(null, "", "#list="+syms.join(",")); }catch(e){}
+    $("#listLink").onclick = ev=> copyText(link, ev.currentTarget, "Link copied");
+    const csv = $("#listCsv"); if(csv) csv.onclick = download;
+    const jl = out.querySelector(".lr-jump"); if(jl) jl.onclick = e=>{ e.preventDefault(); const t=$("#ltab"); if(window.MediumScrollTo) MediumScrollTo(t, -90); else t.scrollIntoView(); };
+    if(AI.on() && rows.length) AI.explainList(rows.map(g=>g.g));
+    if(scroll) requestAnimationFrame(()=>{ if(window.MediumScrollTo) MediumScrollTo(out, -84); else out.scrollIntoView({block:"start"}); });
+  }
+  function download(){
+    const q = v => `"${String(v).replace(/"/g,'""')}"`;
+    const lines = [["gene","verdict","technical_label","D_organoid_vs_2D","A_flat_organoid_medium","F_dome_vs_flat","share_explained_by_food","bootstrap_food_call","published_lists"].join(",")];
+    for(const g of lastRows) lines.push([g.g, FLAGS[g.f][0], FLAGS[g.f][2], g.D, g.A, g.F, g.rA==null?"":g.rA, g.bf==null?"":g.bf, (g.tags||[]).map(t=>TAGLABELS[t]||t).join("; ")].map(q).join(","));
+    for(const m of lastMissing) lines.push([m, "not in table", "", "", "", "", "", "", ""].map(q).join(","));
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([lines.join("\n")+"\n"], {type:"text/csv"}));
+    a.download = "itsthemedium-hit-list-check.csv"; document.body.appendChild(a); a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    toast("CSV downloaded");
+  }
+  function fromHash(){
+    const m = location.hash.match(/list=([A-Za-z0-9.,\-%]+)/); if(!m) return false;
+    const syms = decodeURIComponent(m[1]); $("#listIn").value = syms.split(",").join(", ");
+    run(syms, true); return true;
+  }
+  if(/Mac|iPhone|iPad/.test(navigator.platform)) $("#listKbd").innerHTML = "or press <kbd>⌘</kbd> + <kbd>Enter</kbd>";
+  $("#listForm").onsubmit = e=>{ e.preventDefault(); run($("#listIn").value); };
+  $("#listIn").addEventListener("keydown", e=>{ if(e.key==="Enter" && (e.metaKey||e.ctrlKey)){ e.preventDefault(); run($("#listIn").value); } });
+  document.querySelectorAll("[data-list]").forEach(b=> b.onclick = ()=>{
+    const syms = GENES.filter(g=>(g.tags||[]).includes(b.dataset.list)).map(g=>g.g);
+    $("#listIn").value = syms.join(", "); run(syms.join(","));
+  });
+  return {run, fromHash};
+})();
+
+/* ================= wiring ================= */
+document.querySelectorAll("[data-copy]").forEach(b=> b.onclick = ev =>
+  copyText(document.querySelector(b.dataset.copy).innerText, ev.currentTarget));
+document.querySelectorAll("#chips .chip").forEach(c=> c.onclick = ()=>{
+  document.querySelectorAll("#chips .chip").forEach(x=>x.setAttribute("aria-pressed","false"));
+  c.setAttribute("aria-pressed","true"); state.filter=c.dataset.filter; state.shown=60; state.q=""; $("#q").value=""; $("#detail").classList.remove("muted-q"); updateAskHint(); renderTable();
+});
+document.querySelectorAll("th[data-sort]").forEach(th=> th.onclick = ()=>{
+  const k = th.dataset.sort;
+  if(state.sortKey===k) state.sortDir*=-1; else { state.sortKey=k; state.sortDir=1; }
+  renderTable();
+});
+$("#moreBtn").onclick = ()=>{ state.shown += 200; renderTable(); };
+document.querySelectorAll("[data-gene]").forEach(b=> b.onclick = ()=>{ $("#q").value=""; state.q=""; updateAskHint(); renderTable(); select(b.dataset.gene, false); });
+function updateAskHint(){
+  const q = state.q, h = $("#askHint");
+  if(AI.on() && q.length>=4 && !BYG.has(q.toUpperCase()) && /[a-z ]/i.test(q) && (/\s/.test(q) || !GENES.some(g=>g.g.toUpperCase().startsWith(q.toUpperCase())))){
+    h.innerHTML = `Not a gene symbol? <button class="btn" type="button" id="hintAsk">Ask the AI: &ldquo;${esc(q)}&rdquo; →</button>`;
+    h.classList.add("show"); $("#hintAsk").onclick = ()=> AI.askFromSearch(q);
+  } else { h.classList.remove("show"); h.innerHTML=""; }
+}
+let qto;
+$("#q").addEventListener("input", e=>{
+  state.q = e.target.value.trim(); state.shown=60;
+  clearTimeout(qto); qto = setTimeout(()=>{
+    renderTable(); updateAskHint();
+    const exact = BYG.get(state.q.toUpperCase());
+    $("#detail").classList.toggle("muted-q", !!state.q && !exact);
+    if(exact){ select(exact.g, "never");
+      if(isTouch || innerHeight < 760){ const sb = document.querySelector(".searchbox");
+        if(sb.getBoundingClientRect().top > 90 && window.MediumScrollTo) MediumScrollTo(sb, -(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--head-h"))||64) - 8); } }
+  }, 120);
+});
+$("#q").addEventListener("keydown", e=>{
+  if(e.key==="Enter"){ e.preventDefault(); clearTimeout(qto); state.q=e.target.value.trim(); renderTable(); updateAskHint();
+    const first = document.querySelector("#gbody tr[data-g]");
+    if(first) select(first.dataset.g, true); else if(AI.on() && state.q.length>=3) AI.askFromSearch(state.q);
+    e.target.blur(); }
+});
+$("#askForm").addEventListener("submit", e=>{ e.preventDefault(); AI.ask($("#askQ").value); });
+document.querySelectorAll("#suggest button").forEach(b=> b.onclick = ()=> AI.ask(b.textContent));
+document.addEventListener("keydown", e=>{
+  if(e.key==="/" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)){
+    e.preventDefault();
+    if(window.MediumScrollTo) MediumScrollTo("#explore", -70);
+    setTimeout(()=> $("#q").focus({preventScroll:true}), reducedMotion? 50 : 900);
+  }
+  if(e.key==="Escape" && document.body.classList.contains("menu-open")) toggleMenu(false);
+});
+window.addEventListener("hashchange", ()=>{
+  const m = location.hash.match(/gene=([A-Za-z0-9\-]+)/);
+  if(m) select(m[1], true); else HitList.fromHash();
+});
+/* mobile menu */
+function toggleMenu(open){
+  document.body.classList.toggle("menu-open", open);
+  $("#menuBtn").setAttribute("aria-expanded", open);
+  $("#menuBtn").lastChild.textContent = open ? "Close" : "Menu";
+  if(window.MediumLenis){ open ? MediumLenis.stop() : MediumLenis.start(); }
+  if(open) setTimeout(()=> $("#menu a").focus({preventScroll:true}), 50);
+}
+$("#menuBtn").onclick = ()=> toggleMenu(!document.body.classList.contains("menu-open"));
+
+/* ================= load ================= */
+const loadState = {};
+(function fakeCount(){
+  const el = $("#load-n"), bar = $("#load-bar");
+  const t0 = performance.now();
+  (function step(){
+    if(loadState.done) return;
+    const p = Math.min(0.92, (performance.now()-t0)/1800);
+    el.textContent = Math.floor(17525 * (1-Math.pow(1-p,2.2))).toLocaleString();
+    bar.style.width = (p*100)+"%";
+    requestAnimationFrame(step);
+  })();
+})();
+window.MediumDataReady = Promise.all([
+  fetch("data/genes.json").then(r=>{ if(!r.ok) throw new Error("genes.json "+r.status); return r.json(); }),
+  fetch("data/stats.json").then(r=>{ if(!r.ok) throw new Error("stats.json "+r.status); return r.json(); })
+]).then(([genes, stats])=>{
+  GENES = genes; STATS = stats; BYG = new Map(genes.map(g=>[g.g.toUpperCase(), g]));
+  $("#st-genes").textContent = stats.n_genes.toLocaleString();
+  $("#chip-n").textContent = stats.n_genes.toLocaleString();
+  $("#st-med").textContent = Math.round(100*(stats.n_medium/stats.n_hits));
+  $("#footmeta").textContent = "Table version v2r2, generated " + (stats.generated||"").slice(0,10) + ".";
+  const counts = {hits:0, medium:0, unresolved:0, format:0, all:genes.length};
+  const tagCounts = {};
+  for(const g of genes){
+    if(g.f>0) counts.hits++; if(g.f===1) counts.medium++; if(g.f===2) counts.unresolved++; if(g.f===3) counts.format++;
+    for(const t of (g.tags||[])) tagCounts[t]=(tagCounts[t]||0)+1;
+  }
+  document.querySelectorAll("#chips .chip").forEach(c=>{
+    const f=c.dataset.filter, n = counts[f]!=null? counts[f] : (tagCounts[f]||0);
+    const base = f==="hits" ? "All changed genes" : c.textContent.trim();
+    c.innerHTML = base + `<span class="cnt">${n.toLocaleString()}</span>`;
+  });
+  const surv = ["LSM7","SCAP","DDX3X","ITGB1", ...(stats.survivors_top||[]).map(s=>s.g)].filter((v,i,a)=>a.indexOf(v)===i && BYG.has(v)).slice(0, innerWidth<640? 8 : 14);
+  $("#surv-grid").innerHTML = surv.map(g=>`<button data-surv="${g}" class="${BYG.get(g).f===3?"fmt":""}">${g}</button>`).join("");
+  document.querySelectorAll("[data-surv]").forEach(b=> b.onclick = ()=> select(b.dataset.surv, true));
+  const med = (stats.top_medium_gains||[]).map(s=>`<span>${s.g} ${fmt(s.D)}</span>`).join("");
+  const uno = (stats.survivors_top||[]).slice(0,8).map(s=>`<span class="dim">${s.g} unresolved</span>`).join("");
+  const belt = `<span>IT'S THE MEDIUM</span>${med}<span>387 OF 456 FOLLOW THE FOOD</span>${uno}<span>LSM7 · THE ONE SHAPE CANDIDATE</span>`;
+  $("#ticker-belt").innerHTML = belt + belt;
+  renderTable(); drawScatter();
+  const m = location.hash.match(/gene=([A-Za-z0-9\-]+)/);
+  if(m) select(m[1], true); else select("SQLE", "never", false);
+  if(!m && /list=/.test(location.hash)) AI.ready.then(()=> HitList.fromHash());
+  loadState.done = true;
+  $("#load-n").textContent = stats.n_genes.toLocaleString();
+  $("#load-bar").style.width = "100%";
+  $("#load-sub").textContent = "genes loaded";
+  setTimeout(()=>{ $("#loader").classList.add("done"); if(window.MediumIntro) MediumIntro(); }, reducedMotion? 60 : 380);
+  return {genes, stats};
+}).catch(err=>{
+  loadState.done = true;
+  $("#load-sub").textContent = "Couldn't load the gene data. Check your connection and reload.";
+  $("#rowcount").textContent = "Couldn't load the gene data (" + err.message + ").";
+  setTimeout(()=> $("#loader").classList.add("done"), 2400);
+  throw err;
+});
+</script>
+<script type="importmap">{"imports":{"three":"./assets/vendor/three.module.min.js"}}</script>
+<script type="module">
+/* ================= WebGL gene stage =================
+   17,525 real genes as GPU points, morphing between four formations:
+   dish -> flat-vs-dome split -> real (D,A) scatter -> survivor ring. */
+import * as THREE from "three";
+
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const TOUCH = matchMedia("(hover: none)").matches;
+const wrap = document.getElementById("gl");
+const tip = document.getElementById("gene-tip");
+const clamp125 = v => Math.max(-1.25, Math.min(1.25, (v==null?0:v)));
+const fract = x => x - Math.floor(x);
+const seedOf = i => fract(Math.sin(i*127.1+311.7)*43758.5453);
+let stage = null;
+
+window.MediumStage = {
+  highlight(g){ if(stage) stage.setHighlight(g); },
+  intro(){ if(stage) stage.startIntro(); }
+};
+
+function cpuMorph(out, A, B, t, s, i3, fx){
+  let lt = Math.min(1, Math.max(0, (t - s*0.38)/0.62));
+  lt = lt*lt*(3-2*lt);
+  const arc = Math.sin(lt*Math.PI);
+  let x = A[i3]   + (B[i3]  -A[i3])  *lt;
+  let y = A[i3+1] + (B[i3+1]-A[i3+1])*lt;
+  let z = A[i3+2] + (B[i3+2]-A[i3+2])*lt + arc*(0.35+0.5*s);
+  let it = Math.min(1, Math.max(0, fx.intro*1.5 - s*0.5));
+  it = it*it*(3-2*it);
+  const sc = 0.05 + 0.95*it;
+  x*=sc; y*=sc; z = z*sc + (1-it)*-2.0;
+  if(!fx.rm){
+    x += Math.sin(fx.time*0.35 + s*39.0)*0.028;
+    y += Math.cos(fx.time*0.29 + s*51.0)*0.028;
+    z += Math.sin(fx.time*0.23 + s*67.0)*0.020;
+    const dx=x-fx.mx, dy=y-fx.my, dz=z-fx.mz;
+    const dl=Math.sqrt(dx*dx+dy*dy+dz*dz);
+    const ft = Math.max(0, Math.min(1, (0.85-dl)/0.85));
+    const fs = fx.mouseOn * (ft*ft*(3-2*ft)) * 0.24 / Math.max(dl, 0.001);
+    x+=dx*fs; y+=dy*fs; z+=dz*fs;
+  }
+  out[i3]=x; out[i3+1]=y; out[i3+2]=z;
+}
+
+function buildStage(genes){
+  const N = genes.length;
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, powerPreference:"high-performance"});
+  const PR = Math.min(window.devicePixelRatio||1, 1.75);
+  renderer.setPixelRatio(PR);
+  renderer.setSize(innerWidth, innerHeight);
+  wrap.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0c0a08, 0.028);
+  const camera = new THREE.PerspectiveCamera(46, innerWidth/innerHeight, 0.1, 60);
+  camera.position.set(0, 0.4, 8.2);
+  const group = new THREE.Group();
+  scene.add(group);
+
+  const dish = new Float32Array(N*3), split = new Float32Array(N*3),
+        diag = new Float32Array(N*3), surv = new Float32Array(N*3),
+        col = new Float32Array(N*3), flag = new Float32Array(N),
+        seed = new Float32Array(N), psize = new Float32Array(N);
+  const COLORS = {
+    none:[0.42,0.37,0.30], medGain:[1.0,0.30,0.15], medLoss:[1.0,0.42,0.36],
+    unr:[0.96,0.79,0.36], fmt:[0.50,0.83,1.0]
+  };
+  const survivors = genes.map((g,i)=> (g.f===2||g.f===3)? i : -1).filter(i=>i>=0)
+                         .sort((a,b)=> Math.abs(genes[b].D)-Math.abs(genes[a].D));
+  const survRank = new Map(survivors.map((gi,r)=>[gi,r]));
+  const GA = Math.PI*(3-Math.sqrt(5));
+  let sheetI = 0, sphI = 0;
+  const sheetN = Math.ceil(N/2), sphN = N - sheetN;
+  genes.forEach((g,i)=>{
+    const s = seedOf(i), i3 = i*3;
+    seed[i] = s; flag[i] = g.f;
+    const r = 3.15*Math.sqrt((i+0.5)/N), th = i*GA;
+    dish[i3]=r*Math.cos(th); dish[i3+1]=r*Math.sin(th)*0.80; dish[i3+2]=(s-0.5)*0.55 - r*r*0.035;
+    if(s < 0.5){
+      const cols=132, rows=Math.ceil(sheetN/cols), cx=sheetI%cols, cy=Math.floor(sheetI/cols); sheetI++;
+      split[i3]=-3.55 + (cx/(cols-1))*3.1 + (seedOf(i+9e4)-0.5)*0.03;
+      split[i3+1]= 1.15 - (cy/Math.max(rows-1,1))*2.3 + (seedOf(i+5e4)-0.5)*0.03;
+      split[i3+2]=(seedOf(i+7e4)-0.5)*0.10;
+    } else {
+      const y = 1 - (sphI/Math.max(sphN-1,1))*2, rr = Math.sqrt(Math.max(0,1-y*y)), tt = GA*sphI; sphI++;
+      split[i3]= 2.05 + Math.cos(tt)*rr*1.18; split[i3+1]= y*1.18; split[i3+2]= Math.sin(tt)*rr*1.18;
+    }
+    diag[i3]=clamp125(g.D)*2.45; diag[i3+1]=clamp125(g.A)*2.45; diag[i3+2]=(s-0.5)*0.4;
+    if(survRank.has(i)){
+      const a = (survRank.get(i)/survivors.length)*Math.PI*2 - Math.PI/2;
+      const rad = 2.1 + 0.28*Math.sin(a*3+i);
+      surv[i3]=Math.cos(a)*rad; surv[i3+1]=Math.sin(a)*rad*0.86; surv[i3+2]=(s-0.5)*0.3;
+    } else {
+      surv[i3]=diag[i3]*1.32; surv[i3+1]=diag[i3+1]*1.32; surv[i3+2]=diag[i3+2]-1.3;
+    }
+    const c = g.f===3? COLORS.fmt : g.f===2? COLORS.unr : g.f===1? (g.D<0? COLORS.medGain : COLORS.medLoss) : COLORS.none;
+    col[i3]=c[0]; col[i3+1]=c[1]; col[i3+2]=c[2];
+    psize[i] = g.f===3? 2.5 : g.f===2? 1.85 : g.f>0? 1.55 : 0.85;
+  });
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute("position", new THREE.BufferAttribute(dish,3));
+  geo.setAttribute("aSplit", new THREE.BufferAttribute(split,3));
+  geo.setAttribute("aDiag", new THREE.BufferAttribute(diag,3));
+  geo.setAttribute("aSurv", new THREE.BufferAttribute(surv,3));
+  geo.setAttribute("aCol", new THREE.BufferAttribute(col,3));
+  geo.setAttribute("aFlag", new THREE.BufferAttribute(flag,1));
+  geo.setAttribute("aSeed", new THREE.BufferAttribute(seed,1));
+  geo.setAttribute("aSize", new THREE.BufferAttribute(psize,1));
+
+  const uniforms = {
+    uTime:{value:0}, uMorph:{value:0}, uIntro:{value: RM?1:0},
+    uSize:{value:26.0}, uPR:{value:PR}, uMouseOn:{value:0},
+    uMouse:{value:new THREE.Vector3(0,0,99)}, uGlobalA:{value:1}, uRM:{value: RM?1:0}
+  };
+  const mat = new THREE.ShaderMaterial({
+    uniforms, transparent:true, depthWrite:false, blending:THREE.AdditiveBlending,
+    vertexShader: `
+      attribute vec3 aSplit; attribute vec3 aDiag; attribute vec3 aSurv;
+      attribute vec3 aCol; attribute float aFlag; attribute float aSeed; attribute float aSize;
+      uniform float uTime, uMorph, uIntro, uSize, uPR, uMouseOn, uGlobalA, uRM;
+      uniform vec3 uMouse;
+      varying vec3 vCol; varying float vA;
+      vec3 m2(vec3 A, vec3 B, float t, float s){
+        float lt = clamp((t - s*0.38)/0.62, 0.0, 1.0);
+        lt = lt*lt*(3.0-2.0*lt);
+        vec3 p = mix(A, B, lt);
+        p.z += sin(lt*3.14159) * (0.35 + 0.5*s);
+        return p;
+      }
+      void main(){
+        float m = uMorph;
+        vec3 p;
+        if(m < 1.0) p = m2(position, aSplit, m, aSeed);
+        else if(m < 2.0) p = m2(aSplit, aDiag, m-1.0, aSeed);
+        else p = m2(aDiag, aSurv, clamp(m-2.0, 0.0, 1.0), aSeed);
+        float it = clamp(uIntro*1.5 - aSeed*0.5, 0.0, 1.0);
+        it = it*it*(3.0-2.0*it);
+        p *= (0.05 + 0.95*it);
+        p.z += (1.0-it)*-2.0;
+        if(uRM < 0.5){
+          p.x += sin(uTime*0.35 + aSeed*39.0)*0.028;
+          p.y += cos(uTime*0.29 + aSeed*51.0)*0.028;
+          p.z += sin(uTime*0.23 + aSeed*67.0)*0.020;
+        }
+        vec3 dv = p - uMouse;
+        float dl = length(dv);
+        float f = uMouseOn * (1.0-uRM) * smoothstep(0.85, 0.0, dl);
+        p += (dv / max(dl, 0.001)) * f * 0.24;
+        float a = aFlag > 2.5 ? 1.0 : (aFlag > 0.5 ? 0.95 : 0.27);
+        float seg3 = clamp(m-2.0, 0.0, 1.0);
+        float isSurv = step(1.5, aFlag);
+        a *= mix(1.0, mix(0.045, 1.0, isSurv), seg3);
+        a *= uGlobalA * (0.20 + 0.80*it);
+        vCol = aCol; vA = a;
+        vec4 mv = modelViewMatrix * vec4(p, 1.0);
+        float pulse = 1.0 + isSurv*seg3*0.30*sin(uTime*2.2 + aSeed*80.0)*(1.0-uRM);
+        gl_PointSize = uSize * aSize * pulse * uPR / max(0.1, -mv.z);
+        gl_Position = projectionMatrix * mv;
+      }`,
+    fragmentShader: `
+      varying vec3 vCol; varying float vA;
+      void main(){
+        float d = length(gl_PointCoord - 0.5);
+        float a = smoothstep(0.5, 0.08, d) * vA;
+        if(a < 0.004) discard;
+        gl_FragColor = vec4(vCol, a);
+      }`
+  });
+  const points = new THREE.Points(geo, mat);
+  points.frustumCulled = false;
+  group.add(points);
+
+  const lg = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-3.06,-3.06,0), new THREE.Vector3(3.06,3.06,0)]);
+  const line = new THREE.Line(lg, new THREE.LineDashedMaterial({color:0xf3ecdd, dashSize:0.2, gapSize:0.13, transparent:true, opacity:0}));
+  line.computeLineDistances(); group.add(line);
+  const rim = new THREE.Mesh(new THREE.RingGeometry(3.18, 3.26, 96),
+    new THREE.MeshBasicMaterial({color:0xf3ecdd, transparent:true, opacity:0.30, side:THREE.DoubleSide}));
+  rim.scale.set(1, 0.80, 1); group.add(rim);
+  const rc = document.createElement("canvas"); rc.width = rc.height = 128;
+  const rx = rc.getContext("2d"); rx.strokeStyle = "#ffffff"; rx.lineWidth = 7;
+  rx.beginPath(); rx.arc(64,64,52,0,7); rx.stroke();
+  const ring = new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(rc), color:0xffd9a0, transparent:true, depthTest:false}));
+  ring.scale.set(0.42,0.42,1); ring.visible = false; group.add(ring);
+
+  const cur = new Float32Array(N*3);
+  const formations = [dish, split, diag, surv];
+  const idxByGene = new Map(genes.map((g,i)=>[g.g.toUpperCase(), i]));
+  let morphCur = 0, introT = RM?1:0, introOn = RM, hiGene = null, hoverI = -1;
+  let px = 0, py = 0, pointerIn = false, pointerDirty = false, camX = 0, camY = 0;
+  let layout = {portrait:false, short:false, baseY:0, L:[{x:0,sc:1},{x:0,sc:1},{x:0,sc:1},{x:0,sc:1}]};
+  const raycaster = new THREE.Raycaster(), ndc = new THREE.Vector2();
+  const planeZ = new THREE.Plane(new THREE.Vector3(0,0,1), 0), hitP = new THREE.Vector3();
+  const tmpV = new THREE.Vector3();
+
+  function updateCPU(){
+    const m = morphCur;
+    const seg = Math.min(2, Math.floor(m)), t = Math.min(1, m - seg);
+    const A = formations[seg], B = formations[seg+1];
+    const fx = {time:uniforms.uTime.value, intro:introT, rm:RM,
+      mx:uniforms.uMouse.value.x, my:uniforms.uMouse.value.y, mz:uniforms.uMouse.value.z,
+      mouseOn:uniforms.uMouseOn.value};
+    for(let i=0;i<N;i++) cpuMorph(cur, A, B, t, seed[i], i*3, fx);
+  }
+  function projectPick(clientX, clientY, radius){
+    updateCPU();
+    group.updateMatrixWorld();
+    const onlySurv = morphCur > 2.5;
+    let best = -1, bd = radius*radius;
+    for(let i=0;i<N;i++){
+      if(flag[i] < 0.5 || (onlySurv && flag[i] < 1.5)) continue;
+      tmpV.set(cur[i*3], cur[i*3+1], cur[i*3+2]).applyMatrix4(group.matrixWorld).project(camera);
+      if(tmpV.z > 1) continue;
+      const sx = (tmpV.x*0.5+0.5)*innerWidth, sy = (-tmpV.y*0.5+0.5)*innerHeight;
+      const d = (sx-clientX)*(sx-clientX) + (sy-clientY)*(sy-clientY);
+      if(d < bd){ bd = d; best = i; }
+    }
+    return best;
+  }
+  const FLAGTXT = ["no real difference","follows the food","unresolved","shape candidate"];
+  const FLAGCLS = ["","v1","v2","v3"];
+  const overText = el => el && el.closest && el.closest(".ch-copy,.display,.ch-kick,.big-num,.hero-ctas,.surv-grid,.legend,header,#rail,#menu,a,button,input");
+  function onMove(ev){
+    if(ev.pointerType==="touch") return;
+    px = (ev.clientX/innerWidth)*2-1; py = (ev.clientY/innerHeight)*2-1;
+    pointerIn = true; pointerDirty = !overText(ev.target);
+    if(!pointerDirty){ tip.style.display="none"; hoverI=-1; document.body.style.cursor=""; }
+    tip.dataset.x = ev.clientX; tip.dataset.y = ev.clientY;
+    ndc.set(px, -py); raycaster.setFromCamera(ndc, camera);
+    if(raycaster.ray.intersectPlane(planeZ, hitP)){
+      group.worldToLocal(hitP);
+      uniforms.uMouse.value.copy(hitP);
+    }
+  }
+  window.addEventListener("pointermove", onMove, {passive:true});
+  document.documentElement.addEventListener("pointerleave", ()=>{ pointerIn=false; tip.style.display="none"; });
+  window.addEventListener("click", ev=>{
+    if(document.body.classList.contains("on-paper") || document.body.classList.contains("menu-open")) return;
+    if(overText(ev.target)) return;
+    const i = TOUCH ? projectPick(ev.clientX, ev.clientY, 34) : hoverI;
+    if(i < 0) return;
+    const g = genes[i];
+    if(g && window.select) select(g.g, true);
+  });
+
+  const paperEl = document.getElementById("paper");
+  const api = {
+    setHighlight(g){ hiGene = idxByGene.get((g||"").toUpperCase()); ring.visible = hiGene!=null; },
+    startIntro(){ introOn = true; }
+  };
+  stage = api;
+
+  function fitCamera(){
+    const a = innerWidth/innerHeight;
+    camera.aspect = a;
+    const portrait = a < 0.85;
+    layout.portrait = portrait;
+    camera.position.z = a < 0.6 ? 13.2 : portrait ? 11.6 : a < 1.15 ? 9.8 : 8.2;
+    /* on tall screens text sits at the top, so the field sits lower */
+    layout.baseY = portrait ? -2.1 : 0;
+    /* fit each formation into the half of the screen the text leaves free */
+    const halfW = Math.tan(THREE.MathUtils.degToRad(23)) * camera.position.z * a;
+    const fit = (w, c, side, frac)=>{ const avail = halfW*frac, sc = Math.min(1, avail/w);
+      return {x: side*(halfW*0.9 - avail/2) - c*sc, sc}; };
+    layout.short = !portrait && innerHeight <= 520;
+    if(layout.short){
+      layout.L = [{x:halfW*0.48, sc:0.66}, fit(6.9,-0.16,1,0.66), fit(6.3,0,1,0.7), fit(5.2,0,1,0.7)];
+    } else if(!portrait){
+      layout.L = [{x:0,sc:1}, fit(6.9,-0.16,-1,0.74), {x:1.25,sc:1}, fit(5.2,0,-1,0.8)];
+    }
+    camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight);
+  }
+  fitCamera();
+  window.addEventListener("resize", fitCamera);
+
+  const clock = new THREE.Clock();
+  gsap.ticker.add(()=>{
+    if(document.hidden) return;
+    const t = clock.getElapsedTime();
+    const target = window.MediumMorph ? window.MediumMorph.v : 0;
+    if(RM) morphCur = Math.round(target);
+    else morphCur += (target - morphCur) * 0.085;
+    if(Math.abs(target-morphCur) < 0.0004) morphCur = target;
+    if(introOn && introT < 1) introT = Math.min(1, introT + 0.006);
+    uniforms.uTime.value = t;
+    uniforms.uMorph.value = morphCur;
+    uniforms.uIntro.value = introT;
+    const onPaper = document.body.classList.contains("on-paper");
+    const gTarget = onPaper? 0.10 : 1;
+    uniforms.uGlobalA.value += (gTarget - uniforms.uGlobalA.value)*0.06;
+    uniforms.uMouseOn.value += (((pointerIn && !onPaper)?1:0) - uniforms.uMouseOn.value)*0.08;
+    const covered = onPaper && paperEl.getBoundingClientRect().top <= 0;
+    if(covered){ tip.style.display="none"; hoverI=-1; pointerDirty=false; return; }
+    const sway = (1 - Math.min(1, Math.max(0, morphCur-0.7)));
+    camX += ((RM||TOUCH?0:px*0.85) - camX)*0.045;
+    camY += ((RM||TOUCH?0:-py*0.5) - camY)*0.045;
+    camera.position.x = camX; camera.position.y = 0.4 + camY;
+    camera.lookAt(0, 0, 0);
+    const bump = c => Math.max(0, 1 - Math.abs(morphCur - c));
+    if(layout.portrait){ group.position.x = 0; group.position.y = layout.baseY - 1.25*bump(1); const ps = 1 - 0.36*bump(1); group.scale.set(ps,ps,ps); }
+    else { let gx = 0, sc = 1;
+      for(let c=0;c<4;c++){ const b = bump(c); gx += b*layout.L[c].x; sc += b*(layout.L[c].sc-1); }
+      group.position.x = gx; group.position.y = 0; group.scale.set(sc,sc,sc); }
+    group.rotation.z = RM? 0 : Math.sin(t*0.05)*0.05*sway;
+    group.rotation.y = RM? 0 : Math.sin(t*0.07)*0.13*sway;
+    group.rotation.x = -0.10*sway;
+    line.material.opacity = 0.55 * Math.min(1, Math.max(0,(morphCur-1.55)/0.4)) * (1 - Math.min(1, Math.max(0,(morphCur-2.35)/0.4)));
+    rim.material.opacity = 0.30 * (1 - Math.min(1, morphCur/0.8));
+    if(hiGene!=null){
+      const m2v = morphCur, segI = Math.min(2, Math.floor(m2v)), tt = Math.min(1, m2v-segI);
+      cpuMorph(cur, formations[segI], formations[segI+1], tt, seed[hiGene], hiGene*3,
+        {time:uniforms.uTime.value, intro:introT, rm:RM, mx:uniforms.uMouse.value.x,
+         my:uniforms.uMouse.value.y, mz:uniforms.uMouse.value.z, mouseOn:uniforms.uMouseOn.value});
+      ring.position.set(cur[hiGene*3], cur[hiGene*3+1], cur[hiGene*3+2]+0.05);
+      const s = 0.40 + (RM?0:0.05*Math.sin(t*3));
+      ring.scale.set(s,s,1);
+      ring.visible = !onPaper;
+    }
+    if(pointerDirty && !onPaper && !TOUCH){
+      pointerDirty = false;
+      hoverI = projectPick(+tip.dataset.x||0, +tip.dataset.y||0, 26);
+      if(hoverI >= 0){
+        const g = genes[hoverI];
+        tip.innerHTML = `<b>${g.g}</b> · <span class="${FLAGCLS[g.f]}">${FLAGTXT[g.f]}</span> · click to open`;
+        tip.style.display = "block";
+        const tx = Math.min((+tip.dataset.x)+14, innerWidth - tip.offsetWidth - 10);
+        tip.style.left = tx+"px";
+        tip.style.top = ((+tip.dataset.y)+14)+"px";
+        document.body.style.cursor = "pointer";
+      } else { tip.style.display = "none"; document.body.style.cursor = ""; }
+    } else if(onPaper){ tip.style.display = "none"; hoverI = -1; document.body.style.cursor = ""; }
+    renderer.render(scene, camera);
+  });
+
+  if(document.getElementById("loader").classList.contains("done")) introOn = true;
+  setTimeout(()=>{ introOn = true; }, 5000);
+  return api;
+}
+
+window.MediumDataReady
+  .then(({genes})=>{ try{ buildStage(genes); }catch(err){
+    console.warn("WebGL stage unavailable:", err);
+    document.body.classList.add("no-gl");
+    wrap.innerHTML = '<img src="assets/fig1.png" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;opacity:.3;filter:invert(1) brightness(.85)">';
+  } })
+  .catch(()=>{});
+</script>
+<script>
+/* ================= scroll choreography ================= */
+window.MediumMorph = {v:0};
+(function(){
+  const RM = reducedMotion;
+  let lenis = null;
+  gsap.registerPlugin(ScrollTrigger);
+  if(!RM && window.Lenis && !isTouch){
+    lenis = new Lenis({duration:1.15, smoothWheel:true});
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(t=> lenis.raf(t*1000));
+    gsap.ticker.lagSmoothing(0);
+    window.MediumLenis = lenis;
+  }
+  window.MediumScrollTo = function(target, offset){
+    const el = typeof target==="string"? document.querySelector(target) : target;
+    if(!el && target!=="#top") return;
+    if(lenis) lenis.scrollTo(target==="#top"? 0 : el, {offset: offset||0, duration: RM?0:1.4});
+    else if(target==="#top") window.scrollTo({top:0, behavior: RM?"auto":"smooth"});
+    else window.scrollTo({top: el.getBoundingClientRect().top + scrollY + (offset||0), behavior: RM?"auto":"smooth"});
+  };
+  document.querySelectorAll("[data-scroll]").forEach(a=> a.addEventListener("click", ev=>{
+    ev.preventDefault();
+    const wasOpen = document.body.classList.contains("menu-open");
+    if(wasOpen) toggleMenu(false);
+    setTimeout(()=> MediumScrollTo(a.dataset.scroll, a.dataset.scroll==="#top"? 0 : -72), wasOpen? 60 : 0);
+  }));
+
+  /* chapters */
+  const chs = ["#ch0","#ch1","#ch2","#ch3"].map(s=>document.querySelector(s));
+  chs.forEach((c,i)=> gsap.set(c, {autoAlpha: i===0?1:0, y: (i===0||RM)?0:36}));
+  const railBtns = [...document.querySelectorAll("#rail button")];
+  const counter = {n:0}; let counted = false;
+  const countEl = document.querySelector(".count85");
+  const tl = gsap.timeline({
+    defaults:{ease:"none"},
+    scrollTrigger:{trigger:"#story", start:"top top", end:"bottom bottom", scrub: RM? true : 0.55,
+      onUpdate(self){
+        const idx = Math.min(3, Math.floor(self.progress*4));
+        railBtns.forEach((b,i)=> { b.classList.toggle("on", i===idx); b.setAttribute("aria-current", i===idx ? "step" : "false"); });
+        if(idx>=2 && !counted){ counted = true;
+          if(RM) countEl.textContent = "85";
+          else gsap.fromTo(counter, {n:0}, {n:85, duration:1.3, ease:"power2.out", onUpdate:()=> countEl.textContent = Math.round(counter.n)}); }
+      }}
+  });
+  const M = window.MediumMorph;
+  tl.to(M, {v:1, duration:0.85}, 0.50)
+    .to(chs[0], {autoAlpha:0, y:RM?0:-44, duration:0.30}, 0.62)
+    .to(chs[1], {autoAlpha:1, y:0, duration:0.30}, 0.88)
+    .to(M, {v:2, duration:0.85}, 1.80)
+    .to(chs[1], {autoAlpha:0, y:RM?0:-44, duration:0.30}, 1.92)
+    .to(chs[2], {autoAlpha:1, y:0, duration:0.30}, 2.18)
+    .to(M, {v:3, duration:0.85}, 3.05)
+    .to(chs[2], {autoAlpha:0, y:RM?0:-44, duration:0.30}, 3.17)
+    .to(chs[3], {autoAlpha:1, y:0, duration:0.30}, 3.43)
+    .to(chs[3], {autoAlpha:0, y:RM?0:-30, duration:0.22}, 4.03);
+
+  railBtns.forEach(btn=> btn.addEventListener("click", ()=>{
+    const st = tl.scrollTrigger;
+    const p = [0.02, 0.33, 0.62, 0.94][+btn.dataset.ch] || 0;
+    const y = st.start + (st.end-st.start)*p;
+    if(lenis) lenis.scrollTo(y, {duration: RM?0:1.3});
+    else window.scrollTo({top:y, behavior: RM?"auto":"smooth"});
+  }));
+
+  ScrollTrigger.create({
+    trigger:"#paper", start:"top 96px",
+    onEnter(){ document.body.classList.add("on-paper"); },
+    onLeaveBack(){ document.body.classList.remove("on-paper"); }
+  });
+
+  ScrollTrigger.create({ trigger:".ticker", start:"top 85%",
+    onEnter(){ document.body.classList.add("near-paper"); }, onLeaveBack(){ document.body.classList.remove("near-paper"); } });
+  /* nav scrollspy */
+  const navLinks = [...document.querySelectorAll("nav.desk a")];
+  ["#short","#explore","#check","#ask","#findings","#story-made","#methods","#sources","#downloads"].forEach(id=>{
+    ScrollTrigger.create({trigger:id, start:"top 45%", end:"bottom 45%", onToggle(self){
+      if(!self.isActive) return;
+      const key = (id==="#sources"||id==="#downloads") ? "#methods" : id;
+      navLinks.forEach(a=> a.classList.toggle("cur", a.getAttribute("href")===key));
+    }});
+  });
+  ScrollTrigger.create({trigger:"#paper", start:"top 45%", onLeaveBack(){ navLinks.forEach(a=>a.classList.remove("cur")); }});
+
+  let introDone = false;
+  window.MediumIntro = function(){
+    if(introDone) return; introDone = true;
+    if(window.MediumStage) MediumStage.intro();
+    if(RM){ gsap.set(".line-mask > span", {y:0}); return; }
+    gsap.to(".line-mask > span", {y:0, duration:1.05, stagger:0.13, ease:"power4.out", delay:0.15});
+    gsap.fromTo("#ch0 .ch-kick, #ch0 .ch-copy, #ch0 .hero-ctas, #ch0 .scroll-cue, #ch0 .legend",
+      {opacity:0, y:22}, {opacity:1, y:0, duration:0.9, stagger:0.09, ease:"power3.out", delay:0.55, overwrite:"auto"});
+  };
+  if(RM) gsap.set(".line-mask > span", {y:0});
+  setTimeout(()=> window.MediumIntro(), 4500);
+
+  if(!RM){
+    gsap.utils.toArray(".reveal").forEach(el=>{
+      gsap.to(el, {opacity:1, y:0, duration:0.85, ease:"power3.out",
+        scrollTrigger:{trigger:el, start:"top 92%", once:true}});
+    });
+    const linePath = document.getElementById("score-line");
+    if(linePath && linePath.getTotalLength){
+      const L = linePath.getTotalLength();
+      gsap.fromTo(linePath, {strokeDasharray:L, strokeDashoffset:L},
+        {strokeDashoffset:0, duration:1.4, ease:"power2.inOut",
+         scrollTrigger:{trigger:"#score-svg", start:"top 85%", once:true}});
+    }
+  } else {
+    document.querySelectorAll(".reveal").forEach(el=>{ el.style.opacity=1; el.style.transform="none"; });
+  }
+  window.addEventListener("load", ()=> ScrollTrigger.refresh());
+  /* the table, detail panel, "show more" and <details> all change the page height after load */
+  /* refresh only once scrolling has settled: a refresh mid-scroll cancels native smooth scrolling */
+  let rfT, lastScroll = 0;
+  addEventListener("scroll", ()=>{ lastScroll = performance.now(); }, {passive:true});
+  const settleRefresh = ()=>{ clearTimeout(rfT); rfT = setTimeout(()=>{ if(performance.now()-lastScroll < 350) return settleRefresh(); ScrollTrigger.refresh(); }, 250); };
+  new ResizeObserver(settleRefresh).observe(document.getElementById("paper"));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "status": "EXPLORATORY precision-feasibility only; not confirmatory evidence",
+  "estimand_candidate": "panel-wide Spearman association between format lability L_g (model-equal-weighted mean |Dome-Plastic| Chronos delta, 6 models) and |MeanDifference| (Broad organoids n=94 vs adherent n=433), 223 selection-excluded panel genes; partial vs |AdherentMean|",
+  "rho": 0.1668304274806517,
+  "partial_rho": 0.08569524040376057,
+  "model_bootstrap_ci95": [
+    0.008337733954325882,
+    0.24742130823969388
+  ],
+  "gene_bootstrap_ci95": [
+    0.038800749822029926,
+    0.2893967089458682
+  ],
+  "caveats": "CI from model bootstrap captures environmental-side uncertainty only; gene bootstrap ignores pathway dependence (lower bound). True CI wider. Broad transfer table is development/descriptive (selection source + Chronos pretraining); external confirmation gated on Sanger route."
+}

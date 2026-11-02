@@ -1,0 +1,235 @@
+{
+ "timestamp": "2026-10-29T23:14:41.668347+00:00",
+ "pathways": {
+  "mev": {
+   "raw_org_minus_FBS": -0.399,
+   "lineage_adj_equal_weight": -0.39,
+   "lineages_used": [
+    [
+     "Ampulla of Vater",
+     4,
+     5
+    ],
+    [
+     "Bowel",
+     14,
+     38
+    ],
+    [
+     "Breast",
+     10,
+     37
+    ],
+    [
+     "Esophagus/Stomach",
+     18,
+     38
+    ],
+    [
+     "Ovary/Fallopian Tube",
+     3,
+     39
+    ],
+    [
+     "Pancreas",
+     18,
+     34
+    ],
+    [
+     "Prostate",
+     5,
+     6
+    ],
+    [
+     "Uterus",
+     3,
+     20
+    ]
+   ]
+  },
+  "heme": {
+   "raw_org_minus_FBS": -0.322,
+   "lineage_adj_equal_weight": -0.27,
+   "lineages_used": [
+    [
+     "Ampulla of Vater",
+     4,
+     5
+    ],
+    [
+     "Bowel",
+     14,
+     38
+    ],
+    [
+     "Breast",
+     10,
+     37
+    ],
+    [
+     "Esophagus/Stomach",
+     18,
+     38
+    ],
+    [
+     "Ovary/Fallopian Tube",
+     3,
+     39
+    ],
+    [
+     "Pancreas",
+     18,
+     34
+    ],
+    [
+     "Prostate",
+     5,
+     6
+    ],
+    [
+     "Uterus",
+     3,
+     20
+    ]
+   ]
+  },
+  "splice": {
+   "raw_org_minus_FBS": 0.744,
+   "lineage_adj_equal_weight": 0.779,
+   "lineages_used": [
+    [
+     "Ampulla of Vater",
+     4,
+     5
+    ],
+    [
+     "Bowel",
+     14,
+     38
+    ],
+    [
+     "Breast",
+     10,
+     37
+    ],
+    [
+     "Esophagus/Stomach",
+     18,
+     38
+    ],
+    [
+     "Ovary/Fallopian Tube",
+     3,
+     39
+    ],
+    [
+     "Pancreas",
+     18,
+     34
+    ],
+    [
+     "Prostate",
+     5,
+     6
+    ],
+    [
+     "Uterus",
+     3,
+     20
+    ]
+   ]
+  },
+  "ribo": {
+   "raw_org_minus_FBS": 0.448,
+   "lineage_adj_equal_weight": 0.361,
+   "lineages_used": [
+    [
+     "Ampulla of Vater",
+     4,
+     5
+    ],
+    [
+     "Bowel",
+     14,
+     38
+    ],
+    [
+     "Breast",
+     10,
+     37
+    ],
+    [
+     "Esophagus/Stomach",
+     18,
+     38
+    ],
+    [
+     "Ovary/Fallopian Tube",
+     3,
+     39
+    ],
+    [
+     "Pancreas",
+     18,
+     34
+    ],
+    [
+     "Prostate",
+     5,
+     6
+    ],
+    [
+     "Uterus",
+     3,
+     20
+    ]
+   ]
+  },
+  "wnt": {
+   "raw_org_minus_FBS": -0.319,
+   "lineage_adj_equal_weight": -0.259,
+   "lineages_used": [
+    [
+     "Ampulla of Vater",
+     4,
+     5
+    ],
+    [
+     "Bowel",
+     14,
+     38
+    ],
+    [
+     "Breast",
+     10,
+     37
+    ],
+    [
+     "Esophagus/Stomach",
+     18,
+     38
+    ],
+    [
+     "Ovary/Fallopian Tube",
+     3,
+     39
+    ],
+    [
+     "Pancreas",
+     18,
+     34
+    ],
+    [
+     "Prostate",
+     5,
+     6
+    ],
+    [
+     "Uterus",
+     3,
+     20
+    ]
+   ]
+  }
+ }
+}

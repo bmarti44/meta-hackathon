@@ -1,0 +1,226 @@
+{
+ "n_checks": 33,
+ "n_pass": 33,
+ "checks": [
+  {
+   "check": "zip integrity",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "norm: archived hit rule round-trips by gene",
+   "pass": true,
+   "detail": "456 vs 456"
+  },
+  {
+   "check": "norm: archive == generations flags",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "raw: archived hit rule round-trips by gene",
+   "pass": true,
+   "detail": "869 vs 869"
+  },
+  {
+   "check": "raw: archive == generations flags",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "norm 249 gains / 207 losses (archived)",
+   "pass": true,
+   "detail": "249/207"
+  },
+  {
+   "check": "norm 86%/84% medium (archived)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "1 format candidate LSM7; 0 under flag_fdr (archived)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "archived JSON hit counts match archived CSV",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "archived JSON revision v2r2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "library calibration models = 22 (dev-only)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bootstrap identity check passed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bootstrap CI contains archived point slope",
+   "pass": true,
+   "detail": "point 0.902 CI [0.8164129003155716, 0.9881849248558856]"
+  },
+  {
+   "check": "boot freq rows == hits, values in [0,1]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "sanger freq medians 0.802/0.698 (tight)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "HPLM corr ~0.04, SQLE +0.44 (archived)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "held-out disjoint baseline n0=78",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "manuscript cited paths exist",
+   "pass": true,
+   "detail": "cited=9 missing=[]"
+  },
+  {
+   "check": "bundle has fig1_attribution.png",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has fig2_weakening.png",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has fig3_catalogues.png",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has manuscript_v2.pdf",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has supplementary_tables.zip",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has biorxiv_fields.txt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has SUBMISSION_CHECKLIST.md",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has wetlab_cover_email.txt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has medium_attribution_v2_boot.py",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "bundle has sanger_essdepth.py",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no stale '\\+0\\.90 and \\+0\\.64' in manuscript",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no stale '1\\.53 vs 1\\.45' in manuscript",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no stale '449 differential' in manuscript",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no stale '981 essentials' in manuscript",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "abstract <= 300 words",
+   "pass": true,
+   "detail": "289 words"
+  }
+ ],
+ "sha256_excluding_this_file": {
+  "release_v1/HANDOFF.md": "0dfd9a916fbbc5b4eb64486dbc8b39860c21ee4e5b7d8fdc77b7a8b86d67be3f",
+  "release_v1/README.md": "bb8a8bb3a3610f7d6337078c01e6cab425ffad73095538a503447460453960e1",
+  "release_v1/SUBMISSION_CHECKLIST.md": "a40ce3a3e7de219dac34077d6f21c9e1cb0cd0ff790fda8a22e1cc36c251012a",
+  "release_v1/astra_novelty_research3.md": "0a2a3e3c8103836b436088fb3e2597ea7b8bfd96f7e0e27ae23675bb3383cad6",
+  "release_v1/astra_review_r1.md": "4bbf7cc0d36059a7cd0f83f89b74262eeb7616d4e40b548c18561076582d705e",
+  "release_v1/astra_review_r1_dispositions.md": "632b698fef578d05bdc8909d6bb47bbee6745fbe1bd3d45160eda08a9f27bd4a",
+  "release_v1/astra_review_r2_dispositions.md": "80fd9d97419538daacbd5e12638a135a5a73a41825bfea8d77851b097f4d5870",
+  "release_v1/astra_review_r3.md": "0e6bf7f7e6a9eab968de5251faf53be6207eaf585aedcfcf73d81113d03a955d",
+  "release_v1/astra_review_r3_dispositions.md": "397aa812413d509671aafc1b55623dbe226f9f35727a36bc6ce5cc136514ccd4",
+  "release_v1/astra_review_r4.md": "4342097582e56c5e3d34daac6a5d4d7286ca2623687f8e898a18e126882bbf75",
+  "release_v1/astra_review_r4_dispositions.md": "fdfcba5412c8cac7b6bede4e761ccda4507b0bd2ebc9a68161912be0d60f4cc2",
+  "release_v1/astra_review_r5.md": "6a28a618a5db7af72c872891f6401c633de986d221bca5ce434c434f49d4828f",
+  "release_v1/biorxiv_fields.txt": "9aa582a8b6f2caa715e2ddf3a75302c4b43dbcb178cc96ffc821d9ff3f4f3067",
+  "release_v1/code/expression_triangulation.py": "9655ae88e3713f0e809b79ae2a3d4f5f8db1acb1e5dd8f97482901a2835acb27",
+  "release_v1/code/hplm_reverse_test.py": "564ea16733c1e305af60a227ed350b309217341f157481730c3a2bda4731f963",
+  "release_v1/code/make_figures.py": "9ffbcd1b2abd0ad94ddb1e73ab4f1e6433b1a80f72700250e4536490e8d29430",
+  "release_v1/code/medium_attribution.py": "cf541e9b5bc4ddf495756d84063bef16b93867c61774bbc52cc37a23cc2e9d26",
+  "release_v1/code/medium_attribution_v2.py": "63db752db0381157dc670ee1897187de14128535e6749bde86364b9c2999ce6a",
+  "release_v1/code/medium_attribution_v2_boot.py": "fbcec13cb7e3a1c8ef4a3cf417ce285633c26a2812e857cb3ec4c08dd406af32",
+  "release_v1/code/medium_attribution_v2_heldout.py": "51b7fef0d3f6244e3a00acfff714f377e0dd4d9be9dcb1556117b5c955ec4c1c",
+  "release_v1/code/medium_attribution_v2_loo.py": "5bb742b8f9893cb1d5b13e178d7081c3f3faf60f36d85bcfee4ebd02d136d437",
+  "release_v1/code/panels_curated.py": "3a91935e048dc1f63372f918446fcd1651b429aa0fec334c6264e22a0da63103",
+  "release_v1/code/render_pdf.py": "6bb16fb49044c58be256417558556580d02a37bb46c8186aba79edf2deaef155",
+  "release_v1/code/sanger_direct_check3.py": "aa7a6d077eea8760b21ed7d9633223b5d8b6bec362dfab76b633f0a6126c4a76",
+  "release_v1/code/sanger_essdepth.py": "d0032e04e63a1c56e489e324853b387fa310fd2a5c5fa8ef58c60acce32117cb",
+  "release_v1/code/sanger_tables_audit.py": "b88d2044f3fca7cf34e496065eeaf0c10efe9f3b147867139ba70132850087c4",
+  "release_v1/code/validate_release.py": "d6b4787cdf1d92ab56caaab2fbdffef9bd20d2d168e746ec0ba1cf19da8b4bcf",
+  "release_v1/figures/fig1_attribution.png": "5ab7969228cf7731adfc633a9ad6b7d1d5c71b3e33333c5a1633ef6a8f153656",
+  "release_v1/figures/fig2_weakening.png": "56a4cded2321bbab3593aecc83c7ac9f0c8df4e9b3b7de7828bd8af9842c0e95",
+  "release_v1/figures/fig3_catalogues.png": "58aa84e9362454f178ae3754c9d5e706e8c32a1cb92a344e8df5c22efed5de58",
+  "release_v1/goal_v4_finding_review_v1.md": "44cf873fd48b2e510cf0f4d8818128d1f0b33898013d457fc773b99ee381e420",
+  "release_v1/manuscript_draft_v2.md": "3d031885c4c3e239b7abde76b557f04bbde31755a4b0b0274c379642725a84cc",
+  "release_v1/manuscript_v2.pdf": "1539e7a441735fec2062801eaaecac681d2131f5018ba28b32c4d30ed54a0cee",
+  "release_v1/supplementary_tables.zip": "dcc3bdc1f5eadf4e6475f958eae05086a487f9f016a2aa2d58522aaff38327e4",
+  "release_v1/tables/expression_triangulation_v1.json": "20ec4f507f662af402f9ead8e65dd9bba1485e69bee14abe5fe64461f695ba83",
+  "release_v1/tables/hplm_reverse_test_v1.json": "03f4a905a2d80a6a9d5e0be9fdef559036c83d022936e03f758dd7517b00d7bd",
+  "release_v1/tables/medium_attribution_v2.json": "6f446ed2b611a109f67b5931eec69eb89584e70a60436d5122639413e3106530",
+  "release_v1/tables/medium_attribution_v2_boot.json": "70b660fe646fa606fc1931fc8f8843b2b4e6b1caef553caf91ae7018dc507a49",
+  "release_v1/tables/medium_attribution_v2_boot_freq.csv": "96d5a781f2947bb730d5c0887a5cb911ec1e20ce6427eb4001fd21a30eafc692",
+  "release_v1/tables/medium_attribution_v2_heldout.json": "282e9d966545ea27d9ea8d0d81d21b0447b1085e063e3c585e84bfc9d7c615f4",
+  "release_v1/tables/medium_attribution_v2_heldout_norm.csv": "be01962ac3970f16b982530aedd452f15cb42873ba61e539d4c8d1d95a3e7f3f",
+  "release_v1/tables/medium_attribution_v2_heldout_raw.csv": "bfcecb8adbd372279435d96939c24a1b91bd8a7f0c455aa8cad65f0bdfecf19c",
+  "release_v1/tables/medium_attribution_v2_loo.json": "3bfd4b4fba4a905e616bfd519fbe2b693a255aba1f1962da19ea9bf1de75d734",
+  "release_v1/tables/medium_attribution_v2_norm.csv": "b27f6843a1a2499cf239573d3766a7f8f0dff42153687d0cb38bd31aad8b31bd",
+  "release_v1/tables/medium_attribution_v2_raw.csv": "19a73eb20ea6d9c39869748355129922381dc97d337bd791aea87128f2ddb7ca",
+  "release_v1/tables/panels_curated_v1.json": "50f9b0c0e724e03368566314e6fb2c104e22e070b25bc9fb697055505b16d7e8",
+  "release_v1/tables/sanger_direct_check_v3.json": "46793680f9190262a75b641cd76ab38e971a6ed5bfe2454da5d1699662d8efa0",
+  "release_v1/tables/sanger_essdepth_v1.json": "7372bfb7b3d8ecdf42802e02f615483799d409a17ebb795f70298f78a3fc451a",
+  "release_v1/tables/sanger_tables_audit_v1.json": "a0fa6d5e0f460125801f2352ac011c4b01d7fca1f16bf94bf5d2c33b3078b351",
+  "release_v1/tables/survivor_candidates_v1.csv": "dd97fbfe0abec3a4d5c3f648b15241f59970f405a39aa3a8b2874ff3165147da",
+  "release_v1/wetlab_cover_email.txt": "a986778dc332159ce20c67aca6c9094a3c6256661cc398130651673f10576185",
+  "release_v1/wetlab_proposal_v1.md": "b569829cdd9ab4769434d63dd3769b77fd5d24f17437836c14a8a5406cbbf99f"
+ },
+ "note": "Append this file to the zip after validation; it is excluded from its own inventory."
+}

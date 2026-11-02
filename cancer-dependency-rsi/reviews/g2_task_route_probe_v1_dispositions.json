@@ -1,0 +1,16 @@
+{
+  "review": "reviews/g2_task_route_probe_high_review_v1.md",
+  "review_sha256": "7cea4d88259ba818e8c8c025ae0e1b6590cd35674474a62d54d3a48edcda004a",
+  "score": 92,
+  "verdict_upheld": true,
+  "G2": "FAIL",
+  "executed_probe_source_sha256_note": "src/g2_task_route_probe.py is retained byte-identical to the executed version; dormant defects below are NOT patched in place so the executed bytes stay auditable. Any future probe must use a new versioned file and a new SPEC.",
+  "dispositions": [
+    {"id": 1, "severity": "high", "finding": "G2 remains unresolved", "verified": true, "disposition": "ACCEPTED; G2 FAIL retained; proceed to PLAN 0.6 joint no-progress/negative-EV assessment"},
+    {"id": 2, "severity": "medium", "finding": "dormant E4 check ignores C donor exclusions/crosswalk; exposure sets depend on old models persisting", "verified": true, "disposition": "ACCEPTED as dormant (branch never executed). Mandatory repair in any future versioned probe: E4 must require non-blank identifiers, use C donor_ids + excluded overlap donors + crosswalk, and mark unresolved linkage UNKNOWN."},
+    {"id": 3, "severity": "medium", "finding": "dormant: full manifest would be saved with signed query strings", "verified": true, "disposition": "ACCEPTED as dormant (HTML response; no signed URL persisted, confirmed by reviewer). Future probe must sanitize before persisting."},
+    {"id": 4, "severity": "medium", "finding": "per-request timeout checked between blocking reads; 64 KiB chunk overshoot of byte cap", "verified": true, "disposition": "ACCEPTED as counterfactual (observed requests 0.36-0.39 s, 38,093 B total, outer watchdog present). Future probe: socket-level deadline and read(min(chunk, remaining))."},
+    {"id": 5, "severity": "low", "finding": "'all 109 exposed' overstates demonstrated numeric contribution; 94 = 3DO with HasCRISPRData=TRUE", "verified": true, "disposition": "ACCEPTED. Correction: E5 exclusion of all 109 manuscript NextGen organoid-screened models (and linked donors) is a CONSERVATIVE eligibility exclusion under the frozen rule; demonstrated numeric contribution to the inspected aggregate is established for the 94-model organoid arm only (OrganoidsN=94). Verdict unchanged."}
+  ],
+  "cpu_s_note": "run_bounded did not record CPU seconds for the probe job; wall 1.174 s and peak RSS recorded."
+}

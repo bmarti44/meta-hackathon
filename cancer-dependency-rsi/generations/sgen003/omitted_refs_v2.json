@@ -1,0 +1,132 @@
+{
+ "S1": {
+  "xml_refs": 76,
+  "api_refs": 72,
+  "omitted": [
+   {
+    "ref_n": 24,
+    "citation": "24. DepMap Consortium. DepMap: The Cancer Dependency Map Project at Broad Institute. Broad Institute https://depmap.org/portal/ (2026).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "resource portal citation; no analysis - excluded (title-level)"
+   },
+   {
+    "ref_n": 61,
+    "citation": "61. Benjamin, D. et al. Calling somatic SNVs and Indels with Mutect2. Preprint at bioRxiv 10.1101/861054 (2019).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "variant-calling method - excluded (title-level)"
+   },
+   {
+    "ref_n": 62,
+    "citation": "62. van der Auwera, G. & O\u2019Connor, B. D. Genomics in the Cloud: Using Docker, GATK, and WDL in Terra (O\u2019Reilly Media, 2020).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "methods book - excluded (title-level)"
+   },
+   {
+    "ref_n": 69,
+    "citation": "69. Dempster, J. M. et al. Extracting biological insights from the Project Achilles genome-scale CRISPR screens in cancer cell lines. Preprint at bioRxiv 10.1101/720243 (2019).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "Achilles screen-methods preprint (processing/QC of cell-line screens); no format-lability or external organoid displacement analysis - excluded as same-claim prior (title/known-abstract level; full text not re-inspected)"
+   }
+  ]
+ },
+ "S2": {
+  "xml_refs": 103,
+  "api_refs": 96,
+  "omitted": [
+   {
+    "ref_n": 44,
+    "citation": "44. Geurts, M. H. & Clevers, H. CRISPR engineering in organoids for gene repair and disease modelling. Nat. Rev. Bioeng. 1 , 32\u201345 (2023).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "review of organoid CRISPR engineering for repair/disease modelling; no measured-lability association test - excluded as same-claim prior (title-level)"
+   },
+   {
+    "ref_n": 62,
+    "citation": "62. Rogers, H. et al. Derivation of organoids from primary tumour tissue v1. protocols.io 10.17504/protocols.io.bfvnjn5e (2020).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "wet-lab protocol - excluded"
+   },
+   {
+    "ref_n": 63,
+    "citation": "63. Rogers, H. et al. Derivation of organoids from frozen tumour material v1. protocols.io 10.17504/protocols.io.biiakcae (2020).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "wet-lab protocol - excluded"
+   },
+   {
+    "ref_n": 64,
+    "citation": "64. Rogers, H. et al. Passaging cancer organoid cultures v1. protocols.io 10.17504/protocols.io.bfe3jjgn (2020).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "wet-lab protocol - excluded"
+   },
+   {
+    "ref_n": 89,
+    "citation": "89. Espejo Valle-Inclan, J. et al. Mechanisms underpinning osteosarcoma genome complexity and evolution. Preprint at bioRxiv 10.1101/2023.12.29.573403 (2023).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "osteosarcoma genome preprint - excluded (title-level)"
+   },
+   {
+    "ref_n": 93,
+    "citation": "93. Fowler, T., Smith, J., Jackson, A., Souster, E. & Rogers, H. Whole-genome CRISPR screening of stably expressing Cas9 cancer organoid lines v2. protocols.io 10.17504/protocols.io.3byl4q6zrvo5/v2 (2023).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "screening protocol - excluded"
+   },
+   {
+    "ref_n": 94,
+    "citation": "94. Smith, J., Fowler, T., Andres, A., Souster, E. & Rogers, H. Generating stably-expressing Cas9 cancer organoid lines v2. protocols.io 10.17504/protocols.io.6qpvr3ydovmk/v2 (2023).",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "cell-line generation protocol - excluded"
+   }
+  ]
+ },
+ "S3": {
+  "xml_refs": 41,
+  "api_refs": 38,
+  "omitted": [
+   {
+    "ref_n": 21,
+    "citation": "21. Zou H., Hastie T. Regularization and variable selection via the elastic net. J. R. Stat. Soc. Ser. B Stat. Methodol. 2005;67:301\u2013320. doi: 10.1111/j.1467-9868.2005.00503.x.",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "statistics method - excluded"
+   },
+   {
+    "ref_n": 23,
+    "citation": "23. Roberts D.R., Bahn V., Ciuti S., Boyce M.S., Elith J., Guillera-Arroita G., Hauenstein S., Lahoz-Monfort J.J., Schr\u00f6der B., Thuiller W., et al. Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography. 2017;40:913\u2013929. doi: 10.1111/ecog.02881.",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "statistics method - excluded"
+   },
+   {
+    "ref_n": 41,
+    "citation": "41. F\u0131rat Y., K\u0131l\u0131\u00e7aslan Y. Gene Dependency 2D-to-3D Reproducibility Package, Version 1.0.0. Zenodo; Geneva, Switzerland: 2026.",
+    "pmid": null,
+    "match_basis": "none after PMID+HTML-normalized-title reconciliation",
+    "screening_level": "title/citation level",
+    "disposition": "S3's own Zenodo package - inspected sgen002/sgen003 (member+contents clean)"
+   }
+  ]
+ }
+}

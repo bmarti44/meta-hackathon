@@ -1,0 +1,52 @@
+{
+ "status": "V3_POSTLOCK2",
+ "panel_genes": 250,
+ "genes_with_external_coordinate": 207,
+ "panel_level_external_result": {
+  "decision": "BOUND",
+  "estimate": -0.14583205005879532,
+  "ci95_donor": [
+   -0.17526797046592052,
+   -0.11365511914822886
+  ],
+  "robustness": "sign robust across secondaries/stability; magnitude bound holds for primary,S2,S3 only (S1,S4, model-cluster and gene-block ranges cross -0.20)"
+ },
+ "field_dictionary": {
+  "format condition_a/b": "Dome / Plastic (held: culture medium); delta = Dome - Plastic Chronos",
+  "medium condition_a/b": "OPAC / RPMI-FBS (held: growth format); delta = OPAC - RPMI/FBS Chronos",
+  "panel_level_context": "panel-level Lock-S association context repeated for join convenience; NOT per-gene evidence",
+  "prior_S1_*": "author-published minipool test outputs (figshare), descriptive join; serum file contrasts serum vs serum-free status as released by authors",
+  "prior_knowledge_disposition / biomarker_disposition": "source-linked disposition per gene; explicit not-located/not-evaluated states, never invented findings"
+ },
+ "evidence_types": {
+  "environment": "Layer-A paired minipool contrasts (exploratory, adaptively reused)",
+  "transfer": "single Lock2 external retrospective measurement (association component only)",
+  "biomarker": "not evaluated in this campaign; S3 CDK6 transfer note is a different (expression-model) estimand; S2 highlighted WRN/MDM2/CCNE1 are not panel members",
+  "prior_knowledge": "author library classes + S1 author test FDR per gene + S1 text state association (WLS/TCF7L2/FZD5)",
+  "invariance": "none",
+  "causal": "none"
+ },
+ "annotation_counts": {
+  "S1_format_FDR<0.05": 7,
+  "S1_serum_FDR<0.05": 8,
+  "S1_WNT_in_panel": [
+   "FZD5",
+   "TCF7L2",
+   "WLS"
+  ],
+  "S3_FDR_in_panel": [
+   "CDK6"
+  ]
+ },
+ "inputs": {
+  "atlas/v2/genes.csv": "768e545e1d1eb9ea382c2222d10047c1bb7b49270f2a379eaf69ed970f528ab0",
+  "atlas/v2/exclusions.csv": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e",
+  "atlas/v2/paired_observations.csv": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801",
+  "data/raw/broad_figshare/minipool_growth_format_tests.csv": "4cca98df7b4fe560036da389b2597ad8e130a0dba053e3cb5e98d4d2e64cda98",
+  "data/raw/broad_figshare/minipool_serum_status_tests.csv": "360c55c4ce19b437bb98abcd1da95f992927819e2031f3d0312c408b5d88716a"
+ },
+ "code": {
+  "src/build_atlas_v3.py": "f0e8740802b3e2229e9ad9131d04897cd00eaf0ee56296c8d8cf9810d59f64bc"
+ },
+ "note": "Descriptive annotation of published outputs; no new C access, no per-gene inference."
+}

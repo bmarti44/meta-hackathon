@@ -1,0 +1,47 @@
+{
+ "S2_forward_citations": {
+  "status": 200,
+  "n": 5,
+  "cites": [
+   {
+    "id": "42793270",
+    "title": "Current Perspectives on 2D and 3D Cell Culture Models in Cancer Research: Molecular Determinants of Tumor Biology and Therapeutic Response."
+   },
+   {
+    "id": "42557320",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies."
+   },
+   {
+    "id": "42557316",
+    "title": "A compendium of next-generation patient-derived models for diverse cancers."
+   },
+   {
+    "id": "42557315",
+    "title": "A dependency map enhanced with next-generation 3D cancer models."
+   },
+   {
+    "id": "PPR1236067",
+    "title": "Volumetric Cyclic Immunofluorescence for 3D Spatial Profiling of Tumour, Stroma, and Immune Structures in Human FFPE Tissue"
+   }
+  ]
+ },
+ "PMID32238925_abstract": {
+  "status": 200,
+  "text": "1. Nature. 2020 Apr;580(7801):136-141. doi: 10.1038/s41586-020-2099-x. Epub 2020 \nMar 11.\n\nCRISPR screens in cancer spheroids identify 3D growth-specific vulnerabilities.\n\nHan K(1), Pierce SE(2), Li A(3), Spees K(3), Anderson GR(3), Seoane JA(4)(5), Lo \nYH(4), Dubreuil M(3)(2), Olivas M(3), Kamber RA(3), Wainberg M(6), Kostyrko \nK(7), Kelly MR(2), Yousefi M(3), Simpkins SW(3), Yao D(3), Lee K(3), Kuo \nCJ(2)(4), Jackson PK(2)(8), Sweet-Cordero A(7), Kundaje A(3)(6), Gentles AJ(9), \nCurtis C(3)(2)(4)(5), Winslow MM(3)(2)(10), Bassik MC(11)(12)(13).\n\nAuthor information:\n(1)Department of Genetics, Stanford University School of Medicine, Stanford, CA, \nUSA. kyuhohan@stanford.edu.\n(2)Program in Cancer Biology, Stanford University School of Medicine, Stanford, \nCA, USA.\n(3)Department of Genetics, Stanford University School of Medicine, Stanford, CA, \nUSA.\n(4)Department of Medicine, Stanford University School of Medicine, Stanford, CA, \nUSA.\n(5)Stanford Cancer Institute, Stanford University School of Medicine, Stanford, \nCA, USA.\n(6)Department of Computer Science, Stanford University, Stanford, CA, USA.\n(7)Department of Pediatrics, University of California San Francisco, San \nFrancisco, CA, USA.\n(8)Baxter Laboratory, Department of Microbiology and Immunology, Stanford \nUniversity School of Medicine, Stanford, CA, USA.\n(9)Departments of Medicine and Biomedical Data Science, Stanford University \nSchool of Medicine, Stanford, CA, USA.\n(10)Department of Pathology, Stanford University School of Medicine, Stanford, \nCA, USA.\n(11)Department of Genetics, Stanford University School of Medicine, Stanford, \nCA, USA. bassik@stanford.edu.\n(12)Program in Cancer Biology, Stanford University School of Medicine, Stanford, \nCA, USA. bassik@stanford.edu.\n(13)Program in Chemistry, Engineering and Medicine for Human Health (ChEM-H), \nStanford University, Stanford, CA, USA. bassik@stanford.edu.\n\nCancer genomics studies have identified thousands of putative cancer driver \ngenes1. Development of high-throughput and accurate models to define the \nfunctions of these genes is a major challenge. Here we devised a scalable \ncancer-spheroid model and performed genome-wide CRISPR screens in 2D monolayers \nand 3D lung-cancer spheroids. CRISPR phenotypes in 3D more accurately \nrecapitulated those of in vivo tumours, and genes with differential \nsensitivities between 2D and 3D conditions were highly enriched for genes that \nare mutated in lung cancers. These analyses also revealed drivers that are",
+  "abstract_full": "Cancer genomics studies have identified thousands of putative cancer driver \ngenes1. Development of high-throughput and accurate models to define the \nfunctions of these genes is a major challenge. Here we devised a scalable \ncancer-spheroid model and performed genome-wide CRISPR screens in 2D monolayers \nand 3D lung-cancer spheroids. CRISPR phenotypes in 3D more accurately \nrecapitulated those of in vivo tumours, and genes with differential \nsensitivities between 2D and 3D conditions were highly enriched for genes that \nare mutated in lung cancers. These analyses also revealed drivers that are \nessential for cancer growth in 3D and in vivo, but not in 2D. Notably, we found \nthat carboxypeptidase D is responsible for removal of a C-terminal RKRR motif2 \nfrom the \u03b1-chain of the insulin-like growth factor 1 receptor that is critical \nfor receptor activity. Carboxypeptidase D expression correlates with patient \noutcomes in\u00a0patients with lung cancer, and loss of carboxypeptidase D reduced \ntumour growth. Our results reveal key differences between 2D and 3D cancer \nmodels, and establish a generalizable strategy for performing CRISPR screens in \nspheroids to reveal cancer vulnerabilities.\n\nDOI: 10.1038/s41586-020-2099-x\nPMCID: PMC7368463\n"
+ },
+ "S3_zenodo": {
+  "status": 200,
+  "title": "Transferability of Transcriptome-Based Gene-Dependency Models from Two-Dimensional Cancer Models to Patient-Derived Organoids: Blinded External Validation",
+  "files": [
+   {
+    "key": "gene_dependency_2d_to_3d_reproducibility.zip",
+    "size": 37867451
+   },
+   {
+    "key": "gene_dependency_2d_to_3d_reproducibility.zip.sha256",
+    "size": 111
+   }
+  ]
+ }
+}

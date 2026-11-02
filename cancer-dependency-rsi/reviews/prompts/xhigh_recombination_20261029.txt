@@ -1,0 +1,16 @@
+Recombination consult (gpt-6.1-sol, xhigh). DO NOT read files or use tools. Facts below are verified. Reply decisions-first (4 lines), then the generated SPEC text (max 120 lines).
+
+Verified facts:
+- sgen012 closed A_STILL_UNRESOLVED (97): provenance chain ScreenID->ModelConditionID works; 729 models/724 patient components establishable on the established cell-line pool (1,095/1,057). Two-arm Fisher-z precision gate is STRUCTURALLY IMPOSSIBLE here: best split of 1,057 gives MDR 0.171 > 0.146 (needs >=1,458). Media strongly lineage-confounded (Cramer V 0.568). Top strata: adherent/RPMI+10%FBS 190 comps, adherent/DMEM+10%FBS 86. CellFormat totals: adherent 562, suspension 116, mixed 46. Formulation families: RPMI 377, DMEM 122, MEM 42, F12 37.
+- Only 6 established models have eligible screens in >1 environment (paired within-model designs are dead).
+- One-sample (Lock-S-style) precision at n=724 components: MDR approx 0.104 < 0.146. At n=1,057: 0.086.
+- Lock-S (spent, organoids): partial Spearman rho=-0.146 [-0.175,-0.114], bound delta=0.20, patient-basis unquantified (142 patients). Scientific claim: measured paired-format lability joins external organoid rank displacement, baseline-adjusted. Generic cell-line-to-organoid prediction is prior art (excluded as novelty).
+- DepMap CRISPR outcomes exist ONLY in ~/Downloads (unread). Any outcome use needs a separately locked design + hash-pinned acquisition. pgen005 SPEC requires the policy task be instantiated via a prespecified feasibility rule; estimated-cost basis authorized (GOAL C9 amended).
+- Gates: MET C1,C2,C5,C7; PARTIAL C3,C4,C6,C10,C11,C12; UNMET C8,C9,C13.
+
+Decide:
+Line1: DESIGN_CLASS: <one of: ONE_SAMPLE_TRANSPORT / ENVIRONMENT_AS_MODIFIER / CELLFORMAT_CONTRAST / OTHER(name it) / NO_VIABLE_DESIGN_ON_THIS_POOL>
+Line2: ESTIMAND: <one line, precisely>
+Line3: NEXT_GENERATION: <sgen013 kind: metadata screen, or locked outcome design, or stop-science>
+Line4: POLICY_TASK_INSTANTIABLE: <YES/NO + one clause>
+Then: full SPEC text for sgen013 the lead can save verbatim (population, variables WITHOUT touching outcomes yet if metadata screen - or, if you authorize proceeding to outcome design, state the lock prerequisites and single-execution discipline explicitly; decision rule; gates advanced; failure modes). If NO_VIABLE_DESIGN, state what external resource would change that and what terminal posture the campaign should take.

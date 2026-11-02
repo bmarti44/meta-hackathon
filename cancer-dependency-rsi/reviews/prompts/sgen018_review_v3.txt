@@ -1,0 +1,3 @@
+Re-review v3 (gpt-6.1-sol, high), read-only, metadata only. Files: src/sgen018_inventory_v3.py, generations/sgen018/inventory_v3.json, reviews/sgen018_review_v2.md.
+Verify ONLY the two v2 residuals: dangling-ancestry nodes excluded from qualification (your synthetic fixture must now yield zero qualified via dangling paths while depth counting stays consistent), format key case-normalized; counts unchanged. Score 0-100.
+End exactly: SGEN018_V3: <CLOSED|OPEN> and SGEN018_V3_SCORE: <0-100>

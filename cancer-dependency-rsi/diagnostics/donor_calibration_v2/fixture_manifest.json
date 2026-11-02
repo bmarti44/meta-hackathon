@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_SYNTHETIC_CODE_FIXTURES_NOT_BIOLOGY",
+  "spec_sha256": "01b4a7847f513cfd086347cc8ed27365d8f7f348713deac910a726da11cac29d",
+  "arrays_sha256": "e16e7d2192e04638b8a6def9cde17736316b9f32f120d7c709b47bfa559b9967",
+  "targets": {
+    "null": {
+      "exact": 0.0,
+      "verified_numerical": 1.1212641182373571e-17
+    },
+    "positive": {
+      "exact": 0.6,
+      "verified_numerical": 0.6
+    }
+  },
+  "source_proposal_sha256": "dc01279554663562fdddb7b523a7e9700ed8f42b59946eb6476a9049bdc240e2",
+  "code_hashes": {
+    "src/donor_calibration.py": "fc73e6de0572861d6c051437dde587e036c2b9e137421858360216f62be191f5",
+    "src/donor_kernel.py": "725d3eac2267c6f5bbd3b3f861075a63c2df96c7e820732db86042a052833b26",
+    "src/confirmatory_estimand.py": "191aa33515016b2389f6adae287b55214d27f30f24c5c79751eaa5ed3ad38869",
+    "src/estimators.py": "b0b3bc40fdba0d80d3b672fdb03dafc755da7450940c91f441e2e095aa7cfbc9"
+  },
+  "inherited_arrays_sha256": "e16e7d2192e04638b8a6def9cde17736316b9f32f120d7c709b47bfa559b9967"
+}

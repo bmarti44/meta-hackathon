@@ -1,0 +1,17 @@
+{
+ "timestamp": "2026-10-29T23:09:07.017993+00:00",
+ "screens_with_expr": 908,
+ "prolif_by_class": {
+  "FBS": 6.373,
+  "TSM": 5.971,
+  "org_def": 5.245
+ },
+ "mevexpr_by_class": {
+  "FBS": 5.429,
+  "TSM": 6.159,
+  "org_def": 5.971
+ },
+ "R2_formulation": 0.5748,
+ "R2_expression": 0.0572,
+ "R2_both": 0.5783
+}

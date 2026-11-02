@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous: 90 with HIGH envelope normalization (reviews/sgen45_fix_high_review_v2.md).
+Verify: (1) envelope bound now min(2, 2*delta/resid)=1.84178 (src/sgen004_envelope.py, envelope_v3.json), proof disabled; (2) per-stage frozen code materialization + expected/actual hashes (src/sgen005_upstream.py, upstream_reproduction_v5.json: v1 estimators from frozen artifact); (3) C10 row-specific check + eligibility recomputed from per-line detail; (4) zipfetch tests now reach decompression (trailing junk splice, declaration cap) - 8 tests.
+Issues severity+file:line+fix. End exactly: SGEN45_FIX2_SCORE: <0-100>; C11:<...>

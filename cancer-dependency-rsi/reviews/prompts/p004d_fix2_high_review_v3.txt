@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 80 (reviews/p004d_fix_high_review_v2.md).
+Verify: (1) sampler ps CPU now charged (RUSAGE_CHILDREN minus leader peak) in src/tree_cpu.py; (2) group completion past leader exit + test_leader_exit_descendant_tracked; (3) all ps failures normalized to MeteringError; (4) tolerances tightened to +-25%; (5) droplet identity populated in generations/sgen006/corrections_v2.json; (6) Witness B downgraded to SCREEN-GRADE in screen_verdict_v1.json.
+Issues severity+file:line+fix. End exactly: P004D_FIX2_SCORE: <0-100>

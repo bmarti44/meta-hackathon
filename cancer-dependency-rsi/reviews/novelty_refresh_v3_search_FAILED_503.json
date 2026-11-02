@@ -1,0 +1,30 @@
+{
+ "retrieved_utc": "2026-10-28T21:40:06Z",
+ "source": "Europe PMC REST search (official API)",
+ "queries": {
+  "Q1_format_lability_transfer": {
+   "query": "(organoid*) AND (CRISPR) AND (\"growth format\" OR \"culture format\" OR dome OR \"2D versus 3D\" OR \"2D vs 3D\") AND (dependenc*) AND (transfer* OR concordan* OR displacement OR rank*) AND (PUB_YEAR:[2024 TO 2026])",
+   "error": "HTTPError: HTTP Error 503: "
+  },
+  "Q2_minipool_environment": {
+   "query": "(minipool OR \"mini-pool\") AND (CRISPR) AND (organoid* OR \"culture condition*\" OR serum)",
+   "error": "HTTPError: HTTP Error 503: "
+  },
+  "Q3_cellline_to_organoid_dependency_transfer": {
+   "query": "(\"cell line*\") AND (organoid*) AND (CRISPR OR \"gene dependenc*\") AND (transferab* OR \"rank transfer\" OR \"cross-model\") AND (PUB_YEAR:[2025 TO 2026])",
+   "error": "HTTPError: HTTP Error 503: "
+  },
+  "Q4_S1_citations_proxy": {
+   "query": "(\"next-generation\" OR \"NextGen\") AND (\"3D cancer models\" OR organoid*) AND (\"dependency map\" OR DepMap) AND (PUB_YEAR:[2026 TO 2026])",
+   "error": "HTTPError: HTTP Error 503: "
+  },
+  "Q5_environment_sensitivity_dependency": {
+   "query": "(\"environmental sensitivity\" OR \"culture-condition sensitivity\" OR \"condition-dependent essential*\" OR \"context-dependent essential*\") AND (organoid*) AND (CRISPR) AND (PUB_YEAR:[2024 TO 2026])",
+   "error": "HTTPError: HTTP Error 503: "
+  },
+  "Q6_sanger_organoid_crispr_followups": {
+   "query": "(Sanger) AND (organoid*) AND (\"CRISPR screen*\") AND (dependenc*) AND (PUB_YEAR:[2026 TO 2026])",
+   "error": "HTTPError: HTTP Error 503: "
+  }
+ }
+}

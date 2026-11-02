@@ -1,0 +1,35 @@
+{
+  "status": "EXPLORATORY feasibility v2; not confirmatory",
+  "primary_genes_n": 216,
+  "excluded_low_reference_N": [
+    "CYFIP2",
+    "DEXI",
+    "DOCK1",
+    "OR14K1",
+    "PARVA",
+    "PKD1",
+    "PPP2R2D"
+  ],
+  "tmod": "excluded primary (alias TMOD1/7111 unadjudicated from released guide data); sensitivity only",
+  "primary": {
+    "n": 216,
+    "raw_spearman": 0.14887769561437977,
+    "partial_spearman_rankresid_pearson": 0.055252514705032764,
+    "partial_model_bootstrap_ci95": [
+      -0.0856862468415234,
+      0.16227725756991052
+    ],
+    "ci_width": 0.24796350441143392
+  },
+  "sensitivity_plus_TMOD1_alias": {
+    "n": 217,
+    "raw_spearman": 0.15138201872442772,
+    "partial_spearman_rankresid_pearson": 0.055128989729979636,
+    "partial_model_bootstrap_ci95": [
+      -0.07421301604418509,
+      0.15976005170423538
+    ],
+    "ci_width": 0.23397306774842047
+  },
+  "caveats": "Model bootstrap (6 format models) captures environmental-side uncertainty only; gene/pathway dependence and transfer-table sampling uncertainty widen true CIs. Broad table = development/descriptive (selection source, Chronos pretraining). External precision (148 organoids/144 donors) computed at Lock 1 from schema + donor counts, not outcomes."
+}

@@ -1,0 +1,173 @@
+{
+ "set_sizes": {
+  "SPLICEOSOME": 36,
+  "RIBOSOMAL": 54,
+  "PROTEASOME": 19,
+  "RNA_POLYMERASE": 23,
+  "DNA_REPLICATION": 15,
+  "HISTONES": 116,
+  "curated_BAGEL_essential": 268
+ },
+ "broad": {
+  "SPLICEOSOME": {
+   "n": 35,
+   "D_raw_median": 0.0164668,
+   "A_raw_median": -0.043229,
+   "F_raw_median": 0.0246822,
+   "S_raw_median": 0.0310938,
+   "D_norm_median": 0.0121571,
+   "flags_norm": {
+    "not_a_hit": 26,
+    "medium_attributable": 7,
+    "unresolved": 2
+   }
+  },
+  "RIBOSOMAL": {
+   "n": 38,
+   "D_raw_median": 0.17220999999999997,
+   "A_raw_median": 0.1949205,
+   "F_raw_median": -0.0083489,
+   "S_raw_median": 0.03592315,
+   "D_norm_median": 0.122481,
+   "flags_norm": {
+    "not_a_hit": 23,
+    "medium_attributable": 15
+   }
+  },
+  "PROTEASOME": {
+   "n": 19,
+   "D_raw_median": 5.12508e-06,
+   "A_raw_median": -0.0157678,
+   "F_raw_median": 0.00885123,
+   "S_raw_median": -0.0626292,
+   "D_norm_median": 0.000228824,
+   "flags_norm": {
+    "not_a_hit": 12,
+    "medium_attributable": 5,
+    "unresolved": 2
+   }
+  },
+  "RNA_POLYMERASE": {
+   "n": 22,
+   "D_raw_median": 0.05236204999999999,
+   "A_raw_median": 0.1051676,
+   "F_raw_median": -0.02076065,
+   "S_raw_median": 0.0010788495,
+   "D_norm_median": 0.0330454,
+   "flags_norm": {
+    "not_a_hit": 14,
+    "medium_attributable": 8
+   }
+  },
+  "DNA_REPLICATION": {
+   "n": 15,
+   "D_raw_median": -0.0723795,
+   "A_raw_median": -0.066523,
+   "F_raw_median": 0.0309154,
+   "S_raw_median": 0.0360154,
+   "D_norm_median": -0.054835,
+   "flags_norm": {
+    "not_a_hit": 11,
+    "medium_attributable": 4
+   }
+  },
+  "HISTONES": {
+   "n": 71,
+   "D_raw_median": 0.0320662,
+   "A_raw_median": 0.0309214,
+   "F_raw_median": -0.00131907,
+   "S_raw_median": -0.0104815,
+   "D_norm_median": 0.0180914,
+   "flags_norm": {
+    "not_a_hit": 71
+   }
+  },
+  "curated_BAGEL_essential": {
+   "n": 260,
+   "D_raw_median": 0.0314942,
+   "A_raw_median": 0.0277875,
+   "F_raw_median": 0.005406734999999999,
+   "S_raw_median": 0.02261655,
+   "D_norm_median": 0.0199892,
+   "flags_norm": {
+    "not_a_hit": 193,
+    "medium_attributable": 62,
+    "unresolved": 5
+   }
+  }
+ },
+ "sanger": {
+  "depth_organoid": -0.9557563066482544,
+  "depth_2d": -1.5150317428302675,
+  "SPLICEOSOME": {
+   "n_org": 36,
+   "n_2d": 35,
+   "lfc_org_median": -1.277693510055542,
+   "lfc_2d_median": -1.6851139940024078,
+   "scaled_org": 1.336840271949768,
+   "scaled_2d": 1.1122631601463382,
+   "pct_org_median": 0.018430745079096728,
+   "pct_2d_median": 0.027256757522525075
+  },
+  "RIBOSOMAL": {
+   "n_org": 47,
+   "n_2d": 47,
+   "lfc_org_median": -1.199061632156372,
+   "lfc_2d_median": -2.373179327632764,
+   "scaled_org": 1.254568338394165,
+   "scaled_2d": 1.5664221814913066,
+   "pct_org_median": 0.021042144668518295,
+   "pct_2d_median": 0.010766702555675186
+  },
+  "PROTEASOME": {
+   "n_org": 19,
+   "n_2d": 19,
+   "lfc_org_median": -1.3462117910385132,
+   "lfc_2d_median": -1.7904380186859017,
+   "scaled_org": 1.408530354499817,
+   "scaled_2d": 1.1817825119235728,
+   "pct_org_median": 0.01584953508030431,
+   "pct_2d_median": 0.0241117470391568
+  },
+  "RNA_POLYMERASE": {
+   "n_org": 23,
+   "n_2d": 22,
+   "lfc_org_median": -1.1604446172714233,
+   "lfc_2d_median": -1.7670833328544915,
+   "scaled_org": 1.2141636610031128,
+   "scaled_2d": 1.1663672006986205,
+   "pct_org_median": 0.023879966187658495,
+   "pct_2d_median": 0.024692582308607696
+  },
+  "DNA_REPLICATION": {
+   "n_org": 15,
+   "n_2d": 15,
+   "lfc_org_median": -1.2738901376724243,
+   "lfc_2d_median": -1.632544453757399,
+   "scaled_org": 1.3328608274459839,
+   "scaled_2d": 1.07756452066648,
+   "pct_org_median": 0.018777925371331966,
+   "pct_2d_median": 0.029353431178103927
+  },
+  "HISTONES": {
+   "n_org": 43,
+   "n_2d": 75,
+   "lfc_org_median": -0.05594870448112488,
+   "lfc_2d_median": -0.12184259587973559,
+   "scaled_org": 0.05853867158293724,
+   "scaled_2d": 0.08042247065537945,
+   "pct_org_median": 0.466429175220384,
+   "pct_2d_median": 0.26769422564741885
+  },
+  "curated_BAGEL_essential": {
+   "n_org": 268,
+   "n_2d": 267,
+   "lfc_org_median": -0.9557563066482544,
+   "lfc_2d_median": -1.5150317428302675,
+   "scaled_org": 1.0,
+   "scaled_2d": 1.0,
+   "pct_org_median": 0.035261441854848447,
+   "pct_2d_median": 0.03400011333371111
+  }
+ }
+}

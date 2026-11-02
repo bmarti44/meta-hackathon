@@ -1,0 +1,564 @@
+{
+ "timestamp": "2026-10-30T12:01:53.029861+00:00",
+ "revision": "v2r2 (Astra r1 fixes: dev-only calibration/preprocessing, symmetric format rule + flag_fdr, HC3, screen-level Humagne, common-support, %.6g export)",
+ "library_offset_models": 22,
+ "days_by_group": "{('FBS', 'adherent'): {'median': 21.0, 'min': 14, 'max': 22}, ('FBS', 'mixed'): {'median': 21.0, 'min': 14, 'max': 22}, ('FBS', 'suspension'): {'median': 21.0, 'min': 14, 'max': 22}, ('FBS', 'unknown'): {'median': 17.5, 'min': 14, 'max': 21}, ('TSM', 'adherent'): {'median': 21.0, 'min': 21, 'max': 28}, ('TSM', 'spheroid'): {'median': 24.0, 'min': 21, 'max': 28}, ('org', 'adherent'): {'median': 24.0, 'min': 24, 'max': 24}, ('org', 'dome'): {'median': 24.0, 'min': 20, 'max': 24}}",
+ "n_common_essential": 978,
+ "n_nonessential": 5027,
+ "essential_depth": {
+  "FBS_adh": {
+   "n_screens": 633,
+   "ess_median_chronos": -1.379822956567461,
+   "days_median": 21.0
+  },
+  "TSM": {
+   "n_screens": 29,
+   "ess_median_chronos": -1.3930186033248901,
+   "days_median": 21.0
+  },
+  "org_adh": {
+   "n_screens": 9,
+   "ess_median_chronos": -1.404076874256134,
+   "days_median": 24.0
+  },
+  "org_dome": {
+   "n_screens": 68,
+   "ess_median_chronos": -1.3762198388576508,
+   "days_median": 24.0
+  },
+  "compression_ratio_dome_over_FBS": 0.9973887101293245,
+  "implied_doubling_time_ratio_if_chronos_proportional_to_doublings": 1.145849287494899
+ },
+ "raw": {
+  "n": {
+   "D_org": [
+    68,
+    207
+   ],
+   "D_org_humagne_only": [
+    68,
+    7
+   ],
+   "A_adh": [
+    9,
+    207
+   ],
+   "F_dome": [
+    68,
+    9
+   ],
+   "S_tsm": [
+    29,
+    60
+   ]
+  },
+  "gains": {
+   "n_hits": 533,
+   "flags": {
+    "medium_attributable": 441,
+    "unresolved": 91,
+    "format_candidate": 1
+   },
+   "frac_medium_of_hits": 0.8273921200750469,
+   "slope_A_on_D": 0.9139568882088995,
+   "slope_S_on_D": 0.37853154663396715,
+   "slope_F_on_D": 0.12308520573408122,
+   "median_ratio_A": 0.9886080681749829,
+   "serumfree_support_frac": 0.8386491557223265
+  },
+  "losses": {
+   "n_hits": 336,
+   "flags": {
+    "medium_attributable": 250,
+    "unresolved": 81,
+    "format_candidate": 5
+   },
+   "frac_medium_of_hits": 0.7440476190476191,
+   "slope_A_on_D": 0.8420162165224543,
+   "slope_S_on_D": -0.018832773857821884,
+   "slope_F_on_D": 0.16396869974526684,
+   "median_ratio_A": 0.865116912971198,
+   "serumfree_support_frac": 0.7351190476190477
+  },
+  "humagne_only_corr_D": 0.7738548342795857,
+  "humagne_only_slope_D": 0.8259741144567545,
+  "flags_fdr_variant": {
+   "medium_attributable": 691,
+   "unresolved": 178
+  },
+  "hc3_sensitivity": {
+   "gains": {
+    "n_hits": 532,
+    "flags": {
+     "medium_attributable": 396,
+     "unresolved": 132,
+     "format_candidate": 4
+    },
+    "frac_medium_of_hits": 0.7443609022556391
+   },
+   "losses": {
+    "n_hits": 335,
+    "flags": {
+     "medium_attributable": 213,
+     "unresolved": 114,
+     "format_candidate": 8
+    },
+    "frac_medium_of_hits": 0.6358208955223881
+   }
+  },
+  "common_support": {
+   "lineages": [
+    "Ampulla of Vater",
+    "Bowel",
+    "Esophagus/Stomach",
+    "Ovary/Fallopian Tube",
+    "Prostate",
+    "Uterus"
+   ],
+   "n_dome": 38,
+   "n_adh": 9,
+   "n_hits": 857,
+   "slope_A_on_D": 0.8923598531110197,
+   "median_ratio_A": 0.9174281726174858,
+   "frac_ratio_ge_half_same_sign": 0.8809801633605601
+  }
+ },
+ "norm": {
+  "n": {
+   "D_org": [
+    68,
+    207
+   ],
+   "D_org_humagne_only": [
+    68,
+    7
+   ],
+   "A_adh": [
+    9,
+    207
+   ],
+   "F_dome": [
+    68,
+    9
+   ],
+   "S_tsm": [
+    29,
+    60
+   ]
+  },
+  "gains": {
+   "n_hits": 249,
+   "flags": {
+    "medium_attributable": 214,
+    "unresolved": 34,
+    "format_candidate": 1
+   },
+   "frac_medium_of_hits": 0.8594377510040161,
+   "slope_A_on_D": 0.8420903351582893,
+   "slope_S_on_D": 0.5152877984260066,
+   "slope_F_on_D": 0.17811456680136878,
+   "median_ratio_A": 0.9117778338867275,
+   "serumfree_support_frac": 0.8313253012048193
+  },
+  "losses": {
+   "n_hits": 207,
+   "flags": {
+    "medium_attributable": 173,
+    "unresolved": 34
+   },
+   "frac_medium_of_hits": 0.8357487922705314,
+   "slope_A_on_D": 0.8614024073891846,
+   "slope_S_on_D": -0.05003699052216058,
+   "slope_F_on_D": 0.1668887608695824,
+   "median_ratio_A": 0.8879118048304175,
+   "serumfree_support_frac": 0.6570048309178744
+  },
+  "humagne_only_corr_D": 0.7749591947928537,
+  "humagne_only_slope_D": 0.8278627631050696,
+  "flags_fdr_variant": {
+   "medium_attributable": 388,
+   "unresolved": 68
+  },
+  "hc3_sensitivity": {
+   "gains": {
+    "n_hits": 249,
+    "flags": {
+     "medium_attributable": 203,
+     "unresolved": 44,
+     "format_candidate": 2
+    },
+    "frac_medium_of_hits": 0.8152610441767069
+   },
+   "losses": {
+    "n_hits": 207,
+    "flags": {
+     "medium_attributable": 156,
+     "unresolved": 48,
+     "format_candidate": 3
+    },
+    "frac_medium_of_hits": 0.7536231884057971
+   }
+  },
+  "common_support": {
+   "lineages": [
+    "Ampulla of Vater",
+    "Bowel",
+    "Esophagus/Stomach",
+    "Ovary/Fallopian Tube",
+    "Prostate",
+    "Uterus"
+   ],
+   "n_dome": 38,
+   "n_adh": 9,
+   "n_hits": 451,
+   "slope_A_on_D": 0.8914760282295293,
+   "median_ratio_A": 0.8914694158354994,
+   "frac_ratio_ge_half_same_sign": 0.9024390243902439
+  }
+ },
+ "weakening_decomposition": {
+  "common_essentials": {
+   "n": 978,
+   "observed_D_median": 0.030383507004199072,
+   "scaling_predicted_D_median": 0.0035606537432367903,
+   "norm_scale_D_median": 0.019472464092280997,
+   "frac_observed_exceeds_scaling": 0.5449897750511248
+  },
+  "splice_panel": {
+   "n": 8,
+   "observed_D_median": 0.8301832972510605,
+   "scaling_predicted_D_median": 0.0051969495099937705,
+   "norm_scale_D_median": 0.5940326345167792,
+   "frac_observed_exceeds_scaling": 1.0
+  },
+  "ribo_panel": {
+   "n": 11,
+   "observed_D_median": 0.6673422001594289,
+   "scaling_predicted_D_median": 0.005883462144937533,
+   "norm_scale_D_median": 0.47979160026855666,
+   "frac_observed_exceeds_scaling": 0.9090909090909091
+  }
+ },
+ "published_hits": {
+  "broad_published[FDR<0.05 & diff<-0.25]": {
+   "n": 285,
+   "flags": {
+    "medium_attributable": 135,
+    "not_a_hit": 129,
+    "unresolved": 20,
+    "format_candidate": 1
+   },
+   "frac_medium": 0.47368421052631576,
+   "frac_medium_or_unresolved": 0.543859649122807,
+   "top_by_published_diff": [
+    "MSMO1",
+    "SQLE",
+    "HSD17B7",
+    "ETF1",
+    "CCDC174",
+    "LGR4",
+    "ACAT2",
+    "NSDHL",
+    "PSMC3",
+    "FZD5",
+    "IDI1",
+    "BORA",
+    "FDFT1",
+    "PMVK",
+    "RAD50",
+    "ALAS1",
+    "SPTLC2",
+    "DUT",
+    "COPS6",
+    "RFC3",
+    "WTAP",
+    "SRPRB",
+    "TAF12",
+    "GEMIN6",
+    "ASCC3"
+   ]
+  },
+  "broad_published[FDR<0.01 & diff<-0.5]": {
+   "n": 17,
+   "flags": {
+    "medium_attributable": 16,
+    "unresolved": 1
+   },
+   "frac_medium": 0.9411764705882353,
+   "frac_medium_or_unresolved": 1.0,
+   "top_by_published_diff": [
+    "MSMO1",
+    "SQLE",
+    "HSD17B7",
+    "ETF1",
+    "CCDC174",
+    "LGR4",
+    "ACAT2",
+    "NSDHL",
+    "PSMC3",
+    "FZD5",
+    "IDI1",
+    "BORA",
+    "FDFT1",
+    "PMVK",
+    "RAD50",
+    "ALAS1",
+    "SPTLC2"
+   ]
+  },
+  "broad_published[FDR<0.05 & diff<-0.25 & !DropEssential]": {
+   "n": 130,
+   "flags": {
+    "medium_attributable": 64,
+    "not_a_hit": 60,
+    "unresolved": 6
+   },
+   "frac_medium": 0.49230769230769234,
+   "frac_medium_or_unresolved": 0.5384615384615384,
+   "top_by_published_diff": [
+    "MSMO1",
+    "SQLE",
+    "HSD17B7",
+    "LGR4",
+    "ACAT2",
+    "NSDHL",
+    "FZD5",
+    "IDI1",
+    "FDFT1",
+    "PMVK",
+    "RAD50",
+    "ALAS1",
+    "SPTLC2",
+    "ASCC3",
+    "ITGB1",
+    "PPA2",
+    "GTF2H5",
+    "RBM27",
+    "MESD",
+    "LIN9",
+    "MRPL13",
+    "CYP51A1",
+    "YTHDC1",
+    "FBXL5",
+    "SC5D"
+   ]
+  },
+  "sanger_organoid_core_fitness": {
+   "n_listed": 751,
+   "n_in_broad_table": 725,
+   "gene_col": [
+    "gene"
+   ],
+   "columns": [
+    "gene",
+    "ENSEMBL_ID",
+    "HGNC_ID",
+    "exclusive_organoids",
+    "exclusive_organoids_exclude_CommonEssentials"
+   ],
+   "flags": {
+    "not_a_hit": 515,
+    "medium_attributable": 174,
+    "unresolved": 35,
+    "format_candidate": 1
+   },
+   "n_also_our_hit": 210,
+   "median_D_org": 0.003895897883427651,
+   "medium_attributable_genes": [
+    "ABCE1",
+    "ALG11",
+    "ANAPC5",
+    "AQR",
+    "ATP6V0B",
+    "ATP6V1A",
+    "AURKB",
+    "BDP1",
+    "BMS1",
+    "BUB3",
+    "CCT2",
+    "CCT5",
+    "CCT8",
+    "CDC123",
+    "CDC7",
+    "CDK1",
+    "CDK9",
+    "CHEK1",
+    "CKAP5",
+    "COPB2",
+    "COPE",
+    "COPS2",
+    "CPSF2",
+    "CPSF3",
+    "CSE1L",
+    "CTR9",
+    "CWC22",
+    "DARS1",
+    "DDX18",
+    "DDX46",
+    "DDX54",
+    "DHX15",
+    "DTYMK",
+    "ECD",
+    "EEF1B2",
+    "EFTUD2",
+    "EIF2B4",
+    "EIF3A",
+    "EIF3D",
+    "ETF1",
+    "FAU",
+    "FDPS",
+    "GARS1",
+    "GSPT1",
+    "GTF2A2",
+    "HAUS3",
+    "HCFC1",
+    "HEATR1",
+    "HNRNPK",
+    "IDI1",
+    "KANSL1",
+    "KMT5A",
+    "KNL1",
+    "LSM11",
+    "LSM6",
+    "LYRM4",
+    "MASTL",
+    "MBTPS1",
+    "MBTPS2",
+    "MCM6",
+    "MED11",
+    "MED30",
+    "MFAP1",
+    "MTREX",
+    "MVD",
+    "MZT1",
+    "NARS1",
+    "NCAPG",
+    "NCAPH",
+    "NDC80",
+    "NOL6",
+    "ORC1",
+    "PAFAH1B1",
+    "PCF11",
+    "PCNA",
+    "PHB1",
+    "PHB2",
+    "PLK1",
+    "PLRG1",
+    "PNKP",
+    "POLA1",
+    "POLE2",
+    "POLR1A",
+    "POLR1B",
+    "POLR1F",
+    "POLR2B",
+    "POLR2D",
+    "POLR2G",
+    "POLR2H",
+    "POLR3A",
+    "POLR3B",
+    "PPP1CB",
+    "PRC1",
+    "PRMT1",
+    "PRMT5",
+    "PRPF38A",
+    "PRPF4",
+    "PRPF8",
+    "PSMA1",
+    "PSMA2",
+    "PSMA3",
+    "PSMA4",
+    "PSMA6",
+    "PSMB1",
+    "PSMC1",
+    "PSMC3",
+    "PSMC6",
+    "PSMD1",
+    "PSMD11",
+    "PSMD12",
+    "PSMD6",
+    "PSMG4",
+    "RBBP5",
+    "RBMX",
+    "RCC1",
+    "RFC2",
+    "RFC3",
+    "RINT1",
+    "RNF113A",
+    "RPA1",
+    "RPL11",
+    "RPL18",
+    "RPL19",
+    "RPL27",
+    "RPL3",
+    "RPL36",
+    "RPL7A",
+    "RPS13",
+    "RPS16",
+    "RPS20",
+    "RPS23",
+    "RPS29",
+    "RPS4X",
+    "RPS8",
+    "RPS9",
+    "RRM1",
+    "RRM2",
+    "RUVBL1",
+    "RUVBL2",
+    "SAE1",
+    "SART3",
+    "SENP6",
+    "SF3A1",
+    "SF3A3",
+    "SGO1",
+    "SNRPD1",
+    "SOD1",
+    "SPDL1",
+    "SPOUT1",
+    "SRP54",
+    "SRRT",
+    "SRSF7",
+    "SSRP1",
+    "SUPT16H",
+    "TARS1",
+    "TBCB",
+    "TCP1",
+    "THOC2",
+    "TINF2",
+    "TOP2A",
+    "TOPBP1",
+    "TRAPPC11",
+    "TRAPPC8",
+    "TXNL4A",
+    "TXNL4B",
+    "U2AF2",
+    "U2SURP",
+    "VMP1",
+    "VPS28",
+    "WDR75",
+    "WTAP",
+    "XPO1",
+    "ZBTB11",
+    "ZNHIT2"
+   ]
+  }
+ },
+ "panel_mevalonate": {
+  "n": 20,
+  "flags": {
+   "medium_attributable": 12,
+   "not_a_hit": 7,
+   "unresolved": 1
+  },
+  "median_D": -0.38419512012455914,
+  "median_ratio_A": 0.7182164737276008
+ },
+ "panel_heme": {
+  "n": 8,
+  "flags": {
+   "medium_attributable": 6,
+   "not_a_hit": 2
+  },
+  "median_D": -0.3314068427717315,
+  "median_ratio_A": 0.8160782514596536
+ }
+}

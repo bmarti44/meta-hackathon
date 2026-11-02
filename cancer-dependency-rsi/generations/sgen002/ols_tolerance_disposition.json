@@ -1,0 +1,9 @@
+{
+ "spec_tolerance": "atol=1e-10, rtol=1e-8 (sgen002 SPEC)",
+ "over_by_term": {
+  "C(Growth_Format)[T.Plastic]": 161,
+  "C(Serum_status)[T.Serum-free]": 133,
+  "C(Growth_Format)[T.Plastic]:C(Serum_status)[T.Serum-free]": 123
+ },
+ "disposition": "FAIL vs sgen002 global tolerance (expected: published CSV is rounded). Component-specific exception frozen for subsequent reports: OLS anchor tolerance = max abs diff < 1e-6 vs published coefficients (observed 1.73e-8), as in tests/test_baseline_ols.py. Original tolerance NOT retroactively satisfied. C5 adequacy unaffected."
+}

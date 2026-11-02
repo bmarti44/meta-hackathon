@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 82 (reviews/sgen009_fix_high_review_v2.md).
+Verify: occurrence-bound validation in src/sgen009_trace.py (every rho= occurrence, every bracket interval ordered+equal, label-bound secondaries, whole-token counts incl 142/250/atlas 7+8; fixtures: wrong abstract, swapped labels, reversed interval, 2070 token - all must reject); traceability_v8 inventory hashes + atlas runner/manifest + reproduction report v3 cited; packet/repro commands use unique --report destinations incl sgen002 --report support; stale pointers fixed (external_v1_gene_displacement.csv, limitations v8).
+End exactly: SGEN009_FIX2_SCORE: <0-100>

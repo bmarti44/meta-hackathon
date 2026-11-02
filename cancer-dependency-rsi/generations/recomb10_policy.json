@@ -1,0 +1,36 @@
+{
+ "timestamp": "2026-10-29T22:58:42.215271+00:00",
+ "budget": 30,
+ "results": {
+  "incumbent": {
+   "MAE": 0.0696,
+   "queries_total": 0,
+   "n_targets": 924
+  },
+  "random": {
+   "MAE": 0.0711,
+   "queries_total": 150,
+   "n_targets": 924
+  },
+  "fixed": {
+   "MAE": 0.0748,
+   "queries_total": 150,
+   "n_targets": 924
+  },
+  "adaptive": {
+   "MAE": 0.0748,
+   "queries_total": 150,
+   "n_targets": 924
+  }
+ },
+ "world": {
+  "screens": 924,
+  "patients": 876
+ },
+ "gain_vs_incumbent": {
+  "incumbent": 0.0,
+  "random": -0.0015,
+  "fixed": -0.0052,
+  "adaptive": -0.0052
+ }
+}

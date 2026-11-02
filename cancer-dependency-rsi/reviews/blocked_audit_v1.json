@@ -1,0 +1,114 @@
+{
+  "checkpoint": "mechanical_BLOCKED_after_three_goal_turns",
+  "created_utc": "2026-10-28T19:26:30Z",
+  "goal_achieved": false,
+  "terminal_state": "BLOCKED",
+  "sol_terminal_certification": false,
+  "mechanical_checkpoint_basis": "GOAL.md allows mechanical BLOCKED checkpoint when required model call cannot run; no positive completion permitted.",
+  "blocked_audit": {
+    "same_condition_observed_goal_turns": 3,
+    "previous_goal_turn": "progress",
+    "current_goal_turn": "no_progress",
+    "blocker": "Required Sol CLI cannot initialize; substitute model-interface permission remains unanswered.",
+    "fresh_revalidation_receipt": "reviews/g2_unstick_xhigh_1_retry2.receipt.json",
+    "receipt_sha256": "e2e3630a24818abede9306be04ff12bd4f295b0e9dc7f7559205f9e01ad46f91",
+    "actual_model_responses": 0,
+    "user_route_approval_received": false,
+    "impasse": "No compliant uncertainty-design/model-review step can execute. Independent pre-lock inventory,audit and component reproduction work is checkpointed; speculative downstream scaffold is not a substitute for the failed G2 gate.",
+    "required_external_change": "User authorizes built-in Sol agents with prescribed model/effort,or authorized host runtime restores codex exec initialization."
+  },
+  "gates": {
+    "C1": {
+      "state": "partial_not_terminally_adjudicated",
+      "evidence": "reviews/novelty_audit_v2.md",
+      "remaining": "Claim-specific final novelty refresh and terminal adjudication."
+    },
+    "C2": {
+      "state": "substantial_not_complete",
+      "evidence": "reviews/data_integrity_audit_v2.json",
+      "remaining": "Final reviewed provenance/retrieval/reproducibility package; hash audit alone does not establish the whole gate."
+    },
+    "C3": {
+      "state": "narrowed_identifiability_evidence",
+      "evidence": "data/split_manifest.json",
+      "remaining": "Approved uncertainty design; unresolved Broad donors and conditional-population limitations must remain explicit."
+    },
+    "C4": {
+      "state": "unmet",
+      "evidence": "contract.json is LOCK1-DRAFT-v2; latest independent G2 review score74 FAIL",
+      "remaining": "Coherent contract,evaluator,procedures,hashes and passing G2 review before any optimization."
+    },
+    "C5": {
+      "state": "baseline_component_supported_not_full_terminal_adjudication",
+      "evidence": "data/baseline_reproduction_ols.json; published coefficients reproduced within1.7316e-8",
+      "remaining": "Final gate-by-gate adjudication; exact author baseline is already supported."
+    },
+    "C6": {
+      "state": "unmet",
+      "evidence": "No external evaluation or supported locked claim",
+      "remaining": "Previously unreported bounded finding and once-only external test passing frozen criteria."
+    },
+    "C7": {
+      "state": "partial",
+      "evidence": "atlas/provisional_v1/genes.csv and paired_observations.csv",
+      "remaining": "Final uncertainty,biomarker/prior-knowledge and external support/contradiction evidence,reviewed finalatlas."
+    },
+    "C8": {
+      "state": "unmet",
+      "evidence": "generations contains prompts only; no executed cycles or policy modules",
+      "remaining": ">=2 genuine policy cycles with executable challengers,replay,fresh rollouts,and final reserved-panel comparison."
+    },
+    "C9": {
+      "state": "unresolved_unmet",
+      "evidence": "contract.json policy_comparison.c9_status; host costs unknown; no independent reserved biological panels",
+      "remaining": "Preregistered practical efficiency against strongest fixed baseline with matched all-in resources and required uncertainty bound."
+    },
+    "C10": {
+      "state": "unmet",
+      "evidence": "No confirmatory test or adversarial claim battery",
+      "remaining": "Frozen multiplicity,uncertainty,ablations and adversarial evidence; positive+equivalence evidence for any invariance claim."
+    },
+    "C11": {
+      "state": "partial",
+      "evidence": "reviews/atlas_component_reproduction_v2.json",
+      "remaining": "Full clean-environment reproduction of final science,figures,evidence decisions,and policy comparison; component-only test is insufficient."
+    },
+    "C12": {
+      "state": "partial_unmet",
+      "evidence": "README,manifests,partial ledgers exist; manuscript directory empty",
+      "remaining": "Review-ready manuscript,final evidence/history/version/resource/failure package and full reproduce/resume commands."
+    },
+    "C13": {
+      "state": "unmet",
+      "evidence": "Only readiness diagnostics and atlas/audit work executed",
+      "remaining": "First real end-to-end research-policy cycle."
+    }
+  },
+  "unmet_or_not_terminally_certified_gates": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13"
+  ],
+  "verified_components": [
+    "Exact published OLS baseline",
+    "35 passing tests",
+    "250-gene provisional atlas with3000 paired records",
+    "36 cached file checks",
+    "148 models nested within144 donors",
+    "Byte-identical atlas component reproduction"
+  ],
+  "smallest_next_step": "Answer the pending model-interface question; alternatively repair/restore the permitted host CLI context before retrying.",
+  "scientific_discovery": "exploratory_only_unconfirmed",
+  "prediction_improvement": "not_evaluated_no_prediction_claim",
+  "policy_improvement": "not_started"
+}

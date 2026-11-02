@@ -1,0 +1,3 @@
+Re-review v2 (gpt-6.1-sol, high), read-only. Files: generations/sgen016/SPEC.md, generations/sgen016/screen_v2.json, reviews/sgen016_review.md (your v1 findings), lock_s/scientific_protocol_v1.json lines 17/63 area.
+Verify ONLY: (1) each v1 high/medium resolved without verdict drift (A/B scope split present; access claims bounded with endpoint inventory; consequences no longer claim infeasibility or prescribe downloads; per-field matrix complete vs SPEC R1-R5 fields); (2) no new overclaims introduced; (3) FAIL_TO_ESTABLISH still forced by frozen rule. New issues listed by severity.
+Score 0-100. End exactly: SGEN016_V2: <CLOSED|OPEN> and SGEN016_V2_SCORE: <0-100>

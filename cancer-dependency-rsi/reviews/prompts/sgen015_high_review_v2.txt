@@ -1,0 +1,4 @@
+Micro re-review (gpt-6.1-sol, high), read-only, NO API calls. Enumerate ALL low/medium/high/critical issues, score 0-100. Prior: 88 (reviews/sgen015_high_review_v1.md; 3 medium + 1 low).
+Subject ONLY: src/sgen015_screen_v2.py + generations/sgen015/screen_v2.json vs SPEC.
+Verify: (1) verdict now computed on C-disjoint two-sided-screened qualified pairs (probe: 367 unscreened pairs must NOT yield PRESENT; 100 pairs all in C must NOT yield PARTIAL); (2) strict Boolean parsing (missing/null/"false" string => unknown, counted unknown not false); (3) per-model availability values + 13 screened non-C patients retained and reproducible from requests[] (256 receipts, one per request, values recorded); (4) single-receipt-per-request incl parse-failure path. Confirm counts unchanged (0 pairs, 162/94/0, 142/13) and verdict RESOURCE_ABSENT.
+End exactly: SGEN015_V2_SCORE: <0-100>

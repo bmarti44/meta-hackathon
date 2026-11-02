@@ -1,0 +1,7 @@
+{
+ "supersedes_wording_in": [
+  "generations/sgen001/identity_reconciliation_v1.json:consequence_frozen_rule",
+  "src/sgen001_identity.py (generator string)"
+ ],
+ "corrected_statement": "144 covariate-ID groups representing 142 patients; effects on patient-weighted estimate, interval and decision unknown in size and direction. The earlier 'may slightly understate' phrasing is withdrawn (sol-high v3_fix issue 9). Generator/json retained as executed history; this erratum governs all current summaries."
+}

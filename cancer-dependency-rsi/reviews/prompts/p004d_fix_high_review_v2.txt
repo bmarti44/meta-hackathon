@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 76 (reviews/p004d_s006_high_review_v1.md).
+Verify: (1) tree_cpu v2 scope: controller CPU included, killpg+reap, concurrent drain, ps failures raise MeteringError (src/tree_cpu.py, tests/test_tree_cpu.py 5 tests incl concurrent contamination + failed CPU job + timeout); (2) Witness B verdict language in generations/pgen004d/screen_verdict_v1.json; (3) sgen006 corrections: generations/sgen006/corrections_v2.json (droplet = preprint PPR1345332 doi 10.64898/2026.10.13.744538) + request_manifest_reconstructed.json (honest unverified compliance, Lo mislabel corrected).
+Issues severity+file:line+fix. End exactly: P004D_FIX_SCORE: <0-100>

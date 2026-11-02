@@ -1,0 +1,5 @@
+{"Version":"2012-10-17","Statement":[
+ {"Effect":"Allow","Action":"ssm:GetParameter","Resource":"arn:aws:ssm:us-east-1:087630439073:parameter/itsthemedium/muse-api-key"},
+ {"Effect":"Allow","Action":"kms:Decrypt","Resource":"*","Condition":{"StringEquals":{"kms:ViaService":"ssm.us-east-1.amazonaws.com"}}},
+ {"Effect":"Allow","Action":["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"],"Resource":"arn:aws:logs:us-east-1:087630439073:log-group:/aws/lambda/itsthemedium-muse*"}
+]}

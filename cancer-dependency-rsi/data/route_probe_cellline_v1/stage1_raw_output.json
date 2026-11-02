@@ -1,0 +1,39 @@
+{
+ "spec_sha256": "fb82e46105e148578b9182c292165719fdca5c581d2ede9884c726c00bc8a805",
+ "requests": [
+  {
+   "n": 1,
+   "url": "https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 43653,
+   "sha256": "afbf355969adf92fb40dc2dfd6bafcb50a6b3be9073e2eb014cebf87c63a15eb",
+   "wall_s": 0.973
+  }
+ ],
+ "dependency_data_requested": false,
+ "text_chars": 11412,
+ "challenge_suspected": false,
+ "key_sentences": [
+  "Raw Data Dataset Name Model Type Origin Data Type Link CRISPR Dependencies 2024 Cell Lines Sanger Unprocessed sgRNA read counts Sanger sgRNA Raw Counts CRISPR (Avana) Public 21Q2 Broad Unprocessed sgRNA read counts Achilles_gene_effect_unscaled.csv CRISPR Dependencies 2026 Organoids Sanger Unprocessed sgRNA read counts TBC Processed Data (Cell Lines) Descriptions of how the raw data was processed including algorithms and filtering.",
+  "Corrected Fold Changes Gene independent responses (e.g.",
+  "copy number) to CRISPR-Cas9 were corrected using CRISPRcleanR .",
+  "The screens were combined using ComBat, and correction vectors were estimated from eight models in both datasets to correct for differences in assay lengths.",
+  "The Sanger day 14 screens were used as the baseline and the day 18 screens were batch corrected using the overlapping cell lines.",
+  "Once the overlapping cell lines had been used to estimate the batch effects, only the day 14 screens were retained for further analysis.",
+  "Independent datasets generated at Sanger and Broad showed batch effects due to differences in library design and assay length ( Dempster et al.",
+  "To allow combined analysis of these two datasets they were batch corrected to account for these technical differences ( Pacini et al.",
+  "Batch correction was calculated using ComBat using a set of overlapping cell lines screened at both institutes.",
+  "Finally the first principal component is removed from the data that is associated with differences in media.",
+  "Defining Fitness Genes Loss of fitness scores are generated from corrected FCs for both individual Sanger and Broad datasets and the combined CRISPR-Cas9 dataset using BAGEL2 ( Kim et al.",
+  "Corrected Fold Change: Copy-number-bias corrected gene depletion fold change, computed between average representation of targeting sgRNAs post-transfection at the end of the experiment versus plasmid library.",
+  "sgRNA Count Processing and Gene Knockout Fitness Effect Calling Gene independent responses to CRISPR-Cas9 perturbations were corrected for library size, read-count distributions, and gene copy number bias using CRISPRcleanR .",
+  "Batch effects between the two sgRNA libraries were corrected using ComBat on CRISPRcleanR normalised and copy number corrected gene log fold changes (LFCs).",
+  "Loss of Fitness Scores were then generated from corrected fold changes using BAGEL2 ( https://github.com/hart-lab/bagel ) to identify significantly depleted genes.",
+  "Scaled Corrected Fold Change: Copy-number-bias corrected gene depletion fold change, calculated from the average abundance of targeting sgRNAs at the end of the experiment relative to the plasmid library.",
+  "This method quantifies gene essentiality across multiple CRISPR/Cas9 screens by integrating the cumulative distribution of fitness effects, enabling robust identification of genes that are consistently essential across diverse cancer types.",
+  "To enable data integration only sgRNAs shared between the two libraries were included."
+ ],
+ "title": "CRISPR: Genome Scale Knockout\n        \n        \n        \n        - The Cancer Dependency Map at Sanger",
+ "wall_s": 0.975
+}

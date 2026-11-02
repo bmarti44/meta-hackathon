@@ -1,0 +1,38 @@
+{
+ "timestamp": "2026-10-29T22:45:50.901768+00:00",
+ "C1_pairs": 5,
+ "C1_mev_mean_delta_serumfree_minus_serum": -0.2661,
+ "C1_allgene_mean_abs_delta": 0.2139,
+ "C1_mev_genes": {
+  "SQLE": -0.436,
+  "MSMO1": -0.096
+ },
+ "C1_mev_mean_rank_pct": 0.033,
+ "C2_serumfree_values": {
+  "False": 642,
+  "": 171,
+  "True": 24
+ },
+ "C2_serumpair_models": 0,
+ "C3_mev_disp_mean": -0.3667,
+ "C3_mev_disp_rank_pct": 0.0039,
+ "C3_mev_score_frac_negative": 0.988,
+ "C4_wnt_disp": {
+  "FZD1": -0.089,
+  "FZD2": 0.072,
+  "FZD5": -0.506,
+  "FZD7": 0.008,
+  "LRP5": 0.045,
+  "LRP6": 0.023,
+  "CTNNB1": -0.255,
+  "APC": 0.051,
+  "AXIN1": 0.013,
+  "RSPO1": 0.058,
+  "RSPO2": 0.042,
+  "RSPO3": 0.015,
+  "LGR5": -0.015,
+  "PORCN": -0.11,
+  "WLS": -0.329,
+  "TCF7L2": -0.327
+ }
+}

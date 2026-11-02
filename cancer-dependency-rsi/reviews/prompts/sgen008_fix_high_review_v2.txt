@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 80 (reviews/sgen008_high_review_v1.md).
+Verify fixes: (1) C10 exact affirmative sign+decision vs locked decision BOUND + contradictory fixtures; (2) eligibility acceptance requires cohort 148 + C patients 142; Broad exposed set derived from installed split_manifest A_development models; (3) fresh battery complete: upstream per-stage + sgen002 + OLS test + sgen008 checks all under fresh uv-locked interpreter, structured evidence generations/sgen008/fresh_env_evidence_v2.json incl interpreter/lock hashes and retained failed attempts (evidence_report_v3).
+End exactly: SGEN008_FIX_SCORE: <0-100>

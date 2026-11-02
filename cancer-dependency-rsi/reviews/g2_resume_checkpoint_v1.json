@@ -1,0 +1,29 @@
+{
+  "checkpoint": "2026-10-28-g2-safety-remediation-v1",
+  "independent_review_passed": false,
+  "lock1_frozen": false,
+  "created_utc": "2026-10-28T19:13:57Z",
+  "files": {
+    "src/budget.py": "53b76655bdd63c614b9c61d42df8ef2911034360c40195999194ca882c367d92",
+    "src/model_call.py": "9232be04bd39feb84e2f760ef5bdc4f1d38083d3cd24e769615c3167059ed0e9",
+    "src/estimators.py": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c",
+    "src/evaluator_v2.py": "dda3e2ffcc5dd386ebfe7486a35e073756601bf3a947b7ad30c8215d32506360",
+    "src/evaluator_v3.py": "9d426e6db7ac5a52cdb425551743ff31f64d99f019de2bf05c7cb178cfce50fb",
+    "src/lineage.py": "e90a4dbcae26a341e1600e6d2551638e2a73b5693910f749172fa866a182b2cc",
+    "src/status_rules.py": "f3b0edb71eb872eb9e20114cff25b20e3dd4de9e7e2d4ac6cf6793fea47db42a",
+    "src/g2_safety_probes.py": "cffef5c42474edb43819e49d9c4d406e935314136ab2c100335255a0619c8160",
+    "tests/test_review_r2_regressions.py": "93700f7858d90627ae12e6fd7a69e2f0f9bf8bb4c6a875612aa8405c937ced4f",
+    "tests/test_g2_remediation.py": "2b5243e3fb598bb3cba955e137bcdcfa6fac1817d8588b026c2328de75df730d",
+    "reviews/prompts/g2_unstick_xhigh_1.txt": "4c445d3294b3c417f2382a4ab80de5e676ea8623f11a4e259e71c1b8740823b6",
+    "reviews/prompts/g2_safety_probe_spec_v1.json": "0cb3e8fea5ac7fe91cd8d443039af2ecaaeea77236f8635ad93eb138a2145f74",
+    "reviews/g2_safety_probe_results_v1.json": "433eda37be57111754aea0768399a8eddf9e84e0e11c9d2631923a62a904dfad",
+    "reviews/g2_r2_dispositions_v1.md": "091c949799b28a0485659ec8b25e670bb2b8f1a96ba3f971e77d1663d2673d16",
+    "reviews/address_space_cap_probe_v1.json": "01fa04df70c0e2f2a6dc6872c12636bc18922b9cadc39b43540b0a6aab1520c3",
+    "reviews/address_space_soft_cap_probe_v1.json": "a7df1590f002385bb1bd758188f0933db86cc096e56e432fb5d87ed1a8e7b72f",
+    "status.json": "049e017b208634123519c03e4b59cabb4407da84f705da3016e74c91c3075d89",
+    "STATUS.md": "d1189e7efc24804184db0fd449b119e31bcf216fbd27685841e0aed28216f3a0",
+    "README.md": "7454cb9b1a6f83b395c715af641953e01aea1c1906975940a5de0a0e046efea8"
+  },
+  "goal": "active_not_achieved",
+  "all_new_resource_reservations_reconciled": true
+}

@@ -1,0 +1,414 @@
+Cancer dependency research with an autonomous RSI loop
+
+Goal and executable handoff for a local research agent
+
+Prepared 28 October 2026. Treat every source below as a seed to verify against the current primary source, release manifest, and paper methods.
+
+
+1 - The ambitious goal
+
+Build and run a laptop-based autonomous research system that answers a specific, still-open question about when molecularly defined cancer dependencies persist or fail across measured culture environments.
+
+The primary question is whether measured sensitivity to culture conditions, together with genotype and tumor state, can explain failures of dependency transfer from conventional cancer models to patient-derived organoids beyond lineage and technical variation alone.
+
+Produce all of the following.
+
+- At least one previously unreported, precisely bounded, externally supported explanatory finding. It may be a positive conditional dependency rule, a convincing refutation of a meaningful dependency claim, or an informative bound that materially changes how a target should be interpreted. It must resolve a specific uncertainty, not merely increase a benchmark score.
+- A reproducible evidence atlas covering every eligible gene in the controlled environmental panel, including support, contradiction, heterogeneity, uncertainty, missing evidence, and excluded genes with reasons. Expansion beyond that selected panel is exploratory unless independently justified.
+- A defensible connection between measured environmental sensitivity and transfer behavior in an independently filtered organoid cohort, where the available evidence supports that connection.
+- An implemented research-policy improvement loop with real experiments, faithful historical replay, executable policy revisions, fresh deployment, and a final comparison against strong fixed exploration strategies.
+- Evidence that the learned policy produces a practically meaningful improvement under matched total resources, including its own learning overhead.
+- A manuscript and complete reproducibility package ready for independent expert review, with all findings, failures, limitations, and costs disclosed.
+
+Seek a finding that changes which cancer target evidence researchers should trust. Do not substitute a generic prediction leaderboard or an agent framework demonstration for that scientific objective.
+
+Ambition does not authorize changing the standard of evidence. If the scientific result or the policy improvement fails its criteria, the overall goal remains unmet. A valid negative result can qualify only when it resolves a predeclared meaningful uncertainty with sufficient precision. An insignificant p-value does not qualify.
+
+
+2 - Your operating role
+
+You are the lead investigator, research engineer, statistician, and experiment coordinator for this project.
+
+Execute the work. Do not stop after writing a plan, creating folders, or describing an architecture. Use the current session to establish the scientific contract, build the smallest working vertical slice, evaluate real public observations, and begin the first actual policy-improvement cycle when the evidence and resources permit.
+
+Use frontier model reasoning through the capabilities already supplied by your host agent. All scientific fitting, simulation, evaluation, and data processing must run on this laptop. Public web access and public data services are allowed. No new wet-lab measurements, controlled-access patient data, paid scientific cloud compute, or local foundation-model training are required.
+
+Make routine research and implementation decisions autonomously. Ask only when a missing credential, explicit spending authority, unavailable required file, or genuinely consequential unresolved user choice prevents further authorized work. Complete all independent work first.
+
+Work inside an isolated project directory named cancer-dependency-rsi under the current workspace, or continue the existing project if its identity is unambiguous. Preserve unrelated files and existing instructions.
+
+Install dependencies in a project environment. Respect existing permissions and approval controls. Do not copy permission-bypass flags from upstream agent launch scripts. Do not submit papers, publish repositories, contact researchers, purchase services, or provision new infrastructure.
+
+Use specialist workers when available, with distinct roles for literature and novelty, data provenance, scientific modeling, evaluator implementation, and adversarial review. The evaluator and final data access must have a narrower interface than the proposing agent. Shared privileged access is not a genuine security boundary and must never be described as one.
+
+
+3 - Mandatory starting evidence
+
+Verify and read the methods, data availability, supplements, and closest relevant findings before treating any seed as an established fact.
+
+S1 - Broad NextGen resource and environmental experiments
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13581591/
+https://doi.org/10.1038/s41586-026-10843-7
+https://github.com/broadinstitute/DepMap-NextGen-Public
+https://doi.org/10.6084/m9.figshare.29472362
+
+S2 - Sanger organoid resource
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13581617/
+https://doi.org/10.1038/s41586-026-10830-y
+https://github.com/Garnett-Lab/SangerOrganoidBiobank
+https://doi.org/10.6084/m9.figshare.28339340
+https://cellmodelpassports.sanger.ac.uk/downloads
+https://dataminer.depmap.sanger.ac.uk/
+https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/
+
+S3 - Closest direct transferability prior
+
+https://doi.org/10.3390/biology15191782
+https://pubmed.ncbi.nlm.nih.gov/42883455/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13664187/
+https://doi.org/10.5281/zenodo.22472622
+
+S4 - Current Broad data and release guidance
+
+https://depmap.org/portal/data_page/?tab=allData
+https://forum.depmap.org/t/organoid-dependency-data/4671
+https://forum.depmap.org/t/announcing-the-26q3-release/4692
+
+S5 - Dream-RSI method and implementation
+
+https://arxiv.org/abs/2609.14858
+https://arxiv.org/html/2609.14858v2
+https://github.com/google-research/dream-rsi
+
+The starting literature establishes several constraints.
+
+- The Broad resource reports 147 genome-scale screens, while the Sanger resource reports screens across 162 organoids. These counts are not automatically disjoint biological samples.
+- The smaller controlled Broad environmental experiment has 250 deliberately selected test genes and 18 screens across only seven biological models. It includes seven matched format contrasts and five matched medium contrasts, with possible repeated models. Verify the exact design in the source.
+- The 250 genes were selected partly because they differed between model environments. They are not a representative genome-wide sample.
+- The October 2026 transferability study already examines expression-based transfer from conventional models to Broad and Sanger organoids for 20 selected genes. Generic 2D-to-organoid transfer is not the new contribution.
+- Broad's temporary NextGen manuscript dataset was incorporated into DepMap Public 26Q3. Staff direct users to the integrated CRISPRGeneEffect.csv and relevant model metadata. Reverify the current route rather than inventing a file ID or assuming old instructions still work.
+- Sanger processed fitness measurements and Broad Chronos gene effects are different measurement systems. Their absolute values are not interchangeable.
+- Historical releases, a current integrated release, and independently produced laboratory data are different forms of evidence. Reprocessing the same observations is not biological replication.
+
+Resolve downloads through current official manifests. Record source URL, release or commit, retrieval date, license, byte size, and checksum. Do not invent direct download URLs or accession metadata. Use official alternative routes if a public portal blocks unattended retrieval. Do not bypass a challenge or access control.
+
+Build around public processed observations. Raw sequencing is unnecessary. If a proposed analysis requires paired observations that are not actually released, identify that limitation before implementing the model.
+
+
+4 - Hardware, budget, and persistence
+
+Inspect the available RAM, CPU, disk, operating system, installed runtimes, and already configured model access without printing secrets.
+
+Set conservative defaults and save them in a machine-readable configuration.
+
+- No GPU dependency.
+- At most two CPU-heavy jobs concurrently.
+- An aggregate research memory ceiling of the smaller of 8 GiB and 60 percent of physical RAM, reduced further when necessary to leave the host responsive.
+- A ten-minute default timeout for an individual exploratory fitting job. Longer jobs require an explicit recorded allocation from the existing campaign budget.
+- A download ceiling of 20 GiB or one quarter of available disk space, whichever is smaller.
+- A first pilot target of 24 real evaluated development nodes and three executable policy challengers, retaining the incumbent.
+- An eight-hour ceiling for the first pilot invocation. This is a safety ceiling, not a promised completion time.
+- No automatic increase in financial, disk, concurrency, or wall-time ceilings.
+
+Use the host agent's already authorized model access. Any additional programmatic metered API calls require a numeric user-configured cap or an existing explicitly authorized cap. If none exists, the additional API spending cap is zero. Continue with host-driven reasoning and local computation where possible, and build the adapter without dispatching unapproved calls.
+
+Do not require the user to buy new services just to start the project. Do not silently equate an unknown price with zero.
+
+For separately dispatched API calls, enforce limits in code. Reserve a conservative maximum cost before each request, count concurrent reservations and retries, reconcile against returned usage, and persist the ledger before dispatch. Do not call a provider whose billable maximum cannot be bounded by the configured limits.
+
+Record model identifiers, prompts, token counts when exposed, tool costs, wall time, CPU time, and peak memory. If host-model costs cannot be measured, mark them unknown. You may still do science, but you cannot certify an all-in cost improvement while material costs are unobserved.
+
+Use append-only event records and checkpoint after every completed experiment. Track proposed, dispatched, completed, failed, and committed states. An interrupted request remains reserved until reconciled. Never reset the budget or repeat a completed paid request on resume.
+
+Do not claim a process is running unless you have an actual live process or job identifier and recent heartbeat. If the host session ends, write the exact next action and resume command. Do not promise work will continue after the runtime stops.
+
+
+5 - Data and identifiability audit
+
+Before adaptive hypothesis search, construct a provenance table with biological model, donor, tumor lineage, sample origin, laboratory, assay library, medium, growth format, replicate identity, release, and measured outcome.
+
+Create explicit crosswalks among Broad, HCMI, Sanger, and author-specific identifiers. Mark uncertain donor identity as uncertain rather than assuming independence.
+
+Determine which observations are truly paired. Count independent biological models and donors. Do not count genes, guide RNAs, wells, alternative cultures, or technical replicates as additional independent patients.
+
+Audit release composition and preprocessing provenance. An integrated release may contain validation observations or corrections learned jointly from them. Removing overlapping rows alone does not undo leakage through outcome-guided target selection, normalization, or model selection. Prefer compatible study-specific releases and transformations fitted on development data. If a fitted correction used external dependency outcomes, rebuild a development-only analysis or obtain genuinely independent validation evidence. Disclosure alone does not restore independence. Distinguish that outcome leakage from covariate-only joint preprocessing, which must be disclosed as transductive feature preprocessing with appropriately limited claims. This is a required provenance check, not an assertion that any named release is contaminated.
+
+Verify dependency score direction, dynamic range, controls, missingness, and quality flags separately for each source. Avoid direct subtraction of Chronos values from Sanger fold-change or essentiality scores.
+
+Preserve the seven-model environmental design as a small, selected experiment. Determine whether row-level paired outcomes, replicates, and required metadata are sufficient for the intended contrast. A batch correction cannot separate laboratory and biology when the experimental design confounds them.
+
+Record attrition explicitly, including models unable to grow in a condition and genes excluded for insufficient variation or precision.
+
+Data eligibility is determined from prespecified quality and identifiability rules. It must not be selected later to maximize a favorable result.
+
+The gate is an identifiable, falsifiable question in a named subset. If the data cannot support the original question, propose and document a narrower still-open question within the same scientific objective. Do not pretend the original broader goal has been achieved.
+
+
+6 - Scientific estimands and research contract
+
+Start from two connected estimands.
+
+The direct environmental estimand is the change in a gene's measured dependency between environment A and environment B within the same biological model, while holding the other measured culture condition fixed. Analyze medium and growth format separately where the design permits.
+
+The transfer estimand is the extent to which a prespecified genotype, tumor-state, or context relationship predicts dependency behavior in an independently filtered organoid cohort beyond lineage and the strongest appropriate baseline.
+
+Use original documented assay units for paired within-study contrasts. Use justified ranking, calibration, or outcome-specific comparisons for cross-study evidence.
+
+For each environmental claim, report the dependency in both conditions, all individual paired changes, uncertainty, and heterogeneity. A near-zero average can conceal large opposing effects.
+
+Do not call a dependency invariant because a difference is nonsignificant. If claiming equivalence, define a scientifically justified equivalence margin before confirmatory evaluation and require the relevant interval to fall inside that margin. If no defensible margin exists, report continuous effects and uncertainty without an invariance label.
+
+A stable absence of dependency is not a stable cancer vulnerability. Establish that the dependency itself is meaningful in the environments covered by a positive claim.
+
+Do not interpret a predictive expression feature as a causal mediator without identifying assumptions and suitable evidence. Environmental intervention evidence and cross-cohort biomarker associations must retain distinct evidence labels.
+
+Carry uncertainty and shared-model dependence in estimated environmental sensitivity into downstream transfer analyses using a justified measurement-error, resampling, or sensitivity analysis. Do not treat noisy estimated sensitivities as exact independent inputs. Report conclusions that change materially across plausible environmental-effect estimates.
+
+During initial development, choose and justify the precise primary endpoint, practical effect margin, hypothesis family, baseline set, uncertainty procedure, and sensitivity analyses. Then freeze them before policy optimization.
+
+The research contract must include the following.
+
+- Exact question and falsifiable alternatives.
+- Intended population, environments, targets, and generalization claim.
+- Eligibility and exclusion rules.
+- Data and identifier versions.
+- Development, policy-evaluation, and final external partitions.
+- Feature engineering and transformation rules.
+- Primary and secondary endpoints with fixed direction.
+- Minimum practical effects or equivalence margins and their justification.
+- Multiplicity control and uncertainty methods.
+- Baseline definitions.
+- Invalid-result rules.
+- Success, failure, inconclusive, and budget-exhaustion conditions.
+
+The initial lock fixes the permitted hypothesis and transformation spaces, partitions, evaluator, baseline definitions, practical margins, and inferential rules. Adaptive development may select hypotheses, features, hyperparameters, and fitted artifacts within those spaces. A second lock commits the exact selected claim family, predictions, and artifacts before external evaluation.
+
+Hash this contract, evaluator code, and split manifests. Changing a locked scientific contract creates a new study identifier and requires appropriate new evaluation evidence.
+
+
+7 - Novelty and biological scope
+
+Maintain a claim ledger throughout the project.
+
+For each proposed claim, record the nearest prior result, which part is already established, the precise remaining uncertainty, evidence needed to resolve it, and the consequence if the claim is supported or refuted.
+
+Read the Broad environmental analyses, the Sanger biomarker analyses, and the October transfer study closely. Their reported lipid, adhesion, state, and dependency findings are controls or prior evidence. Recovering them is not a new discovery.
+
+Use current primary literature, author data, and official documentation. Date the search and preserve queries and important exclusions. Absence of an exact search hit is not proof that a claim is new.
+
+Choose a bounded hypothesis family before final evaluation. Consider gene classes with measured environmental sensitivity and adequate overlap, not an unconstrained scan of every feature until a small p-value appears.
+
+Before finalizing the manuscript, repeat the novelty audit for each surviving exact claim. Preserve contradictions and prior evidence. Do not silently rename a known association to make it appear new.
+
+The required scientific contribution must be more specific than weak organoid transfer, better average correlation, or successful agent automation.
+
+
+8 - Baselines, inference, and adversarial checks
+
+Build simple competent baselines before allowing elaborate models.
+
+Before the final lock, reproduce baselines only on development data or independent control data. Any reproduction requiring final external outcomes must occur after the final hypotheses, predictions, artifacts, and inferential code are committed, alongside the final evaluation. Those results cannot inform revisions to the tested study.
+
+Where applicable compare lineage only, genotype only, tumor-state or expression only, genotype plus state, measured context or assay covariates, and a regularized linear predictor modeled on the existing transfer study.
+
+Use the same eligible observations and permitted information for each comparison. Learn preprocessing, feature selection, dimension reduction, and tuning within development folds. Do not optimize a feature representation on final external outcomes.
+
+Compare against the strongest applicable baseline, not only the weakest. If environmental information is central to the explanation, include a prespecified ablation removing it.
+
+Use effect sizes and calibrated predictive or uncertainty endpoints as the scientific evaluator's optimization target. Do not reward p-value reduction, the number of discoveries, manuscript length, or confidence of the LLM explanation.
+
+Treat adaptive development as exploratory. Evaluate a locked final claim family once on independent outcomes. For a small confirmatory family, Holm correction at familywise alpha 0.05 is a reasonable default. Any alternative must be justified and frozen before outcomes are revealed.
+
+Do not apply ordinary fixed-family correction to an indefinitely adaptive stream of repeatedly inspected p-values and call it confirmatory evidence.
+
+Use uncertainty at the donor or biological-model level, accounting for repeated cultures and target or pathway dependence where relevant. Many bootstrap repetitions do not create new biological replication. With few clusters, assess whether the proposed interval or test is justified and report the effective sample size.
+
+Perform relevant negative controls, leakage checks, donor and lineage sensitivity analyses, platform sensitivity, and leave-one-model-out checks. Permutations must respect exchangeability and grouping. Do not permute labels freely when the design makes that invalid.
+
+Synthetic data may test code, calibration, and identifiability under explicit assumptions. Synthetic labels, imputed outcomes, and LLM guesses cannot serve as independent biological validation.
+
+Only make claims supported by the actual evidence. Public dependency screens alone do not establish clinical efficacy, normal-tissue safety, treatment resistance reversal, or universal target validity.
+
+
+9 - Three distinct evaluation layers
+
+Keep these layers separate.
+
+A - Development task panels
+
+Use them to build scientific artifacts, tune development models, generate discovery trees, and select policy challengers. Record every adaptive use.
+
+B - Reserved policy evaluation panels
+
+Use them to compare the final learned exploration policy with fixed strategies in fresh rollouts. Freeze the compared policies and selection criterion before these panels are evaluated.
+
+C - Final external biological evaluation
+
+Prefer an independently filtered Sanger cohort after resolving donor overlap, release provenance, assay compatibility, and adequate representation. Use final outcomes only after committing the hypotheses, predictions, model artifacts, and inferential code.
+
+A final external cohort cannot also be a repeatedly consulted policy reward. Do not send final Sanger outcomes into the replay pool.
+
+For each final claim, identify exactly which component each dataset validates. External confirmation of dependency transfer does not independently validate a medium or format effect, or establish that environmental sensitivity caused transfer failure. Retain adaptively reused environmental evidence as exploratory or selection-adjusted evidence, as justified. Do not manufacture an independent environmental test by splitting genes from the same seven models. Seek an additional existing public controlled-environment dataset when the selected claim requires independent environmental confirmation. If none is suitable, narrow the claim or retain the unmet evidence gate.
+
+Subdividing the selected 250 genes does not create hundreds of independent biological tasks. Record model, donor, gene, and pathway overlap in all panels, and use blocked evaluation. The larger development cohorts may provide engineering tasks for policy learning, but their transfer to the small environmental problem must be reported honestly.
+
+Within a single privileged local agent, enforce a logged protocol with a separate evaluator interface and restricted inputs. Do not claim cryptographic secrecy or genuine blindness merely because an outcome file lives in a separate directory.
+
+Use retrospective external validation as the default wording. Public literature and model pretraining can expose outcomes. Record known exposure and do not certify that public results were unknowable.
+
+A failed final test is a failed final test. Subsequent work that uses its outcomes becomes exploratory unless genuinely new independent evidence is obtained.
+
+
+10 - Implement the actual RSI loop
+
+Keep the base scientific generator, its model version and prompting contract, data contract, and evaluator fixed during a policy comparison.
+
+Make the editable policy an executable module that receives observed history, legal actions, and remaining resources, and selects an action.
+
+Legal actions may include opening a predefined analysis family, choosing an existing branch, refining a particular artifact, running a permitted diagnostic, and stopping.
+
+The policy may alter branching, prioritization, exploration versus refinement, and stopping. It cannot change labels, splits, metrics, practical margins, multiplicity correction, or success criteria.
+
+A narrative reflection is not a policy improvement unless it changes executed decisions.
+
+Record each discovery node's immutable parent, exact artifact, input context hash, data and split hashes, evaluator hash, seeds, result, validity diagnostics, failures, model calls, and measured costs.
+
+Historical replay may reveal only previously executed artifacts and their actual recorded outcomes. It must not use a model to invent outcomes for unexplored analyses.
+
+A reordered branch may alter the context seen by a generator. Make refinement depend on an immutable parent and fixed context, or require an exact context match before replaying a recorded child. Do not assume a recorded child represents an arbitrary counterfactual generation.
+
+The replay policy sees only the outcomes revealed along its trajectory. Do not expose the full tree's future rewards.
+
+Mark unsupported replay actions unsupported. Do not assign them fake scores or treat a surrogate prediction as a measured outcome. Compare policies on common support, report support coverage, and use replay as a screening tool.
+
+Perform the following cycle.
+
+1. Run the initial fixed policy on real development tasks.
+2. Preserve the evaluated discovery trees as replay worlds.
+3. Generate at least three executable policy challengers plus the unchanged incumbent.
+4. Replay them under the same resource constraints and support rules.
+5. Select a challenger with the frozen selection rule.
+6. Test the challenger in fresh development rollouts against fixed exploration using the same generator and evaluator.
+7. Promote only when the preregistered criterion is met.
+8. Retain the incumbent when challengers fail.
+9. Add only development histories and repeat.
+
+Complete at least two genuine cycles before the final policy comparison if the authorized resources and valid tasks permit. Two cycles do not require two promotions. An unchanged incumbent is a valid experimental outcome.
+
+After development, freeze the best admissible policy and evaluate it on the reserved policy panels. Compare it with the original fixed exploration strategy and at least one simple fixed-allocation or random-selection strategy.
+
+
+11 - What counts as demonstrated policy improvement
+
+Predeclare one primary operating point or cost-to-quality endpoint. Also report complete scientific-quality-versus-cost curves.
+
+Use the same generator, evaluator, initial artifacts, information permissions, and common resource ceilings for all policies.
+
+Charge policy rewriting, replay, failed jobs, promotion trials, and extra model calls to the improving system. Permit fixed baselines to spend the corresponding budget on scientific search.
+
+Report both end-to-end performance including learning overhead and deployment-only performance with learning costs shown separately.
+
+The ambitious engineering target is at least 20 percent lower total measured API expenditure to reach a predeclared valid scientific-quality threshold, under the same CPU ceiling and information constraints, compared with the strongest fixed baseline. This is a project target, not a forecast.
+
+Set the quality threshold from development evidence before final policy evaluation. It must be meaningful and attainable by competent baselines, not chosen after observing which policy wins.
+
+Use paired blocked comparisons where appropriate and report uncertainty. For the default 20 percent savings goal, require the prespecified one-sided 95 percent lower confidence bound on savings to meet the 20 percent practical margin. A point estimate above 20 percent with a lower bound merely above zero supports some improvement but does not meet that ambitious margin. Freeze how failures to reach the quality threshold within budget are treated as censored outcomes. Do not convert nonattainment into invented exact costs. Random seeds quantify execution variability, not independent biological replication.
+
+If API expenditure is not the dominant or measurable resource, choose a justified alternative primary resource endpoint during the initial contract stage, explain it, and lock it before optimization. All other material resources must still be measured or strictly matched. A CPU-only advantage or token proxy cannot satisfy C9 while material host-model costs remain unknown and unmatched. In that case retain an unresolved cost gate and avoid claiming all-in savings. Define an equally explicit practical improvement margin and uncertainty requirement for any alternative endpoint. Do not switch endpoints after seeing final results.
+
+If faithful replay has inadequate support, preserve that finding and use fresh rollouts to assess the proposed policy. Label the method accurately as a Dream-RSI-inspired adaptation and disclose departures.
+
+Do not call the system recursively self-improving merely because more compute improved a reused validation score.
+
+
+12 - Completion criteria
+
+Mark the ambitious goal complete only when every applicable criterion below has documentary evidence.
+
+C1 - A current novelty audit identifies a precise unresolved cancer dependency question and distinguishes it from the August resources and October transfer study.
+
+C2 - All analyses use legitimately accessible public data, with complete provenance, licensing, identifier crosswalks, and reproducible retrieval or documented local cache installation.
+
+C3 - The intended paired contrast or conditional relationship is identifiable within a named population. Confounding and selection are disclosed, and independent biological units are counted correctly.
+
+C4 - The scientific contract, eligibility rules, splits, baseline set, practical effects, evaluator, and confirmatory procedures were frozen before adaptive optimization and final evaluation.
+
+C5 - The pipeline reproduces relevant published or author-code baseline results closely enough to establish outcome direction, cohort integrity, and measurement interpretation, with discrepancies resolved or explicitly bounded.
+
+C6 - At least one previously unreported explanatory finding passes the frozen scientific criteria and relevant external tests. A supported refutation or informative bound may qualify when it resolves a meaningful predeclared uncertainty. Mere nonsignificance, a rediscovered association, or a better exploratory score does not qualify.
+
+C7 - The evidence atlas covers all eligible genes in the controlled panel and lists every exclusion. Every entry distinguishes dependency strength, environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, and prior knowledge.
+
+C8 - At least two real policy-improvement cycles have run, with executable challengers, faithful replay, fresh rollout evaluation, retained failed attempts, and a final frozen-policy comparison on reserved panels.
+
+C9 - The learned policy meets the preregistered practical improvement criterion against the strongest fixed baseline under matched total resources. Meeting only a deployment-only criterion does not satisfy an end-to-end claim.
+
+C10 - Scientific conclusions survive the prespecified multiplicity correction, appropriate uncertainty analysis, key ablations, and adversarial checks. Any claim of invariance requires positive dependency evidence and justified equivalence evidence.
+
+C11 - A clean reproduction run regenerates the primary estimates, figures, evidence decisions, and policy comparison within documented tolerances from frozen artifacts. It must not require rerunning stochastic LLM search to reproduce the reported analysis.
+
+C12 - The package includes a manuscript for expert review, machine-readable evidence, source and data manifests, all experiment histories, model and policy versions, actual resource measurements, failures, limitations, and exact reproduce and resume commands.
+
+C13 - The first meaningful end-to-end research cycle has actually executed. A plan, scaffold, mock evaluator, or hypothetical example is insufficient.
+
+Seek multiple convergent findings across adequately represented lineages and pathways as an additional scientific stretch target. Do not replace one strong finding with a quota of weak associations. Do not force claims about sparsely represented cancer types.
+
+Keep scientific discovery, prediction improvement, and policy improvement as separate status fields. One does not establish the others.
+
+
+13 - Required artifacts and commands
+
+Create a compact repository with equivalent artifacts to the following. Choose actual file formats suited to the content.
+
+- README.md with scope, installation, exact commands, and current limitations.
+- GOAL.md with the locked goal and completion criteria.
+- PROTOCOL.md and a machine-readable locked research contract.
+- STATUS.md and a structured status record with current phase, incumbent, spending, next action, and unmet gates.
+- A data manifest, source manifest, donor/model crosswalk, eligibility registry, and split manifests.
+- A novelty and claim ledger with the complete decision history.
+- Data adapters, baseline models, a fixed evaluator, policy modules, a faithful replay engine, a local runner, and a budget wrapper.
+- An append-only experiment ledger and immutable discovery artifacts.
+- Frozen final predictions, scientific models, policies, and checksums.
+- An evidence atlas in a machine-readable table.
+- Figures, a manuscript draft, a limitations statement, and an adversarial-review report.
+- Environment and dependency locks, licenses and attribution, and a reproducibility report.
+- Meaningful tests for identity leakage, score direction, grouping, estimator behavior, cost accounting, resume idempotence, unsupported replay actions, and final-outcome access.
+
+Provide simple documented commands equivalent to bootstrap, audit-data, reproduce-baselines, run-pilot, run-cycle, evaluate-policy, lock-science, evaluate-external, reproduce, status, and resume.
+
+Do not overbuild a general agent platform before the first valid scientific vertical slice works. Reuse maintained components where that reduces risk, but inspect their resource demands and permissions.
+
+
+14 - Terminal outcomes and reporting
+
+Use explicit terminal states.
+
+- COMPLETE_SUPPORTED_DISCOVERY
+- COMPLETE_SUPPORTED_REFUTATION_OR_BOUND
+- SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE
+- RSI_RESULT_WITHOUT_SCIENTIFIC_DISCOVERY
+- INCONCLUSIVE
+- BLOCKED
+- BUDGET_EXHAUSTED
+
+The first two require every relevant completion gate, including demonstrated policy improvement. The others are honest outcomes and must list which parts of the ambitious goal remain unmet.
+
+A completed computational campaign is not automatically a completed scientific goal. Do not relabel insufficient power as equivalence or a polished manuscript as a discovery.
+
+When blocked or budget-limited, checkpoint all valid work, identify the exact missing condition, and provide the smallest concrete next step. Do not lower scientific standards, spend beyond the cap, or retry indefinitely.
+
+During execution, report concise milestones with measured results, unresolved risks, and the next discriminating experiment. Avoid progress theater based on file counts or unexecuted plans.
+
+
+15 - Start now
+
+Inspect the workspace and resource limits. Verify the primary sources and accessible processed data. Build the donor and assay provenance audit. Formulate a narrowly identifiable first question and its strongest alternative explanations.
+
+Implement the smallest valid data-to-estimate-to-evaluator path. Reproduce the necessary baseline. Freeze the initial research contract and evaluation partitions.
+
+Then run real development experiments, build the first replay world, generate executable policy challengers, and perform a fresh comparison. Continue through the authorized staged campaign.
+
+Your first substantive report must show what was actually executed, what the observations establish, what remains unidentifiable, which policy was retained or promoted, the measured costs, and the exact next action. If a real evidence or authorization gate prevents the first cycle, report that precise blocker and all completed independent work. Do not claim that the loop started when only its scaffolding exists.
+

@@ -1,0 +1,13 @@
+You are the independent adversarial reviewer (gpt-6.1-sol, high) for the cancer-dependency-rsi project. Read-only. Do not modify files, download data, or access any dependency outcome values beyond artifacts already locked/reported in the repo.
+
+Review these artifacts in /Users/bmarti44/github/bufferright/research (PLAN.md, GOAL.md at root; rest under cancer-dependency-rsi/):
+1. PLAN.md v3 addendum + section 11, GOAL.md v3 status note (objective must be unchanged; check spec fidelity vs cancer_rsi_handoff.txt sections 11-12)
+2. reviews/novelty_audit_v4.md (does it correctly repair the S3 misrepresentation in v3? Are P3/P5 exclusions sound from the cited abstracts? Is residual novelty scoped honestly? Verify against cached data/papers/PMC13664187.xml)
+3. atlas/v3 (src/build_atlas_v3.py, atlas/v3/genes.csv, manifest.json; per-gene S1 author-test FDR joins, WNT/CDK6 dispositions, panel_level_context rename; verify FDR<0.05 gene sets against data/raw/broad_figshare/minipool_*_tests.csv)
+4. generations/pgen001 (SPEC.md hash discipline, screen_results_v1.json, token_accounting_audit.json, raw_counts_zip_listing.json; is SCREEN-POSITIVE_CONDITIONAL justified? Is the measured-token endpoint proposal honestly framed as unadjudicated? Was any outcome value accessed?)
+5. reviews/cl_rd_raw_accounting_discriminator_v2.json (reopening conditions vs spec section 11)
+6. tests: tests/test_atlas_v3.py, tests/test_lineage_cli.py updated gate test (is the new assertion still a real gate?)
+
+For EVERY issue found, give: severity (low/medium/high/critical), file:line evidence, and the exact fix required. Verify numeric claims independently where artifacts permit. End with exactly:
+V3_PACKAGE_REVIEW_SCORE: <0-100>; C1:<...>; C6:<...>; C7:<...>; PGEN001:<...>
+Score = fidelity/integrity of this package only; a score >=90 does not grant any scientific gate (C1-C13 adjudicated separately). Zero unresolved high/critical is required for >=90.

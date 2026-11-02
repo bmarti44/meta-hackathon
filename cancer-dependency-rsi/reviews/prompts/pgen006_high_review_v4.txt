@@ -1,0 +1,4 @@
+Micro re-review (gpt-6.1-sol, high), read-only. Enumerate ALL low/medium/high/critical issues, score 0-100. Prior: 58 -> 85 -> 91 (reviews/pgen006_high_review_v3.md; 2 medium + 1 low).
+Subject ONLY: src/pgen006_readiness_v7.py + generations/pgen006/readiness_v7.json. Presence-only; no delta analysis.
+Verify: (1) screen orientation vs provenance (reversed actual screens now fail; wrong-but-permitted held condition fails; axis relabel fails; held dimension equality with declared held_condition); (2) structural verdict requires complete frozen inventory (750-row removal now REPAIR_METADATA not FAIL_SUBSTRATE); (3) whitespace PatientID fails completeness. Confirm METADATA_SCREEN_PASS + unchanged counts (2750 actions; 1000/1000/500/250). Probe patches for regressions (e.g. provenance blank Growth Format row handling - 1 blank exists in snapshot: correctly treated?).
+End exactly: PGEN006_V7_SCORE: <0-100>

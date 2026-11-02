@@ -1,0 +1,239 @@
+{
+ "timestamp": "2026-10-29T22:55:23.033747+00:00",
+ "pathways": {
+  "heme": {
+   "n_genes": 8,
+   "means": {
+    "FBS": -0.141,
+    "TSM": -0.204,
+    "org_def": -0.463
+   },
+   "org_minus_FBS": [
+    -0.322,
+    -0.364,
+    -0.277
+   ]
+  },
+  "oxphos_c1": {
+   "n_genes": 7,
+   "means": {
+    "FBS": -0.215,
+    "TSM": -0.21,
+    "org_def": -0.405
+   },
+   "org_minus_FBS": [
+    -0.189,
+    -0.227,
+    -0.149
+   ]
+  },
+  "fa_synth": {
+   "n_genes": 8,
+   "means": {
+    "FBS": -0.117,
+    "TSM": -0.205,
+    "org_def": -0.271
+   },
+   "org_minus_FBS": [
+    -0.154,
+    -0.188,
+    -0.12
+   ]
+  },
+  "folate": {
+   "n_genes": 6,
+   "means": {
+    "FBS": -0.251,
+    "TSM": -0.207,
+    "org_def": -0.396
+   },
+   "org_minus_FBS": [
+    -0.145,
+    -0.207,
+    -0.086
+   ]
+  },
+  "oxphos_c4": {
+   "n_genes": 6,
+   "means": {
+    "FBS": -0.242,
+    "TSM": -0.247,
+    "org_def": -0.375
+   },
+   "org_minus_FBS": [
+    -0.133,
+    -0.17,
+    -0.101
+   ]
+  },
+  "pentose_phosphate": {
+   "n_genes": 6,
+   "means": {
+    "FBS": -0.244,
+    "TSM": -0.259,
+    "org_def": -0.32
+   },
+   "org_minus_FBS": [
+    -0.076,
+    -0.109,
+    -0.039
+   ]
+  },
+  "serine_onecarbon": {
+   "n_genes": 10,
+   "means": {
+    "FBS": 0.042,
+    "TSM": 0.044,
+    "org_def": -0.011
+   },
+   "org_minus_FBS": [
+    -0.053,
+    -0.067,
+    -0.035
+   ]
+  },
+  "glycolysis": {
+   "n_genes": 11,
+   "means": {
+    "FBS": -0.463,
+    "TSM": -0.411,
+    "org_def": -0.512
+   },
+   "org_minus_FBS": [
+    -0.049,
+    -0.081,
+    -0.016
+   ]
+  },
+  "purine_synth": {
+   "n_genes": 11,
+   "means": {
+    "FBS": -0.331,
+    "TSM": -0.266,
+    "org_def": -0.362
+   },
+   "org_minus_FBS": [
+    -0.031,
+    -0.08,
+    0.019
+   ]
+  },
+  "pyrimidine_synth": {
+   "n_genes": 9,
+   "means": {
+    "FBS": -1.011,
+    "TSM": -1.025,
+    "org_def": -1.041
+   },
+   "org_minus_FBS": [
+    -0.03,
+    -0.073,
+    0.018
+   ]
+  },
+  "urea_arg": {
+   "n_genes": 5,
+   "means": {
+    "FBS": 0.139,
+    "TSM": 0.125,
+    "org_def": 0.109
+   },
+   "org_minus_FBS": [
+    -0.03,
+    -0.05,
+    -0.009
+   ]
+  },
+  "fa_oxidation": {
+   "n_genes": 7,
+   "means": {
+    "FBS": 0.051,
+    "TSM": 0.058,
+    "org_def": 0.048
+   },
+   "org_minus_FBS": [
+    -0.003,
+    -0.021,
+    0.014
+   ]
+  },
+  "aa_transport": {
+   "n_genes": 5,
+   "means": {
+    "FBS": -0.012,
+    "TSM": -0.017,
+    "org_def": -0.013
+   },
+   "org_minus_FBS": [
+    -0.001,
+    -0.038,
+    0.035
+   ]
+  },
+  "nad_salvage": {
+   "n_genes": 7,
+   "means": {
+    "FBS": -0.016,
+    "TSM": -0.018,
+    "org_def": 0.018
+   },
+   "org_minus_FBS": [
+    0.035,
+    0.013,
+    0.057
+   ]
+  },
+  "cholesterol_uptake": {
+   "n_genes": 5,
+   "means": {
+    "FBS": -0.005,
+    "TSM": -0.006,
+    "org_def": 0.033
+   },
+   "org_minus_FBS": [
+    0.037,
+    0.017,
+    0.057
+   ]
+  },
+  "glutamine": {
+   "n_genes": 10,
+   "means": {
+    "FBS": -0.025,
+    "TSM": 0.004,
+    "org_def": 0.029
+   },
+   "org_minus_FBS": [
+    0.054,
+    0.04,
+    0.068
+   ]
+  },
+  "redox_gsh": {
+   "n_genes": 8,
+   "means": {
+    "FBS": -0.037,
+    "TSM": 0.055,
+    "org_def": 0.124
+   },
+   "org_minus_FBS": [
+    0.161,
+    0.134,
+    0.191
+   ]
+  },
+  "iron": {
+   "n_genes": 7,
+   "means": {
+    "FBS": -0.118,
+    "TSM": 0.019,
+    "org_def": 0.083
+   },
+   "org_minus_FBS": [
+    0.202,
+    0.179,
+    0.221
+   ]
+  }
+ }
+}

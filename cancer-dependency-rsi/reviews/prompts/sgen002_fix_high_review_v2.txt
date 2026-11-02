@@ -1,0 +1,11 @@
+Independent adversarial re-review (gpt-6.1-sol, high), read-only. Previous sgen002 review: 86/100, 1 HIGH (reviews/sgen002_high_review_v1.md). Verify each numbered fix:
+1 HIGH manuscript headline: title changed; abstract/status use archived-144-group wording with patient-weighted unverified; reviews/c10_robustness_table_v1.md grouping qualification header.
+2 Runner scope: ledger scope_deviation record (search ledger/experiments.jsonl) + runner now describes v3->v4; figure isolated + no-overwrite report v2 (src/sgen002_reproduce.py, generations/sgen002/reproduction_report_v2.json).
+3 OLS tolerance: generations/sgen002/ols_tolerance_disposition.json (417/3000 over global tol; 1e-6 component exception; verify counts if feasible).
+4 Novelty wording: reviews/novelty_audit_v7.md softened to member-name-level + implementation outstanding.
+5 Identity generator: src/sgen001_identity.py corrected string; dossier line corrected; identity_erratum_v1.json supersession.
+6 Figure caption wrapped (src/make_figure1.py, regenerated SVG hash in reproduction_report_v2.json).
+7 Overwrite: isolated figure generation + assert-not-exists report destination.
+8 README/status current-state refresh.
+Render C1-C13 snapshot again. Every remaining issue severity+file:line+exact fix. End exactly:
+SGEN002_FIX_REVIEW_SCORE: <0-100>

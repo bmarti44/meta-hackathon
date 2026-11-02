@@ -1,0 +1,8 @@
+{
+ "url": "https://cog.sanger.ac.uk/cmp/download/CRISPR_KO_supplemental_information_20250624.csv",
+ "status": 200,
+ "bytes": 1181795,
+ "sha256": "eef4db19063a93361bbfe550618e15051e091f7d7e21989e00f66fa2b118c5ae",
+ "wall_s": 10.815,
+ "saved": "data/CRISPR_KO_supplemental_information_20250624.csv"
+}

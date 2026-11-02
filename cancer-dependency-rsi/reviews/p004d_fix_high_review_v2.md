@@ -1,0 +1,17 @@
+Fixes are partial. Witness B’s PASS remains unsupported.
+
+1. **HIGH — Monitoring CPU remains omitted.** [src/tree_cpu.py:37](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/tree_cpu.py:37) launches external `ps` processes outside the measured group. `RUSAGE_SELF` includes controller threads, but excludes those subprocesses. Consequently, [screen_verdict_v1.json:11](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/pgen004d/screen_verdict_v1.json:11) overstates sampler coverage. Documented escaping/sub-poll descendants also remain incompatible with the SPEC’s no-omission requirement. **Fix:** account for sampler subprocess CPU and complete job scope without double-counting; downgrade Witness B pending validation.
+
+2. **HIGH — Leader exit leaves descendants running.** [src/tree_cpu.py:88](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/tree_cpu.py:88) stops sampling when the leader exits; cleanup then skips `killpg` because the leader has finished. `proc.wait()` reaps only that leader. With sampling mocked, a forking job returned success after **0.025 seconds**, with `timed_out=False`, while its descendant remained alive. **Fix:** track group completion independently of leader exit, enforce the deadline through descendant completion, and supervise termination/reaping before final accounting.
+
+3. **MEDIUM — Not all sampling failures raise `MeteringError`.** [src/tree_cpu.py:37](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/tree_cpu.py:37) propagates launch errors and `TimeoutExpired`; line 47 propagates `ValueError` for malformed PID/PGID fields. Mocked checks confirmed all three exceptions escape the declared contract. Nonzero status and malformed time fields correctly raise `MeteringError`. **Fix:** normalize sampling exceptions with chained causes and test each path.
+
+4. **MEDIUM — Accuracy assertions still exceed the stated tolerance.** [tests/test_tree_cpu.py:16](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_tree_cpu.py:16) permits ±29.2% for the 1.2-second burn. [tests/test_tree_cpu.py:57](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_tree_cpu.py:57) permits −30%/+60% against the workers’ combined one-second target. No tests cover sampler failures, early leader exit, or output saturation. **Fix:** enforce the stated ±25% against an appropriate CPU reference and add these regression cases.
+
+5. **LOW — Droplet identity correction is empty.** [corrections_v2.json:2](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/sgen006/corrections_v2.json:2) contains only null identity fields. The reconstructed manifest therefore points to an unusable correction. **Fix:** populate preprint ID `PPR1345332`, source `PPR`, and DOI `10.64898/2026.10.13.744538`; leave genuinely unavailable identifiers null. The DOI already appears in retained resource metadata.
+
+Confirmed improvements: controller CPU is added; timeout calls `killpg`; streams drain concurrently; contamination and CPU-consuming failure cases exist. Mocked control-flow checks confirmed prompt timeout cleanup and successful large-output draining. The reconstructed manifest honestly labels compliance **UNVERIFIED** and correctly distinguishes the Lo review misfire from PMID `40813572`.
+
+All five integration tests encountered sandbox-denied `ps`, so CPU accuracy could not be independently validated. Review was read-only.
+
+P004D_FIX_SCORE: 80

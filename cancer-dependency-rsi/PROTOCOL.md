@@ -1,0 +1,17 @@
+# PROTOCOL — CDRSI-2026-001 (Lock1 draft, NOT frozen)
+
+Authority: `../cancer_rsi_handoff.txt` > `GOAL.md` > `PLAN.md` > `contract.json` > this summary. None of the code tests or diagnostic passes grants G2 or final-outcome access.
+
+The fixed scientific question concerns the partial-rank association, across 207 preselected genes, between observed format-bundle score lability in six measured Broad models and donor-averaged normalized displacement from the fixed Broad consensus ordering in an independently metadata-filtered Sanger cohort (148 models nested in 144 donors). Broad donor identities remain unresolved; the target conditions on the measured Broad models and panel. Cross-assay absolute scores are never subtracted.
+
+The independent external configuration remains `confirmatory207 / mean_abs_delta / base_strength`, with average ranks for ties, donor-equal weighting after within-donor model averaging, 5,000 donor-bootstrap draws, seed20261028, and 2.5/97.5 percentiles. More than250 failed replicates or a nonfinite/nonpositive-width interval yields INCONCLUSIVE. SIGNAL/BOUND/NEGATIVE decisions retain the predeclared ±0.20 thresholds; no causal or clinical inference is authorized. Within-cohort normalization uncertainty is not propagated.
+
+The current development evaluator is `src/evaluator_v4.py`: **q=null and admissible_for_policy=false for every configuration**. It returns descriptive points and model-composition sensitivity only. Sol-xhigh determined that the fixed current assets do not support a meaningful scientific policy optimization pilot. Legacy q, permutation coverage and sharpness rewards are retired. A synthetic pass does not solve this problem.
+
+The prescribed algorithmic diagnostic tested two known-target, dependent-gene, independent-donor fixtures with100 datasets each, 144 donors represented by148 nested model records, and5,000 bootstrap replicates per dataset. Original v1 failed the constant-input guard and is preserved. Corrected v2 used identical frozen arrays/seeds/thresholds: coverage95/100 for rho0,97/100 for rho0.6; all intervals valid; nesting invariance and constant/nonfinite guards passed. This screens gross code failures under those fixtures and **does not certify biological coverage**.
+
+Lock1 remains unapproved; the original G2 r2 score was74/100. No policy generation, replay/promotion cycle, reserved-panel comparison or external evaluation has run. A genuine development task and useful fixed quality endpoint must be proposed and reviewed before a pilot. C9 additionally retains unknown host-model costs and missing independent reserved biological panels; no all-in efficiency claim is possible from the present evidence.
+
+Layer-C dependency values remain quarantined until a properly committed Lock2. Every byte-checksum access is logged; no new dependency values were parsed during readiness work. Provisional atlas/reproduction artifacts are explicitly incomplete components.
+
+Resources: all fitting/simulation local, no GPU, at most2 CPU-heavy jobs, aggregate reserved research memory at most8GiB, scientific exploratory timeout600s. A process-group RSS watchdog stops at75% of reserved memory, sampled every50ms; it fails closed if observation fails and is not a hard allocation barrier. Model reasoning has a separately recorded1200s job allowance within existing Phase2 ceilings, after an initial600s consultation timeout. Campaign ceilings and $0 additional-metered-API cap are unchanged.

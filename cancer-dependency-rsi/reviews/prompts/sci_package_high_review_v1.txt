@@ -1,0 +1,19 @@
+Required independent Sol-high (gpt-6.1-sol, high) adversarial review of four new artifacts. Read-only; no downloads; no C re-decoding (C consumed; locked outputs readable). Authoritative: /Users/bmarti44/github/bufferright/research/GOAL.md, cancer_rsi_handoff.txt (sections 11-12: C1, C6, C7, C9, C10).
+
+Project: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+Artifacts:
+1. reviews/novelty_audit_v3.md — exact-claim novelty refresh + interpretive consequence (C1/C6). Evidence: reviews/novelty_refresh_v3b_pubmed.json (PubMed E-utilities), reviews/novelty_refresh_v3_search_FAILED_503.json (Europe PMC all 503), cached full texts data/papers/PMC13581591.xml (S1), PMC13581617.xml (S2), PMC13664187.xml (S3), prior reviews/novelty_audit_v1.md/v2.md, reviews/g1_question_v3.md.
+2. reviews/c10_robustness_table_v1.md — conclusion-by-analysis table (verify every number against lock_s/results/external_v1.json).
+3. atlas/v2/ (genes.csv, manifest.json, exclusions.csv, paired_observations.csv) built by src/build_atlas_v2.py — C7 progress (250 genes, 207 with external D_g coordinate).
+4. reviews/cl_rd_raw_accounting_discriminator_v1.json — offline accounting discriminator concluding C9 STRUCTURALLY_UNRESOLVED and stopping the raw-count policy route (per reviews/policy_route_xhigh_v2.md stop rule).
+
+Questions:
+A. Does the novelty dossier adequately establish (within stated limits) that the substantive relationship is previously unreported, and is the interpretive-consequence statement justified by the predeclared uncertainty without overreach? Are search limits honestly disclosed (Europe PMC failure, title/abstract fields)? Is more searching required for C1/C6 acceptance (name concrete additional checks if so)?
+B. Is the C10 table numerically correct and are the surviving conclusions correctly scoped?
+C. What does atlas v2 still lack for C7 (all eligible genes, every exclusion, and per-entry distinction of dependency strength, environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, prior knowledge)? List concrete fixes.
+D. Is the accounting discriminator's conclusion correct (C9 structurally unresolved; stop route), and is the reopening condition correct?
+E. Give C1, C6, C7, C9, C10 status: MET / PARTIAL / UNMET with one-line reasons.
+
+Output (<=1000 words): issues by severity with file:line; then exactly one final line:
+SCI_PACKAGE_REVIEW_SCORE:<0-100>; C1:<MET|PARTIAL|UNMET>; C6:<MET|PARTIAL|UNMET>; C7:<MET|PARTIAL|UNMET>; C9:<MET|UNRESOLVED|UNMET>; C10:<MET|PARTIAL|UNMET>

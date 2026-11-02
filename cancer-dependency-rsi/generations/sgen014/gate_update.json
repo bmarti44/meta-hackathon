@@ -1,0 +1,60 @@
+{
+  "generated_utc": "2026-10-29T16:54:32.663747+00:00",
+  "basis": "determination v2 (xhigh) + sgen010-sgen014 records; no gate auto-promoted",
+  "gates": {
+    "C1": [
+      "MET",
+      "sgen003 adjudication (reviews/sgen003_fix_high_review_v2.md) after determination v2 had marked PARTIAL; novelty completion sgen014 (NOVELTY_COMPLETION.md; results v4)"
+    ],
+    "C2": [
+      "MET",
+      "sgen007 identity 148 models=142 patients (98)"
+    ],
+    "C3": [
+      "PARTIAL",
+      "sgen011/012/013 feasibility screens negative; no qualifying design"
+    ],
+    "C4": [
+      "PARTIAL",
+      "as C3; design identifiability unestablished on current metadata"
+    ],
+    "C5": [
+      "MET",
+      "Lock-S single locked execution"
+    ],
+    "C6": [
+      "PARTIAL",
+      "sgen014: S1 visual log (S1_PANEL_LOG.md) + 3,634-record novelty completion (0 plausible overlaps); patient-level inference still unquantified"
+    ],
+    "C7": [
+      "MET",
+      "replay world from recorded observations"
+    ],
+    "C8": [
+      "UNMET",
+      "no policy comparison has run (pgen005 task not instantiated)"
+    ],
+    "C9": [
+      "UNMET",
+      "amended adjudication: generations/sgen014/C9_AMENDED_ADJUDICATION.md; estimator ledger/host_cost_estimate_v7.json"
+    ],
+    "C10": [
+      "PARTIAL",
+      "archived sensitivities verified; patient-weighted decision unquantified"
+    ],
+    "C11": [
+      "PARTIAL",
+      "component reproduction strong (sgen002/005/008/009); donor interval irreproducible from retained arrays; no policy comparison"
+    ],
+    "C12": [
+      "PARTIAL",
+      "manuscript refresh 2026-10-29 (manuscript/manuscript_draft_v1.md campaign update; traceability PASS bad=[])"
+    ],
+    "C13": [
+      "UNMET",
+      "no end-to-end policy cycle executed"
+    ]
+  },
+  "terminal_slot": "3/3 PRESERVED (not spent)",
+  "next_evidentiary_opportunity": "independently measured paired-format L/B on >=367 matched independent components for one qualified endpoint"
+}

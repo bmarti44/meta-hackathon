@@ -1,0 +1,7 @@
+{"type":"object","required":["origin","parents","config","direction_id","priority","bottleneck","evidence_attempt_ids"],
+ "properties":{"origin":{"enum":["new","refinement","underexplored_extension","combination","repair"]},
+  "parents":{"type":"array","items":{"type":"object","required":["attempt_id","contribution"],"properties":{"attempt_id":{"type":"string"},"contribution":{"type":"string"}}}},
+  "config":{"type":"object","required":["scope","operator","adjust"],"properties":{"scope":{"type":"string"},"operator":{"type":"string"},"adjust":{"type":"string"}}},
+  "direction_id":{"type":"string"},"priority":{"type":"number"},"bottleneck":{"type":"string"},
+  "evidence_attempt_ids":{"type":"array","items":{"type":"string"}},
+  "repairs_node":{"type":"string"},"fix_class":{"enum":["bug_fix","support_fix","legalization","numeric_fix"]}}}

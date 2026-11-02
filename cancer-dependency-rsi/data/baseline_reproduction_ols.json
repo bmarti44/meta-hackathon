@@ -1,0 +1,24 @@
+{
+  "status": "C5 baseline reproduction: authors' minipool OLS (model fixed effects) reproduced from released Chronos matrix",
+  "author_code": "broadinstitute/DepMap-NextGen-Public @5c6f1e0ab23b src/generate.py:gene_effect_linear_regression",
+  "terms": {
+    "C(Growth_Format)[T.Plastic]": {
+      "pearson": 1.0,
+      "max_abs_diff": 1.6610526565319361e-09,
+      "median_abs_diff": 2.8421016234903007e-10,
+      "n_genes": 1000
+    },
+    "C(Serum_status)[T.Serum-free]": {
+      "pearson": 0.9999999999999998,
+      "max_abs_diff": 2.1242104950025542e-09,
+      "median_abs_diff": 2.5473677334186817e-10,
+      "n_genes": 1000
+    },
+    "C(Growth_Format)[T.Plastic]:C(Serum_status)[T.Serum-free]": {
+      "pearson": 1.0,
+      "max_abs_diff": 1.7315789490751643e-08,
+      "median_abs_diff": 2.947368620866142e-10,
+      "n_genes": 1000
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "RECONSTRUCTED post hoc from executed scripts (not contemporaneous receipts) - compliance therefore UNVERIFIED, not receipted (review issue 5)",
+  "fetches": [
+    "Europe PMC search EXT_ID:PMC11906589 (empty, wrong syntax) x1",
+    "Europe PMC search EXT_ID:PMC12354852 (empty) x1",
+    "Europe PMC search EXT_ID:PMC7368463 (empty) x1",
+    "Europe PMC concept search (5021 hits) x1",
+    "Europe PMC title/author searches x3 (Khalili, Lo-review-misfire, droplet)",
+    "NCBI efetch PMC full-text XML prefixes x2 (Lo 12354852, Khalili 11906589) - article XML, truncated in retained copy; abstracts used were from PubMed efetch below",
+    "Europe PMC droplet title search x1",
+    "NCBI efetch PubMed abstracts x2 (40813572, 40082551)",
+    "Europe PMC droplet DOI lookup x1 (fix round)"
+  ],
+  "total_approx": 13,
+  "ceiling": 40,
+  "transferred_bytes": "not receipted; abstracts/metadata only, PMC XML fetches were the largest (each < ~2 MB typical) - exact bytes unverified",
+  "corrections": {
+    "Lo2025_key": "resource_metadata_v1.json key 'Lo2025' from the first title search is an UNRELATED review (misfire); canonical Lo evidence = Lo2025_abstract_full (PMID 40813572).",
+    "droplet_provenance": "identify via generations/sgen006/corrections_v2.json droplet_identity (preprint record), not 'Cell Rep/Cell' as previously written in screen_verdict_v1.json"
+  }
+}

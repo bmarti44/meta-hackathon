@@ -1,0 +1,30 @@
+{
+ "components": {
+  "atlas_v4_isolated_rebuild": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "primary_point": {
+   "recomputed": -0.1458320500587953,
+   "locked": -0.14583205005879532,
+   "abs_diff": 2.7755575615628914e-17,
+   "pass": true
+  },
+  "figure1": {
+   "retained_sha256": "22be91c0b2e60acc0114bfc90d598d04167818ceb9d5ca06a2e3b535a88c94e0",
+   "isolated_sha256": "22be91c0b2e60acc0114bfc90d598d04167818ceb9d5ca06a2e3b535a88c94e0",
+   "pass": true
+  },
+  "pending": {
+   "donor_interval": "PENDING: no retained donor-level arrays; requires outcome re-access (not performed)",
+   "policy_comparison": "ABSENT: no policy cycle has run (C8/C9 unmet)",
+   "clean_room_install": "NOT RUN: isolated input/code copy in current locked env, not a fresh environment install"
+  }
+ },
+ "wall_s": 0.42,
+ "all_attainable_pass": true
+}

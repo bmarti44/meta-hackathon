@@ -1,0 +1,29 @@
+DepMap ID,Culture medium,Growth Format,disposition
+ACH-000048,OPAC,Dome,in released matrix
+ACH-000048,OPAC,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-000048,RPMI/FBS,Dome,in released matrix
+ACH-000048,RPMI/FBS,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-000108,OPAC,Dome,in released matrix
+ACH-000108,OPAC,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-000108,RPMI/FBS,Dome,in released matrix
+ACH-000108,RPMI/FBS,Plastic,in released matrix
+ACH-000178,OPAC,Dome,in released matrix
+ACH-000178,OPAC,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-000178,RPMI/FBS,Dome,in released matrix
+ACH-000178,RPMI/FBS,Plastic,in released matrix
+ACH-001418,OPAC,Dome,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-001418,OPAC,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-001418,RPMI/FBS,Dome,in released matrix
+ACH-001418,RPMI/FBS,Plastic,in released matrix
+ACH-002958,OPAC,Dome,in released matrix
+ACH-002958,OPAC,Plastic,in released matrix
+ACH-002958,RPMI/FBS,Dome,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-002958,RPMI/FBS,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-003040,OPAC,Dome,in released matrix
+ACH-003040,OPAC,Plastic,in released matrix
+ACH-003040,RPMI/FBS,Dome,in released matrix
+ACH-003040,RPMI/FBS,Plastic,in released matrix
+ACH-003052,OPAC,Dome,in released matrix
+ACH-003052,OPAC,Plastic,in released matrix
+ACH-003052,RPMI/FBS,Dome,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)
+ACH-003052,RPMI/FBS,Plastic,ABSENT from released matrix; reason unavailable in released metadata (unattempted vs growth failure vs QC exclusion indistinguishable)

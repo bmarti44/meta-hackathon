@@ -1,0 +1,45 @@
+{
+ "stages": {
+  "v1": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v2": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v3": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v4": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  }
+ },
+ "frozen_substitutions": [],
+ "components": {
+  "c10_primary_values_in_table": false,
+  "eligibility_retained_recompute": true,
+  "synthetic_use_audit": "generations/sgen005/synthetic_use_audit.json"
+ },
+ "all_stages_pass": false,
+ "wall_s": 1.73,
+ "note": "Isolated input/code copy in current locked env; fresh-environment attempt recorded separately."
+}

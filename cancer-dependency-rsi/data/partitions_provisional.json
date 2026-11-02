@@ -1,0 +1,14 @@
+{
+  "version": "provisional-v2-2026-10-28",
+  "basis": "metadata only (no outcome values used to assign partitions)",
+  "layer_A_development": [
+    "Broad figshare 29472362 minipool (18 screens x 1000 genes, Chronos) \u2014 environmental panel",
+    "Broad figshare model/screen metadata; genome-wide NextGen+traditional development data via study-specific releases (to import)"
+  ],
+  "layer_B_policy_reserved": "NOT carved from inspected outcomes. B = task definitions for FRESH Phase-5 rollouts (outcomes do not yet exist). Any reuse of inspected observations = 'reused-data engineering evaluation', labeled as such.",
+  "layer_C_final_external_candidates": [
+    "Sanger continuous corrected LFCs (Cell Model Passports / DepMap Miner authoritative; figshare EssMatrix RData NOT downloaded) \u2014 quarantined, schema/docs only until Lock 2; BAGEL binary matrix quarantined (different endpoint)"
+  ],
+  "note": "Provisional; finalized at Lock 1 using metadata only. Sanger RNA/genotype covariates are metadata-class for crosswalk purposes but their use in modeling awaits Lock 1 feature rules.",
+  "status": "SUPERSEDED by data/split_manifest.json (Lock-1 final, metadata-only). Retained for audit trail."
+}

@@ -1,0 +1,63 @@
+{
+ "timestamp": "2026-10-29T22:43:25.166255+00:00",
+ "L1000_models": 6,
+ "L1000_splithalf_rho": 0.2341,
+ "panels": [
+  82,
+  686
+ ],
+ "disp_splithalf_genomewide": 0.7414,
+ "R1_L1000_vs_dispabs": -0.2047,
+ "R1_n": 979,
+ "R1_L1000_partial_base": -0.0896,
+ "R1_signed1000_vs_dispsigned": 0.046,
+ "cn_models": [
+  82,
+  650
+ ],
+ "R2_drivers": {
+  "baseline_2D": {
+   "vs_disp_signed": -0.1033,
+   "vs_disp_abs": 0.4194
+  },
+  "abs_baseline": {
+   "vs_disp_signed": 0.0271,
+   "vs_disp_abs": -0.2945
+  },
+  "chronos_sd_2D": {
+   "vs_disp_signed": 0.0021,
+   "vs_disp_abs": -0.2692
+  },
+  "frac_dep_2D": {
+   "vs_disp_signed": 0.0372,
+   "vs_disp_abs": -0.3247
+  },
+  "expr_level_org": {
+   "vs_disp_signed": 0.0116,
+   "vs_disp_abs": -0.1735
+  },
+  "expr_shift": {
+   "vs_disp_signed": -0.0141,
+   "vs_disp_abs": 0.0534
+  },
+  "abs_expr_shift": {
+   "vs_disp_signed": 0.0234,
+   "vs_disp_abs": -0.0361
+  },
+  "cn_shift": {
+   "vs_disp_signed": -0.0347,
+   "vs_disp_abs": 0.0061
+  }
+ },
+ "R2_multivar_rank_R2": 0.0211,
+ "R2_betas": {
+  "baseline_2D": -0.24,
+  "abs_baseline": 0.0,
+  "chronos_sd_2D": -0.05,
+  "frac_dep_2D": -0.12,
+  "expr_level_org": -0.02,
+  "expr_shift": 0.01,
+  "abs_expr_shift": 0.03,
+  "cn_shift": -0.02
+ }
+}

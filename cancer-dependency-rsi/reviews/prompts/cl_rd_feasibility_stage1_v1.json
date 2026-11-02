@@ -1,0 +1,17 @@
+{
+  "spec_id": "CL-RD-FEASIBILITY-01-stage1-processing",
+  "frozen_before_execution": true,
+  "written_utc": "2026-10-28T21:38:30Z",
+  "source": "reviews/policy_route_xhigh_v1.md (Sol-xhigh: ROUTE NOT_ADMISSIBLE; NEXT bounded cell-line identity and preprocessing feasibility audit). Stage 1 = the cheapest necessary witness: preprocessing dependency of the cached Pacini cell-line matrix. Stage 2 (identity crosswalk, <=40 requests) runs only if stage 1 does not fail.",
+  "status_invariants": {"G2": "FAIL", "q": null, "admissible_for_policy": false, "cell_line_RData_values": "never opened", "C": "consumed by scientific track; untouched here"},
+  "cached_evidence_used_offline": "data/raw/sanger_supp/supplementary_table_10_revision.xlsx rows 9-10: 07_EssMatrix_bDepletionsB2.Rdata and 07_EssMatrix_qnorm_corrected_logFCs.RData = 'Quantile-normalized log fold-change (LFC) values for all screened cell lines', source Pacini et al., Cancer Cell 2024; used_in_code NaN; Extended Data Fig. 9.",
+  "envelope": {"requests_max": 4, "redirects_counted_not_followed_automatically": true, "per_request_timeout_s": 30, "bytes_max": 8388608, "wall_s": 120, "cpu_heavy": false, "phase": "phase2_lock1"},
+  "requests": ["R1 GET https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/ (official Sanger dataset documentation; handoff-listed source S2)", "R2-R4 reserved for counted redirects of R1 within *.sanger.ac.uk"],
+  "extraction": "Strip HTML to text; record sha256; extract sentences mentioning ComBat, batch, quantile, principal component, integrat*, Broad, Achilles, correction. No dependency data requested.",
+  "decision_rule": {
+    "FAIL_processing_independence": "Official documentation states that the integrated/quantile-normalized cell-line LFCs involve cross-line fitted corrections (e.g., ComBat batch correction across studies/lines and/or quantile normalization to a cross-line reference, PC removal). Then B outcomes influence A-shared preprocessing; ComBat gene-wise batch shifts are not within-line rank invariant; no pre-correction inputs are cached -> route INELIGIBLE for donor/model-disjoint Layer B; stop (stage 2 not run).",
+    "UNRESOLVED": "Documentation unavailable/HTML challenge/silent on the processing of this matrix -> record; stage 2 not run because Sol-xhigh also judged savings feasibility low; return to no-progress assessment.",
+    "PASS_to_stage2": "Documentation establishes per-line-only, rank-preserving processing for this matrix."
+  },
+  "outputs": "reviews/cl_rd_feasibility_stage1_v1.json; raw page under data/route_probe_cellline_v1/"
+}

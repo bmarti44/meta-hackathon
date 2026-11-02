@@ -1,0 +1,10 @@
+{
+ "command": ".venv/bin/python src/sgen008_checks.py --report generations/sgen008/fresh_evidence_report2.json (cwd=/tmp/cdrsi_fresh, uv sync --locked env)",
+ "exit_status": 0,
+ "implemented_pass": true,
+ "uv_lock_sha256": "705394cdc990b401e414374f47485bde605745f5957fd72f63454f25ed44ae0e",
+ "interpreter": "Python 3.14.8 (fresh .venv)",
+ "cache_use": "uv local wheel cache (same host); data copied from retained project, not re-downloaded",
+ "first_attempt": "FAILED on stale fresh copy (missing newer test/envelope files) - retained as fresh_evidence_report.json in fresh copy; synced and rerun",
+ "scope": "same host/OS fresh locked environment, not a clean OS install"
+}

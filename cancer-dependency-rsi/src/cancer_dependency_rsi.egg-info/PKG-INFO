@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: cancer-dependency-rsi
+Version: 0.1.0
+Summary: Cancer dependency environmental-transfer research with a Dream-RSI-inspired policy loop
+Requires-Python: >=3.12
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+Requires-Dist: scikit-learn
+Requires-Dist: pyarrow
+Requires-Dist: pydantic
+Requires-Dist: httpx
+Requires-Dist: pytest

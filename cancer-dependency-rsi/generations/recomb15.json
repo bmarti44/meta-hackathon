@@ -1,0 +1,43 @@
+{
+ "timestamp": "2026-10-29T23:11:20.097139+00:00",
+ "wnt_by_class": {
+  "FBS": [
+   0.099,
+   818
+  ],
+  "TSM": [
+   0.092,
+   29
+  ],
+  "org_def": [
+   -0.22,
+   77
+  ]
+ },
+ "splice_raw_orgdef": [
+  0.7475,
+  0.6593,
+  0.8251
+ ],
+ "splice_prolif_adj_orgdef": [
+  0.7391,
+  0.659,
+  0.8431
+ ],
+ "ribo_raw_orgdef": [
+  0.4538,
+  0.392,
+  0.5205
+ ],
+ "ribo_prolif_adj_orgdef": [
+  0.4667,
+  0.4067,
+  0.547
+ ],
+ "prolif_by_class": {
+  "FBS": 6.373,
+  "TSM": 5.971,
+  "org_def": 5.245
+ },
+ "n_screens_expr": 908
+}

@@ -1,0 +1,19 @@
+{
+  "gpu": false,
+  "max_cpu_heavy_jobs": 2,
+  "research_memory_ceiling_bytes": 8589934592,
+  "exploratory_timeout_s": 600,
+  "download_ceiling_bytes": 21474836480,
+  "pilot_nodes_target": 24,
+  "pilot_challengers_target": 3,
+  "pilot_wall_ceiling_s": 28800,
+  "additional_api_spend_cap_usd": 0,
+  "auto_increase_ceilings": false,
+  "note": "Smaller of spec caps computed 2026-10-28: min(8GiB, 60% of 128GB)=8GiB; min(20GiB, 25% of 532GiB free)=20GiB.",
+  "memory_monitor": {
+    "backend": "process_group_RSS_watchdog",
+    "interval_s": 0.05,
+    "kill_fraction": 0.75,
+    "limitation": "sampled enforcement, not a hard OS allocation barrier; trusted local code only; 25% reserve headroom; observer failure kills job"
+  }
+}

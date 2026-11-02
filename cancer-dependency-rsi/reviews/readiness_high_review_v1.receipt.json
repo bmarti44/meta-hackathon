@@ -1,0 +1,24 @@
+{
+  "prompt_sha256": "a93e2a52c079707b53beb1f3ea6558fac9cd24d8b9a7976ba65b1f8642c45504",
+  "returncode": 0,
+  "timed_out": false,
+  "launch_error": null,
+  "wall_s": 300.23844070895575,
+  "cpu_s": 8.58,
+  "peak_rss_bytes": 398032896,
+  "tokens": [
+    {
+      "input_tokens": 1119558,
+      "cached_input_tokens": 1040256,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 12314,
+      "reasoning_output_tokens": 4716
+    }
+  ],
+  "actual_cost_usd": 0.0,
+  "host_model_cost_usd": "unknown",
+  "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/readiness_high_review_v1.md",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "reservation_id": "f9adb21b993d485b98fd5ec1108d5be4"
+}

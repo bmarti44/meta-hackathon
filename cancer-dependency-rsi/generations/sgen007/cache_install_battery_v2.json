@@ -1,0 +1,11 @@
+{
+ "installed_files_hash_verified": 83,
+ "register_rows_existing": 83,
+ "exact_installation": true,
+ "panel_test_genes": 250,
+ "sanger_covariate_rows": 256,
+ "cohort_models": 148,
+ "cohort_archived_groups": 144,
+ "pass": true,
+ "note": "Installation = byte copies of register-listed retained inputs only (83 files incl. MOESM3 zip as opaque bytes, hash-verified, not decoded); counts verified from installed files"
+}

@@ -1,0 +1,13 @@
+{
+ "timestamp": "2026-10-29T23:08:08.066427+00:00",
+ "noise_pairs": 4,
+ "genes": 978,
+ "rho_partial_base_only": -0.0671,
+ "rho_partial_base_plus_noise": -0.0527,
+ "rho_L_vs_noise": 0.2532,
+ "rho_noise_vs_D_partial_base": -0.1187,
+ "boot95_base_plus_noise": [
+  -0.0754,
+  -0.031
+ ]
+}

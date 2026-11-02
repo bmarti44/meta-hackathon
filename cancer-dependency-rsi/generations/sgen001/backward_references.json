@@ -1,0 +1,965 @@
+{
+ "S1": {
+  "pmid": "42557315",
+  "status": 200,
+  "hitCount": 72,
+  "n": 72,
+  "refs": [
+   {
+    "id": "27999612",
+    "title": "PureCN: copy number calling and SNV classification using targeted short read sequencing.",
+    "year": 2016
+   },
+   {
+    "id": "25201530",
+    "title": "Organoid cultures derived from patients with advanced prostate cancer.",
+    "year": 2014
+   },
+   {
+    "id": "28783718",
+    "title": "Integrative clinical genomics of metastatic cancer.",
+    "year": 2017
+   },
+   {
+    "id": "18184972",
+    "title": "Genomic changes and gene expression profiles reveal that established glioma cell lines are poorly representative of primary human gliomas.",
+    "year": 2008
+   },
+   {
+    "id": "38215750",
+    "title": "A comprehensive clinically informed map of dependencies in cancer cells and framework for target prioritization.",
+    "year": 2024
+   },
+   {
+    "id": "36376301",
+    "title": "Multiplexed and reproducible high content screening of live and fixed cells using Dye Drop.",
+    "year": 2022
+   },
+   {
+    "id": "31171691",
+    "title": "Cancer modeling meets human organoid technology.",
+    "year": 2019
+   },
+   {
+    "id": "29625050",
+    "title": "Oncogenic Signaling Pathways in The Cancer Genome Atlas.",
+    "year": 2018
+   },
+   {
+    "id": "30995489",
+    "title": "Genome-Wide CRISPR-Cas9 Screens Expose Genetic Vulnerabilities and Mechanisms of Temozolomide Sensitivity in Glioblastoma Stem Cells.",
+    "year": 2019
+   },
+   {
+    "id": "37612728",
+    "title": "Partial gene suppression improves identification of cancer vulnerabilities when CRISPR-Cas9 knockout is pan-lethal.",
+    "year": 2023
+   },
+   {
+    "id": "39468210",
+    "title": "The present and future of the Cancer Dependency Map.",
+    "year": 2024
+   },
+   {
+    "id": "34930405",
+    "title": "Chronos: a cell population dynamics model of CRISPR experiments that improves inference of gene fitness effects.",
+    "year": 2021
+   },
+   {
+    "id": "33762019",
+    "title": "Perspective of mesenchymal transformation in glioblastoma.",
+    "year": 2021
+   },
+   {
+    "id": "29625053",
+    "title": "Comprehensive Characterization of Cancer Driver Genes and Mutations.",
+    "year": 2018
+   },
+   {
+    "id": "16697959",
+    "title": "Tumor stem cells derived from glioblastomas cultured in bFGF and EGF more closely mirror the phenotype and genotype of primary tumors than do serum-cultured cell lines.",
+    "year": 2006
+   },
+   {
+    "id": "27135972",
+    "title": "Growth rate inhibition metrics correct for confounders in measuring sensitivity to cancer drugs.",
+    "year": 2016
+   },
+   {
+    "id": "19502425",
+    "title": "Integrin beta1-focal adhesion kinase signaling directs the proliferation of metastatic cancer cells disseminated in the lungs.",
+    "year": 2009
+   },
+   {
+    "id": "20129251",
+    "title": "Integrated genomic analysis identifies clinically relevant subtypes of glioblastoma characterized by abnormalities in PDGFRA, IDH1, EGFR, and NF1.",
+    "year": 2010
+   },
+   {
+    "id": "20084020",
+    "title": "Expression of PROX1 Is a common feature of high-grade malignant astrocytic gliomas.",
+    "year": 2010
+   },
+   {
+    "id": "33059726",
+    "title": "Multiplex enCas12a screens detect functional buffering among paralogs otherwise masked in monogenic Cas9 knockout screens.",
+    "year": 2020
+   },
+   {
+    "id": "32238925",
+    "title": "CRISPR screens in cancer spheroids identify 3D growth-specific vulnerabilities.",
+    "year": 2020
+   },
+   {
+    "id": "37286821",
+    "title": "Genome-wide pooled CRISPR screening in neurospheres.",
+    "year": 2023
+   },
+   {
+    "id": "28288283",
+    "title": "3D Models of the NCI60 Cell Lines for Screening Oncology Compounds.",
+    "year": 2017
+   },
+   {
+    "id": "33800183",
+    "title": "<i>TERT</i> Promoter Alterations in Glioblastoma: A Systematic Review.",
+    "year": 2021
+   },
+   {
+    "id": "26472760",
+    "title": "Gene essentiality and synthetic lethality in haploid human cells.",
+    "year": 2015
+   },
+   {
+    "id": "41168869",
+    "title": "Natural language processing of gene descriptions for overrepresentation analysis with GeneTEA.",
+    "year": 2025
+   },
+   {
+    "id": "29622466",
+    "title": "Comparative Molecular Analysis of Gastrointestinal Adenocarcinomas.",
+    "year": 2018
+   },
+   {
+    "id": "38718141",
+    "title": "CDKN2A/B Homozygous Deletion Sensitizes IDH-Mutant Glioma to CDK4/6 Inhibition.",
+    "year": 2024
+   },
+   {
+    "id": "42557315",
+    "title": "A dependency map enhanced with next-generation 3D cancer models.",
+    "year": 2026
+   },
+   {
+    "id": "26479923",
+    "title": "High-throughput screening using patient-derived tumor xenografts to predict clinical trial drug response.",
+    "year": 2015
+   },
+   {
+    "id": "35426374",
+    "title": "Targeting mutations in cancer.",
+    "year": 2022
+   },
+   {
+    "id": "30971826",
+    "title": "Prioritization of cancer therapeutic targets using CRISPR-Cas9 screens.",
+    "year": 2019
+   },
+   {
+    "id": "22895339",
+    "title": "Passenger deletions generate therapeutic vulnerabilities in cancer.",
+    "year": 2012
+   },
+   {
+    "id": "39834305",
+    "title": "Targeting Monounsaturated Fatty Acid Metabolism for Radiosensitization of KRAS Mutant 3D Lung Cancer Models.",
+    "year": 2025
+   },
+   {
+    "id": "35617398",
+    "title": "Chromatin profiles classify castration-resistant prostate cancers suggesting therapeutic targets.",
+    "year": 2022
+   },
+   {
+    "id": "33505028",
+    "title": "Aneuploidy renders cancer cells vulnerable to mitotic checkpoint inhibition.",
+    "year": 2021
+   },
+   {
+    "id": "42557316",
+    "title": "A compendium of next-generation patient-derived models for diverse cancers.",
+    "year": 2026
+   },
+   {
+    "id": "34857952",
+    "title": "Paralog knockout profiling identifies DUSP4 and DUSP6 as a digenic dependence in MAPK pathway-driven cancers.",
+    "year": 2021
+   },
+   {
+    "id": "29921838",
+    "title": "Patient derived organoids to model rare prostate cancer phenotypes.",
+    "year": 2018
+   },
+   {
+    "id": "26343385",
+    "title": "Virtual microdissection identifies distinct tumor- and stroma-specific subtypes of pancreatic ductal adenocarcinoma.",
+    "year": 2015
+   },
+   {
+    "id": "24726434",
+    "title": "Reconstructing and reprogramming the tumor-propagating potential of glioblastoma stem-like cells.",
+    "year": 2014
+   },
+   {
+    "id": "37258682",
+    "title": "Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours.",
+    "year": 2023
+   },
+   {
+    "id": "19197329",
+    "title": "Environmental sensing through focal adhesions.",
+    "year": 2009
+   },
+   {
+    "id": "33397959",
+    "title": "Global computational alignment of tumor and cell line transcriptional profiles.",
+    "year": 2021
+   },
+   {
+    "id": "22318515",
+    "title": "Outgrowth of single oncogene-expressing cells from suppressive epithelial environments.",
+    "year": 2012
+   },
+   {
+    "id": "27869803",
+    "title": "Genome-wide CRISPR screens reveal a Wnt-FZD5 signaling circuit as a druggable vulnerability of RNF43-mutant pancreatic tumors.",
+    "year": 2016
+   },
+   {
+    "id": "35221336",
+    "title": "A human breast cancer-derived xenograft and organoid platform for drug discovery and precision oncology.",
+    "year": 2022
+   },
+   {
+    "id": "24120142",
+    "title": "The somatic genomic landscape of glioblastoma.",
+    "year": 2013
+   },
+   {
+    "id": "29337182",
+    "title": "Human Pancreatic Tumor Organoids Reveal Loss of Stem Cell Niche Factor Dependence during Disease Progression.",
+    "year": 2018
+   },
+   {
+    "id": "33500573",
+    "title": "Cancer research needs a better map.",
+    "year": 2021
+   },
+   {
+    "id": "29625055",
+    "title": "An Integrated TCGA Pan-Cancer Clinical Data Resource to Drive High-Quality Survival Outcome Analytics.",
+    "year": 2018
+   },
+   {
+    "id": "15102922",
+    "title": "A syntaxin 1, Galpha(o), and N-type calcium channel complex at a presynaptic nerve terminal: analysis by quantitative immunocolocalization.",
+    "year": 2004
+   },
+   {
+    "id": "37849038",
+    "title": "Quantifying the Expanding Landscape of Clinical Actionability for Patients with Cancer.",
+    "year": 2024
+   },
+   {
+    "id": "26530364",
+    "title": "Neuron-Specific Enolase as a Biomarker: Biochemical and Clinical Aspects.",
+    "year": 2015
+   },
+   {
+    "id": "35120664",
+    "title": "Genomic characterization of metastatic patterns from prospective clinical sequencing of 25,000 patients.",
+    "year": 2022
+   },
+   {
+    "id": "33371412",
+    "title": "Breast Cancer Organoids Model Patient-Specific Response to Drug Treatment.",
+    "year": 2020
+   },
+   {
+    "id": "28810144",
+    "title": "Integrated Genomic Characterization of Pancreatic Ductal Adenocarcinoma.",
+    "year": 2017
+   },
+   {
+    "id": "22810696",
+    "title": "Comprehensive molecular characterization of human colon and rectal cancer.",
+    "year": 2012
+   },
+   {
+    "id": "32661438",
+    "title": "Optimization of AsCas12a for combinatorial genetic screens in human cells.",
+    "year": 2020
+   },
+   {
+    "id": "21915099",
+    "title": "Splicing factor hnRNPH drives an oncogenic splicing switch in gliomas.",
+    "year": 2011
+   },
+   {
+    "id": "29114467",
+    "title": "Biology of invasive mucinous adenocarcinoma of the lung.",
+    "year": 2017
+   },
+   {
+    "id": "35513429",
+    "title": "Comparative optimization of combinatorial CRISPR screens.",
+    "year": 2022
+   },
+   {
+    "id": "29083409",
+    "title": "Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells.",
+    "year": 2017
+   },
+   {
+    "id": "28753430",
+    "title": "Defining a Cancer Dependency Map.",
+    "year": 2017
+   },
+   {
+    "id": "34890551",
+    "title": "Microenvironment drives cell state, plasticity, and drug response in pancreatic cancer.",
+    "year": 2021
+   },
+   {
+    "id": "42557320",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies.",
+    "year": 2026
+   },
+   {
+    "id": "31481497",
+    "title": "Syndecan-Mediated Ligation of ECM Proteins Triggers Proliferative Arrest of Disseminated Tumor Cells.",
+    "year": 2019
+   },
+   {
+    "id": "30231881",
+    "title": "IGFBP6 controls the expansion of chemoresistant glioblastoma through paracrine IGF2/IGF-1R signaling.",
+    "year": 2018
+   },
+   {
+    "id": "35180770",
+    "title": "Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics.",
+    "year": 2022
+   },
+   {
+    "id": "31846534",
+    "title": "Gastric-type mucinous carcinoma of the cervix and its precursors - historical overview.",
+    "year": 2020
+   },
+   {
+    "id": "19575677",
+    "title": "Vertebrate endoderm development and organ formation.",
+    "year": 2009
+   },
+   {
+    "id": "24987113",
+    "title": "Measuring error rates in genomic perturbation screens: gold standards for human functional genomics.",
+    "year": 2014
+   }
+  ]
+ },
+ "S3": {
+  "pmid": "42883455",
+  "status": 200,
+  "hitCount": 38,
+  "n": 38,
+  "refs": [
+   {
+    "id": "9353181",
+    "title": "Integrating genetic approaches into the discovery of anticancer drugs.",
+    "year": 1997
+   },
+   {
+    "id": "30971826",
+    "title": "Prioritization of cancer therapeutic targets using CRISPR-Cas9 screens.",
+    "year": 2019
+   },
+   {
+    "id": "16504092",
+    "title": "Bias in error estimation when using cross-validation for model selection.",
+    "year": 2006
+   },
+   {
+    "id": "33397959",
+    "title": "Global computational alignment of tumor and cell line transcriptional profiles.",
+    "year": 2021
+   },
+   {
+    "id": "29692415",
+    "title": "Organoids in cancer research.",
+    "year": 2018
+   },
+   {
+    "id": "26627737",
+    "title": "High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities.",
+    "year": 2015
+   },
+   {
+    "id": "40263591",
+    "title": "BaCoN (Balanced Correlation Network) improves prediction of gene buffering.",
+    "year": 2025
+   },
+   {
+    "id": "24336569",
+    "title": "Genetic screens in human cells using the CRISPR-Cas9 system.",
+    "year": 2013
+   },
+   {
+    "id": "35022204",
+    "title": "Hallmarks of Cancer: New Dimensions.",
+    "year": 2022
+   },
+   {
+    "id": "32142663",
+    "title": "Genome-Scale CRISPR Screening in Human Intestinal Organoids Identifies Drivers of TGF-\u03b2 Resistance.",
+    "year": 2020
+   },
+   {
+    "id": "29472484",
+    "title": "Patient-derived organoids model treatment response of metastatic gastrointestinal cancers.",
+    "year": 2018
+   },
+   {
+    "id": "31068700",
+    "title": "Next-generation characterization of the Cancer Cell Line Encyclopedia.",
+    "year": 2019
+   },
+   {
+    "id": "33712601",
+    "title": "Integrated cross-study datasets of genetic dependencies in cancer.",
+    "year": 2021
+   },
+   {
+    "id": "31818951",
+    "title": "Pancreatic cancer organoids recapitulate disease and allow personalized drug screening.",
+    "year": 2019
+   },
+   {
+    "id": "39614072",
+    "title": "Synthetic augmentation of cancer cell line multi-omic datasets using unsupervised deep learning.",
+    "year": 2024
+   },
+   {
+    "id": "22460905",
+    "title": "The Cancer Cell Line Encyclopedia enables predictive modelling of anticancer drug sensitivity.",
+    "year": 2012
+   },
+   {
+    "id": "34930405",
+    "title": "Chronos: a cell population dynamics model of CRISPR experiments that improves inference of gene fitness effects.",
+    "year": 2021
+   },
+   {
+    "id": "24336571",
+    "title": "Genome-scale CRISPR-Cas9 knockout screening in human cells.",
+    "year": 2013
+   },
+   {
+    "id": "32348727",
+    "title": "Pooled In\u00a0Vitro and In\u00a0Vivo CRISPR-Cas9 Screening Identifies Tumor Suppressors in Human Colon Organoids.",
+    "year": 2020
+   },
+   {
+    "id": "31862961",
+    "title": "Agreement between two large pan-cancer CRISPR-Cas9 gene dependency data sets.",
+    "year": 2019
+   },
+   {
+    "id": "40082551",
+    "title": "Comprehensive genomic dependency landscape of a human colon cancer organoid.",
+    "year": 2025
+   },
+   {
+    "id": "42557315",
+    "title": "A dependency map enhanced with next-generation 3D cancer models.",
+    "year": 2026
+   },
+   {
+    "id": "34417181",
+    "title": "Predicting and characterizing a cancer dependency map of tumors with deep learning.",
+    "year": 2021
+   },
+   {
+    "id": "42557316",
+    "title": "A compendium of next-generation patient-derived models for diverse cancers.",
+    "year": 2026
+   },
+   {
+    "id": "25557080",
+    "title": "Organoid models of human and mouse ductal pancreatic cancer.",
+    "year": 2014
+   },
+   {
+    "id": "31597751",
+    "title": "Patient-derived organoids can predict response to chemotherapy in metastatic colorectal cancer patients.",
+    "year": 2019
+   },
+   {
+    "id": "25957691",
+    "title": "Prospective derivation of a living organoid biobank of colorectal cancer patients.",
+    "year": 2015
+   },
+   {
+    "id": "29337182",
+    "title": "Human Pancreatic Tumor Organoids Reveal Loss of Stem Cell Niche Factor Dependence during Disease Progression.",
+    "year": 2018
+   },
+   {
+    "id": "29853643",
+    "title": "Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer.",
+    "year": 2018
+   },
+   {
+    "id": "39009815",
+    "title": "Building a translational cancer dependency map for The Cancer Genome Atlas.",
+    "year": 2024
+   },
+   {
+    "id": "29083409",
+    "title": "Computational correction of copy number effect improves specificity of CRISPR-Cas9 essentiality screens in cancer cells.",
+    "year": 2017
+   },
+   {
+    "id": "28753431",
+    "title": "Project DRIVE: A Compendium of Cancer Dependencies and Synthetic Lethal Relationships Uncovered by Large-Scale, Deep RNAi Screening.",
+    "year": 2017
+   },
+   {
+    "id": "28753430",
+    "title": "Defining a Cancer Dependency Map.",
+    "year": 2017
+   },
+   {
+    "id": "31978347",
+    "title": "Quantitative Proteomics of the Cancer Cell Line Encyclopedia.",
+    "year": 2020
+   },
+   {
+    "id": "42557320",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies.",
+    "year": 2026
+   },
+   {
+    "id": "40813572",
+    "title": "Large-scale CRISPR screening in primary human 3D gastric organoids enables comprehensive dissection of gene-drug interactions.",
+    "year": 2025
+   },
+   {
+    "id": "31171691",
+    "title": "Cancer modeling meets human organoid technology.",
+    "year": 2019
+   },
+   {
+    "id": "30550791",
+    "title": "Organoid Modeling of the Tumor Immune Microenvironment.",
+    "year": 2018
+   }
+  ]
+ },
+ "S2_record": {
+  "pmid": "42557320",
+  "id": "42557320",
+  "source": "MED"
+ },
+ "S2": {
+  "pmid": "42557320",
+  "status": 200,
+  "hitCount": 96,
+  "n": 96,
+  "refs": [
+   {
+    "id": "32106218",
+    "title": "Mutational signature in colorectal cancer caused by genotoxic pks&lt;sup&gt;+&lt;/sup&gt; E. coli."
+   },
+   {
+    "id": "22728672",
+    "title": "A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3."
+   },
+   {
+    "id": "38721276",
+    "title": "Modelling esophageal adenocarcinoma and Barrett's esophagus with patient-derived organoids."
+   },
+   {
+    "id": "27397505",
+    "title": "A Landscape of Pharmacogenomic Interactions in Cancer."
+   },
+   {
+    "id": "31068700",
+    "title": "Next-generation characterization of the Cancer Cell Line Encyclopedia."
+   },
+   {
+    "id": "18444169",
+    "title": "Alcohol, tobacco, and diet in relation to esophageal cancer: the Shanghai Cohort Study."
+   },
+   {
+    "id": "40294008",
+    "title": "Direct Inhibition of RAS Reveals the Features of Oncogenic Signaling Driven by RAS G12 and Q61 Mutations."
+   },
+   {
+    "id": "38637634",
+    "title": "Targeting KRAS in cancer."
+   },
+   {
+    "id": "39305899",
+    "title": "The landscape of drug sensitivity and resistance in sarcoma."
+   },
+   {
+    "id": "35614096",
+    "title": "Mutational signatures are markers of drug sensitivity of cancer cells."
+   },
+   {
+    "id": "30371878",
+    "title": "COSMIC: the Catalogue Of Somatic Mutations In Cancer."
+   },
+   {
+    "id": "33478580",
+    "title": "Minimal genome-wide human CRISPR-Cas9 library."
+   },
+   {
+    "id": "35719949",
+    "title": "Patient-Derived Organoid Serves as a Platform for Personalized Chemotherapy in Advanced Colorectal Cancer Patients."
+   },
+   {
+    "id": "36776527",
+    "title": "Unscrambling cancer genomes via integrated analysis of structural variation and copy number."
+   },
+   {
+    "id": "27930805",
+    "title": "cgpCaVEManWrapper: Simple Execution of CaVEMan in Order to Detect Somatic Single Nucleotide Variants in NGS Data."
+   },
+   {
+    "id": "33149131",
+    "title": "Pan-cancer landscape of homologous recombination deficiency."
+   },
+   {
+    "id": "26457759",
+    "title": "The consensus molecular subtypes of colorectal cancer."
+   },
+   {
+    "id": "16632515",
+    "title": "Adjusting batch effects in microarray expression data using empirical Bayes methods."
+   },
+   {
+    "id": "40578317",
+    "title": "Virtual Cell Challenge: Toward a Turing test for the virtual cell."
+   },
+   {
+    "id": "24118313",
+    "title": "Age and sex differences in the incidence of esophageal adenocarcinoma: results from the Surveillance, Epidemiology, and End Results (SEER) Registry (1973-2008)."
+   },
+   {
+    "id": "26037647",
+    "title": "Biochemical and Structural Analysis of Common Cancer-Associated KRAS Mutations."
+   },
+   {
+    "id": "30103702",
+    "title": "Unsupervised correction of gene-independent cell responses to CRISPR-Cas9 targeting."
+   },
+   {
+    "id": "32348727",
+    "title": "Pooled In\u00a0Vitro and In\u00a0Vivo CRISPR-Cas9 Screening Identifies Tumor Suppressors in Human Colon Organoids."
+   },
+   {
+    "id": "20080505",
+    "title": "Fast and accurate long-read alignment with Burrows-Wheeler transform."
+   },
+   {
+    "id": "27416752",
+    "title": "Patterns of metastasis in colon and rectal cancer."
+   },
+   {
+    "id": "36300620",
+    "title": "KEGG for taxonomy-based analysis of pathways and genomes."
+   },
+   {
+    "id": "35223797",
+    "title": "Three-Dimensional Modelling of Ovarian Cancer: From Cell Lines to Organoids for Discovery and Personalized Medicine."
+   },
+   {
+    "id": "29192179",
+    "title": "CMScaller: an R package for consensus molecular subtyping of colorectal cancer pre-clinical models."
+   },
+   {
+    "id": "32461654",
+    "title": "The mutational constraint spectrum quantified from variation in 141,456 humans."
+   },
+   {
+    "id": "39112709",
+    "title": "The genomic landscape of 2,023 colorectal cancers."
+   },
+   {
+    "id": "40267983",
+    "title": "Geographic and age variations in mutational processes in colorectal cancer."
+   },
+   {
+    "id": "30889380",
+    "title": "Undifferentiated Sarcomas Develop through Distinct Evolutionary Pathways."
+   },
+   {
+    "id": "30260411",
+    "title": "Cell Model Passports-a hub for clinical, genetic and functional datasets of preclinical cancer models."
+   },
+   {
+    "id": "31761724",
+    "title": "Patient-Derived Organoids Predict Chemoradiation Responses of Locally Advanced Rectal Cancer."
+   },
+   {
+    "id": "27760321",
+    "title": "A CRISPR Dropout Screen Identifies Genetic Vulnerabilities and Therapeutic Targets in Acute Myeloid Leukemia."
+   },
+   {
+    "id": "30061675",
+    "title": "Organoid cultures recapitulate esophageal adenocarcinoma heterogeneity providing a model for clonality studies and precision therapeutics."
+   },
+   {
+    "id": "33753930",
+    "title": "A first-generation pediatric cancer dependency map."
+   },
+   {
+    "id": "30971826",
+    "title": "Prioritization of cancer therapeutic targets using CRISPR-Cas9 screens."
+   },
+   {
+    "id": "32025007",
+    "title": "Pan-cancer analysis of whole genomes."
+   },
+   {
+    "id": "36494601",
+    "title": "Comprehensive pan-cancer genomic landscape of KRAS altered cancers and real-world outcomes in solid tumors."
+   },
+   {
+    "id": "34789150",
+    "title": "CoRe: a robustly benchmarked R package for identifying core-fitness genes in genome-wide pooled CRISPR-Cas9 screens."
+   },
+   {
+    "id": "27535533",
+    "title": "Analysis of protein-coding genetic variation in 60,706 humans."
+   },
+   {
+    "id": "27180993",
+    "title": "Multilevel models improve precision and speed of IC50 estimates."
+   },
+   {
+    "id": "42557316",
+    "title": "A compendium of next-generation patient-derived models for diverse cancers."
+   },
+   {
+    "id": "25557080",
+    "title": "Organoid models of human and mouse ductal pancreatic cancer."
+   },
+   {
+    "id": "26212324",
+    "title": "Dynamics of Tumor Heterogeneity Derived from Clonal Karyotypic Evolution."
+   },
+   {
+    "id": "2188735",
+    "title": "A genetic model for colorectal tumorigenesis."
+   },
+   {
+    "id": "38587317",
+    "title": "Novel WRN Helicase Inhibitors Selectively Target Microsatellite-Unstable Cancer Cells."
+   },
+   {
+    "id": "20393554",
+    "title": "International network of cancer genome projects."
+   },
+   {
+    "id": "32025003",
+    "title": "Comprehensive analysis of chromothripsis in 2,658 human cancers using whole-genome sequencing."
+   },
+   {
+    "id": "40615675",
+    "title": "The synthetic lethal interaction between CDS1 and CDS2 is a vulnerability in uveal melanoma and across multiple tumor types."
+   },
+   {
+    "id": "32613204",
+    "title": "Discovering the anti-cancer potential of non-oncology drugs by systematic viability profiling."
+   },
+   {
+    "id": "34253237",
+    "title": "GRIDSS2: comprehensive characterisation of somatic structural variation using single breakend variants and structural variant phasing."
+   },
+   {
+    "id": "25957691",
+    "title": "Prospective derivation of a living organoid biobank of colorectal cancer patients."
+   },
+   {
+    "id": "28561063",
+    "title": "Selective analysis of cancer-cell intrinsic transcriptional traits defines novel clinically relevant subtypes of colorectal cancer."
+   },
+   {
+    "id": "36171387",
+    "title": "Metagenome analysis using the Kraken software suite."
+   },
+   {
+    "id": "32025018",
+    "title": "The repertoire of mutational signatures in human cancer."
+   },
+   {
+    "id": "26771021",
+    "title": "The Molecular Signatures Database (MSigDB) hallmark gene set collection."
+   },
+   {
+    "id": "21816040",
+    "title": "RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome."
+   },
+   {
+    "id": "30100188",
+    "title": "Generation of Tumor-Reactive T Cells by Co-culture of Peripheral Blood Lymphocytes and Tumor Organoids."
+   },
+   {
+    "id": "39478232",
+    "title": "Progressive plasticity during colorectal cancer metastasis."
+   },
+   {
+    "id": "31645765",
+    "title": "Pan-cancer whole-genome analyses of metastatic solid tumours."
+   },
+   {
+    "id": "36388765",
+    "title": "Uncovering novel mutational signatures by &lt;i&gt;de novo&lt;/i&gt; extraction with SigProfilerExtractor."
+   },
+   {
+    "id": "35418684",
+    "title": "Somatic mutation rates scale with lifespan across mammals."
+   },
+   {
+    "id": "33831375",
+    "title": "Characterizing genetic intra-tumor heterogeneity across 2,658 human cancer genomes."
+   },
+   {
+    "id": "39672099",
+    "title": "How to build the virtual cell with artificial intelligence: Priorities and opportunities."
+   },
+   {
+    "id": "29625052",
+    "title": "Pathogenic Germline Variants in 10,389 Adult Cancers."
+   },
+   {
+    "id": "25924068",
+    "title": "Sequential cancer mutations in cultured human intestinal stem cells."
+   },
+   {
+    "id": "20420947",
+    "title": "Microsatellite instability in colorectal cancer."
+   },
+   {
+    "id": "16199517",
+    "title": "Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles."
+   },
+   {
+    "id": "26678382",
+    "title": "cgpPindel: Identifying Somatically Acquired Insertion and Deletion Events from Paired End Sequencing."
+   },
+   {
+    "id": "38096571",
+    "title": "Assigning mutational signatures to individual samples and individual somatic mutations with SigProfilerAssignment."
+   },
+   {
+    "id": "19274634",
+    "title": "Using RepeatMasker to identify repetitive elements in genomic sequences."
+   },
+   {
+    "id": "35197630",
+    "title": "Effective drug combinations in breast, colon and pancreatic cancer cells."
+   },
+   {
+    "id": "38215750",
+    "title": "A comprehensive clinically informed map of dependencies in cancer cells and framework for target prioritization."
+   },
+   {
+    "id": "23104886",
+    "title": "STAR: ultrafast universal RNA-seq aligner."
+   },
+   {
+    "id": "28810143",
+    "title": "Genomic Evolution of Breast Cancer Metastasis and Relapse."
+   },
+   {
+    "id": "30236083",
+    "title": "A review of sex-related differences in colorectal cancer incidence, screening uptake, routes to diagnosis, cancer stage and survival in the UK."
+   },
+   {
+    "id": "31249361",
+    "title": "The ENCODE Blacklist: Identification of Problematic Regions of the Genome."
+   },
+   {
+    "id": "24071849",
+    "title": "The Cancer Genome Atlas Pan-Cancer analysis project."
+   },
+   {
+    "id": "35443109",
+    "title": "Increasing Incidence of Early-Onset Colorectal Cancer."
+   },
+   {
+    "id": "36725963",
+    "title": "Tumor organoid biobank-new platform for medical research."
+   },
+   {
+    "id": "37585293",
+    "title": "Protocol to optimize the biobanking of ovarian cancer organoids by accommodating patient-specific differences in stemness potential."
+   },
+   {
+    "id": "33407829",
+    "title": "Improved analysis of CRISPR fitness screens and reduced off-target effects with the BAGEL2 gene essentiality classifier."
+   },
+   {
+    "id": "29395055",
+    "title": "Phospholipid Remodeling and Cholesterol Availability Regulate Intestinal Stemness and Tumorigenesis."
+   },
+   {
+    "id": "35368031",
+    "title": "A suspension technique for efficient large-scale cancer organoid culturing and perturbation screens."
+   },
+   {
+    "id": "28753430",
+    "title": "Defining a Cancer Dependency Map."
+   },
+   {
+    "id": "42557320",
+    "title": "A tumour-derived organoid biobank maps cancer gene dependencies."
+   },
+   {
+    "id": "34321661",
+    "title": "In silico saturation mutagenesis of cancer genes."
+   },
+   {
+    "id": "40813572",
+    "title": "Large-scale CRISPR screening in primary human 3D gastric organoids enables comprehensive dissection of gene-drug interactions."
+   },
+   {
+    "id": "32483361",
+    "title": "Colibactin DNA-damage signature indicates mutational impact in colorectal cancer."
+   },
+   {
+    "id": "38717153",
+    "title": "Molecular Landscape and Clinical Implication of CCNE1-amplified Esophagogastric Cancer."
+   },
+   {
+    "id": "31171691",
+    "title": "Cancer modeling meets human organoid technology."
+   },
+   {
+    "id": "34320344",
+    "title": "A pan-cancer organoid platform for precision medicine."
+   },
+   {
+    "id": "29247016",
+    "title": "Accelerating Discovery of Functional Mutant Alleles in Cancer."
+   },
+   {
+    "id": "32142663",
+    "title": "Genome-Scale CRISPR Screening in Human Intestinal Organoids Identifies Drivers of TGF-\u03b2 Resistance."
+   }
+  ]
+ }
+}

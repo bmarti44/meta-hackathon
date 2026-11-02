@@ -1,0 +1,20 @@
+{
+ "organoid_table6": {
+  "n_ess_ref": 268,
+  "ess_median_lfc": -0.9557563066482544,
+  "non_median_lfc": -0.0019499427871778607,
+  "splice_median_lfc": -1.464937686920166,
+  "ribo_median_lfc": -1.2485671043395996,
+  "splice_over_essdepth": 1.5327523101129845,
+  "ribo_over_essdepth": 1.3063655407288963
+ },
+ "2d_essmatrix": {
+  "n_ess_ref": 267,
+  "ess_median_lfc": -1.5150317428302675,
+  "non_median_lfc": 0.12072548097111763,
+  "splice_median_lfc": -2.200582713490048,
+  "ribo_median_lfc": -2.4711200778151325,
+  "splice_over_essdepth": 1.4524994105926032,
+  "ribo_over_essdepth": 1.6310681868610708
+ }
+}

@@ -1,0 +1,17 @@
+You are the generation/unstick consultant (gpt-6.1-sol, xhigh) for cancer-dependency-rsi. Read-only; read the repo files below. The user has mandated: never give up; keep generating generations until GOAL.md is determined fully satisfied by sol-xhigh terminal review. Honesty rules unchanged (no invented outcomes, no endpoint switching after results, evaluator fixed during comparisons).
+
+State packet (read these):
+- /Users/bmarti44/github/bufferright/research/GOAL.md and PLAN.md (v3 addendum, sections 0.1/0.5/0.6/11)
+- cancer_rsi_handoff.txt sections 9-12 (same root)
+- cancer-dependency-rsi/status.json; generations/pgen001/DISPOSITION_v2.json
+- generations/pgen002/SPEC.md, screen_verdict_v1.json, token_charging_v1.json
+- generations/pgen003/SPEC.md, screen_verdict_v1.json, eligibility_recompute_v1.json (251 eligible lines / 250 patients / 810 screen files; C overlap 0 with full 142-patient set; KP3 Broad-exposed)
+- reviews/policy_route_xhigh_v2.md (your prior CL-RD-RAW-FEASIBILITY-01 + accounting discriminator instruction)
+- reviews/cl_rd_raw_accounting_discriminator_v2.json; config/allocations.json; config/resources.json
+- reviews/novelty_audit_v5.md; reviews/c10_robustness_table_v1.md; atlas/v4/manifest.json
+
+Decide and design, with exact frozen parameters where possible:
+1. ENDPOINT ADJUDICATION: Does the pgen002 measured-token endpoint (TOK=input+output per call; cached/reasoning as subcomponents; predeclared max-charge for unmeasured calls; CPU/wall measured via run_bounded; all arms same model/effort; learning overhead charged) qualify as a justified alternative primary resource endpoint under handoff section 11 for a C9 comparison? Answer ADJUDICATED_YES / YES_WITH_NAMED_CONDITIONS (list) / NO (state exactly what additional witness would be required). Do not waive section 11 text.
+2. PGEN004 BATTERY DESIGN (the first real cycle): task definition on the 251-line/250-patient resolved universe with independently processed raw counts (per-screen library-size normalization + plasmid LFC; exogenous controls from CRISPR supplemental gene annotation; no cross-line fitted corrections). Specify: schema witness step for count files; partition rule (patient-disjoint A development vs B reserved panels; sizes; seed rule frozen from metadata); guide->gene aggregation; the fixed 207-gene coordinate displacement task (or a better justified task) with quality endpoint attainable by strong baselines; comparators (donor-mean shortcut, shrinkage, no-lability ablation, fixed exploration, fixed-allocation/random); why a learned policy could plausibly beat fixed exploration here by >=20% TOK (or state savings infeasible with evidence standard required); download/processing budget for 810 files (zip 2.85GB; selective member extraction vs full download); precision feasibility from A only.
+3. Rank the next 3 generations (including scientific-track generations toward C6/C11/C12) with cheapest discriminating experiment first, and exact stop/go criteria per generation.
+End with: ENDPOINT:<...>; PGEN004:<GO|GO_WITH_CONDITIONS|NO_GO>; NEXT:<one line>

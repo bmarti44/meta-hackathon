@@ -1,0 +1,4 @@
+Independent narrow re-review (gpt-6.1-sol, high), read-only. Enumerate ALL low/medium/high/critical issues, score 0-100. Prior: v5 scored 90 (reviews/sgen010_high_review_v3.md) with 1 medium + 3 low.
+Subject ONLY: src/sgen010_screen_v7.py vs v5/v6 diffs, generations/sgen010/screen_v7.json, established_pool_v4.json, tests/test_sgen010_v5.py.
+Verify by recomputation/probes: (1) medium closed - candidate evidence now tested against all SIDPs confirmed-linked into C components (rerun SIDM02226/ACH-001007/ACH-000052/A673 probe); (2) write_pair: staging write failure cleanup, KeyboardInterrupt between publications, destination-created-after-check (os.link), rollback removes only own destinations; (3) v7 counts identical to v5 (1106/1069/2/253/0/0) and artifacts reproduce; (4) tests actually cover these paths. Probe for regressions introduced by the c_evidence_patients expansion (over-exclusion on pinned data?).
+End exactly: SGEN010_V7_SCORE: <0-100>

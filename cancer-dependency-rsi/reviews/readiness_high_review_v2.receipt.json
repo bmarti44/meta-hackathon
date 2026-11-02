@@ -1,0 +1,37 @@
+{
+  "prompt_sha256": "7643ce721f523e401cf08b0c32f2eefb2603cc559eacee2534d1bcc058540771",
+  "returncode": 0,
+  "timed_out": false,
+  "call_identity": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "phase": "phase2_lock1",
+    "terminal_review": false,
+    "timeout_s": 1200,
+    "sandbox": "read-only",
+    "interface": "codex exec",
+    "binary": "codex",
+    "prompt_sha256": "7643ce721f523e401cf08b0c32f2eefb2603cc559eacee2534d1bcc058540771",
+    "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/readiness_high_review_v2.md"
+  },
+  "response_sha256": "9487b78e077c4ebee8426d1f07931d591ffe52ab7bd9e988cd79afafa63b8cb8",
+  "launch_error": null,
+  "wall_s": 209.44446300016716,
+  "cpu_s": 8.190000000000001,
+  "peak_rss_bytes": 409927680,
+  "tokens": [
+    {
+      "input_tokens": 1089945,
+      "cached_input_tokens": 1004800,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9563,
+      "reasoning_output_tokens": 2539
+    }
+  ],
+  "actual_cost_usd": 0.0,
+  "host_model_cost_usd": "unknown",
+  "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/readiness_high_review_v2.md",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "reservation_id": "05dd61a4883e4e29887265eb2c806b4a"
+}

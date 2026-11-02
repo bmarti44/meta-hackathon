@@ -1,0 +1,90 @@
+{
+ "requests": [
+  {
+   "url": "https://cog.sanger.ac.uk/cmp/download/Project_score_archive_data.zip",
+   "range": "bytes=614502693-614764836",
+   "status": 206,
+   "bytes": 262144,
+   "sha256": "809f1b645cc9765f0c9ffe2e66f893957c80bc5d4eb2b94fa48b4c4277ee73b6",
+   "wall_s": 2.696
+  },
+  {
+   "url": "https://cog.sanger.ac.uk/cmp/download/Project_score_archive_data.zip",
+   "range": "bytes=614762530-614764814",
+   "status": 206,
+   "bytes": 2285,
+   "sha256": "33d6970d11036e47884f3c514f8b1abd76b807b50d6683c0e4f5b11571a7df69",
+   "wall_s": 0.334
+  }
+ ],
+ "members": [
+  {
+   "name": "Project_score_archive_data/",
+   "uncompressed": 0
+  },
+  {
+   "name": "Project_score_archive_data/Readme.docx",
+   "uncompressed": 16480
+  },
+  {
+   "name": "Project_score_archive_data/Release2/",
+   "uncompressed": 0
+  },
+  {
+   "name": "Project_score_archive_data/Release2/integrated_Sanger_Broad_essentiality_matrices_20200402.zip",
+   "uncompressed": 220030324
+  },
+  {
+   "name": "Project_score_archive_data/Release3/",
+   "uncompressed": 0
+  },
+  {
+   "name": "Project_score_archive_data/Release3/Project_score_combined_Sanger_v1_Broad_20Q2_20210311.zip",
+   "uncompressed": 151097069
+  },
+  {
+   "name": "Project_score_archive_data/Release1/",
+   "uncompressed": 0
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/",
+   "uncompressed": 0
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/_ReadMe.txt",
+   "uncompressed": 674
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/04_binaryDepScores.tsv",
+   "uncompressed": 11815383
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/02a_BayesianFactors.tsv",
+   "uncompressed": 105460213
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/00_logFCs.tsv",
+   "uncompressed": 109360132
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/02b_MageckFDRs.tsv",
+   "uncompressed": 19248557
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/01_corrected_logFCs.tsv",
+   "uncompressed": 108552286
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/03_scaledBayesianFactors.tsv",
+   "uncompressed": 104924382
+  },
+  {
+   "name": "Project_score_archive_data/Release1/EssentialityMatrices/01a_qnorm_corrected_logFCs.tsv",
+   "uncompressed": 108389783
+  },
+  {
+   "name": "Project_score_archive_data/Release1/binaryDepScores.tsv",
+   "uncompressed": 11815383
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "sanger_organoid_mev_pct": 0.2506,
+ "sanger_n": 162,
+ "broad_2dFBS_mev_pct": 0.4364,
+ "broad_org_mev_pct": 0.2181,
+ "note": "percentile of mev genes within each model's genome-wide score distribution; lower=more essential. Sanger: exploratory reuse of spent-cohort assay for a new gene-set question; not independent confirmation of Lock-S."
+}

@@ -1,0 +1,114 @@
+{
+  "generation": "sgen010",
+  "version": 2,
+  "supersedes_note": "v1 keys did not connect; v1 retained, verdict not used",
+  "inputs": {
+    "Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7",
+      "rows": 2554
+    },
+    "CRISPRScreenMap.csv": {
+      "sha256": "43cc528614053d4c5a96729c2d782375227231a0cfea23de6c519b8989fa1252",
+      "rows": 1604
+    },
+    "passports_model_list_20260921.csv": {
+      "sha256": "419f65d1d6534454194f1a744550fab632cd1d7411f6b13411a885735aa37006",
+      "rows": 2266
+    },
+    "cohort_C_models": 148
+  },
+  "bridge_coverage": {
+    "by_HCMI_sample_ID": 48,
+    "by_COSMIC_donor_ID": 0,
+    "by_identity_name": 5,
+    "cohort_models_mapped_to_passports": 48,
+    "cohort_models_unmapped": 100,
+    "unmapped_sample_IDs": [
+      "HCM-SANG-1095-C25",
+      "HCM-SANG-1299-C15",
+      "HCM-SANG-1301-C20",
+      "HCM-SANG-1302-C15",
+      "HCM-SANG-1304-C20",
+      "HCM-SANG-1305-C15",
+      "HCM-SANG-1306-C25",
+      "HCM-SANG-1310-C15",
+      "HCM-SANG-1312-C20",
+      "HCM-SANG-1314-C18",
+      "HCM-SANG-1315-C18",
+      "HCM-SANG-1316-C18",
+      "HCM-SANG-1317-C20",
+      "HCM-SANG-1318-C20",
+      "HCM-SANG-1320-C25",
+      "HCM-SANG-1321-C18",
+      "HCM-SANG-1322-C15",
+      "HCM-SANG-1323-C15",
+      "HCM-SANG-1325-C15",
+      "HCM-SANG-1326-C15"
+    ],
+    "C_patients_SIDP_identified": 50,
+    "expected_C_patients": 142,
+    "C_patient_passports_models_total": 54,
+    "C_direct_BROAD_IDs": 0
+  },
+  "model_table": {
+    "models": 2554,
+    "distinct_PatientID": 2315,
+    "GrowthPattern": {
+      "Adherent": 1472,
+      "Suspension": 466,
+      "Dome": 241,
+      "Unknown": 157,
+      "Mixed": 139,
+      "Spheroid": 79
+    },
+    "ModelType": {
+      "Cell Line": 2313,
+      "Organoid": 241
+    }
+  },
+  "screened": {
+    "screens": 1604,
+    "distinct_screened_ModelID": 1361,
+    "screened_models_in_Model_table": 1361,
+    "ModelType": {
+      "Cell Line": 1253,
+      "Organoid": 108
+    }
+  },
+  "cohort_C_overlap_by_key": {
+    "ModelID_in_C_BROAD_IDs": 0,
+    "SangerModelID_in_C_patient_SIDMs": 0,
+    "COSMICID_norm_in_C_patient_COSMIC": 0,
+    "CellLineName_in_C_patient_names": 0,
+    "HCMIID_in_cohort_sample_IDs": 0
+  },
+  "union_overlap_models": 0,
+  "union_overlap_screened_models": 0,
+  "overlap_models_listed": [],
+  "disjoint_screened_pool": {
+    "models": 1361,
+    "patients": 1305,
+    "patient_strict_models": 1361,
+    "organoid_patient_strict_models": 108,
+    "organoid_patient_strict_patients": 102,
+    "GrowthPattern_patient_strict": {
+      "Adherent": 938,
+      "Suspension": 169,
+      "Dome": 108,
+      "Mixed": 65,
+      "Unknown": 41,
+      "Spheroid": 40
+    },
+    "ModelType_patient_strict": {
+      "Cell Line": 1253,
+      "Organoid": 108
+    }
+  },
+  "key_connectivity": {
+    "bridge_full_coverage": false,
+    "disjointness_basis": "PARTIAL: disjointness proven only for bridged subset; unmapped C models listed"
+  },
+  "verdict": "POOL_IDENTIFIED",
+  "verdict_qualified": "POOL_IDENTIFIED_BRIDGE_PARTIAL",
+  "decision_rule": "SPEC: >=100 patient-strict disjoint screened models AND >=100 disjoint patients"
+}

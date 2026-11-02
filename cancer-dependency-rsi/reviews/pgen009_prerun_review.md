@@ -1,0 +1,6 @@
+- **Items 64–65 — Attribution quotes do not match the frozen source.** None of the four strings labeled “verbatim” appears in [readiness_v8.json](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/pgen006/readiness_v8.json). Its cost table contains no C1/C2/C7 categories or quoted “BOTH arms AND total” rule. The replacement therefore fails the required verbatim-attribution check.
+
+- **Items 62–65 — Scheduled and sunk call allocations remain unresolved.** The source explicitly shares substrate/E0 production and evaluator construction; it attributes policy-generation, policy-specific review, and unstick calls to the causing arm, with conservative learned-arm attribution when unresolved. The blanket C7 classification does not reconcile each scheduled and sunk generation/review call with those rules and bypasses that fallback. Consequently, the claimed absence of C1/C2 costs is not unambiguously established, triggering COST_UNRESOLVED.
+
+PRERUN_VERDICT: SPEC_INVALID
+PGEN009_PRERUN_SCORE: 90

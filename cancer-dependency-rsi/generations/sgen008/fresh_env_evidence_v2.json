@@ -1,0 +1,43 @@
+{
+ "environment": {
+  "method": "uv sync --locked in isolated copy",
+  "uv_lock_sha256": "705394cdc990b401e414374f47485bde605745f5957fd72f63454f25ed44ae0e",
+  "interpreter": "Python 3.14.8",
+  "interpreter_sha256": "3104082b75b7a6dc6ae6db236fe64e850ca909139e84d1cd9f699bd6fa5132ff",
+  "cache_use": "uv local wheel cache, same host; data copied from retained project"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "result": "FAIL retained",
+   "detail": "stale fresh copy (missing newer files) + copied exclusive-create report; logs fresh_run.log/fresh_sgen002.log in fresh copy"
+  },
+  {
+   "n": 2,
+   "result": "PASS",
+   "components": {
+    "upstream_v2": {
+     "exit": 0,
+     "all_stages_pass": true
+    },
+    "sgen002_reproduce": {
+     "exit": 0,
+     "pass": true
+    },
+    "ols_test": {
+     "exit": 0,
+     "detail": "tests/test_baseline_ols.py 1 passed"
+    },
+    "sgen008_checks": {
+     "exit": 0,
+     "pass": true
+    }
+   }
+  },
+  {
+   "n": 0,
+   "note": "upstream attempt 1 in fresh copy FAILED on missing artifacts/sha256 frozen bytes (AssertionError v1 estimators) - copied artifacts/ and reran as attempt 2 upstream"
+  }
+ ],
+ "scope": "fresh locked env, same host/OS; interval+policy absent by construction"
+}

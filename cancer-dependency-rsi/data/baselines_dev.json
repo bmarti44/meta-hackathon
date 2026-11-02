@@ -1,0 +1,9 @@
+{
+  "status": "development baselines (Layer-A, exploratory); C5 anchor = exact OLS reproduction (data/baseline_reproduction_ols.json)",
+  "applicability": "Molecular per-model prediction baselines (lineage/genotype/state-only predictors, S3-style Elastic Net) are NOT applicable to the narrowed panel-wide association estimand (no per-model prediction task); imposing them would test a different question. No predictive-superiority claim is made anywhere in this study.",
+  "strength_only_rho_base_vs_Tdev": 0.2993343573988735,
+  "no_adjustment_rho_L_vs_Tdev": 0.14887769561437977,
+  "partial_rho_L_vs_Tdev_given_base": 0.055252514705032764,
+  "environmental_ablation": "partial vs strength-only comparison above is the prespecified ablation (lability contribution beyond baseline strength)",
+  "n_genes": 216
+}

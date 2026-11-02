@@ -1,0 +1,215 @@
+{
+  "generation": "sgen012",
+  "version": 1,
+  "inputs": {
+    "data/Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7"
+    },
+    "data/CRISPRScreenMap.csv": {
+      "sha256": "43cc528614053d4c5a96729c2d782375227231a0cfea23de6c519b8989fa1252"
+    },
+    "data/ModelCondition.csv": {
+      "sha256": "a1edda78cd60718e5c99690ce8ab80315b65ddc9346643338d2c1c774fc51326"
+    },
+    "data/ScreenSequenceMap.csv": {
+      "sha256": "acaedf0549afda50e5f3df28645c5c2193acbdb9779f9f8099861b763d1be296"
+    },
+    "generations/sgen010/established_pool_v4.json": {
+      "sha256": "0c1080f8a4330e9be93b1fa0e0821fdf557a7985403b0ffa9d0129a0614bb26b"
+    },
+    "generations/sgen010/screen_v7.json": {
+      "sha256": "d6e6eb69a9f239ea61671397a16031a8c78be9330f049f17437ce3698832766e"
+    }
+  },
+  "provenance_audit_basis": "DepMap26Q3_README: ModelCondition = 'condition(s) under which the model was assayed'; ScreenSequenceMap = Achilles (CRISPR) pipeline Pre-Chronos map linking SequenceID->ScreenID+ModelConditionID. Taken as screening-time basis, explicitly disputable at review.",
+  "field_semantics_note": "In ModelCondition.csv, GrowthMedia carries MF- codes and FormulationID carries descriptive media text (name-swapped vs SPEC assumption); SPEC implemented literally on FormulationID text.",
+  "gene_csv_excluded": "Gene.csv never read (outcome-derived essentiality/selectivity columns).",
+  "denominator": {
+    "cell_line_models": 1095,
+    "components": 1057,
+    "components_reconstruction_asserted_vs_v7": true
+  },
+  "establishable": {
+    "models": 711,
+    "components": 706,
+    "models_before_multienv_component_exclusion": 727,
+    "multi_environment_components_excluded": 8
+  },
+  "exclusion_reasons_sequences": {
+    "unresolved_formulation": 688,
+    "missing_cellformat": 230,
+    "unknown_flag_encoding": 52,
+    "explicitly_disqualified": 24,
+    "unknown_screentype": 6
+  },
+  "harmonization_map_unique_entries": 270,
+  "ranked_strata_top10": [
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs"
+      ],
+      "components": 183
+    },
+    {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs"
+      ],
+      "components": 86
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 10% fbs"
+      ],
+      "components": 59
+    },
+    {
+      "env": [
+        "adherent",
+        "mem + 10% fbs"
+      ],
+      "components": 26
+    },
+    {
+      "env": [
+        "mixed",
+        "rpmi + 10% fbs"
+      ],
+      "components": 19
+    },
+    {
+      "env": [
+        "suspension",
+        "rpmi + 20% fbs"
+      ],
+      "components": 19
+    },
+    {
+      "env": [
+        "adherent",
+        "f12 + 10% fbs"
+      ],
+      "components": 15
+    },
+    {
+      "env": [
+        "adherent",
+        "mccoy's 5a + 10% fbs"
+      ],
+      "components": 13
+    },
+    {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs + 2mm glutamine + 25mm hepes + 25mm sodium bicarbonate"
+      ],
+      "components": 12
+    },
+    {
+      "env": [
+        "adherent",
+        "emem + 10% fbs + 2mm glutamine + 100um neaa"
+      ],
+      "components": 10
+    }
+  ],
+  "selected_contrast": {
+    "armA": {
+      "env": [
+        "adherent",
+        "rpmi + 10% fbs"
+      ],
+      "components": 183
+    },
+    "armB": {
+      "env": [
+        "adherent",
+        "dmem + 10% fbs"
+      ],
+      "components": 86
+    },
+    "mdr_two_arm": 0.3555,
+    "positivity_lineages": [],
+    "lineage_counts_A": {
+      "Lung": 38,
+      "Skin": 18,
+      "Biliary Tract": 18,
+      "Kidney": 10,
+      "Liver": 10,
+      "Bowel": 10,
+      "Esophagus/Stomach": 10,
+      "Soft Tissue": 9,
+      "CNS/Brain": 8,
+      "Pancreas": 7,
+      "Ovary/Fallopian Tube": 6,
+      "Peripheral Nervous System": 6,
+      "Breast": 6,
+      "Uterus": 6,
+      "Pleura": 5,
+      "Head and Neck": 5,
+      "Lymphoid": 3,
+      "Cervix": 2,
+      "Bone": 2,
+      "Myeloid": 1,
+      "Thyroid": 1,
+      "Bladder/Urinary Tract": 1,
+      "Ampulla of Vater": 1
+    },
+    "lineage_counts_B": {
+      "CNS/Brain": 22,
+      "Skin": 9,
+      "Soft Tissue": 7,
+      "Kidney": 7,
+      "Bladder/Urinary Tract": 6,
+      "Head and Neck": 5,
+      "Liver": 4,
+      "Ovary/Fallopian Tube": 3,
+      "Pancreas": 3,
+      "Peripheral Nervous System": 3,
+      "Breast": 2,
+      "Bone": 2,
+      "Bowel": 2,
+      "Cervix": 2,
+      "Lung": 2,
+      "Biliary Tract": 2,
+      "Prostate": 1,
+      "Thyroid": 1,
+      "Pleura": 1,
+      "Esophagus/Stomach": 1,
+      "Testis": 1
+    }
+  },
+  "gates": {
+    "coverage_models_ge986": false,
+    "coverage_components_ge952": false,
+    "contrast_exists": true,
+    "arm_size_ge100_each": false,
+    "positivity_ge3_lineages_k20": false,
+    "precision_mdr_le_0.146": false
+  },
+  "confounding": {
+    "cramersV_env_x_lineage_all": 0.5755,
+    "arm_distributions": {
+      "A": {
+        "ScreenType_sequences": {
+          "2DS": 390
+        },
+        "DataSource_sequences": {
+          "BROAD": 390
+        }
+      },
+      "B": {
+        "ScreenType_sequences": {
+          "2DS": 174
+        },
+        "DataSource_sequences": {
+          "BROAD": 174
+        }
+      }
+    }
+  },
+  "verdict": "A_REJECTED",
+  "authorization": "Pass authorizes only preparation+locking of a separate outcome design; no outcome access (SPEC)."
+}

@@ -1,0 +1,15 @@
+{
+ "timestamp": "2026-10-29T21:50:30.883935+00:00",
+ "model_conditions": 3385,
+ "models": 2476,
+ "chain_depth_distribution": {
+  "1": 3379,
+  "2": 6
+ },
+ "patterns": {},
+ "qualified_models": 0,
+ "qualified_detail_capped": {},
+ "verdict": "INVENTORY_COMPLETE",
+ "history_resource": "ABSENT",
+ "nonclaims": "Feasibility only; no dates/elapsed-time fields; branch randomization unknown; hysteresis is an established concept."
+}

@@ -1,0 +1,37 @@
+{
+ "components": {
+  "c10_row_exact": true,
+  "c10_negative_fixtures_rejected": {
+   "swapped_endpoints": true,
+   "footer_decoy_wrong_row": true,
+   "contradictory_decision": true,
+   "contradictory_sign": true,
+   "substring_decision": true
+  },
+  "eligibility_from_originals": {
+   "matched_lines": 252,
+   "matched_patients": 251,
+   "c_patients": 142,
+   "eligible_patients": 250,
+   "eligible_lines": 251,
+   "eligible_files": 810,
+   "cohort_models": 148,
+   "membership_ok": true,
+   "pass": true
+  },
+  "synthetic_audit_refs_exist": {
+   "diagnostics/donor_calibration_v2/fixture_manifest.json": true,
+   "src/donor_kernel.py": true,
+   "tests/test_zipfetch.py": true,
+   "tests/test_tree_cpu.py": true,
+   "generations/sgen004/envelope_v3.json": true
+  },
+  "absent_pending": {
+   "donor_patient_interval": "PENDING (no retained arrays; outcome re-access not performed)",
+   "policy_comparison": "ABSENT (no cycle run)"
+  }
+ },
+ "implemented_pass": true,
+ "wall_s": 0.08,
+ "note": "This runner covers C10 row-exactness, eligibility-from-originals, synthetic-audit validation ONLY. Upstream/point/figure/OLS are executed by sgen005/sgen002 runners; fresh-env battery evidence is recorded in fresh_env_evidence_v2.json."
+}

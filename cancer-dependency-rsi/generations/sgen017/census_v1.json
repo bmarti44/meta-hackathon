@@ -1,0 +1,48 @@
+{
+ "timestamp": "2026-10-29T21:40:19.206015+00:00",
+ "sequences_total": 3623,
+ "sequences_eligible": 3434,
+ "screentype_distribution": {
+  "2DS": 3152,
+  "pDNA": 10,
+  "2DD": 2,
+  "3DN": 48,
+  "2DN": 49,
+  "3DO": 143,
+  "2DO": 30
+ },
+ "primary": {
+  "groups": 1593,
+  "repeat_groups": 0,
+  "coverage": 0.0,
+  "screens_per_group": {
+   "1": 1593
+  },
+  "unqualified_sequences": 0,
+  "screens_in_repeat_groups": 0
+ },
+ "robustness": {
+  "groups": 1266,
+  "repeat_groups": 1,
+  "coverage": 0.0007898894154818325,
+  "screens_per_group": {
+   "1": 1265,
+   "2": 1
+  },
+  "unqualified_sequences": 931,
+  "screens_in_repeat_groups": 2
+ },
+ "repeat_breakdown": {
+  "by_cellformat": {},
+  "by_library": {},
+  "organoid_format_groups": 0,
+  "models_in_repeat_groups": 0
+ },
+ "patient_clustering": {
+  "models_mapped": 0,
+  "models_unmapped": 0,
+  "distinct_patients": 0
+ },
+ "verdict": "CENSUS_COMPLETE",
+ "repeat_resource": "ABSENT"
+}

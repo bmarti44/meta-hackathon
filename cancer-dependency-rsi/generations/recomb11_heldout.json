@@ -1,0 +1,26 @@
+{
+ "heldout_screens": {
+  "FBS": 275,
+  "TSM": 12,
+  "org_def": 30
+ },
+ "mev_means": {
+  "FBS": -0.102,
+  "TSM": -0.302,
+  "org_def": -0.498
+ },
+ "mev_org_minus_FBS_ci95": [
+  -0.431,
+  -0.356
+ ],
+ "ldlr_means": {
+  "FBS": -0.098,
+  "TSM": -0.028,
+  "org_def": -0.063
+ },
+ "ldlr_org_minus_FBS_ci95": [
+  -0.071,
+  0.13
+ ],
+ "dev_reference": "mev org_def-FBS=-0.399 raw (recomb7); LDLR +0.095 (recomb3 class table)"
+}

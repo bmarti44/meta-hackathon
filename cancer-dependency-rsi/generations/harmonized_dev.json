@@ -1,0 +1,15 @@
+{
+ "panel": "dev",
+ "timestamp": "2026-10-29T22:36:36.851491+00:00",
+ "n_models": 82,
+ "n_patients": 80,
+ "n_genes": 207,
+ "rho_partial_frozen_estimator": -0.05266554688191956,
+ "rho_raw_spearman": -0.19143639531989046,
+ "patient_boot95": [
+  -0.09789108270460802,
+  -0.006748534790466765
+ ],
+ "locks_reference": "Sanger Lock-S: rho=-0.1458 [-0.175,-0.114] BOUND",
+ "kill_criterion": "held-out 95% CI inside (-0.20,+0.20) terminates material-association claim"
+}

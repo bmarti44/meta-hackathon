@@ -1,0 +1,50 @@
+{
+  "protocol_version": "proposer-v2-prelock",
+  "review_model": {
+    "id": "gpt-6.1-sol",
+    "effort": "high",
+    "role": "all reviews; severity-tagged issues + 0-100 score; fix verified; >=90 gate"
+  },
+  "generation_model": {
+    "id": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "role": "candidates, policy challengers, summaries, extraction, unstick"
+  },
+  "prompts": {
+    "extraction_v1.md": {
+      "path": "generations/prompts/extraction_v1.md",
+      "sha256": "e03535ba981733244dd6ce16035a25ea23bc0df9958e5b0e9c717a266b50e865"
+    },
+    "policy_challenger_v1.md": {
+      "path": "generations/prompts/policy_challenger_v1.md",
+      "sha256": "8f833b41b2abf9997ddf08f194856bc23d01bfd7a4a20b1a8837f749db4271da"
+    },
+    "candidate_batch_schema_v2.json": {
+      "path": "generations/prompts/candidate_batch_schema_v2.json",
+      "sha256": "4cb0390ce2c9a1ebeba3f0becf233387888fbd9ff53cb3c298ed206a4e9743a9"
+    },
+    "proposer_v2.md": {
+      "path": "generations/prompts/proposer_v2.md",
+      "sha256": "e8e903ff891f0998bdd892e824cb8b6248185b845901a239fe20a586937550f0"
+    }
+  },
+  "retrieval": {
+    "page_max_entries": 50,
+    "index_partitions_per_call_max": 1,
+    "header_pages_per_call_max": 2,
+    "full_records_per_generation_max": 40,
+    "lookup": "runner-mediated by cited ID only; every lookup ledgered; overflow => finer sub-partitions, never silent truncation"
+  },
+  "memo": {
+    "key": "sha256(output_type|arm_id|protocol_version|canonical_state_hash)",
+    "implementation": "src/memo.py",
+    "rules": "cross-arm miss by construction; creation charged once to creating arm; replay cache-miss => unsupported"
+  },
+  "freeze_rule": "Any change to prompts/schemas/models/efforts/budgets = new protocol version = new comparison epoch; arms in one comparison share the identical protocol on own admissible histories.",
+  "unstick": {
+    "max_rounds_per_blocker": 3,
+    "inputs": "arm-admissible history only during frozen comparisons"
+  },
+  "status": "DRAFT_not_frozen_no_policy_optimization_permitted",
+  "batch_validator": "src/candidates.py (same source emits schema and validates runtime parent/config/evidence semantics)"
+}

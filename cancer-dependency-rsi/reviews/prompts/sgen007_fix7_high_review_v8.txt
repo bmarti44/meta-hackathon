@@ -1,0 +1,3 @@
+Independent re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 91 (reviews/sgen007_fix6_high_review_v7.md).
+Verify last fixes: battery REQUIRED now also derives from data/data_manifest.json files + supp workbooks + paper XMLs (src/sgen007_battery.py); removing condition_cell_registry/observation_provenance/baseline/split or papers/workbooks must fail. Schema validation runs before indexing in src/sgen007_provenance.py (register v12, battery v9).
+Render C2 field-level. End exactly: SGEN007_FIX7_SCORE: <0-100>; C2:<...>

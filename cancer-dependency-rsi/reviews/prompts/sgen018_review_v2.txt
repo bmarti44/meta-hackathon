@@ -1,0 +1,3 @@
+Re-review v2 (gpt-6.1-sol, high), read-only, metadata only. Files: src/sgen018_inventory_v2.py, generations/sgen018/inventory_v2.json, generations/sgen018/SPEC.md (incl addendum), reviews/sgen018_review.md.
+Verify each v1 finding resolved (terminal-window commitment, first-qualified-ancestor pairing, dangling reporting incl the 2 records, semantics/coverage nonclaims incl unqualified count, key normalization, deterministic pairs, dated-transition wording) and counts unchanged. Score 0-100.
+End exactly: SGEN018_V2: <CLOSED|OPEN> and SGEN018_V2_SCORE: <0-100>

@@ -1,0 +1,54 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 1.
+Repo: cancer-dependency-rsi/ (cwd root is its parent). Site: site/index.html
+plus site/data/{genes.json,stats.json}, site/assets/* (figures, PDF, CSVs),
+site/assets/vendor/{three,gsap,ScrollTrigger,lenis}.min.js,
+site/apex_redirect.js (CloudFront Function for apex->www 301).
+Data generator: src/build_site_data.py. Ground truth: generations/
+medium_attribution_v2_norm.csv, manuscript/manuscript_draft_v2.md,
+FINDINGS.md, STATUS.md.
+
+The site's job (user requirements):
+1. Very polished, striking design (WebGL scrollytelling: 17,525 genes as
+   GPU particles morphing dish -> flat/dome split -> real (D,A) diagonal ->
+   survivor ring).
+2. Easy way to tell the story of how the audit was created.
+3. Easy to search all data; fast path to source/citation for every number.
+4. Canonical host is https://www.itsthemedium.com; apex redirects to www.
+5. Claims must stay in the audited scoped language: observational
+   "medium-consistent" classifications, NOT causal proof; depletion-kinetics
+   only as hypothesis; the preprint is NOT yet posted and author names are
+   placeholders in the PDF - the site must not imply otherwise.
+
+Review skeptically, from source, recomputing where cheap:
+- DATA: spot-check per-gene values/flags/counts shown or implied by the
+  page and genes.json against generations/medium_attribution_v2_norm.csv
+  and stats (e.g. SQLE, ITGB1, LSM7, 456/387/249/207, tag counts). Check
+  stats.json vs the CSV and vs manuscript numbers (slope 0.90, CI, held-out
+  0.96, HC3 82%/75%, Broad 47%/87%, Sanger 8/16, 5 medium, 3 unresolved).
+- CODE: read all of site/index.html JS: correctness of search/filter/sort/
+  detail/citation builders, hash routing, scatter, Three.js formations
+  (are coordinates truly the gene D/A values? RNG, clamps, survivor set),
+  GSAP/Lenis choreography, reduced-motion and no-WebGL fallbacks, error
+  paths (data fetch failure), XSS/HTML injection via gene fields, clipboard
+  fallbacks, canonical/OG URLs, any apex (non-www) user-facing URLs.
+- DESIGN/UX vs requirements 1-3: is the story actually followable? Is
+  search fast to reach? Any dead ends, misleading visuals (e.g. formations
+  implying data they do not encode), accessibility problems (focus,
+  contrast, aria, keyboard), mobile issues you can infer from CSS,
+  performance risks (payload sizes, per-frame CPU work).
+- DEPLOY: apex_redirect.js correctness (query string, host check, loop
+  risk); asset paths; anything that would break on S3+CloudFront static
+  hosting under https://www.itsthemedium.com/.
+
+Do NOT demand over-engineering (no framework rewrites, no test-framework
+demands); propose the smallest fix per issue. Ignore the /tmp test
+harnesses; the graded artifact is site/ plus its data accuracy.
+
+Output, in this order:
+SCORE: n/100 (90+ = ship it; 80-89 = minor fixes; <80 = material work)
+VERDICT: one paragraph.
+ISSUES: grouped CRITICAL / HIGH / MEDIUM / LOW. Each: file:line or
+artifact, evidence you verified (quote values), user impact, smallest fix.
+Only list issues you actually verified from the files - no speculation
+without a check; mark inference-only items as such.
+CHECKS RUN: commands/recomputations you performed.

@@ -1,0 +1,12 @@
+{
+ "completed_with_measured_tokens": 15,
+ "needs_conservative_charge": 4,
+ "totals_completed_only": {
+  "input_tokens": 8750313,
+  "cached_input_tokens": 7932416,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 108308,
+  "reasoning_output_tokens": 48689
+ },
+ "screen_criterion_1": "PASS_CONDITIONAL: realized tokens measured for all completed calls with token records; failed/killed calls must be charged a predeclared reserved maximum (never zero) in any future comparison - charging rule to be frozen in Lock-1 draft and sol-high reviewed before any pilot"
+}

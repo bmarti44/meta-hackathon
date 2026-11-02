@@ -1,0 +1,14 @@
+Terminal-posture consult (gpt-6.1-sol, xhigh). DO NOT read files or use tools. Facts below are verified. This is NOT the terminal determination (slot 3/3 stays reserved unless you direct otherwise). Reply decisions-first (3 lines), then brief justification (max ~60 lines).
+
+Verified state 2026-10-29:
+- Gates (your determination v2): MET C1,C2,C5,C7; PARTIAL C3,C4,C6,C10,C11,C12; UNMET C8,C9,C13. GOAL C9 since amended by user: estimated-cost basis admissible (estimator v7, micro-review 100; $34.18/66 calls; metered $0).
+- Science: Lock-S spent (BOUND rho=-0.146; 148 models=142 patients; patient interval unquantified; envelope vacuous). sgen010: fresh pool 1,106 models/1,069 patients disjoint from C (92). sgen011-C: NEITHER_PASSES. sgen012: A_STILL_UNRESOLVED (97) - provenance now establishable for 729/724, but two-arm media contrast structurally imprecise (best MDR 0.171>0.146; needs 1,458 comps) + lineage confounding V=0.568. sgen013: FAIL (98) - one-sample transport lacks component-level paired-format L/B (1 component/endpoint vs >=367 needed). Per your sgen013 SPEC: "stop outcome work on this pool; scientifically unresolved, branch infeasible."
+- Policy: pgen005 SPEC locked; task instantiation blocked (no qualifying science design); no policy cycle has ever run. Replay world exists (C7).
+- Outstanding partial-gate items previously named: C6 (S1 supplement panel visuals uninspected; broad-set novelty screening beyond top-25), C11 (patient-level interval irreproducible from retained artifacts; no policy comparison), C12 (manuscript package exists, reviewed 91; now stale re sgen010-013), C3/C4/C10 tied to design/patient inference.
+- Resources: allocations ample (user-amended); outcome files exist only in ~/Downloads (unread, by design); no external paired-format L/B resource available; user is engaged and supplying decisions/files on request.
+
+Decide:
+Line1: POSTURE: <CONTINUE_GENERATIONS | COMPLETE_PACKAGE_CANDIDATE | NONCOMPLETE_TERMINAL_CANDIDATE | PAUSE_FOR_EXTERNAL_RESOURCE>
+Line2: NEXT: <single most valuable next generation/action, one line - or NONE>
+Line3: TERMINAL_SLOT: <PRESERVE | SPEND_NOW>
+Justify: which gates any further local generation can still move (name them), which are externally blocked (name exact resource), and what the honest campaign record should say if we stop here. If CONTINUE, specify the next generation at SPEC-parameter level.

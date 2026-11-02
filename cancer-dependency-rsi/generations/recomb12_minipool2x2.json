@@ -1,0 +1,16 @@
+{
+ "format_Dome_minus_Plastic": {
+  "n_pairs": 7,
+  "mev": -0.011,
+  "heme": -0.03,
+  "oxphos": 0.06,
+  "all_mean": 0.004
+ },
+ "medium_SF_minus_Serum": {
+  "n_pairs": 5,
+  "mev": -0.266,
+  "heme": -0.169,
+  "oxphos": -0.174,
+  "all_mean": -0.001
+ }
+}

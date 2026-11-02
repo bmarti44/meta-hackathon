@@ -1,0 +1,12 @@
+{
+  "recorded": "2026-10-28",
+  "cpu": "Apple M5 Max",
+  "cores": 18,
+  "ram_gb": 128,
+  "disk_free_gib_approx": 532,
+  "os": "macOS 26.6 arm64",
+  "python": "Python 3.14.8",
+  "git": "git version 2.54.0 (Apple Git-157)",
+  "review_model": "gpt-6.1-sol@high via codex exec",
+  "generation_model": "gpt-6.1-sol@xhigh via codex exec"
+}

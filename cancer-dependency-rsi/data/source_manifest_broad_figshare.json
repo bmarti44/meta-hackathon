@@ -1,0 +1,145 @@
+[
+  {
+    "file": "README.txt",
+    "source_url": "https://ndownloader.figshare.com/files/64494405",
+    "bytes": 31435,
+    "sha256": "cdf44320ba3ef22e487547613f2a0470a87fcf107d685de009ea65a913f4c91a",
+    "figshare_md5": "14f81dc615d469a265779befe544912a",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_library_composition.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494426",
+    "bytes": 20741,
+    "sha256": "66f57d99cd24228a476f9f742deeaf93d7d112d0a26d668ba4e9f32d80b67f5b",
+    "figshare_md5": "cfc7988d5ba477ee8a37d4f64500900c",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_screen_metadata.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494429",
+    "bytes": 2777,
+    "sha256": "14def246b4f560c6448a814628ec127d6359bc3c82d1758de3029bee1a0a3303",
+    "figshare_md5": "f11cb963e09ab42cff11ef92dcc47f79",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "model_metadata.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494438",
+    "bytes": 272338,
+    "sha256": "a000a5ee1ebe2b2488a146b2a413ec4b93472488e6ad31b56126f522d652557c",
+    "figshare_md5": "97b26ec52b8a05e52df7abd507b8139f",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "screen_metadata.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494441",
+    "bytes": 259986,
+    "sha256": "af29e349dd19676029950d6799fec4efcefcb9b314f7622b4fcc6d564803472a",
+    "figshare_md5": "3f31162458b449dfd1dd1db0417d1e88",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_chronos_gene_effects.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494480",
+    "bytes": 231483,
+    "sha256": "c5c7918f80cf020ada112bb853fc5140fac63cef1b17415866108843f3443503",
+    "figshare_md5": "1154e8ab44d35db2ed548b97b9d5e28b",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_growth_format_tests.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494486",
+    "bytes": 20131,
+    "sha256": "4cca98df7b4fe560036da389b2597ad8e130a0dba053e3cb5e98d4d2e64cda98",
+    "figshare_md5": "7913f15322dd73d41df0dfe1fbac1adc",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_regression_coefficients.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494489",
+    "bytes": 56155,
+    "sha256": "2e6534c419c55d62419e708127ec4408497901c600c9f294f5a90438eda5cc37",
+    "figshare_md5": "15000c0fead07a8f121e13a5e9cc8ff8",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_serum_status_tests.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494498",
+    "bytes": 20125,
+    "sha256": "360c55c4ce19b437bb98abcd1da95f992927819e2031f3d0312c408b5d88716a",
+    "figshare_md5": "4a613a6b920f9e1f83a74e705bce74a3",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "minipool_guide_metadata.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494420",
+    "bytes": 93208,
+    "sha256": "addce8a794fce958f08e038c573112cc1c3e8f6c05040fc562966dcf579c1f23",
+    "figshare_md5": "809055bcb14c213422ecf1691a5f42e6",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  },
+  {
+    "file": "minipool_sequence_metadata.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494435",
+    "bytes": 5542,
+    "sha256": "5b6a5b017d3807350301fb6feda11f1d3c3b5bf929bb5024264fc6140a1b1f05",
+    "figshare_md5": "9a2dabbc36315bc67b26dd7676b2fcbf",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  },
+  {
+    "file": "organoids_vs_2d_gene_dependency_tail_enrichment_tests_full.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494531",
+    "bytes": 18505,
+    "sha256": "319f339fec0ddad6f7c5bdef4bd495b80bd7bf738834a8ef95085c72dff6e782",
+    "figshare_md5": "91e52dfa7406d8172920385d80ab1dc6",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  },
+  {
+    "file": "organoids_vs_2d_gene_dependency_tests_full.csv",
+    "source_url": "https://ndownloader.figshare.com/files/64494534",
+    "bytes": 2360446,
+    "sha256": "e20ef98705e0f2e590ba5011c9683c883a3e585b6052adc1b3488502101dc40f",
+    "figshare_md5": "f9e4c007c87e724294e259bfda39e338",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.29472362",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  }
+]

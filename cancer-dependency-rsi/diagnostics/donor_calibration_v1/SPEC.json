@@ -1,0 +1,29 @@
+{
+  "id": "donor-calibration-v1",
+  "evidence_type": "SYNTHETIC_CODE_ONLY",
+  "source": "reviews/uncertainty_followup_xhigh_v1.md",
+  "frozen_primary": "confirmatory207/mean_abs_delta/base_strength; independent external outcomes remain quarantined",
+  "quality": "q=null,admissible_for_policy=false for every synthetic and currentdevelopmentartifact",
+  "seed": 20261028,
+  "fixture_seed_rule": "SeedSequence([seed,scenario_id,outer_index,11])",
+  "bootstrap_seed_rule": "seed+10000*(scenario_id+1)+outer_index",
+  "outer_datasets": 100,
+  "bootstrap_replicates": 5000,
+  "coverage_count_min": 90,
+  "acceptance": "both fixtures:all100intervals valid,atleast90cover exacttarget; nested144donor/148model representation invariant; constant/nonfinite guards pass. This only screens grossalgorithmicfailure,not nominalbiologicalcoverage.",
+  "null_target": 0.0,
+  "nonzero_target": 0.6,
+  "failure_rule": "Failure remains failure; no substituteinterval or changedacceptancebar on these fixtures.",
+  "code_files": [
+    "src/donor_calibration.py",
+    "src/donor_kernel.py",
+    "src/confirmatory_estimand.py",
+    "src/estimators.py"
+  ],
+  "resources": {
+    "cpu_heavy_jobs": 1,
+    "reserved_memory_bytes": 2147483648,
+    "wall_s_max": 600,
+    "additional_metered_API_spend": 0
+  }
+}

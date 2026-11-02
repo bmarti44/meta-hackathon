@@ -1,0 +1,51 @@
+{
+ "status": "V4_POSTLOCK2",
+ "panel_genes": 250,
+ "genes_with_external_coordinate": 207,
+ "panel_level_external_result": {
+  "decision": "BOUND",
+  "estimate": -0.14583205005879532,
+  "ci95_donor": [
+   -0.17526797046592052,
+   -0.11365511914822886
+  ],
+  "robustness": "sign robust across secondaries/stability; magnitude bound holds for primary,S2,S3 only (S1,S4, model-cluster and gene-block ranges cross -0.20)"
+ },
+ "field_dictionary": {
+  "format condition_a/b": "Dome / Plastic (held: culture medium); delta = Dome - Plastic Chronos",
+  "medium condition_a/b": "OPAC / RPMI-FBS (held: growth format); delta = OPAC - RPMI/FBS Chronos",
+  "panel_level_context": "panel-level Lock-S association context repeated for join convenience; NOT per-gene evidence",
+  "prior_S1_*": "author-published minipool test outputs (figshare), descriptive join; serum file contrasts serum vs serum-free status as released by authors",
+  "prior_knowledge_disposition / biomarker_disposition": "source-linked disposition per gene; explicit not-located/not-evaluated states, never invented findings"
+ },
+ "evidence_types": {
+  "environment": "Layer-A paired minipool contrasts (exploratory, adaptively reused)",
+  "transfer": "single Lock2 external retrospective measurement (association component only)",
+  "biomarker": "not evaluated as predictive biomarkers in this campaign; reported state/genotype associations for WLS/TCF7L2/FZD5/CDK6 annotated as such; S2 highlighted WRN/MDM2/CCNE1 are not panel members; S3 CDK6 note is a different estimand",
+  "prior_knowledge": "S1 author test per gene (significant or explicitly tested-not-significant with FDR) + S1 text findings (WNT state: WLS/TCF7L2/FZD5; CDK6 glial/CDKN2A Fig3) + author library classes",
+  "invariance": "none",
+  "causal": "none"
+ },
+ "annotation_counts": {
+  "S1_format_FDR<0.05": 7,
+  "S1_serum_FDR<0.05": 8,
+  "S1_WNT_in_panel": [
+   "FZD5",
+   "TCF7L2",
+   "WLS"
+  ],
+  "S3_FDR_in_panel": [
+   "CDK6"
+  ]
+ },
+ "inputs": {
+  "atlas/v3/genes.csv": "f74c6c554edeccfd032389aa415cf8171bbaaaec12a9d7078bc026f84ec59691",
+  "atlas/v3/exclusions.csv": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e",
+  "atlas/v3/paired_observations.csv": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801",
+  "atlas/v3/manifest.json": "accebeb490113ab29c4904360d185a9ffc275e2f20f130b1c16ae456d52a8cb9"
+ },
+ "code": {
+  "src/build_atlas_v4.py": "fd066fa6fb44f03afd05e68d20158ae3127e7e9a19a7ada37d46a6061ff7622e"
+ },
+ "note": "v4 corrects disposition semantics (review HIGH-1) + donor-identity wording per sgen001 (144 covariate-ID groups = 142 patients; patient-weighted effects unknown in size/direction); all measurements inherited unchanged."
+}

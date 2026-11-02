@@ -1,0 +1,14 @@
+{
+  "record": "acquisition deviation - compressed-payload overfetch in metadata probes (sol-high issue 4, verified)",
+  "facts": [
+    "pgen002 probes (x2): EOCD tail range began 92,052 bytes before the central directory, transferring compressed member-payload bytes from the last zip member(s).",
+    "pgen003 archive listing: 259,837 bytes before its central directory similarly transferred.",
+    "No evidence any compressed payload was decompressed or outcome values decoded: probe code parsed only EOCD/central-directory structures; payload bytes were discarded in-memory. This distinguishes transfer from exposure but does NOT retroactively certify pgen001 (receipts absent)."
+  ],
+  "corrections": [
+    "All 'metadata-only download/acquisition' phrasings for pgen002/pgen003 are corrected to: metadata-INTENT ranges with bounded compressed-payload overfetch, no decoded outcome values.",
+    "pgen001 DISPOSITION_v2 'salvageable... no outcome was accessed' is QUALIFIED: author-claimed, independently unverified (historical receipts missing).",
+    "Cumulative probe accounting stands (pgen002: 10 requests / 2,009,748 bytes across both probes; within ceilings)."
+  ],
+  "future_rule": "Fail-closed range probes: fetch minimal EOCD window (<=64KiB tail, larger only with predeclared justification), request exactly [cd_off, cd_off+cd_size), validate 206 + Content-Range, enforce byte caps before reading, retain directory bytes + code hash in receipts."
+}

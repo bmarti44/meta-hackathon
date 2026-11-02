@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/cdrsi_fresh/src/sgen005_upstream.py", line 139, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/private/tmp/cdrsi_fresh/src/sgen005_upstream.py", line 85, in main
+    assert frozen.is_file() and sha256_file(frozen) == digest, (label, rel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('v1', 'src/estimators.py')

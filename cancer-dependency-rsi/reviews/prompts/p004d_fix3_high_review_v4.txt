@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only, NARROW scope: src/tree_cpu.py metering only (previous 84, reviews/p004d_fix2_high_review_v3.md).
+Verify: (1) sampler CPU now tight-window per-sampler-call RUSAGE_CHILDREN deltas (pgrep+ps two-step), no descendant double count - probe fork fixture expected ~1.0+small overhead NOT ~2.0; (2) group completion flag + killpg on every incomplete exit incl sampling failure after leader exit; (3) combined-total assertions in tests/test_tree_cpu.py (6 tests).
+Issues severity+file:line+fix. End exactly: METER_FIX3_SCORE: <0-100>

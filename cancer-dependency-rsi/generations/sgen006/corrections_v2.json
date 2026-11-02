@@ -1,0 +1,21 @@
+{
+ "droplet_identity": {
+  "id": "PPR1345332",
+  "source": "PPR",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.64898/2026.10.13.744538",
+  "pubYear": "2026"
+ },
+ "metering_v2": {
+  "single_1p2": {
+   "total": 1.1946379999999999,
+   "tree": 1.15,
+   "controller": 0.044638
+  },
+  "failed_cpu": {
+   "rc": 3,
+   "tree": 0.47
+  }
+ }
+}

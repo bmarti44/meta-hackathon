@@ -1,0 +1,94 @@
+**Decisions:** start **sgen019**, testing molecular moderation of paired format contrasts. Sequester **25% of previously unexposed, fully linked patient groups before reading molecular or dependency values**. Keep Downloads results developmental; v3 remains **INCONCLUSIVE**. The generations below are new proposals; their scientific novelty still requires a literature audit.
+
+All splits below exclude the sequestration set. Existing GOAL C-gate definitions remain unchanged; the stated contributions describe evidence toward them, not gate passage.
+
+The ranked generations are:
+
+1. **sgen019 — Molecular moderation of matched-format dependency changes.**
+   - **Question:** Do predefined DNA markers explain dependency changes between 2D and dome cultures with the same recorded medium, beyond source dependency and lineage?
+   - **Join:** ScreenGeneEffect → screen/condition bridge from CRISPRScreenMap + ScreenSequenceMap → ModelCondition → Model; add patient linkage, Gene.csv, WGS copy number, and mutation matrices.
+   - **Independence/splits:** patient linkage component; five patient-disjoint development folds, with all models and screens from a patient together.
+   - **Evaluator:** patient-weighted, target-balanced reduction in held-out absolute error for the within-model dependency difference, relative to a fixed source-score/lineage/metadata baseline.
+   - **Kill:** ambiguous joins, inadequate paired support, poor molecular coverage, or failure of the locked improvement threshold.
+   - **C-gate contribution:** candidate molecular explanations plus conditional prediction across an observed culture transition. Cannot establish causal format effects, novelty, independent confirmation, or research-policy improvement.
+
+2. **sgen020 — Molecular moderation of medium transitions at fixed format.**
+   - **Question:** Does KRAS hotspot status predict how KRAS dependency changes between two recorded media within the same format?
+   - **Join:** the screen/condition/patient bridge above, medium annotations, KRAS ScreenGeneEffect, and the hotspot matrix.
+   - **Independence/splits:** patient; five grouped development folds. Before dependency access, select the ordered medium pair with the largest eligible patient count, breaking ties lexically.
+   - **Evaluator:** held-out absolute-error reduction for the paired difference after adding hotspot status and its source-dependency interaction; require ≥0.05 Chronos units.
+   - **Kill:** fewer than 40 development patients, fewer than 10 in either hotspot state, or inadequate medium identity metadata.
+   - **C-gate contribution:** bounded discovery/prediction for those recorded media. Cannot attribute the result to a particular nutrient without formulation evidence or reuse it as confirmation.
+
+3. **sgen021 — Copy-number sensitivity of apparent environment-dependent failures.**
+   - **Question:** How much of the paired dependency shift is predictable from reference DNA copy number?
+   - **Join:** paired screen differences + OmicsCNGeneWGS + Gene.csv; resolve profile identifiers through OmicsProfiles where required.
+   - **Independence/splits:** patient; fixed grouped folds. Freeze the same target panel as sgen019, with no genome-wide target selection.
+   - **Evaluator:** held-out absolute-error reduction from adding target/marker copy number to the source-score baseline; require ≥0.05 Chronos units.
+   - **Kill:** inadequate copy-number coverage or support, or improvement below threshold.
+   - **C-gate contribution:** a robustness diagnostic for molecular explanations. Predictability from copy number alone cannot distinguish biological dosage effects from screening artifacts; this generation awards neither mechanistic nor policy success.
+
+4. **pgen011 — Patient-level acquisition of additional environment measurements.**
+   - **Question:** At a fixed measurement budget, does a molecular-diversity acquisition policy improve environment-transfer prediction over uniform patient sampling?
+   - **Join:** sgen019’s eligible paired outcomes, source measurements, molecular features, and patient groups.
+   - **Independence/splits:** patient-disjoint acquisition and evaluation pools within development; destination outcomes remain hidden until selected. All outcomes from a selected patient consume that patient’s acquisition unit.
+   - **Evaluator:** evaluation-set MAE improvement over uniform acquisition at a fixed 20% acquisition budget, averaged over a locked seed list; require ≥0.05 Chronos units.
+   - **Kill:** fewer than 100 eligible development patients or inadequate evaluation support. Repeated seeds do not create additional independent patients.
+   - **C-gate contribution:** offline engineering evidence about measurement allocation. It establishes neither biological explanation nor prospective policy benefit. The exhausted seven-model atlas policy family remains exhausted.
+
+The executable SPEC sketch for **sgen019** is:
+
+1. **Lock the estimand and scope.** Estimate the association between reference DNA state and  
+   `Δg = ScreenGeneEffectg(dome) − ScreenGeneEffectg(2D)`, within models sharing the same recorded medium. Positive Δ means weaker dependency in dome. Exclude spheroids and unspecified “3D” formats.
+
+2. **Bind the schema before values.** Record exact filenames, release identifiers, checksums, headers, key types, and categorical mappings. Exact filenames/columns beyond those supplied cannot be inferred here. An unsupported join requires `SPEC_SCHEMA_FAIL`; resolving it requires a revised lock before value access.
+
+3. **Freeze the screen join contract.**
+   - Start with `ScreenGeneEffect.csv.ScreenID`.
+   - Use **CRISPRScreenMap + ScreenSequenceMap** to construct a unique bridge containing `ScreenID`, `ModelConditionID`, `ModelID`, and available protocol identifiers.
+   - Join `ModelConditionID → ModelCondition`; verify its `ModelID` agrees with the bridge.
+   - Join `ModelID → Model.csv → patient linkage component`, incorporating Passports/SangerModelID links.
+   - Multiple sequence records may collapse only when their model/condition assignments agree. Conflicting assignments are quarantined; dependency values cannot resolve them.
+
+4. **Freeze pair selection.** Require exact agreement on recorded medium and assay-library identity, plus documented comparability of the release’s screen scores. Unknown matching fields are ineligible. Select one pair per model by lexical order of `(medium identifier, source ScreenID, destination ScreenID)`. Do not choose pairs by effect size or apparent quality of the result.
+
+5. **Freeze six target–marker pairs.**  
+   `KRAS–KRAS; BRAF–BRAF; EGFR–EGFR; ERBB2–ERBB2; MDM2–TP53; PRMT5–MTAP`.  
+   Resolve gene identifiers through **Gene.csv**. No substitutions, target expansion, or successful-target-only summaries. These established biological axes are starting hypotheses; potential novelty lies in their measured environmental moderation.
+
+6. **Freeze molecular joins and features.** Use **OmicsCNGeneWGS** and the **OmicsSomaticMutations Damaging/Hotspot matrices**, with their exact local filenames bound at lock. Join directly through ModelID where supported; otherwise resolve ProfileID through **OmicsProfiles → ModelCondition → Model**. Use one metadata-selected reference profile per assay: release-designated primary profile, otherwise lexical ProfileID. Record its culture provenance. Features are target/marker copy number and marker damaging/hotspot flags; copy-number transformations follow the documented encoding.
+
+7. **Freeze eligibility.** Require all six paired target outcomes, at least 40 development patient groups, at least eight patients per outer fold, and ≥80% molecular-feature availability for every target–marker pair. Missing mutation observations remain missing, never wild type. Impute residual missing features from training patients only, with missingness indicators.
+
+8. **Freeze models and splits.** Assign five folds by a recorded seeded patient hash. Fit separate ridge models for each target:
+   - **Baseline:** source dependency, lineage, medium, and prespecified available protocol covariates.
+   - **Molecular model:** baseline plus the frozen molecular features and their interactions with source dependency.
+   - Use identical preprocessing and the ridge grid `{0.1, 1, 10, 100}`, selected by three-fold patient-grouped inner CV. Learn scaling, imputation, and category handling inside training folds.
+
+9. **Freeze the primary statistic.** For each patient, average absolute prediction error across that patient’s models; then average equally across patients and the six targets. Define  
+   `G = MAEbaseline − MAEmolecular`.  
+   Every target remains in this calculation. Gene counts, p-values, and the number of attractive interactions earn no reward.
+
+10. **Freeze interpretation and labels.**
+    - `DEV_PREDICTION_PASS`: `G ≥ 0.05`, with no target’s MAE worsening by more than 0.02.
+    - `DEV_PREDICTION_FAIL`: the evaluator completes but misses either threshold.
+    - `SUPPORT_FAIL`, `COVERAGE_FAIL`, or `SPEC_SCHEMA_FAIL`: the corresponding prerequisite fails.
+    - Report patient-level uncertainty with 500 seeded patient bootstraps that rerun the fitting pipeline. Treat this as development uncertainty.
+    - As secondary descriptions, define source dependency as `≤−0.5`, persistence as destination `≤−0.5`, and failure as destination `≥−0.2`; intermediate destinations remain unclassified. Require ≥10 source-dependent patients before describing a target’s persistence.
+    - Coefficients and subgroup descriptions remain discovery outputs. A prediction pass does not automatically establish an explanation or pass a C gate.
+
+11. **Keep implementation RAM-bounded.** Load identifier/condition metadata first. Stream ScreenGeneEffect once, retaining only eligible development rows and six target columns. Stream only the required molecular columns; use chunked long-table reads where necessary. Hold the resulting narrow patient/model table in memory. Do not load either complete dependency matrix or melt a wide matrix. **CRISPRGeneEffect.csv is excluded from this screen-level evaluator.**
+
+12. **Bound every resulting claim.** Name the release, supported lineages, recorded medium, format definitions, molecular assay provenance, and protocol limitations. Without randomization or adequate control of protocol cochanges, describe a **format-associated transition**. No result establishes an A→B→A recovery process or same-condition repeatability.
+
+The contamination ledger rules are:
+
+- **Before first value access**, record the generation SPEC/version/hash; file manifest; prior exposures and decisions; biological hypotheses; eligibility and exclusions; joins; patient grouping; splits/seeds; preprocessing; candidate models; evaluator; thresholds; kill rules; and permitted claims. Distinguish identifier/structural metadata inspection from molecular/outcome access.
+- **Sequester now:** construct transitive patient linkage components using identifiers only. Reserve exactly `ceil(0.25 × N)` eligible, previously unexposed components using a once-generated, recorded random seed. Reserve every linked model, condition, screen, profile, and assay row together.
+- **Exclude previously exposed patients from reservation.** This includes the seven-model atlas and all identifiable patients from spent Lock-S cohort C. Unresolved patient identities enter quarantine. Exclude these exposed groups from sgen019’s primary evaluator as well; any later exploratory use needs its own explicit ledger entry.
+- **Separate reserved rows before scientific parsing.** Route records using identifiers while treating the remaining payload as opaque. Seal all reserved molecular and outcome values across Downloads. Development ingestion must exclude them before numeric parsing, summaries, normalization, feature selection, or model fitting.
+- **Record each access and adaptation:** actor/process, timestamp, rows/columns, purpose, outputs, inspected results, and resulting decisions. Reusing development data across generations remains adaptive development, even with fresh folds.
+- **A future holdout remains possible, not guaranteed usable.** Open the reserve only under a separate frozen candidate/evaluator SPEC with adequate independent-patient support. Record that opening as consumption of a new validation resource; it cannot restore Lock-S C or retroactively make development results confirmatory. Linkage corrections that reveal prior exposure invalidate affected reserved groups and must be logged.
+
+FIRST_GENERATION: sgen019 — Molecular moderation of matched-format dependency changes  
+SEQUESTER: Yes—reserve 25% of previously unexposed, fully linked patient components before molecular or dependency value access.

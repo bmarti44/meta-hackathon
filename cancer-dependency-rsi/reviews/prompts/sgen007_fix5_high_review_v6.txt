@@ -1,0 +1,3 @@
+Independent re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 89.
+Verify round-5 fixes: battery REQUIRED now includes both figshare source manifests, atlas v3 manifest, exposure log (src/sgen007_battery.py); screen schema validation requires presence+nonempty of all REQUIRED fields incl license (src/sgen007_provenance.py register v10); receipt sha256 expectations asserted present (Passports manifest, supplemental receipt); battery note renders captured moesm3_installed boolean (cache_install_battery_v6.json - filename version lag is cosmetic, flag if material).
+Render C2 field-level. End exactly: SGEN007_FIX5_SCORE: <0-100>; C2:<...>

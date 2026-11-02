@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 84 (reviews/sgen009_fix2_high_review_v3.md).
+Verify: occurrence-bound parser in src/sgen009_trace.py (every rho token full-numeric+equal; every numeric bracket ordered+equal else reject; label-bound secondaries; context-bound counts: fixed/within-the N-gene, abstract/methods/limitations model+patient phrases, atlas 7/8; LOMO extrema restored; fixtures incl abstract-only corruptions, integer rho syntax, 2070 token); inventory atlas runner+manifest refs; reproducibility_report cites sgen002 v3 + hash; packet single mktemp run dir with distinct --report per runner.
+Probe corruptions beyond fixtures if you find any. End exactly: SGEN009_FIX3_SCORE: <0-100>

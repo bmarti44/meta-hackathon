@@ -1,0 +1,118 @@
+{
+ "question": "144 locked donor_IDs vs 142 Passports patients for the 148-model C cohort",
+ "groups": {
+  "SIDP01937": {
+   "patient_comment": "WTSI-COLIVM_061 was generated from a sample obtained from the same patient as WTSI-COLIVM_031. \nWTSI-COLIVM_031 was generated from a sample obtained from the same patient as WTSI-COLIVM_061.",
+   "patient_samples": [
+    "SIDS02059",
+    "SIDS02042"
+   ],
+   "models": [
+    {
+     "model": "WTSI-COLIVM_031",
+     "locked_donor_ID(individual_ID)": "2180271",
+     "age_clinical": "69",
+     "stage": "Stage IVA",
+     "sample_id": "SIDS02042",
+     "age_at_sampling_api": 69.0
+    },
+    {
+     "model": "WTSI-COLIVM_061",
+     "locked_donor_ID(individual_ID)": "2199999",
+     "age_clinical": "70",
+     "stage": "Stage IIIB",
+     "sample_id": "SIDS02059",
+     "age_at_sampling_api": 70.0
+    }
+   ],
+   "disposition": "(a) SAME PATIENT, distinct longitudinal samples \u2014 Passports grouping authoritative; S2 clinical individual_ID is attendance/sample-level for these records. Evidence: explicit same-patient comment on the patient record + age progression across samples."
+  },
+  "SIDP01939": {
+   "patient_comment": "WTSI-COLO_478 was generated from a primary tumour sample obtianed from the same patient as WTSI-COLIVM_051.",
+   "patient_samples": [
+    "SIDS02073",
+    "SIDS02089",
+    "SIDS02044"
+   ],
+   "models": [
+    {
+     "model": "WTSI-COLIVM_051",
+     "locked_donor_ID(individual_ID)": "2194560",
+     "age_clinical": "74",
+     "stage": "Stage IVA",
+     "sample_id": "SIDS02044",
+     "age_at_sampling_api": 74.0
+    },
+    {
+     "model": "WTSI-COLIVM_090",
+     "locked_donor_ID(individual_ID)": "2207757",
+     "age_clinical": "76",
+     "stage": "Stage IV",
+     "sample_id": "SIDS02073",
+     "age_at_sampling_api": 76.0
+    },
+    {
+     "model": "WTSI-COLO_478",
+     "locked_donor_ID(individual_ID)": "2194560",
+     "age_clinical": "74",
+     "stage": "Stage IVA",
+     "sample_id": "SIDS02089",
+     "age_at_sampling_api": 74.0
+    }
+   ],
+   "disposition": "(a) SAME PATIENT, distinct longitudinal samples \u2014 Passports grouping authoritative; S2 clinical individual_ID is attendance/sample-level for these records. Evidence: explicit same-patient comment on the patient record + age progression across samples."
+  }
+ },
+ "consequence_frozen_rule": "Locked Lock-S execution preserved unchanged. Its donor bootstrap treated the two same-patient model pairs as independent clusters (144 clusters vs 142 patients): same-patient models could be resampled independently, so the reported interval may slightly understate patient-level dependence for 2 of 142 patients. No replacement confirmatory interval is computed (C spent). Any patient-cluster recomputation from retained artifacts, if feasible without re-decoding outcomes, is exploratory sensitivity only.",
+ "requests": [
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/patients/SIDP01937",
+   "status": 200,
+   "bytes": 1265,
+   "sha256": "ac26bd397d76418429b5fe987b532a34952c5a8e75ec8ad7a06fe8a448134d1a",
+   "wall_s": 0.803
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/samples/SIDS02042",
+   "status": 200,
+   "bytes": 2363,
+   "sha256": "b25e7ac1e1643260f99b394bc033ee34e9fa7a3a49564d8a1a765f9e5d3745d1",
+   "wall_s": 0.468
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/samples/SIDS02059",
+   "status": 200,
+   "bytes": 2337,
+   "sha256": "a3b0a926b8ac7c5ce7e95f18ca9f19c89f90d7623de8993175a51300c4f7e120",
+   "wall_s": 0.616
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/patients/SIDP01939",
+   "status": 200,
+   "bytes": 1221,
+   "sha256": "9620be062b5f3bccacc17cffac92e9793939378c5f70c8164b612c42d4473bac",
+   "wall_s": 0.453
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/samples/SIDS02044",
+   "status": 200,
+   "bytes": 2338,
+   "sha256": "6f3f2a473a9bbd1f78a14b0338c19d22f480dba63d0cabe0d383473c3911cea7",
+   "wall_s": 0.552
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/samples/SIDS02073",
+   "status": 200,
+   "bytes": 2333,
+   "sha256": "ce1786a4970952478a9eb9e86840ed0f085c10efd9d91d19168a6be7cab5069f",
+   "wall_s": 0.484
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/samples/SIDS02089",
+   "status": 200,
+   "bytes": 2333,
+   "sha256": "7c74e93157db2f8d4ae29a9adb6b324a8556fcdceff56f08f3fdcd61bea5c10d",
+   "wall_s": 0.582
+  }
+ ]
+}

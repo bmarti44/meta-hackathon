@@ -1,0 +1,30 @@
+{
+  "prompt_sha256": "75293fe269c9b369dd7f271475f8af0451c87bb6fad75ba490854dc5da32a773",
+  "returncode": -9,
+  "timed_out": true,
+  "call_identity": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "phase": "phase2_lock1",
+    "terminal_review": false,
+    "web_search": "live",
+    "timeout_s": 1200,
+    "sandbox": "read-only",
+    "interface": "codex exec",
+    "binary": "codex",
+    "prompt_sha256": "75293fe269c9b369dd7f271475f8af0451c87bb6fad75ba490854dc5da32a773",
+    "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/astra_novelty_research.md"
+  },
+  "response_sha256": null,
+  "launch_error": null,
+  "wall_s": 1200.023650499992,
+  "cpu_s": null,
+  "peak_rss_bytes": null,
+  "tokens": null,
+  "actual_cost_usd": 0.0,
+  "host_model_cost_usd": "unknown",
+  "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/astra_novelty_research.md",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "reservation_id": "3fea2acf6ca241ea8f9b3a8b51c6b4ad"
+}

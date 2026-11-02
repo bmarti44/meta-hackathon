@@ -1,0 +1,104 @@
+{
+  "audit_version": 2,
+  "n_screens": 18,
+  "n_models_total": 7,
+  "models": [
+    "ACH-000048",
+    "ACH-000108",
+    "ACH-000178",
+    "ACH-001418",
+    "ACH-002958",
+    "ACH-003040",
+    "ACH-003052"
+  ],
+  "n_test_genes": 250,
+  "treatment_bundles": {
+    "medium": "OPAC (serum-free defined) vs RPMI/FBS \u2014 full medium-composition bundle, NOT isolated serum",
+    "format": "Matrigel dome vs plastic \u2014 geometry + matrix-exposure bundle, NOT isolated geometry"
+  },
+  "medium": {
+    "n_pairs": 5,
+    "pair_keys": [
+      "ACH-000048|Dome",
+      "ACH-000108|Dome",
+      "ACH-000178|Dome",
+      "ACH-003040|Dome",
+      "ACH-003040|Plastic"
+    ],
+    "n_distinct_models": 4,
+    "distinct_models": [
+      "ACH-000048",
+      "ACH-000108",
+      "ACH-000178",
+      "ACH-003040"
+    ],
+    "donors": "UNRESOLVED (crosswalk open; do not equate models with independent donors)",
+    "double_counted_model": "ACH-003040 contributes 2 pairs; equal-pair weighting overweights it \u2014 Lock 1 must define model-level weighting",
+    "test250": {
+      "both_signs_frac": 0.908,
+      "note": "sign-flip rate is DESCRIPTIVE ONLY (controls flip at similar rates; not evidence of biological heterogeneity)",
+      "median_abs_delta": 0.1826935925,
+      "mean_abs_mean_delta": 0.136649452116,
+      "frac_genes_abs_mean_delta_gt_0.5": 0.016
+    },
+    "controls750": {
+      "both_signs_frac": 0.9213333333333333,
+      "note": "sign-flip rate is DESCRIPTIVE ONLY (controls flip at similar rates; not evidence of biological heterogeneity)",
+      "median_abs_delta": 0.164127849,
+      "mean_abs_mean_delta": 0.09402267578586666,
+      "frac_genes_abs_mean_delta_gt_0.5": 0.009333333333333334
+    },
+    "direction_check_vs_published_OLS": {
+      "test250_pearson": 0.9564276529498316,
+      "test250_spearman": 0.9531166898670377,
+      "test250_sign_agreement": 0.944,
+      "all1000_pearson": 0.9323417843271973,
+      "note": "format sign flipped (ours Dome-Plastic vs published Plastic indicator). C5 precursor only."
+    }
+  },
+  "format": {
+    "n_pairs": 7,
+    "pair_keys": [
+      "ACH-000108|RPMI/FBS",
+      "ACH-000178|RPMI/FBS",
+      "ACH-001418|RPMI/FBS",
+      "ACH-002958|OPAC",
+      "ACH-003040|OPAC",
+      "ACH-003040|RPMI/FBS",
+      "ACH-003052|OPAC"
+    ],
+    "n_distinct_models": 6,
+    "distinct_models": [
+      "ACH-000108",
+      "ACH-000178",
+      "ACH-001418",
+      "ACH-002958",
+      "ACH-003040",
+      "ACH-003052"
+    ],
+    "donors": "UNRESOLVED (crosswalk open; do not equate models with independent donors)",
+    "double_counted_model": "ACH-003040 contributes 2 pairs; equal-pair weighting overweights it \u2014 Lock 1 must define model-level weighting",
+    "test250": {
+      "both_signs_frac": 0.984,
+      "note": "sign-flip rate is DESCRIPTIVE ONLY (controls flip at similar rates; not evidence of biological heterogeneity)",
+      "median_abs_delta": 0.15635500849999998,
+      "mean_abs_mean_delta": 0.09813205913714286,
+      "frac_genes_abs_mean_delta_gt_0.5": 0.012
+    },
+    "controls750": {
+      "both_signs_frac": 0.9813333333333333,
+      "note": "sign-flip rate is DESCRIPTIVE ONLY (controls flip at similar rates; not evidence of biological heterogeneity)",
+      "median_abs_delta": 0.1392593025,
+      "mean_abs_mean_delta": 0.0705594569272381,
+      "frac_genes_abs_mean_delta_gt_0.5": 0.0
+    },
+    "direction_check_vs_published_OLS": {
+      "test250_pearson": 0.9058949829805795,
+      "test250_spearman": 0.8145810972975568,
+      "test250_sign_agreement": 0.792,
+      "all1000_pearson": 0.8421157812862285,
+      "note": "format sign flipped (ours Dome-Plastic vs published Plastic indicator). C5 precursor only."
+    }
+  },
+  "retracted_v1_claim": "v1 'heterogeneity dominates / averages near-uninterpretable' RETRACTED: control genes flip signs at equal rates. Evidence must come from magnitudes vs controls/technical variation."
+}

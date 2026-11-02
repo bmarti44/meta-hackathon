@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/cdrsi_fresh/src/sgen002_reproduce.py", line 88, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/private/tmp/cdrsi_fresh/src/sgen002_reproduce.py", line 80, in main
+    with open(OUT, 'x') as fh:
+         ~~~~^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/private/tmp/cdrsi_fresh/generations/sgen002/reproduction_report_v3.json'

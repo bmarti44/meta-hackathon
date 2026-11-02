@@ -1,0 +1,1864 @@
+{
+ "requests": [
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37801915-37867450",
+   "status": 206,
+   "content_range": "bytes 37801915-37867450/37867451",
+   "bytes": 65536,
+   "sha256": "e2210188d436babc8a123ed81eea331e07bfaabb85be0b1ffb175756d6e9a8b9",
+   "wall_s": 0.721
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37787262-37867428",
+   "status": 206,
+   "content_range": "bytes 37787262-37867428/37867451",
+   "bytes": 80167,
+   "sha256": "8b5176c09ba526dfe3a24c11eeb91f1722aa6dc3b636e9ae1809cff58866a8fa",
+   "wall_s": 0.738
+  }
+ ],
+ "members": [
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/.zenodo.json",
+   "uncompressed": 1479
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/EXTERNAL_INPUTS_REQUIRED_FOR_FULL_REFIT.md",
+   "uncompressed": 1105
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/README.md",
+   "uncompressed": 1482
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/DEPLOYMENT_MODEL_LOCK.json",
+   "uncompressed": 709
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/DEVELOPMENT_MODEL_SELECTION_LOCK.json",
+   "uncompressed": 975
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/FINAL_2D_MODEL_LOCK.json",
+   "uncompressed": 2294
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/FINAL_VERIFICATION.csv",
+   "uncompressed": 561
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/FROZEN_PROTOCOL.json",
+   "uncompressed": 1277
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/HOLDOUT_PREDICTION_LOCK.json",
+   "uncompressed": 699
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/INDEPENDENT_VERIFICATION.csv",
+   "uncompressed": 2398
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/INDEPENDENT_VERIFICATION.json",
+   "uncompressed": 300
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/LOCKED_HOLDOUT_SUMMARY.json",
+   "uncompressed": 968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/STRICT_AUDIT_REPORT.csv",
+   "uncompressed": 2289
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/STRICT_AUDIT_REPORT.json",
+   "uncompressed": 458
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/COMPLETED.json",
+   "uncompressed": 475
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/convergence_audit.csv",
+   "uncompressed": 4964
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/feature_stability.csv",
+   "uncompressed": 1123
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/inner_grid_scores.csv",
+   "uncompressed": 68629
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/oof_predictions.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/outer_selected_hyperparameters.csv",
+   "uncompressed": 5895
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/selected_features_outer.csv",
+   "uncompressed": 1833254
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/selected_features_outer.npy",
+   "uncompressed": 120128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/all_omics_lineage/target_metrics.csv",
+   "uncompressed": 2738
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/model_manifest.csv",
+   "uncompressed": 3711
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_1021.joblib",
+   "uncompressed": 14298
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_10413.joblib",
+   "uncompressed": 14140
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_1499.joblib",
+   "uncompressed": 14471
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_1871.joblib",
+   "uncompressed": 14373
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_1956.joblib",
+   "uncompressed": 14093
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_2033.joblib",
+   "uncompressed": 14088
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_2065.joblib",
+   "uncompressed": 14115
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_2260.joblib",
+   "uncompressed": 14227
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_3480.joblib",
+   "uncompressed": 14220
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_4194.joblib",
+   "uncompressed": 13945
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_4780.joblib",
+   "uncompressed": 14258
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_5594.joblib",
+   "uncompressed": 13916
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_5894.joblib",
+   "uncompressed": 14225
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_673.joblib",
+   "uncompressed": 14441
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_6794.joblib",
+   "uncompressed": 14246
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_7248.joblib",
+   "uncompressed": 13940
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_7249.joblib",
+   "uncompressed": 13989
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_896.joblib",
+   "uncompressed": 14383
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_898.joblib",
+   "uncompressed": 14027
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/models/ENTREZ_9817.joblib",
+   "uncompressed": 13876
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/selected_features.csv",
+   "uncompressed": 348519
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/deployment_model_all_852/selected_global_indices.npy",
+   "uncompressed": 24128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/development_candidate_bootstrap_summary.csv",
+   "uncompressed": 538
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/development_candidate_cluster_bootstrap.csv",
+   "uncompressed": 418408
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/development_candidate_summary.csv",
+   "uncompressed": 861
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/development_model_selection_decision.csv",
+   "uncompressed": 1109
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/COMPLETED.json",
+   "uncompressed": 481
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/convergence_audit.csv",
+   "uncompressed": 5456
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/feature_stability.csv",
+   "uncompressed": 1092
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/inner_grid_scores.csv",
+   "uncompressed": 68486
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/oof_predictions.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/outer_selected_hyperparameters.csv",
+   "uncompressed": 5888
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/selected_features_outer.csv",
+   "uncompressed": 1815931
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/selected_features_outer.npy",
+   "uncompressed": 120128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_copy_number/target_metrics.csv",
+   "uncompressed": 2742
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/COMPLETED.json",
+   "uncompressed": 478
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/convergence_audit.csv",
+   "uncompressed": 5176
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/feature_stability.csv",
+   "uncompressed": 1124
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/inner_grid_scores.csv",
+   "uncompressed": 68470
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/oof_predictions.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/outer_selected_hyperparameters.csv",
+   "uncompressed": 5906
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/selected_features_outer.csv",
+   "uncompressed": 1828915
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/selected_features_outer.npy",
+   "uncompressed": 120128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_mutation/target_metrics.csv",
+   "uncompressed": 2739
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/COMPLETED.json",
+   "uncompressed": 471
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/convergence_audit.csv",
+   "uncompressed": 4755
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/feature_stability.csv",
+   "uncompressed": 1125
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/inner_grid_scores.csv",
+   "uncompressed": 68307
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/oof_predictions.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/outer_selected_hyperparameters.csv",
+   "uncompressed": 5873
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/selected_features_outer.csv",
+   "uncompressed": 1802641
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/selected_features_outer.npy",
+   "uncompressed": 120128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/expression_only/target_metrics.csv",
+   "uncompressed": 2739
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/frozen_2d_split_registry.csv",
+   "uncompressed": 37244
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/frozen_2d_split_summary.json",
+   "uncompressed": 247
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_minus_development_gap_bootstrap.npy",
+   "uncompressed": 16128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/model_manifest.csv",
+   "uncompressed": 3019
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_1021.joblib",
+   "uncompressed": 14288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_10413.joblib",
+   "uncompressed": 14102
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_1499.joblib",
+   "uncompressed": 14437
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_1871.joblib",
+   "uncompressed": 14332
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_1956.joblib",
+   "uncompressed": 14062
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_2033.joblib",
+   "uncompressed": 14021
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_2065.joblib",
+   "uncompressed": 14054
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_2260.joblib",
+   "uncompressed": 14220
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_3480.joblib",
+   "uncompressed": 14218
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_4194.joblib",
+   "uncompressed": 13931
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_4780.joblib",
+   "uncompressed": 14221
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_5594.joblib",
+   "uncompressed": 13871
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_5894.joblib",
+   "uncompressed": 14187
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_673.joblib",
+   "uncompressed": 14395
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_6794.joblib",
+   "uncompressed": 14213
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_7248.joblib",
+   "uncompressed": 13955
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_7249.joblib",
+   "uncompressed": 13983
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_896.joblib",
+   "uncompressed": 14363
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_898.joblib",
+   "uncompressed": 14028
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/models/ENTREZ_9817.joblib",
+   "uncompressed": 13885
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/selected_features.csv",
+   "uncompressed": 348519
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/holdout_validation_model/selected_global_indices.npy",
+   "uncompressed": 24128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_holdout_macro_bootstrap.npy",
+   "uncompressed": 8128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_holdout_predictions.npy",
+   "uncompressed": 13808
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_holdout_target_metrics.csv",
+   "uncompressed": 2714
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_oof_predictions.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_outer_hyperparameters.csv",
+   "uncompressed": 4166
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_only_target_metrics.csv",
+   "uncompressed": 2745
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/lineage_patient_group_stratified_holdout_permutation_null.npy",
+   "uncompressed": 8128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/locked_holdout_macro_bootstrap.npy",
+   "uncompressed": 8128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/locked_holdout_predictions.csv",
+   "uncompressed": 46065
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/locked_holdout_predictions.npy",
+   "uncompressed": 13808
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/locked_holdout_target_metrics.csv",
+   "uncompressed": 2727
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/nested_split_registry.csv",
+   "uncompressed": 632694
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/development_full.npz",
+   "uncompressed": 62246
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_inner0.npz",
+   "uncompressed": 62345
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_inner1.npz",
+   "uncompressed": 62311
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_inner2.npz",
+   "uncompressed": 62034
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_inner3.npz",
+   "uncompressed": 62582
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_inner4.npz",
+   "uncompressed": 62523
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer0_train.npz",
+   "uncompressed": 62242
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_inner0.npz",
+   "uncompressed": 62340
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_inner1.npz",
+   "uncompressed": 62777
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_inner2.npz",
+   "uncompressed": 62368
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_inner3.npz",
+   "uncompressed": 62500
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_inner4.npz",
+   "uncompressed": 62452
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer1_train.npz",
+   "uncompressed": 62428
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_inner0.npz",
+   "uncompressed": 62319
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_inner1.npz",
+   "uncompressed": 62353
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_inner2.npz",
+   "uncompressed": 62660
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_inner3.npz",
+   "uncompressed": 62652
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_inner4.npz",
+   "uncompressed": 62358
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer2_train.npz",
+   "uncompressed": 62408
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_inner0.npz",
+   "uncompressed": 62363
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_inner1.npz",
+   "uncompressed": 62443
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_inner2.npz",
+   "uncompressed": 62309
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_inner3.npz",
+   "uncompressed": 62430
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_inner4.npz",
+   "uncompressed": 62352
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer3_train.npz",
+   "uncompressed": 62319
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_inner0.npz",
+   "uncompressed": 62573
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_inner1.npz",
+   "uncompressed": 62495
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_inner2.npz",
+   "uncompressed": 62256
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_inner3.npz",
+   "uncompressed": 62365
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_inner4.npz",
+   "uncompressed": 62543
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/selection_cache/outer4_train.npz",
+   "uncompressed": 62173
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/analysis_results/winner_minus_lineage_holdout_bootstrap.npy",
+   "uncompressed": 8128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/predict_blinded_3d.py",
+   "uncompressed": 7365
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/run_2d_omics_ablation.py",
+   "uncompressed": 67173
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/documentation/TARGET_PANEL_PROVENANCE_NOTE.md",
+   "uncompressed": 1364
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/integrity/FUTURE_3D_PREDICTOR_SMOKE_TEST.json",
+   "uncompressed": 432
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/verification_inputs/locked_target_keys.npy",
+   "uncompressed": 5248
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/verification_inputs/locked_target_panel_20.csv",
+   "uncompressed": 7642
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/verification_inputs/locked_y2d.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/verification_inputs/training_model_registry.csv",
+   "uncompressed": 341277
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/README.md",
+   "uncompressed": 943
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/EXPLORATORY_3D_SUMMARY.json",
+   "uncompressed": 1491
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/exploratory_3d_lineage_summary.csv",
+   "uncompressed": 349
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/exploratory_3d_lineage_target_metrics.csv",
+   "uncompressed": 5270
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/exploratory_3d_macro_summary.csv",
+   "uncompressed": 1293
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/exploratory_3d_target_metrics.csv",
+   "uncompressed": 5364
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/leave_one_lineage_out_summary.csv",
+   "uncompressed": 604
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_only_3d_predictions.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_stratified_bootstrap_lineage_baseline_macro.npy",
+   "uncompressed": 40128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_stratified_bootstrap_macro.npy",
+   "uncompressed": 40128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_stratified_bootstrap_target.npy",
+   "uncompressed": 800128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_within_permutation_macro.npy",
+   "uncompressed": 40128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/lineage_within_permutation_target.npy",
+   "uncompressed": 800128
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/analysis_results/predictions_outcomes_long.csv",
+   "uncompressed": 222775
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/code/predict_blinded_3d.py",
+   "uncompressed": 7365
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/BLINDED_INPUT_MANIFEST_SHA256.csv",
+   "uncompressed": 1688
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/X3D_expression.npy",
+   "uncompressed": 7224968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/expression_gene_keys.npy",
+   "uncompressed": 4919168
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/external_model_ids.npy",
+   "uncompressed": 12160
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/external_test_registry_blinded.csv",
+   "uncompressed": 16208
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/locked_target_keys.npy",
+   "uncompressed": 5248
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/locked_target_panel.csv",
+   "uncompressed": 7642
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/locked_y2d.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/inputs/training_model_registry.csv",
+   "uncompressed": 341277
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/integrity/INDEPENDENT_REAUDIT.csv",
+   "uncompressed": 2964
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/integrity/INDEPENDENT_REAUDIT.json",
+   "uncompressed": 441
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/integrity/SOURCE_ORDER_ALIGNMENT.json",
+   "uncompressed": 496
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/integrity/STRICT_VERIFICATION.csv",
+   "uncompressed": 1499
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/integrity/STRICT_VERIFICATION.json",
+   "uncompressed": 175
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/locked_predictions/BLINDED_NEW_3D_PREDICTION_LOCK.json",
+   "uncompressed": 1100
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/locked_predictions/blinded_new_3d_predictions.csv",
+   "uncompressed": 25068
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/locked_predictions/blinded_new_3d_predictions.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/locked_predictions/new_3d_feature_coverage.csv",
+   "uncompressed": 738
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/outcomes/OUTCOME_ACCESS_MANIFEST.json",
+   "uncompressed": 604
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/outcomes/Y3D_primary_gene_effect.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/outcomes/locked_target_keys.npy",
+   "uncompressed": 5248
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/README.md",
+   "uncompressed": 1240
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/evaluate_sanger_after_lock.py",
+   "uncompressed": 23268
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/predict_blinded_3d.py",
+   "uncompressed": 7431
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/prepare_blind_inputs.py",
+   "uncompressed": 9755
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/seal_pre_outcome_validation.py",
+   "uncompressed": 5974
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/strict_independent_audit.py",
+   "uncompressed": 11532
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/cohort_metadata.json",
+   "uncompressed": 921
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/cohort_summary.csv",
+   "uncompressed": 372
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/locked_selected_feature_mapping_6000.csv",
+   "uncompressed": 384392
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/locked_target_assay_coverage_20.csv",
+   "uncompressed": 716
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/locked_target_feature_coverage_20.csv",
+   "uncompressed": 1231
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/locked_target_panel_20.csv",
+   "uncompressed": 693
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/sanger_cohort_lineage_summary.csv",
+   "uncompressed": 119
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/sanger_independent_cohort_excluded_14.csv",
+   "uncompressed": 3083
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/sanger_independent_cohort_included_148.csv",
+   "uncompressed": 38398
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/source_manifest_sha256.csv",
+   "uncompressed": 1197
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/frozen_cohort/strict_validation_checks.csv",
+   "uncompressed": 610
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/integrity/STRICT_AUDIT_SUMMARY.json",
+   "uncompressed": 421
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/integrity/strict_independent_audit.csv",
+   "uncompressed": 1402
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/locked_predictions/BLINDED_NEW_3D_PREDICTION_LOCK.json",
+   "uncompressed": 1201
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/locked_predictions/blinded_new_3d_predictions.csv",
+   "uncompressed": 43459
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/locked_predictions/blinded_new_3d_predictions.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/locked_predictions/new_3d_feature_coverage.csv",
+   "uncompressed": 939
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/BLIND_INPUT_PREPARATION_MANIFEST.json",
+   "uncompressed": 2001
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/PRE_OUTCOME_AUDIT_NOTE.json",
+   "uncompressed": 785
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/SANGER_PRE_OUTCOME_VALIDATION_SEAL.json",
+   "uncompressed": 2002
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/blinded_lineage_only_predictions.csv",
+   "uncompressed": 40870
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/blinded_lineage_only_predictions.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/sanger_expression_gene_keys.npy",
+   "uncompressed": 409448
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/sanger_expression_log2_tpm_plus1_model_ready.npy",
+   "uncompressed": 2243808
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/sanger_model_registry_148.csv",
+   "uncompressed": 11940
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/model_input_and_pre_outcome_lock/sanger_unique_feature_mapping_3845.csv",
+   "uncompressed": 266213
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/RESULT_SHA256_MANIFEST.csv",
+   "uncompressed": 1221
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/VALIDATION_SUMMARY.json",
+   "uncompressed": 1630
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/bootstrap_expression_5000.csv.gz",
+   "uncompressed": 494252
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/bootstrap_lineage_5000.csv.gz",
+   "uncompressed": 498995
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/official_library_selection_audit.csv",
+   "uncompressed": 10706
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/overall_metrics.csv",
+   "uncompressed": 973
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/permutation_null_5000.csv.gz",
+   "uncompressed": 483227
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/predictions_and_outcomes_long.csv",
+   "uncompressed": 339890
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/sanger_outcomes_binary_148x20.npy",
+   "uncompressed": 3088
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/sanger_outcomes_lfc_148x20.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/sanger_selected_target_outcomes_long.csv",
+   "uncompressed": 315898
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/subgroup_metrics.csv",
+   "uncompressed": 390
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/outcomes_and_results/target_metrics.csv",
+   "uncompressed": 4565
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/protocol/SANGER_VALIDATION_PROTOCOL_LOCKED_BEFORE_OUTCOMES.json",
+   "uncompressed": 2954
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/source_metadata/data_covariates_ALL_organoids.csv",
+   "uncompressed": 7770
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/README.md",
+   "uncompressed": 1252
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/Broad2026_eligibility_summary.json",
+   "uncompressed": 931
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/Broad2026_new_true3D_14_model_registry.csv",
+   "uncompressed": 2122
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/Broad2026_screen_type_eligibility_audit.csv",
+   "uncompressed": 340
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/cross_cohort_macro_target_bootstrap_summary.csv",
+   "uncompressed": 724
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/cross_cohort_target_transportability.csv",
+   "uncompressed": 14008
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/cross_cohort_transportability_summary.json",
+   "uncompressed": 2010
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/analysis_results/cross_target_joint_permutation_null.csv",
+   "uncompressed": 175
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/code/run_cross_cohort_synthesis.py",
+   "uncompressed": 11326
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/broad_2026/broad_model_metadata.csv",
+   "uncompressed": 272338
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/broad_2026/broad_screen_metadata.csv",
+   "uncompressed": 259986
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/broad_2026/figshare_31381135.json",
+   "uncompressed": 11932
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/broad_2026/figshare_article_29472362.json",
+   "uncompressed": 14914
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/broad_2026/source_readme.txt",
+   "uncompressed": 31435
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Broad94_predictions_outcomes_long.csv",
+   "uncompressed": 222775
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Broad94_summary.json",
+   "uncompressed": 1491
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Broad94_target_metrics.csv",
+   "uncompressed": 5364
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Locked2D_frozen_split_registry_852.csv",
+   "uncompressed": 37244
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Locked2D_holdout_summary.json",
+   "uncompressed": 968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Locked2D_holdout_target_metrics.csv",
+   "uncompressed": 2727
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Sanger148_predictions_outcomes_long.csv",
+   "uncompressed": 339890
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Sanger148_summary.json",
+   "uncompressed": 1630
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/inputs/prior_metrics/Sanger148_target_metrics.csv",
+   "uncompressed": 4565
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/protocol/CROSS_COHORT_SYNTHESIS_PROTOCOL.json",
+   "uncompressed": 3464
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/README.md",
+   "uncompressed": 1196
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/ANALYSIS_AUDIT_CHECKS.csv",
+   "uncompressed": 1741
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/ANALYSIS_INDEPENDENT_AUDIT.json",
+   "uncompressed": 874
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/ANALYSIS_SUMMARY.json",
+   "uncompressed": 4150
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/cohort_prediction_concordance.csv",
+   "uncompressed": 246
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/cohort_target_prediction_medians.csv",
+   "uncompressed": 1026
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/domain_shift_pca_coordinates.csv",
+   "uncompressed": 13857
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/domain_shift_summary.csv",
+   "uncompressed": 292
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/feature_level_domain_shift.csv",
+   "uncompressed": 407690
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/patient_mean_predictions.csv",
+   "uncompressed": 14271
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/patient_top3_targets_long.csv",
+   "uncompressed": 6449
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/sample_level_predictions_with_metadata.csv",
+   "uncompressed": 20306
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/target_projection_summary.csv",
+   "uncompressed": 10094
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/analysis_results/top3_frequency.csv",
+   "uncompressed": 457
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/blinded_predictions/BLINDED_NEW_3D_PREDICTION_LOCK.json",
+   "uncompressed": 1214
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/blinded_predictions/blinded_new_3d_predictions.csv",
+   "uncompressed": 18080
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/blinded_predictions/blinded_new_3d_predictions.npy",
+   "uncompressed": 4528
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/blinded_predictions/new_3d_feature_coverage.csv",
+   "uncompressed": 925
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/analyze_tiriac_projection.py",
+   "uncompressed": 21159
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/audit_tiriac_analysis.py",
+   "uncompressed": 17497
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/download_tiriac_rnaseq.py",
+   "uncompressed": 7730
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/predict_blinded_3d.py",
+   "uncompressed": 7431
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/prepare_tiriac_model_input.py",
+   "uncompressed": 7562
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/TIRIAC_INPUT_PREPARATION_MANIFEST.json",
+   "uncompressed": 1492
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_expression_gene_keys.npy",
+   "uncompressed": 411176
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_expression_log2_tpm_plus1.npy",
+   "uncompressed": 837448
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_observed_frozen_feature_mapping.csv",
+   "uncompressed": 263322
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_sample_expression_qc.csv",
+   "uncompressed": 6931
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_sample_registry.csv",
+   "uncompressed": 9872
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/model_input/tiriac_target_feature_coverage_pre_prediction.csv",
+   "uncompressed": 918
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/broad94/X3D_expression.npy",
+   "uncompressed": 7224968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/broad94/blinded_new_3d_predictions.csv",
+   "uncompressed": 25068
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/broad94/exploratory_3d_target_metrics.csv",
+   "uncompressed": 5364
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/broad94/expression_gene_keys.npy",
+   "uncompressed": 4919168
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/sanger148/blinded_new_3d_predictions.csv",
+   "uncompressed": 43459
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/sanger148/sanger_expression_gene_keys.npy",
+   "uncompressed": 409448
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/sanger148/sanger_expression_log2_tpm_plus1_model_ready.npy",
+   "uncompressed": 2243808
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/reference_inputs/sanger148/target_metrics.csv",
+   "uncompressed": 4565
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/source_data/cohort_summary.json",
+   "uncompressed": 328
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/source_data/gdc_expression_files.json",
+   "uncompressed": 77619
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/source_data/source_manifest.csv",
+   "uncompressed": 37144
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/README.md",
+   "uncompressed": 1519
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/figure_07_model_projections.py",
+   "uncompressed": 5351
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/regenerate_manuscript_figures.py",
+   "uncompressed": 10019
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_02_development_omics_ablation/Figure_2_Development_Omics_Ablation.eps",
+   "uncompressed": 88136
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_02_development_omics_ablation/Figure_2_Development_Omics_Ablation.png",
+   "uncompressed": 234278
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_02_development_omics_ablation/Figure_2_Development_Omics_Ablation.tiff",
+   "uncompressed": 410538
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_02_development_omics_ablation/Figure_2_legend.txt",
+   "uncompressed": 706
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_02_development_omics_ablation/Figure_2_source_data.csv",
+   "uncompressed": 736
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_03_locked_2d_holdout/Figure_3_Locked_2D_Holdout_and_Deployment.eps",
+   "uncompressed": 113382
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_03_locked_2d_holdout/Figure_3_Locked_2D_Holdout_and_Deployment.png",
+   "uncompressed": 530798
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_03_locked_2d_holdout/Figure_3_Locked_2D_Holdout_and_Deployment.tiff",
+   "uncompressed": 891666
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_03_locked_2d_holdout/Figure_3_legend.txt",
+   "uncompressed": 617
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_03_locked_2d_holdout/Figure_3_source_data.csv",
+   "uncompressed": 2751
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_04_broad94_exploratory_transfer/Figure_4_Broad94_Exploratory_Transfer.eps",
+   "uncompressed": 114788
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_04_broad94_exploratory_transfer/Figure_4_Broad94_Exploratory_Transfer.png",
+   "uncompressed": 509732
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_04_broad94_exploratory_transfer/Figure_4_Broad94_Exploratory_Transfer.tiff",
+   "uncompressed": 1118978
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_04_broad94_exploratory_transfer/Figure_4_legend.txt",
+   "uncompressed": 1494
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_04_broad94_exploratory_transfer/Figure_4_source_data.csv",
+   "uncompressed": 804356
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_Sanger148_Blinded_External_Validation_REVISED.eps",
+   "uncompressed": 117412
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_Sanger148_Blinded_External_Validation_REVISED.png",
+   "uncompressed": 1237125
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_Sanger148_Blinded_External_Validation_REVISED.tiff",
+   "uncompressed": 2775472
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_legend_REVISED.txt",
+   "uncompressed": 1066
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_subgroup_source_data.csv",
+   "uncompressed": 353
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_05_sanger148_external_validation/Figure_5_target_level_source_data.csv",
+   "uncompressed": 4410
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_06_cross_cohort_synthesis/Figure_6_Retrospective_Cross_Cohort_Transportability_Synthesis_REVISED.eps",
+   "uncompressed": 96081
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_06_cross_cohort_synthesis/Figure_6_Retrospective_Cross_Cohort_Transportability_Synthesis_REVISED.png",
+   "uncompressed": 1093832
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_06_cross_cohort_synthesis/Figure_6_Retrospective_Cross_Cohort_Transportability_Synthesis_REVISED.tiff",
+   "uncompressed": 3004574
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_06_cross_cohort_synthesis/Figure_6_legend_REVISED.txt",
+   "uncompressed": 1394
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_06_cross_cohort_synthesis/Figure_6_source_data_REVISED.csv",
+   "uncompressed": 4739
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_Tiriac_Projection_and_Domain_Diagnostics.eps",
+   "uncompressed": 147348
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_Tiriac_Projection_and_Domain_Diagnostics.png",
+   "uncompressed": 1287265
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_Tiriac_Projection_and_Domain_Diagnostics.tiff",
+   "uncompressed": 2356640
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_concordance_source_data.csv",
+   "uncompressed": 959
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_domain_shift_source_data.csv",
+   "uncompressed": 151566
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_legend.txt",
+   "uncompressed": 1051
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/figure_07_tiriac_projection/Figure_7_target_projection_source_data.csv",
+   "uncompressed": 2975
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/Organoid_Ici_Gen_Siralamasi_Analiz_Raporu_TR.md",
+   "uncompressed": 8609
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/README.md",
+   "uncompressed": 3940
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/analysis_protocol.json",
+   "uncompressed": 3162
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/analysis_protocol.sha256",
+   "uncompressed": 89
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/environment.json",
+   "uncompressed": 114
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_lineage.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_long.csv",
+   "uncompressed": 222775
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_outcome.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_outcome_keys.npy",
+   "uncompressed": 5248
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_outcome_manifest.json",
+   "uncompressed": 604
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_prediction.csv",
+   "uncompressed": 25068
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_prediction.npy",
+   "uncompressed": 7648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/broad_prediction_lock.json",
+   "uncompressed": 1100
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_lineage.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_long.csv",
+   "uncompressed": 339890
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_outcome.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_pre_outcome_seal.json",
+   "uncompressed": 2002
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_prediction.csv",
+   "uncompressed": 43459
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_prediction.npy",
+   "uncompressed": 11968
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_prediction_lock.json",
+   "uncompressed": 1201
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_result_manifest.csv",
+   "uncompressed": 1221
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_source_evaluation.py",
+   "uncompressed": 23268
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/target_keys.npy",
+   "uncompressed": 5248
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/training_registry.csv",
+   "uncompressed": 37244
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/training_y.npy",
+   "uncompressed": 68288
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Broad94_aligned_gene_scores.csv",
+   "uncompressed": 280030
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Broad94_bootstrap.csv.gz",
+   "uncompressed": 458641
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Broad94_original_metric_replay.csv",
+   "uncompressed": 779
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Broad94_per_profile.csv",
+   "uncompressed": 18961
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger144_DonorMean_bootstrap.csv.gz",
+   "uncompressed": 408061
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger144_DonorMean_per_profile.csv",
+   "uncompressed": 28167
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger148_aligned_gene_scores.csv",
+   "uncompressed": 445407
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger148_bootstrap.csv.gz",
+   "uncompressed": 571037
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger148_original_metric_replay.csv",
+   "uncompressed": 806
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/Sanger148_per_profile.csv",
+   "uncompressed": 30182
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/summary_metrics.csv",
+   "uncompressed": 4926
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/summary_metrics.json",
+   "uncompressed": 12055
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/training_gene_mean_reference.csv",
+   "uncompressed": 997
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/validation_checks.json",
+   "uncompressed": 1953
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/within_organoid_ranking.pdf",
+   "uncompressed": 28938
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/results/within_organoid_ranking.png",
+   "uncompressed": 127271
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/run_analysis.py",
+   "uncompressed": 14006
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/source_manifest.json",
+   "uncompressed": 6757
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/README.md",
+   "uncompressed": 5559
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/SONUCLAR_TR.md",
+   "uncompressed": 1680
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/analysis_protocol.json",
+   "uncompressed": 2914
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/analysis_protocol.sha256",
+   "uncompressed": 89
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/environment.json",
+   "uncompressed": 136
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/missing_feature_audit.csv",
+   "uncompressed": 6183
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/profile_ranking_stability.csv",
+   "uncompressed": 57741
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/sensitivity_summary.csv",
+   "uncompressed": 1897
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/source_manifest.json",
+   "uncompressed": 5716
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/target_sensitivity.csv",
+   "uncompressed": 3213
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_median_case_predictions.csv",
+   "uncompressed": 22495
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_median_predictions.npy",
+   "uncompressed": 4528
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_median_sample_predictions.csv",
+   "uncompressed": 25495
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_reference_mean_case_predictions.csv",
+   "uncompressed": 22503
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_reference_mean_predictions.npy",
+   "uncompressed": 4528
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/training_reference_mean_sample_predictions.csv",
+   "uncompressed": 25508
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/tumor_median_hierarchy.csv",
+   "uncompressed": 2782
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/tumor_normal_comparisons.csv",
+   "uncompressed": 10803
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/validation_checks.json",
+   "uncompressed": 25664
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/zero_case_predictions.csv",
+   "uncompressed": 22484
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/zero_predictions.npy",
+   "uncompressed": 4528
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/results/zero_sample_predictions.csv",
+   "uncompressed": 25495
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/run_analysis.py",
+   "uncompressed": 14819
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/README.md",
+   "uncompressed": 4201
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/run_sensitivity.py",
+   "uncompressed": 8503
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/verify_sensitivity.py",
+   "uncompressed": 3414
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/inputs/Model.csv",
+   "uncompressed": 697455
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/AUDIT.json",
+   "uncompressed": 812
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/INDEPENDENT_VERIFICATION.json",
+   "uncompressed": 3449
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/broad94_donor_mapping.csv",
+   "uncompressed": 6707
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/environment.json",
+   "uncompressed": 88
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/excluded_3do_screen.csv",
+   "uncompressed": 379
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/full94_model_bootstrap_bootstrap.csv.gz",
+   "uncompressed": 234561
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/full94_partial_cluster_bootstrap.csv.gz",
+   "uncompressed": 252488
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/known24_donor_means_bootstrap.csv.gz",
+   "uncompressed": 206855
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/known25_donor_cluster_bootstrap.csv.gz",
+   "uncompressed": 223417
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/known25_model_bootstrap_bootstrap.csv.gz",
+   "uncompressed": 207503
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/omit_ACH002883_bootstrap.csv.gz",
+   "uncompressed": 241397
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/omit_ACH002884_bootstrap.csv.gz",
+   "uncompressed": 241136
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/sensitivity_summary.csv",
+   "uncompressed": 6067
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/source_hashes.csv",
+   "uncompressed": 575
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/results/target_point_estimates.csv",
+   "uncompressed": 11721
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/CHANGELOG.md",
+   "uncompressed": 4580
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/CITATION.cff",
+   "uncompressed": 1156
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/CITATION.md",
+   "uncompressed": 735
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/README.md",
+   "uncompressed": 10987
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/REVIEWER_START_HERE.md",
+   "uncompressed": 7060
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/REVISION_ADDENDUM.md",
+   "uncompressed": 3984
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/VERSION",
+   "uncompressed": 6
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/codemeta.json",
+   "uncompressed": 1721
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/CORRECTIONS_AND_AUDIT_HISTORY.md",
+   "uncompressed": 1783
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/DATA_ACCESS_AND_THIRD_PARTY_NOTICE.md",
+   "uncompressed": 1537
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/DOI_AND_RELEASE_STATUS.md",
+   "uncompressed": 1299
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/EXCLUDED_CONTENT.md",
+   "uncompressed": 1418
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/LICENSE_SELECTION_NOTE.md",
+   "uncompressed": 728
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/MANUSCRIPT_TRACEABILITY_MATRIX.csv",
+   "uncompressed": 2351
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/ORIGINAL_TO_ARCHIVE_FILE_MAP.csv",
+   "uncompressed": 113671
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/PACKAGE_METADATA_AUDIT.json",
+   "uncompressed": 2134
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/PACKAGE_SCOPE.md",
+   "uncompressed": 3375
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/PACKAGE_UPDATE_REPORT.md",
+   "uncompressed": 1818
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/ZENODO_DEPOSITION_CHECKLIST.md",
+   "uncompressed": 2171
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/documentation/ZENODO_METADATA.json",
+   "uncompressed": 1479
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/environment/environment.yml",
+   "uncompressed": 283
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/environment/requirements.txt",
+   "uncompressed": 162
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/environment/software_versions.json",
+   "uncompressed": 398
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/SHA256SUMS.csv",
+   "uncompressed": 70229
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/archive_build_summary.json",
+   "uncompressed": 1138
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/broad_donor_revision_20260929.json",
+   "uncompressed": 648
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/figure7_presentation_20260928.json",
+   "uncompressed": 6409
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/imputation_revision_integration_20260928.json",
+   "uncompressed": 1000
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/package_inventory.csv",
+   "uncompressed": 42782
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/reported_results_verification.json",
+   "uncompressed": 1952
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/revision_integration_20260928.json",
+   "uncompressed": 1607
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/integrity/scientific_text_update_20260928.json",
+   "uncompressed": 4798
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/README.md",
+   "uncompressed": 3088
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/run_all_checks.sh",
+   "uncompressed": 382
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_package_hashes.py",
+   "uncompressed": 1251
+  },
+  {
+   "name": "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_reported_results.py",
+   "uncompressed": 15384
+  }
+ ]
+}

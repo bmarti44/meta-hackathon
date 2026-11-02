@@ -1,0 +1,3 @@
+Independent re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 78 (reviews/sgen007_fix_high_review_v2.md).
+Verify: register v7 (generations/sgen007/provenance_register_v7.json): stage-specific expectations preserved+checked (current vs latest, historical via frozen), evidence closure rows (frozen estimator, manifests, policy html, receipts, identity json), per-row provenance fields, Passports hash imported; battery v3: duplicate rejection, independent REQUIRED set, 142-patient join + 133/15 library selection from installed files, generated note.
+Render C2 field-level. Issues severity+file:line+fix. End exactly: SGEN007_FIX2_SCORE: <0-100>; C2:<...>

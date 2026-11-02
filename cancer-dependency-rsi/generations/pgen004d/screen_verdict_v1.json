@@ -1,0 +1,14 @@
+{
+ "generation": "pgen004d",
+ "spec_sha256": "b90060e6dfcd19937c8a97b4e35ec4c1485056070fd310ff61633edf82db6866",
+ "verdict": "METERING_ONLY -> route to sgen006 (per sol-xhigh gen_recombine instruction); NO raw acquisition, NO policy optimization",
+ "witness_A_host_expenditure": {
+  "result": "FAIL (missing witness)",
+  "evidence": "codex login: 'Logged in using ChatGPT' (subscription auth, ~/.codex/auth.json present, values not read); codex --help exposes no usage/cost/billing surface; every retained receipt records host_model_cost_usd='unknown'. No per-call expenditure and no authoritative strict-matching contract is locally obtainable. Reopens only via user-supplied metered API/billing export with numeric cap, or an authoritative matching witness."
+ },
+ "witness_B_total_local_cpu": {
+  "result": "SCREEN-GRADE PASS (not total-scope proof; setsid-escaping and sub-poll descendants remain stated limits)",
+  "evidence": "src/tree_cpu.py v2: pgid cumulative maxima + controller RUSAGE_SELF delta (includes sampler overhead), group-kill+reap on timeout, concurrent drain, ps failure/malformed rows invalidate. Validation: tests/test_tree_cpu.py 5 tests (single within 25%, concurrent contamination excluded, failed CPU job charged, timeout group-kill, fork majority) + metering v2 spot values in generations/sgen006/corrections_v2.json (1.2 CPU-s burn -> total 1.195 incl controller 0.045). Limits retained: setsid-escaping descendants, sub-poll descendants. v2.1: group completion tracked past leader exit; sampler ps CPU charged via RUSAGE_CHILDREN minus leader; all ps failures normalized to MeteringError; 6 tests incl leader-exit descendant tracking and +-25% tolerances."
+ },
+ "headroom_note": "Even with metering, sol-xhigh's inequality F >= 0.25S + 1.25(H+L) is unwitnessed and doubtful vs cheap static baselines; schema/headroom screens remain gated behind Witness A."
+}

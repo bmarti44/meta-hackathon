@@ -1,0 +1,13 @@
+Required independent Sol-high (gpt-6.1-sol, high) RE-REVIEW (round 3) of the scientific-only Lock package before Lock2 commit. Read-only: no downloads, no edits, do NOT open/decode Sanger Table 6 or any C outcome values.
+
+Project: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+History: round 1 reviews/lock_s_high_review_v1.md = 78 NO; round 2 reviews/lock_s_high_review_v2_retry1.md = 88 NO (first round-2 dispatch failed with "model at capacity", retained as reviews/lock_s_high_review_v2.*). Round-2 findings and fixes:
+1. HIGH stale reservation permitted unsupervised direct execution -> src/external_eval.py require_bounded(): the launcher (src/run_external_eval.py launch) creates a one-time secrets.token_hex nonce, records only its sha256 and the launcher PID in the run_bounded reservation job, passes the nonce to the child only via the environment (removed afterwards). The child must hold the nonce, match exactly one outstanding reservation for JOB_NAME with that hash and external_eval.py argv, be a direct child of the recorded launcher PID (os.getppid), and start within 120 s of the reservation timestamp. Tests: test_refuses_stale_or_unbound_reservations (no nonce / wrong nonce / wrong parent / stale -> refused, nothing written, no exposure record) and test_launcher_runs_supervised_child_and_refuses_rerun (real launcher + run_bounded subprocess on a synthetic fixture root, full 5000-rep run ~24 s, then refusal of a second launch).
+2. MEDIUM results-directory entry not synced -> acquire_start() fsyncs lock_s when it creates lock_s/results, before the O_EXCL start record (which fsyncs file + results dir) and before the exposure record.
+External-eval tests 16 passed; full suite 68 passed (ledgered job pytest_lock_s_v3).
+
+Review src/external_eval.py, src/run_external_eval.py, src/cli.py, tests/test_external_eval.py, lock_s/scientific_protocol_v1.json and whatever else you need. Verify the fixes, look for any new defect, and decide whether the package is ready for Lock2 commit (the commit will bind every REQUIRED file hash plus cite the passing review and its sha256) followed by exactly one bounded execution.
+
+Output (<=700 words): issues by severity with file:line and verification status; then exactly one final line:
+LOCK_S_REVIEW_SCORE:<0-100>; READY_FOR_LOCK2:<YES|NO>

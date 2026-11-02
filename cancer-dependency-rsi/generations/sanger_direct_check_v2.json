@@ -1,0 +1,230 @@
+{
+ "n_covariate_samples": 256,
+ "n_mapped_to_ach": 0,
+ "n_organoid_cols": 0,
+ "n_2d_cols": 930,
+ "panels": {
+  "mevalonate": {
+   "n_genes": 20,
+   "pct_organoid_median": NaN,
+   "pct_2d_median": 0.39420298067660225,
+   "lfc_organoid_median": NaN,
+   "lfc_2d_median": -0.009088610878217055
+  },
+  "heme": {
+   "n_genes": 8,
+   "pct_organoid_median": NaN,
+   "pct_2d_median": 0.3361194537315124,
+   "lfc_organoid_median": NaN,
+   "lfc_2d_median": -0.061133644399958276
+  },
+  "splice_panel": {
+   "n_genes": 8,
+   "pct_organoid_median": NaN,
+   "pct_2d_median": 0.014025046750155833,
+   "lfc_organoid_median": NaN,
+   "lfc_2d_median": -2.200582713490048
+  },
+  "ribo_panel": {
+   "n_genes": 12,
+   "pct_organoid_median": NaN,
+   "pct_2d_median": 0.008981696605655353,
+   "lfc_organoid_median": NaN,
+   "lfc_2d_median": -2.4711200778151325
+  }
+ },
+ "exclusive97": {
+  "n": 91,
+  "freq_org_median": NaN,
+  "freq_2d_median": 0.7333333333333333,
+  "frac_org_freq_lt_0.5": 0.0,
+  "per_gene": {
+   "ATP1A1": {
+    "freq_org": NaN,
+    "freq_2d": 0.813
+   },
+   "BAP1": {
+    "freq_org": NaN,
+    "freq_2d": 0.629
+   },
+   "BDP1": {
+    "freq_org": NaN,
+    "freq_2d": 0.677
+   },
+   "BNIP1": {
+    "freq_org": NaN,
+    "freq_2d": 0.766
+   },
+   "CCNB1": {
+    "freq_org": NaN,
+    "freq_2d": 0.625
+   },
+   "CDK12": {
+    "freq_org": NaN,
+    "freq_2d": 0.511
+   },
+   "CDK2": {
+    "freq_org": NaN,
+    "freq_2d": 0.731
+   },
+   "CENPT": {
+    "freq_org": NaN,
+    "freq_2d": 0.726
+   }
+  }
+ },
+ "headline18": {
+  "n": 16,
+  "freq_org_median": NaN,
+  "freq_2d_median": 0.6446236559139784,
+  "frac_org_freq_lt_0.5": 0.0,
+  "per_gene": {
+   "ATP1A1": {
+    "freq_org": NaN,
+    "freq_2d": 0.813
+   },
+   "BAP1": {
+    "freq_org": NaN,
+    "freq_2d": 0.629
+   },
+   "DDX3X": {
+    "freq_org": NaN,
+    "freq_2d": 0.66
+   },
+   "GNA13": {
+    "freq_org": NaN,
+    "freq_2d": 0.239
+   },
+   "IDI1": {
+    "freq_org": NaN,
+    "freq_2d": 0.299
+   },
+   "IGF1R": {
+    "freq_org": NaN,
+    "freq_2d": 0.366
+   },
+   "ITGB1": {
+    "freq_org": NaN,
+    "freq_2d": 0.317
+   },
+   "LIG1": {
+    "freq_org": NaN,
+    "freq_2d": 0.326
+   },
+   "MBTPS1": {
+    "freq_org": NaN,
+    "freq_2d": 0.667
+   },
+   "MBTPS2": {
+    "freq_org": NaN,
+    "freq_2d": 0.832
+   },
+   "MED1": {
+    "freq_org": NaN,
+    "freq_2d": 0.572
+   },
+   "MVD": {
+    "freq_org": NaN,
+    "freq_2d": 0.741
+   },
+   "PGD": {
+    "freq_org": NaN,
+    "freq_2d": 0.837
+   },
+   "PNKP": {
+    "freq_org": NaN,
+    "freq_2d": 0.678
+   },
+   "SCAP": {
+    "freq_org": NaN,
+    "freq_2d": 0.548
+   },
+   "SUPT4H1": {
+    "freq_org": NaN,
+    "freq_2d": 0.716
+   }
+  }
+ },
+ "mevalonate_freq": {
+  "HMGCS1": {
+   "freq_org": NaN,
+   "freq_2d": 0.971
+  },
+  "HMGCR": {
+   "freq_org": NaN,
+   "freq_2d": 0.899
+  },
+  "MVK": {
+   "freq_org": NaN,
+   "freq_2d": 0.838
+  },
+  "PMVK": {
+   "freq_org": NaN,
+   "freq_2d": 0.332
+  },
+  "MVD": {
+   "freq_org": NaN,
+   "freq_2d": 0.741
+  },
+  "IDI1": {
+   "freq_org": NaN,
+   "freq_2d": 0.299
+  },
+  "IDI2": {
+   "freq_org": NaN,
+   "freq_2d": 0.015
+  },
+  "FDPS": {
+   "freq_org": NaN,
+   "freq_2d": 0.586
+  },
+  "FDFT1": {
+   "freq_org": NaN,
+   "freq_2d": 0.154
+  },
+  "SQLE": {
+   "freq_org": NaN,
+   "freq_2d": 0.058
+  },
+  "LSS": {
+   "freq_org": NaN,
+   "freq_2d": 0.044
+  },
+  "CYP51A1": {
+   "freq_org": NaN,
+   "freq_2d": 0.041
+  },
+  "MSMO1": {
+   "freq_org": NaN,
+   "freq_2d": 0.055
+  },
+  "NSDHL": {
+   "freq_org": NaN,
+   "freq_2d": 0.013
+  },
+  "HSD17B7": {
+   "freq_org": NaN,
+   "freq_2d": 0.127
+  },
+  "EBP": {
+   "freq_org": NaN,
+   "freq_2d": 0.005
+  },
+  "SC5D": {
+   "freq_org": NaN,
+   "freq_2d": 0.104
+  },
+  "DHCR7": {
+   "freq_org": NaN,
+   "freq_2d": 0.012
+  },
+  "DHCR24": {
+   "freq_org": NaN,
+   "freq_2d": 0.02
+  },
+  "ACAT2": {
+   "freq_org": NaN,
+   "freq_2d": 0.013
+  }
+ }
+}

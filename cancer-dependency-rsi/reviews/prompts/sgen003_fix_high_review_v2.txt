@@ -1,0 +1,6 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous: 84 (reviews/sgen003_high_review_v1.md, C1 MET, C6_NOVELTY SUPPORTED). Verify fixes:
+1 zipfetch hardened (src/zipfetch.py v2.0: exact Content-Range, bounded reads, EOCD validation, complete CD parse, local header/CRC) + tests/test_zipfetch.py (3 tests). Note executed sgen003 used v1 - confirm retrospective scope honest.
+2 Request ceiling deviation ledgered (ledger/experiments.jsonl scope_deviation sgen003).
+3 Bibliography: generations/sgen003/omitted_refs_v2.json = 4/7/3 identifier-first with per-record dispositions; reviews/novelty_audit_v8.md corrected counts + byte wording (237,568 transferred; 308,583 uncompressed Python bytes).
+Re-render C1 / C6 novelty. Issues severity+file:line+fix. End exactly:
+SGEN003_FIX_REVIEW_SCORE: <0-100>; C1:<...>; C6_NOVELTY:<...>

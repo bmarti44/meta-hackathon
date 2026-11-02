@@ -1,0 +1,6 @@
+Independent adjudication review (gpt-6.1-sol, high), read-only, cancer-dependency-rsi.
+Scope: sgen003 novelty completion. Read: generations/sgen003/SPEC.md, reviews/novelty_audit_v8.md (delta; claim in reviews/novelty_audit_v4.md + v5 corrections), generations/sgen003/s3_code_contents_screen.json + s3_py_contents.json (spot-check keyword absence yourself), src/zipfetch.py (fail-closed correctness), generations/sgen003/s1_supplement_receipt.json, generations/sgen003/omitted_refs.json, cached PMC XMLs in data/papers/.
+Verify: SPEC ledger lock timing; zipfetch CRC/range logic; whether S3 code screen keywords are adequate (propose any synonym you can check in retained contents); S1 supplement disposition honesty; omitted-ref dispositions.
+Render C1: MET/PARTIAL/UNMET with reasons vs cancer_rsi_handoff.txt C1 text, and state whether C6 novelty qualification (only its novelty component) is now supported.
+Every issue severity low/medium/high/critical + file:line + exact fix. End exactly:
+SGEN003_REVIEW_SCORE: <0-100>; C1:<...>; C6_NOVELTY:<SUPPORTED|PARTIAL|UNSUPPORTED>

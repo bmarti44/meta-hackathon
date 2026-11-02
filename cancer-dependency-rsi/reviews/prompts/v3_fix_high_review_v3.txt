@@ -1,0 +1,11 @@
+Independent adversarial re-review (gpt-6.1-sol, high), read-only, cancer-dependency-rsi. Previous: 87/100 (reviews/v3_sgen001_high_review_v2.md). Verify disposition of its remaining issues, each numbered as there:
+1 HIGH CDK6 (src/build_atlas_v4.py CDK6_S1 separate qualifications; regenerated atlas/v4 + tests/test_atlas_v4.py assertions; verify vs data/papers/PMC13581591.xml: delta=-0.44 P=0.013 q=0.28 nonsignificant; CDKN2A r=0.520 q=4.12e-5, glial r=0.640 q=0.0340; drug P values)
+3 MEDIUM PASS labels (generations/pgen002/DISPOSITION_v3.json; CPU now in NEW src/cpu_meter.py + test_cpu_meter_records_client_cpu; budget.py LOCK2 pin intact - verify sha256 vs lock_s/LOCK2_COMMIT.json and read the process_incident ledger record)
+4 MEDIUM receipts/overfetch (generations/acquisition_deviation_v1.json; pgen001 claim qualified there; future fail-closed rule stated)
+5 MEDIUM novelty (reviews/novelty_audit_v6.md; generations/sgen001/novelty_fix_searches.json: S2 forward citations, Han 2020 PMID 32238925 disposition, Zenodo record verified contents outstanding; bibliography counts 76/103/41 vs API subsets)
+8 LOW status (status.json, STATUS.md update 2026-10-28o, GENERATIONS.md correction line, manuscript endpoint wording)
+9 MEDIUM NEW identity caveat (manuscript/manuscript_draft_v1.md Limitations: unquantified incl point weighting, no "slightly"; generations/sgen001/adjudication_dossier_v1.md)
+Also: manuscript figure manuscript/figures/figure1_primary.svg vs src/make_figure1.py (values from retained frozen outputs only).
+Every remaining issue: severity + file:line + exact fix. End exactly:
+V3_FIX_REVIEW_SCORE: <0-100>; C1:<...>; C6:<...>; C7:<...>
+>=90 requires zero unresolved verified high/critical.

@@ -1,0 +1,85 @@
+{
+ "stages": {
+  "v1": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v2": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v3": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v4": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  }
+ },
+ "frozen_substitutions": [],
+ "stage_code_hashes": {
+  "v1": {
+   "src/build_atlas.py": {
+    "expected": "b83e8f6902f934722d2beb84b52e9b6db5e070ecbe45646c394b5c2fae2c3896",
+    "source": "current",
+    "actual": "b83e8f6902f934722d2beb84b52e9b6db5e070ecbe45646c394b5c2fae2c3896"
+   },
+   "src/estimators.py": {
+    "expected": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c",
+    "source": "frozen_artifact",
+    "actual": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c"
+   }
+  },
+  "v2": {
+   "src/build_atlas_v2.py": {
+    "expected": "064a724de472d9a6e6848a90b80c0b89a4e726dbb7a392a6d26a45e50c70d961",
+    "source": "current",
+    "actual": "064a724de472d9a6e6848a90b80c0b89a4e726dbb7a392a6d26a45e50c70d961"
+   },
+   "src/estimators.py": {
+    "expected": "b0b3bc40fdba0d80d3b672fdb03dafc755da7450940c91f441e2e095aa7cfbc9",
+    "source": "current",
+    "actual": "b0b3bc40fdba0d80d3b672fdb03dafc755da7450940c91f441e2e095aa7cfbc9"
+   }
+  },
+  "v3": {
+   "src/build_atlas_v3.py": {
+    "expected": "f0e8740802b3e2229e9ad9131d04897cd00eaf0ee56296c8d8cf9810d59f64bc",
+    "source": "current",
+    "actual": "f0e8740802b3e2229e9ad9131d04897cd00eaf0ee56296c8d8cf9810d59f64bc"
+   }
+  },
+  "v4": {
+   "src/build_atlas_v4.py": {
+    "expected": "fd066fa6fb44f03afd05e68d20158ae3127e7e9a19a7ada37d46a6061ff7622e",
+    "source": "current",
+    "actual": "fd066fa6fb44f03afd05e68d20158ae3127e7e9a19a7ada37d46a6061ff7622e"
+   }
+  }
+ },
+ "components": {
+  "c10_primary_values_in_table": true,
+  "eligibility_retained_recompute": true,
+  "synthetic_use_audit": "generations/sgen005/synthetic_use_audit.json"
+ },
+ "all_stages_pass": true,
+ "wall_s": 1.66,
+ "note": "Isolated input/code copy in current locked env; fresh-environment attempt recorded separately."
+}

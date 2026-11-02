@@ -1,0 +1,10 @@
+Independent adversarial review (gpt-6.1-sol, high), read-only, cancer-dependency-rsi.
+Review the sgen002 package and residual items from your 91/100 v3_fix review:
+1. generations/sgen002/SPEC.md (ledger lock in ledger/experiments.jsonl), src/sgen002_reproduce.py, generations/sgen002/reproduction_report_v1.json - verify atlas isolated rebuild, primary point, figure regeneration independently; check pending labels honest.
+2. Atlas v4 regenerated manifest (inputs now incl. atlas/v3/manifest.json - completeness finding from reproduction failure); genes.csv donor wording 144covariateIDgroups_142patients.
+3. reviews/novelty_audit_v7.md + generations/sgen002/s3_zenodo_listing.json (fail-closed receipts 206/Content-Range; member-level screen bounds).
+4. manuscript/manuscript_draft_v1.md + manuscript/limitations_statement.md + reproducibility_report.md + manuscript/figures/figure1_primary.svg caption - claim fidelity vs locked results and caveats; any overclaim?
+5. Full gate snapshot vs cancer_rsi_handoff.txt section 12: render C1-C13 each MET/PARTIAL/UNMET with one-line evidence. This feeds (does not replace) sol-xhigh terminal determination.
+Every issue: severity low/medium/high/critical + file:line + exact fix. End exactly:
+SGEN002_REVIEW_SCORE: <0-100>
+>=90 requires zero unresolved verified high/critical.

@@ -1,0 +1,3 @@
+{
+ "note": "sgen005 upstream runner keyed wanted hashes by latest manifest per path; v1 stage executed with CURRENT src/estimators.py bytes (differ from v1 manifest code hash) and still produced byte-identical v1 CSVs. This demonstrates output equivalence of the two estimator versions on these inputs, not code-byte identity. Frozen retained estimators bytes exist at artifacts/sha256/19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c"
+}

@@ -1,0 +1,155 @@
+# Data files associated with A Dependency Map Enhanced with Next-Generation 3D Cancer Models
+
+
+## Overview ##
+This file set includes metadata files (6 files) and analysis result files (29 files) associated with Neiswender, Maffa, Brenan et al. "A Dependency Map Enhanced with Next-Generation 3D Cancer Models" (Nature, 2026). The custom analysis code used for generating these results is available at a GitHub repository (https://github.com/broadinstitute/DepMap-NextGen-Public).  
+
+
+In addition, raw profiling data of the models (including data for mutation, copy number, gene expression, and gene dependency) and processed data files required for running the custom code are available at DepMap portal (https://depmap.org/portal/data_page/?tab=allData; file set name "NextGen Model Manuscript 2026").
+
+
+## Metadata Files ##
+
+
+### minipool_guide_metadata.csv
+This table provides the barcode sequence (“Construct_Barcode”) and target gene (“Gene”) for each of the 2000 sgRNAs included in the minipool library. See Fig. 5c and Extended Data Fig. 9a for the schematic and graphical representations of this library, respectively. This library targets 1,000 genes, including 250 test genes, 650 negative control genes, and 100 positive control (i.e., common essential) genes.
+
+
+### minipool_library_composition.csv
+This table shows the membership of each of the nine core functional classes (“Integrin”, “ECM Adhesion”, “Actin Regulation”, “Adherens Junction”, “Tight Junction”, “Lipid Metabolism”, ”Wnt Signaling”, “PI3K mTOR Signaling”, and “Cell Cycle”) targeted by the minipool library. The majority of the test genes of this library belong to one or more of these core functional classes, while the rest of them (“Other”) do not belong to any of these classes but are still included in the library based on specific interests. See Extended Data Fig. 9a for the graphical representations of this library.
+
+
+### minipool_screen_metadata.csv
+This table provides the metadata, including model ID (“DepMap ID”), growth format, and type of culture medium (“Serum status” and “Culture medium”), as well as the QC results for each of the minipool screens (n = 18). These QC results include log2-fold change correlation between the replicates (“replicate LFC correlation”), total sequencing reads (“Total reads”), and two metrics based on the gene effect distributions of negative and positive controls (“NNMD” and “ROC-AUC”).
+
+
+### minipool_sequence_metadata.csv
+This table provides the metadata, including model ID (“DepMap ID”), growth format, and type of culture medium (“Serum status” and “Culture medium”), as well as the QC results for each of the minipool screen sequencing attempts (n = 34). Note that 16 out of the 18 minipool screens were conducted with technical duplicates. One of the replicates (0178_Adh_Nat_Serum_Dome_RepB) was removed from the further analysis due to the low NNMD score. The read count of the PCR products of genomic DNA prepared from Cas12a-null 293T cells that were infected with the minipool library (HEK_CasNull_MP_control) is also displayed.
+
+
+### model_metadata.csv
+This table provides the metadata, including model ID, lineage (“OncotreeLineage”), primary disease (“OncotreePrimaryDisease”), subtype (“OncotreeSubtype”), growth pattern (Adherent, Mixed, Suspension or Unknown for traditional and Dome or Spheroid for NextGen models), as well as the availability of WGS/RNAseq/CRISPR profiling results for the traditional (n = 1685) and NextGen (n = 314) models used in the study. For the models profiled by the CRISPR screen, the screen type (“CRISPRScreenType”), classified into five types based on the model type and culture condition—namely, 2DS (adherent/suspension culture of the traditional cell line models), 2DO (coat culture of the NextGen organoid models), 3DO (dome culture of the NextGen organoid models), 2DN (coat culture of the NextGen CNS models), and 3DN (spheroid culture of the NextGen CNS models)—is also indicated. Note that "GrowthPattern" indicates the format of culture used for the derivation of the respective model, which can be different from the format of culture used for screening and omics profiling (the latter is indicated by "CRISPRScreenType"; also see "Culture Format" column of Supplementary Table 1).
+
+
+### screen_metadata.csv
+This table provides the metadata, including the model ID, library, screen type, model lineage (“OncotreeLineage”), model primary disease (“OncotreePrimaryDisease”), model subtype(“OncotreeSubtype”), and growth pattern, for all the CRISPR screens of traditional (screen n = 1387; PassesQC = “TRUE”) and NextGen (n = 147) models whose results are analyzed in the study. The availability of gene expression (“HasExprData”) and CN data in the corresponding model is also indicated. The screen type was classified into five types based on the model type and culture condition, namely, 2DS (adherent/suspension culture of the traditional cell line models), 2DO (coat culture of the NextGen organoid models), 3DO (dome culture of the NextGen organoid models), 2DN (coat culture of the NextGen CNS models), and 3DN (spheroid culture of the NextGen CNS models). Note that "GrowthPattern" indicates the format of culture used for the derivation of the respective model, which can be different from the format of culture used for screening and omics profiling (the latter is indicated by "ScreenType"; also see "Culture Format" column of Supplementary Table 1).
+
+
+
+## Analytical Result Files ##
+
+
+### biomarker_expression_tumor_vs_normal.csv
+For the three representative biomarker-associated dependencies shown in Fig. 2 and Extended Data Fig. 5 (HNRNPH1 and PROX1 expression addiction and ENO1/ENO2 paralog dependency), the expression of the biomarker (HNRNPH1, PROX1 and ENO2, respectively) was compared between the tumor samples and lineage-matched normal samples of the “TCGA TARGET GTEx” cohort downloaded from the Xena browser (https://xenabrowser.net; n = 3192 [normal], 4143 [tumor]; only samples from nine tissue types, biliary tract, colorectal, breast, CNS/brain, esophagus/stomach, ovary, pancreas, prostate and uterus, were analyzed). The sample number (“normalN” and “tumorN”) and mean expression score (“Mean_normal” and “Mean_tumor”) for the normal and tumor groups, as well as the absolute difference in mean expression (“absDelta”), are indicated. Statistical significance of the difference in expression between the two groups was scored using two-tailed Mann-Whitney U test (“MWU_p”). Adjusted P-values were calculated on the Mann-Whitney U test P-values using the Benjamini-Hochberg (BH) procedure (“MWU_q”).
+
+
+### celligner_geneset_scores.csv
+Expression scores for each of the 41 gene expression meta-programs identified by Gavish et al. (Nature, 2023 [PMID: 37258682]) as well as Basal and Classical programs defined by Moffitt et al. (Nat Genet, 2015 [PMID: 26343385]) were calculated from the gene expression data of the DepMap models (traditional and NextGen; n = 1914) and TCGA-plus tumor samples (n = 12236). See “Scoring the activity of gene-expression MPs” subsection of Methods for the strategy used for the calculation. The scores shown here underlie all the plots involving the meta-program expression scores, including those shown in Figs. 3a,b, 4a-e,g and Extended Data Figs. 6c,d, 7b-j, 8a,b.  
+
+
+### celligner_nearest_neighbor_table.csv
+For each of the DepMap models (n = 1909) and Novartis PDX models (n = 445; Gao et al. Nat Med, 2015 [PMID: 26479923]) (“input”), the identities (sample ID [“target”] and lineage [“target_lineage”]) of the 100 (25 for PDX models) nearest tumor samples (of the TCGA-plus/Met500 cohort [n = 13104]) on the Celligner UMAP embedding were recorded. This file was used for the Celligner-based model lineage prediction (Fig. 1f and Extended Data Figs. 2b,c).
+
+
+### celligner_prediction_accuracy.csv
+For each of the solid tumor models of DepMap NextGen (n = 304), DepMap traditional (n = 1346), and Novartis PDX (n = 443), their lineages were inferred from the lineages of the 25 (or more; indicated in the “neighbors_considered” column) nearest tumor samples on the Celligner embedding. DepMap models of the Ampulla of Vater and Vulva/Vagina lineages were removed from the further analysis due to the scarcity of tumor samples with corresponding lineages (n = 4 and 0, respectively; “immediate_fail”). The scores shown here underlie the Celligner lineage prediction accuracy plots shown in Extended Data Fig. 2a.
+
+
+### celligner_undiff_cluster.csv
+For each of the DepMap traditional (n = 1367) and NextGen models (n = 382), Novartis PDX models (n = 443), and TCGA-plus/Met500 tumor samples (n = 11029) of solid tumors, their residence in the undifferentiated cluster on the Celligner embedding is indicated (“undiff_cluster”). Note that some models have multiple gene expression profiles and the residence in the undifferentiated cluster was recorded per individual profiles. The undifferentiated cluster was defined on the basis of the relative abundance of the DepMap models and TCGA-plus/Met500 tumor samples as well as the mean  HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION ssGSEA enrichment score among the DepMap models in the individual clusters identified on Celligner (cluster n = 79). Four clusters (clusters #28, 59, 62 and 67) were collectively designated as “undifferentiated cluster”. See “Lineage prediction with Celligner” subsection of Methods for the details of this procedure. The scores shown here underlie the plots for the proportion of samples in the undifferentiated cluster shown in  Extended Data Fig. 2c.
+
+
+### expression_addiction_tests_full.csv
+For each of the genes scored for both dependency and expression in the NextGen models (gene n = 17889), the Pearson correlation (r) between the dependency and the expression of the dependency gene itself (“NextGenPearsonR”) and the significance of correlation (by two-tailed Pearson correlation; “NextGenPValue”) were calculated. The corresponding Pearson correlation in the traditional models (“TraditionalPearsonR”) was also scored. In addition, the dependency class of the gene based on the dependency profiles across the DepMap NextGen models is indicated (“NextGenDepClass”; see “Classification of dependency profiles” subsection of Methods). Note that only the genes in the three strong dependency classes (“NextGenDepClass” strongly selective, high variance and pan-essential; gene n = 3786) were plotted in Fig. 2a.
+
+
+### integrin_fak_colocalization_test.csv
+To assess the colocalization between integrin subunits (integrin beta1, integrin alphaV) and FAK in the KP3 cells grown in either plastic (2D) or dome (3D) cultures, the images of integrin staining and FAK staining from the same region were loaded onto Fiji (ImageJ ver 1.54p) and the regions of interest (ROIs) were manually defined by drawing boundaries around single cells. Three metrics for protein colocalization—intensity correlation quotient (“Li’s ICQ”; Li et al. J Neurosci, 2004 [PMID: 15102922]), thresholded Manders' Coefficient 1 (“Mander’s tM1”), and Pearson correlation (“PearsonR”)—between the two stainings within the ROI was calculated using the Coloc2 plugin (ver 3.1.0) for Fiji. Data from four sample types ("Class"), integrin alphaV-staining, plastic (AV2D), integrin alphaV-staining, dome (AV3D), integrin beta1-staining, plastic (B12D), and integrin beta1-staining, dome (B13D), are shown Li’s ICQ values are plotted on Extended Data Fig. 10b.
+
+
+### major_onc_tsg_3d_vs_2d_gene_full.csv
+For the oncogenes and tumor suppressor genes (TSGs) that were frequently (> 1%) mutated in the TCGA cohort (n = 40 [oncogene], 50 [TSG]; CDKN2B was removed since this gene was not evaluated in the NextGen model CRISPR screen), their dependency was compared between the 3D organoids cultured as dome (n = 94) and lineage-matched traditional 2D adherent models (n = 433). Statistical significance of the difference in dependency was scored using two-tailed Mann-Whitney U test (“MWU_p”). Adjusted P-values were calculated on the Mann-Whitney U test P-values using the Benjamini-Hochberg (BH) procedure (“MWU_q”). For the cancer genes whose mutation (hotspot mutation for the oncogenes and damaging mutation for the TSGs) is annotated, the same analysis was conducted after removing the mutant models to see if the differing dependencies between the 2D models and 3D organoids holds even when we focus our analysis to the models with WT alleles of the respective gene (“mutfree_q” and “mf_confirmation”; also see “major_onc_tsg_3d_vs_2d_gene_full.csv”). The scores shown here underlie the plot shown in Extended Data Fig. 8d.
+
+
+### major_onc_tsg_3d_vs_2d_mutfree_full.csv
+For the oncogenes and tumor suppressor genes (TSGs) that were frequently (> 1%) mutated in the TCGA cohort (n = 40 [oncogene], 50 [TSG]), their dependency was compared between the 3D organoids cultured as dome and lineage-matched traditional 2D adherent models after removing the mutant models of the respective gene (see “major_onc_tsg_alteration_matrix.csv”). The numbers of models used in the comparison (i.e., non-mutant models) are shown in the “2D_N” and “3D_N” columns. Statistical significance of the difference in dependency was scored using two-tailed Mann-Whitney U test (“MWU_p”). Adjusted P-values were calculated on the Mann-Whitney U test P-values using the Benjamini-Hochberg (BH) procedure (“MWU_q”). 
+
+
+### major_onc_tsg_3d_vs_2d_pathway_full.csv
+For the oncogenes and tumor suppressor genes (TSGs) that were frequently (> 1%) mutated in the TCGA cohort (n = 40 [oncogene], 50 [TSG]), we classified them into one of the 10 oncogenic signaling pathways based on the function of the protein they encode. For the groups of oncogenes and the groups of TSGs that belong to the same pathway (13 groups), mean dependency scores for the genes within the same group were calculated for the individual models. Subsequently, the mean dependency scores (i.e., mean of the means) of the NextGen 3D organoids (n = 94) and lineage-matched traditional 2D models (n = 433) were compared. Statistical significance of the difference in mean dependency scores was assessed using two-tailed Mann-Whitney U test (“MWU_p”). Adjusted P-values were calculated on the Mann-Whitney U test P-values using the Benjamini-Hochberg (BH) procedure (“MWU_q”). The scores shown here underlie the plot shown in Extended Data Fig. 8f.
+
+
+### major_onc_tsg_alteration_matrix.csv
+For each of the oncogenes and tumor suppressor genes (TSGs) that were frequently (> 1%) mutated in the TCGA cohort (n = 40 [oncogene], 50 [TSG]), mutation (hotspot mutation for oncogenes and damaging mutations for TSGs) of the respective gene per individual models in the NextGen 3D organoids (n = 94) and lineage-matched traditional 2D cell lines (n = 433) were scored. The values indicate the allele frequency of the mutations: 0 = no mutation; 1, 0 < (allele frequency) ≤ 0.95; 2, (allele frequency) > 0.95. This matrix was used to remove mutant models in “major_onc_tsg_3d_vs_2d_mutfree_full.csv”.
+
+
+### minipool_chronos_gene_effects.csv
+Chronos gene dependency scores were determined based on the results of the minipool screens (screen n = 18) for each of the 1,000 genes evaluated in these screens (100 positive control genes, 650 negative control genes, and 250 test genes). These Chronos scores provided the basis for the minipool screen analyses whose results are presented in Figs. 5d-g, Extended Data Figs. 9c-g.
+
+
+### minipool_growth_format_culture_medium_per_class.csv
+After calculating the effects of growth formats and culture media on gene dependencies as coefficients of the linear regression model (see “Minipool screen: analysis” subsection of Methods; the coefficient values are shown in “minipool_regression_coefficients. csv”), two analyses were conducted to evaluate the gene class-specific effects of these two components (i.e., growth format and culture medium) of culture conditions: 1) Mann-Whitney U test to compare the distributions of coefficients between in-class and out-of-class test genes for each of the nine core functional classes of minipool targets (results shown in Extended Data Figs. 9f,g); 2) F-test to compare the variances of the coefficients between in-class and out-of-class test genes for each of the nine core functional classes of minipool targets (results shown in Fig. 5g). This table summarizes the results of these two analyses, where columns starting with “GF” indicate the effects of growth formats and those starting with “CM” represent the effects of culture media. The scores shown here underlie the plot shown in Fig. 5g and Extended Data Figs. 9f,g.
+
+
+### minipool_growth_format_tests.csv
+For each of the test genes assessed by the minipool screen (gene n = 250), the effect of the growth formats (Matrigel dome culture [dome] vs monolayer culture on plastic plates [plastic]) on gene dependency was extracted as a coefficient of the linear regression model (see “Minipool screen: analysis” subsection of Methods; these coefficients are shown in “minipool_regression_coefficients. csv”) and the significance of the effect was scored by the two-sided linear regression t-test (“pvalue”). FDR (adjusted P-value) was calculated using the Benjamini-Hochberg (BH) procedure. The mean Chronos scores in the screens on dome cultures (n = 11) and plastic cultures (n = 7) are also shown (“true_dome_mean” and “true_plastic_mean”, respectively). The scores shown here underlie the plots shown in Fig. 5d and Extended Data Fig. 9f.
+
+
+### minipool_regression_coefficients.csv
+For each of the genes assessed by the minipool screen (gene n = 1000), the effects of the growth formats (Matrigel dome culture [dome] vs monolayer culture on plastic plates [plastic) and the culture media (serum-free OPAC medium vs serum-containing RPMI/FBS medium) on gene dependency were extracted as coefficients of the linear regression model (see “Minipool screen: analysis” subsection of Methods). This spreadsheet shows the coefficients representing the effect of growth formats (“C(Growth_Format)[T.Plastic]”) and the effect of culture media (“C(Serum_status)[T.Serum-free]”) for each gene. The scores shown here underlie the plots shown in Figs 5d-g and Extended Data Figs. 9f,g.
+
+
+### minipool_regression_pvalues.csv
+In extracting the effects of growth formats and culture media on gene dependencies (gene n = 1000) via the linear regression model, the significance of these effects—against the null hypothesis that these components of culture conditions do not have any effect on gene dependency—were also scored using the two-sided linear regression t-test. This spreadsheet shows the P-values for the effect of growth formats (“C(Growth_Format)[T.Plastic]”) and the effect of culture media (“C(Serum_status)[T.Serum-free]”) per each gene. The scores shown here underlie the plots shown in Figs 5d,e.
+
+
+### minipool_serum_status_tests.csv
+For each of the test genes assessed by the minipool screen (gene n = 250), the effect of the culture media (serum-free OPAC medium vs serum-containing RPMI/FBS medium) on gene dependency was extracted as a coefficient of the linear regression model (see “Minipool screen: analysis” subsection of Methods; these coefficients are shown in “minipool_regression_coefficients. csv”) and the significance of the effect was scored by the two-sided linear regression t-test (“pvalue”). FDR (adjusted P-value) was calculated using the Benjamini-Hochberg (BH) procedure. The mean Chronos scores in the screens with serum-containing RPMI/FBS (n = 9) and serum-free OPAC (n = 9) are also shown (“true_serum_mean” and “true_serum_free_mean”, respectively). The scores shown here underlie the plots shown in Fig. 5e and Extended Data Fig. 9g.
+
+
+### next_gen_cancer_gene_annotations.csv
+For all the oncogenes and tumor suppressor genes (TSGs; both annotated by the OncoKB; https://www.oncokb.org), the number of the NextGen models (with CRISPR profiles [n = 147]) that have relevant alterations—hotspot mutation and/or amplification for oncogenes and damaging mutation and/or deletion for TSGs—were scored. Oncogenes and TSGs with sufficient number of altered NextGen models (n ≥ 5 and at least one model with a hotspot mutation) were subjected to the analysis of dependencies associated with cancer gene alterations (shown in Fig. 2f). These included 6 oncogenes (CTNNB1, EGFR, ERBB2, KRAS, PIK3CA and TERT) and 13 TSGs (APC, ARID1A, CDKN2A, CIC, FBXW7, NF1, PIK3R1, PTEN, RB1, RNF43, SMAD4, TP53 and HLA-B).
+
+
+### next_gen_dependency_lineage_tests.csv
+In the analysis of dependencies associated with cancer gene alterations (shown in Fig. 2f), we tested if the observed association between the cancer gene alteration and dependency was consistently beyond the effects caused by lineage-bias of the cancer gene alteration. Specifically, we computed the differences in mean dependency between NextGen screens in each lineage and the remaining (i.e., out-of-lineage) NextGen screens, only considering lineages which have at least 5 models screened (breast, CNS/brain, colorectal, esophagus/stomach, pancreas and prostate). If the dependency difference observed across the two classes of models distinguished by the presence of a cancer gene alteration was outside the range of all dependency differences observed across all lineages, then we deemed the dependency-biomarker relationship to be driven by the cancer gene alteration. Otherwise, the dependency pattern was attributed to lineage effects. This spreadsheet shows the mean dependency difference between in-lineage vs out-of-lineage groups for each lineage:gene pair (n = 6 [lineage], 5536 [gene]). Also see “Identification of biomarker-associated dependencies” subsection of Methods.
+
+
+### next_gen_vs_traditional_metaprogram_expression_tests.csv
+For each of the 41 gene expression meta-programs identified by Gavish et al. (Nature, 2023 [PMID: 37258682]), the activity of the program was scored in the NextGen (n = 305) and lineage-matched traditional (n = 548) models. The activities of individual programs were then compared between the NextGen and traditional model groups both per lineage and with all the organoid lineages (i.e., all lineages except for CNS/brain) combined. The number of models (“NextGenN” and “TraditionalN”) and the mean expression scores (“NextGenMean” and “TraditionalMean”) for both model groups, as well as the difference in mean expression scores (“MeanDifference”) are indicated. Statistical significance of the difference was scored by two-tailed Mann-Whitney U test (“MannWhitneyPValue”) and FDR (adjusted P-value; “MannWhitneyFDR”) was calculated using the Benjamini-Hochberg (BH) procedure.
+
+
+### onc_tsg_alteration_dependency_tests_full.csv
+For oncogenes and TSGs that have sufficient number of NextGen models (n ≥ 5) with relevant alteration (hotspot mutation and/or amplification for oncogenes and damaging mutation and/or deletion for TSGs) (n = 13 [oncogene], 38 [TSG]), gene dependencies were compared between altered and unaltered NextGen models (n = 147 [model], 5536 [gene]). Mean dependency difference as well as the statistical significance of the difference, assessed by two-tailed Mann-Whitney U test, were scored (“NextGenMeanDifference” and “NextGenMannWhitneyPValue”, respectively). The same comparison of gene dependency was conducted between the altered and unaltered traditional models (model n = 597) and the difference in mean dependency as well as the statistical significance of the difference were scored (“TraditionalMeanDifference” and “TraditionalMannWhitneyPValue”, respectively). Note that in the plot shown in Fig. 2f, only the oncogenes and TSGs that have at least one NextGen model with a hotspot mutation (n = 6 [oncogene], 13 [TSG]) and dependencies in the three strong dependency classes (“NextGenDepClass” strongly selective, high variance and pan-essential; gene n = 3786) were included.
+
+
+### oncogene_gof_alteration_matrix.csv
+For each of the cancer genes (oncogenes and tumor suppressor genes [TSGs]; annotated by the OncoKB; https://www.oncokb.org) (gene n = 741), the NextGen models (n = 147) and lineage-matched traditional models (n = 597) were classified based on the presence or absence of the gain-of-function (GOF) alteration of the gene (hotspot mutation and/or amplification). The values indicate the presence/absence of GOF alteration: 0 = absent; 1 = present. This made a basis for selecting oncogenes with sufficient representation of GOF models among the NextGen cohort (see “nextgen_cancer_gene_annotations.csv”) as well as the analysis for dependencies associated with oncogene GOF (Figs. 2f,g).
+
+
+### organoids_vs_2d_gene_dependency_tail_enrichment_tests_full.csv
+The top 100 genes in either extreme of the distribution of mean dependency differences (3D organoids [n = 94] vs lineage-matched 2D models [n = 433]; gene n = 16691 excluding common essential genes) were combined to form a set of 200 genes with differential dependencies. Gene sets from the Hallmark and KEGG legacy collections were tested for enrichment among this set of 200 differential dependency genes using a hypergeometric test (or one-sided Fisher’s exact test). The number of differential dependency genes within each gene set (“OverlapSize”), the size of the gene set after removing essential genes (“EffectiveSetSize”), the original size of the gene set (“OriginalSetSize”), as well as the odds ratio and P-value from the hypergeometric test (“OddsRatio” and “FishersPValue”, respectively), are indicated. Only gene sets with EffectiveSetSize between 101 and 249 were included in the further analysis. The scores shown here underlie the plot shown in Fig. 5a. Also see “Differential dependency analysis between 3D organoids and 2D models” subsection of Methods. 
+
+
+### organoids_vs_2d_gene_dependency_tests_full.csv
+Gene dependencies were compared between the NextGen models that were grown as 3D organoids (n = 94) vs lineage-matched 2D adherent models (n = 433) (gene n = 18159). Mean dependency difference (“MeanDifference”), the statistical significance of the difference assessed by two-tailed Mann-Whitney U test (“MannWhitneyPValue”), as well as the adjusted P-values calculated by the Benjamini-Hochberg (BH) procedure (“MannWhitneyFDR”) were scored. Common essential genes, which were removed from the analysis of differential dependency genes (see “organoids_vs_2d_gene_dependency_tail_enrichment_tests_full.csv”), were also labeled (“DropEssential”). This spreadsheet was used to compile the list of 200 differential dependency genes between 2D and 3D models (see “organoids_vs_2d_gene_dependency_tail_enrichment_tests_full.csv”).
+
+
+### organoids_vs_2d_top_geneset_similarity_matrix.csv
+For the nine gene sets enriched for differential dependency genes (see Fig. 5a), their similarity was assessed by calculating the pairwise overlap coefficient, whose values are shown in this spreadsheet. Gene sets with pairwise overlap similarity > 0.3 (KEGG_FOCAL_ADHESION and KEGG_REGULATION_OF_ACTIN_CYTOSKELETON, HALLMARK_G2M_CHECKPOINT and  HALLMARK_E2F_TARGETS) were merged to form functional clusters, resulting in two merged gene sets ("Adhesion/Cytoskeleton" and "Cell Cycle") and five ("Lipid Metabolism," "mTORC1," "OxPhos," "UV," and "SLE") gene sets that remained separate (see Extended Data Fig. 8h).
+
+
+### paralog_dependency_tests_full.csv
+For all the paralog pairs listed on the Ensembl genome browser 113 (https://www.ensembl.org/) with both genes scored for expression and dependency in the NextGen models (paralog pair n = 60527), we computed the Pearson correlation between the expression scores of one of the genes and dependency scores of the other across the NextGen models (model n = 146) (“NextGenPearsonR”). Statistical significance of the correlation was assessed by two-tailed Pearson correlation (“NextGenPValue”). The expression-dependency correlation of the same paralog pair was also scored in the data from the lineage-matched traditional model cohort (n = 572) and recorded (“TraditionalPearsonR”). Note that only genes in the three strong dependency classes (“NextGenDepClass” strongly selective, high variance and pan-essential; gene n = 3786) were plotted in Fig. 2d.
+
+
+### pdac_classical_dependency_tests_full.csv
+The correlation between gene dependency and expression of the PDAC-classical/MUC program across the cohort of the NextGen organoid models were scored for all the genes (n = 108 [model], 18159 [gene]) (“OrganoidPearsonR”). Statistical significance of the correlation was assessed by two-tailed Pearson correlation (“OrganoidPValue”). The membership in the MSigDB “GOBP: WNT_SIGNALING_PATHWAY” is also indicated (“WntSignaling”). Note that only genes in the three strong dependency classes based on the organoid screen data (“OrganoidDepClass” strongly selective, high variance and pan-essential; gene n = 3521) were plotted in Fig. 4d.
+
+
+### tda_dependency_classification.csv
+The dependency profiles of individual genes across the NextGen models were classified into either of the five classes (Non-dependency, Weakly selective, Strongly selective, High variance and Pan-dependency) based primarily on the strategy described in a prior publication (Krill-Burger et al. Genome Biol, 2023 [PMID: 37612728]) (also see “Classification of dependency profiles” subsection of Methods) (n = 18159 [gene], 147 [model]) (“NextGenClass”). The same classification strategy was also applied to the screens of the NextGen organoids (i.e., NextGen models out of the CNS/brain lineage) (n = 108 [organoid]) (“OrganoidsClass”). The variance of dependency scores as well as the dependency rank of each gene in their 90th percentile least depleted model (used for identifying “Pan-dependency” class; also see Dempster et al., bioRxiv, 2019; https://doi.org/10.1101/720243 for the details) were also recorded based both on the NextGen models dependency scores and organoid dependency scores (“NextGen90%ileLineRank” and “Organoids90%ileLineRank”, respectively).
+
+
+### tumor_suppressor_lof_alteration_matrix.csv
+For each of the cancer genes (oncogenes and tumor suppressor genes [TSGs]; annotated by the OncoKB; https://www.oncokb.org) (gene n = 741), the NextGen models (n = 147) and lineage-matched traditional models (n = 597) were classified based on the presence or absence of the loss-of-function (LOF) alteration of the gene (damaging mutation and/or deletion). The values indicate the presence/absence of LOF alteration: 0 = absent; 1 = present. This made a basis for selecting TSGs with sufficient representation of LOF models among the NextGen cohort (see “nextgen_cancer_gene_annotations.csv”) as well as the analysis for dependencies associated with TSG LOF (Fig. 2f).

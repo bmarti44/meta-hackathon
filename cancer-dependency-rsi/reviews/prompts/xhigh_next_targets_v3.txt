@@ -1,0 +1,12 @@
+TOOLS: NONE. Inline, decisions first, <=80 lines. Role: frontier generator (gpt-6.1-sol, xhigh). All facts verified on disk this session:
+- Terminal determination v3 INCONCLUSIVE stands; terminal slot 3/3 spent; new terminal needs fresh user authorization.
+- C7 replay acquisition family: pgen010 executed, FAIL BELOW_QSTAR (q=0.00037); you declared FAMILY_EXHAUSTED.
+- Rank1 Sanger manifest probe (sgen016, closed 94): FAIL_TO_ESTABLISH for raw-count reconstruction (figshare 36 files contain zero raw count objects; DepMap portal listings are bot-verification-walled to scripted clients; CMP 403). Processed-vector reconstruction (question A) was explicitly out of that SPEC's scope and remains unprobed at manifest level; its manifests are the same portal file set.
+- Rank2 repeat census (sgen017, closed 98): NEAR_ABSENT_UNVERIFIED - exactly 1 credible same-condition repeat candidate (ACH-000614) among 1,030 qualified groups; 30% of sequences unassessable; independence unverified.
+- Rank3 condition-history inventory (sgen018, closed 100): ABSENT - max recorded parent-chain depth 2; 8 parent rows total (all AnchorDrug-derived); no A->B->A resource.
+- Constraints unchanged: DepMap outcome files in ~/Downloads (CRISPRGeneEffect.csv, ScreenGeneEffect.csv) remain unopened by blindness discipline (no locked feasible design exists to justify opening); $0 metered spend; local compute; no portal bypass; no cohort-C reuse; no endpoint switching.
+DECIDE:
+1. Does ANY discriminating generation remain executable within constraints that we have not run? Name it concretely (SPEC sketch, kill rule) or state FRONTIER_EXHAUSTED_UNDER_CONSTRAINTS.
+2. For question A (processed-vector patient-level Lock-S sensitivity): what exactly must the USER supply (file names from portal, or portal actions) to make a locked exploratory design possible, and what could it never establish?
+3. If frontier is exhausted, state the minimal honest close-out package and the exact user decisions that would reopen progress.
+End: NEXT_TARGETS_V3: <list or NONE>

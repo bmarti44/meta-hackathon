@@ -1,0 +1,9 @@
+# Independent reviewer packet (sgen009)
+Start here: GOAL.md (objective + C1-C13), STATUS.md (live state), manuscript/manuscript_draft_v1.md.
+Locked result: lock_s/results/external_v1.json (+ lock_s/results/external_v1_gene_displacement.csv); lock proof lock_s/LOCK2_COMMIT.json.
+Reproduce from project root `cancer-dependency-rsi/`: `RUN=$(mktemp -d) && .venv/bin/python src/sgen005_upstream.py --report $RUN/up.json && .venv/bin/python src/sgen002_reproduce.py --report $RUN/sgen002.json && .venv/bin/python src/sgen008_checks.py --report $RUN/chk.json && .venv/bin/python src/sgen009_trace.py --report $RUN/trace.json && .venv/bin/python -m pytest -q`.
+Traceability: generations/sgen009/traceability_v17.json. Provenance/licenses: generations/sgen007/provenance_register_v13.json.
+Known limits (do not re-derive): 142-patient weighting unquantified; donor interval not reproducible from retained arrays; no policy-improvement evidence (no cycle ran; pgen005 locked, task not instantiated); C6/C10/C11/C12 PARTIAL per adjudications in reviews/; sgen010-sgen014 outcome-blind feasibility record in GENERATIONS.md (fresh disjoint pool established; two-arm + transport designs infeasible on current metadata; DepMap outcome files in ~/Downloads deliberately unread).
+Questions for reviewers: (1) Is the bounded claim + caveat placement honest? (2) Is residual novelty sufficient vs closest work? (3) Any untraced assertion?
+
+Allocations incident (2026-10-29): user-authorized cap increases initially overwrote LOCK2-pinned config/allocations.json; original recovered byte-exact (all 30 LOCK2 hashes verify), amended caps preserved separately and wired via config/.budget_root shadow (same ledger). Records: ledger entries budget_amendment_user_20261029, allocations_pin_incident_20261029, allocations_incident_correction, allocations_incident_close; reviews/allocations_*_review*.md (85->93->98). Lock-S execution path untouched.

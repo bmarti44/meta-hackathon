@@ -1,0 +1,16 @@
+You are a skeptical reviewer (xhigh), ROUND 5. Scores: r1 68, r2 82, r3 89,
+r4 89 (reviews/astra_review_r1..r4.md). Round-4 dispositions:
+reviews/astra_review_r4_dispositions.md (transfer language replaced with
+your suggested scope in manuscript/proposal/email; stale literals fixed:
+17,525 genes, bundle size omitted, 289 words, 33/33).
+
+Verify those two items are genuinely fixed everywhere they were flagged
+(incl. rendered PDF text and release copies matching sources), confirm no
+regressions from this round's edits (validator, hashes, supplementary zip,
+manuscript-vs-artifacts spot checks), and give a final ship judgement for
+the scoped technical-note claims. If you find nothing further at
+low-or-above severity, say so plainly.
+
+Output: SCORE 0-100 (same anchors; 90+ = ship it), VERDICT, per-item
+disposition check with evidence, NEW issues by severity with smallest fix,
+CHECKS RUN. No padding, no over-engineering demands.

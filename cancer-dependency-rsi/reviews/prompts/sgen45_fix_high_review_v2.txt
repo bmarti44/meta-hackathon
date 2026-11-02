@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous: 86 (reviews/sgen0045_high_review_v1.md).
+Verify: (1) HIGH envelope: src/sgen004_envelope.py now residual-norm bound (0.921, vacuous), proof verdict disabled, envelope_v2.json; (2) frozen contents hashed in _copy + actual substitutions recorded (upstream_reproduction_v4.json); (3) runner components executed: C10 values check, eligibility, synthetic_use_audit.json, report-path arg; (4) fresh env: upstream runner under fresh uv-locked interpreter (fresh_env_report_v2.json); (5) zipfetch: detection byte reserved, bounded inflation via decompressobj + complete-consumption + 64MiB declaration cap, tests 6 pass.
+Issues severity+file:line+fix. End exactly: SGEN45_FIX_SCORE: <0-100>; C11:<...>

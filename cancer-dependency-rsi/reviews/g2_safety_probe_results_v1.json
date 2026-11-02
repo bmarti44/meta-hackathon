@@ -1,0 +1,195 @@
+{
+  "spec_sha256": "0cb3e8fea5ac7fe91cd8d443039af2ecaaeea77236f8635ad93eb138a2145f74",
+  "records": [
+    {
+      "branch_id": "E0-B1",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.055252514705032764,
+        "null_coverage": 0.72,
+        "q": 0.3506843519462998,
+        "ci_width": 0.23897126229304574,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.055252514705032764,
+        "null_coverage": 0.72,
+        "q": null,
+        "ci_width": 0.23897126229304574,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B2",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "none"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.14887769561437977,
+        "null_coverage": 0.64,
+        "q": 0.31645102247784174,
+        "ci_width": 0.23835170102049316,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.14887769561437977,
+        "null_coverage": 0.64,
+        "q": null,
+        "ci_width": 0.23835170102049316,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B3",
+      "config": {
+        "scope": "primary216",
+        "operator": "abs_mean_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": -0.0213534445935684,
+        "null_coverage": 0.96,
+        "q": 0.6967856533254251,
+        "ci_width": 0.26361677198893085,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": true,
+        "estimate": -0.0213534445935684,
+        "null_coverage": 0.96,
+        "q": 0.6967856533254251,
+        "ci_width": 0.26361677198893085,
+        "invalid_reasons": [],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B4",
+      "config": {
+        "scope": "primary216",
+        "operator": "max_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.04868221150146851,
+        "null_coverage": 0.68,
+        "q": 0.3224299464393928,
+        "ci_width": 0.2339581372291829,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.04868221150146851,
+        "null_coverage": 0.68,
+        "q": null,
+        "ci_width": 0.2339581372291829,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B5",
+      "config": {
+        "scope": "confirmatory207",
+        "operator": "mean_abs_delta",
+        "adjust": "base_strength"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.057935988360514196,
+        "null_coverage": 0.8,
+        "q": 0.4725262508623451,
+        "ci_width": 0.24257961996668276,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.057935988360514196,
+        "null_coverage": 0.8,
+        "q": null,
+        "ci_width": 0.24257961996668276,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    },
+    {
+      "branch_id": "E0-B6",
+      "config": {
+        "scope": "primary216",
+        "operator": "mean_abs_delta",
+        "adjust": "base_plus_organoid_mean"
+      },
+      "retired_v2": {
+        "valid": true,
+        "estimate": 0.02988540586063071,
+        "null_coverage": 0.68,
+        "q": 0.3500156860672464,
+        "ci_width": 0.21462398157484805,
+        "invalid_reasons": [],
+        "admissible_for_policy": null
+      },
+      "safety_draft_v3": {
+        "valid": false,
+        "estimate": 0.02988540586063071,
+        "null_coverage": 0.68,
+        "q": null,
+        "ci_width": 0.21462398157484805,
+        "invalid_reasons": [
+          "uncertainty inadequacy: legacy null coverage <0.90; G2 redesign required"
+        ],
+        "admissible_for_policy": false
+      }
+    }
+  ],
+  "diagnostic_rankings": {
+    "retired_v2": [
+      "E0-B3",
+      "E0-B5",
+      "E0-B1",
+      "E0-B6",
+      "E0-B4",
+      "E0-B2"
+    ],
+    "safety_draft_v3": [
+      "E0-B3"
+    ]
+  },
+  "wall_s": 38.8366362079978,
+  "cpu_s": 39.280313,
+  "peak_rss_bytes": 179830784,
+  "status": "NOT_ADMISSIBLE_FOR_POLICY",
+  "scientific_claim": null,
+  "external_outcomes_accessed": false,
+  "code_sha256": {
+    "src/evaluator_v2.py": "dda3e2ffcc5dd386ebfe7486a35e073756601bf3a947b7ad30c8215d32506360",
+    "src/evaluator_v3.py": "9d426e6db7ac5a52cdb425551743ff31f64d99f019de2bf05c7cb178cfce50fb",
+    "src/estimators.py": "19dcaa01253f3d7a619d18d5cbccc6063ea22f16320d9880b5b59e642e55888c"
+  }
+}

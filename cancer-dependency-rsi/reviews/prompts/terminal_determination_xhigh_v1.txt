@@ -1,0 +1,17 @@
+Required TERMINAL DETERMINATION (GOAL.md "Autonomy & terminal determination"; PLAN.md section 0.6). Model: gpt-6.1-sol, xhigh. This call uses one of the three pre-reserved terminal-review slots. Read-only: no downloads, no edits, no Sanger/C outcome files, no dependency matrices. Authoritative documents: /Users/bmarti44/github/bufferright/research/GOAL.md, PLAN.md, cancer_rsi_handoff.txt (spec wins on conflict).
+
+Project: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+Evidence package to review (read as needed):
+- status.json, STATUS.md (latest update 2026-10-28l), contract.json (LOCK1 draft; not frozen), config/allocations.json, config/resources.json, ledger/resources.jsonl, ledger/experiments.jsonl, ledger/reviews.jsonl
+- Gate reviews: reviews/g1_review_r3_raw.txt (G1 PASS-with-narrowing 90), reviews/g2_review_r2_raw.txt (74 FAIL), reviews/readiness_high_review_v2.md (95 integrity, G2 FAIL)
+- Unstick: reviews/uncertainty_followup_xhigh_v1.md, reviews/task_feasibility_unstick_xhigh_v1.md
+- Probe: reviews/prompts/g2_task_route_probe_v1.json, reviews/g2_task_route_probe_v1.json (UNRESOLVED), reviews/g2_task_route_probe_high_review_v1.md (92, upheld), reviews/g2_task_route_probe_v1_dispositions.json
+- Joint no-progress: reviews/joint_no_progress_xhigh_v1.md (CONCUR_NONCOMPLETE_TERMINAL; BLOCKED; O1) and reviews/lead_concurrence_joint_no_progress_v1.json (lead concurs, BLOCKED)
+- Evidence artifacts: data/baseline_reproduction_ols.json (C5 anchor, max diff 1.7316e-8), atlas/provisional_v1/, reviews/data_integrity_audit_v2.json, reviews/atlas_component_reproduction_frozen_sources_v3.json, diagnostics/donor_calibration_v1/ and v2/ (synthetic only), reviews/novelty_audit_v2.md, data/split_manifest.json, reviews/blocked_audit_v1.json (historical runtime BLOCKED, superseded)
+- 52 tests pass (ledgered bounded run after the probe).
+
+Determine gate by gate (C1-C13) whether each is MET / PARTIAL / UNMET with the evidence file supporting your judgment. Then certify exactly one terminal state from GOAL.md: COMPLETE_SUPPORTED_DISCOVERY, COMPLETE_SUPPORTED_REFUTATION_OR_BOUND, SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE, RSI_RESULT_WITHOUT_SCIENTIFIC_DISCOVERY, INCONCLUSIVE, BLOCKED, BUDGET_EXHAUSTED. A COMPLETE_* state requires every gate met with documentary evidence, score >=90 and zero unresolved high/critical objections; you cannot waive a gate. Keep scientific_discovery, prediction_improvement and policy_improvement separate. State the exact unmet gates, the precise blocking condition, explicit reopening conditions (e.g. user-supplied official 26Q3 Model.csv + CRISPRScreenMap.csv under a new versioned SPEC; or explicit user authorization of a scientific-only track that would consume C), and the smallest concrete next step. Confirm C was not consumed and remaining allocations (do not recommend raising ceilings).
+
+Output <=1100 words, ending with exactly one line:
+TERMINAL_STATE:<state>; GOAL_COMPLETE:<YES|NO>; SCORE:<0-100>; UNMET:<comma-separated gates>

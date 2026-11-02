@@ -1,0 +1,42 @@
+{
+ "version": 2,
+ "timestamp": "2026-10-29T21:45:16.008032+00:00",
+ "corrections_vs_v1": [
+  "pDNA placeholder rows excluded",
+  "explicit-false eligibility (missing flags excluded, counted separately)",
+  "CellFormat=unknown treated unqualified",
+  "independence language: distinct annotated screens, independence UNVERIFIED",
+  "primary key declared identifier-degenerate (1:1 with ScreenID after pDNA removal); content key is headline"
+ ],
+ "sequences_base_no_pDNA": 3613,
+ "sequences_strict": 3042,
+ "missing_flag_sequences_excluded": 382,
+ "primary_strict": {
+  "groups": 1367,
+  "repeat_groups": 0,
+  "coverage": 0.0,
+  "unqualified_sequences": 0,
+  "unqualified_screens": 0,
+  "repeat_keys": []
+ },
+ "robustness_strict": {
+  "groups": 1030,
+  "repeat_groups": 1,
+  "coverage": 0.000970873786407767,
+  "unqualified_sequences": 920,
+  "unqualified_screens": 336,
+  "repeat_keys": [
+   [
+    "ACH-000614",
+    "adherent",
+    "RPMI + 10% FBS",
+    "Avana",
+    "21"
+   ]
+  ]
+ },
+ "candidate": "ACH-000614 (SC-000614.AV01 vs SC-002875.AV01): identical ModelCondition content except ID; Avana d21 both; different pDNABatch (Avana-3/4); passage hints p5/p6 in names, PassageNumber blank; maps to patient SIDP01038; independence unverified",
+ "verdict": "CENSUS_COMPLETE",
+ "repeat_resource": "NEAR_ABSENT_UNVERIFIED (1 credible candidate; ~27% sequences unassessable under content key)",
+ "nonclaims": "No instability/persistence measurement; rerun reasons unknown; outcome estimand needs new locked design."
+}

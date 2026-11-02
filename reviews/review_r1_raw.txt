@@ -1,0 +1,1246 @@
+OpenAI Codex v0.164.0
+--------
+workdir: /Users/bmarti44/github/bufferright/research
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 01a18293-c5ca-7052-b368-7afc9a70d131
+--------
+user
+You are an adversarial scientific-engineering reviewer. Review the two files in this directory: PLAN.md and GOAL.md. They operationalize the research specification in cancer_rsi_handoff.txt (read it too — it is the ground truth; the two files must faithfully implement it without weakening any standard).
+
+Your task: find ALL issues. For each issue give: severity (low/medium/high/critical), file and section/line, what is wrong, why it matters, and the concrete fix. Check especially: (1) fidelity to the specification — any dropped, weakened, or distorted requirement from sections 1-15 and criteria C1-C13; (2) statistical/identifiability correctness (independent units, leakage, multiplicity, replay validity, cost measurability); (3) executability — could an agent follow this plan without inventing missing decisions? (4) internal consistency between PLAN.md and GOAL.md; (5) unstated assumptions, ambiguous gates, missing artifacts/commands, missing failure handling; (6) anything that would let a future executor claim success dishonestly (goalpost moves, vague thresholds, unverifiable gates).
+
+End with exactly one line: SCORE: <integer 0-100> where 100 means flawless and >=90 means ready to execute with no high/critical issues. Be harsh: deduct for every gap. Do not rewrite the files. Do not be polite at the expense of precision.
+
+codex
+I’ll read the specification and both implementation files, then audit fidelity, statistical validity, executable gates, and ways an executor could claim success without meeting the standard. I won’t modify the files.
+exec
+/bin/zsh -lc "pwd && rg --files -g 'AGENTS.md' -g 'PLAN.md' -g 'GOAL.md' -g 'cancer_rsi_handoff.txt'" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+/Users/bmarti44/github/bufferright/research
+PLAN.md
+GOAL.md
+cancer_rsi_handoff.txt
+
+exec
+/bin/zsh -lc 'ls -la' in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+total 144
+drwxr-xr-x@  6 bmarti44  staff    192 Oct 28 08:54 .
+drwxr-xr-x@ 27 bmarti44  staff    864 Oct 28 07:57 ..
+-rw-r--r--@  1 bmarti44  staff   9347 Oct 28 08:53 GOAL.md
+-rw-r--r--@  1 bmarti44  staff  24227 Oct 28 08:54 PLAN.md
+-rw-r--r--@  1 bmarti44  staff  36376 Oct 28 08:48 cancer_rsi_handoff.txt
+drwxr-xr-x@  4 bmarti44  staff    128 Oct 28 08:54 reviews
+
+exec
+/bin/zsh -lc 'for p in /AGENTS.md /Users/AGENTS.md /Users/bmarti44/AGENTS.md /Users/bmarti44/github/AGENTS.md /Users/bmarti44/github/bufferright/AGENTS.md /Users/bmarti44/github/bufferright/research/AGENTS.md; do if test -f "$p"; then printf '"'\\n%s\\n' \""'$p"; cat "$p"; fi; done' in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+exec
+/bin/zsh -lc 'nl -ba cancer_rsi_handoff.txt' in /Users/bmarti44/github/bufferright/research
+exec
+/bin/zsh -lc 'nl -ba GOAL.md' in /Users/bmarti44/github/bufferright/research
+exec
+/bin/zsh -lc 'nl -ba PLAN.md' in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+     1	Cancer dependency research with an autonomous RSI loop
+     2	
+     3	Goal and executable handoff for a local research agent
+     4	
+     5	Prepared 28 October 2026. Treat every source below as a seed to verify against the current primary source, release manifest, and paper methods.
+     6	
+     7	
+     8	1 - The ambitious goal
+     9	
+    10	Build and run a laptop-based autonomous research system that answers a specific, still-open question about when molecularly defined cancer dependencies persist or fail across measured culture environments.
+    11	
+    12	The primary question is whether measured sensitivity to culture conditions, together with genotype and tumor state, can explain failures of dependency transfer from conventional cancer models to patient-derived organoids beyond lineage and technical variation alone.
+    13	
+    14	Produce all of the following.
+    15	
+    16	- At least one previously unreported, precisely bounded, externally supported explanatory finding. It may be a positive conditional dependency rule, a convincing refutation of a meaningful dependency claim, or an informative bound that materially changes how a target should be interpreted. It must resolve a specific uncertainty, not merely increase a benchmark score.
+    17	- A reproducible evidence atlas covering every eligible gene in the controlled environmental panel, including support, contradiction, heterogeneity, uncertainty, missing evidence, and excluded genes with reasons. Expansion beyond that selected panel is exploratory unless independently justified.
+    18	- A defensible connection between measured environmental sensitivity and transfer behavior in an independently filtered organoid cohort, where the available evidence supports that connection.
+    19	- An implemented research-policy improvement loop with real experiments, faithful historical replay, executable policy revisions, fresh deployment, and a final comparison against strong fixed exploration strategies.
+    20	- Evidence that the learned policy produces a practically meaningful improvement under matched total resources, including its own learning overhead.
+    21	- A manuscript and complete reproducibility package ready for independent expert review, with all findings, failures, limitations, and costs disclosed.
+    22	
+    23	Seek a finding that changes which cancer target evidence researchers should trust. Do not substitute a generic prediction leaderboard or an agent framework demonstration for that scientific objective.
+    24	
+    25	Ambition does not authorize changing the standard of evidence. If the scientific result or the policy improvement fails its criteria, the overall goal remains unmet. A valid negative result can qualify only when it resolves a predeclared meaningful uncertainty with sufficient precision. An insignificant p-value does not qualify.
+    26	
+    27	
+    28	2 - Your operating role
+    29	
+    30	You are the lead investigator, research engineer, statistician, and experiment coordinator for this project.
+    31	
+    32	Execute the work. Do not stop after writing a plan, creating folders, or describing an architecture. Use the current session to establish the scientific contract, build the smallest working vertical slice, evaluate real public observations, and begin the first actual policy-improvement cycle when the evidence and resources permit.
+    33	
+    34	Use frontier model reasoning through the capabilities already supplied by your host agent. All scientific fitting, simulation, evaluation, and data processing must run on this laptop. Public web access and public data services are allowed. No new wet-lab measurements, controlled-access patient data, paid scientific cloud compute, or local foundation-model training are required.
+    35	
+    36	Make routine research and implementation decisions autonomously. Ask only when a missing credential, explicit spending authority, unavailable required file, or genuinely consequential unresolved user choice prevents further authorized work. Complete all independent work first.
+    37	
+    38	Work inside an isolated project directory named cancer-dependency-rsi under the current workspace, or continue the existing project if its identity is unambiguous. Preserve unrelated files and existing instructions.
+    39	
+    40	Install dependencies in a project environment. Respect existing permissions and approval controls. Do not copy permission-bypass flags from upstream agent launch scripts. Do not submit papers, publish repositories, contact researchers, purchase services, or provision new infrastructure.
+    41	
+    42	Use specialist workers when available, with distinct roles for literature and novelty, data provenance, scientific modeling, evaluator implementation, and adversarial review. The evaluator and final data access must have a narrower interface than the proposing agent. Shared privileged access is not a genuine security boundary and must never be described as one.
+    43	
+    44	
+    45	3 - Mandatory starting evidence
+    46	
+    47	Verify and read the methods, data availability, supplements, and closest relevant findings before treating any seed as an established fact.
+    48	
+    49	S1 - Broad NextGen resource and environmental experiments
+    50	
+    51	https://pmc.ncbi.nlm.nih.gov/articles/PMC13581591/
+    52	https://doi.org/10.1038/s41586-026-10843-7
+    53	https://github.com/broadinstitute/DepMap-NextGen-Public
+    54	https://doi.org/10.6084/m9.figshare.29472362
+    55	
+    56	S2 - Sanger organoid resource
+    57	
+    58	https://pmc.ncbi.nlm.nih.gov/articles/PMC13581617/
+    59	https://doi.org/10.1038/s41586-026-10830-y
+    60	https://github.com/Garnett-Lab/SangerOrganoidBiobank
+    61	https://doi.org/10.6084/m9.figshare.28339340
+    62	https://cellmodelpassports.sanger.ac.uk/downloads
+    63	https://dataminer.depmap.sanger.ac.uk/
+    64	https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/
+    65	
+    66	S3 - Closest direct transferability prior
+    67	
+    68	https://doi.org/10.3390/biology15191782
+    69	https://pubmed.ncbi.nlm.nih.gov/42883455/
+    70	https://pmc.ncbi.nlm.nih.gov/articles/PMC13664187/
+    71	https://doi.org/10.5281/zenodo.22472622
+    72	
+    73	S4 - Current Broad data and release guidance
+    74	
+    75	https://depmap.org/portal/data_page/?tab=allData
+    76	https://forum.depmap.org/t/organoid-dependency-data/4671
+    77	https://forum.depmap.org/t/announcing-the-26q3-release/4692
+    78	
+    79	S5 - Dream-RSI method and implementation
+    80	
+    81	https://arxiv.org/abs/2609.14858
+    82	https://arxiv.org/html/2609.14858v2
+    83	https://github.com/google-research/dream-rsi
+    84	
+    85	The starting literature establishes several constraints.
+    86	
+    87	- The Broad resource reports 147 genome-scale screens, while the Sanger resource reports screens across 162 organoids. These counts are not automatically disjoint biological samples.
+    88	- The smaller controlled Broad environmental experiment has 250 deliberately selected test genes and 18 screens across only seven biological models. It includes seven matched format contrasts and five matched medium contrasts, with possible repeated models. Verify the exact design in the source.
+    89	- The 250 genes were selected partly because they differed between model environments. They are not a representative genome-wide sample.
+    90	- The October 2026 transferability study already examines expression-based transfer from conventional models to Broad and Sanger organoids for 20 selected genes. Generic 2D-to-organoid transfer is not the new contribution.
+    91	- Broad's temporary NextGen manuscript dataset was incorporated into DepMap Public 26Q3. Staff direct users to the integrated CRISPRGeneEffect.csv and relevant model metadata. Reverify the current route rather than inventing a file ID or assuming old instructions still work.
+    92	- Sanger processed fitness measurements and Broad Chronos gene effects are different measurement systems. Their absolute values are not interchangeable.
+    93	- Historical releases, a current integrated release, and independently produced laboratory data are different forms of evidence. Reprocessing the same observations is not biological replication.
+    94	
+    95	Resolve downloads through current official manifests. Record source URL, release or commit, retrieval date, license, byte size, and checksum. Do not invent direct download URLs or accession metadata. Use official alternative routes if a public portal blocks unattended retrieval. Do not bypass a challenge or access control.
+    96	
+    97	Build around public processed observations. Raw sequencing is unnecessary. If a proposed analysis requires paired observations that are not actually released, identify that limitation before implementing the model.
+    98	
+    99	
+   100	4 - Hardware, budget, and persistence
+   101	
+   102	Inspect the available RAM, CPU, disk, operating system, installed runtimes, and already configured model access without printing secrets.
+   103	
+   104	Set conservative defaults and save them in a machine-readable configuration.
+   105	
+   106	- No GPU dependency.
+   107	- At most two CPU-heavy jobs concurrently.
+   108	- An aggregate research memory ceiling of the smaller of 8 GiB and 60 percent of physical RAM, reduced further when necessary to leave the host responsive.
+   109	- A ten-minute default timeout for an individual exploratory fitting job. Longer jobs require an explicit recorded allocation from the existing campaign budget.
+   110	- A download ceiling of 20 GiB or one quarter of available disk space, whichever is smaller.
+   111	- A first pilot target of 24 real evaluated development nodes and three executable policy challengers, retaining the incumbent.
+   112	- An eight-hour ceiling for the first pilot invocation. This is a safety ceiling, not a promised completion time.
+   113	- No automatic increase in financial, disk, concurrency, or wall-time ceilings.
+   114	
+   115	Use the host agent's already authorized model access. Any additional programmatic metered API calls require a numeric user-configured cap or an existing explicitly authorized cap. If none exists, the additional API spending cap is zero. Continue with host-driven reasoning and local computation where possible, and build the adapter without dispatching unapproved calls.
+   116	
+   117	Do not require the user to buy new services just to start the project. Do not silently equate an unknown price with zero.
+   118	
+   119	For separately dispatched API calls, enforce limits in code. Reserve a conservative maximum cost before each request, count concurrent reservations and retries, reconcile against returned usage, and persist the ledger before dispatch. Do not call a provider whose billable maximum cannot be bounded by the configured limits.
+   120	
+   121	Record model identifiers, prompts, token counts when exposed, tool costs, wall time, CPU time, and peak memory. If host-model costs cannot be measured, mark them unknown. You may still do science, but you cannot certify an all-in cost improvement while material costs are unobserved.
+   122	
+   123	Use append-only event records and checkpoint after every completed experiment. Track proposed, dispatched, completed, failed, and committed states. An interrupted request remains reserved until reconciled. Never reset the budget or repeat a completed paid request on resume.
+   124	
+   125	Do not claim a process is running unless you have an actual live process or job identifier and recent heartbeat. If the host session ends, write the exact next action and resume command. Do not promise work will continue after the runtime stops.
+   126	
+   127	
+   128	5 - Data and identifiability audit
+   129	
+   130	Before adaptive hypothesis search, construct a provenance table with biological model, donor, tumor lineage, sample origin, laboratory, assay library, medium, growth format, replicate identity, release, and measured outcome.
+   131	
+   132	Create explicit crosswalks among Broad, HCMI, Sanger, and author-specific identifiers. Mark uncertain donor identity as uncertain rather than assuming independence.
+   133	
+   134	Determine which observations are truly paired. Count independent biological models and donors. Do not count genes, guide RNAs, wells, alternative cultures, or technical replicates as additional independent patients.
+   135	
+   136	Audit release composition and preprocessing provenance. An integrated release may contain validation observations or corrections learned jointly from them. Removing overlapping rows alone does not undo leakage through outcome-guided target selection, normalization, or model selection. Prefer compatible study-specific releases and transformations fitted on development data. If a fitted correction used external dependency outcomes, rebuild a development-only analysis or obtain genuinely independent validation evidence. Disclosure alone does not restore independence. Distinguish that outcome leakage from covariate-only joint preprocessing, which must be disclosed as transductive feature preprocessing with appropriately limited claims. This is a required provenance check, not an assertion that any named release is contaminated.
+   137	
+   138	Verify dependency score direction, dynamic range, controls, missingness, and quality flags separately for each source. Avoid direct subtraction of Chronos values from Sanger fold-change or essentiality scores.
+   139	
+   140	Preserve the seven-model environmental design as a small, selected experiment. Determine whether row-level paired outcomes, replicates, and required metadata are sufficient for the intended contrast. A batch correction cannot separate laboratory and biology when the experimental design confounds them.
+   141	
+   142	Record attrition explicitly, including models unable to grow in a condition and genes excluded for insufficient variation or precision.
+   143	
+   144	Data eligibility is determined from prespecified quality and identifiability rules. It must not be selected later to maximize a favorable result.
+   145	
+   146	The gate is an identifiable, falsifiable question in a named subset. If the data cannot support the original question, propose and document a narrower still-open question within the same scientific objective. Do not pretend the original broader goal has been achieved.
+   147	
+   148	
+   149	6 - Scientific estimands and research contract
+   150	
+   151	Start from two connected estimands.
+   152	
+   153	The direct environmental estimand is the change in a gene's measured dependency between environment A and environment B within the same biological model, while holding the other measured culture condition fixed. Analyze medium and growth format separately where the design permits.
+   154	
+   155	The transfer estimand is the extent to which a prespecified genotype, tumor-state, or context relationship predicts dependency behavior in an independently filtered organoid cohort beyond lineage and the strongest appropriate baseline.
+   156	
+   157	Use original documented assay units for paired within-study contrasts. Use justified ranking, calibration, or outcome-specific comparisons for cross-study evidence.
+   158	
+   159	For each environmental claim, report the dependency in both conditions, all individual paired changes, uncertainty, and heterogeneity. A near-zero average can conceal large opposing effects.
+   160	
+   161	Do not call a dependency invariant because a difference is nonsignificant. If claiming equivalence, define a scientifically justified equivalence margin before confirmatory evaluation and require the relevant interval to fall inside that margin. If no defensible margin exists, report continuous effects and uncertainty without an invariance label.
+   162	
+   163	A stable absence of dependency is not a stable cancer vulnerability. Establish that the dependency itself is meaningful in the environments covered by a positive claim.
+   164	
+   165	Do not interpret a predictive expression feature as a causal mediator without identifying assumptions and suitable evidence. Environmental intervention evidence and cross-cohort biomarker associations must retain distinct evidence labels.
+   166	
+   167	Carry uncertainty and shared-model dependence in estimated environmental sensitivity into downstream transfer analyses using a justified measurement-error, resampling, or sensitivity analysis. Do not treat noisy estimated sensitivities as exact independent inputs. Report conclusions that change materially across plausible environmental-effect estimates.
+   168	
+   169	During initial development, choose and justify the precise primary endpoint, practical effect margin, hypothesis family, baseline set, uncertainty procedure, and sensitivity analyses. Then freeze them before policy optimization.
+   170	
+   171	The research contract must include the following.
+   172	
+   173	- Exact question and falsifiable alternatives.
+   174	- Intended population, environments, targets, and generalization claim.
+   175	- Eligibility and exclusion rules.
+   176	- Data and identifier versions.
+   177	- Development, policy-evaluation, and final external partitions.
+   178	- Feature engineering and transformation rules.
+   179	- Primary and secondary endpoints with fixed direction.
+   180	- Minimum practical effects or equivalence margins and their justification.
+   181	- Multiplicity control and uncertainty methods.
+   182	- Baseline definitions.
+   183	- Invalid-result rules.
+   184	- Success, failure, inconclusive, and budget-exhaustion conditions.
+   185	
+   186	The initial lock fixes the permitted hypothesis and transformation spaces, partitions, evaluator, baseline definitions, practical margins, and inferential rules. Adaptive development may select hypotheses, features, hyperparameters, and fitted artifacts within those spaces. A second lock commits the exact selected claim family, predictions, and artifacts before external evaluation.
+   187	
+   188	Hash this contract, evaluator code, and split manifests. Changing a locked scientific contract creates a new study identifier and requires appropriate new evaluation evidence.
+   189	
+   190	
+   191	7 - Novelty and biological scope
+   192	
+   193	Maintain a claim ledger throughout the project.
+   194	
+   195	For each proposed claim, record the nearest prior result, which part is already established, the precise remaining uncertainty, evidence needed to resolve it, and the consequence if the claim is supported or refuted.
+   196	
+   197	Read the Broad environmental analyses, the Sanger biomarker analyses, and the October transfer study closely. Their reported lipid, adhesion, state, and dependency findings are controls or prior evidence. Recovering them is not a new discovery.
+   198	
+   199	Use current primary literature, author data, and official documentation. Date the search and preserve queries and important exclusions. Absence of an exact search hit is not proof that a claim is new.
+   200	
+   201	Choose a bounded hypothesis family before final evaluation. Consider gene classes with measured environmental sensitivity and adequate overlap, not an unconstrained scan of every feature until a small p-value appears.
+   202	
+   203	Before finalizing the manuscript, repeat the novelty audit for each surviving exact claim. Preserve contradictions and prior evidence. Do not silently rename a known association to make it appear new.
+   204	
+   205	The required scientific contribution must be more specific than weak organoid transfer, better average correlation, or successful agent automation.
+   206	
+   207	
+   208	8 - Baselines, inference, and adversarial checks
+   209	
+   210	Build simple competent baselines before allowing elaborate models.
+   211	
+   212	Before the final lock, reproduce baselines only on development data or independent control data. Any reproduction requiring final external outcomes must occur after the final hypotheses, predictions, artifacts, and inferential code are committed, alongside the final evaluation. Those results cannot inform revisions to the tested study.
+   213	
+   214	Where applicable compare lineage only, genotype only, tumor-state or expression only, genotype plus state, measured context or assay covariates, and a regularized linear predictor modeled on the existing transfer study.
+   215	
+   216	Use the same eligible observations and permitted information for each comparison. Learn preprocessing, feature selection, dimension reduction, and tuning within development folds. Do not optimize a feature representation on final external outcomes.
+   217	
+   218	Compare against the strongest applicable baseline, not only the weakest. If environmental information is central to the explanation, include a prespecified ablation removing it.
+   219	
+   220	Use effect sizes and calibrated predictive or uncertainty endpoints as the scientific evaluator's optimization target. Do not reward p-value reduction, the number of discoveries, manuscript length, or confidence of the LLM explanation.
+   221	
+   222	Treat adaptive development as exploratory. Evaluate a locked final claim family once on independent outcomes. For a small confirmatory family, Holm correction at familywise alpha 0.05 is a reasonable default. Any alternative must be justified and frozen before outcomes are revealed.
+   223	
+   224	Do not apply ordinary fixed-family correction to an indefinitely adaptive stream of repeatedly inspected p-values and call it confirmatory evidence.
+   225	
+   226	Use uncertainty at the donor or biological-model level, accounting for repeated cultures and target or pathway dependence where relevant. Many bootstrap repetitions do not create new biological replication. With few clusters, assess whether the proposed interval or test is justified and report the effective sample size.
+   227	
+   228	Perform relevant negative controls, leakage checks, donor and lineage sensitivity analyses, platform sensitivity, and leave-one-model-out checks. Permutations must respect exchangeability and grouping. Do not permute labels freely when the design makes that invalid.
+   229	
+   230	Synthetic data may test code, calibration, and identifiability under explicit assumptions. Synthetic labels, imputed outcomes, and LLM guesses cannot serve as independent biological validation.
+   231	
+   232	Only make claims supported by the actual evidence. Public dependency screens alone do not establish clinical efficacy, normal-tissue safety, treatment resistance reversal, or universal target validity.
+   233	
+   234	
+   235	9 - Three distinct evaluation layers
+   236	
+   237	Keep these layers separate.
+   238	
+   239	A - Development task panels
+   240	
+   241	Use them to build scientific artifacts, tune development models, generate discovery trees, and select policy challengers. Record every adaptive use.
+   242	
+   243	B - Reserved policy evaluation panels
+   244	
+   245	Use them to compare the final learned exploration policy with fixed strategies in fresh rollouts. Freeze the compared policies and selection criterion before these panels are evaluated.
+   246	
+   247	C - Final external biological evaluation
+   248	
+   249	Prefer an independently filtered Sanger cohort after resolving donor overlap, release provenance, assay compatibility, and adequate representation. Use final outcomes only after committing the hypotheses, predictions, model artifacts, and inferential code.
+   250	
+   251	A final external cohort cannot also be a repeatedly consulted policy reward. Do not send final Sanger outcomes into the replay pool.
+   252	
+   253	For each final claim, identify exactly which component each dataset validates. External confirmation of dependency transfer does not independently validate a medium or format effect, or establish that environmental sensitivity caused transfer failure. Retain adaptively reused environmental evidence as exploratory or selection-adjusted evidence, as justified. Do not manufacture an independent environmental test by splitting genes from the same seven models. Seek an additional existing public controlled-environment dataset when the selected claim requires independent environmental confirmation. If none is suitable, narrow the claim or retain the unmet evidence gate.
+   254	
+   255	Subdividing the selected 250 genes does not create hundreds of independent biological tasks. Record model, donor, gene, and pathway overlap in all panels, and use blocked evaluation. The larger development cohorts may provide engineering tasks for policy learning, but their transfer to the small environmental problem must be reported honestly.
+   256	
+   257	Within a single privileged local agent, enforce a logged protocol with a separate evaluator interface and restricted inputs. Do not claim cryptographic secrecy or genuine blindness merely because an outcome file lives in a separate directory.
+   258	
+   259	Use retrospective external validation as the default wording. Public literature and model pretraining can expose outcomes. Record known exposure and do not certify that public results were unknowable.
+   260	
+   261	A failed final test is a failed final test. Subsequent work that uses its outcomes becomes exploratory unless genuinely new independent evidence is obtained.
+   262	
+   263	
+   264	10 - Implement the actual RSI loop
+   265	
+   266	Keep the base scientific generator, its model version and prompting contract, data contract, and evaluator fixed during a policy comparison.
+   267	
+   268	Make the editable policy an executable module that receives observed history, legal actions, and remaining resources, and selects an action.
+   269	
+   270	Legal actions may include opening a predefined analysis family, choosing an existing branch, refining a particular artifact, running a permitted diagnostic, and stopping.
+   271	
+   272	The policy may alter branching, prioritization, exploration versus refinement, and stopping. It cannot change labels, splits, metrics, practical margins, multiplicity correction, or success criteria.
+   273	
+   274	A narrative reflection is not a policy improvement unless it changes executed decisions.
+   275	
+   276	Record each discovery node's immutable parent, exact artifact, input context hash, data and split hashes, evaluator hash, seeds, result, validity diagnostics, failures, model calls, and measured costs.
+   277	
+   278	Historical replay may reveal only previously executed artifacts and their actual recorded outcomes. It must not use a model to invent outcomes for unexplored analyses.
+   279	
+   280	A reordered branch may alter the context seen by a generator. Make refinement depend on an immutable parent and fixed context, or require an exact context match before replaying a recorded child. Do not assume a recorded child represents an arbitrary counterfactual generation.
+   281	
+   282	The replay policy sees only the outcomes revealed along its trajectory. Do not expose the full tree's future rewards.
+   283	
+   284	Mark unsupported replay actions unsupported. Do not assign them fake scores or treat a surrogate prediction as a measured outcome. Compare policies on common support, report support coverage, and use replay as a screening tool.
+   285	
+   286	Perform the following cycle.
+   287	
+   288	1. Run the initial fixed policy on real development tasks.
+   289	2. Preserve the evaluated discovery trees as replay worlds.
+   290	3. Generate at least three executable policy challengers plus the unchanged incumbent.
+   291	4. Replay them under the same resource constraints and support rules.
+   292	5. Select a challenger with the frozen selection rule.
+   293	6. Test the challenger in fresh development rollouts against fixed exploration using the same generator and evaluator.
+   294	7. Promote only when the preregistered criterion is met.
+   295	8. Retain the incumbent when challengers fail.
+   296	9. Add only development histories and repeat.
+   297	
+   298	Complete at least two genuine cycles before the final policy comparison if the authorized resources and valid tasks permit. Two cycles do not require two promotions. An unchanged incumbent is a valid experimental outcome.
+   299	
+   300	After development, freeze the best admissible policy and evaluate it on the reserved policy panels. Compare it with the original fixed exploration strategy and at least one simple fixed-allocation or random-selection strategy.
+   301	
+   302	
+   303	11 - What counts as demonstrated policy improvement
+   304	
+   305	Predeclare one primary operating point or cost-to-quality endpoint. Also report complete scientific-quality-versus-cost curves.
+   306	
+   307	Use the same generator, evaluator, initial artifacts, information permissions, and common resource ceilings for all policies.
+   308	
+   309	Charge policy rewriting, replay, failed jobs, promotion trials, and extra model calls to the improving system. Permit fixed baselines to spend the corresponding budget on scientific search.
+   310	
+   311	Report both end-to-end performance including learning overhead and deployment-only performance with learning costs shown separately.
+   312	
+   313	The ambitious engineering target is at least 20 percent lower total measured API expenditure to reach a predeclared valid scientific-quality threshold, under the same CPU ceiling and information constraints, compared with the strongest fixed baseline. This is a project target, not a forecast.
+   314	
+   315	Set the quality threshold from development evidence before final policy evaluation. It must be meaningful and attainable by competent baselines, not chosen after observing which policy wins.
+   316	
+   317	Use paired blocked comparisons where appropriate and report uncertainty. For the default 20 percent savings goal, require the prespecified one-sided 95 percent lower confidence bound on savings to meet the 20 percent practical margin. A point estimate above 20 percent with a lower bound merely above zero supports some improvement but does not meet that ambitious margin. Freeze how failures to reach the quality threshold within budget are treated as censored outcomes. Do not convert nonattainment into invented exact costs. Random seeds quantify execution variability, not independent biological replication.
+   318	
+   319	If API expenditure is not the dominant or measurable resource, choose a justified alternative primary resource endpoint during the initial contract stage, explain it, and lock it before optimization. All other material resources must still be measured or strictly matched. A CPU-only advantage or token proxy cannot satisfy C9 while material host-model costs remain unknown and unmatched. In that case retain an unresolved cost gate and avoid claiming all-in savings. Define an equally explicit practical improvement margin and uncertainty requirement for any alternative endpoint. Do not switch endpoints after seeing final results.
+   320	
+   321	If faithful replay has inadequate support, preserve that finding and use fresh rollouts to assess the proposed policy. Label the method accurately as a Dream-RSI-inspired adaptation and disclose departures.
+   322	
+   323	Do not call the system recursively self-improving merely because more compute improved a reused validation score.
+   324	
+   325	
+   326	12 - Completion criteria
+   327	
+   328	Mark the ambitious goal complete only when every applicable criterion below has documentary evidence.
+   329	
+   330	C1 - A current novelty audit identifies a precise unresolved cancer dependency question and distinguishes it from the August resources and October transfer study.
+   331	
+   332	C2 - All analyses use legitimately accessible public data, with complete provenance, licensing, identifier crosswalks, and reproducible retrieval or documented local cache installation.
+   333	
+   334	C3 - The intended paired contrast or conditional relationship is identifiable within a named population. Confounding and selection are disclosed, and independent biological units are counted correctly.
+   335	
+   336	C4 - The scientific contract, eligibility rules, splits, baseline set, practical effects, evaluator, and confirmatory procedures were frozen before adaptive optimization and final evaluation.
+   337	
+   338	C5 - The pipeline reproduces relevant published or author-code baseline results closely enough to establish outcome direction, cohort integrity, and measurement interpretation, with discrepancies resolved or explicitly bounded.
+   339	
+   340	C6 - At least one previously unreported explanatory finding passes the frozen scientific criteria and relevant external tests. A supported refutation or informative bound may qualify when it resolves a meaningful predeclared uncertainty. Mere nonsignificance, a rediscovered association, or a better exploratory score does not qualify.
+   341	
+   342	C7 - The evidence atlas covers all eligible genes in the controlled panel and lists every exclusion. Every entry distinguishes dependency strength, environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, and prior knowledge.
+   343	
+   344	C8 - At least two real policy-improvement cycles have run, with executable challengers, faithful replay, fresh rollout evaluation, retained failed attempts, and a final frozen-policy comparison on reserved panels.
+   345	
+   346	C9 - The learned policy meets the preregistered practical improvement criterion against the strongest fixed baseline under matched total resources. Meeting only a deployment-only criterion does not satisfy an end-to-end claim.
+   347	
+   348	C10 - Scientific conclusions survive the prespecified multiplicity correction, appropriate uncertainty analysis, key ablations, and adversarial checks. Any claim of invariance requires positive dependency evidence and justified equivalence evidence.
+   349	
+   350	C11 - A clean reproduction run regenerates the primary estimates, figures, evidence decisions, and policy comparison within documented tolerances from frozen artifacts. It must not require rerunning stochastic LLM search to reproduce the reported analysis.
+   351	
+   352	C12 - The package includes a manuscript for expert review, machine-readable evidence, source and data manifests, all experiment histories, model and policy versions, actual resource measurements, failures, limitations, and exact reproduce and resume commands.
+   353	
+   354	C13 - The first meaningful end-to-end research cycle has actually executed. A plan, scaffold, mock evaluator, or hypothetical example is insufficient.
+   355	
+   356	Seek multiple convergent findings across adequately represented lineages and pathways as an additional scientific stretch target. Do not replace one strong finding with a quota of weak associations. Do not force claims about sparsely represented cancer types.
+   357	
+   358	Keep scientific discovery, prediction improvement, and policy improvement as separate status fields. One does not establish the others.
+   359	
+   360	
+   361	13 - Required artifacts and commands
+   362	
+   363	Create a compact repository with equivalent artifacts to the following. Choose actual file formats suited to the content.
+   364	
+   365	- README.md with scope, installation, exact commands, and current limitations.
+   366	- GOAL.md with the locked goal and completion criteria.
+   367	- PROTOCOL.md and a machine-readable locked research contract.
+   368	- STATUS.md and a structured status record with current phase, incumbent, spending, next action, and unmet gates.
+   369	- A data manifest, source manifest, donor/model crosswalk, eligibility registry, and split manifests.
+   370	- A novelty and claim ledger with the complete decision history.
+   371	- Data adapters, baseline models, a fixed evaluator, policy modules, a faithful replay engine, a local runner, and a budget wrapper.
+   372	- An append-only experiment ledger and immutable discovery artifacts.
+   373	- Frozen final predictions, scientific models, policies, and checksums.
+   374	- An evidence atlas in a machine-readable table.
+   375	- Figures, a manuscript draft, a limitations statement, and an adversarial-review report.
+   376	- Environment and dependency locks, licenses and attribution, and a reproducibility report.
+   377	- Meaningful tests for identity leakage, score direction, grouping, estimator behavior, cost accounting, resume idempotence, unsupported replay actions, and final-outcome access.
+   378	
+   379	Provide simple documented commands equivalent to bootstrap, audit-data, reproduce-baselines, run-pilot, run-cycle, evaluate-policy, lock-science, evaluate-external, reproduce, status, and resume.
+   380	
+   381	Do not overbuild a general agent platform before the first valid scientific vertical slice works. Reuse maintained components where that reduces risk, but inspect their resource demands and permissions.
+   382	
+   383	
+   384	14 - Terminal outcomes and reporting
+   385	
+   386	Use explicit terminal states.
+   387	
+   388	- COMPLETE_SUPPORTED_DISCOVERY
+   389	- COMPLETE_SUPPORTED_REFUTATION_OR_BOUND
+   390	- SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE
+   391	- RSI_RESULT_WITHOUT_SCIENTIFIC_DISCOVERY
+   392	- INCONCLUSIVE
+   393	- BLOCKED
+   394	- BUDGET_EXHAUSTED
+   395	
+   396	The first two require every relevant completion gate, including demonstrated policy improvement. The others are honest outcomes and must list which parts of the ambitious goal remain unmet.
+   397	
+   398	A completed computational campaign is not automatically a completed scientific goal. Do not relabel insufficient power as equivalence or a polished manuscript as a discovery.
+   399	
+   400	When blocked or budget-limited, checkpoint all valid work, identify the exact missing condition, and provide the smallest concrete next step. Do not lower scientific standards, spend beyond the cap, or retry indefinitely.
+   401	
+   402	During execution, report concise milestones with measured results, unresolved risks, and the next discriminating experiment. Avoid progress theater based on file counts or unexecuted plans.
+   403	
+   404	
+   405	15 - Start now
+   406	
+   407	Inspect the workspace and resource limits. Verify the primary sources and accessible processed data. Build the donor and assay provenance audit. Formulate a narrowly identifiable first question and its strongest alternative explanations.
+   408	
+   409	Implement the smallest valid data-to-estimate-to-evaluator path. Reproduce the necessary baseline. Freeze the initial research contract and evaluation partitions.
+   410	
+   411	Then run real development experiments, build the first replay world, generate executable policy challengers, and perform a fresh comparison. Continue through the authorized staged campaign.
+   412	
+   413	Your first substantive report must show what was actually executed, what the observations establish, what remains unidentifiable, which policy was retained or promoted, the measured costs, and the exact next action. If a real evidence or authorization gate prevents the first cycle, report that precise blocker and all completed independent work. Do not claim that the loop started when only its scaffolding exists.
+   414	
+
+ succeeded in 0ms:
+     1	# GOAL — Cancer Dependency RSI (locked goal statement)
+     2	
+     3	> **Goal-tool objective (copy verbatim into `create_goal`):**
+     4	> Discover and independently support a previously unreported, precisely bounded explanation of when molecularly defined cancer dependencies persist or fail across measured culture environments — and prove, under a fixed scientific evaluator and matched total resources, that a learned research policy beats strong fixed exploration by a preregistered practical margin. Do not stop at a plan, scaffold, leaderboard, or narrative: run real experiments on verified public data, complete at least two genuine policy-improvement cycles with faithful replay and fresh rollouts, evaluate one locked claim family once on independent external outcomes, and ship a reproducible evidence atlas, manuscript, and reproducibility package. If any gate fails, report the exact unmet gates — never reinterpret insufficient evidence as success.
+     5	
+     6	- **Project:** `cancer-dependency-rsi/` (isolated under this workspace)
+     7	- **Specification:** `cancer_rsi_handoff.txt` (28 Oct 2026) — the research specification; this file is its locked goal projection. On conflict, the specification wins.
+     8	- **Execution plan:** `PLAN.md`
+     9	- **Status / resume:** `cancer-dependency-rsi/STATUS.md` (append-only ledgers alongside it)
+    10	
+    11	## The ambition (all five, not any one)
+    12	
+    13	1. **A new explanatory finding.** At least one previously unreported, precisely bounded, externally supported result — a positive conditional dependency rule, a convincing refutation of a meaningful dependency claim, or an informative bound that changes how a target should be interpreted. It must resolve a specific predeclared uncertainty. A better benchmark score, a rediscovered association, or a nonsignificant p-value does not count.
+    14	2. **A complete evidence atlas.** Every eligible gene in the controlled environmental panel (250 selected genes) with support, contradiction, heterogeneity, uncertainty, missing evidence, and every exclusion with its reason.
+    15	3. **A defensible environment→transfer connection.** Measured environmental sensitivity linked to transfer behavior in an independently filtered organoid cohort, beyond lineage and the strongest appropriate baseline — only where the evidence supports it, with distinct evidence labels for intervention vs. association.
+    16	4. **A real policy-improvement loop.** Executable policies, faithful historical replay on recorded outcomes only, fresh-rollout promotion tests, incumbent retention on failure, ≥2 genuine cycles, and a final frozen-policy comparison on reserved panels against fixed exploration and a fixed-allocation/random strategy.
+    17	5. **Demonstrated efficiency + a review-ready package.** Preregistered practical improvement under matched total resources including learning overhead (default target: ≥20% lower total measured cost to a predeclared quality threshold, one-sided 95% lower bound meeting the margin), plus manuscript and full reproducibility package with all failures, limitations, and costs disclosed.
+    18	
+    19	**Stretch (not a substitute):** multiple convergent findings across adequately represented lineages/pathways. Never trade one strong finding for a quota of weak associations; never force claims about sparsely represented cancer types.
+    20	
+    21	## Scientific question (to be narrowed at the identifiability gate)
+    22	
+    23	Does measured sensitivity to culture conditions (medium, growth format), together with genotype and tumor state, explain failures of dependency transfer from conventional cancer models to patient-derived organoids beyond lineage and technical variation alone?
+    24	
+    25	- **Direct environmental estimand:** within-model change in a gene's measured dependency between environment A and B holding the other measured condition fixed; medium and format analyzed separately where the design permits; original assay units for within-study paired contrasts.
+    26	- **Transfer estimand:** extent to which a prespecified genotype / tumor-state / context relationship predicts dependency behavior in an independently filtered organoid cohort beyond lineage and the strongest baseline.
+    27	- Generic cell-line→organoid prediction is already studied (October 2026 transferability study, 20 genes) and **cannot** be the novelty claim. Recovering published lipid/adhesion/state findings is a control, not a discovery.
+    28	
+    29	## Non-negotiables
+    30	
+    31	- Scientific evaluator, splits, practical margins, multiplicity control, and success criteria are **frozen before** policy optimization and before final evaluation. The policy may change branching, prioritization, refinement, and stopping — never labels, metrics, margins, or success criteria.
+    32	- Three evaluation layers stay separate: **(A)** development panels, **(B)** reserved policy-evaluation panels, **(C)** final external biological evaluation (independently filtered Sanger cohort preferred). Final outcomes are never a replay reward and are touched only after the second lock commits hypotheses, predictions, artifacts, and inferential code.
+    33	- Count independent biological models/donors correctly. Genes, guides, wells, cultures, and replicates are not patients. Broad Chronos effects and Sanger fitness scores are different measurement systems — never subtracted directly.
+    34	- Never reward small p-values, discovery counts, or persuasive narratives. Never invent outcomes for unexplored actions; unsupported replay actions stay unsupported. Synthetic data tests code only, never biology.
+    35	- All computation on this laptop (Apple M5 Max, 18 cores, 128 GB RAM, macOS 26.6). No GPU, ≤2 CPU-heavy jobs, research memory ≤ min(8 GiB, 60% RAM), 10-min default exploratory timeout, ≤20 GiB downloads, first pilot ≤8 h, additional metered API spend cap = $0 unless the user sets a numeric cap. Ceilings never auto-increase.
+    36	- Separate status fields, always: `scientific_discovery`, `prediction_improvement`, `policy_improvement`. One never establishes another.
+    37	
+    38	## Completion — all 13 gates (C1–C13) must hold
+    39	
+    40	| Gate | Requirement (abbreviated; specification §12 is authoritative) |
+    41	|---|---|
+    42	| C1 | Current novelty audit: precise unresolved question, distinguished from Aug resources + Oct transfer study |
+    43	| C2 | Legitimate public data only; full provenance, licensing, ID crosswalks, reproducible retrieval/cache |
+    44	| C3 | Identifiable paired contrast / conditional relationship in a named population; correct independent-unit counts |
+    45	| C4 | Contract, eligibility, splits, baselines, margins, evaluator, confirmatory procedures frozen before optimization/final eval |
+    46	| C5 | Baselines reproduced closely enough to establish direction, cohort integrity, measurement interpretation |
+    47	| C6 | ≥1 previously unreported explanatory finding passes frozen criteria + external tests (refutation/bound can qualify) |
+    48	| C7 | Evidence atlas covers all eligible panel genes; every exclusion listed; evidence types distinguished |
+    49	| C8 | ≥2 real policy cycles: executable challengers, faithful replay, fresh rollouts, retained failures, final reserved-panel comparison |
+    50	| C9 | Learned policy meets preregistered practical-improvement criterion vs strongest fixed baseline, end-to-end incl. overhead |
+    51	| C10 | Conclusions survive multiplicity correction, uncertainty analysis, ablations, adversarial checks; invariance needs positive + equivalence evidence |
+    52	| C11 | Clean reproduction from frozen artifacts within tolerances; no stochastic LLM rerun required |
+    53	| C12 | Manuscript + machine-readable evidence, manifests, histories, versions, measured resources, failures, limitations, reproduce/resume commands |
+    54	| C13 | First meaningful end-to-end cycle actually executed (plan/scaffold/mock is insufficient) |
+    55	
+    56	## Terminal states (use exactly one; list unmet gates otherwise)
+    57	
+    58	`COMPLETE_SUPPORTED_DISCOVERY` · `COMPLETE_SUPPORTED_REFUTATION_OR_BOUND` (both require every relevant gate incl. C9) · `SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE` · `RSI_RESULT_WITHOUT_SCIENTIFIC_DISCOVERY` · `INCONCLUSIVE` · `BLOCKED` · `BUDGET_EXHAUSTED`
+    59	
+    60	A completed computational campaign is not a completed scientific goal. Insufficient power is not equivalence. A polished manuscript is not a discovery.
+    61	
+    62	## Model routing (user-mandated)
+    63	
+    64	- **Review / adversarial audit of everything:** `gpt-6.1-sol` at `high` reasoning via `codex exec` — must enumerate low/medium/high/critical issues and score 0–100; verified issues are fixed; re-review until score ≥ 90.
+    65	- **Generating new generations** (policy challengers, hypothesis/analysis generations): `gpt-6.1-sol` at `xhigh` reasoning.
+    66	- Every model call is ledgered (model ID, effort, prompt hash, tokens when exposed, wall/CPU time, cost or `unknown`). Unknown material cost ⇒ C9 all-in savings cannot be certified; the gate stays unresolved rather than assumed.
+    67	
+    68	## Definition of done for this goal
+    69	
+    70	Terminal state is one of the two `COMPLETE_*` states with documentary evidence for C1–C13, a clean-room reproduction passing within tolerances, and the first-substantive-report contents (verified data, identifiable question, baseline result, real experiments, replay support, retained/promoted policy, measured resources, next discriminating experiment) all superseded by final locked results. Anything less is reported under its honest terminal state with the precise unmet gates and the smallest concrete next step.
+
+ succeeded in 0ms:
+     1	# PLAN — Executing the Cancer-Dependency RSI Research Loop
+     2	
+     3	**Specification:** `cancer_rsi_handoff.txt` (28 Oct 2026) · **Locked goal:** `GOAL.md` · **Project root:** `cancer-dependency-rsi/`
+     4	**Host (verified 2026-10-28):** Apple M5 Max, 18 CPU cores, 128 GB RAM, 532 GiB free disk, macOS 26.6 (arm64); Python 3.14.8, git 2.54, Node available; no R/Julia (install only if a baseline requires it, inside the project env).
+     5	**Model access (verified):** Muse configured with `gpt-6.1-sol` (`~/.codex/config.toml`: `model_reasoning_effort="high"`); host agent available for reasoning. All 8 seed URLs (S1–S5 papers/repos/portals) returned HTTP 200 on 2026-10-28 — reachability only; content/methods verification is Phase 1 work, not yet done.
+     6	
+     7	This plan is the execution contract for the loop. It sequences the work so that **no adaptive search happens before identifiability is proven, no policy optimization happens before the evaluator is frozen, and no final outcome is touched before the second lock.** Each phase ends at an evidence gate; failing a gate narrows the question or stops honestly — it never lowers the standard.
+     8	
+     9	---
+    10	
+    11	## 0. Operating rules (bind every phase)
+    12	
+    13	### 0.1 Model routing (user-mandated, enforced in code)
+    14	| Role | Model | Reasoning | Invocation pattern |
+    15	|---|---|---|---|
+    16	| Adversarial review of **everything** (plans, code, contracts, claims, manuscript) | `gpt-6.1-sol` | `high` | `codex exec -m gpt-6.1-sol -c model_reasoning_effort='"high"' -s read-only "<review prompt>"` |
+    17	| Generating new generations (policy challengers, hypothesis/analysis candidates) | `gpt-6.1-sol` | `xhigh` | `codex exec -m gpt-6.1-sol -c model_reasoning_effort='"xhigh"' -s workspace-write "<generation prompt>"` |
+    18	| Lead-investigator reasoning, statistics, implementation | Host agent | — | Local session; all fitting/evaluation runs locally in Python |
+    19	
+    20	- The **review protocol** is fixed: reviewer must enumerate issues by severity (**low / medium / high / critical**) with file:line evidence and a single **0–100 score**. The lead investigator **verifies each issue against the artifact** (accept / reject with reason), fixes all verified issues, and **re-reviews until score ≥ 90 and zero verified high/critical issues remain**. Review transcripts, verdicts, and fixes are appended to `reviews/` and the experiment ledger. A score is never accepted without its issue list; an issue is never fixed without verification.
+    21	- Specialist worker roles are kept distinct: literature/novelty, data provenance, scientific modeling, evaluator implementation, adversarial review. The evaluator process receives a **narrower interface** than the proposer (hashed inputs, no final-outcome paths). This is a logged protocol, **not** a cryptographic security boundary — never described as one.
+    22	- Every model call is recorded: model ID, effort, prompt hash, token counts when exposed, wall/CPU seconds, peak RSS, monetary cost or `unknown`. **Additional metered API spend cap = $0** unless the user configures a numeric cap; host/codex access already authorized is used, with unmeasurable cost marked `unknown` (which blocks certifying all-in C9 savings — see §7.3).
+    23	
+    24	### 0.2 Resource envelope (written to `cancer-dependency-rsi/config/resources.json`, enforced by the budget wrapper)
+    25	- No GPU. ≤ 2 CPU-heavy jobs concurrently. Aggregate research RSS ceiling = min(8 GiB, 60% RAM) = **8 GiB** on this host.
+    26	- Exploratory fit timeout **600 s** default; longer only via explicit recorded allocation from the campaign budget.
+    27	- Downloads ≤ min(20 GiB, ¼ free disk) = **20 GiB**. First pilot: **24 real evaluated development nodes + 3 executable challengers + incumbent**, ≤ **8 h** wall (safety ceiling, not a promise).
+    28	- No automatic ceiling increases. Budget wrapper **reserves before dispatch, persists before dispatch, reconciles after**; interrupted ⇒ stays `reserved` until reconciled; completed paid/host calls are never repeated on resume.
+    29	
+    30	### 0.3 Persistence & honesty primitives
+    31	- Append-only JSONL ledgers: `ledger/experiments.jsonl`, `ledger/resources.jsonl`, `ledger/reviews.jsonl`. Node states: `proposed → dispatched → completed|failed → committed`. Checkpoint after **every** completed experiment.
+    32	- Every discovery node stores: immutable parent ID, artifact bytes + SHA-256, input-context hash, data hash, split hash, evaluator hash, generator model+effort+prompt hash, seeds, result, validity diagnostics, failures, measured costs.
+    33	- `STATUS.md` + `status.json` always carry: phase, incumbent policy ID, spend, three separate status fields (`scientific_discovery`, `prediction_improvement`, `policy_improvement`), unmet gates (C1–C13), **next action**, and **exact resume command**. Never claim the loop is "running" without a live PID/job ID + recent heartbeat.
+    34	- Terminal states only from the GOAL list. A failed final test stays failed; downstream work on its outcomes is exploratory.
+    35	
+    36	---
+    37	
+    38	## Phase 0 — Bootstrap & provenance skeleton (Gate G0)
+    39	
+    40	**Do:**
+    41	1. Create `cancer-dependency-rsi/` with: `README.md`, `GOAL.md` (copy/symlink policy: canonical copy + hash), `PROTOCOL.md` (stub → filled at Lock 1), `STATUS.md` + `status.json`, `config/resources.json`, `src/` (adapters, baselines, evaluator, policies, replay, runner, budget), `data/` (cache + manifests), `ledger/`, `reviews/`, `artifacts/`, `tests/`, `manuscript/`. Init git; commit scaffold separately from science.
+    42	2. Create project Python env (`cancer-dependency-rsi/.venv`, `uv` or `python3 -m venv`), pin deps (`pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`, `pyarrow`, `pydantic`, `pytest`, `httpx`); write lockfile. Verify `pytest` green on placeholder tests (score-direction, grouping, cost-accounting stubs).
+    43	3. Implement the **budget wrapper + ledger writer + hashing utilities first** (they gate everything else) and the CLI skeleton: `bootstrap, audit-data, reproduce-baselines, run-pilot, run-cycle, evaluate-policy, lock-science, evaluate-external, reproduce, status, resume` (initially `status`/`resume` functional, others fail loudly with "not yet unlocked: <gate>").
+    44	4. Record host fingerprint (CPU/RAM/disk/OS, Python, codex version, model IDs) into `config/host.json` **without printing secrets**.
+    45	
+    46	**Gate G0:** `status` prints phase/incumbent/spend/next-action/resume; ledgers append + verify; resource config enforced on a dummy job (timeout + RSS ceiling demonstrably kill an over-budget job). Review (sol-high) ≥ 90 on scaffold + config.
+    47	
+    48	---
+    49	
+    50	## Phase 1 — Source verification & data/identifiability audit (Gate G1 → C1–C3)
+    51	
+    52	**Do (verify, never assume — every seed is a claim until checked against the primary source):**
+    53	1. **Read methods + data availability + supplements** for S1 (Broad NextGen, PMC13581591 / doi:10.1038/s41586-026-10843-7), S2 (Sanger organoids, PMC13581617 / doi:10.1038/s41586-026-10830-y), S3 (Oct 2026 transferability study, PMC13664187 / doi:10.3390/biology15191782 + Zenodo 22472622 code), S5 (Dream-RSI, arXiv:2609.14858 + google-research/dream-rsi). Extract: exact environmental design (screens × models × contrasts), gene-selection rule, score definitions/directions, QC flags, reported lipid/adhesion/state findings (= controls, not discoveries).
+    54	2. **Resolve current data routes via official manifests only** (DepMap 26Q3 data page + forum guidance; figshare 29472362 / 28339340; Cell Model Passports; Sanger DataMiner docs). For each file actually retrieved: source URL, release/commit, retrieval date, license, bytes, SHA-256 → `data/source_manifest.csv`. **Never invent a download URL/file ID.** If a portal blocks unattended retrieval, use official alternatives; never bypass a challenge. Prefer **study-specific releases** over the integrated 26Q3 release for development (audit whether 26Q3 corrections used external outcomes; if so, rebuild development-only or treat claims as transductive with limited wording).
+    55	3. **Build the provenance table + crosswalk:** biological model, donor, lineage, sample origin, lab, library, medium, format, replicate, release, outcome — across Broad/HCMI/Sanger/author IDs (`data/model_crosswalk.csv`). Uncertain donor identity ⇒ `uncertain`, never assumed independent. **Count independent models/donors**; verify the seed counts (147 Broad screens; 162 Sanger organoids; environmental panel: 250 genes × 18 screens × **7 models**, 7 format + 5 medium matched contrasts) against row-level data; record attrition (models that failed to grow, genes dropped) in `data/eligibility_registry.csv`.
+    56	4. **Assay audit per source:** Chronos vs Sanger fitness — direction, dynamic range, controls, missingness, QC. Confirm paired row-level outcomes + replicates + metadata actually exist for the intended contrasts; if a required pairing is not released, record it as a blocker **before** modeling. Check lab↔biology confounding explicitly (a batch correction cannot separate confounded effects).
+    57	5. **Novelty audit v1 (claim ledger):** dated literature search with preserved queries/exclusions (`reviews/novelty_audit.md` + `ledger/claims.jsonl`). For each candidate claim: nearest prior result, what's established, precise remaining uncertainty, evidence needed, consequence if supported/refuted. Explicitly rule out: generic 2D→organoid transfer, published environmental/biomarker findings.
+    58	
+    59	**Gate G1 (identifiability):** a **named, falsifiable question in a named subset** with counted independent units and a documented paired contrast (or a documented narrower question within the same objective if the original is unsupported — broader goal then recorded unmet for that component). No adaptive search before G1. Sol-high review ≥ 90 on provenance package + novelty audit.
+    60	
+    61	---
+    62	
+    63	## Phase 2 — Smallest valid vertical slice + baselines + Lock 1 (Gate G2 → C4–C5)
+    64	
+    65	**Do:**
+    66	1. **Estimators (development data only):** paired within-model environmental contrasts in original units (report both conditions, **all individual paired changes**, uncertainty, heterogeneity — a near-zero mean hiding opposing effects must be visible); transfer models with preprocessing/feature selection/tuning **inside development folds only**; uncertainty clustered at donor/model level with effective sample sizes (few clusters ⇒ justify or downgrade the interval/test).
+    67	2. **Baselines (same eligible rows, same permitted info):** lineage-only; genotype-only; state/expression-only; genotype+state; +context/assay covariates; regularized linear predictor modeled on the S3 transfer study (reproduce from its Zenodo code where possible). Compare against the **strongest** baseline; prespecify the environmental-information **ablation**. Reproduction needing final outcomes is deferred until after Lock 2.
+    68	3. **Evaluator (fixed, separate module, narrow interface):** scores artifacts by effect sizes + calibrated predictive/uncertainty endpoints on development panels. **Never** rewards p-value size, discovery count, or narrative confidence. Includes validity diagnostics + invalid-result rules (leakage, direction flips, support violations ⇒ `invalid`, not zero).
+    69	4. **Lock 1 — freeze the research contract** (`PROTOCOL.md` + `contract.json`, SHA-256 hashed with evaluator code + split manifests): exact question + falsifiable alternatives; population/environments/targets/generalization; eligibility; data/ID versions; **A/B/C partitions** (development / reserved policy / final external — donor/model-blocked, overlap recorded); feature & transformation rules; primary/secondary endpoints with fixed direction; practical-effect / equivalence margins with justification (no defensible margin ⇒ no "invariant" label, continuous effects only); multiplicity (default: Holm, familywise α=0.05, small confirmatory family) + uncertainty methods; baselines; invalid rules; success/failure/inconclusive/budget-exhaustion conditions; policy endpoint choice (§7.3). Changing a locked contract ⇒ **new study ID** + new evaluation evidence.
+    70	5. **Tests:** identity leakage (donor overlap across A/B/C fails the build), score direction, grouping integrity, estimator behavior on synthetic known-effects (code/calibration only), cost accounting, resume idempotence, unsupported-replay handling, final-outcome access guard (C-layer paths unreadable by proposer code paths; access attempts logged).
+    71	
+    72	**Gate G2:** baselines reproduced on development data closely enough to establish direction/cohort/measurement integrity (discrepancies resolved or bounded in writing); contract + evaluator + splits hashed and committed. Sol-high review ≥ 90 on contract + evaluator + tests. **No policy optimization before G2.**
+    73	
+    74	---
+    75	
+    76	## Phase 3 — Pilot: fixed policy → first replay world (Gate G3 → C13 started)
+    77	
+    78	**Do:**
+    79	1. Define the **initial fixed exploration policy** as an executable module: `policy(history, legal_actions, remaining_budget) → action`. Legal actions: open a predefined analysis family, choose a branch, refine an artifact, run a permitted diagnostic, stop. Policy can alter branching/prioritization/explore-vs-refine/stopping — **never** labels, splits, metrics, margins, corrections, success criteria.
+    80	2. Run it on real development tasks to the pilot target: **24 evaluated nodes** (generator = sol-xhigh for candidate generation; evaluator fixed; every node ledgered with full hashes + costs + failures). Environmental sensitivity estimates carry uncertainty downstream via a justified measurement-error/resampling/sensitivity treatment — noisy estimates are never treated as exact.
+    81	3. Freeze the resulting discovery trees as **Replay World v1** (immutable snapshot + manifest). Replay engine rules: reveal only recorded outcomes along the trajectory; refinement requires immutable parent + **exact context-hash match** (else `unsupported`); never invent counterfactual outcomes; compare policies on **common support** and report support coverage.
+    82	
+    83	**Gate G3:** 24 real nodes committed (or precise blocker recorded), replay world hashed, support-coverage report written. **First substantive report** issued here (see §9). Sol-high review ≥ 90.
+    84	
+    85	---
+    86	
+    87	## Phase 4 — Policy-improvement cycles (Gate G4 → C8)
+    88	
+    89	Repeat per cycle (≥ 2 genuine cycles; promotions not required — retained incumbent is a valid outcome):
+    90	1. **Generate ≥ 3 executable challengers** with sol-xhigh (+ unchanged incumbent = 4-way comparison). Challengers are code, not narratives; a reflection that changes no executed decision is not a challenger.
+    91	2. **Replay** all four under identical resource constraints + support rules on the current replay world (development histories only; final Sanger outcomes never enter the pool).
+    92	3. **Select** by the frozen selection rule; **fresh-rollout test** the selected challenger vs fixed exploration (same generator, same evaluator, same ceilings). Charge rewriting + replay + failures + promotion trials to the improving system; baselines may spend the equivalent on search.
+    93	4. **Promote only** if the preregistered criterion is met; otherwise **retain incumbent** and keep failed challengers in the ledger. Append only development histories; rebuild replay world version.
+    94	5. If replay support is inadequate: preserve that finding, judge by fresh rollouts, and label the method **"Dream-RSI-inspired adaptation"** with departures disclosed.
+    95	
+    96	**Gate G4:** ≥ 2 cycles fully ledgered (challengers, replay results incl. unsupported rates, rollout comparisons, promotion/retention decisions with reasons). Sol-high review ≥ 90 per cycle record.
+    97	
+    98	---
+    99	
+   100	## Phase 5 — Reserved policy evaluation (Gate G5 → C9)
+   101	
+   102	1. Freeze the best admissible policy + selection criterion **before** touching Layer-B panels. Compare: learned policy vs original fixed exploration vs ≥1 fixed-allocation/random strategy — same generator, evaluator, initial artifacts, information permissions, ceilings; blocked panels with recorded model/donor/gene/pathway overlap (splits of the 250 genes are **not** hundreds of independent tasks).
+   103	2. **Primary endpoint (locked at Lock 1):** default = total measured cost to reach a predeclared scientific-quality threshold (threshold set from development evidence, attainable by competent baselines). Ambitious target: **≥ 20% lower total cost vs strongest fixed baseline, one-sided 95% lower bound ≥ 20%** (point estimate > 20% with lower bound merely > 0 = "some improvement", **not** C9). Non-attainment within budget = censored per frozen rule, never an invented exact cost. Report full quality-vs-cost curves + both end-to-end (incl. learning overhead) and deployment-only views. Seeds quantify execution variability, not biological replication.
+   104	3. **Cost-measurability rule:** if host-model cost is material and unmeasurable, C9 cannot be certified on a CPU/token proxy — record `policy_improvement: unresolved_cost_gate` and report the alternative locked endpoint honestly. Never switch endpoints after seeing results.
+   105	
+   106	**Gate G5:** frozen-policy comparison complete with uncertainty; C9 marked met / not-met / unresolved with evidence. Sol-high review ≥ 90.
+   107	
+   108	---
+   109	
+   110	## Phase 6 — Lock 2 & single external evaluation (Gate G6 → C6, C10)
+   111	
+   112	1. **Lock 2:** commit exact claim family (bounded, predeclared — gene classes with measured sensitivity + adequate overlap, not an unconstrained scan), predictions, fitted artifacts, inferential code + hashes (`lock-science`). Repeat the novelty audit for each surviving exact claim.
+   113	2. **Evaluate once** on Layer C (independently filtered Sanger cohort after donor-overlap/provenance/assay/representation checks) via `evaluate-external`. State precisely which component each dataset validates: transfer confirmation ≠ medium/format validation ≠ causal mediation. If the claim needs independent environmental confirmation and no suitable public controlled-environment dataset exists, **narrow the claim or keep the gate unmet** — never split genes from the same 7 models to fake independence. Word as **retrospective** external validation (pretraining/literature exposure recorded).
+   114	3. **Adversarial battery (prespecified):** multiplicity correction as locked; donor/lineage sensitivity; platform sensitivity; leave-one-model-out; negative controls; leakage checks; grouping-respecting permutations only; environmental ablation. Invariance claims require positive dependency evidence **and** interval-inside-margin equivalence evidence. Conclusions that flip across plausible sensitivity estimates are reported as fragile.
+   115	
+   116	**Gate G6:** each locked claim marked supported / refuted / inconclusive under frozen rules. A failed test stays failed. Sol-high adversarial review ≥ 90 (reviewer explicitly tasked with trying to kill each claim).
+   117	
+   118	---
+   119	
+   120	## Phase 7 — Atlas, manuscript & reproducibility package (Gate G7 → C7, C11–C12)
+   121	
+   122	1. **Evidence atlas** (`atlas/evidence_atlas.parquet` + CSV): every eligible panel gene — dependency strength (both conditions), environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, prior knowledge, missingness; every excluded gene with reason. Expansion beyond the 250-gene panel labeled exploratory.
+   123	2. **Manuscript** (`manuscript/`): question, estimands, provenance, contract history (both locks), baselines, results incl. failures, policy-loop results incl. retained incumbents, limitations (7-model design, selected genes, assay non-interchangeability, retrospective validation, cost measurability), terminal state + unmet gates. No clinical-efficacy/safety claims from screens alone.
+   124	3. **Clean reproduction** (`reproduce`): fresh checkout + env from lockfile regenerates primary estimates, figures, atlas decisions, and policy comparison within documented tolerances **without rerunning stochastic LLM search** (frozen artifacts + deterministic code only). Emit `reproducibility_report.md` with tolerances + diffs.
+   125	
+   126	**Gate G7:** reproduction green; package complete per §8 inventory. Sol-high review ≥ 90 on manuscript + atlas + reproduction report. **Then** assign the terminal state (both `COMPLETE_*` states require C1–C13 incl. C9; otherwise the honest state + unmet-gate list).
+   127	
+   128	---
+   129	
+   130	## 8. Artifact & command inventory (acceptance checklist)
+   131	
+   132	**Files:** `README.md` · `GOAL.md` · `PROTOCOL.md` + `contract.json` (hashed) · `STATUS.md` + `status.json` · `data/{source_manifest,model_crosswalk,eligibility_registry,split_manifest_*}` · `ledger/{claims,experiments,resources,reviews}` · `src/{adapters,baselines,evaluator,policies,replay,runner,budget}` · immutable `artifacts/` + checksums · frozen predictions/models/policies · `atlas/evidence_atlas.*` · figures · `manuscript/` + limitations + adversarial-review report · env lock + licenses/attribution · `reproducibility_report.md` · `tests/` (leakage, direction, grouping, estimator, cost, resume, replay-support, final-access).
+   133	
+   134	**Commands (each documented in README, each ledgering its run):**
+   135	`bootstrap` → `audit-data` → `reproduce-baselines` → `run-pilot` → `run-cycle` → `evaluate-policy` → `lock-science` → `evaluate-external` → `reproduce` · `status` · `resume`. Commands refuse out-of-order execution by gate (e.g., `run-cycle` before G2, `evaluate-external` before Lock 2) with the missing gate named.
+   136	
+   137	## 9. Reporting cadence
+   138	
+   139	- **First substantive report (at G3):** verified data (manifest + counts), identifiable first question, baseline results, real experiments completed (node count + outcomes), replay support (coverage + unsupported rate), policy retained/promoted, measured resource use (incl. `unknown` costs), next discriminating experiment, exact resume command. If a gate blocks the first cycle: the precise blocker + all completed independent work. Never claim the loop "started" on scaffolding alone.
+   140	- **Per-phase:** measured results, unresolved risks, next discriminating experiment. No progress theater (file counts, unexecuted plans).
+   141	- **Final:** terminal state, C1–C13 evidence table, three separate status fields, full costs + failures.
+   142	
+   143	## 10. Risks & precommitted responses
+   144	
+   145	| Risk | Precommitted response |
+   146	|---|---|
+   147	| Paired environmental outcomes not actually released at row level | Stop at G1; document narrower identifiable question; do not model the missing contrast |
+   148	| 7 models ⇒ underpowered / non-identifiable environmental claim | Report continuous effects + heterogeneity; claim only refutations/bounds the precision supports; seek additional public controlled-environment data or keep gate unmet |
+   149	| Donor overlap Broad↔Sanger destroys "independent" cohort | Crosswalk-driven filtering; if independence unattainable, downgrade wording + claim scope; never assume independence |
+   150	| Integrated-release leakage (outcome-guided corrections) | Study-specific releases + development-fitted transforms; else transductive disclosure with limited claims |
+   151	| Assay mismatch (Chronos vs Sanger scores) | Within-study contrasts in original units; cross-study via justified rank/calibration only |
+   152	| Replay support too thin to screen challengers | Fresh rollouts decide; label Dream-RSI-inspired adaptation; disclose departures |
+   153	| Host-model costs unmeasurable | C9 stays `unresolved_cost_gate`; no all-in savings claim; CPU/token proxies reported separately |
+   154	| Portal blocks unattended download | Official alternative routes; documented local-cache install; never bypass access controls |
+   155	| Reviewer score stalls < 90 | Fix verified issues only; if reviewer demands scope the spec forbids, record rejection with spec citation; escalate genuine conflicts to the user |
+   156	| Budget/time exhausted mid-campaign | Checkpoint, `BUDGET_EXHAUSTED` + unmet gates + smallest concrete next step; never auto-raise ceilings |
+   157	
+   158	## 11. Immediate next actions (in order)
+   159	
+   160	1. `create_goal` with the GOAL.md objective verbatim; scaffold per Phase 0; commit.
+   161	2. Phase 1 source verification: fetch S1/S2/S3/S5 methods + supplements; draft provenance table skeleton; resolve DepMap 26Q3 vs study-specific file routes from official manifests (record, don't guess).
+   162	3. First data pull (smallest processed files that prove pairing + score direction), checksum into manifest; run direction/QC smoke checks.
+   163	4. G1 review (sol-high, ≥ 90) → Phase 2 baselines → Lock 1 → pilot.
+
+exec
+/bin/zsh -lc "sed -n '191,380p' cancer_rsi_handoff.txt | nl -ba -v191" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+   191	7 - Novelty and biological scope
+   192	
+   193	Maintain a claim ledger throughout the project.
+   194	
+   195	For each proposed claim, record the nearest prior result, which part is already established, the precise remaining uncertainty, evidence needed to resolve it, and the consequence if the claim is supported or refuted.
+   196	
+   197	Read the Broad environmental analyses, the Sanger biomarker analyses, and the October transfer study closely. Their reported lipid, adhesion, state, and dependency findings are controls or prior evidence. Recovering them is not a new discovery.
+   198	
+   199	Use current primary literature, author data, and official documentation. Date the search and preserve queries and important exclusions. Absence of an exact search hit is not proof that a claim is new.
+   200	
+   201	Choose a bounded hypothesis family before final evaluation. Consider gene classes with measured environmental sensitivity and adequate overlap, not an unconstrained scan of every feature until a small p-value appears.
+   202	
+   203	Before finalizing the manuscript, repeat the novelty audit for each surviving exact claim. Preserve contradictions and prior evidence. Do not silently rename a known association to make it appear new.
+   204	
+   205	The required scientific contribution must be more specific than weak organoid transfer, better average correlation, or successful agent automation.
+   206	
+   207	
+   208	8 - Baselines, inference, and adversarial checks
+   209	
+   210	Build simple competent baselines before allowing elaborate models.
+   211	
+   212	Before the final lock, reproduce baselines only on development data or independent control data. Any reproduction requiring final external outcomes must occur after the final hypotheses, predictions, artifacts, and inferential code are committed, alongside the final evaluation. Those results cannot inform revisions to the tested study.
+   213	
+   214	Where applicable compare lineage only, genotype only, tumor-state or expression only, genotype plus state, measured context or assay covariates, and a regularized linear predictor modeled on the existing transfer study.
+   215	
+   216	Use the same eligible observations and permitted information for each comparison. Learn preprocessing, feature selection, dimension reduction, and tuning within development folds. Do not optimize a feature representation on final external outcomes.
+   217	
+   218	Compare against the strongest applicable baseline, not only the weakest. If environmental information is central to the explanation, include a prespecified ablation removing it.
+   219	
+   220	Use effect sizes and calibrated predictive or uncertainty endpoints as the scientific evaluator's optimization target. Do not reward p-value reduction, the number of discoveries, manuscript length, or confidence of the LLM explanation.
+   221	
+   222	Treat adaptive development as exploratory. Evaluate a locked final claim family once on independent outcomes. For a small confirmatory family, Holm correction at familywise alpha 0.05 is a reasonable default. Any alternative must be justified and frozen before outcomes are revealed.
+   223	
+   224	Do not apply ordinary fixed-family correction to an indefinitely adaptive stream of repeatedly inspected p-values and call it confirmatory evidence.
+   225	
+   226	Use uncertainty at the donor or biological-model level, accounting for repeated cultures and target or pathway dependence where relevant. Many bootstrap repetitions do not create new biological replication. With few clusters, assess whether the proposed interval or test is justified and report the effective sample size.
+   227	
+   228	Perform relevant negative controls, leakage checks, donor and lineage sensitivity analyses, platform sensitivity, and leave-one-model-out checks. Permutations must respect exchangeability and grouping. Do not permute labels freely when the design makes that invalid.
+   229	
+   230	Synthetic data may test code, calibration, and identifiability under explicit assumptions. Synthetic labels, imputed outcomes, and LLM guesses cannot serve as independent biological validation.
+   231	
+   232	Only make claims supported by the actual evidence. Public dependency screens alone do not establish clinical efficacy, normal-tissue safety, treatment resistance reversal, or universal target validity.
+   233	
+   234	
+   235	9 - Three distinct evaluation layers
+   236	
+   237	Keep these layers separate.
+   238	
+   239	A - Development task panels
+   240	
+   241	Use them to build scientific artifacts, tune development models, generate discovery trees, and select policy challengers. Record every adaptive use.
+   242	
+   243	B - Reserved policy evaluation panels
+   244	
+   245	Use them to compare the final learned exploration policy with fixed strategies in fresh rollouts. Freeze the compared policies and selection criterion before these panels are evaluated.
+   246	
+   247	C - Final external biological evaluation
+   248	
+   249	Prefer an independently filtered Sanger cohort after resolving donor overlap, release provenance, assay compatibility, and adequate representation. Use final outcomes only after committing the hypotheses, predictions, model artifacts, and inferential code.
+   250	
+   251	A final external cohort cannot also be a repeatedly consulted policy reward. Do not send final Sanger outcomes into the replay pool.
+   252	
+   253	For each final claim, identify exactly which component each dataset validates. External confirmation of dependency transfer does not independently validate a medium or format effect, or establish that environmental sensitivity caused transfer failure. Retain adaptively reused environmental evidence as exploratory or selection-adjusted evidence, as justified. Do not manufacture an independent environmental test by splitting genes from the same seven models. Seek an additional existing public controlled-environment dataset when the selected claim requires independent environmental confirmation. If none is suitable, narrow the claim or retain the unmet evidence gate.
+   254	
+   255	Subdividing the selected 250 genes does not create hundreds of independent biological tasks. Record model, donor, gene, and pathway overlap in all panels, and use blocked evaluation. The larger development cohorts may provide engineering tasks for policy learning, but their transfer to the small environmental problem must be reported honestly.
+   256	
+   257	Within a single privileged local agent, enforce a logged protocol with a separate evaluator interface and restricted inputs. Do not claim cryptographic secrecy or genuine blindness merely because an outcome file lives in a separate directory.
+   258	
+   259	Use retrospective external validation as the default wording. Public literature and model pretraining can expose outcomes. Record known exposure and do not certify that public results were unknowable.
+   260	
+   261	A failed final test is a failed final test. Subsequent work that uses its outcomes becomes exploratory unless genuinely new independent evidence is obtained.
+   262	
+   263	
+   264	10 - Implement the actual RSI loop
+   265	
+   266	Keep the base scientific generator, its model version and prompting contract, data contract, and evaluator fixed during a policy comparison.
+   267	
+   268	Make the editable policy an executable module that receives observed history, legal actions, and remaining resources, and selects an action.
+   269	
+   270	Legal actions may include opening a predefined analysis family, choosing an existing branch, refining a particular artifact, running a permitted diagnostic, and stopping.
+   271	
+   272	The policy may alter branching, prioritization, exploration versus refinement, and stopping. It cannot change labels, splits, metrics, practical margins, multiplicity correction, or success criteria.
+   273	
+   274	A narrative reflection is not a policy improvement unless it changes executed decisions.
+   275	
+   276	Record each discovery node's immutable parent, exact artifact, input context hash, data and split hashes, evaluator hash, seeds, result, validity diagnostics, failures, model calls, and measured costs.
+   277	
+   278	Historical replay may reveal only previously executed artifacts and their actual recorded outcomes. It must not use a model to invent outcomes for unexplored analyses.
+   279	
+   280	A reordered branch may alter the context seen by a generator. Make refinement depend on an immutable parent and fixed context, or require an exact context match before replaying a recorded child. Do not assume a recorded child represents an arbitrary counterfactual generation.
+   281	
+   282	The replay policy sees only the outcomes revealed along its trajectory. Do not expose the full tree's future rewards.
+   283	
+   284	Mark unsupported replay actions unsupported. Do not assign them fake scores or treat a surrogate prediction as a measured outcome. Compare policies on common support, report support coverage, and use replay as a screening tool.
+   285	
+   286	Perform the following cycle.
+   287	
+   288	1. Run the initial fixed policy on real development tasks.
+   289	2. Preserve the evaluated discovery trees as replay worlds.
+   290	3. Generate at least three executable policy challengers plus the unchanged incumbent.
+   291	4. Replay them under the same resource constraints and support rules.
+   292	5. Select a challenger with the frozen selection rule.
+   293	6. Test the challenger in fresh development rollouts against fixed exploration using the same generator and evaluator.
+   294	7. Promote only when the preregistered criterion is met.
+   295	8. Retain the incumbent when challengers fail.
+   296	9. Add only development histories and repeat.
+   297	
+   298	Complete at least two genuine cycles before the final policy comparison if the authorized resources and valid tasks permit. Two cycles do not require two promotions. An unchanged incumbent is a valid experimental outcome.
+   299	
+   300	After development, freeze the best admissible policy and evaluate it on the reserved policy panels. Compare it with the original fixed exploration strategy and at least one simple fixed-allocation or random-selection strategy.
+   301	
+   302	
+   303	11 - What counts as demonstrated policy improvement
+   304	
+   305	Predeclare one primary operating point or cost-to-quality endpoint. Also report complete scientific-quality-versus-cost curves.
+   306	
+   307	Use the same generator, evaluator, initial artifacts, information permissions, and common resource ceilings for all policies.
+   308	
+   309	Charge policy rewriting, replay, failed jobs, promotion trials, and extra model calls to the improving system. Permit fixed baselines to spend the corresponding budget on scientific search.
+   310	
+   311	Report both end-to-end performance including learning overhead and deployment-only performance with learning costs shown separately.
+   312	
+   313	The ambitious engineering target is at least 20 percent lower total measured API expenditure to reach a predeclared valid scientific-quality threshold, under the same CPU ceiling and information constraints, compared with the strongest fixed baseline. This is a project target, not a forecast.
+   314	
+   315	Set the quality threshold from development evidence before final policy evaluation. It must be meaningful and attainable by competent baselines, not chosen after observing which policy wins.
+   316	
+   317	Use paired blocked comparisons where appropriate and report uncertainty. For the default 20 percent savings goal, require the prespecified one-sided 95 percent lower confidence bound on savings to meet the 20 percent practical margin. A point estimate above 20 percent with a lower bound merely above zero supports some improvement but does not meet that ambitious margin. Freeze how failures to reach the quality threshold within budget are treated as censored outcomes. Do not convert nonattainment into invented exact costs. Random seeds quantify execution variability, not independent biological replication.
+   318	
+   319	If API expenditure is not the dominant or measurable resource, choose a justified alternative primary resource endpoint during the initial contract stage, explain it, and lock it before optimization. All other material resources must still be measured or strictly matched. A CPU-only advantage or token proxy cannot satisfy C9 while material host-model costs remain unknown and unmatched. In that case retain an unresolved cost gate and avoid claiming all-in savings. Define an equally explicit practical improvement margin and uncertainty requirement for any alternative endpoint. Do not switch endpoints after seeing final results.
+   320	
+   321	If faithful replay has inadequate support, preserve that finding and use fresh rollouts to assess the proposed policy. Label the method accurately as a Dream-RSI-inspired adaptation and disclose departures.
+   322	
+   323	Do not call the system recursively self-improving merely because more compute improved a reused validation score.
+   324	
+   325	
+   326	12 - Completion criteria
+   327	
+   328	Mark the ambitious goal complete only when every applicable criterion below has documentary evidence.
+   329	
+   330	C1 - A current novelty audit identifies a precise unresolved cancer dependency question and distinguishes it from the August resources and October transfer study.
+   331	
+   332	C2 - All analyses use legitimately accessible public data, with complete provenance, licensing, identifier crosswalks, and reproducible retrieval or documented local cache installation.
+   333	
+   334	C3 - The intended paired contrast or conditional relationship is identifiable within a named population. Confounding and selection are disclosed, and independent biological units are counted correctly.
+   335	
+   336	C4 - The scientific contract, eligibility rules, splits, baseline set, practical effects, evaluator, and confirmatory procedures were frozen before adaptive optimization and final evaluation.
+   337	
+   338	C5 - The pipeline reproduces relevant published or author-code baseline results closely enough to establish outcome direction, cohort integrity, and measurement interpretation, with discrepancies resolved or explicitly bounded.
+   339	
+   340	C6 - At least one previously unreported explanatory finding passes the frozen scientific criteria and relevant external tests. A supported refutation or informative bound may qualify when it resolves a meaningful predeclared uncertainty. Mere nonsignificance, a rediscovered association, or a better exploratory score does not qualify.
+   341	
+   342	C7 - The evidence atlas covers all eligible genes in the controlled panel and lists every exclusion. Every entry distinguishes dependency strength, environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, and prior knowledge.
+   343	
+   344	C8 - At least two real policy-improvement cycles have run, with executable challengers, faithful replay, fresh rollout evaluation, retained failed attempts, and a final frozen-policy comparison on reserved panels.
+   345	
+   346	C9 - The learned policy meets the preregistered practical improvement criterion against the strongest fixed baseline under matched total resources. Meeting only a deployment-only criterion does not satisfy an end-to-end claim.
+   347	
+   348	C10 - Scientific conclusions survive the prespecified multiplicity correction, appropriate uncertainty analysis, key ablations, and adversarial checks. Any claim of invariance requires positive dependency evidence and justified equivalence evidence.
+   349	
+   350	C11 - A clean reproduction run regenerates the primary estimates, figures, evidence decisions, and policy comparison within documented tolerances from frozen artifacts. It must not require rerunning stochastic LLM search to reproduce the reported analysis.
+   351	
+   352	C12 - The package includes a manuscript for expert review, machine-readable evidence, source and data manifests, all experiment histories, model and policy versions, actual resource measurements, failures, limitations, and exact reproduce and resume commands.
+   353	
+   354	C13 - The first meaningful end-to-end research cycle has actually executed. A plan, scaffold, mock evaluator, or hypothetical example is insufficient.
+   355	
+   356	Seek multiple convergent findings across adequately represented lineages and pathways as an additional scientific stretch target. Do not replace one strong finding with a quota of weak associations. Do not force claims about sparsely represented cancer types.
+   357	
+   358	Keep scientific discovery, prediction improvement, and policy improvement as separate status fields. One does not establish the others.
+   359	
+   360	
+   361	13 - Required artifacts and commands
+   362	
+   363	Create a compact repository with equivalent artifacts to the following. Choose actual file formats suited to the content.
+   364	
+   365	- README.md with scope, installation, exact commands, and current limitations.
+   366	- GOAL.md with the locked goal and completion criteria.
+   367	- PROTOCOL.md and a machine-readable locked research contract.
+   368	- STATUS.md and a structured status record with current phase, incumbent, spending, next action, and unmet gates.
+   369	- A data manifest, source manifest, donor/model crosswalk, eligibility registry, and split manifests.
+   370	- A novelty and claim ledger with the complete decision history.
+   371	- Data adapters, baseline models, a fixed evaluator, policy modules, a faithful replay engine, a local runner, and a budget wrapper.
+   372	- An append-only experiment ledger and immutable discovery artifacts.
+   373	- Frozen final predictions, scientific models, policies, and checksums.
+   374	- An evidence atlas in a machine-readable table.
+   375	- Figures, a manuscript draft, a limitations statement, and an adversarial-review report.
+   376	- Environment and dependency locks, licenses and attribution, and a reproducibility report.
+   377	- Meaningful tests for identity leakage, score direction, grouping, estimator behavior, cost accounting, resume idempotence, unsupported replay actions, and final-outcome access.
+   378	
+   379	Provide simple documented commands equivalent to bootstrap, audit-data, reproduce-baselines, run-pilot, run-cycle, evaluate-policy, lock-science, evaluate-external, reproduce, status, and resume.
+   380	
+
+exec
+/bin/zsh -lc "sed -n '380,490p' cancer_rsi_handoff.txt | nl -ba -v380" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+   380	
+   381	Do not overbuild a general agent platform before the first valid scientific vertical slice works. Reuse maintained components where that reduces risk, but inspect their resource demands and permissions.
+   382	
+   383	
+   384	14 - Terminal outcomes and reporting
+   385	
+   386	Use explicit terminal states.
+   387	
+   388	- COMPLETE_SUPPORTED_DISCOVERY
+   389	- COMPLETE_SUPPORTED_REFUTATION_OR_BOUND
+   390	- SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE
+   391	- RSI_RESULT_WITHOUT_SCIENTIFIC_DISCOVERY
+   392	- INCONCLUSIVE
+   393	- BLOCKED
+   394	- BUDGET_EXHAUSTED
+   395	
+   396	The first two require every relevant completion gate, including demonstrated policy improvement. The others are honest outcomes and must list which parts of the ambitious goal remain unmet.
+   397	
+   398	A completed computational campaign is not automatically a completed scientific goal. Do not relabel insufficient power as equivalence or a polished manuscript as a discovery.
+   399	
+   400	When blocked or budget-limited, checkpoint all valid work, identify the exact missing condition, and provide the smallest concrete next step. Do not lower scientific standards, spend beyond the cap, or retry indefinitely.
+   401	
+   402	During execution, report concise milestones with measured results, unresolved risks, and the next discriminating experiment. Avoid progress theater based on file counts or unexecuted plans.
+   403	
+   404	
+   405	15 - Start now
+   406	
+   407	Inspect the workspace and resource limits. Verify the primary sources and accessible processed data. Build the donor and assay provenance audit. Formulate a narrowly identifiable first question and its strongest alternative explanations.
+   408	
+   409	Implement the smallest valid data-to-estimate-to-evaluator path. Reproduce the necessary baseline. Freeze the initial research contract and evaluation partitions.
+   410	
+   411	Then run real development experiments, build the first replay world, generate executable policy challengers, and perform a fresh comparison. Continue through the authorized staged campaign.
+   412	
+   413	Your first substantive report must show what was actually executed, what the observations establish, what remains unidentifiable, which policy was retained or promoted, the measured costs, and the exact next action. If a real evidence or authorization gate prevents the first cycle, report that precise blocker and all completed independent work. Do not claim that the loop started when only its scaffolding exists.
+   414	
+
+exec
+/bin/zsh -lc "sed -n '1,82p' PLAN.md | nl -ba" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+     1	# PLAN — Executing the Cancer-Dependency RSI Research Loop
+     2	
+     3	**Specification:** `cancer_rsi_handoff.txt` (28 Oct 2026) · **Locked goal:** `GOAL.md` · **Project root:** `cancer-dependency-rsi/`
+     4	**Host (verified 2026-10-28):** Apple M5 Max, 18 CPU cores, 128 GB RAM, 532 GiB free disk, macOS 26.6 (arm64); Python 3.14.8, git 2.54, Node available; no R/Julia (install only if a baseline requires it, inside the project env).
+     5	**Model access (verified):** Muse configured with `gpt-6.1-sol` (`~/.codex/config.toml`: `model_reasoning_effort="high"`); host agent available for reasoning. All 8 seed URLs (S1–S5 papers/repos/portals) returned HTTP 200 on 2026-10-28 — reachability only; content/methods verification is Phase 1 work, not yet done.
+     6	
+     7	This plan is the execution contract for the loop. It sequences the work so that **no adaptive search happens before identifiability is proven, no policy optimization happens before the evaluator is frozen, and no final outcome is touched before the second lock.** Each phase ends at an evidence gate; failing a gate narrows the question or stops honestly — it never lowers the standard.
+     8	
+     9	---
+    10	
+    11	## 0. Operating rules (bind every phase)
+    12	
+    13	### 0.1 Model routing (user-mandated, enforced in code)
+    14	| Role | Model | Reasoning | Invocation pattern |
+    15	|---|---|---|---|
+    16	| Adversarial review of **everything** (plans, code, contracts, claims, manuscript) | `gpt-6.1-sol` | `high` | `codex exec -m gpt-6.1-sol -c model_reasoning_effort='"high"' -s read-only "<review prompt>"` |
+    17	| Generating new generations (policy challengers, hypothesis/analysis candidates) | `gpt-6.1-sol` | `xhigh` | `codex exec -m gpt-6.1-sol -c model_reasoning_effort='"xhigh"' -s workspace-write "<generation prompt>"` |
+    18	| Lead-investigator reasoning, statistics, implementation | Host agent | — | Local session; all fitting/evaluation runs locally in Python |
+    19	
+    20	- The **review protocol** is fixed: reviewer must enumerate issues by severity (**low / medium / high / critical**) with file:line evidence and a single **0–100 score**. The lead investigator **verifies each issue against the artifact** (accept / reject with reason), fixes all verified issues, and **re-reviews until score ≥ 90 and zero verified high/critical issues remain**. Review transcripts, verdicts, and fixes are appended to `reviews/` and the experiment ledger. A score is never accepted without its issue list; an issue is never fixed without verification.
+    21	- Specialist worker roles are kept distinct: literature/novelty, data provenance, scientific modeling, evaluator implementation, adversarial review. The evaluator process receives a **narrower interface** than the proposer (hashed inputs, no final-outcome paths). This is a logged protocol, **not** a cryptographic security boundary — never described as one.
+    22	- Every model call is recorded: model ID, effort, prompt hash, token counts when exposed, wall/CPU seconds, peak RSS, monetary cost or `unknown`. **Additional metered API spend cap = $0** unless the user configures a numeric cap; host/codex access already authorized is used, with unmeasurable cost marked `unknown` (which blocks certifying all-in C9 savings — see §7.3).
+    23	
+    24	### 0.2 Resource envelope (written to `cancer-dependency-rsi/config/resources.json`, enforced by the budget wrapper)
+    25	- No GPU. ≤ 2 CPU-heavy jobs concurrently. Aggregate research RSS ceiling = min(8 GiB, 60% RAM) = **8 GiB** on this host.
+    26	- Exploratory fit timeout **600 s** default; longer only via explicit recorded allocation from the campaign budget.
+    27	- Downloads ≤ min(20 GiB, ¼ free disk) = **20 GiB**. First pilot: **24 real evaluated development nodes + 3 executable challengers + incumbent**, ≤ **8 h** wall (safety ceiling, not a promise).
+    28	- No automatic ceiling increases. Budget wrapper **reserves before dispatch, persists before dispatch, reconciles after**; interrupted ⇒ stays `reserved` until reconciled; completed paid/host calls are never repeated on resume.
+    29	
+    30	### 0.3 Persistence & honesty primitives
+    31	- Append-only JSONL ledgers: `ledger/experiments.jsonl`, `ledger/resources.jsonl`, `ledger/reviews.jsonl`. Node states: `proposed → dispatched → completed|failed → committed`. Checkpoint after **every** completed experiment.
+    32	- Every discovery node stores: immutable parent ID, artifact bytes + SHA-256, input-context hash, data hash, split hash, evaluator hash, generator model+effort+prompt hash, seeds, result, validity diagnostics, failures, measured costs.
+    33	- `STATUS.md` + `status.json` always carry: phase, incumbent policy ID, spend, three separate status fields (`scientific_discovery`, `prediction_improvement`, `policy_improvement`), unmet gates (C1–C13), **next action**, and **exact resume command**. Never claim the loop is "running" without a live PID/job ID + recent heartbeat.
+    34	- Terminal states only from the GOAL list. A failed final test stays failed; downstream work on its outcomes is exploratory.
+    35	
+    36	---
+    37	
+    38	## Phase 0 — Bootstrap & provenance skeleton (Gate G0)
+    39	
+    40	**Do:**
+    41	1. Create `cancer-dependency-rsi/` with: `README.md`, `GOAL.md` (copy/symlink policy: canonical copy + hash), `PROTOCOL.md` (stub → filled at Lock 1), `STATUS.md` + `status.json`, `config/resources.json`, `src/` (adapters, baselines, evaluator, policies, replay, runner, budget), `data/` (cache + manifests), `ledger/`, `reviews/`, `artifacts/`, `tests/`, `manuscript/`. Init git; commit scaffold separately from science.
+    42	2. Create project Python env (`cancer-dependency-rsi/.venv`, `uv` or `python3 -m venv`), pin deps (`pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`, `pyarrow`, `pydantic`, `pytest`, `httpx`); write lockfile. Verify `pytest` green on placeholder tests (score-direction, grouping, cost-accounting stubs).
+    43	3. Implement the **budget wrapper + ledger writer + hashing utilities first** (they gate everything else) and the CLI skeleton: `bootstrap, audit-data, reproduce-baselines, run-pilot, run-cycle, evaluate-policy, lock-science, evaluate-external, reproduce, status, resume` (initially `status`/`resume` functional, others fail loudly with "not yet unlocked: <gate>").
+    44	4. Record host fingerprint (CPU/RAM/disk/OS, Python, codex version, model IDs) into `config/host.json` **without printing secrets**.
+    45	
+    46	**Gate G0:** `status` prints phase/incumbent/spend/next-action/resume; ledgers append + verify; resource config enforced on a dummy job (timeout + RSS ceiling demonstrably kill an over-budget job). Review (sol-high) ≥ 90 on scaffold + config.
+    47	
+    48	---
+    49	
+    50	## Phase 1 — Source verification & data/identifiability audit (Gate G1 → C1–C3)
+    51	
+    52	**Do (verify, never assume — every seed is a claim until checked against the primary source):**
+    53	1. **Read methods + data availability + supplements** for S1 (Broad NextGen, PMC13581591 / doi:10.1038/s41586-026-10843-7), S2 (Sanger organoids, PMC13581617 / doi:10.1038/s41586-026-10830-y), S3 (Oct 2026 transferability study, PMC13664187 / doi:10.3390/biology15191782 + Zenodo 22472622 code), S5 (Dream-RSI, arXiv:2609.14858 + google-research/dream-rsi). Extract: exact environmental design (screens × models × contrasts), gene-selection rule, score definitions/directions, QC flags, reported lipid/adhesion/state findings (= controls, not discoveries).
+    54	2. **Resolve current data routes via official manifests only** (DepMap 26Q3 data page + forum guidance; figshare 29472362 / 28339340; Cell Model Passports; Sanger DataMiner docs). For each file actually retrieved: source URL, release/commit, retrieval date, license, bytes, SHA-256 → `data/source_manifest.csv`. **Never invent a download URL/file ID.** If a portal blocks unattended retrieval, use official alternatives; never bypass a challenge. Prefer **study-specific releases** over the integrated 26Q3 release for development (audit whether 26Q3 corrections used external outcomes; if so, rebuild development-only or treat claims as transductive with limited wording).
+    55	3. **Build the provenance table + crosswalk:** biological model, donor, lineage, sample origin, lab, library, medium, format, replicate, release, outcome — across Broad/HCMI/Sanger/author IDs (`data/model_crosswalk.csv`). Uncertain donor identity ⇒ `uncertain`, never assumed independent. **Count independent models/donors**; verify the seed counts (147 Broad screens; 162 Sanger organoids; environmental panel: 250 genes × 18 screens × **7 models**, 7 format + 5 medium matched contrasts) against row-level data; record attrition (models that failed to grow, genes dropped) in `data/eligibility_registry.csv`.
+    56	4. **Assay audit per source:** Chronos vs Sanger fitness — direction, dynamic range, controls, missingness, QC. Confirm paired row-level outcomes + replicates + metadata actually exist for the intended contrasts; if a required pairing is not released, record it as a blocker **before** modeling. Check lab↔biology confounding explicitly (a batch correction cannot separate confounded effects).
+    57	5. **Novelty audit v1 (claim ledger):** dated literature search with preserved queries/exclusions (`reviews/novelty_audit.md` + `ledger/claims.jsonl`). For each candidate claim: nearest prior result, what's established, precise remaining uncertainty, evidence needed, consequence if supported/refuted. Explicitly rule out: generic 2D→organoid transfer, published environmental/biomarker findings.
+    58	
+    59	**Gate G1 (identifiability):** a **named, falsifiable question in a named subset** with counted independent units and a documented paired contrast (or a documented narrower question within the same objective if the original is unsupported — broader goal then recorded unmet for that component). No adaptive search before G1. Sol-high review ≥ 90 on provenance package + novelty audit.
+    60	
+    61	---
+    62	
+    63	## Phase 2 — Smallest valid vertical slice + baselines + Lock 1 (Gate G2 → C4–C5)
+    64	
+    65	**Do:**
+    66	1. **Estimators (development data only):** paired within-model environmental contrasts in original units (report both conditions, **all individual paired changes**, uncertainty, heterogeneity — a near-zero mean hiding opposing effects must be visible); transfer models with preprocessing/feature selection/tuning **inside development folds only**; uncertainty clustered at donor/model level with effective sample sizes (few clusters ⇒ justify or downgrade the interval/test).
+    67	2. **Baselines (same eligible rows, same permitted info):** lineage-only; genotype-only; state/expression-only; genotype+state; +context/assay covariates; regularized linear predictor modeled on the S3 transfer study (reproduce from its Zenodo code where possible). Compare against the **strongest** baseline; prespecify the environmental-information **ablation**. Reproduction needing final outcomes is deferred until after Lock 2.
+    68	3. **Evaluator (fixed, separate module, narrow interface):** scores artifacts by effect sizes + calibrated predictive/uncertainty endpoints on development panels. **Never** rewards p-value size, discovery count, or narrative confidence. Includes validity diagnostics + invalid-result rules (leakage, direction flips, support violations ⇒ `invalid`, not zero).
+    69	4. **Lock 1 — freeze the research contract** (`PROTOCOL.md` + `contract.json`, SHA-256 hashed with evaluator code + split manifests): exact question + falsifiable alternatives; population/environments/targets/generalization; eligibility; data/ID versions; **A/B/C partitions** (development / reserved policy / final external — donor/model-blocked, overlap recorded); feature & transformation rules; primary/secondary endpoints with fixed direction; practical-effect / equivalence margins with justification (no defensible margin ⇒ no "invariant" label, continuous effects only); multiplicity (default: Holm, familywise α=0.05, small confirmatory family) + uncertainty methods; baselines; invalid rules; success/failure/inconclusive/budget-exhaustion conditions; policy endpoint choice (§7.3). Changing a locked contract ⇒ **new study ID** + new evaluation evidence.
+    70	5. **Tests:** identity leakage (donor overlap across A/B/C fails the build), score direction, grouping integrity, estimator behavior on synthetic known-effects (code/calibration only), cost accounting, resume idempotence, unsupported-replay handling, final-outcome access guard (C-layer paths unreadable by proposer code paths; access attempts logged).
+    71	
+    72	**Gate G2:** baselines reproduced on development data closely enough to establish direction/cohort/measurement integrity (discrepancies resolved or bounded in writing); contract + evaluator + splits hashed and committed. Sol-high review ≥ 90 on contract + evaluator + tests. **No policy optimization before G2.**
+    73	
+    74	---
+    75	
+    76	## Phase 3 — Pilot: fixed policy → first replay world (Gate G3 → C13 started)
+    77	
+    78	**Do:**
+    79	1. Define the **initial fixed exploration policy** as an executable module: `policy(history, legal_actions, remaining_budget) → action`. Legal actions: open a predefined analysis family, choose a branch, refine an artifact, run a permitted diagnostic, stop. Policy can alter branching/prioritization/explore-vs-refine/stopping — **never** labels, splits, metrics, margins, corrections, success criteria.
+    80	2. Run it on real development tasks to the pilot target: **24 evaluated nodes** (generator = sol-xhigh for candidate generation; evaluator fixed; every node ledgered with full hashes + costs + failures). Environmental sensitivity estimates carry uncertainty downstream via a justified measurement-error/resampling/sensitivity treatment — noisy estimates are never treated as exact.
+    81	3. Freeze the resulting discovery trees as **Replay World v1** (immutable snapshot + manifest). Replay engine rules: reveal only recorded outcomes along the trajectory; refinement requires immutable parent + **exact context-hash match** (else `unsupported`); never invent counterfactual outcomes; compare policies on **common support** and report support coverage.
+    82	
+
+exec
+/bin/zsh -lc "sed -n '80,170p' PLAN.md | nl -ba -v80" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+    80	2. Run it on real development tasks to the pilot target: **24 evaluated nodes** (generator = sol-xhigh for candidate generation; evaluator fixed; every node ledgered with full hashes + costs + failures). Environmental sensitivity estimates carry uncertainty downstream via a justified measurement-error/resampling/sensitivity treatment — noisy estimates are never treated as exact.
+    81	3. Freeze the resulting discovery trees as **Replay World v1** (immutable snapshot + manifest). Replay engine rules: reveal only recorded outcomes along the trajectory; refinement requires immutable parent + **exact context-hash match** (else `unsupported`); never invent counterfactual outcomes; compare policies on **common support** and report support coverage.
+    82	
+    83	**Gate G3:** 24 real nodes committed (or precise blocker recorded), replay world hashed, support-coverage report written. **First substantive report** issued here (see §9). Sol-high review ≥ 90.
+    84	
+    85	---
+    86	
+    87	## Phase 4 — Policy-improvement cycles (Gate G4 → C8)
+    88	
+    89	Repeat per cycle (≥ 2 genuine cycles; promotions not required — retained incumbent is a valid outcome):
+    90	1. **Generate ≥ 3 executable challengers** with sol-xhigh (+ unchanged incumbent = 4-way comparison). Challengers are code, not narratives; a reflection that changes no executed decision is not a challenger.
+    91	2. **Replay** all four under identical resource constraints + support rules on the current replay world (development histories only; final Sanger outcomes never enter the pool).
+    92	3. **Select** by the frozen selection rule; **fresh-rollout test** the selected challenger vs fixed exploration (same generator, same evaluator, same ceilings). Charge rewriting + replay + failures + promotion trials to the improving system; baselines may spend the equivalent on search.
+    93	4. **Promote only** if the preregistered criterion is met; otherwise **retain incumbent** and keep failed challengers in the ledger. Append only development histories; rebuild replay world version.
+    94	5. If replay support is inadequate: preserve that finding, judge by fresh rollouts, and label the method **"Dream-RSI-inspired adaptation"** with departures disclosed.
+    95	
+    96	**Gate G4:** ≥ 2 cycles fully ledgered (challengers, replay results incl. unsupported rates, rollout comparisons, promotion/retention decisions with reasons). Sol-high review ≥ 90 per cycle record.
+    97	
+    98	---
+    99	
+   100	## Phase 5 — Reserved policy evaluation (Gate G5 → C9)
+   101	
+   102	1. Freeze the best admissible policy + selection criterion **before** touching Layer-B panels. Compare: learned policy vs original fixed exploration vs ≥1 fixed-allocation/random strategy — same generator, evaluator, initial artifacts, information permissions, ceilings; blocked panels with recorded model/donor/gene/pathway overlap (splits of the 250 genes are **not** hundreds of independent tasks).
+   103	2. **Primary endpoint (locked at Lock 1):** default = total measured cost to reach a predeclared scientific-quality threshold (threshold set from development evidence, attainable by competent baselines). Ambitious target: **≥ 20% lower total cost vs strongest fixed baseline, one-sided 95% lower bound ≥ 20%** (point estimate > 20% with lower bound merely > 0 = "some improvement", **not** C9). Non-attainment within budget = censored per frozen rule, never an invented exact cost. Report full quality-vs-cost curves + both end-to-end (incl. learning overhead) and deployment-only views. Seeds quantify execution variability, not biological replication.
+   104	3. **Cost-measurability rule:** if host-model cost is material and unmeasurable, C9 cannot be certified on a CPU/token proxy — record `policy_improvement: unresolved_cost_gate` and report the alternative locked endpoint honestly. Never switch endpoints after seeing results.
+   105	
+   106	**Gate G5:** frozen-policy comparison complete with uncertainty; C9 marked met / not-met / unresolved with evidence. Sol-high review ≥ 90.
+   107	
+   108	---
+   109	
+   110	## Phase 6 — Lock 2 & single external evaluation (Gate G6 → C6, C10)
+   111	
+   112	1. **Lock 2:** commit exact claim family (bounded, predeclared — gene classes with measured sensitivity + adequate overlap, not an unconstrained scan), predictions, fitted artifacts, inferential code + hashes (`lock-science`). Repeat the novelty audit for each surviving exact claim.
+   113	2. **Evaluate once** on Layer C (independently filtered Sanger cohort after donor-overlap/provenance/assay/representation checks) via `evaluate-external`. State precisely which component each dataset validates: transfer confirmation ≠ medium/format validation ≠ causal mediation. If the claim needs independent environmental confirmation and no suitable public controlled-environment dataset exists, **narrow the claim or keep the gate unmet** — never split genes from the same 7 models to fake independence. Word as **retrospective** external validation (pretraining/literature exposure recorded).
+   114	3. **Adversarial battery (prespecified):** multiplicity correction as locked; donor/lineage sensitivity; platform sensitivity; leave-one-model-out; negative controls; leakage checks; grouping-respecting permutations only; environmental ablation. Invariance claims require positive dependency evidence **and** interval-inside-margin equivalence evidence. Conclusions that flip across plausible sensitivity estimates are reported as fragile.
+   115	
+   116	**Gate G6:** each locked claim marked supported / refuted / inconclusive under frozen rules. A failed test stays failed. Sol-high adversarial review ≥ 90 (reviewer explicitly tasked with trying to kill each claim).
+   117	
+   118	---
+   119	
+   120	## Phase 7 — Atlas, manuscript & reproducibility package (Gate G7 → C7, C11–C12)
+   121	
+   122	1. **Evidence atlas** (`atlas/evidence_atlas.parquet` + CSV): every eligible panel gene — dependency strength (both conditions), environmental change, uncertainty, heterogeneity, biomarker evidence, transfer evidence, prior knowledge, missingness; every excluded gene with reason. Expansion beyond the 250-gene panel labeled exploratory.
+   123	2. **Manuscript** (`manuscript/`): question, estimands, provenance, contract history (both locks), baselines, results incl. failures, policy-loop results incl. retained incumbents, limitations (7-model design, selected genes, assay non-interchangeability, retrospective validation, cost measurability), terminal state + unmet gates. No clinical-efficacy/safety claims from screens alone.
+   124	3. **Clean reproduction** (`reproduce`): fresh checkout + env from lockfile regenerates primary estimates, figures, atlas decisions, and policy comparison within documented tolerances **without rerunning stochastic LLM search** (frozen artifacts + deterministic code only). Emit `reproducibility_report.md` with tolerances + diffs.
+   125	
+   126	**Gate G7:** reproduction green; package complete per §8 inventory. Sol-high review ≥ 90 on manuscript + atlas + reproduction report. **Then** assign the terminal state (both `COMPLETE_*` states require C1–C13 incl. C9; otherwise the honest state + unmet-gate list).
+   127	
+   128	---
+   129	
+   130	## 8. Artifact & command inventory (acceptance checklist)
+   131	
+   132	**Files:** `README.md` · `GOAL.md` · `PROTOCOL.md` + `contract.json` (hashed) · `STATUS.md` + `status.json` · `data/{source_manifest,model_crosswalk,eligibility_registry,split_manifest_*}` · `ledger/{claims,experiments,resources,reviews}` · `src/{adapters,baselines,evaluator,policies,replay,runner,budget}` · immutable `artifacts/` + checksums · frozen predictions/models/policies · `atlas/evidence_atlas.*` · figures · `manuscript/` + limitations + adversarial-review report · env lock + licenses/attribution · `reproducibility_report.md` · `tests/` (leakage, direction, grouping, estimator, cost, resume, replay-support, final-access).
+   133	
+   134	**Commands (each documented in README, each ledgering its run):**
+   135	`bootstrap` → `audit-data` → `reproduce-baselines` → `run-pilot` → `run-cycle` → `evaluate-policy` → `lock-science` → `evaluate-external` → `reproduce` · `status` · `resume`. Commands refuse out-of-order execution by gate (e.g., `run-cycle` before G2, `evaluate-external` before Lock 2) with the missing gate named.
+   136	
+   137	## 9. Reporting cadence
+   138	
+   139	- **First substantive report (at G3):** verified data (manifest + counts), identifiable first question, baseline results, real experiments completed (node count + outcomes), replay support (coverage + unsupported rate), policy retained/promoted, measured resource use (incl. `unknown` costs), next discriminating experiment, exact resume command. If a gate blocks the first cycle: the precise blocker + all completed independent work. Never claim the loop "started" on scaffolding alone.
+   140	- **Per-phase:** measured results, unresolved risks, next discriminating experiment. No progress theater (file counts, unexecuted plans).
+   141	- **Final:** terminal state, C1–C13 evidence table, three separate status fields, full costs + failures.
+   142	
+   143	## 10. Risks & precommitted responses
+   144	
+   145	| Risk | Precommitted response |
+   146	|---|---|
+   147	| Paired environmental outcomes not actually released at row level | Stop at G1; document narrower identifiable question; do not model the missing contrast |
+   148	| 7 models ⇒ underpowered / non-identifiable environmental claim | Report continuous effects + heterogeneity; claim only refutations/bounds the precision supports; seek additional public controlled-environment data or keep gate unmet |
+   149	| Donor overlap Broad↔Sanger destroys "independent" cohort | Crosswalk-driven filtering; if independence unattainable, downgrade wording + claim scope; never assume independence |
+   150	| Integrated-release leakage (outcome-guided corrections) | Study-specific releases + development-fitted transforms; else transductive disclosure with limited claims |
+   151	| Assay mismatch (Chronos vs Sanger scores) | Within-study contrasts in original units; cross-study via justified rank/calibration only |
+   152	| Replay support too thin to screen challengers | Fresh rollouts decide; label Dream-RSI-inspired adaptation; disclose departures |
+   153	| Host-model costs unmeasurable | C9 stays `unresolved_cost_gate`; no all-in savings claim; CPU/token proxies reported separately |
+   154	| Portal blocks unattended download | Official alternative routes; documented local-cache install; never bypass access controls |
+   155	| Reviewer score stalls < 90 | Fix verified issues only; if reviewer demands scope the spec forbids, record rejection with spec citation; escalate genuine conflicts to the user |
+   156	| Budget/time exhausted mid-campaign | Checkpoint, `BUDGET_EXHAUSTED` + unmet gates + smallest concrete next step; never auto-raise ceilings |
+   157	
+   158	## 11. Immediate next actions (in order)
+   159	
+   160	1. `create_goal` with the GOAL.md objective verbatim; scaffold per Phase 0; commit.
+   161	2. Phase 1 source verification: fetch S1/S2/S3/S5 methods + supplements; draft provenance table skeleton; resolve DepMap 26Q3 vs study-specific file routes from official manifests (record, don't guess).
+   162	3. First data pull (smallest processed files that prove pairing + score direction), checksum into manifest; run direction/QC smoke checks.
+   163	4. G1 review (sol-high, ≥ 90) → Phase 2 baselines → Lock 1 → pilot.
+
+codex
+The plan covers much of the specification, but it contains a direct exception that permits outcome-contaminated preprocessing to be handled by disclosure alone. The specification explicitly forbids that. I’m also finding missing lock-time decisions for policy selection and cost inference, plus gates that can pass with unmet evidence requirements.
+exec
+/bin/zsh -lc "python3 -c 'import sys,tomllib; print(repr(sys.argv[1])); tomllib.loads(sys.argv[1])' model_reasoning_effort='\\\"high\\\"'" in /Users/bmarti44/github/bufferright/research
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys,tomllib; print(repr(sys.argv[1])); tomllib.loads(sys.argv[1])
+                                                  ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/bmarti44/.local/share/uv/python/cpython-3.14.8-macos-aarch64-none/lib/python3.14/tomllib/_parser.py", line 182, in loads
+    pos = key_value_rule(src, pos, out, header, parse_float)
+  File "/Users/bmarti44/.local/share/uv/python/cpython-3.14.8-macos-aarch64-none/lib/python3.14/tomllib/_parser.py", line 411, in key_value_rule
+    pos, key, value = parse_key_value_pair(src, pos, parse_float)
+                      ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bmarti44/.local/share/uv/python/cpython-3.14.8-macos-aarch64-none/lib/python3.14/tomllib/_parser.py", line 454, in parse_key_value_pair
+    pos, value = parse_value(src, pos, parse_float)
+                 ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bmarti44/.local/share/uv/python/cpython-3.14.8-macos-aarch64-none/lib/python3.14/tomllib/_parser.py", line 740, in parse_value
+    raise TOMLDecodeError("Invalid value", src, pos)
+tomllib.TOMLDecodeError: Invalid value (at line 1, column 24)
+'model_reasoning_effort=\\"high\\"'
+
+exec
+/bin/zsh -lc "sed -n '95,189p' cancer_rsi_handoff.txt | nl -ba -v95" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+    95	Resolve downloads through current official manifests. Record source URL, release or commit, retrieval date, license, byte size, and checksum. Do not invent direct download URLs or accession metadata. Use official alternative routes if a public portal blocks unattended retrieval. Do not bypass a challenge or access control.
+    96	
+    97	Build around public processed observations. Raw sequencing is unnecessary. If a proposed analysis requires paired observations that are not actually released, identify that limitation before implementing the model.
+    98	
+    99	
+   100	4 - Hardware, budget, and persistence
+   101	
+   102	Inspect the available RAM, CPU, disk, operating system, installed runtimes, and already configured model access without printing secrets.
+   103	
+   104	Set conservative defaults and save them in a machine-readable configuration.
+   105	
+   106	- No GPU dependency.
+   107	- At most two CPU-heavy jobs concurrently.
+   108	- An aggregate research memory ceiling of the smaller of 8 GiB and 60 percent of physical RAM, reduced further when necessary to leave the host responsive.
+   109	- A ten-minute default timeout for an individual exploratory fitting job. Longer jobs require an explicit recorded allocation from the existing campaign budget.
+   110	- A download ceiling of 20 GiB or one quarter of available disk space, whichever is smaller.
+   111	- A first pilot target of 24 real evaluated development nodes and three executable policy challengers, retaining the incumbent.
+   112	- An eight-hour ceiling for the first pilot invocation. This is a safety ceiling, not a promised completion time.
+   113	- No automatic increase in financial, disk, concurrency, or wall-time ceilings.
+   114	
+   115	Use the host agent's already authorized model access. Any additional programmatic metered API calls require a numeric user-configured cap or an existing explicitly authorized cap. If none exists, the additional API spending cap is zero. Continue with host-driven reasoning and local computation where possible, and build the adapter without dispatching unapproved calls.
+   116	
+   117	Do not require the user to buy new services just to start the project. Do not silently equate an unknown price with zero.
+   118	
+   119	For separately dispatched API calls, enforce limits in code. Reserve a conservative maximum cost before each request, count concurrent reservations and retries, reconcile against returned usage, and persist the ledger before dispatch. Do not call a provider whose billable maximum cannot be bounded by the configured limits.
+   120	
+   121	Record model identifiers, prompts, token counts when exposed, tool costs, wall time, CPU time, and peak memory. If host-model costs cannot be measured, mark them unknown. You may still do science, but you cannot certify an all-in cost improvement while material costs are unobserved.
+   122	
+   123	Use append-only event records and checkpoint after every completed experiment. Track proposed, dispatched, completed, failed, and committed states. An interrupted request remains reserved until reconciled. Never reset the budget or repeat a completed paid request on resume.
+   124	
+   125	Do not claim a process is running unless you have an actual live process or job identifier and recent heartbeat. If the host session ends, write the exact next action and resume command. Do not promise work will continue after the runtime stops.
+   126	
+   127	
+   128	5 - Data and identifiability audit
+   129	
+   130	Before adaptive hypothesis search, construct a provenance table with biological model, donor, tumor lineage, sample origin, laboratory, assay library, medium, growth format, replicate identity, release, and measured outcome.
+   131	
+   132	Create explicit crosswalks among Broad, HCMI, Sanger, and author-specific identifiers. Mark uncertain donor identity as uncertain rather than assuming independence.
+   133	
+   134	Determine which observations are truly paired. Count independent biological models and donors. Do not count genes, guide RNAs, wells, alternative cultures, or technical replicates as additional independent patients.
+   135	
+   136	Audit release composition and preprocessing provenance. An integrated release may contain validation observations or corrections learned jointly from them. Removing overlapping rows alone does not undo leakage through outcome-guided target selection, normalization, or model selection. Prefer compatible study-specific releases and transformations fitted on development data. If a fitted correction used external dependency outcomes, rebuild a development-only analysis or obtain genuinely independent validation evidence. Disclosure alone does not restore independence. Distinguish that outcome leakage from covariate-only joint preprocessing, which must be disclosed as transductive feature preprocessing with appropriately limited claims. This is a required provenance check, not an assertion that any named release is contaminated.
+   137	
+   138	Verify dependency score direction, dynamic range, controls, missingness, and quality flags separately for each source. Avoid direct subtraction of Chronos values from Sanger fold-change or essentiality scores.
+   139	
+   140	Preserve the seven-model environmental design as a small, selected experiment. Determine whether row-level paired outcomes, replicates, and required metadata are sufficient for the intended contrast. A batch correction cannot separate laboratory and biology when the experimental design confounds them.
+   141	
+   142	Record attrition explicitly, including models unable to grow in a condition and genes excluded for insufficient variation or precision.
+   143	
+   144	Data eligibility is determined from prespecified quality and identifiability rules. It must not be selected later to maximize a favorable result.
+   145	
+   146	The gate is an identifiable, falsifiable question in a named subset. If the data cannot support the original question, propose and document a narrower still-open question within the same scientific objective. Do not pretend the original broader goal has been achieved.
+   147	
+   148	
+   149	6 - Scientific estimands and research contract
+   150	
+   151	Start from two connected estimands.
+   152	
+   153	The direct environmental estimand is the change in a gene's measured dependency between environment A and environment B within the same biological model, while holding the other measured culture condition fixed. Analyze medium and growth format separately where the design permits.
+   154	
+   155	The transfer estimand is the extent to which a prespecified genotype, tumor-state, or context relationship predicts dependency behavior in an independently filtered organoid cohort beyond lineage and the strongest appropriate baseline.
+   156	
+   157	Use original documented assay units for paired within-study contrasts. Use justified ranking, calibration, or outcome-specific comparisons for cross-study evidence.
+   158	
+   159	For each environmental claim, report the dependency in both conditions, all individual paired changes, uncertainty, and heterogeneity. A near-zero average can conceal large opposing effects.
+   160	
+   161	Do not call a dependency invariant because a difference is nonsignificant. If claiming equivalence, define a scientifically justified equivalence margin before confirmatory evaluation and require the relevant interval to fall inside that margin. If no defensible margin exists, report continuous effects and uncertainty without an invariance label.
+   162	
+   163	A stable absence of dependency is not a stable cancer vulnerability. Establish that the dependency itself is meaningful in the environments covered by a positive claim.
+   164	
+   165	Do not interpret a predictive expression feature as a causal mediator without identifying assumptions and suitable evidence. Environmental intervention evidence and cross-cohort biomarker associations must retain distinct evidence labels.
+   166	
+   167	Carry uncertainty and shared-model dependence in estimated environmental sensitivity into downstream transfer analyses using a justified measurement-error, resampling, or sensitivity analysis. Do not treat noisy estimated sensitivities as exact independent inputs. Report conclusions that change materially across plausible environmental-effect estimates.
+   168	
+   169	During initial development, choose and justify the precise primary endpoint, practical effect margin, hypothesis family, baseline set, uncertainty procedure, and sensitivity analyses. Then freeze them before policy optimization.
+   170	
+   171	The research contract must include the following.
+   172	
+   173	- Exact question and falsifiable alternatives.
+   174	- Intended population, environments, targets, and generalization claim.
+   175	- Eligibility and exclusion rules.
+   176	- Data and identifier versions.
+   177	- Development, policy-evaluation, and final external partitions.
+   178	- Feature engineering and transformation rules.
+   179	- Primary and secondary endpoints with fixed direction.
+   180	- Minimum practical effects or equivalence margins and their justification.
+   181	- Multiplicity control and uncertainty methods.
+   182	- Baseline definitions.
+   183	- Invalid-result rules.
+   184	- Success, failure, inconclusive, and budget-exhaustion conditions.
+   185	
+   186	The initial lock fixes the permitted hypothesis and transformation spaces, partitions, evaluator, baseline definitions, practical margins, and inferential rules. Adaptive development may select hypotheses, features, hyperparameters, and fitted artifacts within those spaces. A second lock commits the exact selected claim family, predictions, and artifacts before external evaluation.
+   187	
+   188	Hash this contract, evaluator code, and split manifests. Changing a locked scientific contract creates a new study identifier and requires appropriate new evaluation evidence.
+   189	
+
+exec
+/bin/zsh -lc "python3 -c 'from pathlib import Path; import re,shlex,tomllib; lines=Path(\"PLAN.md\").read_text().splitlines(); cmds=[re.search(r\""'`(codex exec[''^`]+)`",line).group(1) for line in lines if "| `codex exec" in line];
+for command in cmds:
+ args=shlex.split(command); override=args[args.index("-c")+1]; print(repr(override));
+ try: print(tomllib.loads(override))
+ except tomllib.TOMLDecodeError as error: print(type(error).__name__+": "+str(error))'"'" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+'model_reasoning_effort="high"'
+{'model_reasoning_effort': 'high'}
+'model_reasoning_effort="xhigh"'
+{'model_reasoning_effort': 'xhigh'}
+
+exec
+/bin/zsh -lc "python3 -c 'from pathlib import Path; print(repr(Path(\"PLAN.md\").read_text().splitlines()[15]))'" in /Users/bmarti44/github/bufferright/research
+ succeeded in 0ms:
+'| Adversarial review of **everything** (plans, code, contracts, claims, manuscript) | `gpt-6.1-sol` | `high` | `codex exec -m gpt-6.1-sol -c model_reasoning_effort=\'"high"\' -s read-only "<review prompt>"` |'
+

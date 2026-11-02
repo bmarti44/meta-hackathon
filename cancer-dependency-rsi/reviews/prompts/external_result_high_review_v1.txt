@@ -1,0 +1,14 @@
+Required independent Sol-high (gpt-6.1-sol, high) adversarial review of the EXECUTED scientific-only external evaluation and its interpretation. Read-only: no downloads, no edits. You MAY read the produced result files (C has now been consumed by the single locked run); do not re-run or re-decode Table 6.
+
+Project: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+Files: lock_s/LOCK2_COMMIT.json, lock_s/scientific_protocol_v1.json, lock_s/results/external_v1.json, lock_s/results/external_v1_gene_displacement.csv, lock_s/results/external_v1.started.json, lock_s/results/report_v1.md (lead interpretation), data/exposure_log.jsonl tail, ledger/resources.jsonl (job external_eval_lock2_v1 reserve/reconcile), ledger/experiments.jsonl (LOCK2_COMMIT record), reviews/lock_s_high_review_v4.md, src/external_eval.py. Authoritative goal/spec: ../GOAL.md, ../cancer_rsi_handoff.txt (sections 9, 12; C6, C10 wording).
+
+Tasks:
+1. Verify execution integrity: Lock2 committed before execution (timestamps, hashes still match), exactly one execution, exposure record ordering, no reruns, outputs consistent with the protocol (counts, failures, Holm, stability).
+2. Verify the report's numbers against external_v1.json and judge interpretation honesty: BOUND wording; the entirely negative interval (opposite to conjecture); the S1/S4 sensitivities near -0.21 with intervals straddling -0.20; gene-block stability; conditioning and limitations.
+3. Adjudicate gate implications: does this result plausibly satisfy C6 ("at least one previously unreported explanatory finding ... refutation or informative bound can qualify; must resolve a specific predeclared uncertainty")? What, concretely, is still required for C6 and C10 (e.g., novelty refresh, positive/equivalence evidence requirement "invariance needs positive + equivalence evidence", assay-sensitivity)? Which status field values are justified now (scientific_discovery; prediction_improvement; policy_improvement)?
+4. List issues by severity with file:line.
+
+Output (<=900 words). End with exactly one line:
+RESULT_REVIEW_SCORE:<0-100>; EXECUTION_VALID:<YES|NO>; DECISION:<BOUND|other>; C6_STATUS:<MET|PARTIAL|UNMET>

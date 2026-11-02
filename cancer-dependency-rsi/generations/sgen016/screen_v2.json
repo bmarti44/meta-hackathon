@@ -1,0 +1,145 @@
+{
+ "generation": "sgen016",
+ "version": 2,
+ "verdict": "FAIL_TO_ESTABLISH",
+ "timestamp": "2026-10-29T21:36:19.788773+00:00",
+ "scope_clarification": "Two distinct feasibility questions: (A) processed-vector reconstruction of the frozen Lock-S statistic (protocol uses selected-library model-level LFC vectors; guide refit explicitly outside that route) - NOT the question this SPEC asked; (B) raw-count refit/normalization sensitivity - the SPEC's R3 question. Verdict answers (B) only. (A) remains unprobed at manifest level.",
+ "probed_endpoints": [
+  "api.figshare.com/v2/articles/29472362 (200, full inventory)",
+  "ndownloader README.txt (documentation)",
+  "cog.sanger.ac.uk/cmp/download/ (403)",
+  "depmap.org/portal/data_page/?tab=allData (JS shell)",
+  "depmap.org/portal/download/api/downloads (verification HTML)",
+  "depmap.org/portal/download/api/releases (verification HTML)",
+  "depmap.org/portal/api/download/releases (verification HTML)",
+  "depmap.org/portal/api/downloads (verification HTML)",
+  "depmap.org/portal/api/no-captcha/download/files (verification HTML at probe time)"
+ ],
+ "access_claim": "Bounded probe: no scriptable DepMap inventory obtained from this client; alternatives NOT exhausted; no bypass attempted.",
+ "field_rows": [
+  {
+   "field": "resource_id",
+   "figshare": "PRESENT (article 29472362)",
+   "depmap_portal": "NOT_ESTABLISHED (verification HTML on all probed listing endpoints)",
+   "cmp": "ABSENT (403)",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "release/version",
+   "figshare": "PRESENT (version 1)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "n/a",
+   "local_passports": "PRESENT (snapshot 20260921)"
+  },
+  {
+   "field": "source_study_id",
+   "figshare": "PRESENT (DOI 10.1038/s41586-026-10843-7)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "PARTIAL (doi/pmed per model)"
+  },
+  {
+   "field": "pseudonymous_patient_id",
+   "figshare": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "PRESENT (individual_ID)",
+   "local_passports": "PRESENT (patient_id)"
+  },
+  {
+   "field": "specimen_id",
+   "figshare": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "PARTIAL (sample_id)"
+  },
+  {
+   "field": "derived_model_id",
+   "figshare": "PRESENT (DepMap ID in metadata files)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "PRESENT (sanger_ID/sample_ID)",
+   "local_passports": "PRESENT (model_id)"
+  },
+  {
+   "field": "parent_specimen/derivation",
+   "figshare": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "PRESENT (parent_id)"
+  },
+  {
+   "field": "donor_deduplication_key",
+   "figshare": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "PARTIAL (individual_ID repeated)",
+   "local_passports": "PRESENT (patient_id)"
+  },
+  {
+   "field": "file_id/URI/format/bytes/checksum",
+   "figshare": "PRESENT (36 files, sizes, computed_md5)",
+   "depmap_portal": "NOT_ESTABLISHED (no scriptable inventory obtained)",
+   "cmp": "ABSENT",
+   "local_crosswalk": "n/a",
+   "local_passports": "n/a"
+  },
+  {
+   "field": "processing_level declaring RAW guide counts",
+   "figshare": "ABSENT (0/36 raw count objects; metadata + processed statistics only)",
+   "depmap_portal": "NOT_ESTABLISHED (README asserts raw profiling data incl dependency scores in file set; no manifest obtained)",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT (CRISPR_available flag only)",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "sample_column_map",
+   "figshare": "ABSENT",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "feature_identifier_namespace",
+   "figshare": "PARTIAL (guide metadata file exists; not opened)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "library identity",
+   "figshare": "PARTIAL (minipool library files listed)",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "PRESENT (library column, e.g. minLib)",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "normalization/scoring recipe (raw->LFC)",
+   "figshare": "ABSENT in manifests",
+   "depmap_portal": "NOT_ESTABLISHED",
+   "cmp": "ABSENT",
+   "local_crosswalk": "ABSENT",
+   "local_passports": "ABSENT"
+  },
+  {
+   "field": "access_tier/charge",
+   "figshare": "PRESENT public free",
+   "depmap_portal": "NOT_ESTABLISHED scriptably (verification wall; no bypass)",
+   "cmp": "403",
+   "local_crosswalk": "local",
+   "local_passports": "local"
+  }
+ ],
+ "decision_basis": "Frozen rule requires >=1 complete patient->specimen->model->declared RAW object chain with sample map + recipe + access. No probed manifest declares raw guide-count objects or a sample_column_map. Verdict FAIL_TO_ESTABLISH for question (B). This does NOT establish infeasibility of (A) or of any future resource.",
+ "patient_chain_complete_count": 0,
+ "consequences": "(B) not established from probed manifests. A successor manifest probe for question (A) (processed per-screen LFC vectors + screen/patient linkage manifests) is the identified next step before any outcome access; under this route and previously exposed evidence it would remain exploratory sensitivity, not independent confirmation. No gate changes.",
+ "counts_accessed": 0
+}

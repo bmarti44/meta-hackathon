@@ -1,0 +1,19 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 3.
+Scores: r1 76, r2 84 (reviews/site_sol_review_r1.md, site_sol_review_r2.md).
+Round-2 dispositions: reviews/site_sol_review_r2_dispositions.md.
+Site: site/index.html, site/data/, site/assets/, site/apex_redirect.js,
+src/build_site_data.py, tests/test_site_data.py.
+
+Verify the r2 partials and N1-N4 are genuinely fixed (check actual
+strings/logic, hunt for leftover instances of the same classes), check
+the new code for regressions (select() 3-arg call sites, aria-sort
+derivation, focus restore, CPU-mirror fx math vs shader incl. intro and
+repulsion, RM snap, paper-cover gating, .gl-note fallback), confirm no
+data regressions (genes.json unchanged this round except none; stats
+ticker), and give a final ship judgement against the original
+requirements. Same anchors (90+ = ship it). Flag only verified issues,
+smallest fix each, no over-engineering. If nothing further at
+low-or-above severity, say so plainly.
+
+Output: SCORE: n/100; VERDICT; per-item disposition check with evidence;
+NEW ISSUES by severity (or none); CHECKS RUN.

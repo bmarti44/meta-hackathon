@@ -1,0 +1,3 @@
+Independent re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 88.
+Verify: battery REQUIRED now incl governing evidence set + all rows must exist; note derived from installed moesm3_installed boolean; duplicate-add merge enforces policy HTML expectation (register v9); empty patient IDs rejected; extracted tables = reconstructed_extraction + inherited terms + table_2 identity role; schema fields enforced in screen acceptance.
+Render C2 field-level. End exactly: SGEN007_FIX4_SCORE: <0-100>; C2:<...>

@@ -1,0 +1,21 @@
+You are the independent adversarial reviewer (gpt-6.1-sol, high) for cancer-dependency-rsi. Read-only; no downloads of dependency outcomes; metadata/literature artifacts in repo may be read.
+
+Re-review after your 84/100 v3-package review (reviews/v3_package_high_review_v1.md). Verify disposition of EACH of its 8 issues:
+1 HIGH atlas (atlas/v4 via src/build_atlas_v4.py + tests/test_atlas_v4.py; CDK6 Fig3, WNT consistency, tested-not-significant wording)
+2 HIGH pgen001 lock (generations/pgen001/DISPOSITION_v2.json: FAILS-SCREEN/exploratory, no backdating; pgen002/pgen003/sgen001 ledger-first spec_lock records in ledger/experiments.jsonl)
+3 MEDIUM screen bar (pgen002 screen_verdict_v1.json = PENDING with named witness; predeclared TOK failure-charge in pgen002 SPEC + token_charging_v1.json; license recorded)
+4 MEDIUM receipts (src/pgen002_probe.py, probe_results_v2.json requests[], data/passports_model_list_20260921_manifest.json; pgen001 historical claims marked unverified in its disposition)
+5 MEDIUM novelty search (reviews/novelty_audit_v5.md + novelty_v5_searches.json; generations/sgen001/backward_references.json; outstanding items explicitly listed)
+6 MEDIUM reopening scope (pgen001 DISPOSITION correction; discriminator v2)
+7 LOW S3 sections (novelty v5: 2.10.1/3.7 Tables S17-S19; verify vs data/papers/PMC13664187.xml)
+8 LOW stale status (status.json + STATUS.md update 2026-10-28n)
+
+Also adjudicate NEW work:
+- sol-xhigh endpoint ruling (reviews/pgen004_design_xhigh_v1.md: ENDPOINT NO, PGEN004 NO_GO): is the lead's acceptance + ranked-generation execution faithful? Any endpoint-switching or gate-waiving?
+- pgen003 verdict (FAILS-SCREEN; Witness A full C mapping; eligibility_recompute_v1.json: verify counts from generations/pgen002/zip_listing_v2.json + data/passports_model_list_20260921.csv + lock_s/cohort.csv)
+- sgen001 identity: src/sgen001_identity.py + generations/sgen001/identity_reconciliation_v1.json + adjudication_dossier_v1.md. Verify from data/raw/sanger_supp/supplementary_table_2_revision.xlsx clinical_data and the receipted Passports patient comments. Render C1 and C6: MET/PARTIAL/UNMET with reasons vs cancer_rsi_handoff.txt section 12. Confirm/refute interval caveat wording in manuscript/manuscript_draft_v1.md.
+- Component reproduction reviews/repro_primary_point_v1.json (recompute independently from lock_s/results/external_v1_gene_displacement.csv).
+
+Every issue: severity low/medium/high/critical + file:line evidence + exact fix. End with exactly:
+V3_SGEN001_REVIEW_SCORE: <0-100>; C1:<...>; C6:<...>; C7:<...>; IDENTITY:<CONFIRMED|REFUTED|PARTIAL>
+>=90 requires zero unresolved verified high/critical. Score grants no gate by itself.

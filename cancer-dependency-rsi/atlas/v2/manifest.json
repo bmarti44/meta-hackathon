@@ -1,0 +1,34 @@
+{
+ "status": "V2_POSTLOCK2",
+ "panel_genes": 250,
+ "genes_with_external_coordinate": 207,
+ "panel_level_external_result": {
+  "decision": "BOUND",
+  "estimate": -0.14583205005879532,
+  "ci95_donor": [
+   -0.17526797046592052,
+   -0.11365511914822886
+  ],
+  "robustness": "sign robust across secondaries/stability; magnitude bound holds for primary,S2,S3 only (S1,S4, model-cluster and gene-block ranges cross -0.20)"
+ },
+ "evidence_types": {
+  "environment": "Layer-A paired minipool contrasts (exploratory, adaptively reused)",
+  "transfer": "single Lock2 external retrospective measurement (association component only)",
+  "biomarker": "not evaluated in this campaign",
+  "prior_knowledge": "author library classes only",
+  "invariance": "none",
+  "causal": "none"
+ },
+ "inputs": {
+  "atlas/provisional_v1/genes.csv": "2ae2dc37b93526d7bfe5d639df487e30012920e6b2d2ec66f64b1162c5993c21",
+  "atlas/provisional_v1/exclusions.csv": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e",
+  "atlas/provisional_v1/paired_observations.csv": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801",
+  "lock_s/results/external_v1_gene_displacement.csv": "552f06fbb16a8cb1a001037520af33d69a4b5c7256c53df5b8a900521e2914ed",
+  "lock_s/results/external_v1.json": "ea7713752490bdc8100099b02115175c4c2cbeaa1a5d8a61f284074a3396b26f"
+ },
+ "code": {
+  "src/build_atlas_v2.py": "064a724de472d9a6e6848a90b80c0b89a4e726dbb7a392a6d26a45e50c70d961",
+  "src/estimators.py": "b0b3bc40fdba0d80d3b672fdb03dafc755da7450940c91f441e2e095aa7cfbc9"
+ },
+ "note": "Post-Lock2 use of C here is descriptive bookkeeping of the locked output, not new inference."
+}

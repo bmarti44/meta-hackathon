@@ -1,0 +1,13 @@
+{
+  "spec_id": "g2-safety-probes-v1",
+  "purpose": "Pre-Lock1 diagnostic only; no biological inference or optimization. Compare retired v2 to unapproved v3 safety draft on fixed E0 roots.",
+  "frozen_before_execution": true,
+  "configs_source": "config/episodes.json pilot_E0.branches[].root_config in recorded order",
+  "seed": 20261028,
+  "old_evaluator": "evaluator_v2",
+  "new_evaluator": "evaluator_v3_draft",
+  "invalidation": "All v1/v2 quality scores inadmissible for policy selection; no policy experiment has run. v3 remains inadmissible pending justified calibration + Sol-high G2 pass.",
+  "reported_fields": ["config", "valid", "estimate", "null_coverage", "q", "ci_width", "invalid_reasons", "admissible_for_policy"],
+  "source": "Layer-A Broad only; no Sanger values accessed",
+  "limits": {"timeout_s": 120, "evaluations": 12, "concurrency": 1}
+}

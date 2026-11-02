@@ -1,0 +1,65 @@
+{
+  "version": "data-manifest-lock1-v1",
+  "files": {
+    "data/source_manifest_broad_figshare.json": {
+      "sha256": "1b099a57c08492ddefcf98a2ba575c708c8372dd5c28e4a517ba791e714cb1d7",
+      "bytes": 5479
+    },
+    "data/source_manifest_sanger_figshare.json": {
+      "sha256": "7662bddaf608881fea4f571f7c52da6f5591f3dd182773a90ca54852b022f6d9",
+      "bytes": 2996
+    },
+    "data/gene_scopes.json": {
+      "sha256": "2b4958407bf741ac1c371e4b18c433288d5754f9b3134094986dc5c0f7eb0881",
+      "bytes": 10004
+    },
+    "data/selection_exclusions.json": {
+      "sha256": "f5d9615c80134464fe85d1776836e8a77d3ea8ec2e7333f3a753339c3d645dfc",
+      "bytes": 770
+    },
+    "data/confirmatory_gene_candidates.json": {
+      "sha256": "3d6acc7457a5b9fc8887cc2d36af883b0925c76a44c9c61af5b2491e026edecf",
+      "bytes": 2328
+    },
+    "data/split_manifest.json": {
+      "sha256": "bb05e6d43861df1f0831fcf24efb676c47db33f5fab8e6aa8cca3b4871a0984c",
+      "bytes": 11486
+    },
+    "data/crosswalk_sanger_screened.csv": {
+      "sha256": "0745330931ef8b7dfa9703d8c185c0855562ffd23828c1bbb5152e3be61be058",
+      "bytes": 17608
+    },
+    "data/condition_cell_registry.csv": {
+      "sha256": "c420242e2b543ea60ed351f4d40cda5435f78a579dbfd5fe6e97b36d51f96f64",
+      "bytes": 2429
+    },
+    "data/observation_provenance_minipool.csv": {
+      "sha256": "86a0ecd27ea29e1900441cc65ef6a5007a6e15cf02166bc92acd1ebc5cd43cb9",
+      "bytes": 9205
+    },
+    "data/identifiability_audit.json": {
+      "sha256": "ec635bd788b9b5d2e5f1aefa2bf40ff8a66fa72ba6d4acabb17d48bcf3fb17bd",
+      "bytes": 3917
+    },
+    "data/baseline_reproduction_ols.json": {
+      "sha256": "5bcc876491b0de4071badc15e98a2570f4b903622db08d7291912b45d29a6938",
+      "bytes": 856
+    },
+    "data/baselines_dev.json": {
+      "sha256": "87b9922f8d6f3817001dbe706655b202ee7c34b184cea28bd19977500b7b5e86",
+      "bytes": 811
+    },
+    "data/precision_feasibility_v2.json": {
+      "sha256": "0b2ea3787db7c99a452597108a292db6aec771cfedd7aef543c032b1def33253",
+      "bytes": 1253
+    },
+    "data/sanger_table6_schema.json": {
+      "sha256": "8a12635838d2cb905f8ffcbebaab0f19bec915849c6c2fa04d53c4667eeefef7",
+      "bytes": 624
+    },
+    "data/exposure_log.jsonl": {
+      "sha256": "09f7b9e3a66ad7876ddc16e7ca86590e59815bec3f4b2b528b3b2979c55b939e",
+      "bytes": 1809
+    }
+  }
+}

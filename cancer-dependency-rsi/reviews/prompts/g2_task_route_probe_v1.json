@@ -1,0 +1,67 @@
+{
+  "spec_id": "g2-task-route-probe-v1",
+  "frozen_before_execution": true,
+  "written_utc": "2026-10-28T20:50:00Z",
+  "source_proposal": "reviews/task_feasibility_unstick_xhigh_v1.md (Sol-xhigh, phase2_lock1)",
+  "purpose": "Pre-Lock1 METADATA-ONLY feasibility experiment. Discriminating question: are there additional, independently identified, previously unexposed organoid donors that can support development and reserved evaluation of the frozen displacement endpoint without using C?",
+  "status_invariants": {
+    "q": null,
+    "admissible_for_policy": false,
+    "G2": "FAIL (unchanged by any verdict)",
+    "C_outcomes": "quarantined; never opened",
+    "no_generations_no_scientific_scoring_no_dependency_matrix_download": true,
+    "verdict_CANDIDATE_FOUND_effect": "authorizes drafting a new prelock contract for independent review only; does not clear G2, freeze Lock1 or authorize any outcome access"
+  },
+  "resource_envelope": {
+    "dispatch": "src/budget.py run_bounded (reserve-before-dispatch, RSS watchdog), phase phase2_lock1, cpu_heavy=true, memory_bytes=1073741824, nodes=0, model_calls=0",
+    "wall_s_total": 300,
+    "network_requests_total_max": 6,
+    "redirects_count_as_requests": true,
+    "automatic_redirect_following": false,
+    "per_request_timeout_s": 30,
+    "transfer_bytes_total_max": 33554432,
+    "metered_spend_usd": 0,
+    "user_agent": "cancer-dependency-rsi-metadata-probe/1.0 (research; no browser emulation)",
+    "no_cookies_no_js_no_challenge_bypass_no_retry_of_identical_request": true,
+    "campaign_ceilings_unchanged": true
+  },
+  "outcome_guards": {
+    "filename_allowlist_for_retrieval": ["Model.csv", "CRISPRScreenMap.csv", "ScreenSequenceMap.csv", "ModelCondition.csv"],
+    "filename_denylist_regex": "(?i)(GeneEffect|GeneDependency|Chronos|LFC|LogFold|ReadCount|Score|Effect|Essential|Fitness|BAGEL|Expression|Mutation|CopyNumber|Omics)",
+    "rule": "Only allowlisted metadata filenames may be fetched; any denylist match is refused before dispatch. Dependency-matrix headers are NOT range-fetched. If eligibility requires numeric outcome content, the affected requirement is UNRESOLVED.",
+    "content_guard": "Expected CSV/JSON responses that arrive as HTML (verification/challenge page) are recorded and the route stops for that resource without bypass.",
+    "signed_url_hygiene": "Query strings of signed storage URLs are not persisted; only scheme+host+path and sha256 of the full URL are recorded.",
+    "cached_files_used_offline": ["data/raw/broad_figshare/model_metadata.csv", "data/raw/broad_figshare/screen_metadata.csv", "data/split_manifest.json", "data/crosswalk_sanger_screened.csv"],
+    "cached_outcome_tables_not_opened_by_probe": ["data/raw/broad_figshare/organoids_vs_2d_gene_dependency_tests_full.csv", "all Sanger quarantine files"]
+  },
+  "steps": [
+    {"id": "S0", "network": false, "action": "Offline: enumerate manuscript-era NextGen organoid CRISPR-screened models and ScreenIDs from cached Broad figshare 29472362 v1 model_metadata.csv/screen_metadata.csv (metadata only); load the 6 Broad format input models, the 148 C sample IDs, 144 C donor IDs and 13 excluded Broad-overlap donors."},
+    {"id": "R1", "network": true, "url": "https://forum.depmap.org/t/organoid-dependency-data/4671.json", "action": "Discourse JSON of the topic containing the supplied staff post /7. Record post 7 author, staff/admin/moderator flags, group, timestamps, sha256 of cooked HTML and all hrefs. If post 7 is not staff-authored the primary route is not authoritative."},
+    {"id": "R2", "network": true, "url": "https://depmap.org/portal/api/download/files", "action": "Official DepMap portal release-file manifest (documented portal API; post 7 directs users to the portal release files CRISPRGeneEffect/Model.csv). Record release names, filenames, md5, sizes where present. Extract rows for the 26Q3 release and for the fallback file set 'NextGen Model Manuscript 2026'. If HTML/verification/timeout: primary route UNRESOLVED."},
+    {"id": "R3", "network": true, "action": "Model.csv of the 26Q3 release from the R2 manifest URL (allowlisted metadata). Size guard <=16 MiB."},
+    {"id": "R4", "network": true, "action": "CRISPRScreenMap.csv (else ScreenSequenceMap.csv) of the 26Q3 release from R2 (allowlisted metadata) to identify which organoid models have CRISPR screens and whether ScreenIDs are new relative to the manuscript set."},
+    {"id": "R5-R6", "network": true, "action": "Reserved for counted redirects of R1-R4 (same official hosts only: forum.depmap.org, depmap.org, storage.googleapis.com) or, only if R2 failed, one request to the publication-declared fallback route https://depmap.org/portal/data_page/?tab=allData to record whether it serves a file-set manifest or a verification page. Never repeat an identical failed request."}
+  ],
+  "fallback": "Single fallback = publication-declared 'NextGen Model Manuscript 2026' file set (data availability statement of PMC13581591; README of figshare 29472362). Evaluated from the R2 manifest if obtained; same eligibility test. Donors already counted in the manuscript set contribute no independent panels.",
+  "eligibility_rules": {
+    "E1_organoid_with_crispr": "26Q3 Model.csv model type/growth fields mark organoid AND >=1 26Q3 CRISPR screen in the screen map (column mapping recorded).",
+    "E2_documented_donor": "Non-empty documented donor identifier (Model.csv PatientID or equivalent); duplicate models nested under donors.",
+    "E3_not_broad_input": "Neither the model nor its donor matches the 6 Broad format-contrast input models (ACH-000108, ACH-000178, ACH-001418, ACH-002958, ACH-003040, ACH-003052; Dome/Plastic pairs in split_manifest A_development) or the 7th, medium-only minipool model ACH-000048.",
+    "E4_not_C": "No match to the 148 C models or 144 C donors or 13 excluded overlap donors via HCMI case/model IDs, Sanger model IDs or crosswalk; unresolvable donor linkage => independence UNKNOWN (not eligible as independent).",
+    "E5_unexposed": "Donor has no model among the manuscript-era NextGen CRISPR-screened models. Reason: aggregated organoid outcomes for those screens (organoids_vs_2d tests: OrganoidsMean, n=94) were already inspected and used for the fixed 2D ordering source table, T_g, Tier-A selection exclusions and development estimators; reprocessing the same observations in 26Q3 is not new biological evidence and cannot form untouched reserved panels.",
+    "E6_gene_universe": "The 207 confirmatory genes and the fixed 2D consensus ordering inputs must be available without C. Fixed ordering is cached development data (independent of C). Gene-column presence in a 26Q3 dependency matrix cannot be verified without opening the matrix => recorded as library-level inference only; unverified => requirement UNRESOLVED.",
+    "E7_processing_independence": "Processing/reference construction must not use C outcomes or quantities fitted from them. Record whether the 26Q3 screen map/manifest documents Sanger organoid (HCM-SANG) screens inside the Broad integrated fit; undocumented => UNKNOWN.",
+    "E8_count_floor": "Necessary screening floor (not an adequacy proof): >=80 eligible independent donors, i.e. two donor-disjoint panels (development, reserved) of >=40 donors each. At n=40 paired donors, alpha=0.05 two-sided, power 0.8, the minimal detectable standardized paired donor-level loss difference is (1.96+0.84)/sqrt(40)=0.44 SD; final precision adequacy and practical margin require a contract-stage analysis that this probe cannot certify."
+  },
+  "verdict_rules": {
+    "CANDIDATE_FOUND": "R2-R4 retrieved from the official manifest AND E1-E8 each have documented support (E6/E7 documented, not inferred).",
+    "INELIGIBLE": "An authoritative, sufficiently complete inventory (26Q3 Model.csv AND screen map from the official manifest) establishes a specific failure: eligible unexposed independent donors below the E8 floor, or every candidate fails a named rule.",
+    "UNRESOLVED": "Any access, provenance, coverage or independence fact remains unknown within the envelope (including verification pages or timeouts). A timeout never establishes dataset nonexistence."
+  },
+  "outputs": {
+    "result": "reviews/g2_task_route_probe_v1.json (evidence table, request/resource ledger, exclusions, exactly one verdict)",
+    "raw_metadata_dir": "data/route_probe_26q3_v1/ (retrieved metadata bytes + sha256)",
+    "resource_ledger": "ledger/resources.jsonl via run_bounded reserve/reconcile"
+  },
+  "stop_criterion": "Stop this acquisition branch after the primary route and the one fallback either fail eligibility or remain unresolved within the envelope, or if eligible counts cannot meet E8, or if the task cannot plausibly deliver meaningful quality and material all-in savings. Then apply the PLAN 0.6 joint no-progress/negative-EV assessment."
+}

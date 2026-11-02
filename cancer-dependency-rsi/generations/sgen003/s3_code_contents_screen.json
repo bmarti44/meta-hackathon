@@ -1,0 +1,493 @@
+{
+ "requests": [
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37801915-37867450",
+   "status": 206,
+   "content_range": "bytes 37801915-37867450/37867451",
+   "bytes": 65536,
+   "sha256": "e2210188d436babc8a123ed81eea331e07bfaabb85be0b1ffb175756d6e9a8b9",
+   "wall_s": 0.97
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37787262-37867428",
+   "status": 206,
+   "content_range": "bytes 37787262-37867428/37867451",
+   "bytes": 80167,
+   "sha256": "8b5176c09ba526dfe3a24c11eeb91f1722aa6dc3b636e9ae1809cff58866a8fa",
+   "wall_s": 0.768
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=4640217-4640246",
+   "status": 206,
+   "content_range": "bytes 4640217-4640246/37867451",
+   "bytes": 30,
+   "sha256": "1ed1123991aed5c78ee240fcfb7712e0fa7d44ccb359d4303980fad772ab7c27",
+   "wall_s": 0.514
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=4640358-4642785",
+   "status": 206,
+   "content_range": "bytes 4640358-4642785/37867451",
+   "bytes": 2428,
+   "sha256": "3cbb3bc48c3966f2daf474c9b66a94c400696e0949f6f25a14aa68ff44221261",
+   "wall_s": 0.486
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=4642786-4642815",
+   "status": 206,
+   "content_range": "bytes 4642786-4642815/37867451",
+   "bytes": 30,
+   "sha256": "b429bf8ad0331a13905bf074f28ebc87a923feab1f2be69be32c4ac8487ac271",
+   "wall_s": 0.477
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=4642930-4657356",
+   "status": 206,
+   "content_range": "bytes 4642930-4657356/37867451",
+   "bytes": 14427,
+   "sha256": "56166ed6e9bba4498537b5c294ffbdc945006359d790afd81444cf134e0dcd72",
+   "wall_s": 0.568
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=6388967-6388996",
+   "status": 206,
+   "content_range": "bytes 6388967-6388996/37867451",
+   "bytes": 30,
+   "sha256": "d0785675500dc51cfc1864d9d1c0ade0ff13c6eef8ea054cefafa8e92d4a3ee5",
+   "wall_s": 0.499
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=6389103-6391530",
+   "status": 206,
+   "content_range": "bytes 6389103-6391530/37867451",
+   "bytes": 2428,
+   "sha256": "3cbb3bc48c3966f2daf474c9b66a94c400696e0949f6f25a14aa68ff44221261",
+   "wall_s": 0.513
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=11996215-11996244",
+   "status": 206,
+   "content_range": "bytes 11996215-11996244/37867451",
+   "bytes": 30,
+   "sha256": "68492a03d2d38bdec48bd3a184f99ddd2e34daaf89de3be8345fff2002d23814",
+   "wall_s": 0.523
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=11996368-12002426",
+   "status": 206,
+   "content_range": "bytes 11996368-12002426/37867451",
+   "bytes": 6059,
+   "sha256": "0a26a70f647a7cb6005b84397ff1dcc500457d446aeed6163c48bb21045ea598",
+   "wall_s": 0.522
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12002427-12002456",
+   "status": 206,
+   "content_range": "bytes 12002427-12002456/37867451",
+   "bytes": 30,
+   "sha256": "82dc2e53f482c739f8c039a99029e2d05947d7c096a620fa30a31c44d8f879af",
+   "wall_s": 0.549
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12002572-12005012",
+   "status": 206,
+   "content_range": "bytes 12002572-12005012/37867451",
+   "bytes": 2441,
+   "sha256": "96a6700cf4739ee59d5c6072a845ca92294c685b86561d38ba0640030bcbc811",
+   "wall_s": 0.478
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12005013-12005042",
+   "status": 206,
+   "content_range": "bytes 12005013-12005042/37867451",
+   "bytes": 30,
+   "sha256": "46ddee4b93c01a1ac81c395e08437fb9dc6b0356e97e5fd40f8f09a8957e2255",
+   "wall_s": 0.499
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12005160-12008414",
+   "status": 206,
+   "content_range": "bytes 12005160-12008414/37867451",
+   "bytes": 3255,
+   "sha256": "d196c19afda081fc5af535c54a9a49ad7fcf708bffc8de5ba981b6b8085783ef",
+   "wall_s": 0.477
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12008415-12008444",
+   "status": 206,
+   "content_range": "bytes 12008415-12008444/37867451",
+   "bytes": 30,
+   "sha256": "3980bc85a03cc5dc95db7619128e86a5dc84188bce4192cffdfc7a12cc1c4f2d",
+   "wall_s": 0.486
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12008569-12010584",
+   "status": 206,
+   "content_range": "bytes 12008569-12010584/37867451",
+   "bytes": 2016,
+   "sha256": "28d77897ff233440c4b3d662fc8f77110349f182112988454aaf992f03130d01",
+   "wall_s": 0.486
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12010585-12010614",
+   "status": 206,
+   "content_range": "bytes 12010585-12010614/37867451",
+   "bytes": 30,
+   "sha256": "703dacf4fd6d1e848a71269bec0bfb2d9d45fe991da361ac15c55938508bd4ae",
+   "wall_s": 0.489
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=12010736-12014311",
+   "status": 206,
+   "content_range": "bytes 12010736-12014311/37867451",
+   "bytes": 3576,
+   "sha256": "11e449fd475a6ad66a55135dfe83cfab0afc0fcc6cc403a036b878e1bf1f9f91",
+   "wall_s": 0.468
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15088378-15088407",
+   "status": 206,
+   "content_range": "bytes 15088378-15088407/37867451",
+   "bytes": 30,
+   "sha256": "e0c6c14bed7e3c63ccb080a6487084fb86e5a2c898f84621ce1bf722425f3108",
+   "wall_s": 0.492
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15088533-15092380",
+   "status": 206,
+   "content_range": "bytes 15088533-15092380/37867451",
+   "bytes": 3848,
+   "sha256": "cebb463f3bc1b4bfb63f0485246bcf5c0e6a2ba804eff90397a1a9c7d60de20a",
+   "wall_s": 0.487
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15540794-15540823",
+   "status": 206,
+   "content_range": "bytes 15540794-15540823/37867451",
+   "bytes": 30,
+   "sha256": "c6b3b0f13400d217ff0c0730a073d6f3ac80951852b4cafd7882869d1cf778e2",
+   "wall_s": 0.474
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15540937-15547487",
+   "status": 206,
+   "content_range": "bytes 15540937-15547487/37867451",
+   "bytes": 6551,
+   "sha256": "5efe04a55078a1c3c4256b4a3e6cbd8abf8a1db129665d2143257f87e665dd32",
+   "wall_s": 0.494
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15547488-15547517",
+   "status": 206,
+   "content_range": "bytes 15547488-15547517/37867451",
+   "bytes": 30,
+   "sha256": "a0c11edcaa0fa891667114dfd7c6904bb06a3360b15b6c838cfa4a95fc9a42c6",
+   "wall_s": 0.515
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15547627-15552873",
+   "status": 206,
+   "content_range": "bytes 15547627-15552873/37867451",
+   "bytes": 5247,
+   "sha256": "4110df2d06268924c68cd2a27dee4b87949e9860fb10b3f88dde7f43fcd16e38",
+   "wall_s": 0.519
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15552874-15552903",
+   "status": 206,
+   "content_range": "bytes 15552874-15552903/37867451",
+   "bytes": 30,
+   "sha256": "9094b172285f7fb12a37a683c4856e980e56415e9b22c7f6aa219e520be4c7d5",
+   "wall_s": 0.511
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15553014-15555487",
+   "status": 206,
+   "content_range": "bytes 15553014-15555487/37867451",
+   "bytes": 2474,
+   "sha256": "559667237535aa352a9c80b0d87a6adf3c2afdaac9c727536d727337c2b8b9d4",
+   "wall_s": 0.572
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15555488-15555517",
+   "status": 206,
+   "content_range": "bytes 15555488-15555517/37867451",
+   "bytes": 30,
+   "sha256": "844a820b70ed6a1b8011dca0df468385648a09217f50e77ff610c0e56630deb0",
+   "wall_s": 0.503
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15555624-15558064",
+   "status": 206,
+   "content_range": "bytes 15555624-15558064/37867451",
+   "bytes": 2441,
+   "sha256": "96a6700cf4739ee59d5c6072a845ca92294c685b86561d38ba0640030bcbc811",
+   "wall_s": 0.524
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15558065-15558094",
+   "status": 206,
+   "content_range": "bytes 15558065-15558094/37867451",
+   "bytes": 30,
+   "sha256": "4306845ad6b75b7008cdc576a1d6bf5a5cd895450cf21d6c91f776c77aa5c608",
+   "wall_s": 0.489
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=15558209-15560689",
+   "status": 206,
+   "content_range": "bytes 15558209-15560689/37867451",
+   "bytes": 2481,
+   "sha256": "5d2dfb3e789a84de267d653fc3cbc74494833a99cbd0f321c749c26d0acd2cae",
+   "wall_s": 0.503
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=23059567-23059596",
+   "status": 206,
+   "content_range": "bytes 23059567-23059596/37867451",
+   "bytes": 30,
+   "sha256": "d6bd9e20bb879e5c4d29477390437766304859b6d05988efa9ecb754df78745c",
+   "wall_s": 0.488
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=23059702-23062054",
+   "status": 206,
+   "content_range": "bytes 23059702-23062054/37867451",
+   "bytes": 2353,
+   "sha256": "bb7c1c526929ea2acb8c6f8004253ac827841484d15371581da60a03ad54bd7c",
+   "wall_s": 0.469
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=23062055-23062084",
+   "status": 206,
+   "content_range": "bytes 23062055-23062084/37867451",
+   "bytes": 30,
+   "sha256": "97c6676765ac6e75069b64e6a6ee30fbae68fc9618a51ee039912428233cfb28",
+   "wall_s": 0.469
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=23062192-23064952",
+   "status": 206,
+   "content_range": "bytes 23062192-23064952/37867451",
+   "bytes": 2761,
+   "sha256": "79095eaa706464bb30d676df2a476bceb07d7d37a3fa8917f089b4a1c0e6209c",
+   "wall_s": 0.499
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=34005811-34005840",
+   "status": 206,
+   "content_range": "bytes 34005811-34005840/37867451",
+   "bytes": 30,
+   "sha256": "29cfda5aff36662868b794db646026ff7b566eb5ac0e3bac46a9ec0d9e5e7a91",
+   "wall_s": 0.501
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=34005959-34012017",
+   "status": 206,
+   "content_range": "bytes 34005959-34012017/37867451",
+   "bytes": 6059,
+   "sha256": "0a26a70f647a7cb6005b84397ff1dcc500457d446aeed6163c48bb21045ea598",
+   "wall_s": 0.5
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35820585-35820614",
+   "status": 206,
+   "content_range": "bytes 35820585-35820614/37867451",
+   "bytes": 30,
+   "sha256": "36ad620f71596649394ff1ff45005a1eca6dc5fdadcf5a1673ad0591ad6d3b3e",
+   "wall_s": 0.481
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35820714-35825731",
+   "status": 206,
+   "content_range": "bytes 35820714-35825731/37867451",
+   "bytes": 5018,
+   "sha256": "a2b93575628534d50598bf904a1773779e5cbe7602375a68486a6ad08103a00e",
+   "wall_s": 0.474
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35935363-35935392",
+   "status": 206,
+   "content_range": "bytes 35935363-35935392/37867451",
+   "bytes": 30,
+   "sha256": "e0f4b50ad22625688aace0c481e7a8c006c41cf0615b4cc865dbb626ac6c75c5",
+   "wall_s": 0.859
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35935498-35940539",
+   "status": 206,
+   "content_range": "bytes 35935498-35940539/37867451",
+   "bytes": 5042,
+   "sha256": "83c70b648a37c997bf8a6d1b6e53e32df66d7fe4a7478acf49ecc2557f0af143",
+   "wall_s": 0.527
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35942699-35942728",
+   "status": 206,
+   "content_range": "bytes 35942699-35942728/37867451",
+   "bytes": 30,
+   "sha256": "3e4af22375d248a91e7bb543ddb5580125234f93d715529955be1664fc5d99f1",
+   "wall_s": 0.537
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35942836-35946223",
+   "status": 206,
+   "content_range": "bytes 35942836-35946223/37867451",
+   "bytes": 3388,
+   "sha256": "28e4bdb03d06063448bb4d7b979b1a02a05628cc7649b4c20f9e92fc4fd1fc41",
+   "wall_s": 0.495
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35946224-35946253",
+   "status": 206,
+   "content_range": "bytes 35946224-35946253/37867451",
+   "bytes": 30,
+   "sha256": "5bcaf9782d54e2726ba76732747a2889df2180b29333857e73b320b153dded8b",
+   "wall_s": 0.498
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=35946364-35947747",
+   "status": 206,
+   "content_range": "bytes 35946364-35947747/37867451",
+   "bytes": 1384,
+   "sha256": "0039ec4cf3cb65f2de28d8393390815898e4493ee7e7b9b2d9aa756b902b8cc2",
+   "wall_s": 0.482
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37781528-37781557",
+   "status": 206,
+   "content_range": "bytes 37781528-37781557/37867451",
+   "bytes": 30,
+   "sha256": "9c80cade2fa38bf19c2e8b16c8ab37e3065e699bd30f4c36615b151d3af6548e",
+   "wall_s": 0.468
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37781645-37782294",
+   "status": 206,
+   "content_range": "bytes 37781645-37782294/37867451",
+   "bytes": 650,
+   "sha256": "61a5bd56b1d5ca990562dc6325bd6eb0ae6402e406066ef0f2b60410c4cb5332",
+   "wall_s": 0.471
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37782295-37782324",
+   "status": 206,
+   "content_range": "bytes 37782295-37782324/37867451",
+   "bytes": 30,
+   "sha256": "77dfff00649aab137a5d67ebd63c5968ea45b25aaab96b3aa61b21ecaaeeed75",
+   "wall_s": 0.596
+  },
+  {
+   "url": "https://zenodo.org/api/records/22472622/files/gene_dependency_2d_to_3d_reproducibility.zip/content",
+   "range": "bytes=37782414-37787261",
+   "status": 206,
+   "content_range": "bytes 37782414-37787261/37867451",
+   "bytes": 4848,
+   "sha256": "f23dec6815754922310147deba07b30c4fc7f2983c8620e56f82cb5ebfca3d7c",
+   "wall_s": 0.484
+  }
+ ],
+ "n_requests": 48,
+ "total_bytes": 237568,
+ "py_files": [
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/predict_blinded_3d.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/run_2d_omics_ablation.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/code/predict_blinded_3d.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/evaluate_sanger_after_lock.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/predict_blinded_3d.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/prepare_blind_inputs.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/seal_pre_outcome_validation.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/strict_independent_audit.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/code/run_cross_cohort_synthesis.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/analyze_tiriac_projection.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/audit_tiriac_analysis.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/download_tiriac_rnaseq.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/predict_blinded_3d.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/prepare_tiriac_model_input.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/figure_07_model_projections.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/regenerate_manuscript_figures.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_source_evaluation.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/run_analysis.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/run_analysis.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/run_sensitivity.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/verify_sensitivity.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_package_hashes.py",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_reported_results.py"
+ ],
+ "keyword_hits": {
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/prepare_blind_inputs.py": [
+   "labil"
+  ]
+ },
+ "py_sha256": {
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/predict_blinded_3d.py": "664f607be77a4207daba79233f99721e0a85a3aed86fb3cbeea0dae6e63be512",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/01_two_dimensional_model_development/code/run_2d_omics_ablation.py": "22d50c901a20e9a46b43ea296c52d1527dbb99f7aefb77ca30f7c44ac84a9b6c",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/02_broad94_exploratory_transfer/code/predict_blinded_3d.py": "664f607be77a4207daba79233f99721e0a85a3aed86fb3cbeea0dae6e63be512",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/evaluate_sanger_after_lock.py": "0d41278cf260f7f2d96d177acfdc222f909b9c0c0e5a747989ef92f3cd27fee2",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/predict_blinded_3d.py": "58e1ab1a353e1722c6b66ad8c1ef5a9b3b48e9b11e1bb99a4e48078824811aec",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/prepare_blind_inputs.py": "697627f45346c82e4a1a5e98abed12878f024517191447e4cf8f59a947df2071",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/seal_pre_outcome_validation.py": "a913afa2e094304d50db70ba0e3f326459a2c3d056e3a25d142865487aa96855",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/03_sanger148_blinded_external_validation/code/strict_independent_audit.py": "e137645aad648d712283755b9727e7374425484f5fe3674707c50057338474bd",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/04_cross_cohort_transportability_synthesis/code/run_cross_cohort_synthesis.py": "fe199b756e9ceedb266f2b462120bbe3f142b28e6cb276477a10ab277b56b981",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/analyze_tiriac_projection.py": "93a443bcb94f1196b3d66bb642780a5eb531f1a68f21d5e3b2438b22cba2f2bb",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/audit_tiriac_analysis.py": "6b670686d0c298a14fc3cbd7565c2eef4713ee363f581a9396eee6a3f621354e",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/download_tiriac_rnaseq.py": "c1aed8237ac81363afee03e921aa1e6d790cec5fee5412467d6351b0570a6686",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/predict_blinded_3d.py": "58e1ab1a353e1722c6b66ad8c1ef5a9b3b48e9b11e1bb99a4e48078824811aec",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/05_tiriac_pancreatic_projection/code/prepare_tiriac_model_input.py": "7fcce8bcfe7766dc7ca656c397219da1f8531cae60ddb9cb1f6540fe73fbf715",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/figure_07_model_projections.py": "567d83d7944775857c03c38dda5d39c9d007b3196ef44d7e496b2b59002adb1b",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/06_manuscript_figures/code/regenerate_manuscript_figures.py": "07c31b856e9a3e2daba8904b1ae3d5b5a47ec59e511f0eecc2089e33fce5dbb6",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/inputs/sanger_source_evaluation.py": "0d41278cf260f7f2d96d177acfdc222f909b9c0c0e5a747989ef92f3cd27fee2",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/07_within_organoid_ranking_revision/run_analysis.py": "b5e418a5a6e5a4c2aa29d883f49d2ce754d4a9575f6c2e32e7c4a92b61bb547b",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/08_tiriac_imputation_sensitivity_revision/run_analysis.py": "03026a66d715288d50a0b17fb5871e48bdeb4734a57feec05e4da2890ec24455",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/run_sensitivity.py": "7defbad3e6097765c66f1e600fbd447e71fabada147e7680c2a8a77d9949e0fa",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/09_broad_donor_sensitivity_revision/code/verify_sensitivity.py": "4960e7665155688f83942e11b0741a757eb20da809180a2d2913ef3d64821b0f",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_package_hashes.py": "ffb1c1e6d294ba1255f8e193a1b9c9955eccb51128ab0b1a337e9dc9a103e7d7",
+  "gene_dependency_2d_to_3d_reproducibility_v1_0_0/reviewer_tools/verify_reported_results.py": "05bbfcc5e66c8ccbb533fdcaaea347dde60143f0a2770b83e91bacf7d703c551"
+ }
+}

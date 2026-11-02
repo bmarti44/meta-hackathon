@@ -1,0 +1,3 @@
+Re-review v3 (gpt-6.1-sol, high), read-only, metadata only. Files: src/sgen017_census_v3.py, generations/sgen017/census_v3.json, generations/sgen017/SPEC.md (incl correction addendum), reviews/sgen017_review_v2.md.
+Verify: versioned code regenerates stored counts exactly; headline percentages 30.24%/24.58% and scoped NEAR_ABSENT_UNVERIFIED; addendum aligns independence definition; no regressions. Score 0-100.
+End exactly: SGEN017_V3: <CLOSED|OPEN> and SGEN017_V3_SCORE: <0-100>

@@ -1,0 +1,234 @@
+{
+ "lock2_commit": "lock2-scientific-only-v1-ce2b56c295fe",
+ "protocol": "lock_s/scientific_protocol_v1.json",
+ "C_consumed": true,
+ "primary": {
+  "point_valid": true,
+  "estimate": -0.14583205005879532,
+  "interval_valid": true,
+  "ci95_donor_percentile": [
+   -0.17526797046592052,
+   -0.11365511914822886
+  ],
+  "failed_replicates": 0,
+  "total_replicates": 5000,
+  "seed": 20261028,
+  "invalid_reasons": [],
+  "zero_width_interval": false,
+  "q": null,
+  "admissible_for_policy": false,
+  "n_models": 148,
+  "n_donors": 144,
+  "n_fixed_genes": 207,
+  "resampling_unit": "unique_donor_all_nested_models_carried_together",
+  "Broad_covariates_resampled": false,
+  "normalization_uncertainty_propagated": false,
+  "interpretation": "conditional_on_fixed_panel_Broad_models_and_processed_measurements",
+  "decision": "BOUND",
+  "n_models_analyzed": 148,
+  "n_donors_analyzed": 144,
+  "model_exclusions": [],
+  "bootstrap_p_two_sided_rho0": 0.0003999200159968006
+ },
+ "secondary_holm_family": {
+  "S1_null_calibrated": {
+   "point_valid": true,
+   "estimate": -0.20892507712692687,
+   "interval_valid": true,
+   "ci95_donor_percentile": [
+    -0.2299684898730987,
+    -0.1865923202131343
+   ],
+   "failed_replicates": 0,
+   "total_replicates": 5000,
+   "seed": 20261028,
+   "invalid_reasons": [],
+   "zero_width_interval": false,
+   "q": null,
+   "admissible_for_policy": false,
+   "n_models": 148,
+   "n_donors": 144,
+   "n_fixed_genes": 207,
+   "resampling_unit": "unique_donor_all_nested_models_carried_together",
+   "Broad_covariates_resampled": false,
+   "normalization_uncertainty_propagated": false,
+   "interpretation": "conditional_on_fixed_panel_Broad_models_and_processed_measurements",
+   "decision": "INCONCLUSIVE",
+   "n_models_analyzed": 148,
+   "n_donors_analyzed": 144,
+   "model_exclusions": [],
+   "bootstrap_p_two_sided_rho0": 0.0003999200159968006,
+   "holm_adjusted_p": 0.0015996800639872025,
+   "holm_reject_rho0_at_0.05": true
+  },
+  "S2_tmod1_alias208": {
+   "point_valid": true,
+   "estimate": -0.1448951169819474,
+   "interval_valid": true,
+   "ci95_donor_percentile": [
+    -0.17500128981383017,
+    -0.11308276204571309
+   ],
+   "failed_replicates": 0,
+   "total_replicates": 5000,
+   "seed": 20261028,
+   "invalid_reasons": [],
+   "zero_width_interval": false,
+   "q": null,
+   "admissible_for_policy": false,
+   "n_models": 148,
+   "n_donors": 144,
+   "n_fixed_genes": 208,
+   "resampling_unit": "unique_donor_all_nested_models_carried_together",
+   "Broad_covariates_resampled": false,
+   "normalization_uncertainty_propagated": false,
+   "interpretation": "conditional_on_fixed_panel_Broad_models_and_processed_measurements",
+   "decision": "BOUND",
+   "n_models_analyzed": 148,
+   "n_donors_analyzed": 144,
+   "model_exclusions": [],
+   "bootstrap_p_two_sided_rho0": 0.0003999200159968006,
+   "holm_adjusted_p": 0.0015996800639872025,
+   "holm_reject_rho0_at_0.05": true
+  },
+  "S3_v1_1_dual_library": {
+   "point_valid": true,
+   "estimate": -0.15050059006011193,
+   "interval_valid": true,
+   "ci95_donor_percentile": [
+    -0.17835240980714723,
+    -0.11482656320240059
+   ],
+   "failed_replicates": 0,
+   "total_replicates": 5000,
+   "seed": 20261028,
+   "invalid_reasons": [],
+   "zero_width_interval": false,
+   "q": null,
+   "admissible_for_policy": false,
+   "n_models": 148,
+   "n_donors": 144,
+   "n_fixed_genes": 207,
+   "resampling_unit": "unique_donor_all_nested_models_carried_together",
+   "Broad_covariates_resampled": false,
+   "normalization_uncertainty_propagated": false,
+   "interpretation": "conditional_on_fixed_panel_Broad_models_and_processed_measurements",
+   "decision": "BOUND",
+   "n_models_analyzed": 148,
+   "n_donors_analyzed": 144,
+   "model_exclusions": [],
+   "bootstrap_p_two_sided_rho0": 0.0003999200159968006,
+   "holm_adjusted_p": 0.0015996800639872025,
+   "holm_reject_rho0_at_0.05": true
+  },
+  "S4_unadjusted": {
+   "point_valid": true,
+   "estimate": -0.21691506748492823,
+   "interval_valid": true,
+   "ci95_donor_percentile": [
+    -0.24485199486552217,
+    -0.18464624014341025
+   ],
+   "failed_replicates": 0,
+   "total_replicates": 5000,
+   "seed": 20261028,
+   "invalid_reasons": [],
+   "zero_width_interval": false,
+   "q": null,
+   "admissible_for_policy": false,
+   "n_models": 148,
+   "n_donors": 144,
+   "n_fixed_genes": 207,
+   "resampling_unit": "unique_donor_all_nested_models_carried_together",
+   "Broad_covariates_resampled": false,
+   "normalization_uncertainty_propagated": false,
+   "interpretation": "conditional_on_fixed_panel_Broad_models_and_processed_measurements",
+   "decision": "INCONCLUSIVE",
+   "n_models_analyzed": 148,
+   "n_donors_analyzed": 144,
+   "model_exclusions": [],
+   "bootstrap_p_two_sided_rho0": 0.0003999200159968006,
+   "holm_adjusted_p": 0.0015996800639872025,
+   "holm_reject_rho0_at_0.05": true
+  }
+ },
+ "stability_not_decision": {
+  "point_rho": -0.1458320500587953,
+  "model_cluster_bootstrap": {
+   "reps": 2000,
+   "failed": 0,
+   "pct95": [
+    -0.20762641839314389,
+    -0.034574848771908945
+   ]
+  },
+  "leave_one_model_out": {
+   "ACH-000108": -0.1542094145617236,
+   "ACH-000178": -0.08175904997226699,
+   "ACH-001418": -0.11929928380578186,
+   "ACH-002958": -0.13782056475648016,
+   "ACH-003040": -0.16617804469176298,
+   "ACH-003052": -0.14916268964674118
+  },
+  "lineage_cluster_bootstrap": {
+   "split_assumption": {
+    "n_clusters": 6,
+    "reps": 2000,
+    "failed": 0,
+    "pct95": [
+     -0.2089860694418097,
+     -0.031844474484074646
+    ]
+   },
+   "all_possibly_shared": {
+    "n_clusters": 1,
+    "reps": 2000,
+    "failed": 0,
+    "pct95": [
+     -0.1458320500587953,
+     -0.1458320500587953
+    ]
+   },
+   "lineage_if_ACH-003052=Pancreas": {
+    "n_clusters": 3,
+    "reps": 2000,
+    "failed": 0,
+    "pct95": [
+     -0.1857944477982346,
+     -0.0008942318263478758
+    ]
+   },
+   "lineage_if_ACH-003052=Ovary/Fallopian Tube": {
+    "n_clusters": 3,
+    "reps": 2000,
+    "failed": 0,
+    "pct95": [
+     -0.1458320500587953,
+     -0.0008942318263478758
+    ]
+   },
+   "lineage_if_ACH-003052=Esophagus/Stomach": {
+    "n_clusters": 3,
+    "reps": 2000,
+    "failed": 0,
+    "pct95": [
+     -0.17148610894607164,
+     -0.07513405333027776
+    ]
+   }
+  },
+  "pathway_block_bootstrap": {
+   "n_blocks": 11,
+   "reps": 2000,
+   "failed": 0,
+   "pct95": [
+    -0.2639234948427143,
+    -0.015626271509934387
+   ]
+  },
+  "interpretation": "stability/composition sensitivity conditional on measured Broad models; never governs SIGNAL/BOUND/NEGATIVE"
+ },
+ "decision": "BOUND",
+ "claim_language": "Informative bound: the conditional panel-wide association magnitude is below 0.20 (donor 95% interval within (-0.20, 0.20)); observed format lability does not materially track organoid displacement beyond baseline strength in this panel. Not equivalence for other genes, populations or latent biological sensitivity.",
+ "wall_s": 23.946461791871116
+}

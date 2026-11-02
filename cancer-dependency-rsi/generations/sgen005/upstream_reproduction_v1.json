@@ -1,0 +1,13 @@
+{
+ "stages": {
+  "v1": {
+   "pass": false,
+   "stage_failed": true,
+   "stderr_tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sys; sys.path.insert(0,'src'); import build_atlas; from pathlib import Path; build_atlas.write(Path('atlas/provisional_v1'))\n                                                                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/tv/j7lmhfl13h9c8_j78b1_s6nm0000gn/T/cdrsi-sgen005-ntinipnr/src/build_atlas.py\", line 127, in write\n    raise RuntimeError('immutable atlas output exists; choose a new explicit version')\nRuntimeError: immutable atlas output exists; choose a new explicit version\n"
+  }
+ },
+ "frozen_substitutions": [],
+ "all_stages_pass": false,
+ "wall_s": 0.58,
+ "note": "Isolated input/code copy in current locked env; fresh-environment attempt recorded separately."
+}

@@ -1,0 +1,13 @@
+The six edits are present, but accounting and failure cleanup remain incorrect.
+
+1. **HIGH — Descendant CPU is double-counted as sampler CPU.** [src/tree_cpu.py:128](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/tree_cpu.py:128) subtracts only the leader’s sampled CPU from `RUSAGE_CHILDREN`. That resource total also includes descendants reaped by the leader; their CPU is already counted in `tree`. A local fork/wait probe confirmed this behavior. A deterministic fixture with 1.05 CPU-s of job work plus 0.02 sampler CPU-s reported **2.07 CPU-s**. **Fix:** account for sampler subprocesses individually, independently of job resource totals; verify combined multiprocess CPU against ±25%.
+
+2. **HIGH — Sampling failure after leader exit leaves descendants running.** [src/tree_cpu.py:105](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/tree_cpu.py:105) kills the group only on timeout or while the leader remains alive. If sampling raises `MeteringError` after leader exit, cleanup skips `killpg` despite surviving descendants. Mocked reproduction confirmed **zero group-kill calls**. **Fix:** track successful group completion explicitly and terminate the group on every exceptional exit before propagating the original error.
+
+3. **MEDIUM — Regression assertions miss these failures.** [tests/test_tree_cpu.py:57](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_tree_cpu.py:57) applies ±25% only to `tree_cpu_s`, leaving the faulty combined total unchecked. [tests/test_tree_cpu.py:70](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_tree_cpu.py:70) checks only a lower CPU bound, without checking successful completion. Both tests accepted an injected result with `total_local_cpu_s=2.01` and `timed_out=True`. **Fix:** assert combined accounting accuracy, `timed_out=False`, successful return, and descendant termination; add the sampling-failure-after-leader-exit case.
+
+Confirmed: normal sampling continues past leader exit; eight mocked `ps` failure cases raised `MeteringError`; the original single/fork accuracy bounds are now ±25%; [corrections_v2.json:3](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/sgen006/corrections_v2.json:3) contains the requested preprint identity and DOI; [screen_verdict_v1.json:10](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/generations/pgen004d/screen_verdict_v1.json:10) downgrades Witness B to **SCREEN-GRADE PASS**.
+
+All six integration tests encountered sandbox-denied `ps`, so live accuracy remains independently unverified. Review was read-only.
+
+P004D_FIX2_SCORE: 84

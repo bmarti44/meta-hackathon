@@ -1,0 +1,8 @@
+{
+ "source_url": "https://cog.sanger.ac.uk/cmp/download/model_list_latest.csv.gz",
+ "file": "data/passports_model_list_latest.csv.gz",
+ "sha256": "333affaa690c9f7e517467a6f78b00ffb418cb8449e2eb1cc5d93d85f7b0862e",
+ "bytes": 145029,
+ "retrieved_by": "src/pgen002_probe.py",
+ "content_class": "model metadata (no outcomes)"
+}

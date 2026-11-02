@@ -1,0 +1,66 @@
+TASK: Deep web research to FALSIFY a novelty claim. Use live web search
+extensively (multiple query formulations, follow citations). Today's date
+in-world: 2026-10-30. Prefer primary sources; give DOI/URL for every item.
+
+THE CLAIM (from a technical-note manuscript in this repo,
+cancer-dependency-rsi/manuscript/manuscript_draft_v2.md):
+"Neiswender et al. (Nature 2026, doi:10.1038/s41586-026-10843-7) showed for
+sterol-synthesis genes in a 1,000-gene minipool that organoid dependencies
+can be medium-driven; the genome-wide, per-gene decomposition [of the
+published 2026 organoid dependency catalogues into medium vs format
+components] has not been reported" — i.e., nobody has quantified, genome-wide
+and per gene, how much of the published organoid-specific dependency
+catalogues (Neiswender/Broad NextGen 2026; Herranz-Ors/Sanger 2026,
+doi:10.1038/s41586-026-10830-y) is attributable to culture medium vs 3D
+format, with named affected targets and fractions.
+
+Hunt specifically for anything that would make this claim FALSE or
+OVERSTATED, including:
+1. Any published/preprint genome-wide (not minipool, not single-pathway)
+   medium-vs-format decomposition or medium-attribution quantification of
+   organoid/3D CRISPR dependencies — any group, any venue, incl. bioRxiv/
+   medRxiv 2024-2026, Matters Arising, comments, or reanalyses of the two
+   2026 Nature catalogues or of DepMap 26Qx organoid screens.
+2. Any work reporting a FRACTION/percentage of organoid-specific hits
+   attributable to medium/serum/nutrients, or per-gene medium-attribution
+   tables/flags for these catalogues.
+3. Genome-wide serum vs serum-free / defined-medium CRISPR comparisons in
+   cancer models that quantify conditional essentiality at catalogue scale
+   (beyond Rossiter 2021 HPLM, which the manuscript already cites as a
+   different contrast).
+4. Organoid-medium artifact critiques: sterol/cholesterol (SQLE/MSMO1),
+   heme, fatty-acid synthesis, Wnt-dependence of medium formulation,
+   LDL add-back or lipid supplementation experiments in organoids,
+   essentiality weakening in slow-growing/3D screens attributed to
+   doublings/depletion dynamics (spliceosome/ribosome).
+5. Anything in the two 2026 papers' own supplements/discussions or
+   associated News&Views/editorials that already quantifies medium shares.
+6. Database/resource papers (DepMap portal updates, Chronos papers) that
+   flag or correct medium-associated dependencies genome-wide.
+
+For each relevant source: what exactly it did (scale: genes/models/contrast),
+what it quantified, date, and overlap class:
+  A = does the same thing (claim false),
+  B = substantial partial overlap (claim overstated; specify how),
+  C = adjacent but distinct (claim survives; cite as context).
+
+Also judge the manuscript's EXACT sentences (read the Introduction and
+Abstract): list any that overstate novelty given what you found, and propose
+minimal corrected wording.
+
+Be skeptical of your own search: try synonyms (culture conditions, media
+formulation, serum-free, nutrient, environmental dependency, context
+essentiality), author/lab names (Broad DepMap, Sanger, Garnett, Behan,
+Tsherniak, Vazquez, Cantor), and citation-chasing from the two 2026 papers
+(who cites them already?). Report searches that returned nothing too —
+absence evidence matters, but label confidence honestly (search coverage
+is not proof of nonexistence).
+
+OUTPUT (Markdown):
+- VERDICT on the claim: TRUE / PARTIALLY TRUE / FALSE, one-paragraph basis.
+- Evidence table: source | year | scale | quantified what | class A/B/C | DOI/URL.
+- Sentence-level verdicts + corrected wording if needed.
+- Search log: queries run, notable empty results, coverage limits.
+- Confidence and what would change your verdict.
+Do NOT invent sources or DOIs; if you cannot verify a source exists, mark it
+unverified and exclude it from the verdict basis.

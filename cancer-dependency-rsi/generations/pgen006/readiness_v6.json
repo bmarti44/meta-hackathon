@@ -1,0 +1,111 @@
+{
+  "generation": "pgen006",
+  "version": 6,
+  "framing": "ENGINEERING_PILOT_SEPARATE (xhigh 2026-10-29); no C13 credit",
+  "inputs": {
+    "atlas/v4/manifest.json": {
+      "sha256": "e4206db12133a6904b162f66c4f88a170525caf9fd0d83b5fd9872c536676dcf"
+    },
+    "atlas/v4/paired_observations.csv": {
+      "sha256": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801"
+    },
+    "atlas/v4/genes.csv": {
+      "sha256": "72c01a4b98ec0385367441025b1c6b75780a7bed262e5271e593780d3ec38b80"
+    },
+    "data/Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7"
+    },
+    "data/observation_provenance_minipool.csv": {
+      "sha256": "86a0ecd27ea29e1900441cc65ef6a5007a6e15cf02166bc92acd1ebc5cd43cb9"
+    },
+    "data/condition_cell_registry.csv": {
+      "sha256": "c420242e2b543ea60ed351f4d40cda5435f78a579dbfd5fe6e97b36d51f96f64"
+    }
+  },
+  "inventory": {
+    "rows": 3000,
+    "expected_rows": 3000,
+    "unresolved_count": 0,
+    "unresolved_sample": [],
+    "duplicate_action_keys": {},
+    "out_of_partition_rows": 0
+  },
+  "identity_repair": {
+    "registry_resolved_models": [
+      "ACH-003052"
+    ],
+    "criterion_amendment": "recording identity via dual registries; donor identity for ACH-003052 remains unresolved (quarantined)"
+  },
+  "partition": {
+    "DEV": [
+      "ACH-000108",
+      "ACH-000178",
+      "ACH-003040"
+    ],
+    "EVAL": [
+      "ACH-000048",
+      "ACH-001418",
+      "ACH-002958",
+      "ACH-003052"
+    ],
+    "QUARANTINE": [
+      "ACH-003052"
+    ],
+    "patient_overlap": [],
+    "patient_of": {
+      "ACH-000048": "PT-EehOTC",
+      "ACH-000108": "PT-GEVVKA",
+      "ACH-000178": "PT-3ZZnoD",
+      "ACH-001418": "PT-JGzDYG",
+      "ACH-002958": "PT-6y7Z6k",
+      "ACH-003040": "PT-nGXRDG",
+      "ACH-003052": null
+    },
+    "coverage_rows": {
+      "DEV/format": 1000,
+      "DEV/medium": 1000,
+      "EVAL/format": 750,
+      "EVAL/medium": 250
+    },
+    "catalogue_actions_by_partition_axis": {
+      "DEV/format": 1000,
+      "DEV/medium": 1000,
+      "EVAL/format": 500,
+      "EVAL/medium": 250
+    }
+  },
+  "catalogue": {
+    "actions_incl_held_condition": 3000,
+    "actions_after_quarantine": 2750,
+    "pilot_axis": "format (evaluation); medium = development-only material (1 EVAL model)"
+  },
+  "cost_table": {
+    "per_action": {
+      "evaluated_nodes": 1,
+      "evaluator_calls": 0
+    },
+    "host_call_attribution": {
+      "shared_equally": "substrate/E0 production + evaluator construction calls (charged equally to every arm)",
+      "arm_attributed": "policy-generation, policy-specific review, and unstick calls (charged to the arm that caused them; learning overhead NOT shared)",
+      "unresolved": "conservative learned-arm attribution per pgen005",
+      "basis": "amended estimated-cost schedule (estimator v8); metered $0 reported alongside"
+    },
+    "matching": "exact evaluated-node equality across arms at cycle lock",
+    "witness_status": "attribution rules frozen here; Q*/policies/evaluator remain cycle-lock witnesses (open)"
+  },
+  "checks": {
+    "frozen_inventory_exact_3000_rows": true,
+    "identity_resolution_100pct": true,
+    "zero_ambiguous_conflicting_records": true,
+    "zero_out_of_partition_rows": true,
+    "zero_cross_partition_screen_overlap": true,
+    "zero_patient_overlap_dev_eval": true,
+    "patient_identity_complete_nonquarantined": true,
+    "eval_format_minimum": true,
+    "dev_minimum": true,
+    "cost_table_present": true
+  },
+  "verdict": "METADATA_SCREEN_PASS",
+  "authorization": "METADATA_SCREEN_PASS authorizes ONLY drafting a cycle SPEC for xhigh/lead lock (Q* justification, policies, evaluator, matching). It is not GO_REPLAY and authorizes no execution and no biological claim.",
+  "source_history_note": "v2 source was overwritten during v3 patching and reconstructed (disclosed); v1/v3 sources reproduce their reports"
+}

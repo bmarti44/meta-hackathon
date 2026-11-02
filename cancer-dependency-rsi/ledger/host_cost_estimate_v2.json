@@ -1,0 +1,28 @@
+{
+  "method": "receipt token counts x GPT-6.1 Sol list prices (see module docstring)",
+  "price_source": "developer.puter.com/tutorials/openai-api-pricing/ (Oct 2026, fetched 2026-10-29)",
+  "authorization": "user instruction 2026-10-29: estimate the cost from the chat history",
+  "actual_metered_spend_usd": 0.0,
+  "reservations_total_model_calls": 60,
+  "priced_calls": 59,
+  "unpriced_reservation_ids": [
+    "5d06eae9f5df400aabbbc24dc45b16e7"
+  ],
+  "total_est_cost_usd": 26.34,
+  "by_phase": {
+    "phase2_lock1": {
+      "calls": 29,
+      "est_cost_usd": 12.75
+    },
+    "phase6_7": {
+      "calls": 30,
+      "est_cost_usd": 13.6
+    }
+  },
+  "caveats": [
+    "List-price estimate, not metered billing; subscription actual spend $0.",
+    "Long-context schedule applied per usage entry with input_tokens > 272000.",
+    "Events-fallback rows use last usage record in file; may undercount multi-turn calls.",
+    "Reasoning output tokens are included in output_tokens and priced once."
+  ]
+}

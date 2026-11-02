@@ -1,0 +1,24 @@
+{
+  "prompt_sha256": "a122ca89681d23184110dbd6658f052509815343e9e21873089740b96c9ed6ff",
+  "returncode": 0,
+  "timed_out": false,
+  "launch_error": null,
+  "wall_s": 314.41073500015773,
+  "cpu_s": 0.8500000000000001,
+  "peak_rss_bytes": 357154816,
+  "tokens": [
+    {
+      "input_tokens": 19691,
+      "cached_input_tokens": 12288,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 8452,
+      "reasoning_output_tokens": 7250
+    }
+  ],
+  "actual_cost_usd": 0.0,
+  "host_model_cost_usd": "unknown",
+  "output": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reviews/uncertainty_followup_xhigh_v1.md",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "reservation_id": "31517fe4d01e4b04a70eb7d394ff20f8"
+}

@@ -1,0 +1,11 @@
+{
+  "test": "set own address-space limit in disposable process",
+  "requested_bytes": 8589934592,
+  "original_limit": [
+    9223372036854775807,
+    9223372036854775807
+  ],
+  "status": "unavailable",
+  "error": "current limit exceeds maximum limit",
+  "exception": "ValueError"
+}

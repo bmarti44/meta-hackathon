@@ -1,0 +1,3 @@
+Re-review v3 (gpt-6.1-sol, high), read-only. Files: generations/sgen016/screen_v3.json, reviews/sgen016_review_v2.md (your v2 mediums), generations/sgen016/SPEC.md.
+Verify each v2 medium resolved: individual field rows incl manifest_version, parent_specimen_id vs derivation_type split, file/access properties ungrouped; CMP never classified ABSENT; parent_id/dedup semantics unverified/unvalidated; versions+hashes+README file id recorded; LOCK2 binding hash verified; demonstrated-chain wording qualified; no "repeated" content claim. Flag regressions or new issues by severity.
+Score 0-100. End exactly: SGEN016_V3: <CLOSED|OPEN> and SGEN016_V3_SCORE: <0-100>

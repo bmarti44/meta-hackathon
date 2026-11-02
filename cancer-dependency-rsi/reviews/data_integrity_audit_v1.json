@@ -1,0 +1,365 @@
+{
+  "status": "FAIL",
+  "errors": [
+    "duplicate sample IDs in screened crosswalk",
+    "duplicate frozen external donor IDs",
+    "library rule differs: HCM-SANG-0267-D12",
+    "library rule differs: HCM-SANG-0268-C18",
+    "library rule differs: HCM-SANG-0272-C20",
+    "library rule differs: HCM-SANG-0273-C18",
+    "library rule differs: HCM-SANG-0276-C18",
+    "library rule differs: HCM-SANG-0282-C18",
+    "library rule differs: HCM-SANG-0529-C18",
+    "library rule differs: HCM-SANG-0284-C18",
+    "library rule differs: HCM-SANG-0288-C18",
+    "library rule differs: WTSI-COLO_278",
+    "library rule differs: WTSI-COLO_376",
+    "library rule differs: HCM-SANG-0291-C15",
+    "library rule differs: HCM-SANG-0306-C15"
+  ],
+  "file_checks": [
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/source_manifest_broad_figshare.json",
+      "expected_sha256": "1b099a57c08492ddefcf98a2ba575c708c8372dd5c28e4a517ba791e714cb1d7",
+      "observed_sha256": "1b099a57c08492ddefcf98a2ba575c708c8372dd5c28e4a517ba791e714cb1d7",
+      "expected_bytes": 5479,
+      "actual_bytes": 5479,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/source_manifest_sanger_figshare.json",
+      "expected_sha256": "7662bddaf608881fea4f571f7c52da6f5591f3dd182773a90ca54852b022f6d9",
+      "observed_sha256": "7662bddaf608881fea4f571f7c52da6f5591f3dd182773a90ca54852b022f6d9",
+      "expected_bytes": 2996,
+      "actual_bytes": 2996,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/gene_scopes.json",
+      "expected_sha256": "2b4958407bf741ac1c371e4b18c433288d5754f9b3134094986dc5c0f7eb0881",
+      "observed_sha256": "2b4958407bf741ac1c371e4b18c433288d5754f9b3134094986dc5c0f7eb0881",
+      "expected_bytes": 10004,
+      "actual_bytes": 10004,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/selection_exclusions.json",
+      "expected_sha256": "f5d9615c80134464fe85d1776836e8a77d3ea8ec2e7333f3a753339c3d645dfc",
+      "observed_sha256": "f5d9615c80134464fe85d1776836e8a77d3ea8ec2e7333f3a753339c3d645dfc",
+      "expected_bytes": 770,
+      "actual_bytes": 770,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/confirmatory_gene_candidates.json",
+      "expected_sha256": "3d6acc7457a5b9fc8887cc2d36af883b0925c76a44c9c61af5b2491e026edecf",
+      "observed_sha256": "3d6acc7457a5b9fc8887cc2d36af883b0925c76a44c9c61af5b2491e026edecf",
+      "expected_bytes": 2328,
+      "actual_bytes": 2328,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/split_manifest.json",
+      "expected_sha256": "bb05e6d43861df1f0831fcf24efb676c47db33f5fab8e6aa8cca3b4871a0984c",
+      "observed_sha256": "bb05e6d43861df1f0831fcf24efb676c47db33f5fab8e6aa8cca3b4871a0984c",
+      "expected_bytes": 11486,
+      "actual_bytes": 11486,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/crosswalk_sanger_screened.csv",
+      "expected_sha256": "0745330931ef8b7dfa9703d8c185c0855562ffd23828c1bbb5152e3be61be058",
+      "observed_sha256": "0745330931ef8b7dfa9703d8c185c0855562ffd23828c1bbb5152e3be61be058",
+      "expected_bytes": 17608,
+      "actual_bytes": 17608,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/condition_cell_registry.csv",
+      "expected_sha256": "c420242e2b543ea60ed351f4d40cda5435f78a579dbfd5fe6e97b36d51f96f64",
+      "observed_sha256": "c420242e2b543ea60ed351f4d40cda5435f78a579dbfd5fe6e97b36d51f96f64",
+      "expected_bytes": 2429,
+      "actual_bytes": 2429,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/observation_provenance_minipool.csv",
+      "expected_sha256": "86a0ecd27ea29e1900441cc65ef6a5007a6e15cf02166bc92acd1ebc5cd43cb9",
+      "observed_sha256": "86a0ecd27ea29e1900441cc65ef6a5007a6e15cf02166bc92acd1ebc5cd43cb9",
+      "expected_bytes": 9205,
+      "actual_bytes": 9205,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/identifiability_audit.json",
+      "expected_sha256": "ec635bd788b9b5d2e5f1aefa2bf40ff8a66fa72ba6d4acabb17d48bcf3fb17bd",
+      "observed_sha256": "ec635bd788b9b5d2e5f1aefa2bf40ff8a66fa72ba6d4acabb17d48bcf3fb17bd",
+      "expected_bytes": 3917,
+      "actual_bytes": 3917,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/baseline_reproduction_ols.json",
+      "expected_sha256": "5bcc876491b0de4071badc15e98a2570f4b903622db08d7291912b45d29a6938",
+      "observed_sha256": "5bcc876491b0de4071badc15e98a2570f4b903622db08d7291912b45d29a6938",
+      "expected_bytes": 856,
+      "actual_bytes": 856,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/baselines_dev.json",
+      "expected_sha256": "87b9922f8d6f3817001dbe706655b202ee7c34b184cea28bd19977500b7b5e86",
+      "observed_sha256": "87b9922f8d6f3817001dbe706655b202ee7c34b184cea28bd19977500b7b5e86",
+      "expected_bytes": 811,
+      "actual_bytes": 811,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/precision_feasibility_v2.json",
+      "expected_sha256": "0b2ea3787db7c99a452597108a292db6aec771cfedd7aef543c032b1def33253",
+      "observed_sha256": "0b2ea3787db7c99a452597108a292db6aec771cfedd7aef543c032b1def33253",
+      "expected_bytes": 1253,
+      "actual_bytes": 1253,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/sanger_table6_schema.json",
+      "expected_sha256": "8a12635838d2cb905f8ffcbebaab0f19bec915849c6c2fa04d53c4667eeefef7",
+      "observed_sha256": "8a12635838d2cb905f8ffcbebaab0f19bec915849c6c2fa04d53c4667eeefef7",
+      "expected_bytes": 624,
+      "actual_bytes": 624,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/exposure_log.jsonl",
+      "expected_sha256": "09f7b9e3a66ad7876ddc16e7ca86590e59815bec3f4b2b528b3b2979c55b939e",
+      "observed_sha256": "09f7b9e3a66ad7876ddc16e7ca86590e59815bec3f4b2b528b3b2979c55b939e",
+      "expected_bytes": 1809,
+      "actual_bytes": 1809,
+      "append_only_prefix": true
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/README.txt",
+      "expected_sha256": "cdf44320ba3ef22e487547613f2a0470a87fcf107d685de009ea65a913f4c91a",
+      "observed_sha256": "cdf44320ba3ef22e487547613f2a0470a87fcf107d685de009ea65a913f4c91a",
+      "expected_bytes": 31435,
+      "actual_bytes": 31435,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_library_composition.csv",
+      "expected_sha256": "66f57d99cd24228a476f9f742deeaf93d7d112d0a26d668ba4e9f32d80b67f5b",
+      "observed_sha256": "66f57d99cd24228a476f9f742deeaf93d7d112d0a26d668ba4e9f32d80b67f5b",
+      "expected_bytes": 20741,
+      "actual_bytes": 20741,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_screen_metadata.csv",
+      "expected_sha256": "14def246b4f560c6448a814628ec127d6359bc3c82d1758de3029bee1a0a3303",
+      "observed_sha256": "14def246b4f560c6448a814628ec127d6359bc3c82d1758de3029bee1a0a3303",
+      "expected_bytes": 2777,
+      "actual_bytes": 2777,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/model_metadata.csv",
+      "expected_sha256": "a000a5ee1ebe2b2488a146b2a413ec4b93472488e6ad31b56126f522d652557c",
+      "observed_sha256": "a000a5ee1ebe2b2488a146b2a413ec4b93472488e6ad31b56126f522d652557c",
+      "expected_bytes": 272338,
+      "actual_bytes": 272338,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/screen_metadata.csv",
+      "expected_sha256": "af29e349dd19676029950d6799fec4efcefcb9b314f7622b4fcc6d564803472a",
+      "observed_sha256": "af29e349dd19676029950d6799fec4efcefcb9b314f7622b4fcc6d564803472a",
+      "expected_bytes": 259986,
+      "actual_bytes": 259986,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_chronos_gene_effects.csv",
+      "expected_sha256": "c5c7918f80cf020ada112bb853fc5140fac63cef1b17415866108843f3443503",
+      "observed_sha256": "c5c7918f80cf020ada112bb853fc5140fac63cef1b17415866108843f3443503",
+      "expected_bytes": 231483,
+      "actual_bytes": 231483,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_growth_format_tests.csv",
+      "expected_sha256": "4cca98df7b4fe560036da389b2597ad8e130a0dba053e3cb5e98d4d2e64cda98",
+      "observed_sha256": "4cca98df7b4fe560036da389b2597ad8e130a0dba053e3cb5e98d4d2e64cda98",
+      "expected_bytes": 20131,
+      "actual_bytes": 20131,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_regression_coefficients.csv",
+      "expected_sha256": "2e6534c419c55d62419e708127ec4408497901c600c9f294f5a90438eda5cc37",
+      "observed_sha256": "2e6534c419c55d62419e708127ec4408497901c600c9f294f5a90438eda5cc37",
+      "expected_bytes": 56155,
+      "actual_bytes": 56155,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_serum_status_tests.csv",
+      "expected_sha256": "360c55c4ce19b437bb98abcd1da95f992927819e2031f3d0312c408b5d88716a",
+      "observed_sha256": "360c55c4ce19b437bb98abcd1da95f992927819e2031f3d0312c408b5d88716a",
+      "expected_bytes": 20125,
+      "actual_bytes": 20125,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_guide_metadata.csv",
+      "expected_sha256": "addce8a794fce958f08e038c573112cc1c3e8f6c05040fc562966dcf579c1f23",
+      "observed_sha256": "addce8a794fce958f08e038c573112cc1c3e8f6c05040fc562966dcf579c1f23",
+      "expected_bytes": 93208,
+      "actual_bytes": 93208,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/minipool_sequence_metadata.csv",
+      "expected_sha256": "5b6a5b017d3807350301fb6feda11f1d3c3b5bf929bb5024264fc6140a1b1f05",
+      "observed_sha256": "5b6a5b017d3807350301fb6feda11f1d3c3b5bf929bb5024264fc6140a1b1f05",
+      "expected_bytes": 5542,
+      "actual_bytes": 5542,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/organoids_vs_2d_gene_dependency_tail_enrichment_tests_full.csv",
+      "expected_sha256": "319f339fec0ddad6f7c5bdef4bd495b80bd7bf738834a8ef95085c72dff6e782",
+      "observed_sha256": "319f339fec0ddad6f7c5bdef4bd495b80bd7bf738834a8ef95085c72dff6e782",
+      "expected_bytes": 18505,
+      "actual_bytes": 18505,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/broad_figshare/organoids_vs_2d_gene_dependency_tests_full.csv",
+      "expected_sha256": "e20ef98705e0f2e590ba5011c9683c883a3e585b6052adc1b3488502101dc40f",
+      "observed_sha256": "e20ef98705e0f2e590ba5011c9683c883a3e585b6052adc1b3488502101dc40f",
+      "expected_bytes": 2360446,
+      "actual_bytes": 2360446,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/07_EssMatrix_bDepletionsB2.Rdata",
+      "expected_sha256": "d91430eb470705919eea58973c9dbee766c6c6e8fa5711670f818c745a542163",
+      "observed_sha256": "d91430eb470705919eea58973c9dbee766c6c6e8fa5711670f818c745a542163",
+      "expected_bytes": 2826657,
+      "actual_bytes": 2826657,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/control-genes_organoids.csv",
+      "expected_sha256": "2bf28520e12a020bd4bc7ab0038fdc71d66faab1b8c03f9ac8fd7bb3e26e4803",
+      "observed_sha256": "2bf28520e12a020bd4bc7ab0038fdc71d66faab1b8c03f9ac8fd7bb3e26e4803",
+      "expected_bytes": 34128,
+      "actual_bytes": 34128,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/data_covariates_ALL-organoids.csv",
+      "expected_sha256": "e57603e0ae26780ef112cbdbf063818dd17837858353894ba29e75f6936e9f64",
+      "observed_sha256": "e57603e0ae26780ef112cbdbf063818dd17837858353894ba29e75f6936e9f64",
+      "expected_bytes": 7770,
+      "actual_bytes": 7770,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/jaccard_index_sanger_HCMI.csv",
+      "expected_sha256": "5339562381381b86f14f3901eae9efc90db9475f4719ed93ccc1b1739ec761cd",
+      "observed_sha256": "5339562381381b86f14f3901eae9efc90db9475f4719ed93ccc1b1739ec761cd",
+      "expected_bytes": 5888,
+      "actual_bytes": 5888,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/VAF_driver_gene_WTSI_HCMI.tsv",
+      "expected_sha256": "3bd9e4a315ddb55a06915dd38b7af207d26cbf1eb3afa0615403468c27d86518",
+      "observed_sha256": "3bd9e4a315ddb55a06915dd38b7af207d26cbf1eb3afa0615403468c27d86518",
+      "expected_bytes": 67371,
+      "actual_bytes": 67371,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/quarantine/07_EssMatrix_qnorm_corrected_logFCs.RData",
+      "expected_sha256": "0d2f7d3300affee717d87e621a74c90ed6917d8491ae048e4720a89531aabb07",
+      "observed_sha256": "0d2f7d3300affee717d87e621a74c90ed6917d8491ae048e4720a89531aabb07",
+      "expected_bytes": 125803583,
+      "actual_bytes": 125803583,
+      "append_only_prefix": false
+    },
+    {
+      "ok": true,
+      "path": "/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/data/raw/sanger_figshare/S2_Supplementary_Tables.zip",
+      "expected_sha256": "7e83b7551c9c272de0bc0455ea9a0e7803a8043d15d9cfedf5a1c3e609a2a6e2",
+      "observed_sha256": "7e83b7551c9c272de0bc0455ea9a0e7803a8043d15d9cfedf5a1c3e609a2a6e2",
+      "expected_bytes": 127226341,
+      "actual_bytes": 127226341,
+      "append_only_prefix": false
+    }
+  ],
+  "cohort": {
+    "ok": false,
+    "errors": [
+      "duplicate sample IDs in screened crosswalk",
+      "duplicate frozen external donor IDs",
+      "library rule differs: HCM-SANG-0267-D12",
+      "library rule differs: HCM-SANG-0268-C18",
+      "library rule differs: HCM-SANG-0272-C20",
+      "library rule differs: HCM-SANG-0273-C18",
+      "library rule differs: HCM-SANG-0276-C18",
+      "library rule differs: HCM-SANG-0282-C18",
+      "library rule differs: HCM-SANG-0529-C18",
+      "library rule differs: HCM-SANG-0284-C18",
+      "library rule differs: HCM-SANG-0288-C18",
+      "library rule differs: WTSI-COLO_278",
+      "library rule differs: WTSI-COLO_376",
+      "library rule differs: HCM-SANG-0291-C15",
+      "library rule differs: HCM-SANG-0306-C15"
+    ],
+    "screened_models": 178,
+    "eligible_models": 148,
+    "eligible_donors": 144,
+    "excluded_overlap_donors": 13,
+    "outcome_values_read": false
+  },
+  "wall_s": 0.10649845912121236,
+  "outcome_values_parsed": false,
+  "gate_scope": "cached provenance/metadata integrity only; does not grant G0/G2 or final independence certification"
+}

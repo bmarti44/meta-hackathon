@@ -1,0 +1,144 @@
+{
+ "retrieved_utc": "2026-10-28T21:40:31Z",
+ "source": "NCBI E-utilities esearch+esummary (official API)",
+ "queries": {
+  "P1_format_lability_transfer": {
+   "query": "(organoid*[tiab]) AND (CRISPR[tiab]) AND (\"growth format\"[tiab] OR \"culture format\"[tiab] OR dome[tiab] OR \"2D\"[tiab]) AND (dependenc*[tiab]) AND (transfer*[tiab] OR concordan*[tiab] OR rank*[tiab]) AND 2024:2026[dp]",
+   "hitCount": 0,
+   "top": []
+  },
+  "P2_minipool_environment": {
+   "query": "(minipool[tiab] OR \"mini-pool\"[tiab]) AND CRISPR[tiab] AND (organoid*[tiab] OR serum[tiab] OR \"culture condition*\"[tiab])",
+   "hitCount": 0,
+   "top": []
+  },
+  "P3_cellline_to_organoid_transfer": {
+   "query": "(\"cell line*\"[tiab]) AND (organoid*[tiab]) AND (CRISPR[tiab] OR \"gene dependenc*\"[tiab]) AND (transferab*[tiab] OR \"cross-model\"[tiab] OR translat*[tiab]) AND 2025:2026[dp]",
+   "hitCount": 12,
+   "top": [
+    {
+     "pmid": "40510594",
+     "title": "CRISPR antiviral inhibits neurotrophic JC polyomavirus in 2D and 3D culture models through dual-gRNA excision by SaCas9.",
+     "journal": "Mol Ther Nucleic Acids",
+     "year": "2025",
+     "doi": "10.1016/j.omtn.2025.102556"
+    },
+    {
+     "pmid": "39891927",
+     "title": "In Search of Representative Translational Cancer Model Systems.",
+     "journal": "Cancer Res",
+     "year": "2025",
+     "doi": "10.1158/0008-5472.CAN-24-3879"
+    },
+    {
+     "pmid": "40578027",
+     "title": "A bedside-to-bench translational analysis of NF1 alterations and CDK4/6 inhibitor resistance in hormone receptor-positive metastatic breast cancer.",
+     "journal": "EBioMedicine",
+     "year": "2025",
+     "doi": "10.1016/j.ebiom.2025.105828"
+    },
+    {
+     "pmid": "41917051",
+     "title": "Miniature and versatile genome regulation TnpB-\u03c9RNA toolkits facilitate cancer immunotherapy.",
+     "journal": "Nat Commun",
+     "year": "2026",
+     "doi": "10.1038/s41467-026-71327-w"
+    },
+    {
+     "pmid": "42879314",
+     "title": "Decoding cellular vulnerabilities for interpretable drug response prediction.",
+     "journal": "Brief Bioinform",
+     "year": "2026",
+     "doi": "10.1093/bib/bbag559"
+    },
+    {
+     "pmid": "40362588",
+     "title": "Emerging Frontiers in Zebrafish Embryonic and Adult-Derived Cell Lines.",
+     "journal": "Int J Mol Sci",
+     "year": "2025",
+     "doi": "10.3390/ijms26094351"
+    },
+    {
+     "pmid": "42282825",
+     "title": "Combinatorial and Inducible CRISPRa/i Enables Canalized hiPSC Forward Programming and Iterative Refinement via Single-Cell Genomics.",
+     "journal": "bioRxiv",
+     "year": "2026",
+     "doi": "10.64898/2026.05.31.729073"
+    },
+    {
+     "pmid": "42777084",
+     "title": "SCRMP-mediated SUMOylation of CSNK2B facilitates DNA damage repair to promote cisplatin resistance in small cell lung cancer.",
+     "journal": "Sci Transl Med",
+     "year": "2026",
+     "doi": "10.1126/scitranslmed.aea5653"
+    },
+    {
+     "pmid": "40427173",
+     "title": "From Genes to Environment: Elucidating Pancreatic Carcinogenesis Through Genetically Engineered and Risk Factor-Integrated Mouse Models.",
+     "journal": "Cancers (Basel)",
+     "year": "2025",
+     "doi": "10.3390/cancers17101676"
+    },
+    {
+     "pmid": "42560549",
+     "title": "Fish cell lines in aquaculture and biomedical research: A global perspective on development, repositories, and multidisciplinary applications.",
+     "journal": "Mol Biol Rep",
+     "year": "2026",
+     "doi": "10.1007/s11033-026-12550-y"
+    },
+    {
+     "pmid": "40647462",
+     "title": "Exploring Experimental Models of Colorectal Cancer: A Critical Appraisal from 2D Cell Systems to Organoids, Humanized Mouse Avatars, Organ-on-Chip, CRISPR Engineering, and AI-Driven Platforms-Challenges and Opportunities for Translational Precision Oncology.",
+     "journal": "Cancers (Basel)",
+     "year": "2025",
+     "doi": "10.3390/cancers17132163"
+    },
+    {
+     "pmid": "42940043",
+     "title": "Gene-Editing in Respiratory Disease: From Pre-Clinical Human Models to Future Therapeutics.",
+     "journal": "Biomedicines",
+     "year": "2026",
+     "doi": "10.3390/biomedicines14102237"
+    }
+   ]
+  },
+  "P4_nextgen_depmap": {
+   "query": "(\"next-generation\"[tiab] OR NextGen[tiab]) AND (organoid*[tiab] OR \"3D\"[tiab]) AND (\"dependency map\"[tiab] OR DepMap[tiab]) AND 2026[dp]",
+   "hitCount": 1,
+   "top": [
+    {
+     "pmid": "42557315",
+     "title": "A dependency map enhanced with next-generation 3D cancer models.",
+     "journal": "Nature",
+     "year": "2026",
+     "doi": "10.1038/s41586-026-10843-7"
+    }
+   ]
+  },
+  "P5_condition_dependent_essentiality": {
+   "query": "(\"context-dependent\"[tiab] OR \"condition-dependent\"[tiab] OR \"culture condition*\"[tiab] OR \"environment*\"[tiab]) AND (organoid*[tiab]) AND (CRISPR screen*[tiab]) AND (essential*[tiab] OR dependenc*[tiab]) AND 2024:2026[dp]",
+   "hitCount": 2,
+   "top": [
+    {
+     "pmid": "40902593",
+     "title": "A combined enteric neuron-gastric tumor organoid reveals metabolic vulnerabilities in gastric cancer.",
+     "journal": "Cell Stem Cell",
+     "year": "2025",
+     "doi": "10.1016/j.stem.2025.08.006"
+    },
+    {
+     "pmid": "42557315",
+     "title": "A dependency map enhanced with next-generation 3D cancer models.",
+     "journal": "Nature",
+     "year": "2026",
+     "doi": "10.1038/s41586-026-10843-7"
+    }
+   ]
+  },
+  "P6_sanger_organoid_crispr": {
+   "query": "(organoid*[tiab]) AND (\"CRISPR screen*\"[tiab]) AND (biobank[tiab] OR Sanger[ad]) AND 2026[dp]",
+   "hitCount": 0,
+   "top": []
+  }
+ }
+}

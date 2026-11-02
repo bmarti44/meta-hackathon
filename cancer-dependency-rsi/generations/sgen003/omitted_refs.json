@@ -1,0 +1,38 @@
+{
+ "S1": {
+  "xml_ref_blocks": 76,
+  "api_refs": 72,
+  "omitted_blocks": [
+   "24. DepMap Consortium. DepMap: The Cancer Dependency Map Project at Broad Institute. Broad Institute https://depmap.org/portal/ (2026).",
+   "55. Shibue T Weinberg RA Integrin \u03b21-focal adhesion kinase signaling directs the proliferation of metastatic cancer cells disseminated in the lungs Proc. Natl Acad. Sci. USA 2009 106 10290 10295 10.1073/pnas.0904227106 1",
+   "60. Olympios N TERT promoter alterations in glioblastoma: a systematic review Cancers 2021 13 1147 10.3390/cancers13051147 33800183 PMC7962450 Olympios, N. et al. TERT promoter alterations in glioblastoma: a systematic r",
+   "61. Benjamin, D. et al. Calling somatic SNVs and Indels with Mutect2. Preprint at bioRxiv 10.1101/861054 (2019).",
+   "62. van der Auwera, G. &amp; O\u2019Connor, B. D. Genomics in the Cloud: Using Docker, GATK, and WDL in Terra (O\u2019Reilly Media, 2020).",
+   "69. Dempster, J. M. et al. Extracting biological insights from the Project Achilles genome-scale CRISPR screens in cancer cell lines. Preprint at bioRxiv 10.1101/720243 (2019).",
+   "74. Li Q A syntaxin 1, G\u03b1 o , and N-type calcium channel complex at a presynaptic nerve terminal: analysis by quantitative immunocolocalization J. Neurosci. 2004 24 4070 4081 10.1523/JNEUROSCI.0346-04.2004 15102922 PMC67"
+  ]
+ },
+ "S2": {
+  "xml_ref_blocks": 103,
+  "api_refs": 96,
+  "omitted_blocks": [
+   "44. Geurts, M. H. &amp; Clevers, H. CRISPR engineering in organoids for gene repair and disease modelling. Nat. Rev. Bioeng. 1 , 32\u201345 (2023).",
+   "62. Rogers, H. et al. Derivation of organoids from primary tumour tissue v1. protocols.io 10.17504/protocols.io.bfvnjn5e (2020).",
+   "63. Rogers, H. et al. Derivation of organoids from frozen tumour material v1. protocols.io 10.17504/protocols.io.biiakcae (2020).",
+   "64. Rogers, H. et al. Passaging cancer organoid cultures v1. protocols.io 10.17504/protocols.io.bfe3jjgn (2020).",
+   "85. Islam, S. M. A. et al. Uncovering novel mutational signatures by de novo extraction with SigProfilerExtractor. Cell Genomics 2 , 100179 (2022).",
+   "89. Espejo Valle-Inclan, J. et al. Mechanisms underpinning osteosarcoma genome complexity and evolution. Preprint at bioRxiv 10.1101/2023.12.29.573403 (2023).",
+   "93. Fowler, T., Smith, J., Jackson, A., Souster, E. &amp; Rogers, H. Whole-genome CRISPR screening of stably expressing Cas9 cancer organoid lines v2. protocols.io 10.17504/protocols.io.3byl4q6zrvo5/v2 (2023).",
+   "94. Smith, J., Fowler, T., Andres, A., Souster, E. &amp; Rogers, H. Generating stably-expressing Cas9 cancer organoid lines v2. protocols.io 10.17504/protocols.io.6qpvr3ydovmk/v2 (2023)."
+  ]
+ },
+ "S3": {
+  "xml_ref_blocks": 41,
+  "api_refs": 38,
+  "omitted_blocks": [
+   "21. Zou H., Hastie T. Regularization and variable selection via the elastic net. J. R. Stat. Soc. Ser. B Stat. Methodol. 2005;67:301\u2013320. doi: 10.1111/j.1467-9868.2005.00503.x.",
+   "23. Roberts D.R., Bahn V., Ciuti S., Boyce M.S., Elith J., Guillera-Arroita G., Hauenstein S., Lahoz-Monfort J.J., Schr\u00f6der B., Thuiller W., et al. Cross-validation strategies for data with temporal, spatial, hierarchica",
+   "41. F\u0131rat Y., K\u0131l\u0131\u00e7aslan Y. Gene Dependency 2D-to-3D Reproducibility Package, Version 1.0.0. Zenodo; Geneva, Switzerland: 2026."
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "stages": {
+  "v1": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v2": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v3": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  },
+  "v4": {
+   "byte_identical": {
+    "genes.csv": true,
+    "exclusions.csv": true,
+    "paired_observations.csv": true
+   },
+   "pass": true
+  }
+ },
+ "frozen_substitutions": [],
+ "all_stages_pass": true,
+ "wall_s": 1.68,
+ "note": "Isolated input/code copy in current locked env; fresh-environment attempt recorded separately."
+}

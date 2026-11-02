@@ -1,0 +1,6 @@
+Independent review (gpt-6.1-sol, high), read-only. Scope sgen008 (SPEC generations/sgen008/SPEC.md):
+- src/sgen008_checks.py + evidence_report_v2.json: C10 row-exact parser (unique Primary decision row, ordered endpoints, BOUND field) with swapped/decoy negative fixtures; eligibility recomputed from originals (zip listing + model_list + cohort = 252/251/250/810, C patients 142); synthetic audit v2 refs.
+- generations/sgen008/synthetic_use_audit_v2.json (corrects sgen005 broken refs - verify diagnostics/donor_calibration_v2/fixture_manifest.json is the true calibration artifact).
+- generations/sgen008/fresh_env_evidence_v1.json structured fresh-env evidence (first failed attempt retained honestly?).
+- Absent components labeled PENDING (interval, policy) - no label upgrades sought.
+Issues severity+file:line+fix. End exactly: SGEN008_SCORE: <0-100>

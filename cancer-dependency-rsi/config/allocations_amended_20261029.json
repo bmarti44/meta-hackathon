@@ -1,0 +1,64 @@
+{
+  "version": "allocations-lock1-v2-user-amended-20261029",
+  "ceilings_ref": "config/resources.json (never auto-increased)",
+  "total": {
+    "wall_h": 600,
+    "evaluated_nodes_max": 1200,
+    "model_calls_max": 2000
+  },
+  "per_phase": {
+    "phase2_lock1": {
+      "wall_h": 150,
+      "model_calls": 200,
+      "host_reasoning_job_timeout_s": 1200,
+      "timeout_note": "Historical (Lock-1): recorded host-reasoning job allowance after 600s Sol-xhigh consultation timeout; originally charged inside 20h/30calls Phase2 and 120h/400calls total. Amended prospective caps: see numeric fields in this file. Scientific exploratory timeout stays 600s."
+    },
+    "pilot_E0": {
+      "wall_h": 40,
+      "nodes": 24,
+      "model_calls": 100
+    },
+    "phase4_per_cycle": {
+      "wall_h": 60,
+      "fresh_nodes_max": 36,
+      "model_calls": 150,
+      "cycles_min": 2,
+      "cycles_max": 4
+    },
+    "phase5": {
+      "wall_h": 80,
+      "rollouts_max": 432,
+      "model_calls": 100
+    },
+    "phase6_7": {
+      "wall_h": 200,
+      "model_calls": 300
+    }
+  },
+  "review_round_cap_per_gate": 5,
+  "unstick_rounds_per_blocker": 3,
+  "no_progress_rule": "2 consecutive cycles with frontier best-q gain <0.02 AND no gate progress -> joint sol-xhigh+lead assessment; concurrence => admissible non-complete terminal determination",
+  "terminal_review_reserve": {
+    "sol_xhigh_calls_reserved": 3,
+    "untouchable_for_other_work": true
+  },
+  "resource_matching": {
+    "arms_matched_on": [
+      "evaluated_nodes (exact)",
+      "model_calls (exact count)",
+      "wall_seconds (\u00b15%)",
+      "evaluator_calls (exact)"
+    ],
+    "E0_charging": "shared E0 production cost charged equally to every arm in end-to-end view; excluded in deployment-only view; both reported",
+    "deployment_count": 1,
+    "learning_overhead": "generation+replay+extraction+summary+review+unstick+failed jobs all ledgered per arm; node endpoint reported alongside full ledger reconciliation",
+    "usd": "unknown for host/codex; USD cap for additional metered APIs = 0; C9 all-in savings NOT claimable (unresolved_cost_gate)"
+  },
+  "enforcement": "src/budget.py reserve-before-dispatch (finite billable maximum; concurrent+retry reservations count; interrupted stays reserved)",
+  "user_amendment": {
+    "date": "2026-10-29",
+    "authorization": "user instruction in session: 'you change it, make it way more'",
+    "spend_cap_note": "additional_api_spend_cap_usd remains 0 in config/resources.json; calls remain subscription-auth, $0 metered",
+    "scope_note": "Model-call caps raised per user instruction; phase/total WALL raised only as necessary companion (reservations charge wall_s_max per call, so call caps cannot bind without wall). Nodes/rollouts reverted to Lock-1 values 2026-10-29 remediation."
+  }
+}

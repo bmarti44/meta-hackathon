@@ -1,0 +1,19 @@
+{
+ "installed_files_hash_verified": 95,
+ "register_rows_existing": 95,
+ "exact_installation": true,
+ "panel_test_genes": 250,
+ "sanger_covariate_rows": 256,
+ "cohort_models": 148,
+ "cohort_archived_groups": 144,
+ "patients_joined_installed": 142,
+ "library_selection": {
+  "minLib": 133,
+  "v1_1": 15
+ },
+ "library_per_model_matches_locked_rule": true,
+ "donor_per_model_matches_locked_split": true,
+ "moesm3_installed": true,
+ "pass": true,
+ "note": "Installed 95 unique register files byte-identically (incl. MOESM3 zip installed=True as opaque bytes); counts/joins computed from installed files only; outcome archives copied+hashed, not decoded"
+}

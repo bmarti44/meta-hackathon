@@ -1,0 +1,26 @@
+You are a skeptical reviewer (xhigh), ROUND 4. Scores: r1 68, r2 82, r3 89
+(reviews/astra_review_r1.md, astra_review_r2.md, astra_review_r3.md).
+Round-3 dispositions: reviews/astra_review_r3_dispositions.md.
+
+Verify:
+1. Bootstrap NaN fix: weighted_offset() missingness-aware math vs
+   library_offset's pandas skipna semantics (incl. screen-level NaN in the
+   per-model means); identity check now goes through the weighted path;
+   MAU2 frequency and aggregate stats from the released boot artifacts;
+   the new unit test honest (fails on the old inline sum).
+2. Wet-lab materials: manuscript/wetlab_proposal_v1.md and
+   release_v1/wetlab_cover_email.txt fully synced with current claims
+   (numbers, medium-consistent framing, hedged transfer language, curated
+   ribosomal description); superseded label present on the internal
+   finding review; release copies match sources.
+3. Shorthand purge: no "fixed medium"/"same medium"/"medium-created"
+   causal shorthand left in manuscript, PDF captions (render_pdf.py +
+   rendered PDF), READMEs, figure code/titles.
+4. Regressions from this round's edits: manuscript vs artifacts, PDF vs
+   markdown, validator still genuine (33/33, archived-content checks,
+   hashes post-append), supplementary zip vs tables/.
+5. Final ship judgement for the scoped technical-note claims.
+
+Output: SCORE 0-100 (same anchors; 90+ = ship it), VERDICT, per-item
+disposition check with evidence, NEW issues by severity with smallest fix,
+CHECKS RUN with recomputed values. No padding, no over-engineering demands.

@@ -1,0 +1,5 @@
+Independent review + C2 adjudication (gpt-6.1-sol, high), read-only, cancer-dependency-rsi.
+Scope sgen007: generations/sgen007/SPEC.md, src/sgen007_provenance.py, generations/sgen007/provenance_register_v4.json (v1-v3 failures preserved), src/sgen007_battery.py, generations/sgen007/cache_install_battery_v1.json, data/data_manifest.json, source manifests, ledger locks.
+Verify: register completeness vs manifests (spot-check hashes incl MD5 handling), explained-mismatch legitimacy (exposure log append-only, estimators stage hashes, MOESM3 zip transformed-not-retained with extracted tables), license evidence per source class, battery logic.
+Render C2: MET/PARTIAL/UNMET vs cancer_rsi_handoff.txt C2 text, field-level reasons.
+Issues severity+file:line+fix. End exactly: SGEN007_SCORE: <0-100>; C2:<...>

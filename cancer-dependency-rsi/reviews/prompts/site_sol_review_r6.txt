@@ -1,0 +1,17 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 6
+(confirmation). Scores: r1 76, r2 84, r3 89, r4 89, r5 92 SHIP IT
+(reviews/site_sol_review_r1..r5.md). After r5, its two remaining LOW
+items were also fixed:
+- L1: .chip .cnt opacity removed in site/index.html.
+- L2: src/make_figures.py (with annotation bbox) copied over
+  release_v1/code/make_figures.py; release bundle rebuilt + revalidated
+  (33/33); site/assets/release_v1.zip refreshed.
+
+Verify both fixes, confirm the rebuilt bundle validates and the site ZIP
+matches it, confirm no regressions from these two edits, and confirm or
+revise the ship judgement. Same anchors (90+ = ship it). Verified issues
+only, no over-engineering. If nothing further at low-or-above severity,
+say so plainly.
+
+Output: SCORE: n/100; VERDICT; disposition check; NEW ISSUES (or none);
+CHECKS RUN.

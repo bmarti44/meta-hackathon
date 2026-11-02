@@ -1,0 +1,193 @@
+{
+ "gw_n": 18270,
+ "joined_n": 15941,
+ "corr_delta_Dorg": 0.04428514678778488,
+ "corr_delta_Aadh": 0.038212372715544535,
+ "corr_zdiff_Dorg": 0.044285146787785,
+ "panels": {
+  "mevalonate": {
+   "n": 20,
+   "delta_median": -0.08433732986648906,
+   "null_z": -2.979561944484527,
+   "median_Dorg_broad": -0.3841955
+  },
+  "heme": {
+   "n": 8,
+   "delta_median": 0.08311095404093649,
+   "null_z": 2.3087032467658064,
+   "median_Dorg_broad": -0.331407
+  },
+  "fa_synthesis": {
+   "n": 5,
+   "delta_median": -0.13886673867695198,
+   "null_z": -2.3563847275287753,
+   "median_Dorg_broad": -0.313796
+  },
+  "ribosomal_curated": {
+   "n": 45,
+   "delta_median": -0.004784035541709919,
+   "null_z": 0.18066048835208076,
+   "median_Dorg_broad": 0.144232
+  },
+  "spliceosome_curated": {
+   "n": 36,
+   "delta_median": -0.07875062104194946,
+   "null_z": -3.716902910235267,
+   "median_Dorg_broad": 0.0121571
+  }
+ },
+ "named": {
+  "SQLE": {
+   "rpmi": -0.62994950493047,
+   "hplm": -0.18805371842573,
+   "delta": 0.44189578650474,
+   "zdiff": 3.80803291503915
+  },
+  "MSMO1": {
+   "rpmi": -0.288486606601201,
+   "hplm": -0.155053628916102,
+   "delta": 0.133432977685099,
+   "zdiff": 1.21192976204919
+  },
+  "HMGCR": {
+   "rpmi": -1.08519512795866,
+   "hplm": -1.3748940829455,
+   "delta": -0.28969895498684006,
+   "zdiff": -2.34925853401749
+  },
+  "LDLR": {
+   "rpmi": -0.093745393192789,
+   "hplm": -0.357992685271522,
+   "delta": -0.264247292078733,
+   "zdiff": -2.13505072537624
+  },
+  "UMPS": {
+   "rpmi": -1.42274140687034,
+   "hplm": -1.58203545397152,
+   "delta": -0.15929404710118011,
+   "zdiff": -1.25173694357742
+  },
+  "FASN": {
+   "rpmi": -0.317129911184005,
+   "hplm": -0.455996649860957,
+   "delta": -0.13886673867695198,
+   "zdiff": -1.07981540784949
+  },
+  "ALAS1": {
+   "rpmi": -0.252034019738417,
+   "hplm": -0.114432294853369,
+   "delta": 0.137601724885048,
+   "zdiff": 1.2470150217316
+  }
+ },
+ "relatively_more_essential_in_HPLM_Zlt-3": {
+  "all_medium": {
+   "n_sel": 139,
+   "n_flagged_in_sel": 9,
+   "odds_ratio": 3.03868006993007,
+   "prevalence_ratio": 2.906679202092871,
+   "fisher_p": 0.0044070470676190006
+  },
+  "medium_gains_only": {
+   "n_sel": 139,
+   "n_flagged_in_sel": 8,
+   "odds_ratio": 4.991327285080533,
+   "prevalence_ratio": 4.761610606802516,
+   "fisher_p": 0.0003574286775053897
+  },
+  "medium_losses_only": {
+   "n_sel": 139,
+   "n_flagged_in_sel": 1,
+   "odds_ratio": 0.7039787559636331,
+   "prevalence_ratio": 0.7061084052013049,
+   "fisher_p": 1.0
+  },
+  "medium_genes": [
+   "DCPS",
+   "FBXL5",
+   "GNB1L",
+   "MRPS25",
+   "MRPS33",
+   "MVD",
+   "RBBP5",
+   "RPL7A",
+   "SDHA"
+  ]
+ },
+ "relatively_more_essential_in_RPMI_Zgt3": {
+  "all_medium": {
+   "n_sel": 97,
+   "n_flagged_in_sel": 9,
+   "odds_ratio": 4.501162190082645,
+   "prevalence_ratio": 4.176312089971884,
+   "fisher_p": 0.00035109389336328506
+  },
+  "medium_gains_only": {
+   "n_sel": 97,
+   "n_flagged_in_sel": 5,
+   "odds_ratio": 4.3842447333034515,
+   "prevalence_ratio": 4.209799128493995,
+   "fisher_p": 0.007355484216658059
+  },
+  "medium_losses_only": {
+   "n_sel": 97,
+   "n_flagged_in_sel": 4,
+   "odds_ratio": 4.270042194092827,
+   "prevalence_ratio": 4.135195093305494,
+   "fisher_p": 0.017159432396665116
+  },
+  "medium_genes": [
+   "HEATR1",
+   "KDSR",
+   "MASTL",
+   "MED11",
+   "POLR3B",
+   "RPL27",
+   "SQLE",
+   "TELO2",
+   "XPO1"
+  ]
+ },
+ "focused": {
+  "mevalonate": {
+   "n": 2,
+   "median_delta_by_line": {
+    "K562": -0.053,
+    "NOMO1": 0.134,
+    "MOLM13": -0.137,
+    "SUDHL4": -0.157
+   },
+   "median_delta_overall": -0.09533716571800309
+  },
+  "fa_synthesis": {
+   "n": 1,
+   "median_delta_by_line": {
+    "K562": 3.29,
+    "NOMO1": 0.903,
+    "MOLM13": 1.534,
+    "SUDHL4": 0.644
+   },
+   "median_delta_overall": 1.218494461641392
+  },
+  "ribosomal_curated": {
+   "n": 3,
+   "median_delta_by_line": {
+    "K562": 0.669,
+    "NOMO1": 0.086,
+    "MOLM13": 0.071,
+    "SUDHL4": 0.363
+   },
+   "median_delta_overall": 0.22433779768026102
+  },
+  "spliceosome_curated": {
+   "n": 1,
+   "median_delta_by_line": {
+    "K562": -0.081,
+    "NOMO1": -0.037,
+    "MOLM13": -0.54,
+    "SUDHL4": -0.051
+   },
+   "median_delta_overall": -0.06588275930408308
+  }
+ }
+}

@@ -1,0 +1,3 @@
+Independent re-review + C2 adjudication (gpt-6.1-sol, high), read-only. Previous 89 (reviews/sgen007_fix5_high_review_v6.md).
+Verify round-5 fixes: schema validation now wired into screen_pass (src/sgen007_provenance.py acceptance: REQUIRED_FIELDS presence+non-blank incl license, no_license blocks); battery REQUIRED recursively derived (LOCK2 map + source manifests + atlas stage manifests traversed from project + governing evidence + frozen estimator + supplemental CSV + build_atlas_v3) in src/sgen007_battery.py; register v11, battery v8. Probe: removing LOCK2_COMMIT/frozen estimator/supplemental CSV/build_atlas_v3 rows must fail; blanking any required field must fail screen.
+Render C2 field-level. End exactly: SGEN007_FIX6_SCORE: <0-100>; C2:<...>

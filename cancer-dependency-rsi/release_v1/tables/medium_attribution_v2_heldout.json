@@ -1,0 +1,56 @@
+{
+ "raw": {
+  "n": {
+   "D_heldout": [
+    25,
+    78
+   ],
+   "A_heldout": [
+    5,
+    78
+   ]
+  },
+  "corr_D_dev_heldout_all": 0.8850043578015135,
+  "medium_attributable": {
+   "n": 691,
+   "corr_D": 0.9653930456934586,
+   "slope_Dheld_on_Ddev": 0.9738256093714892,
+   "same_sign_frac": 0.9942112879884226,
+   "slope_Aheld_on_Ddev": 0.9107331301908044
+  },
+  "unresolved": {
+   "n": 172,
+   "corr_D": 0.9515957915131422,
+   "slope_Dheld_on_Ddev": 0.960745532517078,
+   "same_sign_frac": 0.9941860465116279,
+   "slope_Aheld_on_Ddev": 0.7449904407643935
+  }
+ },
+ "norm": {
+  "n": {
+   "D_heldout": [
+    25,
+    78
+   ],
+   "A_heldout": [
+    5,
+    78
+   ]
+  },
+  "corr_D_dev_heldout_all": 0.8849712239747675,
+  "medium_attributable": {
+   "n": 387,
+   "corr_D": 0.9741318854795048,
+   "slope_Dheld_on_Ddev": 0.9633793588905812,
+   "same_sign_frac": 1.0,
+   "slope_Aheld_on_Ddev": 0.8962550650561587
+  },
+  "unresolved": {
+   "n": 68,
+   "corr_D": 0.9605429805344311,
+   "slope_Dheld_on_Ddev": 0.9179899372058908,
+   "same_sign_frac": 1.0,
+   "slope_Aheld_on_Ddev": 0.7745111090372427
+  }
+ }
+}

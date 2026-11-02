@@ -1,0 +1,76 @@
+[
+  {
+    "file": "07_EssMatrix_bDepletionsB2.Rdata",
+    "bytes": 2826657,
+    "sha256": "d91430eb470705919eea58973c9dbee766c6c6e8fa5711670f818c745a542163",
+    "source_url": "https://ndownloader.figshare.com/files/63130879",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "control-genes_organoids.csv",
+    "bytes": 34128,
+    "sha256": "2bf28520e12a020bd4bc7ab0038fdc71d66faab1b8c03f9ac8fd7bb3e26e4803",
+    "source_url": "https://ndownloader.figshare.com/files/63130888",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "data_covariates_ALL-organoids.csv",
+    "bytes": 7770,
+    "sha256": "e57603e0ae26780ef112cbdbf063818dd17837858353894ba29e75f6936e9f64",
+    "source_url": "https://ndownloader.figshare.com/files/63130933",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "retrieved": "2026-10-28",
+    "article_version": 1
+  },
+  {
+    "file": "jaccard_index_sanger_HCMI.csv",
+    "source_url": "https://ndownloader.figshare.com/files/63130813",
+    "bytes": 5888,
+    "sha256": "5339562381381b86f14f3901eae9efc90db9475f4719ed93ccc1b1739ec761cd",
+    "figshare_md5": "0132d2d0e800e35a9546558178459ef4",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  },
+  {
+    "file": "VAF_driver_gene_WTSI_HCMI.tsv",
+    "source_url": "https://ndownloader.figshare.com/files/63130858",
+    "bytes": 67371,
+    "sha256": "3bd9e4a315ddb55a06915dd38b7af207d26cbf1eb3afa0615403468c27d86518",
+    "figshare_md5": "dca206e886b902e4cfecdb5a1d112c9e",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "article_version": 1,
+    "retrieved": "2026-10-28"
+  },
+  {
+    "file": "07_EssMatrix_qnorm_corrected_logFCs.RData",
+    "source_url": "https://ndownloader.figshare.com/files/63191101",
+    "bytes": 125803583,
+    "sha256": "0d2f7d3300affee717d87e621a74c90ed6917d8491ae048e4720a89531aabb07",
+    "figshare_md5": "84b5e153c267dfa5ebd22a6d5e43a42a",
+    "license": "CC BY 4.0",
+    "collection_doi": "10.6084/m9.figshare.28339340",
+    "article_version": 1,
+    "retrieved": "2026-10-28",
+    "quarantine": "schema/ID verification only; outcome values not inspected"
+  },
+  {
+    "file": "S2_Supplementary_Tables.zip (Nature MOESM3)",
+    "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10830-y/MediaObjects/41586_2026_10830_MOESM3_ESM.zip",
+    "bytes": 127226341,
+    "sha256": "7e83b7551c9c272de0bc0455ea9a0e7803a8043d15d9cfedf5a1c3e609a2a6e2",
+    "license": "CC BY 4.0 (article)",
+    "retrieved": "2026-10-28",
+    "quarantine": "Tables 5/6 outcome values quarantined in-zip; only ID columns + metadata tables 1/2/4 extracted",
+    "article_version": 1
+  }
+]

@@ -1,0 +1,131 @@
+{
+ "timestamp": "2026-10-29T22:44:26.505596+00:00",
+ "B1_n": 82,
+ "B1_shift_vs_CPD_rho": NaN,
+ "B1_CPD_n": 0,
+ "B1_shift_vs_Days_rho": -0.0724,
+ "B1_Days_n": 82,
+ "B1_shift_by_library": {
+  "Humagne-CD": 0.0058
+ },
+ "B1_shift_mean_sd": [
+  0.0058,
+  0.0126
+ ],
+ "B1_essdepth_vs_CPD_rho": NaN,
+ "B1_shift_vs_essdepth_rho": NaN,
+ "B2_top_loss_in_3D": {
+  "PFDN6": 0.713,
+  "ANKLE2": 0.734,
+  "NCAPG": 0.743,
+  "THOC2": 0.763,
+  "RPS16": 0.77,
+  "EFTUD2": 0.779,
+  "SUPT16H": 0.827,
+  "PLK1": 0.829,
+  "SF3A3": 0.833,
+  "RPL3": 0.836,
+  "SRSF7": 0.845,
+  "CKAP5": 0.85,
+  "PSMD12": 0.867,
+  "MTBP": 0.891,
+  "RPL27": 1.117
+ },
+ "B2_top_gain_in_3D": {
+  "MSMO1": -0.966,
+  "SQLE": -0.883,
+  "HSD17B7": -0.645,
+  "UROD": -0.629,
+  "IDI1": -0.6,
+  "FDFT1": -0.589,
+  "POLR2G": -0.584,
+  "ACAT2": -0.569,
+  "UBL5": -0.565,
+  "NSDHL": -0.541,
+  "MVD": -0.529,
+  "TXNL4A": -0.52,
+  "CCDC174": -0.517,
+  "PMVK": -0.508,
+  "FZD5": -0.506
+ },
+ "B2_groups_loss_top200": [
+  [
+   "Small nucleolar RNA protein coding host genes",
+   18
+  ],
+  [
+   "Armadillo like helical domain containing",
+   13
+  ],
+  [
+   "WD repeat domain containing",
+   13
+  ],
+  [
+   "S ribosomal proteins",
+   12
+  ],
+  [
+   "L ribosomal proteins",
+   10
+  ],
+  [
+   "MicroRNA protein coding host genes",
+   9
+  ],
+  [
+   "Proteasome",
+   9
+  ],
+  [
+   "RNA polymerase subunits",
+   7
+  ]
+ ],
+ "B2_groups_gain_top200": [
+  [
+   "Mitochondrial ribosomal proteins",
+   12
+  ],
+  [
+   "MicroRNA protein coding host genes",
+   8
+  ],
+  [
+   "Large subunit mitochondrial ribosomal proteins",
+   7
+  ],
+  [
+   "AAA ATPases",
+   6
+  ],
+  [
+   "Small subunit mitochondrial ribosomal proteins",
+   5
+  ],
+  [
+   "WD repeat domain containing",
+   5
+  ],
+  [
+   "Short chain dehydrogenase/reductase superfamily",
+   4
+  ],
+  [
+   "Mitochondrial nucleoid associated proteins",
+   4
+  ]
+ ],
+ "B3_lineages": [
+  "Bowel",
+  "Breast",
+  "CNS/Brain",
+  "Esophagus/Stomach",
+  "Pancreas"
+ ],
+ "B3_pairwise_disp_rho_median": 0.4201,
+ "B3_pairwise_disp_rho_range": [
+  0.029,
+  0.557
+ ]
+}

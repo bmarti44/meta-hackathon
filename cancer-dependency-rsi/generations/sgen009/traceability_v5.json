@@ -1,0 +1,105 @@
+{
+ "claims": {
+  "rho-primary": {
+   "manuscript_value": "-0.146",
+   "artifact_field": "primary.estimate",
+   "expected_display": "-0.146",
+   "matches": true
+  },
+  "ci-lo": {
+   "manuscript_value": "-0.175",
+   "artifact_field": "primary.ci95_donor_percentile.0",
+   "expected_display": "-0.175",
+   "matches": true
+  },
+  "ci-hi": {
+   "manuscript_value": "-0.114",
+   "artifact_field": "primary.ci95_donor_percentile.1",
+   "expected_display": "-0.114",
+   "matches": true
+  },
+  "s1-secondary": {
+   "manuscript_value": "-0.209",
+   "artifact_field": "secondary_holm_family.S1_null_calibrated.estimate",
+   "expected_display": "-0.209",
+   "matches": true
+  },
+  "s2-secondary": {
+   "manuscript_value": "-0.145",
+   "artifact_field": "secondary_holm_family.S2_tmod1_alias208.estimate",
+   "expected_display": "-0.145",
+   "matches": true
+  },
+  "s3-secondary": {
+   "manuscript_value": "-0.151",
+   "artifact_field": "secondary_holm_family.S3_v1_1_dual_library.estimate",
+   "expected_display": "-0.151",
+   "matches": true
+  },
+  "s4-secondary": {
+   "manuscript_value": "-0.217",
+   "artifact_field": "secondary_holm_family.S4_unadjusted.estimate",
+   "expected_display": "-0.217",
+   "matches": true
+  },
+  "lomo-min": {
+   "manuscript_value": "-0.166",
+   "artifact_field": "stability_not_decision.leave_one_model_out.ACH-003040",
+   "expected_display": "-0.166",
+   "matches": true
+  },
+  "lomo-max": {
+   "manuscript_value": "-0.082",
+   "artifact_field": "stability_not_decision.leave_one_model_out.ACH-000178",
+   "expected_display": "-0.082",
+   "matches": true
+  },
+  "models": {
+   "manuscript_value": "148",
+   "artifact_field": "primary.n_models_analyzed",
+   "expected_display": "148",
+   "matches": true
+  },
+  "archived-donors": {
+   "manuscript_value": "144",
+   "artifact_field": "primary.n_donors_analyzed",
+   "expected_display": "144",
+   "matches": true
+  },
+  "genes": {
+   "manuscript_value": "207",
+   "artifact_field": "primary.n_fixed_genes",
+   "expected_display": "207",
+   "matches": true
+  }
+ },
+ "negative_fixtures_rejected": {
+  "corrupt_secondary": true,
+  "corrupt_ci": true,
+  "corrupt_count": false
+ },
+ "artifact_sha256": "ea7713752490bdc8100099b02115175c4c2cbeaa1a5d8a61f284074a3396b26f",
+ "inventory": {
+  "manuscript/figures/figure1_primary.svg": {
+   "sha256": "22be91c0b2e60acc0114bfc90d598d04167818ceb9d5ca06a2e3b535a88c94e0",
+   "runner": "src/make_figure1.py"
+  },
+  "atlas/v4/genes.csv": {
+   "sha256": "72c01a4b98ec0385367441025b1c6b75780a7bed262e5271e593780d3ec38b80"
+  },
+  "atlas/v4/exclusions.csv": {
+   "sha256": "bb76bc0857ee7d643a71e7ab094ad972f44725f0ce1cde620bc4ede8fc893d3e"
+  },
+  "atlas/v4/paired_observations.csv": {
+   "sha256": "00f7fa86f7c8c74d287b7fc940f6140727c77f1b7ed58ccd85f0e13fe8144801"
+  },
+  "reviews/c10_robustness_table_v1.md": {
+   "sha256": "ce2833e215c3213171a9f3a1d63b79f5c1c71d831cc9f0eea7a17a3afc932a06",
+   "provenance": "manual table from lock_s/results/external_v1.json; verified row-exact by src/sgen008_checks.py"
+  }
+ },
+ "interpretations_labeled": [
+  "consequence statement (manuscript Results/discussion text) is interpretation, not a locked numeric claim"
+ ],
+ "pass": false
+}

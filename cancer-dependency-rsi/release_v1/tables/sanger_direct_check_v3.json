@@ -1,0 +1,314 @@
+{
+ "organoid_shape": [
+  16562,
+  162
+ ],
+ "2d_shape": [
+  17647,
+  930
+ ],
+ "panels": {
+  "mevalonate": {
+   "n_org": 19,
+   "n_2d": 20,
+   "pct_organoid_median": 0.09929356357927788,
+   "pct_2d_median": 0.39420298067660225,
+   "lfc_organoid_median": -0.4687506854534149,
+   "lfc_2d_median": -0.009088610878217055
+  },
+  "heme": {
+   "n_org": 8,
+   "n_2d": 8,
+   "pct_organoid_median": 0.25697379543533394,
+   "pct_2d_median": 0.3361194537315124,
+   "lfc_organoid_median": -0.21977540850639343,
+   "lfc_2d_median": -0.061133644399958276
+  },
+  "splice_panel": {
+   "n_org": 8,
+   "n_2d": 8,
+   "pct_organoid_median": 0.012287163386064484,
+   "pct_2d_median": 0.014025046750155833,
+   "lfc_organoid_median": -1.464937686920166,
+   "lfc_2d_median": -2.200582713490048
+  },
+  "ribo_panel": {
+   "n_org": 9,
+   "n_2d": 12,
+   "pct_organoid_median": 0.01895906291510687,
+   "pct_2d_median": 0.008981696605655353,
+   "lfc_organoid_median": -1.2485671043395996,
+   "lfc_2d_median": -2.4711200778151325
+  }
+ },
+ "exclusive97": {
+  "n": 91,
+  "delta_pct_median": -0.04142244154057015,
+  "frac_stronger_in_organoids": 0.38461538461538464,
+  "frac_weaker_in_organoids": 0.0,
+  "per_gene": {
+   "KMT5A": {
+    "pct_org": 0.047,
+    "pct_2d": 0.442,
+    "delta_pct": -0.395,
+    "broad_D": -0.284,
+    "broad_flag": "medium_attributable"
+   },
+   "GNA13": {
+    "pct_org": 0.067,
+    "pct_2d": 0.305,
+    "delta_pct": -0.238,
+    "broad_D": -0.211,
+    "broad_flag": "not_a_hit"
+   },
+   "ITGB1": {
+    "pct_org": 0.033,
+    "pct_2d": 0.266,
+    "delta_pct": -0.233,
+    "broad_D": -0.272,
+    "broad_flag": "unresolved"
+   },
+   "LIG1": {
+    "pct_org": 0.017,
+    "pct_2d": 0.204,
+    "delta_pct": -0.188,
+    "broad_D": 0.024,
+    "broad_flag": "not_a_hit"
+   },
+   "IDI1": {
+    "pct_org": 0.049,
+    "pct_2d": 0.222,
+    "delta_pct": -0.173,
+    "broad_D": -0.592,
+    "broad_flag": "medium_attributable"
+   },
+   "IGF1R": {
+    "pct_org": 0.092,
+    "pct_2d": 0.223,
+    "delta_pct": -0.131,
+    "broad_D": -0.002,
+    "broad_flag": "not_a_hit"
+   },
+   "FTSJ3": {
+    "pct_org": 0.027,
+    "pct_2d": 0.152,
+    "delta_pct": -0.126,
+    "broad_D": 0.058,
+    "broad_flag": "not_a_hit"
+   },
+   "H2AC15": {
+    "pct_org": 0.02,
+    "pct_2d": 0.142,
+    "delta_pct": -0.122,
+    "broad_D": -0.016,
+    "broad_flag": "not_a_hit"
+   },
+   "NXF1": {
+    "pct_org": 0.023,
+    "pct_2d": 0.137,
+    "delta_pct": -0.114,
+    "broad_D": 0.072,
+    "broad_flag": "not_a_hit"
+   },
+   "CPSF4": {
+    "pct_org": 0.018,
+    "pct_2d": 0.115,
+    "delta_pct": -0.097,
+    "broad_D": -0.042,
+    "broad_flag": "not_a_hit"
+   },
+   "_weakest_": {
+    "SMG6": {
+     "pct_org": 0.044,
+     "pct_2d": 0.055,
+     "delta_pct": -0.01,
+     "broad_D": -0.143,
+     "broad_flag": "not_a_hit"
+    },
+    "GMPS": {
+     "pct_org": 0.046,
+     "pct_2d": 0.046,
+     "delta_pct": 0.001,
+     "broad_D": -0.098,
+     "broad_flag": "not_a_hit"
+    },
+    "CPSF6": {
+     "pct_org": 0.069,
+     "pct_2d": 0.067,
+     "delta_pct": 0.002,
+     "broad_D": 0.16,
+     "broad_flag": "not_a_hit"
+    },
+    "ZNHIT2": {
+     "pct_org": 0.046,
+     "pct_2d": 0.042,
+     "delta_pct": 0.004,
+     "broad_D": -0.348,
+     "broad_flag": "medium_attributable"
+    },
+    "USP8": {
+     "pct_org": 0.087,
+     "pct_2d": 0.081,
+     "delta_pct": 0.006,
+     "broad_D": -0.022,
+     "broad_flag": "not_a_hit"
+    },
+    "COPG1": {
+     "pct_org": 0.046,
+     "pct_2d": 0.036,
+     "delta_pct": 0.01,
+     "broad_D": 0.093,
+     "broad_flag": "not_a_hit"
+    },
+    "DNM2": {
+     "pct_org": 0.048,
+     "pct_2d": 0.037,
+     "delta_pct": 0.011,
+     "broad_D": -0.131,
+     "broad_flag": "not_a_hit"
+    },
+    "SEC61A1": {
+     "pct_org": 0.039,
+     "pct_2d": 0.028,
+     "delta_pct": 0.012,
+     "broad_D": 0.533,
+     "broad_flag": "unresolved"
+    },
+    "ZCRB1": {
+     "pct_org": 0.1,
+     "pct_2d": 0.087,
+     "delta_pct": 0.013,
+     "broad_D": -0.014,
+     "broad_flag": "not_a_hit"
+    },
+    "PGD": {
+     "pct_org": 0.094,
+     "pct_2d": 0.054,
+     "delta_pct": 0.04,
+     "broad_D": -0.16,
+     "broad_flag": "not_a_hit"
+    }
+   }
+  }
+ },
+ "headline18": {
+  "n": 16,
+  "delta_pct_median": -0.04745673116740763,
+  "frac_stronger_in_organoids": 0.4375,
+  "frac_weaker_in_organoids": 0.0,
+  "per_gene": {
+   "ATP1A1": {
+    "pct_org": 0.036,
+    "pct_2d": 0.047,
+    "delta_pct": -0.011,
+    "broad_D": -0.162,
+    "broad_flag": "not_a_hit"
+   },
+   "BAP1": {
+    "pct_org": 0.05,
+    "pct_2d": 0.108,
+    "delta_pct": -0.058,
+    "broad_D": 0.034,
+    "broad_flag": "not_a_hit"
+   },
+   "DDX3X": {
+    "pct_org": 0.04,
+    "pct_2d": 0.089,
+    "delta_pct": -0.049,
+    "broad_D": -0.289,
+    "broad_flag": "unresolved"
+   },
+   "GNA13": {
+    "pct_org": 0.067,
+    "pct_2d": 0.305,
+    "delta_pct": -0.238,
+    "broad_D": -0.211,
+    "broad_flag": "not_a_hit"
+   },
+   "IDI1": {
+    "pct_org": 0.049,
+    "pct_2d": 0.222,
+    "delta_pct": -0.173,
+    "broad_D": -0.592,
+    "broad_flag": "medium_attributable"
+   },
+   "IGF1R": {
+    "pct_org": 0.092,
+    "pct_2d": 0.223,
+    "delta_pct": -0.131,
+    "broad_D": -0.002,
+    "broad_flag": "not_a_hit"
+   },
+   "ITGB1": {
+    "pct_org": 0.033,
+    "pct_2d": 0.266,
+    "delta_pct": -0.233,
+    "broad_D": -0.272,
+    "broad_flag": "unresolved"
+   },
+   "LIG1": {
+    "pct_org": 0.017,
+    "pct_2d": 0.204,
+    "delta_pct": -0.188,
+    "broad_D": 0.024,
+    "broad_flag": "not_a_hit"
+   },
+   "MBTPS1": {
+    "pct_org": 0.049,
+    "pct_2d": 0.085,
+    "delta_pct": -0.037,
+    "broad_D": -0.412,
+    "broad_flag": "medium_attributable"
+   },
+   "MBTPS2": {
+    "pct_org": 0.059,
+    "pct_2d": 0.073,
+    "delta_pct": -0.015,
+    "broad_D": -0.449,
+    "broad_flag": "medium_attributable"
+   },
+   "MED1": {
+    "pct_org": 0.067,
+    "pct_2d": 0.113,
+    "delta_pct": -0.046,
+    "broad_D": -0.23,
+    "broad_flag": "not_a_hit"
+   },
+   "MVD": {
+    "pct_org": 0.061,
+    "pct_2d": 0.076,
+    "delta_pct": -0.015,
+    "broad_D": -0.611,
+    "broad_flag": "medium_attributable"
+   },
+   "PGD": {
+    "pct_org": 0.094,
+    "pct_2d": 0.054,
+    "delta_pct": 0.04,
+    "broad_D": -0.16,
+    "broad_flag": "not_a_hit"
+   },
+   "PNKP": {
+    "pct_org": 0.062,
+    "pct_2d": 0.103,
+    "delta_pct": -0.041,
+    "broad_D": -0.375,
+    "broad_flag": "medium_attributable"
+   },
+   "SCAP": {
+    "pct_org": 0.029,
+    "pct_2d": 0.116,
+    "delta_pct": -0.087,
+    "broad_D": -0.403,
+    "broad_flag": "unresolved"
+   },
+   "SUPT4H1": {
+    "pct_org": 0.068,
+    "pct_2d": 0.086,
+    "delta_pct": -0.017,
+    "broad_D": -0.107,
+    "broad_flag": "not_a_hit"
+   }
+  }
+ }
+}

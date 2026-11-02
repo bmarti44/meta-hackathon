@@ -1,0 +1,17 @@
+{
+ "spec_sha256": "083ac00f7841578ed9adadcfd2bc3a472959fbdf8a2b161180843c867a69ae86",
+ "request": {
+  "n": 1,
+  "url": "https://depmap.org/portal/api/no-captcha/download/files",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 4853,
+  "sha256": "10bd77132e749404afdea1875993bcfa4207dcf388ad2cdcef37621fdbf8c15c",
+  "wall_s": 0.486,
+  "error": null
+ },
+ "data_files_downloaded": false,
+ "C_outcomes_accessed": false,
+ "guard": "HTML instead of CSV; stopped, no bypass",
+ "wall_s": 0.486
+}

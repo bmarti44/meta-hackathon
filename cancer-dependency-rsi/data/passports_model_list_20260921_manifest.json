@@ -1,0 +1,8 @@
+{
+ "source_url": "https://cog.sanger.ac.uk/cmp/download/model_list_20260921.csv",
+ "file": "data/passports_model_list_20260921.csv",
+ "sha256": "419f65d1d6534454194f1a744550fab632cd1d7411f6b13411a885735aa37006",
+ "bytes": 957555,
+ "retrieved_by": "src/pgen002_probe.py",
+ "content_class": "model metadata (no outcomes)"
+}

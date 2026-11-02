@@ -1,0 +1,152 @@
+{
+ "rule": "pgen002 SPEC: TOK=input+output; unmeasured charged max measured TOK among completed same-effort calls (cap 2,050,000 if none)",
+ "max_TOK_by_effort": {
+  "high": 1597736,
+  "xhigh": 837505
+ },
+ "n_calls": 20,
+ "n_measured": 16,
+ "historical_total_TOK_charged": 14566608,
+ "calls": [
+  {
+   "file": "reviews/external_result_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 615090,
+   "TOK_charged": 615090
+  },
+  {
+   "file": "reviews/g2_task_route_probe_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 612040,
+   "TOK_charged": 612040
+  },
+  {
+   "file": "reviews/g2_unstick_xhigh_1_after_runtime_repair.receipt.json",
+   "effort": "xhigh",
+   "rc": -9,
+   "TOK_measured": null,
+   "TOK_charged": 837505
+  },
+  {
+   "file": "reviews/g2_unstick_xhigh_1_retry1.receipt.json",
+   "effort": "xhigh",
+   "rc": 1,
+   "TOK_measured": null,
+   "TOK_charged": 837505
+  },
+  {
+   "file": "reviews/g2_unstick_xhigh_1_retry2.receipt.json",
+   "effort": "xhigh",
+   "rc": 1,
+   "TOK_measured": null,
+   "TOK_charged": 837505
+  },
+  {
+   "file": "reviews/joint_no_progress_xhigh_v1.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 483780,
+   "TOK_charged": 483780
+  },
+  {
+   "file": "reviews/lock_s_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 946878,
+   "TOK_charged": 946878
+  },
+  {
+   "file": "reviews/lock_s_high_review_v2.receipt.json",
+   "effort": "high",
+   "rc": 1,
+   "TOK_measured": null,
+   "TOK_charged": 1597736
+  },
+  {
+   "file": "reviews/lock_s_high_review_v2_retry1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 528192,
+   "TOK_charged": 528192
+  },
+  {
+   "file": "reviews/lock_s_high_review_v3.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 301899,
+   "TOK_charged": 301899
+  },
+  {
+   "file": "reviews/lock_s_high_review_v4.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 386428,
+   "TOK_charged": 386428
+  },
+  {
+   "file": "reviews/policy_route_xhigh_v1.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 837505,
+   "TOK_charged": 837505
+  },
+  {
+   "file": "reviews/policy_route_xhigh_v2.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 617691,
+   "TOK_charged": 617691
+  },
+  {
+   "file": "reviews/readiness_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 1131872,
+   "TOK_charged": 1131872
+  },
+  {
+   "file": "reviews/readiness_high_review_v2.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 1099508,
+   "TOK_charged": 1099508
+  },
+  {
+   "file": "reviews/sci_package_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 490668,
+   "TOK_charged": 490668
+  },
+  {
+   "file": "reviews/task_feasibility_unstick_xhigh_v1.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 28767,
+   "TOK_charged": 28767
+  },
+  {
+   "file": "reviews/terminal_determination_xhigh_v1.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 750160,
+   "TOK_charged": 750160
+  },
+  {
+   "file": "reviews/uncertainty_followup_xhigh_v1.receipt.json",
+   "effort": "xhigh",
+   "rc": 0,
+   "TOK_measured": 28143,
+   "TOK_charged": 28143
+  },
+  {
+   "file": "reviews/v3_package_high_review_v1.receipt.json",
+   "effort": "high",
+   "rc": 0,
+   "TOK_measured": 1597736,
+   "TOK_charged": 1597736
+  }
+ ]
+}

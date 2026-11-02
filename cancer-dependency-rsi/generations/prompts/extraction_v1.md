@@ -1,0 +1,2 @@
+# Direction extraction prompt v1 (generator-protocol: proposer-v1)
+Map each new attempt record to a direction: output JSON lines {attempt_id, direction_id (existing or NEW:<slug>), proposed_description}. Classifications of depth/promise/fragility/recoverability are NOT yours to make: deterministic predicates in status_rules.py decide them from recorded outcomes. Your output is validated against the schema and existing IDs; invalid lines are rejected and ledgered.

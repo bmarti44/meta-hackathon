@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It's the Medium — a genome-wide medium-consistency audit of the 2026 organoid dependency catalogues</title>
+<meta name="description" content="Searchable per-gene audit: which 'organoid-specific' cancer dependencies from the 2026 Broad and Sanger catalogues are consistent with culture-medium effects, which with 3D format, and which survive. 17,525 genes, held-out confirmed, adversarially reviewed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%23b3402f'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#fcfcfa; --ink:#1b1e23; --mut:#5c6470; --rule:#ddd9d0; --panel:#f4f2ec;
+  --rust:#b3402f; --rust-dk:#8e2f22; --blue:#2471a3; --amber:#b07d2b; --ok:#2e7d5b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+a{color:var(--rust-dk);text-decoration:none;border-bottom:1px solid #e3b6ae}
+a:hover{color:var(--rust);border-bottom-color:var(--rust)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+header.bar{position:sticky;top:0;background:var(--bg);border-bottom:2px solid var(--ink);z-index:50}
+.bar-in{display:flex;align-items:baseline;gap:26px;padding:12px 0}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:21px;color:var(--ink);border:none;white-space:nowrap}
+.wordmark em{font-style:normal;color:var(--rust)}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-left:auto}
+nav a{border:none;color:var(--ink);font-size:14px;font-weight:600;letter-spacing:.02em}
+nav a:hover{color:var(--rust)}
+.hero{padding:56px 0 10px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--rust-dk);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(42px,7.2vw,76px);line-height:1.02;margin:14px 0 6px;font-weight:700}
+h1 .q{color:var(--rust)}
+.lede{font-size:19px;line-height:1.5;max-width:760px;color:#2c313a}
+.lede b{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin:34px 0 8px}
+.stat{padding:16px 18px 14px 0}
+.stat+.stat{border-left:1px solid var(--rule);padding-left:18px}
+.stat .n{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1}
+.stat .l{font-size:12.5px;color:var(--mut);margin-top:6px;line-height:1.4}
+.searchbox{margin:30px 0 6px;position:relative}
+.searchbox input{width:100%;font-family:var(--mono);font-size:19px;padding:16px 18px;border:2px solid var(--ink);border-radius:3px;background:#fff;color:var(--ink);outline:none}
+.searchbox input:focus{border-color:var(--rust);box-shadow:0 0 0 3px rgba(179,64,47,.15)}
+.search-hint{font-size:13px;color:var(--mut);margin-top:8px}
+.search-hint button{font-family:var(--mono);font-size:12.5px;background:none;border:none;border-bottom:1px solid var(--rust);color:var(--rust-dk);cursor:pointer;padding:0 1px}
+section{padding:44px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-top:2px solid var(--ink);padding-top:18px;margin-bottom:8px}
+.sec-no{font-family:var(--mono);font-size:13px;color:var(--rust-dk)}
+h2{font-family:var(--serif);font-size:30px;margin:0;font-weight:700}
+.sec-sub{color:var(--mut);max-width:780px;margin-top:4px}
+h3{font-family:var(--serif);font-size:20px;margin:26px 0 8px}
+p{max-width:800px}
+small.note{color:var(--mut);font-size:13px}
+/* explorer */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 12px}
+.chip{font:600 13px var(--sans);padding:7px 13px;border:1.5px solid var(--ink);border-radius:99px;background:#fff;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.chip:hover{border-color:var(--rust)}
+table.genes{width:100%;border-collapse:collapse;font-size:14px}
+table.genes th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:right;padding:8px 10px;border-bottom:2px solid var(--ink);cursor:pointer;user-select:none}
+table.genes th:first-child{text-align:left}
+table.genes td{padding:7px 10px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:13px;text-align:right}
+table.genes td:first-child{font-weight:700;text-align:left;font-size:14px}
+table.genes tr{cursor:pointer}
+table.genes tbody tr:hover{background:var(--panel)}
+.badge{display:inline-block;font:700 11px var(--sans);letter-spacing:.05em;padding:2.5px 9px;border-radius:99px;color:#fff;white-space:nowrap}
+.b-med{background:var(--rust)} .b-unr{background:var(--amber)} .b-fmt{background:var(--blue)} .b-no{background:#9aa1ab}
+.tag{display:inline-block;font:600 10.5px var(--sans);border:1px solid var(--mut);color:var(--mut);border-radius:3px;padding:1px 5px;margin-left:4px;white-space:nowrap}
+#detail{border:2px solid var(--ink);border-radius:3px;background:#fff;padding:22px 24px;margin:18px 0 6px;display:none}
+#detail.open{display:block}
+#detail h3{margin:0;font-size:26px}
+#detail .verdict{font-size:16.5px;max-width:820px}
+.bars{margin:16px 0 4px;max-width:640px}
+.bar-row{display:grid;grid-template-columns:118px 1fr 64px;align-items:center;gap:10px;margin:5px 0;font-size:12.5px}
+.bar-row .lab{font-family:var(--mono);font-size:11.5px;color:var(--mut)}
+.track{position:relative;height:14px;background:var(--panel);border:1px solid var(--rule)}
+.track .zero{position:absolute;top:-2px;bottom:-2px;width:1.6px;background:var(--ink)}
+.track .fill{position:absolute;top:2px;bottom:2px}
+.bar-row .val{font-family:var(--mono);text-align:right}
+.meter{height:10px;background:var(--panel);border:1px solid var(--rule);max-width:640px;position:relative}
+.meter i{position:absolute;inset:1px auto 1px 1px;background:var(--ok)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px;max-width:900px}
+.dl{font-size:13.5px}.dl b{font-family:var(--mono);font-size:12px}
+.btn{font:600 13px var(--sans);border:1.5px solid var(--ink);background:#fff;padding:8px 14px;border-radius:3px;cursor:pointer}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.primary:hover{background:var(--rust-dk)}
+.more{margin:14px 0}
+canvas#scatter{width:100%;height:460px;border:1px solid var(--rule);background:#fff;border-radius:3px}
+.figwrap{border:1px solid var(--rule);background:#fff;padding:14px;border-radius:3px;margin:14px 0}
+.figwrap img{width:100%;height:auto;display:block}
+figcaption,.cap{font-size:13px;color:var(--mut);margin-top:10px;line-height:1.5}
+/* timeline */
+.tl{border-left:2px solid var(--ink);margin:26px 0 6px 8px;padding-left:0;list-style:none}
+.tl li{position:relative;padding:0 0 26px 34px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2.5px solid var(--rust)}
+.tl .when{font-family:var(--mono);font-size:12px;color:var(--rust-dk);letter-spacing:.1em;text-transform:uppercase}
+.tl h4{font-family:var(--serif);font-size:19px;margin:3px 0 5px}
+.tl p{margin:0;color:#2c313a;max-width:760px}
+.score-arc{display:flex;align-items:flex-end;gap:0;margin:14px 0 4px;max-width:640px}
+.score-step{flex:1;text-align:center;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.score-step .v{font-family:var(--serif);font-weight:700;font-size:24px}
+.score-step .r{font-size:11px;color:var(--mut);font-family:var(--mono)}
+table.src{width:100%;border-collapse:collapse;font-size:14px}
+table.src th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:2px solid var(--ink)}
+table.src td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+pre.cite{background:var(--panel);border:1px solid var(--rule);border-radius:3px;padding:14px 16px;font-family:var(--mono);font-size:12.5px;white-space:pre-wrap;word-break:break-word;max-width:860px}
+details{border-top:1px solid var(--rule);padding:10px 0;max-width:860px}
+details summary{cursor:pointer;font-weight:600}
+.dl-list{list-style:none;padding:0;margin:10px 0}
+.dl-list li{display:flex;justify-content:space-between;gap:20px;padding:10px 2px;border-bottom:1px solid var(--rule);max-width:860px}
+.dl-list .sz{font-family:var(--mono);font-size:12px;color:var(--mut);white-space:nowrap}
+footer{border-top:2px solid var(--ink);margin-top:60px;padding:24px 0 44px;color:var(--mut);font-size:13.5px}
+.kv{display:grid;grid-template-columns:200px 1fr;gap:6px 18px;max-width:860px;font-size:14px}
+.kv dt{font-family:var(--mono);font-size:12px;color:var(--mut);padding-top:2px}
+.kv dd{margin:0}
+@media (max-width:820px){.stats{grid-template-columns:1fr 1fr}.detail-grid{grid-template-columns:1fr}.kv{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+<a class="wordmark" href="#top">It&rsquo;s the <em>Medium</em>.</a>
+<nav>
+<a href="#explore">Gene explorer</a><a href="#findings">Findings</a><a href="#story">How this was made</a><a href="#methods">Methods</a><a href="#sources">Sources &amp; citing</a><a href="#downloads">Downloads</a>
+</nav></div></header>
+
+<main class="wrap" id="top">
+<div class="hero">
+  <div class="kicker">An independent audit of the 2026 organoid dependency catalogues — DepMap 26Q3</div>
+  <h1>Is it the cancer,<br>or is it the <span class="q">menu?</span></h1>
+  <p class="lede">In 2026, two teams published genome-wide maps of genes that mini-tumours grown in dishes
+  ("organoids") cannot live without — a goldmine of candidate drug targets. But organoids are fed a
+  defined, serum-free diet that blood never resembles. We re-ran the numbers every way the public data
+  allow and found that <b>about 85% of the "organoid-specific" weak spots follow the food, not the 3D
+  shape</b> — including most of one catalogue's headline drug targets. This site lets anyone check any
+  of 17,525 genes in seconds.</p>
+  <div class="stats" id="statstrip">
+    <div class="stat"><div class="n" id="st-genes">17,525</div><div class="l">genes audited, each with a verdict and uncertainty</div></div>
+    <div class="stat"><div class="n"><span id="st-med">85</span>%</div><div class="l">of 456 differential dependencies are consistent with medium effects</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">gene (LSM7) looks shape-related; none pass strict genome-wide thresholds</div></div>
+    <div class="stat"><div class="n">0.90</div><div class="l">bootstrap slope: flat-grown cells in the same medium reproduce the organoid effect [95% CI 0.82–0.99]</div></div>
+  </div>
+  <div class="searchbox">
+    <input id="q" type="search" placeholder="Search a gene — try SQLE, ITGB1, FASN, LSM7…" autocomplete="off" spellcheck="false" aria-label="Search a gene">
+    <div class="search-hint">Popular checks:
+      <button data-gene="SQLE">SQLE</button> <button data-gene="ITGB1">ITGB1</button>
+      <button data-gene="SCAP">SCAP</button> <button data-gene="FASN">FASN</button>
+      <button data-gene="LSM7">LSM7</button> <button data-gene="MVD">MVD</button>
+      &nbsp;·&nbsp; shareable links like <b>#gene=SQLE</b></div>
+  </div>
+  <div id="detail" role="region" aria-live="polite"></div>
+</div>
+
+<section id="explore">
+  <div class="sec-head"><span class="sec-no">01</span><h2>Gene explorer</h2></div>
+  <p class="sec-sub">Every gene's organoid effect (Δ, organoid minus conventional 2D; negative = more essential
+  in organoids), what happens in the same medium grown flat, and our verdict. Click any gene for the full picture.</p>
+  <div class="chips" id="chips">
+    <button class="chip" data-filter="hits" aria-pressed="true">All 456 differences</button>
+    <button class="chip" data-filter="medium" aria-pressed="false">Medium-consistent</button>
+    <button class="chip" data-filter="unresolved" aria-pressed="false">Unresolved</button>
+    <button class="chip" data-filter="format" aria-pressed="false">Format candidate</button>
+    <button class="chip" data-filter="sanger18" aria-pressed="false">Sanger headline-18</button>
+    <button class="chip" data-filter="sanger97" aria-pressed="false">Sanger exclusive-97</button>
+    <button class="chip" data-filter="broad_gain" aria-pressed="false">Broad published gains</button>
+    <button class="chip" data-filter="broad_loss" aria-pressed="false">Broad published losses</button>
+    <button class="chip" data-filter="all" aria-pressed="false">All genes</button>
+  </div>
+  <div style="overflow-x:auto"><table class="genes" id="gtab">
+    <thead><tr>
+      <th data-sort="g">Gene</th><th data-sort="f">Verdict</th><th data-sort="D">Δ organoid</th>
+      <th data-sort="A">Δ flat, same medium</th><th data-sort="F">Δ shape only</th>
+      <th data-sort="rA">Reproduced flat</th><th data-sort="bf">Bootstrap stability</th>
+    </tr></thead><tbody id="gbody"></tbody>
+  </table></div>
+  <div class="more"><button class="btn" id="moreBtn">Show more</button> <small class="note" id="rowcount"></small></div>
+
+  <h3>The whole result in one picture</h3>
+  <p class="sec-sub">Each dot is one of the 456 differences. Horizontal: how much more/less essential a gene is in
+  organoids. Vertical: the same measurement in flat-grown cells fed organoid medium. Dots on the dashed line
+  are fully explained by the medium — no 3D shape needed. Hover or click a dot.</p>
+  <canvas id="scatter" width="1060" height="460" aria-label="Scatter plot of organoid effect versus flat same-medium effect"></canvas>
+  <div class="cap" id="scatter-cap">Red: medium-consistent · amber: unresolved · blue diamond: the one format candidate (LSM7). Dashed line = perfect reproduction without domes.</div>
+</section>
+<section id="findings">
+  <div class="sec-head"><span class="sec-no">02</span><h2>Findings</h2></div>
+  <h3>1 · The food explains most of it — gains and losses alike</h3>
+  <p>Of 456 genes whose essentiality differs between organoids and conventional cultures,
+  <b>86% of gains and 84% of losses are reproduced in flat-grown cells fed organoid medium</b>
+  (75–82% under conservative robust statistics). The strongest class is cholesterol/sterol manufacture
+  (SQLE, MSMO1), followed by fatty-acid and heme synthesis — exactly the pathways a serum-free,
+  lipid-poor diet would stress. Gene-expression data show the mirror image (cholesterol genes switched
+  <i>on</i> in organoid medium, the classic starvation response), and in independent screens using
+  blood-like medium, the flagship gene SQLE moves the <i>opposite</i> way.</p>
+  <figure class="figwrap"><img src="assets/fig1.png" alt="Attribution scatter plots">
+  <figcaption><b>Figure 1.</b> Left: flat-grown, same-medium effect vs organoid effect — points hug the diagonal.
+  Right: the shape-only contrast (dome vs flat within organoid medium) — a shapeless cloud near zero.</figcaption></figure>
+
+  <h3>2 · Auditing the published target lists</h3>
+  <p>Against the Broad catalogue's own published hits: 47% are medium-consistent overall, and 87% of those
+  that replicate under lineage adjustment. Against Sanger's "organoid-specific core fitness" headline-18:
+  8 of 16 replicate here, 5 are medium-consistent — four of them the SREBP/sterol axis (MVD, IDI1, MBTPS1,
+  MBTPS2) — and 3 remain unresolved (SCAP, DDX3X, ITGB1), making them the more credible follow-up candidates.
+  Sanger's own calls are prevalent in their assay (median depletion in 70–80% of organoids); the issue is
+  attribution, not call quality.</p>
+  <figure class="figwrap"><img src="assets/fig3.png" alt="Flag composition of published hit lists">
+  <figcaption><b>Figure 3.</b> Composition of the published hit lists under our flags. Grey = does not reproduce
+  as a hit under lineage adjustment (attribution unestablished — not evidence of real biology).</figcaption></figure>
+
+  <h3>3 · The weakening that isn't (mostly) biology</h3>
+  <p>Ribosome and spliceosome genes look <i>less</i> essential in organoids. With curated gene sets, only the
+  ribosomal set shows a clear whole-complex shift (+0.17 vs +0.03 baseline), present in both labs' assays
+  after global corrections; Sanger's organoid screens are globally shallower (essential depth 0.63×).
+  Slower growth → fewer cell divisions → long-lived protein machines don't have time to wear out is the
+  leading explanation — but it's a hypothesis: cumulative doublings are recorded for only 1 of 1,241
+  Broad screens, so nobody can settle it from this data release.</p>
+  <figure class="figwrap"><img src="assets/fig2.png" alt="Essential weakening decomposition">
+  <figcaption><b>Figure 2.</b> Left: curated-set median shifts by contrast (Broad). Right: Sanger essential depth
+  and depth-scaled ribosomal/spliceosomal ratios — spliceosome weakening vanishes after scaling, ribosomal persists.</figcaption></figure>
+
+  <h3>What would settle it</h3>
+  <p>Add LDL cholesterol back to organoid medium. If the sterol dependencies are starvation, SQLE-inhibitor
+  and statin sensitivity should collapse (≥5× potency shift) while genuine candidates like ITGB1 don't budge.
+  Pre-agreed falsification: if sensitivity survives LDL repletion in ≥3 of 4 models, our interpretation fails.
+  The full protocol is in the <a href="#downloads">wet-lab proposal (Downloads)</a> — a ~2-week experiment, no new screen needed.</p>
+</section>
+
+<section id="story">
+  <div class="sec-head"><span class="sec-no">03</span><h2>How this was made</h2></div>
+  <p class="sec-sub">An honest changelog — including the mistakes. This audit was produced by an AI-assisted
+  research programme with human direction, then attacked by an independent AI reviewer five times before release.</p>
+  <ol class="tl">
+    <li><div class="when">2026 · The catalogues</div><h4>Two Nature papers map organoid weak spots</h4>
+    <p>Broad (Neiswender et al.) and Sanger (Herranz-Ors et al.) publish genome-wide CRISPR dependency maps for
+    patient-derived organoids, nominating organoid-specific drug targets. Broad's own 1,000-gene side experiment
+    already hints some hits are medium-driven — but nobody counts, genome-wide, across both catalogues.</p></li>
+    <li><div class="when">The design</div><h4>Four comparisons that separate food from shape</h4>
+    <p>Public data already contain the controls: organoid medium grown flat (food without shape), domes vs flat
+    within the same food family (shape without food change), and an unrelated serum-free brain-cancer diet.
+    Add corrections for the two different CRISPR toolkits used (measured from 22 models screened with both),
+    cancer-type mix, and screen strength — and hold out entire patients to check the answer on unseen data.</p></li>
+    <li><div class="when">Round 1</div><h4>First pass: 85% food, 0% shape</h4>
+    <p>The headline landed immediately, including a dramatic "spliceosome collapse" (+0.9). Confidence was high. Too high.</p></li>
+    <li><div class="when">Self-correction</div><h4>The spliceosome that wasn't</h4>
+    <p>Swapping a small hand-picked gene panel for the full curated sets shrank the spliceosome effect from
+    +0.90 to +0.02. The panel had been cherry-picked by history. The ribosome effect survived; the spliceosome
+    story was demoted in print, in the abstract, everywhere.</p></li>
+    <li><div class="when">Triangulation</div><h4>Three independent witnesses</h4>
+    <p>Gene-expression data show the cholesterol-starvation mirror image (+0.36 vs −0.38). Sanger's independent
+    assay shows the same cholesterol gain (percentile 0.099 vs 0.394). Blood-like medium screens from 2021 move
+    SQLE the opposite way. Different labs, different methods, same conclusion.</p></li>
+    <li><div class="when">Adversarial review</div><h4>Five rounds against a skeptical reviewer</h4>
+    <p>An independent AI reviewer (Codex, highest reasoning) audited code and claims, recomputing from source.
+    It found real faults every round — contaminated calibration, an impossible statistical test for shape effects,
+    a bootstrap that estimated a different quantity than claimed, a NaN bug corrupting one gene's stability
+    score — each verified, fixed, and re-reviewed.</p>
+    <div class="score-arc">
+      <div class="score-step"><div class="v">68</div><div class="r">ROUND 1</div></div>
+      <div class="score-step"><div class="v">82</div><div class="r">ROUND 2</div></div>
+      <div class="score-step"><div class="v">89</div><div class="r">ROUND 3</div></div>
+      <div class="score-step"><div class="v">89</div><div class="r">ROUND 4</div></div>
+      <div class="score-step"><div class="v" style="color:var(--ok)">95</div><div class="r">ROUND 5 · SHIP IT</div></div>
+    </div></li>
+    <li><div class="when">Novelty audit</div><h4>"Hasn't somebody done this?" — 230+ web searches later</h4>
+    <p>A separate uncapped deep-research run hunted for prior art. Verdict: <b>partially true</b> — the general
+    ideas have real precedents (2019–2026, now cited), one web report claiming similar scope turned out to carry
+    a fabricated arXiv ID, and a commentary nine days earlier asked the same question without numbers. The
+    catalogue-wide per-gene audit itself appears unreported. The title was downgraded accordingly:
+    not "attribution" — an <i>audit</i>.</p></li>
+    <li><div class="when">Now</div><h4>Over to the wet lab</h4>
+    <p>Everything computational that can be squeezed from public data has been — twice-checked. What remains is
+    a two-week experiment: add the cholesterol back. The proposal, with falsification criteria agreed in advance,
+    is in the downloads.</p></li>
+  </ol>
+</section>
+<section id="methods">
+  <div class="sec-head"><span class="sec-no">04</span><h2>Methods</h2></div>
+  <h3>In plain language</h3>
+  <p>For every gene we ask four questions of the public data: (1) Does its importance change in organoids vs
+  conventional cultures? (2) Does the same change happen in flat-grown cells fed organoid medium? (3) Is there
+  anything left over when comparing blobs to flat on the same food? (4) Does an unrelated serum-free diet do
+  something similar? If (2) reproduces most of (1) and (3) is small, we call the gene <b>medium-consistent</b>.
+  Mirror-image logic gives <b>format candidate</b>; everything else is honestly <b>unresolved</b>. These are
+  consistency labels from observational data — not causal proof. Proof needs the add-back experiment.</p>
+  <details><summary>Technical details</summary>
+  <p>DepMap 26Q3 Chronos gene effects (PassesQC screens, Avana + Humagne-CD), development patients only for all
+  calibration, filtering, and imputation. Per-gene library offset from 22 development FBS models screened with
+  both libraries (all Avana screens are FBS). Per-gene OLS on model-mean Chronos with lineage dummies;
+  Benjamini–Hochberg q per contrast; HC3 robust SEs shipped and used for sensitivity. Hits: D q&lt;0.01 and
+  |Δ|≥0.25 (dynamic-range-normalized scale primary; raw concordant). Medium-consistent: same-sign adherent
+  ratio ≥0.5, nominal p&lt;0.05, 90% delta-method CI excluding 0, format not dominant under mirror criteria;
+  strict-FDR variant released as <code>flag_fdr</code>. Joint bootstrap (B=150) shares one model resample
+  between calibration and analysis; identity replicate reproduces point flags exactly. Held-out evaluation is
+  fully disjoint (25 reserved-patient domes vs 78 reserved-patient FBS controls). Common-support sensitivity
+  restricts to the six lineages with adherent comparators (38 domes): slope 0.89. Humagne-only sensitivity
+  filters at screen level (7 FBS controls, r=0.78). Sanger: supplementary tables 4/5/6 and cell-line EssMatrix;
+  within-model percentiles are primary across differently processed matrices. Expression: Omics TPM logp1
+  mapped by ModelConditionID. HPLM: Rossiter et al. Table S1 scaled gene scores. Full code in Downloads.</p></details>
+  <details><summary>Limitations, stated plainly</summary>
+  <p>Adherent comparators: 9 models, 6 of 9 lineages, mixed (not identical) formulations — per-gene verdicts carry
+  real uncertainty (use the bootstrap frequencies). Model derivation/selection differences are not excluded by
+  lineage adjustment. Library handling rests on 22 dual-screened models. Cumulative doublings are recorded for
+  1 of 1,241 Broad screens, so the weakening mechanism is unresolved. The 2026 catalogues themselves were not
+  re-screened; all inference is from their public data. What this site claims is an audit with quantified
+  consistency — nothing more.</p></details>
+</section>
+
+<section id="sources">
+  <div class="sec-head"><span class="sec-no">05</span><h2>Sources &amp; citing</h2></div>
+  <p class="sec-sub">Every number on this page traces to a public dataset below. Gene pages link straight to the
+  source record in the DepMap Portal.</p>
+  <table class="src">
+    <tr><th>Dataset</th><th>What we used it for</th><th>Citation / DOI</th></tr>
+    <tr><td><b>DepMap 26Q3</b></td><td>Screen gene effects (Chronos), screen maps, model conditions, expression</td>
+      <td>DepMap Portal, 26Q3 release · <a href="https://depmap.org/portal/data_page/" target="_blank" rel="noopener">depmap.org/portal/data_page</a></td></tr>
+    <tr><td><b>Neiswender et al. (Broad NextGen)</b></td><td>Catalogue audited; published organoids-vs-2D test table</td>
+      <td>Nature 2026 · <a href="https://doi.org/10.1038/s41586-026-10843-7" target="_blank" rel="noopener">10.1038/s41586-026-10843-7</a> · data <a href="https://doi.org/10.6084/m9.figshare.29472362" target="_blank" rel="noopener">10.6084/m9.figshare.29472362</a></td></tr>
+    <tr><td><b>Herranz-Ors et al. (Sanger)</b></td><td>Catalogue audited; core-fitness lists, BAGEL calls, organoid LFCs</td>
+      <td>Nature 2026 · <a href="https://doi.org/10.1038/s41586-026-10830-y" target="_blank" rel="noopener">10.1038/s41586-026-10830-y</a> · data <a href="https://doi.org/10.6084/m9.figshare.28339340" target="_blank" rel="noopener">10.6084/m9.figshare.28339340</a></td></tr>
+    <tr><td><b>Rossiter et al. (HPLM)</b></td><td>Plasma-like-medium reverse test (Table S1 gene scores)</td>
+      <td>Cell Metab 2021 · <a href="https://doi.org/10.1016/j.cmet.2021.02.005" target="_blank" rel="noopener">10.1016/j.cmet.2021.02.005</a> (PMC8172426)</td></tr>
+    <tr><td><b>Precedents credited</b></td><td>Medium-associated dependencies &amp; corrections predating this audit</td>
+      <td>Lagziel 2019 <a href="https://doi.org/10.1186/s12915-019-0654-4" target="_blank" rel="noopener">doi</a> ·
+      Pacini 2021 <a href="https://doi.org/10.1038/s41467-021-21898-7" target="_blank" rel="noopener">doi</a> ·
+      Dempster 2019 <a href="https://doi.org/10.1038/s41467-019-13805-y" target="_blank" rel="noopener">doi</a> ·
+      Liang 2025 <a href="https://doi.org/10.1093/neuped/wuaf001.127" target="_blank" rel="noopener">doi</a> ·
+      Zaidi &amp; Sawyers 2026 <a href="https://doi.org/10.1038/s41422-026-01311-y" target="_blank" rel="noopener">doi</a></td></tr>
+  </table>
+
+  <h3>Cite this audit</h3>
+  <pre class="cite" id="citeMain">It's the Medium: a genome-wide medium-consistency audit of the 2026 organoid
+dependency catalogues. Technical note preprint, 2026. https://www.itsthemedium.com
+Data: medium_attribution_v2 tables (v2r2), release bundle v1.</pre>
+  <button class="btn" data-copy="#citeMain">Copy citation</button>
+  <h3>BibTeX</h3>
+  <pre class="cite" id="citeBib">@misc{itsthemedium2026,
+  title = {Most reproduced "organoid-specific" cancer dependencies are
+           consistent with culture-medium effects: a genome-wide
+           medium-consistency audit of the 2026 organoid dependency catalogues},
+  year = {2026},
+  note = {Technical note preprint},
+  url = {https://www.itsthemedium.com}
+}</pre>
+  <button class="btn" data-copy="#citeBib">Copy BibTeX</button>
+  <p><small class="note">Per-gene citations: open any gene above and use its "Copy gene citation" button — it includes
+  the exact table version and values so others can reproduce your number.</small></p>
+</section>
+
+<section id="downloads">
+  <div class="sec-head"><span class="sec-no">06</span><h2>Downloads</h2></div>
+  <ul class="dl-list">
+    <li><span><a href="assets/manuscript_v2.pdf"><b>Manuscript (PDF, 7 pp)</b></a> — the full technical note with figures</span><span class="sz">312 KB</span></li>
+    <li><span><a href="assets/medium_attribution_v2_norm.csv"><b>Attribution table — normalized (primary)</b></a> — 17,525 genes, all contrasts, HC3 SEs, both flag rules</span><span class="sz">6.0 MB</span></li>
+    <li><span><a href="assets/medium_attribution_v2_raw.csv"><b>Attribution table — raw Chronos scale</b></a></span><span class="sz">6.0 MB</span></li>
+    <li><span><a href="assets/survivor_candidates_v1.csv"><b>Survivor candidates</b></a> — unresolved hits ranked least-medium-consistent first</span><span class="sz">6 KB</span></li>
+    <li><span><a href="assets/wetlab_proposal_v1.md"><b>Wet-lab proposal</b></a> — the LDL add-back experiment with falsification criteria</span><span class="sz">4 KB</span></li>
+  </ul>
+  <p><small class="note">Analysis code (Python) and the complete review trail are in the
+  <a href="#story">project repository bundle</a> accompanying the preprint. Tables are released for reuse;
+  please cite this site and the underlying DepMap 26Q3 / figshare datasets.</small></p>
+</section>
+
+<footer>
+  <p><b>It's the Medium</b> · An independent audit of public data. Observational consistency classifications — not causal proof,
+  not medical advice. Data: DepMap 26Q3 and the cited public datasets; this site's tables are a reanalysis, not an official DepMap product.</p>
+  <p>Built with an AI-assisted research programme under human direction; independently reviewed over five adversarial
+  rounds (68 → 95/100) plus a deep-web novelty audit. <span id="footmeta"></span></p>
+</footer>
+</main>
+<div id="tip" style="position:fixed;pointer-events:none;background:var(--ink);color:#fff;font:12px var(--mono);padding:5px 9px;border-radius:3px;display:none;z-index:99"></div>
+<script>
+const FLAGS = {0:["No significant difference","b-no"],1:["Medium-consistent","b-med"],2:["Unresolved","b-unr"],3:["Format candidate","b-fmt"]};
+const TAGLABELS = {broad_gain:"Broad published gain",broad_loss:"Broad published loss",broad_strict:"Broad strict gain",sanger18:"Sanger headline-18",sanger97:"Sanger exclusive-97"};
+let GENES=[], BYG=new Map(), STATS=null;
+let state = {filter:"hits", q:"", sortKey:"D", sortDir:1, shown:100, selected:null};
+const $ = s => document.querySelector(s);
+const fmt = (v,d=2)=> v==null ? "—" : (v>0?"+":"") + Number(v).toFixed(d);
+const pct = v => v==null ? "—" : Math.round(v*100)+"%";
+
+function verdictText(g){
+  const dir = g.D<0 ? "more essential" : "less essential";
+  const base = `${g.g} is ${dir} in organoid models than in conventional 2D cultures (Δ ${fmt(g.D)} Chronos, q=${g.Dq<0.001?"<0.001":g.Dq.toFixed(3)}).`;
+  if(g.f===0) return `${g.g} shows no significant organoid-vs-2D difference in our analysis (Δ ${fmt(g.D)}, q=${g.Dq.toFixed(2)}). Nothing to attribute.`;
+  if(g.f===1) return `${base} In flat-grown models fed organoid medium the effect is ${fmt(g.A)} — ${g.rA==null?"":Math.round(g.rA*100)+"% reproduced without any 3D dome"}. Verdict: consistent with a culture-medium effect. Before investing in this as a drug target, test it under nutrient/LDL repletion.`;
+  if(g.f===3) return `${base} The effect is largely absent in flat-grown organoid-medium models (${fmt(g.A)}) but present in the dome-vs-flat contrast (${fmt(g.F)}). Verdict: format candidate under symmetric nominal criteria (not significant at genome-wide FDR for the format contrast). One of very few such genes — a credible follow-up candidate.`;
+  return `${base} Flat-grown reproduction is ${g.rA==null?"not estimable":Math.round(g.rA*100)+"%"} (${fmt(g.A)}), which does not meet our medium-consistency criteria, and format evidence is insufficient. Verdict: unresolved — a survivor worth a second look before dismissing or pursuing.`;
+}
+function barHTML(label, v, color){
+  const W=50, x = v==null? W : W + Math.max(-1.2,Math.min(1.2,v))/1.2*W;
+  const left = Math.min(W,x), width = Math.abs(x-W);
+  return `<div class="bar-row"><span class="lab">${label}</span><span class="track"><span class="zero" style="left:${W}%"></span><span class="fill" style="left:${left}%;width:${width}%;background:${color}"></span></span><span class="val">${fmt(v)}</span></div>`;
+}
+function select(gene, scroll=true){
+  const g = BYG.get((gene||"").toUpperCase()); if(!g) return;
+  state.selected = g.g;
+  history.replaceState(null,"","#gene="+g.g);
+  const d = $("#detail");
+  const tags = (g.tags||[]).map(t=>`<span class="tag">${TAGLABELS[t]||t}</span>`).join("");
+  const dep = `https://depmap.org/portal/gene/${encodeURIComponent(g.g)}`;
+  d.innerHTML = `
+   <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+     <h3>${g.g}</h3><span class="badge ${FLAGS[g.f][1]}">${FLAGS[g.f][0].toUpperCase()}</span>${tags}
+     <span style="margin-left:auto;display:flex;gap:8px">
+       <button class="btn" id="copyGene">Copy gene citation</button>
+       <a class="btn primary" style="border:1.5px solid var(--rust)" href="${dep}" target="_blank" rel="noopener">Open in DepMap Portal ↗</a>
+     </span></div>
+   <p class="verdict">${verdictText(g)}</p>
+   <div class="bars">
+     ${barHTML("Δ organoid (D)", g.D, "var(--ink)")}
+     ${barHTML("Δ flat, same medium (A)", g.A, "var(--rust)")}
+     ${barHTML("Δ shape only (F)", g.F, "var(--blue)")}
+     ${barHTML("Δ serum-free CNS (S)", g.S, "#8a919c")}
+   </div>
+   ${g.bf!=null?`<div style="margin-top:14px;max-width:640px"><div style="font-size:12.5px;color:var(--mut)">Bootstrap stability — flagged medium-consistent in <b style="color:var(--ink)">${pct(g.bf)}</b> of 150 joint resamples</div><div class="meter"><i style="width:${Math.round(g.bf*100)}%"></i></div></div>`:""}
+   <div class="detail-grid" style="margin-top:16px">
+     <div class="dl">Reproduced flat (A/D): <b>${g.rA==null?"—":g.rA.toFixed(2)}</b> [90% CI ${g.rAlo==null?"—":g.rAlo.toFixed(2)} … ${g.rAhi==null?"—":g.rAhi.toFixed(2)}]</div>
+     <div class="dl">Shape ratio (F/D): <b>${g.rF==null?"—":g.rF.toFixed(2)}</b></div>
+     <div class="dl">Raw-scale Δ: <b>${fmt(g.Draw)}</b> · D q-value: <b>${g.Dq<0.001?"<0.001":g.Dq.toFixed(3)}</b></div>
+     <div class="dl">Strict-FDR flag variant: <b>${FLAGS[g.ff][0]}</b></div>
+   </div>
+   <p style="margin-top:14px"><small class="note">Source values: medium_attribution_v2 table (v2r2, normalized Chronos, DepMap 26Q3).
+   Full row incl. SEs/HC3 in Downloads. Underlying screens: DepMap 26Q3; catalogues: Neiswender et al. 2026, Herranz-Ors et al. 2026 (see Sources).</small></p>`;
+  d.classList.add("open");
+  $("#copyGene").onclick = () => {
+    const txt = `${g.g}: ${FLAGS[g.f][0]} (Δ organoid ${fmt(g.D)}, Δ flat same-medium ${fmt(g.A)}, reproduced ${g.rA==null?"n/a":Math.round(g.rA*100)+"%"}, bootstrap stability ${g.bf==null?"n/a":pct(g.bf)}). It's the Medium — medium-consistency audit of the 2026 organoid dependency catalogues, table v2r2. https://www.itsthemedium.com/#gene=${g.g} (data: DepMap 26Q3).`;
+    navigator.clipboard.writeText(txt).then(()=>{ $("#copyGene").textContent="Copied ✓"; setTimeout(()=>$("#copyGene").textContent="Copy gene citation",1600); });
+  };
+  if(scroll) d.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center"});
+  drawScatter();
+}
+function passes(g){
+  const f = state.filter;
+  if(f==="hits" && g.f===0) return false;
+  if(f==="medium" && g.f!==1) return false;
+  if(f==="unresolved" && g.f!==2) return false;
+  if(f==="format" && g.f!==3) return false;
+  if(["sanger18","sanger97","broad_gain","broad_loss"].includes(f) && !(g.tags||[]).includes(f)) return false;
+  if(state.q && !g.g.toUpperCase().includes(state.q.toUpperCase())) return false;
+  return true;
+}
+function renderTable(){
+  let rows = GENES.filter(passes);
+  const k = state.sortKey;
+  rows.sort((a,b)=>{
+    let x=a[k], y=b[k];
+    if(k==="g") return state.sortDir * String(x).localeCompare(String(y));
+    if(x==null) return 1; if(y==null) return -1;
+    const base = (k==="f") ? (x-y) : (Math.abs(y)-Math.abs(x)) * (state.sortDir===1?1:-1) * -1;
+    return k==="f" ? state.sortDir*base : (Math.abs(y)-Math.abs(x)) * (state.sortDir===1?1:-1) * -1 * -1;
+  });
+  if(k!=="g" && k!=="f") rows.sort((a,b)=>{ const x=a[k],y=b[k]; if(x==null)return 1; if(y==null)return -1; return (Math.abs(x)-Math.abs(y))*state.sortDir; });
+  const show = rows.slice(0, state.shown);
+  $("#gbody").innerHTML = show.map(g=>`<tr data-g="${g.g}">
+    <td>${g.g}</td><td><span class="badge ${FLAGS[g.f][1]}">${FLAGS[g.f][0]}</span></td>
+    <td>${fmt(g.D)}</td><td>${fmt(g.A)}</td><td>${fmt(g.F)}</td>
+    <td>${g.rA==null?"—":Math.round(g.rA*100)+"%"}</td><td>${pct(g.bf)}</td></tr>`).join("");
+  $("#rowcount").textContent = `Showing ${show.length} of ${rows.length} genes`;
+  $("#moreBtn").style.display = rows.length>state.shown ? "" : "none";
+  document.querySelectorAll("#gbody tr").forEach(tr=> tr.onclick = ()=> select(tr.dataset.g));
+}
+</script>
+<script>
+function sortedRows(rows){
+  const k = state.sortKey, d = state.sortDir;
+  return rows.sort((a,b)=>{
+    if(k==="g") return d*String(a.g).localeCompare(String(b.g));
+    if(k==="f") return d*(a.f-b.f);
+    const x=a[k], y=b[k];
+    if(x==null && y==null) return 0; if(x==null) return 1; if(y==null) return -1;
+    return d*(Math.abs(y)-Math.abs(x)); // dir=1: strongest effect first
+  });
+}
+// replace the sort inside renderTable by monkey-patching Array flow: simpler to re-define
+const _renderTable = renderTable;
+renderTable = function(){
+  let rows = sortedRows(GENES.filter(passes));
+  const show = rows.slice(0, state.shown);
+  $("#gbody").innerHTML = show.map(g=>`<tr data-g="${g.g}">
+    <td>${g.g}</td><td><span class="badge ${FLAGS[g.f][1]}">${FLAGS[g.f][0]}</span></td>
+    <td>${fmt(g.D)}</td><td>${fmt(g.A)}</td><td>${fmt(g.F)}</td>
+    <td>${g.rA==null?"—":Math.round(g.rA*100)+"%"}</td><td>${pct(g.bf)}</td></tr>`).join("");
+  $("#rowcount").textContent = `Showing ${show.length} of ${rows.length} genes`;
+  $("#moreBtn").style.display = rows.length>state.shown ? "" : "none";
+  document.querySelectorAll("#gbody tr").forEach(tr=> tr.onclick = ()=> select(tr.dataset.g));
+};
+
+let scatterPts = [];
+function drawScatter(){
+  const cv = $("#scatter"); if(!cv || !GENES.length) return;
+  const dpr = window.devicePixelRatio||1;
+  const W = cv.clientWidth||1060, H = 460;
+  cv.width = W*dpr; cv.height = H*dpr; cv.style.height = H+"px";
+  const ctx = cv.getContext("2d"); ctx.scale(dpr,dpr);
+  const padL=52, padR=14, padT=14, padB=40, lim=1.25;
+  const X = v => padL + (v+lim)/(2*lim)*(W-padL-padR);
+  const Y = v => padT + (1-(v+lim)/(2*lim))*(H-padT-padB);
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle="#ddd9d0"; ctx.fillStyle="#5c6470"; ctx.font="11px ui-monospace,Menlo,monospace";
+  for(const t of [-1,-0.5,0,0.5,1]){
+    ctx.beginPath(); ctx.moveTo(X(t),padT); ctx.lineTo(X(t),H-padB); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL,Y(t)); ctx.lineTo(W-padR,Y(t)); ctx.stroke();
+    ctx.fillText(t.toFixed(1), X(t)-8, H-padB+16); ctx.fillText(t.toFixed(1), 22, Y(t)+4);
+  }
+  ctx.strokeStyle="#1b1e23"; ctx.setLineDash([5,4]);
+  ctx.beginPath(); ctx.moveTo(X(-lim),Y(-lim)); ctx.lineTo(X(lim),Y(lim)); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle="#1b1e23"; ctx.font="12px -apple-system,sans-serif";
+  ctx.fillText("Δ organoid vs conventional 2D  →", W/2-110, H-8);
+  ctx.save(); ctx.translate(13,H/2+90); ctx.rotate(-Math.PI/2); ctx.fillText("Δ flat-grown, organoid medium →",0,0); ctx.restore();
+  scatterPts = [];
+  const hits = GENES.filter(g=>g.f>0 && g.D!=null && g.A!=null);
+  for(const g of hits){
+    const x=X(Math.max(-lim,Math.min(lim,g.D))), y=Y(Math.max(-lim,Math.min(lim,g.A)));
+    scatterPts.push({x,y,g});
+    ctx.beginPath();
+    if(g.f===3){ ctx.fillStyle="#2471a3"; ctx.moveTo(x,y-6); ctx.lineTo(x+6,y); ctx.lineTo(x,y+6); ctx.lineTo(x-6,y); ctx.closePath(); }
+    else { ctx.fillStyle = g.f===1 ? "rgba(179,64,47,.78)" : "rgba(176,125,43,.8)"; ctx.arc(x,y,g.g===state.selected?4.5:3,0,7); }
+    ctx.fill();
+    if(g.g===state.selected){ ctx.strokeStyle="#1b1e23"; ctx.lineWidth=1.6; ctx.stroke(); }
+  }
+}
+(function(){
+  const cv = $("#scatter"), tip = $("#tip");
+  function nearest(ev){
+    const r = cv.getBoundingClientRect();
+    const mx = ev.clientX-r.left, my = ev.clientY-r.top;
+    let best=null, bd=1e9;
+    for(const p of scatterPts){ const d=(p.x-mx)**2+(p.y-my)**2; if(d<bd){bd=d;best=p;} }
+    return bd<900 ? best : null;
+  }
+  cv.addEventListener("mousemove", ev=>{
+    const p = nearest(ev);
+    if(p){ tip.style.display="block"; tip.style.left=(ev.clientX+12)+"px"; tip.style.top=(ev.clientY+10)+"px";
+      tip.textContent = `${p.g.g} · Δ ${fmt(p.g.D)} · flat ${fmt(p.g.A)} · ${FLAGS[p.g.f][0]}`; cv.style.cursor="pointer"; }
+    else { tip.style.display="none"; cv.style.cursor="default"; }
+  });
+  cv.addEventListener("mouseleave", ()=> tip.style.display="none");
+  cv.addEventListener("click", ev=>{ const p=nearest(ev); if(p) select(p.g.g); });
+  let rto; window.addEventListener("resize", ()=>{ clearTimeout(rto); rto=setTimeout(drawScatter,150); });
+})();
+
+document.querySelectorAll("[data-copy]").forEach(b=> b.onclick = ()=>{
+  navigator.clipboard.writeText(document.querySelector(b.dataset.copy).innerText)
+    .then(()=>{ const o=b.textContent; b.textContent="Copied ✓"; setTimeout(()=>b.textContent=o,1600); });
+});
+document.querySelectorAll("#chips .chip").forEach(c=> c.onclick = ()=>{
+  document.querySelectorAll("#chips .chip").forEach(x=>x.setAttribute("aria-pressed","false"));
+  c.setAttribute("aria-pressed","true"); state.filter=c.dataset.filter; state.shown=100; renderTable();
+});
+document.querySelectorAll("th[data-sort]").forEach(th=> th.onclick = ()=>{
+  const k = th.dataset.sort;
+  if(state.sortKey===k) state.sortDir*=-1; else { state.sortKey=k; state.sortDir=1; }
+  renderTable();
+});
+$("#moreBtn").onclick = ()=>{ state.shown += 200; renderTable(); };
+document.querySelectorAll("[data-gene]").forEach(b=> b.onclick = ()=> select(b.dataset.gene));
+$("#q").addEventListener("input", e=>{
+  state.q = e.target.value.trim(); state.shown=100; renderTable();
+  const exact = BYG.get(state.q.toUpperCase()); if(exact) select(exact.g, false);
+});
+$("#q").addEventListener("keydown", e=>{
+  if(e.key==="Enter"){ const first = document.querySelector("#gbody tr"); if(first) select(first.dataset.g); }
+});
+
+Promise.all([fetch("data/genes.json").then(r=>r.json()), fetch("data/stats.json").then(r=>r.json())])
+ .then(([genes, stats])=>{
+   GENES = genes; STATS = stats; BYG = new Map(genes.map(g=>[g.g.toUpperCase(), g]));
+   $("#st-genes").textContent = stats.n_genes.toLocaleString();
+   $("#st-med").textContent = Math.round(100*(stats.n_medium/stats.n_hits));
+   $("#footmeta").textContent = "Table version v2r2 · generated " + (stats.generated||"").slice(0,10) + ".";
+   renderTable(); drawScatter();
+   const m = location.hash.match(/gene=([A-Za-z0-9\-]+)/);
+   select(m ? m[1] : "SQLE", false);
+ })
+ .catch(err=>{ $("#rowcount").textContent = "Failed to load gene data: " + err; });
+</script>
+
+
+
+
+
+</body>
+</html>

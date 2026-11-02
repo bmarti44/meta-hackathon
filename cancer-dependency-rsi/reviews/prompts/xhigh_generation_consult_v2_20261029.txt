@@ -1,0 +1,8 @@
+Generation/adjudication (gpt-6.1-sol, xhigh), read-only. Your previous consult stream ended before issuing decisions; its verified fragments: sgen011 framing C selected; estimate gaps found (now fixed in ledger/host_cost_estimate_v3.json: $26.70, 56 priced, 6 unpriced flagged incl. 4 early g2 retries; long-context tier on receipt totals is a conservative convention).
+Read ONLY: GOAL.md (C8/C9/C13 text), ledger/host_cost_estimate_v3.json, generations/sgen011/DRAFT_DESIGN.md, generations/sgen010/screen_v7.json, config/allocations.json.
+OUTPUT FORMAT IS MANDATORY - begin your reply with exactly these four lines, then justify briefly (max ~120 lines total):
+COST_BASIS: <YES|YES_WITH_NAMED_CONDITIONS|NO>
+PGEN005: <GO|GO_WITH_CONDITIONS|NO_GO>
+SGEN011: <C or replacement, one line>
+SEQUENCE: <next 3 generations, one line>
+Then sections: conditions for COST_BASIS (incl. treatment of the 6 unpriced calls: imputation rule or exclusion), pgen005 SPEC parameters if GO (task, policy space, endpoint under estimated-cost accounting, witnesses still required), sgen011-C SPEC parameters (population, discriminator, decision rule, data, gate advanced), conflicts between user authorization and GOAL.md text if any. Do not browse beyond the listed files; do not use web/tools beyond reading them. Prior rulings to respect: ENDPOINT:NO (as then specified), ENDPOINT_V2 YES_WITH_NAMED_CONDITIONS, determination v2 gates MET C1,C2,C5,C7 / PARTIAL C3,C4,C6,C10,C11,C12 / UNMET C8,C9,C13.

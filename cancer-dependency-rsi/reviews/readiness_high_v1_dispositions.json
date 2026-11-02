@@ -1,0 +1,18 @@
+{
+ "source_review":"reviews/readiness_high_review_v1.md",
+ "source_code_integrity_score":91,
+ "source_G2":"FAIL",
+ "critical_findings":[],
+ "high_gate_blocker":{"status":"OPEN","reason":"No meaningful admissible scientific policy task/currentqualityreward; newdata/taskrequiresSol-xhighproposalandindependentreview. qremainsnull; G2notwaived."},
+ "issues":[
+  {"severity":"medium","finding":"scientifictimeoutmayborrowlargerallowance","disposition":"CONFIRMED+FIXED","evidence":"budget.reserve enforces600s/default scientificlimit forCPUheavyjobs,unlessexactnamedscientificallowanceexists; hostreasoningallowancecannotbypass. Regressiontestrejects1200s scientificreservation."},
+  {"severity":"medium","finding":"evidencecitationsweakerstudy/evaluatorchecks","disposition":"CONFIRMED+FIXED","evidence":"candidates.validate_batch rejectsforeignstudy/evaluator citations; regressiontestwithlegalparent+foreignevidencefails."},
+  {"severity":"medium","finding":"contradictorypolicycomparisondrafts","disposition":"CONFIRMED+WITHDRAWN","evidence":"Bothcontractandepisodesnowexplicitlynonexecutable; inconsistentninepanelproposalwithdrawn,oldbytesretained. Futurecomparisongatesremainfullyrequired."},
+  {"severity":"low","finding":"decisionhelperacceptszero-width","disposition":"CONFIRMED+FIXED","evidence":"decision rejectslo>=hi; SIGNAL/BOUND/NEGATIVEzero-widthfixturesINCONCLUSIVE. Productionkernelalreadyrejectednonpositivewidth."},
+  {"severity":"low","finding":"rawscalethresholdrejectsrank-equivalentinputs","disposition":"CONFIRMED+FIXED","evidence":"Degenerateorderingchecknowusesrankranges; 1e-14monotonicrescalingpreservesacceptanceandprofiles."},
+  {"severity":"low","finding":"modelresumefullidentityandresponseintegrity","disposition":"CONFIRMED+FIXED","evidence":"Newreceiptspincanonicalmodel/effort/phase/timeout/sandbox/interface/outputidentityandresponsehash. Legacyincompletereceiptsrefuseautomaticreusewithoutredispatch; changedsettingsorresponsebytesrefused."}
+ ],
+ "tests":{"passed":52,"failed":0,"pytest_elapsed_s":7.47},
+ "rereview_required":true,
+ "G2_after_remediation":"FAIL_NO_VALID_TASK"
+}

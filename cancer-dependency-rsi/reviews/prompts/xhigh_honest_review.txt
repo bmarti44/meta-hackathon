@@ -1,0 +1,15 @@
+You are an independent, adversarial scientific reviewer (gpt-6.1-sol, xhigh), read-only. The user asks: HONESTLY, is there anything promising here? Be blunt. No encouragement, no ceremony. Read what you need: GOAL.md (../GOAL.md), STATUS.md, lock_s/results/external_v1.json, lock_s/scientific_protocol_v1.json, generations/direct_v2.json, generations/pgen010/cycle_result.json, reviews/terminal_determination_xhigh_v3.md, GENERATIONS.md (skim), manuscript/manuscript_draft_v1.md (skim).
+Verified facts to anchor on:
+- Lock-S (frozen, spent once): Sanger organoid cohort C (148 models/142 patients), BOUND Spearman rho=-0.146 [-0.175,-0.114] between minipool paired-format lability L (6 Broad models, 250 genes) and organoid rank displacement on 207 genes, baseline-adjusted; patient-weighted inference never quantified; sensitivity envelope 1.84 ENVELOPE_TOO_WIDE.
+- Broad replication attempt (today, src/direct_analysis_v2.py, development data, 981 patients sequestered untouched): organoid displacement in 26Q3 Broad Chronos (82 dev organoid models vs 686 2D) is highly reproducible (split-half rho=0.887; lineage-matched agrees 0.92) BUT: L vs displacement rho=-0.023 (patient boot95 [-0.060,0.018]); partial -0.072; signed shift +0.075. Atlas L split-half reliability 0.318 (SB full ~0.48; attenuation ~0.69x).
+- Medium-axis lability genome-wide (134 models, paired media): split-half L rho=0.830 (highly reproducible), signed 0.166; format-L vs medium-L rho=0.360 (240 genes); medium-L vs organoid displacement 0.068. Expression shift vs displacement -0.120.
+- Zero within-model 2D+3D genome-wide screen pairs exist in 26Q3; 2 patient-matched pairs; 1 same-condition repeat candidate in census; no A->B->A histories.
+- Engineering: one true policy cycle executed (pgen010): FAIL BELOW_QSTAR (q=0.00037 vs 0.020) on 7-model atlas; close-out REJECTED certification for protocol defects (lead truncated the frozen SPEC), numbers reproduced.
+- Terminal determination v3: INCONCLUSIVE; GOAL_COMPLETE NO; slot 3/3 spent.
+ANSWER, numbered:
+1. Verdict per thread (Lock-S finding; Broad displacement phenomenon; lability-as-gene-property; policy loop): PROMISING / WEAK / DEAD, one-line justification each, with the strongest counter-argument to each.
+2. Is the Broad null (rho=-0.02) a refutation of Lock-S, an attenuation artifact, an assay/cohort difference, or uninformative? Quantify what effect size remains compatible.
+3. The single most decisive next experiment/analysis (feasible with Downloads data + public figshare minipool processed files, local compute): exact design, n, kill criterion.
+4. Probability (0-100%) that GOAL.md's full criteria are achievable in this project, and the honest expected ceiling of what this project can claim.
+5. What should be STOPPED immediately as waste?
+End: OVERALL: <PROMISING|MARGINAL|NOT_PROMISING> and HONEST_SCORE: <0-100 for overall project promise>.

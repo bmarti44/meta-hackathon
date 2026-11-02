@@ -1,0 +1,12 @@
+{
+  "generation": "pgen001",
+  "disposition": "FAILS-SCREEN / EXPLORATORY-PROTOCOL-DEVIATING (per v3-package sol-high review HIGH-2 + MEDIUM-3/4/6, all independently verified)",
+  "reasons": [
+    "SPEC hash was NOT locked in the ledger before probing (only a post-screen ledger entry exists); prospective freezing is therefore unwitnessed. No lock is backdated.",
+    "Frozen screen bar required a predeclared conservative failure charge, licenses, and remaining-allowance verification; screen_results_v1 deferred/omitted these, so SCREEN-POSITIVE_CONDITIONAL did not meet its own bar.",
+    "Metadata acquisition lacked retained request receipts/ranges/headers/procedure; Passports probe was an unmanifested /tmp artifact. Historical metadata counts are retained as UNVERIFIED author-claimed values.",
+    "SPEC failure rule wrongly narrowed reopening to user-supplied measured expenditure only. CORRECTED: failure applies to this tested specification only; alternatives under discriminator v2 and handoff section 11 remain open and require a new prospective SPEC (pgen002)."
+  ],
+  "salvageable": "Token totals and zip listing were independently reproduced by the reviewer from retained receipts/listing; they may inform pgen002 design but pgen001 itself grants no screen pass and no outcome was accessed.",
+  "superseded_by": "generations/pgen002 (ledger-first SPEC lock, predeclared failure charge, receipted metadata probe)"
+}

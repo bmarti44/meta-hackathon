@@ -1,0 +1,17 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 5.
+Scores: r1 76, r2 84, r3 89, r4 89 (reviews/site_sol_review_r1..r4.md).
+Round-4 dispositions: reviews/site_sol_review_r4_dispositions.md.
+
+Verify the r4 medium (same-medium shorthand class) and the seven low
+contrast instances are genuinely fixed - including a fresh full sweep
+for both classes (every text fg/bg pair you can derive from the CSS,
+normal + hover + selection + placeholder + paper/dark modes; every
+formulation-match phrasing). Confirm the regenerated figure/PDF/release
+bundle are consistent (validator, site asset equality, PDF text) and no
+regressions from the edits. Final ship judgement, same anchors
+(90+ = ship it). Verified issues only, smallest fix each,
+no over-engineering. If nothing further at low-or-above severity, say
+so plainly.
+
+Output: SCORE: n/100; VERDICT; per-item disposition check with evidence;
+NEW ISSUES by severity (or none); CHECKS RUN.

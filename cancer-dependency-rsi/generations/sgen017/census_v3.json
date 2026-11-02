@@ -1,0 +1,37 @@
+{
+ "version": 3,
+ "timestamp": "2026-10-29T21:48:39.773860+00:00",
+ "sequences_base_no_pDNA": 3613,
+ "sequences_strict": 3042,
+ "missing_flag_sequences_excluded": 382,
+ "primary_strict": {
+  "groups": 1367,
+  "repeat_groups": 0,
+  "coverage": 0.0,
+  "unqualified_sequences": 0,
+  "unqualified_screens": 0,
+  "repeat_keys": []
+ },
+ "robustness_strict": {
+  "groups": 1030,
+  "repeat_groups": 1,
+  "coverage": 0.000970873786407767,
+  "unqualified_sequences": 920,
+  "unqualified_screens": 336,
+  "repeat_keys": [
+   [
+    "ACH-000614",
+    "adherent",
+    "RPMI + 10% FBS",
+    "Avana",
+    "21"
+   ]
+  ]
+ },
+ "headline": "One candidate repeat among 1030 qualified condition-library-day groups (0.0971%); 30.24% of strict-eligible sequences and 24.58% of screens unassessable under the content key; execution independence unverified.",
+ "candidate": "ACH-000614 (SC-000614.AV01 vs SC-002875.AV01): identical ModelCondition content except ID; Avana d21; pDNABatch Avana-3/4; passage name hints p5/p6, structured PassageNumber blank; patient SIDP01038; independence unverified",
+ "verdict": "CENSUS_COMPLETE",
+ "repeat_resource": "NEAR_ABSENT_UNVERIFIED (descriptive label for observed strict-eligible qualified groups only; unassessable screens excluded from the scope of this label)",
+ "independence": "Distinct annotated ScreenIDs; independent initiation NOT established by metadata.",
+ "nonclaims": "No instability/persistence measurement; rerun reasons unknown; outcome estimand needs new locked design."
+}

@@ -1,0 +1,9 @@
+{
+  "generation": "pgen003", "spec_sha256": "28d9a3fba1f26742c48150edb3b7712bc297f284eefc9bd3f2d1023e507f34f1",
+  "verdict": "FAILS-SCREEN (frozen bar; Witness B line-resolution 252/360 < 330). Tested specification only; family open.",
+  "witness_A": "PASS: 148/148 C models resolved to 142 Passports patients via model_name+synonyms (HCM-SANG names live in synonyms). Source donor_ID space =144 vs Passports 142 disclosed.",
+  "witness_B": "FAIL: Passports API alias harvest (23 receipted requests, 2,292 models, 2,909 alias keys) resolved 0/108; official supplemental file (Amendment 1) is gene annotation (17,614 genes), not screen mapping; Project Score archive listing (receipted ranges) contains only processed essentiality matrices, not an identity crosswalk. Filename short names (H1975, AML3, BB30HN, 231328) are Project Score internal sanitizations absent from Passports aliases.",
+  "eligibility_recompute": "generations/pgen003/eligibility_recompute_v1.json: with FULL C patient set, overlap = 0; Broad-minipool exposed = KP3 only; resolved universe = 251 eligible lines / 250 eligible patients / 810 screen files. This cleanly supports a NEW prospective generation (pgen004) whose universe is defined a priori as identity-resolved lines only (identifiability eligibility, frozen before any count access) - it does not retroactively pass pgen003.",
+  "outcome_values_accessed": false,
+  "requests_total_generation": "23 API + 1 supplemental + 2 archive ranges (+4 API discovery calls in session record); bytes ~4.8 MB"
+}

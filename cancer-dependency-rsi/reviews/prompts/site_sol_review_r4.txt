@@ -1,0 +1,16 @@
+You are a skeptical reviewer (xhigh) for a WEBSITE deliverable, ROUND 4.
+Scores: r1 76, r2 84, r3 89 (reviews/site_sol_review_r1..r3.md).
+Round-3 dispositions: reviews/site_sol_review_r3_dispositions.md
+(3 remaining items: causal-isolation phrases, two hover contrasts,
+CPU smoothstep order).
+
+Verify those three are genuinely fixed (actual strings/math, plus a
+fresh sweep for leftover instances of the same classes: causal isolation
+wording anywhere, any sub-4.5:1 normal-text fg/bg pair incl. hovers,
+CPU-vs-shader arithmetic), confirm no regressions from the edits, and
+give a final ship judgement. Same anchors (90+ = ship it). Verified
+issues only, smallest fix each, no over-engineering. If nothing further
+at low-or-above severity, say so plainly.
+
+Output: SCORE: n/100; VERDICT; per-item disposition check with evidence;
+NEW ISSUES by severity (or none); CHECKS RUN.

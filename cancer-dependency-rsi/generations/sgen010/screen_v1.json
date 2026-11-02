@@ -1,0 +1,78 @@
+{
+  "generation": "sgen010",
+  "inputs": {
+    "Model.csv": {
+      "sha256": "65eb1895800e71a963a3ab56e5d08c8d006cb0d9e7aa68f7e34a3810a2a3cbc7",
+      "rows": 2554
+    },
+    "CRISPRScreenMap.csv": {
+      "sha256": "43cc528614053d4c5a96729c2d782375227231a0cfea23de6c519b8989fa1252",
+      "rows": 1604
+    },
+    "cohort_C_models": 148,
+    "cohort_C_locked_donor_IDs": 144,
+    "cohort_C_identity_names_available": 5
+  },
+  "model_table": {
+    "models": 2554,
+    "distinct_PatientID": 2315,
+    "models_missing_PatientID": 0,
+    "GrowthPattern": {
+      "Adherent": 1472,
+      "Suspension": 466,
+      "Dome": 241,
+      "Unknown": 157,
+      "Mixed": 139,
+      "Spheroid": 79
+    },
+    "ModelType": {
+      "Cell Line": 2313,
+      "Organoid": 241
+    }
+  },
+  "screened": {
+    "screens": 1604,
+    "distinct_screened_ModelID": 1361,
+    "screened_models_in_Model_table": 1361,
+    "distinct_screened_PatientID": 1305,
+    "GrowthPattern": {
+      "Adherent": 938,
+      "Suspension": 169,
+      "Dome": 108,
+      "Mixed": 65,
+      "Unknown": 41,
+      "Spheroid": 40
+    },
+    "ModelType": {
+      "Cell Line": 1253,
+      "Organoid": 108
+    }
+  },
+  "cohort_C_overlap_by_key": {
+    "cohort_donor_ID__vs__Model_COSMICID": 0,
+    "identity_model_names__vs__CellLineName": 0,
+    "cohort_sample_ID__vs__Model_id_columns": 0,
+    "union_any_key_models": 0,
+    "union_any_key_screened_models": 0
+  },
+  "overlap_models_listed": [],
+  "disjoint_screened_pool": {
+    "models": 1361,
+    "patients": 1305,
+    "patient_strict_models": 1361,
+    "GrowthPattern_patient_strict": {
+      "Adherent": 938,
+      "Suspension": 169,
+      "Dome": 108,
+      "Mixed": 65,
+      "Unknown": 41,
+      "Spheroid": 40
+    },
+    "ModelType_patient_strict": {
+      "Cell Line": 1253,
+      "Organoid": 108
+    }
+  },
+  "verdict": "POOL_IDENTIFIED",
+  "decision_rule": ">=100 patient-strict disjoint screened models AND >=100 disjoint patients"
+}

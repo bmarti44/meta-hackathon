@@ -1,0 +1,299 @@
+{
+ "witness_A": {
+  "c_models": 148,
+  "resolved": 148,
+  "unresolved": [],
+  "multi_patient": [],
+  "unique_c_patients_passports": 142,
+  "note": "source donor_ID space counts 144 donors; Passports patient space = 142 (142 vs 144 discrepancy disclosed; exclusion uses Passports space, the join space for raw lines)"
+ },
+ "witness_B": {
+  "api_models_meta_count": 2292,
+  "alias_keys": 2909,
+  "previously_unmatched": 108,
+  "resolved": 0,
+  "ambiguous_excluded": [],
+  "still_unresolved": [
+   "231328",
+   "A2780A",
+   "A2780C",
+   "AML2",
+   "AML3",
+   "ANC3A",
+   "BB30HN",
+   "BB49HN",
+   "CO320H",
+   "CO678",
+   "CO680N",
+   "CO684",
+   "CO824",
+   "DBTRG0",
+   "DETROI",
+   "EPLC27",
+   "GC1B",
+   "H1155",
+   "H1299",
+   "H1355",
+   "H1568",
+   "H1650",
+   "H1755",
+   "H1869",
+   "H1915",
+   "H1944",
+   "H1975",
+   "H1993",
+   "H2023",
+   "H2087",
+   "H2170",
+   "H226",
+   "H23",
+   "H2405",
+   "H3118",
+   "H3122",
+   "H322M",
+   "H358",
+   "H520",
+   "H630",
+   "H650",
+   "H716",
+   "HCC114",
+   "HCC118",
+   "HCC139",
+   "HCC142",
+   "HCC180",
+   "HCC193",
+   "HCC195",
+   "HCC299",
+   "HT2915W",
+   "HT2920D",
+   "KATOII",
+   "KURAMO",
+   "KYSE14",
+   "KYSE15",
+   "KYSE22",
+   "KYSE27",
+   "KYSE41",
+   "KYSE45",
+   "KYSE51",
+   "KYSE52",
+   "L23",
+   "LB1047",
+   "LB771H",
+   "LCD",
+   "LCLC97",
+   "LCSQ1",
+   "LNCAPC",
+   "LNZTA3",
+   "LOUNH9",
+   "LY19",
+   "MB361",
+   "MB415",
+   "MB436",
+   "MB453",
+   "MB468",
+   "MDAMB2",
+   "MEL2",
+   "MIAPAC",
+   "MOGGUV",
+   "N87",
+   "NBTU",
+   "OV420",
+   "OVR3",
+   "OVR4",
+   "OVR5",
+   "OVR8",
+   "P0203",
+   "P0327",
+   "P0403",
+   "P0813",
+   "P1005",
+   "P8902",
+   "P8988T",
+   "PECAPJ",
+   "R2650",
+   "R8226",
+   "RPE1",
+   "SKMG",
+   "SU10",
+   "SU5",
+   "SU8",
+   "TGBC11",
+   "TOV112",
+   "TT1",
+   "U893",
+   "UWB12"
+  ],
+  "resolved_detail": {}
+ },
+ "recomputed": {
+  "pgen002_matched_patients": 251,
+  "new_patients": 0,
+  "new_c_overlap_patients": [],
+  "new_broad_exposed_lines": []
+ },
+ "requests": [
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=1",
+   "status": 200,
+   "bytes": 165502,
+   "sha256": "6ef23030b51e20b458be1af8577cff469d2da78f5a785f14a9a61ef49c9bc5aa",
+   "wall_s": 6.959
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=2",
+   "status": 200,
+   "bytes": 159590,
+   "sha256": "24b418970fd4c6a36a0cc79ac55d594bda5325f77abfdfe996f802f9cb3c36f3",
+   "wall_s": 8.473
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=3",
+   "status": 200,
+   "bytes": 166419,
+   "sha256": "f45c51893d71a36c12056fc1e41f0f7cffa58a37293a3cb127a72b95fdba31a9",
+   "wall_s": 10.27
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=4",
+   "status": 200,
+   "bytes": 169981,
+   "sha256": "af0c612ae86789a09a3e24a10506ea27a04e7289db43d767338c398dd3ac0e42",
+   "wall_s": 15.782
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=5",
+   "status": 200,
+   "bytes": 169375,
+   "sha256": "e77c3cce834bce60373c11b567dc4fab7a50cb5a404d712453e02937eb887c86",
+   "wall_s": 9.251
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=6",
+   "status": 200,
+   "bytes": 163110,
+   "sha256": "773cfc44e7f17821b9c6d6a52715827435ba5d493282983b1e3edb79c1795369",
+   "wall_s": 7.043
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=7",
+   "status": 200,
+   "bytes": 165192,
+   "sha256": "803cb6b465f138633c6225e347e2002fc3cc31c9d429aeff43acc3ee3d7da4a6",
+   "wall_s": 7.602
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=8",
+   "status": 200,
+   "bytes": 161239,
+   "sha256": "7bf05abefe870b9fcd0451cf90a6672c45771bac6c2d5872abd0567b4fc4ba93",
+   "wall_s": 7.0
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=9",
+   "status": 200,
+   "bytes": 169688,
+   "sha256": "2fb6b78454ade6b44b48abb2bd94a14f281256ab6bc5d51738c022be373f4a1e",
+   "wall_s": 7.763
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=10",
+   "status": 200,
+   "bytes": 166397,
+   "sha256": "9f90eeb1360c710f074cfb1a880cf0c5f7d0557e5f8b14484d9467709d6ad1f4",
+   "wall_s": 7.544
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=11",
+   "status": 200,
+   "bytes": 139229,
+   "sha256": "e4573bcd78397fee3199f7e1aec94a8ab70b14b69f69aed078de983b285a5edb",
+   "wall_s": 7.197
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=12",
+   "status": 200,
+   "bytes": 136862,
+   "sha256": "51915526010c5914405c2e90bd7746d8751fdfc8de703bed7f76f4ed275cd73f",
+   "wall_s": 7.084
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=13",
+   "status": 200,
+   "bytes": 141453,
+   "sha256": "b3559cc33139be609f5869f8db7ff5238734cdcd89099e7c22964588cbdf30fa",
+   "wall_s": 6.807
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=14",
+   "status": 200,
+   "bytes": 141123,
+   "sha256": "8594672c3462551ef205117a17174d56e9cbd07e143efd4d7076352415f06793",
+   "wall_s": 6.967
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=15",
+   "status": 200,
+   "bytes": 146311,
+   "sha256": "8fecaec29be4480fbf13568af3248d0716d3c0f406dc21e19dbb3a96b1934e4f",
+   "wall_s": 6.362
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=16",
+   "status": 200,
+   "bytes": 140674,
+   "sha256": "e52da584fa27ea759b6bb1c4f35f39c0b9fd39d748c914e3c6601218429fe395",
+   "wall_s": 6.366
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=17",
+   "status": 200,
+   "bytes": 142237,
+   "sha256": "510795d55a537a7dbb506646b5ab1fc9ffbe51a8c1cd5fb6e43f6e5a00095597",
+   "wall_s": 6.333
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=18",
+   "status": 200,
+   "bytes": 157253,
+   "sha256": "0f4b443bd75d5499f853c42756626854a14e3054baf67797329e462e0afe9c23",
+   "wall_s": 7.152
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=19",
+   "status": 200,
+   "bytes": 162179,
+   "sha256": "eb2c4ca1581604a30eeeb9b92b1c3e5859dcd3398f146caee06e2fb703f16675",
+   "wall_s": 17.13
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=20",
+   "status": 200,
+   "bytes": 147142,
+   "sha256": "fa6e8f35f7ac606f18a0e3f0d88c5ef9fbc189f51d3af7438e7abfa5972a2c69",
+   "wall_s": 19.287
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=21",
+   "status": 200,
+   "bytes": 145001,
+   "sha256": "d82379f79b87777f9c85fa1eb652cde4ed2acbf24aa29e374501a5cdddb85b3f",
+   "wall_s": 8.657
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=22",
+   "status": 200,
+   "bytes": 141758,
+   "sha256": "ebf48caf5c7ab34626cda838f8324bc1e1936a6a33d3a43f193ff5b2556861f0",
+   "wall_s": 7.908
+  },
+  {
+   "url": "https://api.cellmodelpassports.sanger.ac.uk/models?page%5Bsize%5D=100&page%5Bnumber%5D=23",
+   "status": 200,
+   "bytes": 127855,
+   "sha256": "9e9b237640d0b0ac6e877911fe514317e0aaa7dc38b7ad455ffaa0d5afc18905",
+   "wall_s": 6.343
+  }
+ ],
+ "n_requests": 23,
+ "total_probe_bytes": 3525570
+}

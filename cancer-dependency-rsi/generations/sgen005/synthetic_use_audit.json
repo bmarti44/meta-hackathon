@@ -1,0 +1,12 @@
+{
+  "audit": "synthetic/simulated data uses across the campaign (auditable inventory, sgen005 SPEC item 4)",
+  "substantive_simulation_uses": [],
+  "mechanical_code_diagnostics": [
+    {"use": "donor-kernel synthetic calibration (5000 bootstrap draws on synthetic null/nonzero fixtures): coverage 95/100, 97/100", "role": "code correctness diagnostic ONLY; calibrates the estimator implementation, contributes no biological evidence", "artifacts": ["lock_s/prelock_validation_v1.json", "status.json:synthetic_calibration"]},
+    {"use": "unit-test fixtures (synthetic DataFrames/zips in tests/)", "role": "software regression tests only", "artifacts": ["tests/"]},
+    {"use": "sgen004 worst-case envelope arithmetic on retained locked outputs", "role": "deterministic sensitivity bound; no simulated outcomes", "artifacts": ["generations/sgen004/envelope_v2.json"]}
+  ],
+  "assertions": ["No simulated outcomes were used for model/claim/policy selection at any gate.",
+                 "No replay world exists yet; when built it may contain only recorded real artifacts (PLAN 0.4).",
+                 "No synthetic donor uncertainty was propagated into the locked interval."]
+}

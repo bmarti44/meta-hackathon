@@ -1,0 +1,249 @@
+{
+  "study_id": "CDRSI-2026-001",
+  "lock": "LOCK1-DRAFT-v3-UNSCORED; G2 NOT PASSED; no policyoptimization or finaloutcomeaccess permitted",
+  "question": "Across the fixed 207-gene confirmatory panel, is observed format-bundle score lability (6 Broad models) associated with donor-averaged displacement from the fixed 2D consensus dependency ordering in the donor-disjoint Sanger cohort (148 organoids/144 donors), beyond baseline dependency strength (exact partial-rank-residual operation)?",
+  "falsifiable_alternatives": [
+    "SIGNAL: partial rho CI entirely > +0.20",
+    "BOUND: CI entirely within (-0.20,+0.20)",
+    "NEGATIVE: CI entirely < -0.20 (reported as evidence against positive conjecture)",
+    "INCONCLUSIVE: otherwise"
+  ],
+  "population": "207 confirmatory genes (data/confirmatory_gene_candidates.json); 6 Broad format-contrast models (donors unresolved; conditional on measured models); 148 Sanger organoids/144 donors (donor-level Broad-disjoint)",
+  "environments": {
+    "format_bundle": "Matrigel dome vs plastic, medium fixed within pair",
+    "medium_bundle": "secondary/descriptive only (4 models)"
+  },
+  "eligibility": "250 panel - 26 Tier-A selection-tail - TMOD (alias unadjudicated) - 7 AdherentN<400 = 216 dev-primary; confirmatory 207 = dev-primary present in Sanger Table 6 (schema-verified). Organoids: CRISPR_available + donor not Broad-overlapping; library rule minLib-else-v1_1 (dual-library: minLib primary, v1_1 sensitivity).",
+  "partitions": {
+    "manifest": "data/split_manifest.json (final, metadata-only basis; sample+donor ID lists frozen)",
+    "A_development": "Broad study-specific figshare 29472362 v1 (inspected)",
+    "B_policy": "NO untouched biological evidence; reused-data engineering evaluation only (config/episodes.json panels)",
+    "C_external": "Sanger Table 6 LFC values quarantined in-zip until Lock 2 (schema/ID verification only; exposure log complete)"
+  },
+  "primary_parameter": "partial Spearman = Pearson corr of rank residuals: D_g (donor-averaged normalized |rank displacement| vs AdherentMean consensus ordering; donor-equal weights; ties = average ranks) vs L_g (locked lability operator), residualized on ranked |AdherentMean|",
+  "sensitivities_prespecified": [
+    "null-calibrated displacement D'_g = D_g - E_null(R0_g) (mechanical rank-position effect)",
+    "TMOD1-alias inclusion (208 genes)",
+    "v1_1 library for dual-library models",
+    "pathway-block bootstrap (library composition classes)",
+    "development-only Sanger refit from guide counts if feasible (preprocessing coupling)"
+  ],
+  "delta": {
+    "value": 0.2,
+    "justification": "BOUND wording restricted to association MAGNITUDE |partial rho|<0.20 (no triage-utility claim). 0.20 predeclared as the smallest panel-wide rank association considered scientifically material for this conditional question; justification is magnitude-based, independent of exploratory point estimate 0.055."
+  },
+  "dependency_strength_gate": "Per-gene 'dependency' language in atlas/claims requires mean Chronos <= -0.5 in the claimed condition (halfway to common-essential median ~-1); panel-wide association claims do not assert per-gene vulnerabilities.",
+  "multiplicity": "Single primary parameter. External secondary family (Holm FWER 0.05, exact list): [null-calibrated displacement version of primary, TMOD1-alias 208 version, v1_1-library version, unadjusted (raw) version]. All other analyses exploratory. Development searches never enter confirmatory multiplicity because the confirmatory config is frozen independently.",
+  "uncertainty": "Primary decision interval: donor-cluster bootstrap (see confirmatory_config). Broad-side resampling is stability/sensitivity ONLY and never governs SIGNAL/BOUND/NEGATIVE. Broad grouping: primary stability treats 6 models as clusters; conservative sensitivity merges same-lineage models into shared clusters; both reported. Normalization-fitting uncertainty (Sanger spline/ComBat within organoid cohort; Broad Chronos) is NOT propagated - disclosed limitation; development-only refit sensitivity uses quarantined outcomes ONLY inside the Lock-2 evaluation process, never as development input.",
+  "baselines_dev": "data/baselines_dev.json (strength-only rho=0.299, no-adjustment 0.149, partial 0.055 on 216; molecular predictive baselines inapplicable to narrowed estimand - no predictive claim made; C5 anchor exact)",
+  "invalid_rules": [
+    "non-Layer-A input to dev evaluator",
+    "Tier-A genes in primary scope",
+    "support n<50",
+    "verified orientation/preprocessing error",
+    "opposite-direction results are VALID evidence, never invalid",
+    "degenerate original ranks or scale-relative degenerate rankresiduals",
+    "missing/duplicate exact frozen gene membership",
+    "nonfinite raw inputs before ranking"
+  ],
+  "evaluator": {
+    "version": "evaluator_v4_unscored",
+    "module": "src/evaluator_v4.py",
+    "q": "null for every current development configuration and every synthetic diagnostic; admissible_for_policy=false; no ranking by q or substitution of zero; all legacy composite-q and permutation coverage outputs retired.",
+    "legal_spaces": {
+      "scopes": [
+        "primary216",
+        "confirmatory207",
+        "panel242_reference_filtered",
+        "tmod1_alias208"
+      ],
+      "operators": [
+        "mean_abs_delta",
+        "abs_mean_delta",
+        "max_abs_delta"
+      ],
+      "adjust": [
+        "none",
+        "base_strength",
+        "base_plus_organoid_mean (SIMULTANEOUS rank adjustment)"
+      ]
+    },
+    "ols_status": "OLS FE coefficients are the C5 reproduction ANCHOR only (src/baseline_ols.py); NOT a scored operator",
+    "canonical_config": "only {scope,operator,adjust} keys; unknown keys rejected; config_id over canonical fields only",
+    "validity": "descriptive_valid and valid_scientific_inference are distinct. Development fixed-gene point statistic has no justified samplinginterval. LOMO is model-composition sensitivity only. Unknown keys,nonfinite originalarrays,missing/duplicate frozenmembers anddegenerate rank residuals invalidate descriptiveoutput."
+  },
+  "trajectory_machinery": {
+    "branches": 6,
+    "refine_depth": 3,
+    "pilot_nodes": 24,
+    "rho_grid": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rho_weights": "uniform",
+    "replay_objective": "J(pi)=sum_rho w_rho * mean over COMMON eligible episodes of B_e(rho*B_ep); total ordering per PLAN 0.4.6",
+    "support_adequacy": "common eligible episodes >=4 AND >=50% of frozen list (pilot scale); Phase-5 comparison requires >=8 (fresh panels) else inadmissible-screen verdict",
+    "status_transition_table": {
+      "depth": "attempts in direction: 0 unexplored; 1-2 underexplored; 3-6 explored; >6 well_explored",
+      "promise": "best valid q in top quartile of domain frontier => promising; bottom quartile after >=3 attempts => unpromising; else unknown",
+      "fragility": "LOMO range > 0.15 or sensitivity sign flip => fragile; both checks pass => robust; else unknown",
+      "recoverability": "dominant outcome_class implementation_failure/invalid_result with named fix => recoverable; conceptual_failure on >=2 independent configs => dead; else n/a",
+      "precedence": "fields independent; derived 'saturated' = well_explored + best-q gain <0.02 over last 3 attempts (allocation only)"
+    }
+  },
+  "policy_comparison": {
+    "status": "NOT_ADMITTED_NONEXECUTABLE",
+    "q": null,
+    "quality_threshold": null,
+    "c9_status": "UNRESOLVED_COST_GATE / unachievable-by-design for biological reserved-evidence + USD savings (no untouched biological evidence; host USD unknown). Engineering comparison below is descriptive and does NOT satisfy C9.",
+    "reason": "No meaningfulcurrent scientificqualitytask; inconsistentninepaneldraft withdrawn in bothcontractandepisodes. Retainingoldnumericvalues isprovenance,not approval toexecute.",
+    "required_before_comparison": [
+      "genuineadmissibledata/task",
+      "fixedusefulqualityendpoint",
+      "coherentpaneldefinitionsandunitcounts",
+      "exactfixedbaselines/seeds",
+      "precisionandcensoring-compatibleCI",
+      "resource/costmatching",
+      "G2reviewandfreeze"
+    ],
+    "success_criteria": "Unchanged GOAL C8/C9; no substituteengineeringor syntheticpass."
+  },
+  "campaign_allocations": "config/allocations.json (allocations-lock1-v1: total + per-phase wall/nodes/model-calls, matching tolerances, E0 charging, deployment_count=1, no-progress rule, terminal reserve)",
+  "causal_gate": "No causal/mediation language without per-claim estimand+assumptions+identifying evidence (Lock1 templates + Lock2 recheck). Predictor named 'observed score lability'.",
+  "success_failure": "Terminal states per GOAL.md; failed/inconclusive external test stays failed/inconclusive; reuse of Layer-C outcomes makes later work exploratory.",
+  "conflict_hierarchy": "cancer_rsi_handoff.txt (user-designated ground truth) > GOAL.md > PLAN.md > contract.json > PROTOCOL.md summary. Nothing in this contract overrides the handoff specification.",
+  "confirmatory_config": {
+    "status": "FROZEN SEPARATELY; development search winners can NEVER alter it",
+    "scope": "confirmatory207",
+    "operator": "mean_abs_delta (equal-weight mean over 6 models of within-model mean |Dome-Plastic|)",
+    "adjust": "ranked |AdherentMean| only (base_strength)",
+    "endpoint": "D_g donor-averaged normalized |rank displacement| vs AdherentMean consensus ordering (average ranks for ties; donor-equal weights; minLib-else-v1_1)",
+    "parameter": "partial Spearman = Pearson corr of rank residuals (src/estimators.py partial_spearman)",
+    "decision_interval": "PRIMARY: donor-cluster percentile bootstrap over 144 Sanger donors (5000 reps, seed 20261028), L_g and consensus ranks treated as fixed measured covariates; estimand conditional on the 207 fixed genes and 6 measured Broad models. Failed replicate (degenerate) counted; >5% failures => INCONCLUSIVE by invalid interval.",
+    "stability_sensitivities_not_decision": [
+      "Broad model-cluster bootstrap (6 models, 2000 reps) - stability only",
+      "lineage-cluster grouping of Broad models (conservative donor-uncertainty sensitivity) + independent-model split sensitivity",
+      "leave-one-Broad-model-out",
+      "pathway-block bootstrap over genes"
+    ],
+    "invalid_rules_exact": {
+      "residual_degeneracy": "norm(residual)<=1e-12*max(1,norm(centered_rank_vector)); constant originalranks explicitly invalid",
+      "point": "degenerate/nonfinitepoint estimate invalid",
+      "replicate": "everydegenerate/nonfinite replicate countedfailed",
+      "interval": "more than250/5000failures,nonfinite endpoints,or width<=0 =>INCONCLUSIVE; no substituteinterval afterfailure",
+      "implementation": "src/confirmatory_estimand.py extraction/grouping and src/donor_kernel.py same kernel used by frozenfixtures"
+    }
+  },
+  "data_pins": {
+    "data_manifest": "data/data_manifest.json",
+    "source_manifests": [
+      "data/source_manifest_broad_figshare.json",
+      "data/source_manifest_sanger_figshare.json"
+    ],
+    "figshare_versions": {
+      "29472362": 1,
+      "28339340": 1
+    },
+    "code_pins": {
+      "DepMap-NextGen-Public": "5c6f1e0ab23b",
+      "SangerOrganoidBiobank": "0acbbd498f68"
+    },
+    "gene_scopes": "data/gene_scopes.json (regenerable via src/make_gene_scopes.py)",
+    "split_manifest": "data/split_manifest.json (prelock-v2:144unique donorIDs and148explicit sample-to-donor mappings; unchanged cohort membership)"
+  },
+  "generator_protocol": "config/generator_protocol.json (proposer-v2-prelock,strict list schema/runtime validator alignment; DRAFT; no comparison epoch started)",
+  "episodes": "config/episodes.json (v2 nonexecutable; rootconfigs retainedonly ascompatibilityprobes; qthresholdandcomparisonwithdrawn pendinggenuinetask)",
+  "status_rules": "src/status_rules.py direction_status() - total deterministic function (conventions in module docstring; tests in tests/test_g2_remediation.py)",
+  "round5_residuals_disposition": {
+    "header_scaling": "RESOLVED pre-Lock1: src/history_index.py hierarchical paging (<=50/page incl. header) + 100k-entry fixture test",
+    "memo_namespace": "RESOLVED pre-comparison: src/memo.py arm-owned keys + charging + order-invariance test; enforceable gate = any comparison run must construct MemoStore (runner acceptance test at Phase 4 gate)",
+    "replay_order_wording": "PLAN 0.4.6 total ordering is a REPLAY-SCREEN ordering only; retention/promotion exclusively by Phase-4 fresh paired comparison (this clause qualifies the approved PLAN text without editing it)"
+  },
+  "deferred_tests_with_gates": [
+    {
+      "test": "hidden-outcome invariance of full rendered proposer input",
+      "gate": "before pilot E0 first generation call",
+      "acceptance": "mutating unrevealed outcomes changes no rendered input bytes or policy decisions on fixture histories"
+    },
+    {
+      "test": "unsupported-replay + exact-context + common-support intersection",
+      "gate": "before first Phase-4 replay screen",
+      "acceptance": "fixture worlds: unsupported terminates episode copy; means only on common set; coverage reported per rho"
+    },
+    {
+      "test": "memo reconstruction byte-identical + replay cache-miss => unsupported",
+      "gate": "before first Phase-4 replay screen",
+      "acceptance": "repeated reconstruction zero extra model calls (stub-counted)"
+    },
+    {
+      "test": "access logging on guarded Layer-C path + CLI gate locks for all commands",
+      "gate": "before Lock 2",
+      "acceptance": "evaluate-external refuses pre-Lock2; every Table-6 access appends exposure record"
+    },
+    {
+      "test": "nested-donor fold fixtures",
+      "gate": "only if any predictive model is introduced (none in current estimand)",
+      "acceptance": "same-donor models never straddle folds"
+    },
+    {
+      "test": "reservation concurrency/retry/interruption + resume idempotence",
+      "gate": "thread/process contention,retry,outstanding reservation,and receipt resume checks implemented; production runner resume remains required before any pilot",
+      "acceptance": "interrupted reservation stays reserved; resume never repeats completed calls (ledger fixture)"
+    },
+    {
+      "test": "evaluator compatibility probe set (version changes)",
+      "gate": "any evaluator version change",
+      "acceptance": "all current developmentconfigs unscored; scalar/vector donor kernel matches,constantguard fixed; archived priorcode andoriginalfailedresults retained. Frozen q probes are diagnostics only and cannot selectpolicies."
+    }
+  ],
+  "historical_draft_hashes_from_G2r2": {
+    "../PLAN.md": "5e4e6051bd2ec6a6884d552ec77f085592d54eb7209f70508cc6ee2bcfbed35a",
+    "../GOAL.md": "5a0e393ac7673deefd4e0ea4643a33817371c2395897ae11e2cd667febeade77",
+    "PROTOCOL.md": "2fabf34976cf18b2d6a873eb7e7ebf49ab580b43e082dd45d8da57d6690cb7b0",
+    "src/evaluator_v2.py": "dda3e2ffcc5dd386ebfe7486a35e073756601bf3a947b7ad30c8215d32506360",
+    "src/estimators.py": "e6820799b87ddf4051792b2c216dd552295925f3da08ac74be8c0ecfb6325156",
+    "src/baseline_ols.py": "a69e4eacfc7ebeabed36e0e61f53b344cb0572f7bb33691f926b9c7bd11ed336",
+    "src/status_rules.py": "f730bca642f6737487f89179587d5997b3dfe631c42ca6551c17b55e0010fefd",
+    "src/history_index.py": "942a47c0c53be28d9ea528eb198da202f9da9777a807ddccb99640e659f6548e",
+    "src/memo.py": "54c5862b5b50d28a0b077a9b7ce5386519f9e26ebfdc11ce22f1f4c88b084c0a",
+    "src/budget.py": "501e90822af7a677c466703e33f26209f19139b6151322a29b926b1ddb1c21d0",
+    "src/lineage.py": "7274000a9097ca4465558044277217fd3a31cb07b6224622aa23d537ca00562c",
+    "config/generator_protocol.json": "19b902f0a1ad640b0901da2cf2135586fcff29d835cd5bd378bfeaa680b9ccfc",
+    "config/episodes.json": "cf2b6fd3b21bb503e280c789bc710a7cb62715f4ee959b17faeaf020d02f42b4",
+    "config/allocations.json": "bc6b00918a46afa118d0c07796cd7f826e6c898207f75fae0b65e5effbed248f",
+    "config/resources.json": "a010e8b9249075d8d7836b890d525a1696e9a997b789e54d459a7a67a6cc7d46",
+    "data/split_manifest.json": "bb05e6d43861df1f0831fcf24efb676c47db33f5fab8e6aa8cca3b4871a0984c",
+    "data/data_manifest.json": "c832ca8c4972eae23dd9c9030d92d0183c6cc40c3b85e053bf94d53e80beff31",
+    "data/gene_scopes.json": "2b4958407bf741ac1c371e4b18c433288d5754f9b3134094986dc5c0f7eb0881"
+  },
+  "hashes_at_lock": {},
+  "current_policy_feasibility": {
+    "status": "NOT_ADMISSIBLE_WITH_CURRENT_DEVELOPMENT_ASSETS",
+    "source": "reviews/uncertainty_followup_xhigh_v1.md",
+    "reason": "No meaningful scientific quality optimization target supported by fixed current assets. Do not create a pilot or cycles using synthetic/reused stability scores as scientific reward.",
+    "required_next_step": "Obtain genuine admissible developmenttask/data with fixed usefulqualityendpoint through Sol-xhigh proposal and Sol-high review,or document exact unmetgates through the no-progress/terminal protocol. Synthetic pass never clearsG2."
+  },
+  "prelock_algorithmic_acceptance": {
+    "status": "PASS_after_verified_bugfix",
+    "source_proposal": "reviews/uncertainty_followup_xhigh_v1.md",
+    "failed_v1": "diagnostics/donor_calibration_v1/results.json",
+    "passing_v2": "diagnostics/donor_calibration_v2/results.json",
+    "arrays_unchanged": true,
+    "null_covered": "95/100",
+    "nonzero_rho0_6_covered": "97/100",
+    "interpretation": "screens gross algorithmic failures only; not biological coverage certification; no scientific or policy reward",
+    "failure_fixed": "explicit constant centered-rank guard prevents projection roundoff masquerading as residual variation"
+  },
+  "retired_policy_comparison_draft": {
+    "c9_status": "UNRESOLVED_COST_GATE / unachievable-by-design for biological reserved-evidence + USD savings (no untouched biological evidence; host USD unknown). Engineering comparison below is descriptive and does NOT satisfy C9.",
+    "engineering_target": "9 frozen task panels (scopes {primary216, confirmatory207, panel242_reference_filtered} x adjustments {none, base_strength, base_plus_organoid_mean}) on reused Layer-A data; replication unit = RNG-seeded rollout (execution variability only; panels share genes/observations - NO biological independence claimed)",
+    "savings_estimand": "S = 1 - RM_learned/RM_fixed where RM_arm = equal-weight mean over panels of per-panel restricted-mean nodes-to-tau_q (censoring at B_ep cumulative budget; non-attainment contributes budget cap, restricted-mean identifiable)",
+    "primary_comparator": "original fixed exploration (E0 policy); strongest-baseline comparison secondary with bootstrap max-statistic across the 2 fixed baselines",
+    "interval": "paired bootstrap over seeds within panels (5000 reps) for S; panel jackknife reported as dependence sensitivity; one-sided 95% LB for the >=20% engineering margin",
+    "precision_feasibility_now": "9 panels x 4 seeds x 3 arms x <=4 nodes = <=432 evaluator calls (allocations-locked); outcome-free width check: seed-bootstrap of S under E0 pilot variance recomputed at Phase-5 freeze by frozen rule; if LB precision target (half-width <=0.15) unattainable with locked rollouts, engineering comparison reported descriptive-only",
+    "tau_q": "config/episodes.json rule (median best-so-far valid q; edge cases + attainability by construction stated there)"
+  }
+}

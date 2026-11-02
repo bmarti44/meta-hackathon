@@ -1,0 +1,19 @@
+FINAL TERMINAL DETERMINATION (gpt-6.1-sol, xhigh) - protected slot 3/3, spent at explicit user direction 2026-10-29. Read-only. This is the campaign's final adjudication; be complete and exact.
+
+Adjudicate GOAL.md (as amended 2026-10-29) against cancer_rsi_handoff.txt §12 (13 criteria C1-C13), gate by gate, from primary artifacts - not from summaries alone. Prior determinations: v1/v2 ACTIVE_NOT_TERMINAL (v2: 95/100 support; its C1/C2 PARTIAL calls predate later adjudications).
+
+Evidence map (verify what you rely on):
+- GOAL.md (incl. 2026-10-29 C9 amendment), PLAN.md, cancer_rsi_handoff.txt
+- Lock-S: lock_s/LOCK2_COMMIT.json, lock_s/results/external_v1.json (BOUND rho=-0.146 [-0.175,-0.114], 148 models/142 patients post-reconciliation, patient-weighted unquantified, envelope vacuous)
+- Identity/reproduction/traceability: generations/sgen007 (98), sgen008 (95), sgen009 (91->92), sgen002/sgen005
+- Novelty: reviews/ novelty audits v4-v8, sgen003 adjudication (C1 MET claim), sgen014 completion (S1 visual log zero panels; 3,634-record screen 0 overlaps; qualified stage-2 deviation)
+- Fresh pool + feasibility: sgen010 POOL_IDENTIFIED (1,106/1,069 disjoint; 92), sgen011 NEITHER_PASSES, sgen012 A_STILL_UNRESOLVED (97; two-arm structurally impossible), sgen013 FAIL (98; L/B coverage 1 component), pgen005 SPEC (rollout gate unpassed; zero policy cycles ever)
+- Cost: ledger/host_cost_estimate_v7.json ($34.1806698 est / 66 calls; $0 metered; micro-review 100), GOAL amendment ledger goal_c9_amendment_20261029
+- Governance incidents: allocations pin incident + remediation (98; LOCK2 30/30 verify; shadow budget root), ledger/experiments.jsonl (149+ entries), ledger/resources.jsonl, generations/sgen014/gate_update.json, STATUS.md, status.json, GENERATIONS.md, manuscript/ (refreshed, traceability PASS)
+- Outcome files in ~/Downloads: never opened (exposure ledgered). Do NOT read them or Gene.csv values.
+
+Output, in this order:
+Line 1 exactly: TERMINAL_LABEL: <COMPLETE_* label | SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE | ACTIVE_NOT_TERMINAL | other precise non-complete label>
+Line 2 exactly: GOAL_COMPLETE: <YES|NO>
+Then: per-gate table C1-C13 (MET/PARTIAL/UNMET + evidence + exact remaining requirement if any); critical/high objections; whether SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE or any complete-adjacent label is established and why/why not; final resource accounting statement; what external evidence would reopen completion; closing certification sentence with score: DETERMINATION_SCORE: <0-100> (support for THIS determination).
+Review-package scores do not substitute for gate evidence. Mark single-source claims unconfirmed.

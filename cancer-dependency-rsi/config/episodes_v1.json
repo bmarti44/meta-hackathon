@@ -1,0 +1,71 @@
+{
+  "version": "episodes-lock1-v1",
+  "pilot_E0": {
+    "branches": [
+      {
+        "branch_id": "E0-B1",
+        "root_config": {
+          "scope": "primary216",
+          "operator": "mean_abs_delta",
+          "adjust": "base_strength"
+        },
+        "budget_nodes": 4
+      },
+      {
+        "branch_id": "E0-B2",
+        "root_config": {
+          "scope": "primary216",
+          "operator": "mean_abs_delta",
+          "adjust": "none"
+        },
+        "budget_nodes": 4
+      },
+      {
+        "branch_id": "E0-B3",
+        "root_config": {
+          "scope": "primary216",
+          "operator": "abs_mean_delta",
+          "adjust": "base_strength"
+        },
+        "budget_nodes": 4
+      },
+      {
+        "branch_id": "E0-B4",
+        "root_config": {
+          "scope": "primary216",
+          "operator": "max_abs_delta",
+          "adjust": "base_strength"
+        },
+        "budget_nodes": 4
+      },
+      {
+        "branch_id": "E0-B5",
+        "root_config": {
+          "scope": "confirmatory207",
+          "operator": "mean_abs_delta",
+          "adjust": "base_strength"
+        },
+        "budget_nodes": 4
+      },
+      {
+        "branch_id": "E0-B6",
+        "root_config": {
+          "scope": "primary216",
+          "operator": "mean_abs_delta",
+          "adjust": "base_plus_organoid_mean"
+        },
+        "budget_nodes": 4
+      }
+    ],
+    "B_ep_nodes": 4,
+    "total_nodes": 24,
+    "policy": "fixed_exploration_v1 (hand-designed; frozen before pilot run)",
+    "tau_q_rule": "median over branches of best-so-far valid q at budget end (B_e(B_ep)); branches with zero valid nodes excluded from median but counted in report; <3 valid branches => tau undefined, Phase-5 threshold comparison inadmissible (descriptive only). Attainability: E0 itself attains tau on >=half its branches by construction of best-so-far + median."
+  },
+  "replay_support": {
+    "pilot_screen": "episodes = 6 E0 branches; adequacy per rho with w>0: common eligible >=4 AND >=50% of 6; else inadmissible screen -> fresh fallback (SPEC pre-listed order)",
+    "cycle_screen": "episodes = all branches in frozen worlds listed in cycle SPEC; adequacy >=6 AND >=50% per rho",
+    "phase5": "NO replay screen; fresh rollouts only on 9 task panels (3 scopes x 3 adjustments; panel242 excluded from primary panels, sensitivity only) x 4 seeds x B_ep=4 nodes"
+  },
+  "robustness_statistic_R": "1 - min(1, LOMO_range/0.3) (evaluator stability component)"
+}

@@ -1,0 +1,4 @@
+Independent review (gpt-6.1-sol, high), read-only, cancer-dependency-rsi.
+Review pgen004d + sgen006: generations/pgen004d/{SPEC.md,screen_verdict_v1.json,metering_validation_v1.json} + src/tree_cpu.py + tests/test_tree_cpu.py; generations/sgen006/{SPEC.md,screen_verdict_v1.json,resource_metadata_v1.json}.
+Verify: ledger-first locks; Witness A fail logic (ChatGPT auth, no cost surface - do not read secret values); meter validation methodology and stated limits; sgen006 dispositions vs retained abstracts (Khalili single avatar, Lo cisplatin endpoint, droplet, Han); bounded-search honesty; request counts vs ceilings.
+Issues severity+file:line+fix. End exactly: P004D_S006_SCORE: <0-100>

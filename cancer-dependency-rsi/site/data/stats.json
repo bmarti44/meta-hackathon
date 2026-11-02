@@ -1,0 +1,206 @@
+{
+ "n_genes": 17525,
+ "n_hits": 456,
+ "n_gains": 249,
+ "n_losses": 207,
+ "n_medium": 387,
+ "frac_medium_gains": 0.8594377510040161,
+ "frac_medium_losses": 0.8357487922705314,
+ "hc3_gains": 0.8152610441767069,
+ "hc3_losses": 0.7536231884057971,
+ "slope_gains": 0.8420903351582893,
+ "slope_losses": 0.8614024073891846,
+ "boot_slope_ci": [
+  0.8164129003155716,
+  0.9881849248558856
+ ],
+ "boot_slope_med": 0.8981435460834282,
+ "boot_freq_ge_half": 0.7214912280701754,
+ "heldout_slope": 0.9633793588905812,
+ "heldout_corr": 0.9741318854795048,
+ "loo_min_retention": 0.9354005167958657,
+ "loo_slope_range": [
+  0.8780447030511164,
+  0.9228334134373849
+ ],
+ "broad_gain_flags": {
+  "medium_attributable": 135,
+  "not_a_hit": 129,
+  "unresolved": 20,
+  "format_candidate": 1
+ },
+ "broad_strict_flags": {
+  "medium_attributable": 16,
+  "unresolved": 1
+ },
+ "sanger": {
+  "n_listed": 751,
+  "n_in_broad_table": 725,
+  "flags": {
+   "not_a_hit": 515,
+   "medium_attributable": 174,
+   "unresolved": 35,
+   "format_candidate": 1
+  },
+  "n_also_our_hit": 210
+ },
+ "format_genes": [
+  "LSM7"
+ ],
+ "survivors_top": [
+  {
+   "g": "CENPN",
+   "D": 0.295,
+   "rA": -0.262,
+   "rF": 1.056
+  },
+  {
+   "g": "WDR12",
+   "D": 0.266,
+   "rA": -0.172,
+   "rF": 1.077
+  },
+  {
+   "g": "EPRS1",
+   "D": 0.269,
+   "rA": -0.128,
+   "rF": 0.778
+  },
+  {
+   "g": "UTP4",
+   "D": -0.324,
+   "rA": 0.08,
+   "rF": 0.891
+  },
+  {
+   "g": "ATR",
+   "D": 0.296,
+   "rA": 0.104,
+   "rF": 0.859
+  },
+  {
+   "g": "AHCTF1",
+   "D": 0.339,
+   "rA": 0.174,
+   "rF": 0.745
+  },
+  {
+   "g": "VPS52",
+   "D": 0.266,
+   "rA": 0.251,
+   "rF": 0.725
+  },
+  {
+   "g": "GRWD1",
+   "D": -0.271,
+   "rA": 0.274,
+   "rF": 0.565
+  },
+  {
+   "g": "IARS2",
+   "D": 0.279,
+   "rA": 0.282,
+   "rF": 0.671
+  },
+  {
+   "g": "CDC73",
+   "D": 0.334,
+   "rA": 0.283,
+   "rF": 0.797
+  },
+  {
+   "g": "CDC40",
+   "D": 0.352,
+   "rA": 0.293,
+   "rF": 0.956
+  },
+  {
+   "g": "DDB1",
+   "D": 0.368,
+   "rA": 0.302,
+   "rF": 0.339
+  },
+  {
+   "g": "BCAS2",
+   "D": 0.416,
+   "rA": 0.305,
+   "rF": 0.925
+  },
+  {
+   "g": "PFDN6",
+   "D": 0.421,
+   "rA": 0.332,
+   "rF": 0.343
+  },
+  {
+   "g": "DDX3X",
+   "D": -0.306,
+   "rA": 0.341,
+   "rF": 0.817
+  }
+ ],
+ "top_medium_gains": [
+  {
+   "g": "SQLE",
+   "D": -0.83,
+   "rA": 1.076
+  },
+  {
+   "g": "MSMO1",
+   "D": -0.811,
+   "rA": 0.675
+  },
+  {
+   "g": "UROD",
+   "D": -0.628,
+   "rA": 0.845
+  },
+  {
+   "g": "MVD",
+   "D": -0.626,
+   "rA": 1.152
+  },
+  {
+   "g": "IDI1",
+   "D": -0.557,
+   "rA": 0.873
+  },
+  {
+   "g": "POLR2G",
+   "D": -0.538,
+   "rA": 1.462
+  },
+  {
+   "g": "FDFT1",
+   "D": -0.52,
+   "rA": 0.897
+  },
+  {
+   "g": "NSDHL",
+   "D": -0.503,
+   "rA": 0.511
+  },
+  {
+   "g": "FZD5",
+   "D": -0.489,
+   "rA": 0.912
+  },
+  {
+   "g": "FBXL5",
+   "D": -0.487,
+   "rA": 0.69
+  },
+  {
+   "g": "UBL5",
+   "D": -0.478,
+   "rA": 1.273
+  },
+  {
+   "g": "ACAT2",
+   "D": -0.476,
+   "rA": 0.638
+  }
+ ],
+ "generated": "2026-10-30T12:01:53.029861+00:00",
+ "revision": "v2r2 (Astra r1 fixes: dev-only calibration/preprocessing, symmetric format rule + flag_fdr, HC3, screen-level Humagne, common-support, %.6g export)"
+}

@@ -1,0 +1,85 @@
+{
+  "method": "receipt token counts x GPT-6.1 Sol list prices (see module docstring)",
+  "price_source": "developer.puter.com/tutorials/openai-api-pricing/ (Oct 2026, fetched 2026-10-29)",
+  "authorization": "user instruction 2026-10-29: estimate the cost from the chat history",
+  "actual_metered_spend_usd": 0.0,
+  "reservations_total_model_calls": 63,
+  "priced_calls": 63,
+  "unpriced_reservation_ids": [
+    "5d06eae9f5df400aabbbc24dc45b16e7",
+    "a1e29505b6684d67b536606a4c25b102",
+    "59ee508bb25142288c597781c07696c9",
+    "daafd347a96e4d02a3900cd185de87d6",
+    "b0e23963f4dd494880ec09e7641d3bba",
+    "e5cd62b958934e2e9d7a5bf237c67fe2"
+  ],
+  "imputations": [
+    {
+      "reservation_id": "5d06eae9f5df400aabbbc24dc45b16e7",
+      "name": "g2_unstick_xhigh_1",
+      "phase": "phase2_lock1",
+      "effort": "xhigh",
+      "imputed_est_cost_usd": 1.0219,
+      "rule": "max_receipt_phase_effort"
+    },
+    {
+      "reservation_id": "a1e29505b6684d67b536606a4c25b102",
+      "name": "g2_unstick_xhigh_1_retry1",
+      "phase": "phase2_lock1",
+      "effort": "xhigh",
+      "imputed_est_cost_usd": 1.0219,
+      "rule": "max_receipt_phase_effort"
+    },
+    {
+      "reservation_id": "59ee508bb25142288c597781c07696c9",
+      "name": "g2_unstick_xhigh_1_retry2",
+      "phase": "phase2_lock1",
+      "effort": "xhigh",
+      "imputed_est_cost_usd": 1.0219,
+      "rule": "max_receipt_phase_effort"
+    },
+    {
+      "reservation_id": "daafd347a96e4d02a3900cd185de87d6",
+      "name": "g2_unstick_xhigh_1_after_runtime_repair",
+      "phase": "phase2_lock1",
+      "effort": "xhigh",
+      "imputed_est_cost_usd": 1.0219,
+      "rule": "max_receipt_phase_effort"
+    },
+    {
+      "reservation_id": "b0e23963f4dd494880ec09e7641d3bba",
+      "name": "lock_s_high_review_v2",
+      "phase": "phase2_lock1",
+      "effort": "high",
+      "imputed_est_cost_usd": 1.0256,
+      "rule": "max_receipt_phase_effort"
+    },
+    {
+      "reservation_id": "e5cd62b958934e2e9d7a5bf237c67fe2",
+      "name": "xhigh_generation_consult_20261029",
+      "phase": "phase2_lock1",
+      "effort": "xhigh",
+      "imputed_est_cost_usd": 1.0219,
+      "rule": "max_receipt_phase_effort"
+    }
+  ],
+  "total_with_imputations_usd": 32.95,
+  "sensitivity_note": "savings claims must survive 2x and 4x each imputation (xhigh condition)",
+  "total_est_cost_usd": 32.95,
+  "by_phase": {
+    "phase2_lock1": {
+      "calls": 32,
+      "est_cost_usd": 18.99
+    },
+    "phase6_7": {
+      "calls": 31,
+      "est_cost_usd": 13.96
+    }
+  },
+  "caveats": [
+    "List-price estimate, not metered billing; subscription actual spend $0.",
+    "Long-context schedule applied per usage entry with input_tokens > 272000.",
+    "Events-fallback rows use last usage record in file; may undercount multi-turn calls.",
+    "Reasoning output tokens are included in output_tokens and priced once."
+  ]
+}

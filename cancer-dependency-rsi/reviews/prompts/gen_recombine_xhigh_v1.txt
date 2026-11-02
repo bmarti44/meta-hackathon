@@ -1,0 +1,19 @@
+GENERATION CONSULT (gpt-6.1-sol, xhigh), read-only, cancer-dependency-rsi. Pattern (user-endorsed, from ~/bufferright/business LOOP): propose new ideas, RECOMBINE the most promising verified components, screen cheaply, battery only screen-positives, ledger everything, sol-high reviews to >=90. User mandate: keep generating until you determine GOAL COMPLETE_*.
+
+Verified components available for recombination (read status.json, GENERATIONS.md, reviews/terminal_determination_xhigh_v2.md mandates, reviews/pgen004_design_xhigh_v1.md = your ENDPOINT:NO/PGEN004:NO_GO):
+W1 Identity-resolved raw-count universe: 251 eligible Sanger cell lines / 250 patients / 810 count files (C-overlap 0 vs full 142-patient set; KP3 excluded), official zip 2.85GB, license recorded, partitions computable metadata-first.
+W2 Local CPU now measured honestly: src/cpu_meter.py (RUSAGE_CHILDREN delta, labeled client-side) + run_bounded wall/RSS; LOCK2-pinned budget.py untouched.
+W3 Reproduction spine: full atlas chain v1->v4 byte-identical per-stage frozen; fresh uv-locked env passes; 81 tests green.
+W4 Scientific claim: C1 MET, novelty SUPPORTED, atlas C7 MET; inferential patient-weighting unresolved (envelope too wide, honestly).
+W5 Fail-closed acquisition (src/zipfetch.py v3: budgets reserved pre-dispatch, exact ranges, CRC) for any future downloads.
+Losers (do not resurrect as-is): TOK endpoint (your NO), max-call imputation, processed-matrix B tasks, C reuse, 108 unresolved filename lines.
+
+KEY RECOMBINATION HYPOTHESIS to adjudicate rigorously: deterministic (non-LLM) executable policies authored ONCE as code, with ZERO host-model calls inside the comparison epoch. All-in cost then = local measured CPU-seconds (+ wall) only, every material resource measured. Policy learning across generations happens between epochs (sol-xhigh proposes code, sol-high reviews) - those generation/review calls are charged as a fixed, symmetric, pre-capped overhead per epoch OR excluded by defining the epoch to start at frozen-policy rollout with generation cost reported separately as end-to-end (deployment-only vs end-to-end both reported, C9 primary predeclared as end-to-end with generation calls counted by TOK as a secondary descriptive, CPU primary). Does any variant of this satisfy handoff section 11 + C9 text ("total measured cost")? Answer ADJUDICATED_YES / YES_WITH_NAMED_CONDITIONS / NO with exact missing witness. Do not waive text.
+
+Then design the next THREE generations (business-LOOP style: screen -> battery -> recombine), cheapest discriminating experiment first, exact frozen parameters where possible:
+G-A: the policy generation (task on W1 with per-screen independent raw processing; schema witness; partitions; deterministic incumbent vs challengers; replay from real pilot trees; stopping/branching actions; why >=20% CPU savings is plausible or not).
+G-B: a scientific generation advancing C6/C3 without C reuse (e.g., patient-level inference on a NEW independent resource - name candidates or state none accessible).
+G-C: a recombination of A+B or a new mechanism.
+For each: SPEC skeleton, screen pass bar, battery gate, budget in calls/CPU/bytes, kill criteria.
+End exactly:
+ENDPOINT_V2: <...>; NEXT_GENERATION: <id + one line>; RECOMBINE: <parents>

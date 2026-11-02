@@ -1,0 +1,21 @@
+**Remediation substantially succeeds. No critical or high issues found; one medium and three low issues remain.** Higher scores indicate better integrity.
+
+1. **Medium — shadow-root integrity is assumed, not enforced.** The amended file and shadow copy currently match (`e92ddf2e…`), but they are independent files. [`model_call.py`](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/model_call.py:51) reads only the shadow and never checks equality or accounting-path identity. Future copy drift can silently change effective caps; replacing the ledger symlink with a separate directory can reset accounting because pinned `budget.py` creates/reads that directory. Use one allocation source and fail closed unless resources, ledger, and lock resolve to their canonical identities.
+
+2. **Low — calls lack a durable allocation identity.** Reservations, call identities, and receipts do not record the effective allocation version/hash. Current filesystem inspection and replay establish that this call uses amended caps, but retained records alone cannot establish that after configuration changes. Record the effective allocation digest in prospective call metadata. See [`call_identity()` and reservation metadata](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/model_call.py:22).
+
+3. **Low — the CLI test still accepts broad substrings.** [`test_cli_gate_lock`](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/tests/test_lineage_cli.py:24) accepts any nonzero return containing `"Lock2"` or `"already exists"`; these are not three exact refusal strings. Feeding it `"unexpected Lock2 parser failure"` or `"unrelated output directory already exists"` passed. Assert the expected exit/message combination for each controlled state and check package integrity independently.
+
+4. **Low — the new accounting integration has no retained regression coverage.** Existing model-call tests cover resume integrity; budget tests cover isolated roots. None exercises the new shadow mapping, shared historical usage, allocation drift, symlink identity, or fresh-call reserve/reconcile symmetry. My in-memory probes validate today’s implementation, but do not provide a lasting regression check.
+
+Verified:
+
+- **Restoration:** all **2,186 bytes** equal the recovered original; SHA-256 is `796482ea5e368e2de47039e80b7e5c461ed7bad84efa3a3e5d4bbe8c38405d9b`. **All 30 LOCK2 hashes pass.**
+- **Amendment:** node/rollout limits match Lock-1; wall increases are explicitly documented; timeout prose distinguishes historical and amended caps. The appended [correction](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/ledger/experiments.jsonl:110) withdraws “unrecoverable,” records the final numerical changes, and acknowledges sgen007.
+- **Shared accounting:** resources, ledger, resource ledger, and lock resolve to the canonical paths and identical device/inode pairs. There are **135 reservations, 134 reconciliations**, no duplicate IDs/reconciliations or orphan reconciliations.
+- **This call:** reservation `ce14d2d1de434fa1a4ad4e91b7d5babd` is in the [real ledger](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/ledger/resources.jsonl:271), with matching prompt hash, high effort, phase6_7, one call, and 600 seconds. It is the sole outstanding reservation. Replaying admission against preceding history accepts amended caps and rejects Lock-1. Its eventual reconciliation cannot be observed before this response finishes.
+- **Symmetry/timeouts:** an in-memory fresh-call/resume probe produced exactly one reservation and reconciliation through `BUDGET_ROOT`, with matching IDs and no redispatch. Phase2 allows 1,200 seconds; other phases default to 600.
+- **Lock-S:** pinned launcher/CLI remain unchanged. Read-only transaction replay reaches `budget: phase model_calls cap exceeded`, before dispatch. Direct execution instead encounters this sandbox’s append-lock `PermissionError`; an unmodified CLI-test pass was therefore not established.
+- **Provenance/results:** sgen007’s allocation expectation matches again. Both retained scientific results match atlas/v2 hashes. No files were changed.
+
+REMEDIATION_SCORE: 93

@@ -1,0 +1,3 @@
+Independent re-review (gpt-6.1-sol, high), read-only. Previous 72 (reviews/sgen009_high_review_v1.md).
+Verify: claim-level validation in src/sgen009_trace.py (12 claims vs valid artifact fields primary.ci95_donor_percentile.*, secondary estimates, LOMO; corruption fixtures replace-all incl secondary/CI/count); traceability_v6 inventory with output hashes; manuscript envelope disclosure + v8 cite + availability paragraph; limitations C1 MET correction; packet/repro commands with fresh destinations + sgen002 runner included.
+End exactly: SGEN009_FIX_SCORE: <0-100>

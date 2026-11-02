@@ -1,0 +1,35 @@
+{
+ "single_1p5": {
+  "measured": 1.5,
+  "wall": 1.5997455830220133,
+  "pids": {
+   "77886": 1.5
+  }
+ },
+ "multi_3x0p8": {
+  "measured": 2.35,
+  "expected_min": 2.4,
+  "pids": {
+   "78178": 0.01,
+   "78181": 0.78,
+   "78182": 0.78,
+   "78183": 0.78
+  },
+  "method": "os.fork workers (spawn via -c cannot pickle; earlier 0.0 was a validation-harness artifact, retained in git-less record here)"
+ },
+ "contamination": {
+  "measured_light_job": 0.01,
+  "unrelated_burn_s": 2.0
+ },
+ "failed": {
+  "rc": 3,
+  "measured": 0.0
+ },
+ "validation": {
+  "single_within_25pct": true,
+  "multi_recovers_majority": true,
+  "contamination_excluded": true,
+  "failed_job_recorded": true
+ },
+ "pass": true
+}

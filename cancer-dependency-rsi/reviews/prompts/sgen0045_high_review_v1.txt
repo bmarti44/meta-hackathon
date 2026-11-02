@@ -1,0 +1,7 @@
+Independent review (gpt-6.1-sol, high), read-only, cancer-dependency-rsi.
+Review sgen004 + sgen005:
+- generations/sgen004/SPEC.md + src/sgen004_envelope.py + envelope_v1.json: is the TV bound and verdict ENVELOPE_TOO_WIDE mathematically sound as a screen? Any silent upgrade of inferential labels?
+- generations/sgen005/SPEC.md + src/sgen005_upstream.py + upstream_reproduction_v2.json (+v1 failure preserved) + upstream_nuance.json + fresh_env_report_v1.json: verify stage logic (generated v1 feeds v2), frozen-hash handling, fresh-env scope honesty.
+- src/zipfetch.py v3 budgets/consistency + tests (post-90 hardening).
+Render updated C6/C10/C11 snapshot. Issues severity+file:line+fix. End exactly:
+SGEN45_REVIEW_SCORE: <0-100>; C11:<...>

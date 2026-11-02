@@ -1,0 +1,15 @@
+Improved from 82, but still below the ≥90 acceptance bar.
+
+1. **HIGH — Corrupted count occurrences still pass.** [sgen009_trace.py:59](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/sgen009_trace.py:59) searches for expected numbers anywhere. Changing only the abstract’s `207` to `2070`, or its `142`/`250` to `999`, leaves other correct occurrences. Actual `main()` returned exit 0 and `pass: true` for each. Parse every count assertion by context and validate its complete numeric token.
+
+2. **HIGH — Numeric parsing silently skips some rho and interval occurrences.** [sgen009_trace.py:49](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/src/sgen009_trace.py:49) accepts only specific decimal syntax. Replacing the abstract estimate with `ρ = 1`, or its interval with `[-1, 1]`, still produced exit 0 and `pass: true`. `ρ=-0.999` is ignored; `−0.146e3` is truncated to the expected decimal prefix. Enumerate all labeled assertions and reject unmatched or invalid numeric syntax.
+
+3. **HIGH — Reproduction commands remain unusable from a fresh run.** [reviewer_packet.md:4](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/manuscript/reviewer_packet.md:4) and [reproducibility_report.md:11](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reproducibility_report.md:11) use `/tmp/run-$RANDOM/...` without creating those directories. Each expansion also selects a different directory; runners do not create report parents. Create one directory with `mktemp -d`, then give every runner a distinct filename inside it. Repair the packet’s broken inline-code backticks.
+
+4. **MEDIUM — Reproduction and claim provenance remain incomplete.** [reproducibility_report.md:12](/Users/bmarti44/github/bufferright/research/cancer-dependency-rsi/reproducibility_report.md:12) still cites `fresh_env_evidence_v3.json` and inventory v7. That summary contains no figure hash, and its sgen002 digest differs from retained reproduction report v3. The v8 JSON correctly names v3, but records no digest for it. Individual claims also lack artifact-field mappings, several lack manuscript locations, and LOMO extrema are no longer checked.
+
+Verified: all four requested fixtures reject; swapped secondaries are label-bound; reversed decimal intervals reject; atlas 70/80 substitutions reject. All five inventory hashes, three artifact hashes, and five atlas input/code hashes match. The retained v8 report exactly matches an in-memory regeneration. Atlas inventory entries name their runner and manifest. `sgen002 --report` support works. The displacement filename and limitations’ novelty-v8 pointer are fixed.
+
+Review was read-only; report writes were intercepted in memory. Full reproduction runners were not executed.
+
+SGEN009_FIX2_SCORE: 84

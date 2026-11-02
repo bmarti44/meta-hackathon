@@ -1,0 +1,18 @@
+{
+  "record": "cl_rd_raw_accounting_discriminator_v1",
+  "created_utc": "2026-10-28T21:46:00Z",
+  "source": "reviews/policy_route_xhigh_v2.md: 'The discriminator should therefore test accounting feasibility before outcome acquisition. If strict matching cannot be demonstrated and no measured expenditure endpoint exists, stop this RSI route.'",
+  "evidence_offline_no_network": {
+    "host_model_usd": "Every codex exec receipt records host_model_cost_usd='unknown' (reviews/*.receipt.json); codex-cli 0.165.0 JSON events expose usage tokens (input, cached_input, output, reasoning) but no expenditure.",
+    "token_measurement": "Realized token usage is measured per call when the call completes (e.g. policy_route_xhigh_v2: 608,631 input / 537,856 cached / 9,060 output / 4,519 reasoning); failed/killed calls record null usage.",
+    "spec_constraints": [
+      "cancer_rsi_handoff.txt section 11: alternative endpoint allowed only if all other material resources are measured or strictly matched; 'A CPU-only advantage or token proxy cannot satisfy C9 while material host-model costs remain unknown and unmatched.'",
+      "Sol-xhigh ruling (policy_route_xhigh_v1/v2): token counts x list price is a modeled valuation, not measured expenditure; equal call counts/efforts/prompt budgets do not establish matching.",
+      "GOAL.md model routing mandates gpt-6.1-sol xhigh for generating policy challengers, so learning overhead necessarily includes host-model calls of unknown cost with no fixed-arm counterpart of demonstrably equal realized cost."
+    ]
+  },
+  "determination": "FAIL: no measured host-expenditure endpoint exists in this environment, and strict matching of realized host-model consumption across arms (including learning overhead) cannot be demonstrated prospectively. Per the frozen stop rule, the CL-RD-RAW policy route stops BEFORE metadata/outcome acquisition. C9 = STRUCTURALLY_UNRESOLVED. C8/C13 execution alone could not establish COMPLETE_* or certify policy improvement.",
+  "reopening_condition": "User supplies a measured per-call host expenditure source for the codex/gpt-6.1-sol route (e.g. billing export or metered API with recorded cost), or authorizes a measured-cost model interface; then re-run this discriminator.",
+  "effort_reallocation": "Scientific gates C1, C2, C6, C7, C10, C11, C12 targeting SCIENTIFIC_RESULT_WITHOUT_RSI_EVIDENCE (conditional on C6 qualification), per Sol-xhigh priority list.",
+  "statuses": {"policy_improvement": "not_started (route stopped: C9 structurally unresolved)", "prediction_improvement": "not_evaluated_no_prediction_claim"}
+}

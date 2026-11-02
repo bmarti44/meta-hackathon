@@ -1,0 +1,18 @@
+{
+  "n_cols": 930,
+  "in_broad_metadata": 571,
+  "not_in_broad_metadata": 359,
+  "not_in_broad_examples": [
+    "ACH-001173",
+    "ACH-001956",
+    "ACH-001310",
+    "ACH-000133",
+    "ACH-001212",
+    "ACH-001957",
+    "ACH-001955",
+    "ACH-000658",
+    "ACH-001453",
+    "SIDM00499"
+  ],
+  "note": "Metadata-only classification. Organoid cohort identity inside this matrix CANNOT be established from Broad metadata alone; Sanger organoids likely carry ACH IDs assigned via Cell Model Passports. Crosswalk (HCM-SANG<->ACH) via Passports/DepMap Model.csv remains required; matrix contains Broad traditional lines (incl. the 6 glimpsed IDs)."
+}

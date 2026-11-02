@@ -1,0 +1,15 @@
+{
+ "panel": "heldout",
+ "timestamp": "2026-10-29T22:36:51.492339+00:00",
+ "n_models": 28,
+ "n_patients": 26,
+ "n_genes": 207,
+ "rho_partial_frozen_estimator": -0.07579317893784007,
+ "rho_raw_spearman": -0.2056432791660149,
+ "patient_boot95": [
+  -0.14986411483274792,
+  -0.00797353074245834
+ ],
+ "locks_reference": "Sanger Lock-S: rho=-0.1458 [-0.175,-0.114] BOUND",
+ "kill_criterion": "held-out 95% CI inside (-0.20,+0.20) terminates material-association claim"
+}

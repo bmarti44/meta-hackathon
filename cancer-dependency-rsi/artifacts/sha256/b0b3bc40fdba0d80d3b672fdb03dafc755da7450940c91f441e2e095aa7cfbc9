@@ -1,0 +1,120 @@
+"""Locked development estimators (Gate-G1-approved definitions; Lock 1 freezes numerics).
+
+- format lability L_g: equal-weight mean over the 6 format-contrast models of
+  (mean over that model's pairs of |Chronos_Dome - Chronos_Plastic|).
+  Interpretation: OBSERVED score lability (includes measurement noise).
+- partial Spearman: Pearson correlation of rank residuals (exact operation).
+- uncertainty: model-cluster bootstrap (6 models; stability analysis for the
+  conditional-on-measured-models estimand) + gene bootstrap (lower bound).
+All inputs Layer-A (development). Confirmatory Sanger evaluation lives in a
+separate Lock-2 module, never here.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from scipy.stats import spearmanr
+
+ROOT = Path(__file__).resolve().parent.parent
+RAW = ROOT / "data" / "raw" / "broad_figshare"
+
+
+def load_dev() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    meta = pd.read_csv(RAW / "minipool_screen_metadata.csv")
+    eff = pd.read_csv(RAW / "minipool_chronos_gene_effects.csv").set_index("ScreenID").loc[meta.cell_line_name]
+    tests = pd.read_csv(RAW / "organoids_vs_2d_gene_dependency_tests_full.csv")
+    tests["symbol"] = tests.Dependency.str.replace(r"\s*\(\d+\)$", "", regex=True)
+    return meta, eff, tests.set_index("symbol")
+
+
+def format_pairs(meta: pd.DataFrame, eff: pd.DataFrame) -> pd.DataFrame:
+    rows = {}
+    for (model, medium), g in meta.groupby(["DepMap ID", "Culture medium"]):
+        dome, plastic = g[g["Growth Format"] == "Dome"], g[g["Growth Format"] == "Plastic"]
+        if len(dome) == 1 and len(plastic) == 1:
+            rows[f"{model}|{medium}"] = eff.loc[dome.cell_line_name.iloc[0]] - eff.loc[plastic.cell_line_name.iloc[0]]
+    return pd.DataFrame(rows)
+
+
+def lability(deltas: pd.DataFrame, model_draw: list[str] | None = None) -> pd.Series:
+    by_model: dict[str, list[int]] = {}
+    for i, c in enumerate(deltas.columns):
+        by_model.setdefault(c.split("|")[0], []).append(i)
+    models = model_draw or sorted(by_model)
+    per = [deltas.iloc[:, by_model[m]].abs().mean(axis=1) for m in models]
+    return pd.DataFrame(per).T.mean(axis=1)
+
+
+RANK_RESID_TOL = 1e-12
+
+
+def _rank_resid(a: np.ndarray, Z: np.ndarray) -> np.ndarray:
+    a, Z = np.asarray(a, dtype=float), np.asarray(Z, dtype=float)
+    if a.ndim != 1 or Z.ndim != 2 or Z.shape[0] != len(a):
+        raise ValueError("incompatible input/covariate shape")
+    if not np.isfinite(a).all() or not np.isfinite(Z).all():
+        raise ValueError("nonfinite original input or covariate")
+    ra = pd.Series(a).rank().values.astype(float)
+    if not np.isfinite(ra).all() or np.linalg.norm(ra-ra.mean()) <= RANK_RESID_TOL:
+        raise ValueError("degenerate ranks (constant or nonfinite input)")
+    Rz = np.column_stack([pd.Series(Z[:, j]).rank().values.astype(float) for j in range(Z.shape[1])])
+    if not np.isfinite(Rz).all():
+        raise ValueError("nonfinite covariate")
+    X = np.column_stack([np.ones(len(ra)), Rz])
+    beta, *_ = np.linalg.lstsq(X, ra, rcond=None)
+    r = ra - X @ beta
+    if not np.isfinite(r).all() or np.linalg.norm(r) <= RANK_RESID_TOL * max(1.0, np.linalg.norm(ra-ra.mean())):
+        raise ValueError("degenerate rank residuals")
+    return r
+
+
+def partial_spearman(y: np.ndarray, x: np.ndarray, z: np.ndarray) -> float:
+    """Pearson correlation of rank residuals (THE locked operation).
+
+    z may be 1-D (single covariate) or 2-D (simultaneous adjustment).
+    Raises ValueError on constant/nonfinite/degenerate inputs.
+    """
+    Z = np.asarray(z, dtype=float)
+    if Z.ndim == 1:
+        Z = Z.reshape(-1, 1)
+    return float(np.corrcoef(_rank_resid(np.asarray(y, dtype=float), Z),
+                              _rank_resid(np.asarray(x, dtype=float), Z))[0, 1])
+
+
+def null_expected_displacement(rank0: np.ndarray, G: int) -> np.ndarray:
+    """E|R - R0|/(G-1) for R uniform on 1..G (mechanical rank-position effect)."""
+    r = np.asarray(rank0, dtype=float)
+    if G < 2 or not np.isfinite(r).all() or np.any(r < 1) or np.any(r > G):
+        raise ValueError("invalid reference ranks or panel size")
+    # Average ranks of ties can be half-integers. Split the exact sum at
+    # floor(r); the integer-only triangular formula is wrong for tied ranks.
+    k = np.floor(r)
+    return ((2*k-G)*r + G*(G+1)/2 - k*(k+1)) / (G*(G-1))
+
+
+def dev_frame(genes: list[str]) -> pd.DataFrame:
+    meta, eff, tidx = load_dev()
+    d = format_pairs(meta, eff)
+    L = lability(d)
+    rows = [(g, float(L[g]), float(abs(tidx.loc[g, "MeanDifference"])), float(abs(tidx.loc[g, "AdherentMean"])))
+            for g in genes if g in d.index and g in tidx.index]
+    return pd.DataFrame(rows, columns=["gene", "L", "Tdev", "base"]).set_index("gene")
+
+
+def estimate(df: pd.DataFrame, deltas: pd.DataFrame | None = None, n_boot: int = 1000, seed: int = 20261028) -> dict:
+    rng = np.random.default_rng(seed)
+    rho_raw = float(spearmanr(df.L, df.Tdev).statistic)
+    rho_par = partial_spearman(df.Tdev.values, df.L.values, df.base.values)
+    out = {"n": int(len(df)), "raw_spearman": rho_raw, "partial_spearman": rho_par}
+    if deltas is not None:
+        models = sorted({c.split("|")[0] for c in deltas.columns})
+        boots = []
+        for _ in range(n_boot):
+            Lb = lability(deltas, list(rng.choice(models, size=len(models), replace=True))).loc[df.index]
+            boots.append(partial_spearman(df.Tdev.values, Lb.values, df.base.values))
+        boots = np.array([b for b in boots if np.isfinite(b)])
+        out["model_bootstrap_ci95"] = np.percentile(boots, [2.5, 97.5]).tolist()
+        out["model_bootstrap_note"] = "stability analysis conditional on the 6 measured models; not population inference"
+    return out

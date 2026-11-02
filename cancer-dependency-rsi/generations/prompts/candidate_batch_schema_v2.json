@@ -1,0 +1,161 @@
+{
+  "$defs": {
+    "Candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "bottleneck": {
+          "minLength": 1,
+          "title": "Bottleneck",
+          "type": "string"
+        },
+        "config": {
+          "$ref": "#/$defs/ScientificConfig"
+        },
+        "direction_id": {
+          "minLength": 1,
+          "title": "Direction Id",
+          "type": "string"
+        },
+        "evidence_attempt_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Attempt Ids",
+          "type": "array"
+        },
+        "fix_class": {
+          "anyOf": [
+            {
+              "enum": [
+                "bug_fix",
+                "support_fix",
+                "legalization",
+                "numeric_fix"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fix Class"
+        },
+        "origin": {
+          "enum": [
+            "new",
+            "refinement",
+            "underexplored_extension",
+            "combination",
+            "repair"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "parents": {
+          "items": {
+            "$ref": "#/$defs/Parent"
+          },
+          "title": "Parents",
+          "type": "array"
+        },
+        "priority": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Priority",
+          "type": "number"
+        },
+        "repairs_node": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Repairs Node"
+        }
+      },
+      "required": [
+        "origin",
+        "parents",
+        "config",
+        "direction_id",
+        "priority",
+        "bottleneck",
+        "evidence_attempt_ids"
+      ],
+      "title": "Candidate",
+      "type": "object"
+    },
+    "Parent": {
+      "additionalProperties": false,
+      "properties": {
+        "attempt_id": {
+          "minLength": 1,
+          "title": "Attempt Id",
+          "type": "string"
+        },
+        "contribution": {
+          "minLength": 1,
+          "title": "Contribution",
+          "type": "string"
+        }
+      },
+      "required": [
+        "attempt_id",
+        "contribution"
+      ],
+      "title": "Parent",
+      "type": "object"
+    },
+    "ScientificConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "adjust": {
+          "enum": [
+            "none",
+            "base_strength",
+            "base_plus_organoid_mean"
+          ],
+          "title": "Adjust",
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "mean_abs_delta",
+            "abs_mean_delta",
+            "max_abs_delta"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "primary216",
+            "confirmatory207",
+            "panel242_reference_filtered",
+            "tmod1_alias208"
+          ],
+          "title": "Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operator",
+        "adjust"
+      ],
+      "title": "ScientificConfig",
+      "type": "object"
+    }
+  },
+  "items": {
+    "$ref": "#/$defs/Candidate"
+  },
+  "maxItems": 40,
+  "minItems": 1,
+  "type": "array"
+}

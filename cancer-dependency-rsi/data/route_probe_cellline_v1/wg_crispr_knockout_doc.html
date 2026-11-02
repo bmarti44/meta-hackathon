@@ -1,0 +1,959 @@
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#003f83">
+    <title>
+        
+        CRISPR: Genome Scale Knockout
+        
+        
+        
+        - The Cancer Dependency Map at Sanger
+        
+        
+    </title>
+    
+    <meta name="description" content="Genome-wide CRISPR-Cas9 knockout screens (gene dependencies) for cancer cell lines and organoids, incl. Project Score." />
+    
+    
+    <link rel="canonical" href="https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/" />
+    
+
+    
+    
+    <meta property="og:title" content="CRISPR: Genome Scale Knockout" />
+    <meta property="og:description" content="Genome-wide CRISPR-Cas9 knockout screens (gene dependencies) for cancer cell lines and organoids, incl. Project Score." />
+    <meta property="og:url" content="https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://depmap_cms.cog.sanger.ac.uk/media/images/DepMapLogo.original.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CRISPR: Genome Scale Knockout" />
+    <meta name="twitter:description" content="Genome-wide CRISPR-Cas9 knockout screens (gene dependencies) for cancer cell lines and organoids, incl. Project Score." />
+    <meta name="twitter:image" content="https://depmap_cms.cog.sanger.ac.uk/media/images/DepMapLogo.original.png" />
+
+    <meta name="simplecookie_policy"  content="/cookies-policy/" />
+    <script type='text/javascript' src='/zxtm/cookies.js' id='simple-cookie-js'></script>
+    <script src="/zxtm/piwik3.js"></script>
+
+
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://depmap_cms.cog.sanger.ac.uk/static/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#004D7B">
+    <meta name="msapplication-TileImage"
+        content="https://depmap_cms.cog.sanger.ac.uk/static/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#004D7B">
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href=https://depmap_cms.cog.sanger.ac.uk/static/css/depmap.css>
+
+    
+    
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Genome-wide CRISPR knockout screens (gene dependencies) for cancer cell lines and organoids - Cell Model Passports", "description": "Genome-wide CRISPR-Cas9 knockout screens identifying gene dependencies (fitness genes) in human cancer cell lines and organoids, from the Cell Model Passports, Wellcome Sanger Institute, including Project Score and integrated Broad Institute Avana screens. Data are corrected for gene-independent Cas9 effects with CRISPRcleanR, batch-adjusted with ComBat and scored with BAGEL2.", "url": "https://depmap.sanger.ac.uk/documentation/datasets/wg-crispr-knockout/", "keywords": ["CRISPR", "gene dependency", "essential genes", "Project Score", "cancer cell lines", "organoids", "functional genomics"], "measurementTechnique": ["CRISPR-Cas9 knockout screen"], "variableMeasured": ["Gene dependency", "Gene fitness effect", "sgRNA read counts"], "creator": {"@type": "Organization", "name": "Wellcome Sanger Institute", "url": "https://www.sanger.ac.uk"}, "publisher": {"@type": "Organization", "name": "Wellcome Sanger Institute", "url": "https://www.sanger.ac.uk"}, "license": "https://depmap.sanger.ac.uk/documentation/data-usage-policy/", "isAccessibleForFree": true, "citation": [{"@type": "ScholarlyArticle", "name": "Prioritization of cancer therapeutic targets using CRISPR-Cas9 screens", "author": "Behan FM, et al.", "datePublished": "2019", "isPartOf": "Nature 568:511-516", "sameAs": "https://doi.org/10.1038/s41586-019-1103-9"}, {"@type": "ScholarlyArticle", "name": "Integrated cross-study datasets of genetic dependencies in cancer", "author": "Pacini C, et al.", "datePublished": "2021", "isPartOf": "Nature Communications 12:1661", "sameAs": "https://doi.org/10.1038/s41467-021-21898-7"}, {"@type": "ScholarlyArticle", "name": "A comprehensive clinically informed map of dependencies in cancer cells and framework for target prioritization", "author": "Pacini C, et al.", "datePublished": "2024", "isPartOf": "Cancer Cell", "sameAs": "https://doi.org/10.1016/j.ccell.2023.12.016"}, {"@type": "ScholarlyArticle", "name": "A tumour-derived organoid biobank maps cancer gene dependencies", "author": "Herranz-Ors C, et al.", "datePublished": "2026", "isPartOf": "Nature", "sameAs": "https://doi.org/10.1038/s41586-026-10830-y"}], "includedInDataCatalog": {"@type": "DataCatalog", "name": "Cell Model Passports", "url": "https://cellmodelpassports.sanger.ac.uk"}, "isBasedOn": [{"@type": "Dataset", "name": "Sanger CRISPR screens: unprocessed sgRNA read counts", "identifier": "Project_score_raw_counts", "url": "http://cmp.cog.sanger.ac.uk/download/Project_score_raw_counts.zip"}, {"@type": "Dataset", "name": "Broad CRISPR (Avana) Public 21Q2", "identifier": "10.6084/m9.figshare.12280541.v4", "url": "https://doi.org/10.6084/m9.figshare.12280541.v4"}]}</script>
+    
+</head>
+
+<body class="" data-spy="scroll" data-target="#docs-scrollspy" data-offset="220"
+>
+    
+    <div id="root">
+        
+        <nav class="navbar-expand-lg navbar-dark bg-dark navbar  underline">
+            <div class="container">
+<!--                <a href="/" class="navbar-brand">-->
+<!--                    <img src="https://depmap_cms.cog.sanger.ac.uk/static/images/sanger_logo.png"-->
+<!--                        class="d-inline-block align-top" alt="" width="166" height="57">-->
+<!--                </a>-->
+<!--                <a href="/" class="ml-3 navbar-brand">-->
+                  <a href="/">
+<!--                    <img src="https://depmap_cms.cog.sanger.ac.uk/static/images/depmap.png"-->
+<!--                        class="d-inline-block align-top" alt="depmap logo" width="144"-->
+<!--                        height="57">-->
+                      <img src="https://depmap_cms.cog.sanger.ac.uk/static/images/DepMapTitleLogoStacked.svg"
+                       class="" alt="depmap logo" width="144"
+                        height="60">
+                </a>
+<!--                <div class="w-100 d-sm-none"></div>-->
+<!--                <div class="ml-md-auto mt-md-2">-->
+                <div class="md-auto mt-md-2">
+                    <ul class="navbar-nav">
+                        <li class="ml-md-5 nav-item">
+                            <a class="nav-link "
+                                aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="ml-md-5 dropdown nav-item">
+                            <a aria-haspopup="true" href="#"
+                                class="dropdown-toggle nav-link "
+                                id="navbarDropdown"
+                                data-toggle="dropdown">Programmes</a>
+                            <div tabindex="-1" role="menu" class="dropdown-menu"
+                                aria-labelledby="navbarDropdown">
+                                <a tabindex="0" class="dropdown-item"
+                                    href="/programmes#models">DepMap <span
+                                        class="col-models">|</span> Models</a>
+                                <a tabindex="0" class="dropdown-item"
+                                    href="/programmes#drugs">DepMap <span
+                                        class="col-drugs">|</span> Drugs</a>
+                                <a tabindex="0" class="dropdown-item"
+                                    href="/programmes#genes">DepMap <span
+                                        class="col-genes">|</span> Genes</a>
+                                <a tabindex="0" class="dropdown-item"
+                                    href="/programmes#analytics">DepMap <span
+                                        class="col-analytics">|</span> Analytics</a>
+                                <div tabindex="-1" class="dropdown-divider"></div>
+                                <a tabindex="0" class="dropdown-item"
+                                    href="/programmes">All Programmes</a>
+                            </div>
+                        </li>
+<!--                        <li class="ml-md-5 nav-item">-->
+<!--                            <a class="nav-link "-->
+<!--                                href="/contributors">Contributors</a>-->
+<!--                        </li>-->
+                        <li class="ml-md-5 nav-item">
+                            <a class="nav-link active"
+                                href="/documentation">Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="w-100 d-sm-none"></div>
+                <a href="https://www.sanger.ac.uk/" class="navbar-brand">
+                        <img src="https://depmap_cms.cog.sanger.ac.uk/static/images/Wellcome_Sanger_Institute_Logo_Landscape_Digital_RGB_Full_Colour.svg"
+
+                        class="d-inline-block align-top" alt="" width="166" height="57">
+                </a>
+            </div>
+        </nav>
+
+        
+        <div class="content">
+            
+<div class="pb-5 container-fluid">
+    <div class="row h-100">
+        
+<div class="col-12 col-md-3 col-xl-2 px-md-4 pt-md-5 docs-sidebar">
+    <h4 class="mb-4"> <a href="/documentation/">
+            DepMap Documentation<a></h4>
+
+    <form action="/documentation/search" method="get" class="form">
+        <input type="text" name="query" value=""
+            placeholder="Search..." class="form-control search">
+    </form>
+    
+<div
+    class="flat-menu documentation no_heading mt-5">
+    
+    
+    
+
+<div class='list-group list-group-flush'>
+    
+    <a href="/documentation/datasets/"
+        class="list-group-item ancestor ">Datasets</a>
+    
+    
+
+<div class='list-group list-group-flush pl-2'>
+    
+    <a href="/documentation/datasets/gene-annotation-mapping/"
+        class="list-group-item ">Gene Mapping &amp; Cancer Driver Annotation</a>
+    
+    
+    <a href="/documentation/datasets/mutation/"
+        class="list-group-item ">Mutation</a>
+    
+    
+    <a href="/documentation/datasets/copy-number/"
+        class="list-group-item ">Copy Number</a>
+    
+    
+    <a href="/documentation/datasets/expression/"
+        class="list-group-item ">Expression</a>
+    
+    
+    <a href="/documentation/datasets/methylation/"
+        class="list-group-item ">Methylation</a>
+    
+    
+    <a href="/documentation/datasets/wg-crispr-knockout/"
+        class="list-group-item active">CRISPR: Dependencies</a>
+    
+    
+    <a href="/documentation/datasets/drug-sensitivity/"
+        class="list-group-item ">Drug Sensitivity</a>
+    
+    
+    <a href="/documentation/datasets/fusions/"
+        class="list-group-item ">Fusions</a>
+    
+    
+    <a href="/documentation/datasets/proteomics/"
+        class="list-group-item ">Proteomics</a>
+    
+    
+    <a href="/documentation/datasets/model-authentication-datasets/"
+        class="list-group-item ">Model Authentication for Datasets</a>
+    
+    
+</div>
+
+    
+    
+    <a href="/documentation/cell-models/"
+        class="list-group-item  ">Models</a>
+    
+    
+
+<div class='list-group list-group-flush pl-2'>
+    
+    <a href="/documentation/cell-models/glossary-terms/"
+        class="list-group-item ">Model Annotation &amp; Glossary of Terms</a>
+    
+    
+    <a href="/documentation/cell-models/model-relationships/"
+        class="list-group-item ">Model Relationships</a>
+    
+    
+    <a href="/documentation/cell-models/msi-ploidy-mutational-burden/"
+        class="list-group-item ">MSI, Ploidy &amp; Mutational Burden</a>
+    
+    
+    <a href="/documentation/cell-models/growth-rate/"
+        class="list-group-item ">Growth Rate</a>
+    
+    
+</div>
+
+    
+    
+    <a href="/documentation/api/"
+        class="list-group-item  ">API</a>
+    
+    
+
+<div class='list-group list-group-flush pl-2'>
+    
+    <a href="/documentation/api/endpoints/"
+        class="list-group-item ">Endpoints</a>
+    
+    
+    <a href="/documentation/api/modifiers/"
+        class="list-group-item ">Modifiers</a>
+    
+    
+</div>
+
+    
+    
+    <a href="/documentation/sanger-depmap-websites/"
+        class="list-group-item  ">Sanger DepMap Websites</a>
+    
+    
+    <a href="/documentation/data-usage-policy/"
+        class="list-group-item  ">Data Usage Policy</a>
+    
+    
+    <a href="/documentation/frequently-asked-questions/"
+        class="list-group-item  ">FAQ</a>
+    
+    
+</div>
+
+    
+    
+</div>
+
+</div>
+        <main class="col-12 col-md-9 col-xl-8 pt-md-5 px-md-5">
+            <nav class="d-none d-md-block">
+                
+                <ol class="breadcrumb">
+                    
+                    
+                    
+                    
+                    <li class="breadcrumb-item"><a
+                            href="/">Cancer Dependency Map</a></li>
+                    
+                    
+                    
+                    <li class="breadcrumb-item"><a
+                            href="/documentation/">Documentation</a></li>
+                    
+                    
+                    
+                    <li class="breadcrumb-item"><a
+                            href="/documentation/datasets/">Datasets</a></li>
+                    
+                    
+
+                    <li class="breadcrumb-item active">CRISPR: Dependencies</li>
+
+                </ol>
+                
+            </nav>
+            <div class="d-none d-sm-block d-xl-none scrollspy-wrapper">
+                <div id="docs-scrollspy" class="list-group list-group-horizontal">
+                    <span class="list-group-item font-weight-bold">
+                        Content:</span>
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#Overview">
+                        
+                        Overview
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#RawDataTable">
+                        
+                        Raw Data
+                        
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#ProcessingCellLines">
+                        
+                        Processing Cell Lines
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#ProcessingCRISPRCellLines">
+                        
+                        Processing CRISPR Cell Lines
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#LibraryCRISPRCellLines">
+                        
+                        Library CRISPR Cell Lines
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#ProcessingOrganoids">
+                        
+                        Processing Organoids
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#ProcessingCRISPROrganoids">
+                        
+                        Processing CRISPR Organoids
+                        
+                    </a>
+                    
+                    
+                    
+                    <a class="list-group-item list-group-item-action"
+                        href="#LibraryCRISPROrganoids">
+                        
+                        Library CRISPR Organoids
+                        
+                    </a>
+                    
+                    
+                </div>
+            </div>
+            <h1>CRISPR: Dependencies</h1>
+            <div class="row">
+                
+                
+
+<div class="col-12 col-xl-12" id="Overview">
+    
+    
+<div class="">
+    <div class="rich-text"><p>This page outlines raw data and the subsequent processing for use within the Cancer Dependency Map at Sanger. This data can be accessed through the <a href="https://cellmodelpassports.sanger.ac.uk/">Cell Model Passport</a> and explored using <a href="https://dataminer.depmap.sanger.ac.uk/">DepMap Miner</a>.</p><hr/><p></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="RawDataTable">
+    
+    
+<div class="">
+    <div class="rich-text"><h3><b>Raw Data</b></h3></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="">
+    
+    
+
+<table role="table" class="table">
+    
+    
+    <thead>
+        <tr>
+            
+            
+            <th >
+                
+                
+                Dataset Name
+                
+                
+            </th>
+            
+            
+            
+            <th >
+                
+                
+                Model Type
+                
+                
+            </th>
+            
+            
+            
+            <th >
+                
+                
+                Origin
+                
+                
+            </th>
+            
+            
+            
+            <th >
+                
+                
+                Data Type
+                
+                
+            </th>
+            
+            
+            
+            <th >
+                
+                
+                Link
+                
+                
+            </th>
+            
+            
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+        
+        <tr>
+            
+            
+            
+            <td >
+                
+                
+                CRISPR Dependencies 2024
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Cell Lines
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Sanger
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Unprocessed sgRNA read counts
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                <a href=http://cmp.cog.sanger.ac.uk/download/Project_score_raw_counts.zip>Sanger sgRNA Raw Counts</a>
+                
+                
+            </td>
+            
+            
+            
+        </tr>
+        
+        
+        
+        <tr>
+            
+            
+            
+            <td >
+                
+                
+                CRISPR (Avana) Public 21Q2
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Broad
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Unprocessed sgRNA read counts
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                <a href=https://doi.org/10.6084/m9.figshare.12280541.v4>Achilles_gene_effect_unscaled.csv</a>
+                
+                
+            </td>
+            
+            
+            
+        </tr>
+        
+        
+        
+        <tr>
+            
+            
+            
+            <td >
+                
+                
+                CRISPR Dependencies 2026
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Organoids
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Sanger
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                Unprocessed sgRNA read counts
+                
+                
+            </td>
+            
+            
+            
+            
+            
+            <td >
+                
+                
+                TBC
+                
+                
+            </td>
+            
+            
+            
+        </tr>
+        
+        
+    </tbody>
+</table>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="ProcessingCellLines">
+    
+    
+<div class="text-justify">
+    <div class="rich-text"><h3><b>Processed Data (Cell Lines)</b></h3><p>Descriptions of how the raw data was processed including algorithms and filtering. Processed datasets can be downloaded <a href="https://cellmodelpassports.sanger.ac.uk/downloads">here</a>, the active dataset can also be accessed using the DepMap web resources and API.</p><p></p><hr/><p></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="ProcessingCRISPRCellLines">
+    
+    
+<div class="">
+    <div class="rich-text"><p><b>Corrected Fold Changes</b></p><p>Gene independent responses (e.g. copy number) to CRISPR-Cas9 were corrected using <a href="https://github.com/francescojm/CRISPRcleanR">CRISPRcleanR</a>.</p><p>16 additional screens generated at Sanger were added to the <a href="http://cmp.cog.sanger.ac.uk/download/Project_score_archive_data.zip">Project Score</a> data. The screens were combined using ComBat, and correction vectors were estimated from eight models in both datasets to correct for differences in assay lengths. The Sanger day 14 screens were used as the baseline and the day 18 screens were batch corrected using the overlapping cell lines. Once the overlapping cell lines had been used to estimate the batch effects, only the day 14 screens were retained for further analysis. (<a href="https://doi.org/10.1016/j.ccell.2023.12.016">Pacini, Cancer Cell 2024</a>).</p><p>Independent datasets generated at Sanger and Broad showed batch effects due to differences in library design and assay length (<a href="https://pubmed.ncbi.nlm.nih.gov/31862961/">Dempster et al. Nat.Commun 2019</a>). To allow combined analysis of these two datasets they were batch corrected to account for these technical differences (<a href="https://pubmed.ncbi.nlm.nih.gov/33712601/">Pacini et al. Nat Commun 2021</a>). Batch correction was calculated using <a href="https://rdrr.io/bioc/sva/man/ComBat.html">ComBat</a> using a set of overlapping cell lines screened at both institutes. Where overlapping cell lines were present, the data from Sanger were preferentially selected for inclusion in the final combined datasets. Finally the first principal component is removed from the data that is associated with differences in media.</p><p></p><p><b>Defining Fitness Genes</b></p><p>Loss of fitness scores are generated from corrected FCs for both individual Sanger and Broad datasets and the combined CRISPR-Cas9 dataset using BAGEL2 (<a href="https://pubmed.ncbi.nlm.nih.gov/33407829/">Kim et al. Genome Med 2021</a>) to call significantly depleted genes. The gene-level Bayesian factors (BFs) are calculated as the average of the sgRNAs on a targeted-gene basis. As input to BAGEL2 we used reference sets of predefined essential and non-essential genes further curated to exclude high-confidence cancer driver genes. A statistical significance threshold for gene-level BFs is determined for each cell line. Each gene is assigned a scaled BF computed by subtracting the BF at the 5% FDR threshold (obtained from classifying reference essential/non-essential genes based on BF rankings) defined for each cell line from the original BF. For consistency of visualisation, all scaled BF values are multiplied by -1 resulting in significantly depleted values having a loss of fitness score &lt; 0. Archived Project Score v1 data was processed using an implementation of BAGEL in R as described (<a href="https://pubmed.ncbi.nlm.nih.gov/30971826/">Behan F, et al. Nature. 2019</a>).</p><p></p><p><b>Gene Fitness Metrics</b></p><ul><li>Loss of Fitness Score: Scaled Bayesian Factors values are multiplied by -1. A score &lt; 0 indicates a statistically significant effect on cell fitness.</li><li>Corrected Fold Change: Copy-number-bias corrected gene depletion fold change, computed between average representation of targeting sgRNAs post-transfection at the end of the experiment versus plasmid library.</li><li>Binary Gene Essentiality Score: Scaled Bayesian Factors &gt;0 are assigned 1 as significantly depleted and 0 otherwise.</li></ul><p></p><p><b>Core Fitness Genes</b></p><p>Fitness genes common to the majority of cell lines tested, or common within a cancer type, may be involved in cell essential processes - we refer to these as core fitness genes. In order to identify core fitness genes, we developed a statistical method, ADaM (Adaptive Daisy Model) which adaptively determines the minimum number of dependent cell models required for a gene to be classified as a core fitness gene. ADaM was implemented at both a cancer-type specific level and a pan-cancer specific level (code publicly available at <a href="https://github.com/DepMap-Analytics/ADAM2">https://github.com/DepMap-Analytics/ADAM2</a>).</p><p></p><p></p><hr/><p></p><p></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="LibraryCRISPRCellLines">
+    
+    
+<div class="text-justify">
+    <div class="rich-text"><h3><b>Sanger Library &amp; Data Generation (Cell Lines)</b></h3><p>The CRISPR library used for the Project Score screen (<a href="https://www.ncbi.nlm.nih.gov/pubmed/27760321">Tzelepis et al, 2016</a> is available from<a href="https://www.google.com/url?q=https://www.addgene.org/pooled-library/yusa-crispr-knockout-human-v1/&amp;sa=D&amp;ust=1554318914147000&amp;usg=AFQjCNEjKSvjfi8Ds_ytF3l4aTUWqOZ6hA"> Addgene, Cat no. 67989</a>) contains 90,709 sgRNAs targeting 18,009 genes (~5 sgRNAs/gene). All pooled screens were completed in technical triplicate at 100x coverage of the library (i.e. ~100 cells per sgRNA were transduced). Stringent quality control are applied at all stages of the experiment pipeline, including:</p><ul><li>every screened cell line has &gt;75% Cas9 activity;</li><li>every cell line is transduced with the library at &gt;15% efficiency;</li><li>cells are monitored for changes in morphology or growth rates following lentiviral transduction;</li><li>a DNA yield of &gt;72ug is required to maintain library coverage;</li><li>quality and size of all PCR products are checked.</li></ul><p>Further rigorous quality control assessment of the data are also completed described in the associated manuscript. Only data satisfying all quality control measures are included in this dataset.</p><p><b>Publication reference:</b> <a href="https://doi.org/10.1038/s41586-019-1103-9"><i>Behan, F.M., Iorio, F., Picco, G. et al. Prioritization of cancer therapeutic targets using CRISPR–Cas9 screens. Nature, 2019.</i></a></p><p></p><p>Additional data generated in head and neck squamous cell carcinoma models has been incorporated.</p><p><b>Publication reference:</b> <a href="https://doi.org/10.7554/eLife.57761">Annie Wai Yeeng Chai et al. Genome-wide CRISPR screens of oral squamous cell carcinoma reveal fitness genes in the Hippo pathway. eLife. 2020</a><br/><br/></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="ProcessingOrganoids">
+    
+    
+<div class="">
+    <div class="rich-text"><h3><b>Processed Data (Organoids)</b></h3><p>Descriptions of how the raw data was processed including algorithms and filtering. Processed datasets can be downloaded <a href="https://cellmodelpassports.sanger.ac.uk/downloads">here</a>, the active dataset can also be accessed using the DepMap web resources and API.<br/></p><hr/><p></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="ProcessingCRISPROrganoids">
+    
+    
+<div class="">
+    <div class="rich-text"><p><b>sgRNA Count Processing and Gene Knockout Fitness Effect Calling</b></p><p>Gene independent responses to CRISPR-Cas9 perturbations were corrected for library size, read-count distributions, and gene copy number bias using <a href="https://github.com/francescojm/CRISPRcleanR">CRISPRcleanR</a>. Batch effects between the two sgRNA libraries were corrected using <a href="https://rdrr.io/bioc/sva/man/ComBat.html">ComBat</a> on CRISPRcleanR normalised and copy number corrected gene log fold changes (LFCs). The resulting values were used as input for the BAGEL2 method (<a href="https://pubmed.ncbi.nlm.nih.gov/33407829/">Kim et al. Genome Med 2021</a>).</p><p>To improve comparability across organoids, LFCs were scaled using essential and non-essential genes as positive and negative controls, respectively. For each gene, the median LFC of non-essential genes was subtracted from the gene’s LFC, and the result was normalized by dividing it by the difference between the median LFCs of essential and non-essential genes. This scaling effectively adjusted gene-level LFCs based on a standard range defined by these control sets.</p><p>Loss of Fitness Scores were then generated from corrected fold changes using BAGEL2 (<a href="https://github.com/hart-lab/bagel">https://github.com/hart-lab/bagel</a>) to identify significantly depleted genes. Gene level Bayesian Factors (BFs) were computed as the mean of sgRNAs targeting each gene. As input, we used reference sets of predefined essential and non-essential genes, further curated to exclude high-confidence cancer driver genes.</p><p>For each organoid, a statistical significance threshold for gene level BFs was determined by classifying reference essential/non-essential genes based on BF rankings at a 5% false discovery rate (FDR). Each gene was assigned a scaled BF, obtained by subtracting the BF at the 5% FDR threshold from the original BF. For visualization consistency, all scaled BF values were multiplied by −1, such that significantly depleted genes had loss-of-fitness scores &lt; 0.</p><p></p><p><b>Gene Fitness Metrics</b></p><ul><li>Loss of Fitness Score: Scaled Bayesian Factors values are multiplied by -1. A score &lt; 0 indicates a statistically significant effect on cell fitness.</li><li>Scaled Corrected Fold Change: Copy-number-bias corrected gene depletion fold change, calculated from the average abundance of targeting sgRNAs at the end of the experiment relative to the plasmid library. Values were scaled across all organoids to improve cross-model comparability.</li><li>Binary Gene Essentiality Score: Scaled Bayesian Factors &gt;0 are assigned a value of 1 (significantly depleted), and 0 otherwise.</li></ul><p></p><p><b>Core Fitness Genes</b></p><p>The Adaptive Daisy Model (ADaM) implemented in the <a href="https://github.com/DepMap-Analytics/CoRe">CoRe</a> R package was applied using the same curated reference essential gene set described above to estimate false positive rates and identify core fitness genes.</p><p></p><p><b>Common Essential Genes</b></p><p>Pan-cancer* common essential genes were identified using the Area Under the Curve (AUC) method implemented in the <a href="https://github.com/DepMap-Analytics/CoRe">CoRe</a> R package. This method quantifies gene essentiality across multiple CRISPR/Cas9 screens by integrating the cumulative distribution of fitness effects, enabling robust identification of genes that are consistently essential across diverse cancer types.</p><p>*Although the goal was to include all organoids, only three cancer types were ultimately analysed due to limited sample numbers (pancreatic, n = 4; gastric, n = 3), and therefore the resulting core fitness gene set does not completely represent a pan-cancer cohort.</p><p></p><hr/><p></p></div>
+</div>
+    
+</div>
+                
+                
+
+<div class="col-12 col-xl-12" id="LibraryCRISPROrganoids">
+    
+    
+<div class="">
+    <div class="rich-text"><h3><b>Sanger Library &amp; Data Generation (Organoids)</b></h3><p></p><p>Organoids were screened using either the Yusa v1.1 library (<a href="https://doi.org/10.1038/s41586-019-1103-9">Behan et al., Nature 2019</a>) or the smaller derivative library MinLibCas9 (<a href="https://doi.org/10.1186/s13059-021-02268-4">Gonçalves et al., Genome Biol 2021</a>). Sixteen models were screened with both libraries. To enable data integration only sgRNAs shared between the two libraries were included. Applying this filter resulted in a final dataset for each organoid containing 16,562 genes targeted by at least two sgRNAs.</p><p></p><p><b>Publication reference:</b></p><p></p><hr/><p></p><p></p></div>
+</div>
+    
+</div>
+                
+            </div>
+        </main>
+        <div
+            class="d-none d-xl-block col-xl-2 border-left scrollspy-vertical-wrapper pt-md-5">
+            <div id="docs-scrollspy" class="list-group">
+                <span class="list-group-item font-weight-bold">Content</span>
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#Overview">
+                    
+                    Overview
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#RawDataTable">
+                    
+                    Raw Data
+                    
+                </a>
+                
+                
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#ProcessingCellLines">
+                    
+                    Processing Cell Lines
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#ProcessingCRISPRCellLines">
+                    
+                    Processing CRISPR Cell Lines
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#LibraryCRISPRCellLines">
+                    
+                    Library CRISPR Cell Lines
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#ProcessingOrganoids">
+                    
+                    Processing Organoids
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#ProcessingCRISPROrganoids">
+                    
+                    Processing CRISPR Organoids
+                    
+                </a>
+                
+                
+                
+                <a class="list-group-item list-group-item-action"
+                    href="#LibraryCRISPROrganoids">
+                    
+                    Library CRISPR Organoids
+                    
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+        <div class="container">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+              <div></div>
+            <div class="col mb-3">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.sanger.ac.uk/group/garnett-group/">
+                    <img src="https://depmap_cms.cog.sanger.ac.uk/static/images/Garnett_lab.png"
+                       class="d-inline-block align-top w-75" alt="lab logo"
+                        >
+                </a>
+            </div>
+<!--             <div class="col mb-3">-->
+
+<!--                </div>-->
+            <div class="col mb-3">
+              <h5 class="mb-4">DepMap at Sanger</h5>
+
+              <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><span>Version 2.0.0</span></li>
+                <li class="nav-item mb-2"><a href="/programmes" class="nav-link p-0 text-body-secondary">Programmes</a></li>
+                <li class="nav-item mb-2"><a href="/documentation" class="nav-link p-0 text-body-secondary">Documentation</a></li>
+                <li class="nav-item mb-2"><a target="_blank" href="https://www.sanger.ac.uk/policies/cookies/" class="nav-link p-0 text-body-secondary">Cookie Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col mb-2">
+              <h5 class="mb-4">Websites</h5>
+              <ul class="nav flex-column">
+                <li class="mb-2"><a target="_blank" rel="noopener noreferrer"  href="https://dataminer.depmap.sanger.ac.uk/" class="nav-link p-0 text-body-secondary">Data Miner</a></li>
+                <li class="mb-2"><a target="_blank" rel="noopener noreferrer" href="https://cellmodelpassports.sanger.ac.uk/" class="nav-link p-0 text-body-secondary">Cell Model Passports</a></li>
+                <li class="mb-2"><a target="_blank" rel="noopener noreferrer" href="https://gdsc-combinations.depmap.sanger.ac.uk/" class="nav-link p-0 text-body-secondary">GDSC^2</a></li>
+              </ul>
+            </div>
+
+            <div class="col mb-3">
+              <h5 class="mb-4 text-right">Contact</h5>
+                <ul class="nav flex-column">
+                <li class="mb-2 text-right"><a href="mailto:depmap@sanger.ac.uk">depmap@sanger.ac.uk</a></li>
+                    <br />
+                    <li class="mb-2 text-right">Wellcome Sanger Institute </li>
+                    <li class="mb-2 text-right"> Wellcome Genome Campus </li>
+                    <li class="mb-2 text-right">Hinxton, Cambridgeshire</li>
+                    <li class="mb-2 text-right">CB10 1SA, UK</li>
+                     </ul>
+            </div>
+
+              <div class="mt-2 col-12">
+                <hr class="blue">
+            </div>
+            <div class="mt-3 mt-md-0 col-12 col-md-12 col-lg-8"><small
+                    class="text-light">This site is hosted by the <a
+                        href="http://www.sanger.ac.uk">Wellcome Sanger
+                        Institute</a></small></div>
+            <div class="mt-3 mt-md-0 text-left text-lg-right col-12 col-md-12 col-lg-4">
+                <small class="text-light"><a href="http://www.sanger.ac.uk/legal/">Terms
+                        &amp;
+                        Conditions</a></small></div>
+          </footer>
+</div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    {# piwik2.js removed: an older copy of the institute tracker (piwik3.js, in <head>),
+       which counted every page view twice. #}
+
+    <script type="text/javascript" src="https://depmap_cms.cog.sanger.ac.uk/static/js/depmap.js"></script>
+
+
+
+    <!-- Matomo: DepMap docs site (site 104) -->
+    {# Uses its own tracker instead of the shared _paq queue: the institute tracker
+       (piwik3.js) takes over _paq, so settings pushed there never reached site 104
+       and added an extra page view to the institute's stats instead. #}
+    <script type="text/javascript">
+        (function () {
+            var u = "https://piwik.sanger.ac.uk/";
+            var g = document.createElement('script');
+            g.type = 'text/javascript';
+            g.async = true;
+            g.src = u + 'matomo.js';
+            g.onload = function () {
+                if (!window.Matomo || !window.Matomo.getTracker) { return; }
+                var tracker = window.Matomo.getTracker(u + 'matomo.php', 104);
+                tracker.trackPageView();
+                tracker.enableLinkTracking();
+            };
+            document.head.appendChild(g);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+
+    
+    
+    
+</body>
+
+</html>

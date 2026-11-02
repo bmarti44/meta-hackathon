@@ -1,0 +1,15 @@
+Required independent Sol-high (gpt-6.1-sol, high) RE-REVIEW (round 4 of max 5) of the scientific-only Lock package before Lock2 commit. Read-only: no downloads, no edits, do NOT open/decode Sanger Table 6 or any C outcome values.
+
+Project: /Users/bmarti44/github/bufferright/research/cancer-dependency-rsi
+
+History: r1 78 NO (reviews/lock_s_high_review_v1.md); r2 88 NO (reviews/lock_s_high_review_v2_retry1.md); r3 89 NO (reviews/lock_s_high_review_v3.md). Round-3 single HIGH finding and fix:
+- Launcher interruption could leave the evaluator unsupervised. Fixes (three layers):
+  (a) src/budget.py run_bounded: the monitoring loop is wrapped in try/except BaseException; on any interruption it kills the job's process group, reaps the child (10 s), reconciles the reservation with an 'interrupted' field and re-raises.
+  (b) src/run_external_eval.py launch: SIGTERM and SIGHUP are converted to KeyboardInterrupt during the bounded run (handlers restored afterwards), so (a) applies.
+  (c) src/external_eval.py start_parent_watchdog: immediately after require_bounded, a daemon thread polls os.getppid() every 0.25 s and SIGKILLs the job's own process group if the recorded launcher PID is no longer its parent (covers SIGKILL of the launcher). The start record now includes the child PID.
+  Regression: tests/test_external_eval.py::test_launcher_interruption_stops_child parametrized over SIGINT, SIGTERM, SIGKILL: real launcher subprocess on a synthetic fixture root; after the start record appears the launcher is signalled; the test asserts the child PID disappears, no result file exists, and (for SIGINT/SIGTERM) the ledger reconciliation records 'interrupted'. External-eval tests 19 passed; full suite 71 passed (ledgered job pytest_lock_s_v4).
+
+Review src/budget.py, src/run_external_eval.py, src/external_eval.py, tests/test_external_eval.py and anything else relevant. Verify the fix (including effects of the run_bounded change on other callers and on accounting), look for new defects, and decide readiness for Lock2 commit (binding every REQUIRED hash and citing the passing review sha256) followed by exactly one bounded execution.
+
+Output (<=700 words): issues by severity with file:line and verification status; then exactly one final line:
+LOCK_S_REVIEW_SCORE:<0-100>; READY_FOR_LOCK2:<YES|NO>
