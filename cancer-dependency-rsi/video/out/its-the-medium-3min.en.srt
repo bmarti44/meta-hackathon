@@ -1,0 +1,220 @@
+1
+00:00:00,750 --> 00:00:04,800
+Most cancer drugs fail before they reach a patient.
+
+2
+00:00:05,400 --> 00:00:08,952
+For decades, cancer cells have been grown flat, in a
+
+3
+00:00:08,752 --> 00:00:09,790
+plastic dish.
+
+4
+00:00:10,090 --> 00:00:14,215
+So labs now grow something closer to the real thing:
+
+5
+00:00:14,015 --> 00:00:17,535
+tiny 3D copies of a patient's tumour, called
+
+6
+00:00:17,335 --> 00:00:18,290
+organoids.
+
+7
+00:00:19,090 --> 00:00:22,727
+This year, two leading cancer centres used organoids
+
+8
+00:00:22,527 --> 00:00:26,229
+to switch off every gene, one at a time, and find the
+
+9
+00:00:26,029 --> 00:00:28,410
+ones a cancer can't live without.
+
+10
+00:00:28,910 --> 00:00:32,375
+Hundreds of genes mattered more in organoids than in
+
+11
+00:00:32,175 --> 00:00:35,514
+flat cells, and those are now being put forward as
+
+12
+00:00:35,314 --> 00:00:36,330
+drug targets.
+
+13
+00:00:37,130 --> 00:00:38,420
+Here's the catch.
+
+14
+00:00:38,720 --> 00:00:41,450
+Organoids change two things at once.
+
+15
+00:00:41,950 --> 00:00:45,650
+One is the shape. 3D instead of flat.
+
+16
+00:00:46,150 --> 00:00:48,460
+The other is the food.
+
+17
+00:00:48,760 --> 00:00:52,420
+Cells in a dish live in a liquid called the medium.
+
+18
+00:00:52,720 --> 00:00:56,557
+Organoids get a clean, lab-made medium with almost no
+
+19
+00:00:56,357 --> 00:00:57,380
+cholesterol.
+
+20
+00:00:57,980 --> 00:01:01,758
+So when a gene matters more in an organoid, which
+
+21
+00:01:01,558 --> 00:01:03,000
+change caused it?
+
+22
+00:01:04,100 --> 00:01:07,160
+The data to tell them apart already existed.
+
+23
+00:01:07,460 --> 00:01:10,834
+A big public database had flat cells grown on the
+
+24
+00:01:10,634 --> 00:01:11,870
+organoid medium.
+
+25
+00:01:12,170 --> 00:01:14,840
+Same diet, no 3D shape.
+
+26
+00:01:15,440 --> 00:01:19,077
+If a gene matters more there too, the shape can't
+
+27
+00:01:18,877 --> 00:01:20,830
+explain it. The food can.
+
+28
+00:01:22,230 --> 00:01:27,810
+With Muse, Meta's AI model, running the research loop,
+
+29
+00:01:27,610 --> 00:01:30,600
+we checked all 17,525 genes.
+
+30
+00:01:31,100 --> 00:01:35,080
+456 clearly behave differently in organoids.
+
+31
+00:01:35,480 --> 00:01:39,775
+So how many of those 456 also change when the only
+
+32
+00:01:39,575 --> 00:01:42,150
+thing you change is the food?
+
+33
+00:01:44,250 --> 00:01:46,050
+387.
+
+34
+00:01:46,550 --> 00:01:48,290
+Eighty-five percent.
+
+35
+00:01:49,790 --> 00:01:53,762
+So the effect may not come from the tumour's 3D shape
+
+36
+00:01:53,562 --> 00:01:56,680
+at all. It may come from what we feed it.
+
+37
+00:01:57,480 --> 00:02:01,053
+And in a patient, a tumour is fed by blood, which is
+
+38
+00:02:00,853 --> 00:02:02,350
+full of cholesterol.
+
+39
+00:02:02,700 --> 00:02:06,346
+So a weakness that only shows up on a diet with almost
+
+40
+00:02:06,146 --> 00:02:09,600
+no cholesterol may not exist in the patient at all.
+
+41
+00:02:10,500 --> 00:02:12,560
+But there's a simple way to check.
+
+42
+00:02:12,860 --> 00:02:15,850
+Put the cholesterol back into the organoid's food.
+
+43
+00:02:16,250 --> 00:02:19,739
+If these genes stop mattering, it was the food. If
+
+44
+00:02:19,539 --> 00:02:22,830
+they still matter, they're stronger candidates.
+
+45
+00:02:23,630 --> 00:02:27,190
+All of this is free at itsthemedium.com.
+
+46
+00:02:27,690 --> 00:02:31,129
+Researchers can paste their own list of genes and see
+
+47
+00:02:30,929 --> 00:02:33,880
+in seconds which ones look like diet effects.
+
+48
+00:02:34,480 --> 00:02:38,340
+Muse, Meta's AI model, is the research assistant.
+
+49
+00:02:38,640 --> 00:02:42,316
+Ask it a question and it searches the full table with
+
+50
+00:02:42,116 --> 00:02:45,793
+its own tools, shows every step, and links every gene
+
+51
+00:02:45,593 --> 00:02:46,580
+to the data.
+
+52
+00:02:47,380 --> 00:02:50,190
+Organoids are still a big step forward.
+
+53
+00:02:50,440 --> 00:02:53,710
+We just need to check what we're feeding them.
+
+54
+00:02:54,510 --> 00:02:55,760
+It's the Medium.
+
+55
+00:02:56,260 --> 00:02:58,180
+itsthemedium.com
+

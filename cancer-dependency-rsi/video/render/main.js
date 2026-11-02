@@ -18,11 +18,24 @@ const win = (t, a, b, fi = 0.5, fo = 0.5) => Math.min(eout(ramp(t, a, a + fi)), 
 function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
 /* ---------------- data ---------------- */
-const [TL, GENES] = await Promise.all([fetch('../narration/timeline.json').then(r => r.json()), fetch('genes.json').then(r => r.json())]);
+const VAR = new URLSearchParams(location.search).get('v');   // e.g. ?v=3min renders the 3-minute cut
+const [TL, GENES] = await Promise.all([fetch(`../narration/timeline${VAR ? '_' + VAR : ''}.json`).then(r => r.json()), fetch('genes.json').then(r => r.json())]);
 const L = TL.lines;
 const LI = new Map(L.map(l => [l.id, l]));
-const S = id => LI.get(id).start, E = id => LI.get(id).end;
-const SEC0 = n => L.find(l => l.sec === n).start, SEC1 = n => [...L].reverse().find(l => l.sec === n).end;
+const NEVER = 1e6;   // lines cut from a variant resolve to a time that never arrives, so their animations stay off
+const has = id => LI.has(id);
+const S = id => has(id) ? LI.get(id).start : NEVER, E = id => has(id) ? LI.get(id).end : NEVER;
+const SEC0 = n => L.find(l => l.sec === n)?.start ?? NEVER, SEC1 = n => [...L].reverse().find(l => l.sec === n)?.end ?? NEVER;
+/* anchors that cut lines used to provide */
+const NF = has('notflat') ? S('notflat') : E('flat') + 0.3;            // flat sheet lifts into an organoid
+const SER = has('serum') ? S('serum') : S('clean');                    // left dish turns to serum
+const SWEEP = has('small') ? E('small') + 0.05 : E('howmany') + 0.15;  // hits sweep onto the line
+const WHY = has('why') ? S('why') : S('notshape') - 0.6;               // 85% card hands over to the meaning
+const SAME = has('same') ? S('same') : S('notshape');                  // organoid = flat cells on the same food
+const BRK = has('break') ? S('break') : SEC1(8) + 0.9;                 // end of the put-it-back test
+const LOOK = has('lookup') ? S('lookup') : S('paste');                 // demo: end of the hero shot
+const LOOP = has('loop') ? S('loop') : SEC1(9) + 2.0;                  // demo: end of the Muse answer
+const RAN_MUSE = LI.get('ran').show.includes('Muse');
 const TOTAL = TL.total;
 const BYG = new Map(GENES.map(g => [g.g, g]));
 
@@ -303,11 +316,11 @@ function sceneIntro(t) {   // 1: why it matters
   const out = 1 - ease(ramp(t, end1 + 0.1, end1 + 1.3));
   headline(over, t, 'Most cancer drugs fail before they reach a patient.', S('fail'), E('fail') - 0.6, { size: 78, y: 520, out: E('fail') + 0.5 });
   headline(over, t, 'Part of the problem is the testing.', S('testing'), E('testing') - 0.4, { size: 56, y: 200, color: C.dim, w: 500, out: S('notflat') - 0.3 });
-  const dishA = win(t, S('flat') - 0.3, S('notflat') + 3.6, 1.2, 1.4) * out;
+  const dishA = win(t, S('flat') - 0.3, NF + 3.6, 1.2, 1.4) * out;
   dish(under, { cx: 0, floorY: -1.25, r: 2.6, a: dishA, liquid: 0 });
-  if (dishA > 0.01) label(over, 'a plastic dish', W / 2, 905, { a: dishA * win(t, S('flat') + 1.2, S('notflat') + 0.2) });
+  if (dishA > 0.01) label(over, 'a plastic dish', W / 2, 905, { a: dishA * win(t, S('flat') + 1.2, NF + 0.2) });
   if (t > S('flat') - 0.3) {
-    const grow = ramp(t, S('flat'), S('flat') + 2.8), m = ease(ramp(t, S('notflat'), S('notflat') + 2.9));
+    const grow = ramp(t, S('flat'), S('flat') + 2.8), m = ease(ramp(t, NF, NF + 2.9));
     drawCells(cloudA, LA, t, { floorY: -1.25, discR: 2.35, sphY: 0.05, sphR: 1.25, m, grow, size: lerp(0.15, 0.2, m), alpha: out, spin: 0.10 });
   }
   headline(over, t, 'Real tumours aren’t flat.', S('notflat'), E('notflat') - 0.2, { size: 60, y: 175, out: S('organoids') - 0.3 });
@@ -355,7 +368,7 @@ function sceneCatch(t) {   // 3 + 4
   const all = win(t, S('two') - 0.2, a1 + 1.0, 1.0, 1.0);
   headline(over, t, 'Here’s the catch.', S('catch'), E('catch'), { size: 84, y: 520, out: S('two') - 0.4 });
   const D = dishLayout(t), R = 1.38, floorY = -0.62;
-  const liq = ramp(t, S('medium'), S('medium') + 1.0), serum = ramp(t, S('serum'), S('serum') + 1.2), clean = ramp(t, S('clean'), S('clean') + 1.2);
+  const liq = ramp(t, S('medium'), S('medium') + 1.0), serum = ramp(t, SER, SER + 1.2), clean = ramp(t, S('clean'), S('clean') + 1.2);
   const foodGlow = win(t, S('diet'), E('diet') + 1.2, 0.3, 0.6) + win(t, S('food'), S('food') + 2.2, 0.3, 0.6) * 0.6;
   const leftTint = [Math.round(lerp(190, 205, serum)), Math.round(lerp(205, 60, serum)), Math.round(lerp(220, 40, serum))];
   dish(under, { cx: D.left, floorY, r: R, a: all, liquid: liq, tint: leftTint, tintA: lerp(0.07, 0.2, serum), glow: foodGlow });
@@ -370,7 +383,7 @@ function sceneCatch(t) {   // 3 + 4
     cholesterol(under, x - 30, y - 6, 7, all * serum * 0.75, C.amber); }
   const [lx] = toScreen(D.left, floorY, 0), [rx] = toScreen(D.right, floorY, 0), [mx] = toScreen(0, floorY, 0);
   const subA = all * win(t, S('two') + 0.8, a1 + 1.0, 0.6, 1.0);
-  label(over, 'classic flat culture', lx, 800, { a: subA * (1 - ramp(t, S('serum') - 0.4, S('serum'))) });
+  label(over, 'classic flat culture', lx, 800, { a: subA * (1 - ramp(t, SER - 0.4, SER)) });
   label(over, 'organoid', rx, 800, { a: subA * (1 - ramp(t, S('clean') - 0.4, S('clean'))) });
   text(over, 'serum', lx, 800, { fam: SERIF, size: 40, w: 600, color: '#ff8a70', a: all * serum, italic: true });
   label(over, 'nutrient-rich · from blood', lx, 838, { a: all * serum, size: 17 });
@@ -383,7 +396,7 @@ function sceneCatch(t) {   // 3 + 4
   chip(over, '2  food', W / 2 + 150, 175, { a: fd, color: '#ff8a70' });
   label(over, 'flat', lx, 330, { a: all * win(t, S('shape') + 1.4, S('food'), 0.4, 0.5), color: C.blue });
   label(over, '3D', rx, 330, { a: all * win(t, S('shape') + 1.4, S('food'), 0.4, 0.5), color: C.blue });
-  const medA = all * win(t, S('medium') + 0.6, S('serum') + 0.2, 0.5, 0.4);
+  const medA = all * win(t, S('medium') + 0.6, SER + 0.2, 0.5, 0.4);
   if (medA > 0) { const [px, py] = toScreen(D.right - R * 0.7, floorY + 0.28, R * 0.4); leader(over, px, py, px - 90, py - 150, medA, C.blue);
     text(over, 'the medium', px - 100, py - 160, { fam: SERIF, size: 40, w: 600, italic: true, align: 'right', a: medA, color: C.blue }); }
   headline(over, t, 'Which change caused it?', S('which') + 0.3, E('which') - 0.6, { size: 62, y: 290, out: S('existed') - 0.3 });
@@ -402,9 +415,9 @@ function sceneCatch(t) {   // 3 + 4
 const CHOL = ['SQLE', 'MSMO1', 'MVD', 'IDI1'], LEAD = ['SCAP', 'DDX3X', 'ITGB1'];
 function sceneField(t) {
   const in0 = SEC1(4) + 0.5, chart0 = S('chart') - 1.2, end7 = SEC1(7) + 0.8;
-  const inSec5 = t > in0 && t < S('why') + 0.8, inSec7 = t > chart0 && t < end7 + 1.5;
+  const inSec5 = t > in0 && t < WHY + 0.8, inSec7 = t > chart0 && t < end7 + 1.5;
   if (!inSec5 && !inSec7) { field.hide(); return; }
-  const sweep0 = E('small') + 0.05, reveal = t >= S('n85') - 0.02 && t < S('why') + 0.9;
+  const sweep0 = SWEEP, reveal = t >= S('n85') - 0.02 && t < WHY + 0.9;
   const fin = inSec5 ? ramp(t, in0 + 0.2, in0 + 2.4) : ramp(t, chart0, chart0 + 1.2);
   const fout = inSec7 ? 1 - ease(ramp(t, end7, end7 + 1.2)) : 1;
   const hitsOn = ramp(t, S('g456'), S('g456') + 1.2);
@@ -457,6 +470,8 @@ function sceneField(t) {
       const c1 = cnt * ramp(t, S('ran'), S('ran') + 0.4) * (1 - ramp(t, S('g456') - 0.3, S('g456')));
       text(over, n.toLocaleString('en-US'), W / 2, 150, { fam: MONO, size: 52, w: 500, a: c1 });
       label(over, 'genes, every one measured', W / 2, 196, { a: c1, size: 17 });
+      if (RAN_MUSE) { const ma = c1 * ramp(t, S('ran') + 0.2, S('ran') + 0.8); over.save(); over.globalAlpha = ma; over.fillStyle = 'rgba(8,6,5,0.88)'; over.fillRect(0, 228, W, 68); over.restore(); }
+      if (RAN_MUSE) chip(over, 'research loop run by Muse  ·  Meta’s AI model', W / 2, 262, { a: c1 * ramp(t, S('ran') + 0.2, S('ran') + 0.8), color: C.amber, size: 19 });
       const c2 = cnt * ramp(t, S('g456'), S('g456') + 0.4) * (1 - ramp(t, S('howmany') - 0.2, S('howmany') + 0.2));
       text(over, '456', W / 2, 150, { fam: MONO, size: 52, w: 500, a: c2 });
       label(over, 'behave differently in organoids', W / 2, 196, { a: c2, size: 17 });
@@ -500,7 +515,7 @@ function sceneField(t) {
 /* the 85% card, then section 6: why it matters */
 const SHORTLIST = ['SQLE', 'MSMO1', 'MVD', 'IDI1', 'FDFT1', 'MBTPS1', 'MBTPS2', 'NSDHL'];
 function sceneWhy(t) {
-  const r0 = S('n85'), w0 = S('why'), end6 = SEC1(6) + 0.9;
+  const r0 = S('n85'), w0 = WHY, end6 = SEC1(6) + 0.9;
   if (t < r0 - 0.02 || t > end6 + 1.2) return;
   const out6 = 1 - ease(ramp(t, end6, end6 + 1.0));
   over.save(); over.globalAlpha = (t < w0 + 0.9) ? 1 : 1 - ease(ramp(t, w0 + 0.9, w0 + 1.6)); over.fillStyle = '#060504'; over.fillRect(0, 0, W, H); over.restore();
@@ -522,13 +537,13 @@ function sceneWhy(t) {
     over.save(); over.globalAlpha = ga * 0.8; over.strokeStyle = C.red; over.lineWidth = 1.4; over.beginPath(); over.arc(gx, gy + 34, 7, 0, 7); over.moveTo(gx - 13, gy + 34); over.lineTo(gx + 13, gy + 34); over.moveTo(gx, gy + 21); over.lineTo(gx, gy + 47); over.stroke(); over.restore(); });
   label(over, 'put forward as drug targets', W / 2, 482, { a: ka * ramp(t, S('kind') + 1.6, S('kind') + 2.2), color: '#ff8a70', size: 17 });
   // same change: organoid = flat cells on the same food
-  const sa = win(t, S('same'), S('blood') - 0.3, 0.8, 0.6) * out6;
+  const sa = win(t, SAME, S('blood') - 0.3, 0.8, 0.6) * out6;
   if (sa > 0) {
     dish(under, { cx: -2.3, floorY: -1.45, r: 1.25, a: sa, liquid: 1, tint: [190, 210, 225], tintA: 0.07 });
     dish(under, { cx: 2.3, floorY: -1.45, r: 1.25, a: sa, liquid: 1, tint: [190, 210, 225], tintA: 0.07 });
     drawCells(cloudA, LA, t, { cx: 2.3, sphY: -0.82, sphR: 0.66, m: 1, grow: 1, size: 0.115, alpha: sa, spin: 0.12 });
     drawCells(cloudC, LB, t, { cx: -2.3, floorY: -1.45, discR: 1.1, m: 0, grow: 1, size: 0.11, alpha: sa });
-    text(over, '=', W / 2, 800, { fam: SERIF, size: 110, w: 500, color: C.red, a: sa * ramp(t, S('same') + 1.6, S('same') + 2.2) });
+    text(over, '=', W / 2, 800, { fam: SERIF, size: 110, w: 500, color: C.red, a: sa * ramp(t, SAME + 1.6, SAME + 2.2) });
     label(over, 'organoid', toScreen(2.3, 0, 0)[0], 965, { a: sa, size: 16 });
     label(over, 'flat cells · same food', toScreen(-2.3, 0, 0)[0], 965, { a: sa, size: 16 });
     const ns = win(t, S('notshape'), S('blood') - 0.3, 0.5, 0.6) * out6;
@@ -555,7 +570,7 @@ function sceneTest(t) {   // 8: the test, and trying to break it
   const a0 = SEC0(8) - 0.8, a1 = SEC1(8) + 0.8; if (t < a0 || t > a1 + 1.0) return;
   const a = win(t, a0 + 0.2, a1 + 0.6, 0.6, 0.9);
   headline(over, t, 'A pattern in existing data, not proof.', S('proof'), E('proof') - 0.6, { size: 74, y: 520, out: S('check') + 0.2 });
-  const dA = a * win(t, S('check') + 0.2, S('break') + 0.2, 0.8, 0.8);
+  const dA = a * win(t, S('check') + 0.2, BRK + 0.2, 0.8, 0.8);
   if (dA > 0) {
     dish(under, { cx: 0, floorY: -1.25, r: 1.9, a: dA, liquid: 1, tint: [190, 210, 225], tintA: 0.08, glow: win(t, S('putback') + 2.2, S('putback') + 4.0, 0.2, 1.0) });
     drawCells(cloudA, LA, t, { cx: 0, sphY: -0.2, sphR: 0.85, m: 1, grow: 1, size: 0.14, alpha: dA, spin: 0.12 });
@@ -563,7 +578,7 @@ function sceneTest(t) {   // 8: the test, and trying to break it
     if (td > 0 && td < 1) { const y = lerp(dy0, dy1, td * td); over.save(); over.globalAlpha = dA; over.fillStyle = C.amber; over.shadowColor = C.amber; over.shadowBlur = 20; over.beginPath(); over.ellipse(dx, y, 10, 14, 0, 0, 7); over.fill(); over.restore();
       cholesterol(over, dx + 30, y - 10, 7, dA * 0.9, C.amber); }
     const rp = ramp(t, S('putback') + 1.8, S('putback') + 3.2); if (rp > 0 && rp < 1) { const [rx, ry] = toScreen(0, -0.95, 0); over.save(); over.globalAlpha = dA * (1 - rp); over.strokeStyle = C.amber; over.lineWidth = 2; over.beginPath(); over.ellipse(rx, ry, 20 + rp * 160, (20 + rp * 160) * 0.22, 0, 0, 7); over.stroke(); over.restore(); }
-    headline(over, t, 'Put the cholesterol back.', S('putback'), E('putback') - 0.2, { size: 60, y: 175, out: S('break') - 0.3 });
+    headline(over, t, 'Put the cholesterol back.', S('putback'), E('putback') - 0.2, { size: 60, y: 175, out: BRK - 0.3 });
     // two outcomes, set as type
     const o1 = dA * ramp(t, S('ifstop') + 0.2, S('ifstop') + 0.8), o2 = dA * ramp(t, S('ifstop') + 2.6, S('ifstop') + 3.2);
     text(over, 'Need goes away', 330, 520, { fam: SERIF, size: 40, w: 600, a: o1 }); hair(over, 250, 545, 410, 545, o1, 'rgba(255,75,46,0.8)', 1.5);
@@ -597,14 +612,14 @@ const ASK_TYPE = Array.from({ length: 21 }, (_, i) => `ask_type_${String(i * 2).
 function urlMark(ctx, a, y = 940, size = 40) { if (a <= 0) return; text(ctx, 'itsthemedium.com', W / 2, y, { fam: MONO, size, w: 500, ls: 2, a }); font(ctx, MONO, size, 500); ctx.letterSpacing = '2px'; const w = ctx.measureText('itsthemedium.com').width; hair(ctx, W / 2 - w / 2, y + 16, W / 2 + w / 2, y + 16, a, C.red, 2); }
 async function sceneDemo(t) {
   screens.forEach(s => s.hide());
-  const a0 = SEC0(9) - 0.5, a1 = SEC1(9) + 1.0; if (t < a0 || t > a1 + 0.6) return;
+  const a0 = SEC0(9) - 0.5, a1 = SEC1(9) + (has('loop') ? 1.0 : 0.6); if (t < a0 || t > a1 + 0.6) return;
   const a = win(t, a0 + 0.2, a1 + 0.4, 0.9, 0.9);
   const drift = (t - a0) * 0.006;
-  if (t < S('lookup') - 0.2) {
-    const k = ease(ramp(t, a0, S('lookup')));
-    await screens[0].show('hero', { w: 9.0, x: lerp(0.4, 0.0, k), y: lerp(0.1, 0.35, k), z: -1.6, rx: -0.10 + drift, ry: lerp(-0.32, -0.22, k), op: a * win(t, a0, S('lookup') - 0.2, 0.8, 0.5), pad: 0, rad: 10 });
+  if (t < LOOK - 0.2) {
+    const k = ease(ramp(t, a0, LOOK));
+    await screens[0].show('hero', { w: 9.0, x: lerp(0.4, 0.0, k), y: lerp(0.1, 0.35, k), z: -1.6, rx: -0.10 + drift, ry: lerp(-0.32, -0.22, k), op: a * win(t, a0, LOOK - 0.2, 0.8, 0.5), pad: 0, rad: 10 });
     scrim(over, 0.0);
-    const ua = a * win(t, S('site') + 0.8, S('lookup') - 0.3, 0.5, 0.4);
+    const ua = a * win(t, S('site') + 0.8, LOOK - 0.3, 0.5, 0.4);
     over.save(); over.globalAlpha = ua * 0.85; over.fillStyle = 'rgba(8,6,5,0.85)'; over.fillRect(0, 860, W, 160); over.restore();
     urlMark(over, ua, 950, 52);
   } else if (t < S('paste') - 0.2) {
@@ -623,17 +638,17 @@ async function sceneDemo(t) {
       : { w: 6.2, x: -1.8, y: 0.2, z: -0.4, rx: -0.1, ry: 0.22, op: a * win(t, S('paste') - 0.2, S('muse') - 0.3, 0.4, 0.4), rad: 8 });
     headline(over, t, 'Paste your own gene list.', S('paste'), S('paste') + 2.0, { size: 48, y: 470, x: 1480, maxW: 560, w: 500, out: S('muse') - 0.8 });
     text(over, 'See which look like diet effects.', 1480, 545, { fam: SERIF, size: 32, w: 500, italic: true, color: C.dim, a: a * ramp(t, S('paste') + 2.4, S('paste') + 3.0) * (1 - ramp(t, S('muse') - 0.8, S('muse') - 0.3)) });
-  } else if (t < S('loop') - 0.3) {
+  } else if (t < LOOP - 0.3) {
     const t0 = S('muse') + 0.3, typeEnd = S('muse') + 2.6, seqEnd = S('ask') + 4.6;
     let name;
     if (t < typeEnd) name = ASK_TYPE[Math.min(20, Math.floor(ramp(t, t0, typeEnd) * 21))];
     else if (t < seqEnd) name = seqFrame('ask_seq_', 55, t, typeEnd + 0.2, seqEnd);
     else name = 'ask_done';
-    const k = ease(ramp(t, S('muse') - 0.3, S('loop')));
+    const k = ease(ramp(t, S('muse') - 0.3, LOOP));
     if (t < typeEnd) await screens[0].show(name, { w: 7.6, x: 0.0, y: 0.9, z: -0.3, rx: -0.10, ry: -0.18, op: a * ramp(t, S('muse') - 0.3, S('muse') + 0.3), rad: 8 });
-    else await screens[0].show(name, { w: 8.4, x: lerp(0.0, -0.2, k), y: lerp(0.5, 0.1, k), z: lerp(-0.6, 0.2, k), rx: -0.08, ry: lerp(-0.2, -0.12, k), op: a * (1 - ramp(t, S('loop') - 0.6, S('loop') - 0.3)), rad: 10 });
-    chip(over, 'Muse  ·  Meta’s AI model', W / 2, 150, { a: a * win(t, S('muse'), S('loop') - 0.4, 0.5, 0.4), color: C.amber, size: 22 });
-    label(over, 'searches all 17,525 genes with its own tools · shows every step', W / 2, 920, { a: a * win(t, S('ask') + 0.4, S('loop') - 0.4, 0.5, 0.4), color: C.dim, size: 18 });
+    else await screens[0].show(name, { w: 8.4, x: lerp(0.0, -0.2, k), y: lerp(0.5, 0.1, k), z: lerp(-0.6, 0.2, k), rx: -0.08, ry: lerp(-0.2, -0.12, k), op: a * (1 - ramp(t, LOOP - 0.6, LOOP - 0.3)), rad: 10 });
+    chip(over, 'Muse  ·  Meta’s AI model', W / 2, 150, { a: a * win(t, S('muse'), Math.min(LOOP, a1) - 0.4, 0.5, 0.4), color: C.amber, size: 22 });
+    label(over, 'searches all 17,525 genes with its own tools · shows every step', W / 2, 920, { a: a * win(t, S('ask') + 0.4, Math.min(LOOP, a1) - 0.4, 0.5, 0.4), color: C.dim, size: 18 });
   } else {
     const k = ease(ramp(t, S('loop') - 0.3, a1));
     await screens[0].show('credits', { w: 8.6, x: 0, y: lerp(-0.6, -0.4, k), z: lerp(-0.6, 0.0, k), rx: -0.06, ry: 0.0, op: a * ramp(t, S('loop') - 0.3, S('loop') + 0.3), rad: 8 });
@@ -642,7 +657,7 @@ async function sceneDemo(t) {
 }
 
 function sceneClose(t) {   // 10
-  const c0 = SEC0(10) - 0.8; if (t < c0) return;
+  const c0 = SEC0(10) - (has('loop') ? 0.8 : 0.3); if (t < c0) return;
   const a = ramp(t, c0 + 0.2, c0 + 1.6) * (1 - ease(ramp(t, TOTAL - 1.6, TOTAL - 0.2)));
   dish(under, { cx: 0, floorY: 0.25, r: 1.25, a: a * 0.9, liquid: 1, tint: [190, 210, 225], tintA: 0.07 });
   drawCells(cloudA, LA, t, { cx: 0, sphY: 0.95, sphR: 0.62, m: 1, grow: 1, size: 0.11, alpha: a, spin: 0.1 });
@@ -669,7 +684,7 @@ window.renderAt = async function (t) {
   camera.position.set(Math.sin(t * 0.05) * 0.06, Math.cos(t * 0.04) * 0.04, 10); camera.lookAt(0, 0, 0); camera.updateMatrixWorld();
   sceneIntro(t); sceneStudies(t); sceneCatch(t); sceneField(t); sceneWhy(t); sceneTest(t); await sceneDemo(t); sceneClose(t);
   renderer.render(scene, camera);
-  const capA = (t > S('n85') - 0.3 && t < S('why') - 0.1) ? 0 : 1;
+  const capA = (t > S('n85') - 0.3 && t < WHY - 0.1) ? 0 : 1;
   captions(over, t, capA);
   finish(over, t);
   return true;

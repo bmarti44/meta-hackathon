@@ -1,5 +1,7 @@
 # Cancer dependency RSI
 
+This is the research log. For the project overview, the result explained simply and how Meta's Muse models are used, see the [top-level README](../README.md).
+
 Research into measured culture-context dependency lability and retrospective dependency transfer, with a separately evaluated research-policy loop. The authoritative specification is `../cancer_rsi_handoff.txt`; the locked objective and execution plan are `../GOAL.md` and `../PLAN.md`.
 
 **Current state:** scientific Lock-S external evaluation has executed exactly once (archived BOUND under 144 covariate-ID groups = 142 patients; patient-weighted effects unquantified). Evidence atlas v4 complete; C1/C6/C7/C10/C11/C12 PARTIAL, C5/C3 met-narrowed per reviews, C4/C8/C9/C13 unmet. Sol-xhigh ruled ENDPOINT:NO / PGEN004:NO_GO; policy generations pgen001-003 + scientific sgen001-002 recorded in GENERATIONS.md. No policy cycle has run. See STATUS.md / status.json for live state and resume command.

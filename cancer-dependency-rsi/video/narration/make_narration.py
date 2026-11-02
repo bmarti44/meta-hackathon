@@ -2,7 +2,10 @@
 using the character timestamps and re-assembled with designed pauses.
 
 Outputs (here): clips/secN.mp3 + clips/secN.json, narration.wav, timeline.json
-Usage: python make_narration.py [section numbers to regenerate]
+Usage: python make_narration.py [--variant NAME] [tts groups to regenerate]
+--variant NAME reads lines_NAME.json and writes narration_NAME.wav and timeline_NAME.json. Lines marked "cut" are
+still spoken in their TTS group (so cached clips and their timestamps stay valid, and neighbours keep natural prosody)
+but are left out of the assembled narration. "tts" overrides the group a line is generated in (default: its section).
 The API key is read from ELEVENLABS_API_KEY and never written anywhere.
 """
 import base64, json, os, re, subprocess, sys, urllib.request
@@ -14,16 +17,20 @@ MODEL = "eleven_v4"
 SETTINGS = {"stability": 0.5, "similarity_boost": 0.8, "speed": 0.92}
 LEAD, SR = 0.6, 48000
 
-lines = json.loads((HERE / "lines.json").read_text())
+args = sys.argv[1:]
+VAR = ""
+if "--variant" in args:
+    i = args.index("--variant"); VAR = "_" + args[i + 1]; del args[i:i + 2]
+lines = json.loads((HERE / f"lines{VAR}.json").read_text())
 for ln in lines:
-    ln.setdefault("say", ln["show"])
+    ln.setdefault("say", ln["show"]); ln.setdefault("tts", ln["sec"])
 clips = HERE / "clips"; clips.mkdir(exist_ok=True)
-redo = {int(x) for x in sys.argv[1:]}
-sections = sorted({ln["sec"] for ln in lines})
+redo = set(args)
+sections = list(dict.fromkeys(ln["tts"] for ln in lines))   # tts groups, in file order
 
 
 def tts(sec):
-    text = " ".join(ln["say"] for ln in lines if ln["sec"] == sec)
+    text = " ".join(ln["say"] for ln in lines if ln["tts"] == sec)
     body = {"text": text, "model_id": MODEL, "voice_settings": SETTINGS}
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
@@ -37,7 +44,7 @@ def tts(sec):
 
 
 for sec in sections:
-    if sec in redo or not (clips / f"sec{sec}.mp3").exists():
+    if str(sec) in redo or not (clips / f"sec{sec}.mp3").exists():
         tts(sec)
 
 # split every section into its lines. Cut points come from the audio itself: the quietest 10 ms frame
@@ -54,7 +61,7 @@ for sec in sections:
     env = rms_frames(clips / f"sec{sec}.mp3"); peak = max(env); thr = peak * 0.035
     fr = lambda tt: max(0, min(len(env) - 1, int(tt * 100)))
     off = 0; spans = []
-    for ln in [l for l in lines if l["sec"] == sec]:
+    for ln in [l for l in lines if l["tts"] == sec]:
         s_ = ln["say"]; mask = [True] * len(s_)
         for m in re.finditer(r"\[[^\]]*\]", s_):
             for k in range(m.start(), m.end()): mask[k] = False
@@ -69,6 +76,7 @@ for sec in sections:
         cuts.append(min(range(lo, hi + 1), key=lambda f: env[f]) / 100)
     cuts.append(len(env) / 100)
     for k, (ln, a0, b0, chars) in enumerate(spans):
+        if ln.get("cut"): continue
         c0, c1 = cuts[k], cuts[k + 1]
         f = fr(c0)
         while f < fr(c1) and env[f] < thr: f += 1
@@ -102,8 +110,8 @@ filters = [f.replace(f"[{srcidx[segs[k]['src']]}:a]", use[k], 1) for k, f in enu
 mix = "".join(f"[a{k}]" for k in range(len(segs)))
 graph = ";".join(pre + filters + [f"{mix}amix=inputs={len(segs)}:normalize=0,apad=whole_dur={total:.3f},atrim=0:{total:.3f}[out]"])
 subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", graph,
-                "-map", "[out]", "-ac", "1", "-ar", str(SR), str(HERE / "narration.wav")], check=True)
-(HERE / "timeline.json").write_text(json.dumps({"total": round(total, 3), "lines": timeline}))
+                "-map", "[out]", "-ac", "1", "-ar", str(SR), str(HERE / f"narration{VAR}.wav")], check=True)
+(HERE / f"timeline{VAR}.json").write_text(json.dumps({"total": round(total, 3), "lines": timeline}))
 secs = {}
 for ln in timeline:
     secs.setdefault(ln["sec"], [ln["start"], ln["end"]]); secs[ln["sec"]][1] = ln["end"]

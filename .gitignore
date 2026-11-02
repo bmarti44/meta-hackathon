@@ -21,5 +21,6 @@ cancer-dependency-rsi/video/out/patch_*.mov
 cancer-dependency-rsi/video/out/check*/
 cancer-dependency-rsi/video/out/*.log
 cancer-dependency-rsi/video/out/segments*.txt
-cancer-dependency-rsi/video/out/mix.wav
+cancer-dependency-rsi/video/out/mix*.wav
+cancer-dependency-rsi/video/out/s3m_*.mov
 cancer-dependency-rsi/video/music/hdr.txt

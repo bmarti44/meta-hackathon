@@ -4,7 +4,7 @@
 
 **Specification:** `cancer_rsi_handoff.txt` (28 Oct 2026) · **Locked goal:** `GOAL.md` · **Project root:** `cancer-dependency-rsi/`
 **Host (verified 2026-10-28):** Apple M5 Max, 18 cores, 128 GB RAM, 532 GiB free, macOS 26.6 arm64; Python 3.14.8.
-**Model access:** Muse `gpt-6.1-sol` (config default `high`); host agent for lead work. All scientific fitting, simulation, evaluation, and data processing run **locally on this laptop**; hosted frontier-model reasoning is used only through the already-authorized host/codex interface (spec §2).
+**Model access:** host agent: Muse Code (Meta), which runs the loop and lead work; generation and review calls: `gpt-6.1-sol` via `codex exec` (config default `high`). All scientific fitting, simulation, evaluation, and data processing run **locally on this laptop**; hosted frontier-model reasoning is used only through the already-authorized host/codex interface (spec §2).
 **Review state (independent sol-high trail):** v1 = 53/100 (35 issues) → v2 = 76/100 (29 resolved, 6 partial, 6 new) → v2.1 = 86/100 (11/12 resolved; context-overflow partial; 4 new: donor-grouped folds, arm-scoped dedup, total ordering, memoized LLM state). This v2.2 patches those 5 residuals (author-claimed; verified only when a later round confirms).
 
 Sequencing invariant: **no outcome-bearing import before provisional partitions + quarantine; no adaptive search before identifiability (G1); no policy optimization before the frozen evaluator (G2/Lock 1); no final outcome touched before Lock 2.** Failing a gate narrows the question or ends honestly — never lowers the standard.
